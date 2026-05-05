@@ -60,8 +60,8 @@ body{font-family:'Fira Sans',system-ui,sans-serif;background:var(--c-bg);color:#
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
 Pesquisa de Mercado 2025
 </div>
-<h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight">O "Contabilizei" da <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">LGPD</span></h1>
-<p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">Plataforma SaaS de conformidade e processamento de dados para prefeituras e empresas brasileiras</p>
+<h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight">Conformidade <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">LGPD</span> para Prefeituras</h1>
+<p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">Plataforma SaaS de conformidade e protecao de dados para prefeituras e empresas brasileiras</p>
 <div class="flex flex-wrap justify-center gap-3">
 <a href="#mercado" class="btn-primary inline-flex items-center gap-2">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
@@ -118,7 +118,7 @@ Roadmap MVP</a>
 <div class="rounded-xl p-6 text-white" style="background:linear-gradient(135deg,#0F172A,#1e3a8a)">
 <h3 class="text-lg font-bold mb-2 flex items-center gap-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Gap Identificado</h3>
 <p class="text-slate-300 leading-relaxed text-sm">Nenhum player domina o segmento prefeituras com: plataforma acessivel (R$100-500/mes), DPO terceirizado incluido, adequacao a Lei 14.133/2021 (dispensa de licitacao), data center no Brasil, e foco em servicos municipais especificos.</p>
-<p class="mt-3 font-semibold text-blue-300 text-sm">Oportunidade: "Contabilizei da LGPD" — self-service + automacao + DPO fractionado + pricing prefeitura-friendly</p>
+<p class="mt-3 font-semibold text-blue-300 text-sm">Oportunidade: self-service + automacao + DPO fractionado + pricing prefeitura-friendly</p>
 </div>
 </section>
 
@@ -186,7 +186,7 @@ const COMPETITORS=[
 {name:'LGPD Check-List',low:'R$ 299',high:'R$ 299',model:'Subscription',focus:'Mid-market',docs:1,dpo:0,ai:0},
 {name:'Privacy Guard',low:'R$ 450',high:'R$ 500',model:'Subscription',focus:'Geral',docs:1,dpo:0,ai:0},
 {name:'DPO MAX',low:'Sob consulta',high:'Sob consulta',model:'Tiered',focus:'Corporativo',docs:1,dpo:1,ai:1},
-{name:'Confidata',low:'R$ 497',high:'R$ 3.497',model:'Tier + per-user',focus:'Orgaos publ.',docs:1,dpo:1,ai:1},
+{name:'Confidata',low:'Sob consulta',high:'Sob consulta',model:'Cotacao personalizada',focus:'Orgaos publ.',docs:1,dpo:1,ai:1},
 {name:'LGPD Express',low:'Sob consulta',high:'Sob consulta',model:'Tier interactions',focus:'PME',docs:1,dpo:1,ai:1}
 ];
 const METRICS=[
@@ -209,7 +209,7 @@ const ROADMAP=[
 {phase:'Escala Nacional',months:'21-30',items:['ISO 27701','Certificadora nacional','Expansao empresas privadas','AI risk scoring','Meta: 2000+ cli / R$3M MRR'],color:'#ec4899'}
 ];
 const GROWTH=[{label:'Mes 9',v:'50',sub:'Primeiros clientes'},{label:'Mes 14',v:'150',sub:'MRR: R$300K'},{label:'Mes 20',v:'500',sub:'MRR: R$1M'},{label:'Mes 30',v:'2.000+',sub:'MRR: R$3M+'}];
-const SOURCES=['IBGE — Perfil dos Municipios 2024','MarketsandMarkets — Cybersecurity BR','IMARC Group — Legaltech LatAm','Grand View Research — Legal Services BR','Ken Research — RegTech BR','ANPD — Fiscalizacao ativa 2025','Lei 14.133/2021 — Dispensa licitacao','Confidata, DPO MAX, LGPD Express — Precos reais','Contabilizei — Modelo negocio referencia','ISO 27001/27701 — TopCertifier Brasil'];
+const SOURCES=['IBGE — Perfil dos Municipios 2024','MarketsandMarkets — Cybersecurity BR','IMARC Group — Legaltech LatAm','Grand View Research — Legal Services BR','Ken Research — RegTech BR','ANPD — Fiscalizacao ativa 2025','Lei 14.133/2021 — Dispensa licitacao','Confidata, DPO MAX, LGPD Express — Precos reais','ISO 27001/27701 — TopCertifier Brasil'];
 
 // === BUILD DOM ===
 function h(tag,attrs){const el=document.createElement(tag);if(attrs)Object.entries(attrs).forEach(([k,v])=>{if(k==='class')el.className=v;else if(k==='style'&&typeof v==='object')Object.assign(el.style,v);else if(k.startsWith('on'))el.addEventListener(k.slice(2),v);else el.setAttribute(k,v)});for(let i=2;i<arguments.length;i++){const c=arguments[i];if(c==null)continue;if(typeof c==='string'||typeof c==='number')el.appendChild(document.createTextNode(c));else if(c instanceof HTMLElement)el.appendChild(c)}return el}
