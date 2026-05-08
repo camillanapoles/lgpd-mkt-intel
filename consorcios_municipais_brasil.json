@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "data_referencia": "2025-05-08",
+    "fontes": [
+      "IBGE - Pesquisa de Informacoes Basicas Municipais (MUNIC)",
+      "CNM - Mapeamento dos Consorcios Publicos Brasileiros 2023",
+      "Sites oficiais dos consorcios",
+      "Agencia Cidades"
+    ],
+    "contexto_lgpd": "Brasil possui 5.570 municipios, sendo que 4.783 (85,9%) participam de pelo menos um consorcio publico. Mercado estimado de 4.011 prefeituras sem estrutura adequada para LGPD.",
+    "consorcio_referencia": "CIMINAS - R$31.9M"
+  },
+  "top_5_consorcios": [
+    {
+      "nome": "CIGA - Consorcio de Inovacao na Gestao Publica",
+      "sigla": "CIGA",
+      "estado": "Santa Catarina",
+      "municipios_associados": 345,
+      "detalhe_municipios": "100% dos municipios de SC (295) + 50 de outros estados",
+      "populacao_atendida": "aproximadamente 7 milhoes de habitantes",
+      "orcamento_estimado": "Nao informado publicamente",
+      "areas_de_atuacao": [
+        "Gestao Tributaria (CIGA Simples)",
+        "Diario Oficial dos Municipios (DOM/SC)",
+        "Gestao de Obras",
+        "Sistema de Informacoes Georreferenciadas (SIG)",
+        "Licenciamento Ambiental",
+        "Portal do Poder Legislativo",
+        "Processos e documentos eletronicos",
+        "Registro Mercantil Integrado (REGIN)"
+      ],
+      "contato": {
+        "endereco": "Rua General Liberato Bittencourt, 1885 - Sala 102, CEP 88070-800 - Bairro Canto, Florianopolis/SC",
+        "telefone": "(48) 3321-5300",
+        "whatsapp": "(48) 98406-1060",
+        "email": "ciga@ciga.sc.gov.br",
+        "site": "https://consorciociga.gov.br",
+        "cnpj": "09.427.503/0001-12"
+      },
+      "observacoes": "Fundado em 2007 pela FECAM. Maior consorcio do pais em numero de municipios. Atua em 9 estados (SC, AC, BA, PB, PR, PE, RN, RS, SP)."
+    },
+    {
+      "nome": "CIMAMS - Consorcio Intermunicipal Multifinalitario da Area Mineira da Sudene",
+      "sigla": "CIMAMS",
+      "estado": "Minas Gerais",
+      "municipios_associados": 150,
+      "detalhe_municipios": "Ultrapassou marca de 150 municipios consorciados em 2025",
+      "populacao_atendida": "Nao informado",
+      "orcamento_estimado": "Nao informado publicamente",
+      "areas_de_atuacao": [
+        "Saude",
+        "Educacao",
+        "Infraestrutura urbana",
+        "Agricultura e desenvolvimento rural",
+        "Obras publicas",
+        "Defesa do consumidor (MPMG)",
+        "Atendimento juridico"
+      ],
+      "contato": {
+        "endereco": "Nao informado no site",
+        "telefone": "Nao informado",
+        "email": "Nao informado",
+        "site": "https://www.cimams.mg.gov.br"
+      },
+      "observacoes": "Consolidado como uma das principais forcas do municipalismo mineiro. Possui 22 unidades descentralizadas. Construindo o maior auditorio de consorcios do Norte de Minas."
+    },
+    {
+      "nome": "COPIRN - Consorcio Publico Intermunicipal do Rio Grande do Norte",
+      "sigla": "COPIRN",
+      "estado": "Rio Grande do Norte",
+      "municipios_associados": 158,
+      "detalhe_municipios": "Atualmente conta com 158 municipios consorciados",
+      "populacao_atendida": "aproximadamente 1,5 milhao de habitantes",
+      "orcamento_estimado": "Nao informado publicamente",
+      "areas_de_atuacao": [
+        "Saude (consultas, exames e cirurgias eletivas)",
+        "Saneamento basico",
+        "Meio ambiente",
+        "Licenciamento ambiental regional consorciado",
+        "Residuos solidos",
+        "Servicos de inspecao municipal"
+      ],
+      "contato": {
+        "endereco": "Rua Doutor Abelardo Calafange, 1828 - Nova Descoberta, CEP 59056-480 - Natal/RN",
+        "telefone": "(84) 3234-6937",
+        "whatsapp": "(84) 98895-8827",
+        "email": "copirn@copirn.org.br",
+        "site": "https://copirn.org.br",
+        "cnpj": "12.120.272/0001-04"
+      },
+      "observacoes": "Autarquia intermunicipal, modelo multifinalitario e multifuncional com prazo indeterminado de duracao. Presidente: Antonio Marcos Freire."
+    },
+    {
+      "nome": "CONIAPE - Consorcio Publico Intermunicipal do Agreste Pernambucano e Fronteiras",
+      "sigla": "CONIAPE",
+      "estado": "Pernambuco",
+      "municipios_associados": 44,
+      "detalhe_municipios": "Maior consorcio de Pernambuco em numero de municipios",
+      "populacao_atendida": "superior a 3 milhoes de habitantes",
+      "orcamento_estimado": "Nao informado publicamente",
+      "areas_de_atuacao": [
+        "Saude (compras compartilhadas, ambulancias)",
+        "Iluminacao publica",
+        "Engenharia e saneamento basico",
+        "Meio ambiente",
+        "Educacao",
+        "Desenvolvimento institucional",
+        "Residuos solidos"
+      ],
+      "contato": {
+        "endereco": "Rua Visconde de Inhauma, 371, terreo e subsolo, Bairro Mauricio de Nassau - Caruaru/PE",
+        "telefone": "(81) 3136-5355",
+        "email": "administrativo@consorcioconiape.pe.gov.br",
+        "site": "https://consorcioconiape.pe.gov.br"
+      },
+      "observacoes": "Presidente: Josafa Almeida (prefeito de Sao Caetano). Secretario-executivo: Raffie Dellon. Referencia em compras compartilhadas de saude, educacao e infraestrutura. Maior consorcio do Norte, Nordeste e Centro-Oeste em numero de municipios."
+    },
+    {
+      "nome": "CIMINAS - Consorcio Interfederativo Minas Gerais",
+      "sigla": "CIMINAS",
+      "estado": "Minas Gerais",
+      "municipios_associados": 29,
+      "detalhe_municipios": "29 municipios consorciados (arredores de Triangulo Mineiro/Alto Paranaiba)",
+      "populacao_atendida": "Nao informado",
+      "orcamento_estimado": "R$ 31.900.000,00 (31,9 milhoes)",
+      "areas_de_atuacao": [
+        "Selecao e gestao de pessoal",
+        "Educacao",
+        "Esportes",
+        "Cultura",
+        "Saude",
+        "Trabalho e acao social",
+        "Habitacao",
+        "Saneamento basico",
+        "Agricultura",
+        "Meio ambiente",
+        "Industria",
+        "Comercio",
+        "Turismo"
+      ],
+      "contato": {
+        "endereco": "Nao informado no site",
+        "telefone": "Nao informado",
+        "email": "Nao informado",
+        "site": "https://ciminas.mg.gov.br"
+      },
+      "observacoes": "Diretor-executivo: Jose Humberto Ribeiro. Diretor-superintendente: Moises Pereira Cunha. Promoveu o Encontro de Prefeitos CIMINAS 2025 com mais de 100 prefeitos, governador Romeu Zema e ministros Jader Filho (Cidades) e Alexandre Silveira (Minas e Energia)."
+    }
+  ],
+  "consorcios_menores": [
+    {
+      "nome": "CONDESU - Consorcio Intermunicipal para o Desenvolvimento Sustentavel",
+      "sigla": "CONDESU",
+      "estado": "Sao Paulo",
+      "municipios_associados": 22,
+      "areas_de_atuacao": ["Desenvolvimento sustentavel", "Gestao compartilhada de servicos publicos"],
+      "site": "https://www.condesu.com.br"
+    }
+  ],
+  "contexto_mercado": {
+    "total_municipios_brasil": 5570,
+    "municipios_em_consorcios": 4783,
+    "percentual_participacao": "85,9%",
+    "total_consorcios_identificados": 723,
+    "municipios_sem_estrutura_lgpd": 4011,
+    "regioes_mais_desenvolvidas": "Sudeste (1.291 municipios consorciados), Sul (1.012), Nordeste (941)",
+    "estatos_lideres": "Minas Gerais, Santa Catarina, Parana, Ceara, Rio Grande do Norte, Bahia"
+  },
+  "legislacao": {
+    "constitucional": "Art. 241 da Constituicao Federal - EC 19/1998",
+    "lei_federal": "Lei 11.107/2005 (Lei dos Consorcios Publicos)",
+    "decreto_regulamentador": "Decreto 6.017/2007",
+    "personalidade_juridica": "Associacao publica (direito publico) ou pessoa juridica de direito privado sem fins lucrativos"
+  },
+  "areas_prioritarias_lgpd": {
+    "saude": "Manipulacao de dados sensiveis de saude",
+    "educacao": "Dados de menores de idade",
+    "financas": "Dados tributarios e fiscais",
+    "social": "Dados vulneraveis (assistencia social)",
+    "policial": "Dados de seguranca publica"
+  }
+}

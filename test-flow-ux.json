@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2026-05-08",
+    "project": "LGPD Market Intelligence - UX Test Flow",
+    "user_persona": "Gestor Publico / Reuniao Estrategica",
+    "test_approach": "5-second rule + task-based usability"
+  },
+  "test_scenarios": [
+    {
+      "id": 1,
+      "scenario": "Dashboard inicial - KPIs em 5 segundos",
+      "user_action": "Usuario abre a apresentacao e visualiza o hero section",
+      "expected": "Usuario deve identificar em ate 5s: (1) Proposta de valor 'Conformidade LGPD para Prefeituras', (2) 3 KPIs principais: 5.570 municipios, 72% sem LGPD, R$60Mi TAM/ano, (3) CTAs claros para 'Ver Pesquisa' e 'Roadmap'",
+      "ux_principle": "visual-hierarchy + readable-font-size + line-length-control",
+      "pass_criteria": [
+        "Hero heading H1 tem min 24px (mobile) / 48px+ (desktop)",
+        "KPIs em grid visivel sem scroll",
+        "Contraste titulo 4.5:1+ (text-brand-900 em bg-brand-50)",
+        "CTAs com min 44x44px touch target"
+      ],
+      "fail_signals": [
+        "Titulo truncado ou quebra de linha awkward",
+        "KPIs exigem scroll para ver todos",
+        "Contraste insuficiente em dark gradient background",
+        "CTA buttons sem hover state evidente"
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Selector de cenarios - Comparacao Bull/Bear/Base",
+      "user_action": "Usuario clica nas abas 'Prefeituras' e 'Empresas' na secao Pricing",
+      "expected": "Toggle instantaneo (<150ms) entre planos, highlight visual no plano selecionado (border-color: #0369A1 + box-shadow), precios atualizados sem layout shift",
+      "ux_principle": "tab-state-active + state-transition + duration-timing + layout-shift-avoid",
+      "pass_criteria": [
+        "Transicao animada 150-300ms ease-out",
+        "Active state: .tab-btn.active com background var(--c-accent)",
+        "Nenhum CLS (Cumulative Layout Shift) durante troca",
+        "Planos reorganizam-se fluido"
+      ],
+      "fail_signals": [
+        "Troca de planos causa jump/pulo",
+        "Estado active sutil demais (usuario nao percebe mudanca)",
+        "Precos nao atualizam ou somem",
+        "Animação >500ms (parece travado)"
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "BMC interativo - Business Model Canvas",
+      "user_action": "Usuario clica em um card/bloco do BMC (ex: 'Key Partners')",
+      "expected": "Card expande ou revela detalhes (partners, activities, resources, etc.), com animacao suave scale(1.02)+box-shadow, mantendo readable line-length 60-75 chars",
+      "ux_principle": "card + press-feedback + scale-feedback + line-length-control",
+      "pass_criteria": [
+        "Hover: transform translateY(-3px) + shadow 0 12px 24px rgba(15,23,42,.08)",
+        "Click/tap: feedback visual dentro de 100ms",
+        "Conteudo expandido respeita max-width legivel",
+        "Mobile: expande em modal/sheet, nao inline (evita scroll excessivo)"
+      ],
+      "fail_signals": [
+        "Click sem feedback (usuario nao sabe se funcionou)",
+        "Expansao causa horizontal scroll",
+        "Texto muito longo em linha unica (>75 chars)",
+        "Mobile: expansion empurra conteudo para fora da tela"
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "Roadmap timeline interativa",
+      "user_action": "Usuario rola a pagina para a secao Roadmap",
+      "expected": "Timeline aparece com reveal animation (opacity 0->1, translateY 24px->0), cada fase (Fase 0-5) claramente separada com timeline-dot colorido, milestones clicaveis para expandir detalhes",
+      "ux_principle": "reveal + stagger-sequence + motion-meaning + touch-target-chart",
+      "pass_criteria": [
+        "Reveal: .reveal.visible ativa opacity 1 + transform none",
+        "Stagger: itens aparecem com delay 30-50ms cada",
+        "Timeline dots: 20px diameter, cores distintas por fase",
+        "Mobile: timeline adaptada (horizontal scroll simplificada)"
+      ],
+      "fail_signals": [
+        "Toda timeline aparece de uma vez (sem stagger)",
+        "Dots muito pequenos (<20px) ou baixo contraste",
+        "Fases sem separacao visual (confuso)",
+        "Mobile: timeline quebra layout horizontal"
+      ]
+    },
+    {
+      "id": 5,
+      "scenario": "SWOT interativo - Filtro por categoria",
+      "user_action": "Usuario clica em filtros S/W/O/T da analise SWOT (se presente)",
+      "expected": "Filtro ativa estado active com highlight, itens nao selecionados ficam com opacidade reduzida (0.5), transicao suave 200ms, mantendo acessibilidade (screen reader anuncia todos itens)",
+      "ux_principle": "nav-state-active + opacity-threshold + color-not-decorative-only + screen-reader-summary",
+      "pass_criteria": [
+        "Active state: border + background color distinct",
+        "Itens filtrados: opacidade 0.5 (nunca 0 - WCAG)",
+        "Icon + texto (nao so cor) para distinguir categorias",
+        "Aria-live anuncia mudanca de filtro"
+      ],
+      "fail_signals": [
+        "Itens somem completamente (opacity 0)",
+        "Filtro so usa cor (sem icon/texto) - a11y violacao",
+        "Transicao instantanea (sem animacao)",
+        "Screen reader nao anuncia filtro ativo"
+      ]
+    },
+    {
+      "id": 6,
+      "scenario": "Mobile - Tela pequena (375px)",
+      "user_action": "Usuario acessa apresentacao em smartphone (viewport 375x667px)",
+      "expected": "Todos os elementos visiveis sem horizontal scroll, touch targets >=44x44px, texto >=16px (evita iOS auto-zoom), navegacao fixa nao cobre conteudo importante",
+      "ux_principle": "mobile-first + touch-target-size + readable-font-size + horizontal-scroll + fixed-element-offset",
+      "pass_criteria": [
+        "Nav bar: h-14 (56px) com padding-bottom em main content",
+        "Grids colapsam para 1 coluna (grid-cols-1)",
+        "Buttons: min-height 44px (touch targets)",
+        "Nenhum elemento com overflow-x: hidden (scroll horizontal)"
+      ],
+      "fail_signals": [
+        "Nav fixa cobre hero title ou KPIs",
+        "Buttons pequenos (<44px) impossiveis de clicar",
+        "Tabela de concorrencia requer horizontal scroll sem aviso",
+        "Texto <16px causa zoom automatico iOS"
+      ]
+    },
+    {
+      "id": 7,
+      "scenario": "Acessibilidade - Navegacao por teclado",
+      "user_action": "Usuario usa Tab para navegar pela apresentacao",
+      "expected": "Focus ring visivel (2-4px), ordem logica (hero -> secoes -> footer), todos os elementos interativos focaveis (buttons, links, cards expandiveis)",
+      "ux_principle": "focus-states + keyboard-nav + heading-hierarchy + skip-links",
+      "pass_criteria": [
+        "Focus ring: 2px solid #0369A1 ou equivalente",
+        "Tab order: segue DOM order (hero section primeiro)",
+        "Skip link: 'Pular para conteudo principal' no topo",
+        "Heading hierarchy: h1 -> h2 (sem skip levels)"
+      ],
+      "fail_signals": [
+        "Focus ring removido (outline: none sem alternativo)",
+        "Ordem de tab ilogica (pula secoes)",
+        "Cards clicaveis sem foco visivel",
+        "H1 multiplos (deve ser unico)"
+      ]
+    },
+    {
+      "id": 8,
+      "scenario": "Charts - Grafico de municipios",
+      "user_action": "Usuario visualiza o grafico 'Status LGPD - 5.570 Municipios' (canvas id=chartPref)",
+      "expected": "Grafico carregado com cores acessiveis (nao so verde/vermelho), tooltip ao hover/tap com valores exatos, legenda visivel proxima, versao table para screen readers",
+      "ux_principle": "color-guidance + tooltip-on-interact + legend-visible + data-table + screen-reader-summary",
+      "pass_criteria": [
+        "Cores: padrao + icon/texto (nao cor sozinha)",
+        "Tooltip: mostra valor + % ao hover",
+        "Legenda: acima ou ao lado do grafico",
+        "Table: dados tambem disponiveis em <table>"
+      ],
+      "fail_signals": [
+        "Grafico so usa verde/vermelho (colorblind unfriendly)",
+        "Tooltip nao aparece em mobile (tap)",
+        "Legenda abaixo do fold (scroll necessario)",
+        "Sem alternativa text/table para a11y"
+      ]
+    },
+    {
+      "id": 9,
+      "scenario": "Performance - Carregamento inicial",
+      "user_action": "Usuario abre a URL pela primeira vez (cache limpo)",
+      "expected": "LCP (Largest Contentful Paint) < 2.5s, FID (First Input Delay) < 100ms, CLS (Cumulative Layout Shift) < 0.1, fontes carregam sem FOIT (flash of invisible text)",
+      "ux_principle": "image-optimization + font-loading + content-jumping + main-thread-budget + tap-feedback-speed",
+      "pass_criteria": [
+        "Fontes: font-display: swap ou optional",
+        "Imagens: WebP/AVIF com fallback, lazy load abaixo do fold",
+        "Reserva espaco para metricas (evita CLS)",
+        "Scripts: defer/async (nao bloqueiam render)"
+      ],
+      "fail_signals": [
+        "Fontes invisiveis por >3s (FOIT)",
+        "Layout shift quando metricas aparecem",
+        "Hero image carrega depois do texto (LCP alto)",
+        "Input delay >100ms (parece travado)"
+      ]
+    },
+    {
+      "id": 10,
+      "scenario": "Dark mode / Contrast check",
+      "user_action": "Usuario alterna para dark mode (se suportado) ou verifica secao hero (dark gradient)",
+      "expected": "Todos os textos mantem contraste >=4.5:1, bordas e divisors visiveis, estados (hover/active) distinguiveis, cores semanticas (error/success) permanecem claras",
+      "ux_principle": "color-dark-mode + color-accessible-pairs + contrast-data + state-clarity + dark-mode-pairing",
+      "pass_criteria": [
+        "Text on dark: slate-300/400 (nao gray-600)",
+        "Borders: rgba(255,255,255,.08) visiveis",
+        "States: hover/active com opacity ou elevation",
+        "Semantic colors: testadas separadamente em dark"
+      ],
+      "fail_signals": [
+        "Texto sumiu no dark gradient (gray-on-gray)",
+        "Bordas invisiveis em dark",
+        "Hover state sem mudanca visivel",
+        "Error vermelho virou marrom (contraste perdido)"
+      ]
+    }
+  ],
+  "ux_checklist": {
+    "critical": [
+      {
+        "item": "Contraste minimo 4.5:1 para texto normal",
+        "check": "Usar ferramenta de contraste (Lighthouse, axe DevTools)",
+        "priority": "BLOCK",
+        "reference": "WCAG AA, color-contrast (Priority 1)"
+      },
+      {
+        "item": "Touch targets >= 44x44px (iOS) / 48x48dp (Android)",
+        "check": "Inspecionar buttons, links, cards expandiveis",
+        "priority": "BLOCK",
+        "reference": "touch-target-size (Priority 2)"
+      },
+      {
+        "item": "Alt text descritivo para imagens significativas",
+        "check": "Inspecionar hero images, icons, logos",
+        "priority": "BLOCK",
+        "reference": "alt-text (Priority 1)"
+      },
+      {
+        "item": "Keyboard navigation funcional (Tab, Enter, Esc)",
+        "check": "Navegar sem mouse, verificar focus order",
+        "priority": "BLOCK",
+        "reference": "keyboard-nav (Priority 1)"
+      }
+    ],
+    "high": [
+      {
+        "item": "Nenhum horizontal scroll em mobile",
+        "check": "Testar em 375px, verificar overflow-x",
+        "priority": "WARN",
+        "reference": "horizontal-scroll (Priority 5)"
+      },
+      {
+        "item": "Feedback visual em todas as interacoes (<100ms)",
+        "check": "Clicar em buttons, cards, tabs - deve haver hover/active",
+        "priority": "WARN",
+        "reference": "tap-feedback-speed (Priority 3)"
+      },
+      {
+        "item": "Viewport meta com width=device-width initial-scale=1",
+        "check": "Inspecionar <head> tag",
+        "priority": "WARN",
+        "reference": "viewport-meta (Priority 5)"
+      },
+      {
+        "item": "Heading hierarchy sequencial (h1 -> h2 -> h3)",
+        "check": "Inspecionar headings, nao pular niveis",
+        "priority": "WARN",
+        "reference": "heading-hierarchy (Priority 1)"
+      }
+    ],
+    "medium": [
+      {
+        "item": "Animacoes 150-300ms, respeitam prefers-reduced-motion",
+        "check": "Inspecionar CSS transitions, testar media query",
+        "priority": "INFO",
+        "reference": "duration-timing + reduced-motion (Priority 3/7)"
+      },
+      {
+        "item": "Fontes usam font-display: swap (evita FOIT)",
+        "check": "Inspecionar @font-face ou Google Fonts link",
+        "priority": "INFO",
+        "reference": "font-loading (Priority 3)"
+      },
+      {
+        "item": "Espacamento consistente (escala 4pt/8dp)",
+        "check": "Verificar padding/margin multiplos de 4 ou 8",
+        "priority": "INFO",
+        "reference": "spacing-scale (Priority 5)"
+      },
+      {
+        "item": "Cor NAO e o unico indicador (adicionar icon/texto)",
+        "check": "Verificar alerts, badges, estados de form",
+        "priority": "INFO",
+        "reference": "color-not-only (Priority 1)"
+      }
+    ]
+  },
+  "accessibility": {
+    "wcag_aa": [
+      {
+        "criterion": "1.4.3 Contrast (Minimum)",
+        "level": "AA",
+        "test": "Text < 24px: 4.5:1 | Text >= 24px: 3:1",
+        "tools": [" axe DevTools", "Lighthouse", "WAVE"]
+      },
+      {
+        "criterion": "2.4.7 Focus Visible",
+        "level": "AA",
+        "test": "Todo elemento focavel tem indicador visivel (2-4px)",
+        "tools": ["Keyboard navigation", "Visual inspection"]
+      },
+      {
+        "criterion": "1.1.1 Non-text Content",
+        "level": "A",
+        "test": "Imagens significativas tem alt descritivo",
+        "tools": ["axe DevTools", "Lighthouse"]
+      },
+      {
+        "criterion": "2.1.1 Keyboard",
+        "level": "A",
+        "test": "Toda funcionalidade disponivel via keyboard",
+        "tools": ["Tab through interface", "Verify focus order"]
+      },
+      {
+        "criterion": "1.4.10 Reflow",
+        "level": "AA",
+        "test": "Mobile (320px): sem horizontal scroll, 2D zoom funcional",
+        "tools": ["Chrome DevTools device emulation"]
+      },
+      {
+        "criterion": "1.4.4 Resize text",
+        "level": "AA",
+        "test": "Texto 200% zoom permanece legivel e funcional",
+        "tools": ["Browser zoom 200%"]
+      }
+    ],
+    "screen_reader": [
+      {
+        "check": "Heading hierarchy: h1 unico, sequencial h2-h6",
+        "method": "Inspecionar com VoiceOver/TalkBack"
+      },
+      {
+        "check": "Links/buttons tem texto descritivo (nao 'clique aqui')",
+        "method": "Navigation by headings/landmarks"
+      },
+      {
+        "check": "Forms tem labels associados (for attribute)",
+        "method": "Form control navigation"
+      },
+      {
+        "check": "Icon-only buttons tem aria-label",
+        "method": "Button navigation"
+      },
+      {
+        "check": "Charts tem aria-label descritivo ou table alternativa",
+        "method": "Table navigation or aria-describedby"
+      }
+    ],
+    "reduced_motion": [
+      {
+        "check": "Animações respeitam prefers-reduced-motion",
+        "method": "Chrome DevTools > Rendering > Emulate reduced motion",
+        "expect": "Transicoes desabilitadas ou muito mais rapidas"
+      }
+    ]
+  },
+  "mobile_breakpoints": {
+    "strategy": "mobile-first",
+    "breakpoints": [
+      {
+        "name": "small",
+        "min_width": "320px",
+        "max_width": "374px",
+        "considerations": [
+          "Nav bar: sticky, nao esconder conteudo",
+          "Grids: 1 coluna (grid-cols-1)",
+          "Typography: base 16px (min para evitar iOS zoom)",
+          "Touch targets: min 44x44px",
+          "Charts: usar horizontal bar em vez de vertical",
+          "Tables: scroll horizontal com indicador visual"
+        ]
+      },
+      {
+        "name": "medium",
+        "min_width": "375px",
+        "max_width": "767px",
+        "considerations": [
+          "Nav: condensar links em menu hamburger se >5 items",
+          "Cards: full width com margin horizontal",
+          "Timeline: adaptar para vertical se horizontal quebra",
+          "Modals: sheet (bottom-up) em vez de center modal"
+        ]
+      },
+      {
+        "name": "large",
+        "min_width": "768px",
+        "max_width": "1023px",
+        "considerations": [
+          "Grids: 2 colunas (grid-cols-2)",
+          "Nav: todos os links visiveis",
+          "Tables: full width sem scroll",
+          "Images: usar srcset para servir imagem otimizada"
+        ]
+      },
+      {
+        "name": "xlarge",
+        "min_width": "1024px",
+        "max_width": null,
+        "considerations": [
+          "Grids: 3-4 colunas (grid-cols-3/4)",
+          "Max-width container: max-w-6xl ou max-w-7xl",
+          "Spacing: aumentar whitespace proporcionalmente",
+          "Charts: mostrar todos os detalhes, usar legendas ao lado"
+        ]
+      }
+    ],
+    "orientation": [
+      {
+        "mode": "portrait",
+        "check": "Conteudo principal visivel sem scroll excessivo",
+        "priority": "HIGH"
+      },
+      {
+        "mode": "landscape",
+        "check": "Layout permanece legivel (nao quebra)",
+        "priority": "MEDIUM"
+      }
+    ],
+    "safe_areas": [
+      {
+        "platform": "iOS",
+        "concerns": [
+          "Notch (Dynamic Island): 44px top safe area",
+          "Home indicator: 34px bottom safe area",
+          "Fixed headers: deve respeitar top safe area",
+          "Bottom nav: deve respeitar bottom safe area"
+        ]
+      },
+      {
+        "platform": "Android",
+        "concerns": [
+          "Status bar: 24px top (variable)",
+          "Navigation bar: 48px bottom",
+          "Gestures: nao bloquear swipe de bordas"
+        ]
+      }
+    ]
+  },
+  "performance_targets": {
+    "core_web_vitals": [
+      {
+        "metric": "LCP (Largest Contentful Paint)",
+        "target": "< 2.5s",
+        "current": "TBD - medir com Lighthouse",
+        "actions": [
+          "Hero image: usar WebP/AVIF com srcset",
+          "Fontes: preload font-critical, font-display: swap",
+          "JS: defer scripts nao criticos"
+        ]
+      },
+      {
+        "metric": "FID (First Input Delay)",
+        "target": "< 100ms",
+        "current": "TBD - medir com CrUX",
+        "actions": [
+          "Minimize main thread work",
+          "Code split por secao (lazy load roadmap)",
+          "Reducir JS bundle size"
+        ]
+      },
+      {
+        "metric": "CLS (Cumulative Layout Shift)",
+        "target": "< 0.1",
+        "current": "TBD - medir com Lighthouse",
+        "actions": [
+          "Reservar espaco para imagens (width/height)",
+          "Reservar espaco para metricas/KPIs",
+          "Fontes: usar font-display: swap com reserva"
+        ]
+      }
+    ],
+    "loading": [
+      {
+        "check": "Time to Interactive (TTI)",
+        "target": "< 3.5s",
+        "tools": ["Lighthouse", "WebPageTest"]
+      },
+      {
+        "check": "First Contentful Paint (FCP)",
+        "target": "< 1.8s",
+        "tools": ["Lighthouse", "WebPageTest"]
+      }
+    ]
+  },
+  "test_protocol": {
+    "pre_test": [
+      "Limpar cache e cookies (incognito mode)",
+      "Setar viewport para 375x667px (mobile) e 1920x1080px (desktop)",
+      "Habilitar prefers-reduced-motion: reduce",
+      "Abrir DevTools (Lighthouse tab pronto)"
+    ],
+    "during_test": [
+      "Gravar sessao (video ou screen capture)",
+      "Tomar notas de friction points",
+      "Medir tempo para completar cada tarefa",
+      "Verificar console para erros JS"
+    ],
+    "post_test": [
+      "Rodar Lighthouse audit (Performance, Accessibility, Best Practices)",
+      "Rodar axe DevTools para a11y detalhado",
+      "Compilar findings por prioridade (Critical > High > Medium)",
+      "Gerar relatorio com screenshots e evidencias"
+    ]
+  },
+  "success_criteria": {
+    "5_second_rule": "Usuario identifica proposta + 3 KPIs + CTAs em 5s",
+    "task_completion": "90%+ tarefas concluidas sem assistencia",
+    "satisfaction": "SUS score > 70 (pos-teste)",
+    "errors": "Zero erros criticos (blocked tasks)"
+  }
+}

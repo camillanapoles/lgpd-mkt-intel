@@ -1,1 +1,9 @@
 .claude/
+app/node_modules/
+app/dist/
+app/.vite/
+app/package-lock.json
+*.log
+.DS_Store
+.env.local
+.env.*.local

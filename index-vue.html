@@ -163,26 +163,49 @@
 
         <!-- FDC-U Detail Tab -->
         <div v-if="activeTab === 'fdcu'" class="space-y-6">
+          <!-- Interactive Weight Slider -->
+          <section class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-medium text-slate-900 mb-4">FDC-U Simulator - Ajuste Pesos</h3>
+            <div class="space-y-4">
+              <div v-for="dim in customDimensions" :key="dim.name" class="flex items-center gap-4">
+                <span class="w-40 text-sm font-medium">{{ dim.name.replace(/_/g, ' ') }}</span>
+                <input type="range" v-model.number="dim.weight" min="0" max="0.5" step="0.05" class="flex-1"
+                       @input="recalculateScores">
+                <span class="w-16 text-right font-mono text-sm">{{ (dim.weight * 100).toFixed(0) }}%</span>
+                <span class="text-xs px-2 py-1 rounded" :class="dim.function === '+' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'">
+                  {{ dim.function }}
+                </span>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t">
+                <span class="font-medium">Total:</span>
+                <span :class="['font-mono font-bold', totalWeight === 1.0 ? 'text-green-600' : 'text-red-600']">
+                  {{ (totalWeight * 100).toFixed(0) }}%
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recalculated Rankings -->
+          <section class="bg-white rounded-lg shadow p-6" v-if="totalWeight === 1.0">
+            <h3 class="text-lg font-medium text-slate-900 mb-4">Ranking Recalculado</h3>
+            <div class="space-y-2">
+              <div v-for="(item, index) in recalculatedScores" :key="item.name"
+                   :class="['flex items-center p-3 rounded', index === 0 ? 'bg-green-50 border border-green-200' : 'bg-slate-50']">
+                <span class="w-8 font-bold text-slate-400">#{{ index + 1 }}</span>
+                <span class="flex-1 text-sm">{{ item.name.replace(/_/g, ' ') }}</span>
+                <span class="font-mono font-bold" :class="getScoreColor(item.score)">{{ item.score.toFixed(2) }}</span>
+                <button @click="showScoreDetail(item)" class="ml-2 text-blue-600 hover:text-blue-800 text-xs">
+                  detalhe
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Original Config Reference -->
           <section class="bg-white rounded-lg shadow p-6">
             <h3 class="text-lg font-medium text-slate-900 mb-2">FDC-U Framework Configuration</h3>
             <p class="text-slate-600 mb-4">{{ data.fdcu_priorities?.goal }}</p>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 class="font-medium text-slate-900 mb-3">Dimensions (Weights)</h4>
-                <div class="space-y-2">
-                  <div v-for="dim in data.fdcu_priorities?.dimensions" :key="dim.name" class="flex items-center justify-between p-2 bg-slate-50 rounded">
-                    <span class="text-sm">{{ dim.name.replace(/_/g, ' ') }}</span>
-                    <div class="flex items-center gap-2">
-                      <span class="text-xs px-2 py-1 rounded" :class="dim.function === '+' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'">
-                        {{ dim.function }}
-                      </span>
-                      <span class="font-mono text-sm font-medium">{{ (dim.weight * 100).toFixed(0) }}%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <div>
                 <h4 class="font-medium text-slate-900 mb-3">Validation Log</h4>
                 <div class="space-y-2 max-h-64 overflow-y-auto">
@@ -192,11 +215,6 @@
                       <span class="text-xs text-slate-500">{{ log.date }}</span>
                     </div>
                     <p class="text-slate-600 text-xs mt-1">{{ log.action }}</p>
-                    <div class="flex items-center gap-2 mt-1">
-                      <span class="text-xs text-red-600">Before: {{ (log.vvv_before * 100).toFixed(0) }}%</span>
-                      <span>→</span>
-                      <span class="text-xs text-green-600">After: {{ (log.vvv_after * 100).toFixed(0) }}%</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -330,9 +348,28 @@
           activeTab: 'dashboard',
           selectedScenario: 'base',
           selectedBmc: null,
+          customDimensions: [
+            {name: 'Impacto_Decisao', weight: 0.35, function: '+'},
+            {name: 'Risco_Se_Validar_Falso', weight: 0.25, function: '-'},
+            {name: 'Urgencia_Temporal', weight: 0.20, function: '-'},
+            {name: 'Esforco_Validacao', weight: 0.10, function: '-'},
+            {name: 'Custo_Erro', weight: 0.10, function: '-'}
+          ],
+          originalScores: {
+            LOI_Assinadas: {impacto_decisao: 9, risco_se_validar_falso: 2, urgencia_temporal: 2, esforco_validacao: 8, custo_erro: 9},
+            CoFounder_Advisor: {impacto_decisao: 9, risco_se_validar_falso: 1, urgencia_temporal: 4, esforco_validacao: 5, custo_erro: 8},
+            Parecer_Juridico_Dispensa: {impacto_decisao: 10, risco_se_validar_falso: 8, urgencia_temporal: 3, esforco_validacao: 4, custo_erro: 3},
+            Unit_Economics_Validado: {impacto_decisao: 8, risco_se_validar_falso: 4, urgencia_temporal: 4, esforco_validacao: 3, custo_erro: 6},
+            Consorcios_Prioridade: {impacto_decisao: 7, risco_se_validar_falso: 2, urgencia_temporal: 2, esforco_validacao: 7, custo_erro: 3},
+            MVP_Cores_Teste: {impacto_decisao: 5, risco_se_validar_falso: 9, urgencia_temporal: 7, esforco_validacao: 8, custo_erro: 7},
+            Roadmap_Realista: {impacto_decisao: 7, risco_se_validar_falso: 3, urgencia_temporal: 6, esforco_validacao: 2, custo_erro: 4},
+            Gap_Competitivo_Confirmado: {impacto_decisao: 6, risco_se_validar_falso: 5, urgencia_temporal: 5, esforco_validacao: 6, custo_erro: 5},
+            Funding_Runner_Validado: {impacto_decisao: 8, risco_se_validar_falso: 3, urgencia_temporal: 5, esforco_validacao: 2, custo_erro: 7},
+            Pricing_Municipal_Final: {impacto_decisao: 6, risco_se_validar_falso: 5, urgencia_temporal: 5, esforco_validacao: 2, custo_erro: 4}
+          },
           tabs: [
             { id: 'dashboard', name: 'Dashboard' },
-            { id: 'fdcu', name: 'FDC-U Matrix' },
+            { id: 'fdcu', name: 'FDC-U Simulator' },
             { id: 'bmc', name: 'BMC' },
             { id: 'team', name: 'Equipe' },
             { id: 'swot', name: 'SWOT' }
@@ -349,6 +386,21 @@
             { id: 'ltv', label: 'LTV', value: `R$ ${ue.ltv?.toLocaleString() || '10.8K'}`, change: `${ue.ltv_cac_ratio || 6.0}x CAC`, color: 'text-purple-600', changeColor: 'text-slate-500', vvv: ue.vvv_score || 0 },
             { id: 'payback', label: 'Payback', value: `${ue.payback_months || 4.0} mo`, change: `Gross ${((ue.gross_margin || 0.82) * 100).toFixed(0)}%`, color: 'text-orange-600', changeColor: 'text-slate-500', vvv: ue.vvv_score || 0 }
           ];
+        },
+        totalWeight() {
+          return this.customDimensions.reduce((sum, d) => sum + d.weight, 0);
+        },
+        recalculatedScores() {
+          return Object.entries(this.originalScores).map(([name, scores]) => {
+            let total = 0;
+            this.customDimensions.forEach(dim => {
+              const key = dim.name.toLowerCase();
+              const raw = scores[key];
+              const transformed = dim.function === '+' ? raw : (10 - raw);
+              total += transformed * dim.weight;
+            });
+            return { name, score: total };
+          }).sort((a, b) => b.score - a.score);
         }
       },
       methods: {
@@ -423,6 +475,18 @@
           if (score >= 6) return 'text-amber-600';
           return 'text-blue-600';
         },
+        recalculateScores() {
+          this.$forceUpdate();
+        },
+        showScoreDetail(item) {
+          alert(`${item.name}\n\nScore: ${item.score.toFixed(2)}\n\nBreakdown:\n` +
+            this.customDimensions.map(d => {
+              const raw = this.originalScores[item.name][d.name.toLowerCase()];
+              const transformed = d.function === '+' ? raw : 10 - raw;
+              const weighted = transformed * d.weight;
+              return `${d.name}: ${raw} → ${transformed.toFixed(1)} × ${(d.weight * 100).toFixed(0)}% = ${weighted.toFixed(2)}`;
+            }).join('\n'));
+        }
         getStatusClass(status) {
           const s = status.toLowerCase();
           if (s.includes('critico') || s.includes('bloqueio')) return 'bg-red-100 text-red-700';
