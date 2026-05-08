@@ -188,23 +188,64 @@
   </div>
 
   <script>
+    const rootDocs = [
+      'BUSINESS-PLAN.md',
+      'FLUXO-TESTE-UX.md',
+      'battle-card-confidata.md',
+      'divisao-funcoes-cronograma.md',
+      'draft-pesquisa-lgpd.md',
+      'estrategia-diferenciacao-confidata.md',
+      'insights-reuniao-06-05.md',
+      'inteligencia-mercado-govtech-lgpd.md',
+      'memo-confidata-analysis.md',
+      'plano-negocios-cit-ai-tech.md',
+      'to-plan.md',
+      'transcricao-reuniao-lgpd-06-05-26.md'
+    ];
+
+    const docClassification = {
+      researchKeywords: [
+        'pesquisa',
+        'inteligencia',
+        'insights',
+        'estrategia',
+        'memo',
+        'battle-card',
+        'transcricao',
+        'plano-negocios'
+      ]
+    };
+
+    function isResearchDoc(path) {
+      const lower = path.toLowerCase();
+      const withoutExt = lower.endsWith('.md') ? lower.slice(0, -3) : lower;
+      const tokens = withoutExt.split(/[^a-z0-9à-ÿ]+/).filter(Boolean);
+      return docClassification.researchKeywords.some(keyword => {
+        if (keyword.includes('-')) {
+          return withoutExt.includes(keyword);
+        }
+        return tokens.includes(keyword);
+      });
+    }
+
+    const rootMarkdownDocs = rootDocs.filter(path => path.toLowerCase().endsWith('.md'));
+    const { researchRootDocs, opsRootDocs } = rootMarkdownDocs.reduce((acc, path) => {
+      if (isResearchDoc(path)) {
+        acc.researchRootDocs.push(path);
+      } else {
+        acc.opsRootDocs.push(path);
+      }
+      return acc;
+    }, { researchRootDocs: [], opsRootDocs: [] });
+
     const docsBySection = [
       {
-        title: 'Raiz do repositório',
-        docs: [
-          'BUSINESS-PLAN.md',
-          'FLUXO-TESTE-UX.md',
-          'battle-card-confidata.md',
-          'divisao-funcoes-cronograma.md',
-          'draft-pesquisa-lgpd.md',
-          'estrategia-diferenciacao-confidata.md',
-          'insights-reuniao-06-05.md',
-          'inteligencia-mercado-govtech-lgpd.md',
-          'memo-confidata-analysis.md',
-          'plano-negocios-cit-ai-tech.md',
-          'to-plan.md',
-          'transcricao-reuniao-lgpd-06-05-26.md'
-        ]
+        title: 'Pesquisa (arquivos .md na raiz)',
+        docs: researchRootDocs
+      },
+      {
+        title: 'Raiz do repositório (demais .md)',
+        docs: opsRootDocs
       },
       {
         title: 'Documentos em /docs',
@@ -227,7 +268,7 @@
         title: 'Documentação do app',
         docs: ['app/README.md']
       }
-    ];
+    ].filter(section => section.docs.length > 0);
 
     const allDocs = docsBySection.flatMap(section => section.docs.map(path => ({
       section: section.title,
