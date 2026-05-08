@@ -1,0 +1,301 @@
+{
+  "validation_framework": {
+    "version": "1.0.0",
+    "created": "2026-05-08",
+    "methodology": "VVV (Verificacao Verdade Valida)",
+    "description": "Framework de validacao para dados estrategicos - VVV Score 0-1",
+    "scoring": {
+      "verificavel": {
+        "score": 0.4,
+        "description": "Fonte existe e pode ser verificada (arquivo:linha, URL, documento)",
+        "criteria": ["Arquivo fonte especifico", "Linha ou secao identificavel", "Acesso disponivel"]
+      },
+      "verdadeiro": {
+        "score": 0.3,
+        "description": "Cross-check com outras fontes confirma o dado",
+        "criteria": ["Convergencia com fontes independentes", "Sem contradicoes", "Consistencia temporal"]
+      },
+      "validado": {
+        "score": 0.3,
+        "description": "Especialista revisou e aprovou o dado",
+        "criteria": ["Revisao por role autorizado", "Data da validacao", "Observacoes se aplicavel"]
+      }
+    },
+    "thresholds": {
+      "critical": {"min": 0.0, "max": 0.5, "action": "VALIDACAO URGENTE", "color": "red"},
+      "attention": {"min": 0.5, "max": 0.7, "action": "REVISAR", "color": "yellow"},
+      "acceptable": {"min": 0.7, "max": 0.9, "action": "MONITORAR", "color": "blue"},
+      "validated": {"min": 0.9, "max": 1.0, "action": "CONFIRMADO", "color": "green"}
+    },
+    "roles": ["Presidente", "Juridico", "Compliance", "TI/Produto", "Comercial", "Financeiro"],
+    "schema": [
+      {
+        "campo": "vvv_score",
+        "tipo": "float",
+        "min": 0.0,
+        "max": 1.0,
+        "obrigatorio": true,
+        "descricao": "Score composto VVV (0-1)"
+      },
+      {
+        "campo": "fonte",
+        "tipo": "string",
+        "formato": "arquivo:linha ou URL",
+        "obrigatorio": true,
+        "descricao": "Origem do dado para verificacao"
+      },
+      {
+        "campo": "validado_por",
+        "tipo": "string",
+        "valores": ["Presidente", "Juridico", "Compliance", "TI/Produto", "Comercial", "Financeiro", "pending"],
+        "obrigatorio": false,
+        "descricao": "Role que validou o dado"
+      },
+      {
+        "campo": "data_validacao",
+        "tipo": "date",
+        "obrigatorio": false,
+        "descricao": "Data da revisao por especialista"
+      },
+      {
+        "campo": "observacoes",
+        "tipo": "string",
+        "obrigatorio": false,
+        "descricao": "Notas sobre a validacao ou gaps identificados"
+      }
+    ]
+  },
+  "low_vvv_items": [
+    {
+      "id": "CRIT-001",
+      "item": "LOI_Assinadas",
+      "vvv_score": 0.0,
+      "fonte": "strategic-data.json:24",
+      "validado_por": "pending",
+      "categoria": "fdcu_priorities",
+      "acao": "CRITICO - BLOQUEIO",
+      "descricao": "3+ Letters of Intent assinadas com prefeituras/consorcios. Sem LOI = sem validacao real.",
+      "observacao": "GO/NO-GO depende disso. Necessario comprovar com assinaturas reais."
+    },
+    {
+      "id": "CRIT-002",
+      "item": "CoFounder_Advisor",
+      "vvv_score": 0.3,
+      "fonte": "strategic-data.json:29",
+      "validado_por": "pending",
+      "categoria": "fdcu_priorities",
+      "acao": "ALTO RISCO",
+      "descricao": "Pessoa com experiencia vendas municipais. Sem isso, sales cycle >12 meses queima runway.",
+      "observacao": "Candidato nao identificado nem validado."
+    },
+    {
+      "id": "CRIT-003",
+      "item": "Parecer_Juridico_Dispensa",
+      "vvv_score": 0.5,
+      "fonte": "strategic-data.json:38",
+      "validado_por": "Juridico",
+      "categoria": "fdcu_priorities",
+      "acao": "NEEDS_VALIDATION",
+      "descricao": "Memoria juridica fundamentando Art.75 IV Lei 14.133. Alto risco se fundamentacao errada.",
+      "observacao": "Whitepaper criado mas precisa revisao por advogado especialista em licitacoes."
+    },
+    {
+      "id": "CRIT-004",
+      "item": "Unit_Economics_Validado",
+      "vvv_score": 0.6,
+      "fonte": "strategic-data.json:45",
+      "validado_por": "Financeiro",
+      "categoria": "fdcu_priorities",
+      "acao": "ERROS_IDENTIFICADOS",
+      "descricao": "CAC, LTV, payback base REAL. Erros: LTV 13.2->10.8K, payback 3.3->4.0.",
+      "observacao": "Correcoes aplicadas mas falta validacao com dados reais de mercado."
+    },
+    {
+      "id": "CRIT-005",
+      "item": "Consorcios_Prioridade",
+      "vvv_score": 0.4,
+      "fonte": "strategic-data.json:53",
+      "validado_por": "pending",
+      "categoria": "fdcu_priorities",
+      "acao": "PARCIAL_VALIDADO",
+      "descricao": "Top 5 consorcios mapeados. CIMINAS R$31.9M reference. Outros?",
+      "observacao": "Apenas CIMINAS tem budget confirmado. Outros 4 precisam validacao."
+    },
+    {
+      "id": "CRIT-006",
+      "item": "Pricing_Municipal_Ajustado",
+      "vvv_score": 0.5,
+      "fonte": "strategic-planning.json:110",
+      "validado_por": "Comercial",
+      "categoria": "decisions",
+      "acao": "NEEDS_VALIDATION",
+      "descricao": "Valores originais 80-95% abaixo mercado. Ajustar 8-15x para R$2.497-14.997.",
+      "observacao": "Ajuste teorico calculado. Precisa testar com reais propostas."
+    },
+    {
+      "id": "CRIT-007",
+      "item": "Funding_Disponivel",
+      "vvv_score": 0.5,
+      "fonte": "strategic-planning.json:138",
+      "validado_por": "pending",
+      "categoria": "variables",
+      "acao": "NEEDS_CONFIRMATION",
+      "descricao": "Cenario base R$ 960K. Cenario otimista R$ 2M.",
+      "observacao": "Valores nao confirmados com investidores ou cofres."
+    },
+    {
+      "id": "CRIT-008",
+      "item": "Advisor_Municipal_Custo",
+      "vvv_score": 0.4,
+      "fonte": "strategic-planning.json:296",
+      "validado_por": "pending",
+      "categoria": "decisions",
+      "acao": "ESTIMATIVA",
+      "descricao": "15-25% equity + salario + comissao.",
+      "observacao": "Equity nao definido. Mesa de negociacao nao iniciada."
+    }
+  ],
+  "confidence_badges": {
+    "mercado_alvo": {
+      "score": 0.95,
+      "level": "EXCELLENT",
+      "color": "green",
+      "itens_validados": 5,
+      "total_itens": 5,
+      "fontes": ["IBGE MUNIC 2024", "ANPD", "TCEs"],
+      "gaps": []
+    },
+    "regulatorio": {
+      "score": 0.95,
+      "level": "EXCELLENT",
+      "color": "green",
+      "itens_validados": 4,
+      "total_itens": 4,
+      "fontes": ["Lei 14.133/2021", "Lei 13.709 (LGPD)", "Lei 15.211/2025 (ECA Digital)"],
+      "gaps": []
+    },
+    "produto": {
+      "score": 0.82,
+      "level": "GOOD",
+      "color": "blue",
+      "itens_validados": 9,
+      "total_itens": 11,
+      "fontes": ["VVV-VALIDATION-REPORT.md transcricao"],
+      "gaps": ["Modelo precificacao por servidores + populacao nao detalhado", "ISO 27001 roadmap apenas estimativa"]
+    },
+    "competicao": {
+      "score": 0.95,
+      "level": "EXCELLENT",
+      "color": "green",
+      "itens_validados": 8,
+      "total_itens": 8,
+      "fontes": ["confidata.com.br", "battle-card-confidata.md"],
+      "gaps": []
+    },
+    "unit_economics": {
+      "score": 0.6,
+      "level": "ATTENTION",
+      "color": "yellow",
+      "itens_validados": 4,
+      "total_itens": 7,
+      "fontes": ["Estimativas internas"],
+      "gaps": ["LTV baseado em churn estimado", "CAC sem dados reais de campanhas", "Payback 4 meses pode ser otimista"]
+    },
+    "roadmap": {
+      "score": 0.75,
+      "level": "ACCEPTABLE",
+      "color": "blue",
+      "itens_validados": 3,
+      "total_itens": 4,
+      "fontes": ["Cronograma fixo Sprints 1-4"],
+      "gaps": ["Milestone mes 30 (275 clientes) depende de growth 3-7% MoM nao validado"]
+    },
+    "team_structure": {
+      "score": 0.9,
+      "level": "EXCELLENT",
+      "color": "green",
+      "itens_validados": 4,
+      "total_itens": 4,
+      "fontes": ["Definicoes internas"],
+      "gaps": []
+    },
+    "swot": {
+      "score": 0.87,
+      "level": "GOOD",
+      "color": "blue",
+      "itens_validados": 15,
+      "total_itens": 17,
+      "fontes": ["VVV-VALIDATION-REPORT.md cross-check transcricao"],
+      "gaps": ["Ameaca Confidata nao mencionada na transcricao (silenciado)", "Oportunidade FNDE/emendas nao capturada"]
+    },
+    "fdcu_priorities": {
+      "score": 0.54,
+      "level": "CRITICAL",
+      "color": "red",
+      "itens_validados": 1,
+      "total_itens": 5,
+      "fontes": ["FDC-U Priority Matrix"],
+      "gaps": ["LOI nao assinada (bloqueio)", "Co-founder nao identificado", "Parecer juridico precisa revisao especialista", "Unit economics tem correcoes pendentes", "Consorcios parcialmente validados"]
+    }
+  },
+  "validation_summary": {
+    "total_itens": 64,
+    "itens_validados": 48,
+    "itens_parciais": 12,
+    "itens_criticos": 4,
+    "vvv_aggregate": 0.78,
+    "status": "ALTA CONVERGENCIA com gaps criticos em pricing e go/no-go",
+    "recomendacao_principal": "Priorizar validacao FDC-U: LOI assinada + Advisor + Parecer juridico antes de prosseguir"
+  },
+  "next_actions": {
+    "immediate": [
+      "Obter 3+ LOIs assinadas (bloqueio GO/NO-GO)",
+      "Identificar e negociar Co-founder/Advisor municipal",
+      "Revisao Parecer Juridico por especialista em licitacoes",
+      "Validar pricing ajustado com 3-5 propostas reais"
+    ],
+    "short_term": [
+      "Validar budget consorcios restantes (4 de 5)",
+      "Confirmar funding disponivel com investidores",
+      "Testar unit economics com primeiros clientes beta"
+    ],
+    "medium_term": [
+      "Protocolar INPI (Sprint 1)",
+      "Obter cotacao ISO 27001 com auditores BR",
+      "Mapear TCE enforcement por estado"
+    ]
+  },
+  "integration_map": {
+    "strategic-data.json": {
+      "vvv_score": 0.7,
+      "itens_criticos": 5,
+      "itens_validados": 18,
+      "total_itens": 23
+    },
+    "strategic-planning.json": {
+      "vvv_score": 0.75,
+      "itens_criticos": 3,
+      "itens_validados": 22,
+      "total_itens": 29
+    },
+    "sources.json": {
+      "vvv_score": 0.92,
+      "itens_criticos": 0,
+      "itens_validados": 11,
+      "total_itens": 12
+    },
+    "VVV-VALIDATION-REPORT.md": {
+      "vvv_score": 0.78,
+      "validacoes": 47,
+      "confirmadas": 38,
+      "contestadas": 5,
+      "novos_insights": 4
+    }
+  },
+  "confidence_levels": {
+    "validated": {"count": 32, "percentage": 50, "color": "green"},
+    "acceptable": {"count": 18, "percentage": 28, "color": "blue"},
+    "attention": {"count": 10, "percentage": 16, "color": "yellow"},
+    "critical": {"count": 4, "percentage": 6, "color": "red"}
+  }
+}

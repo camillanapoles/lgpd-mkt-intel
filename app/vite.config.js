@@ -6,6 +6,14 @@ export default defineConfig({
   base: '/LGPD/app/',
   build: {
     outDir: 'dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'chart': ['chart.js'],
+          'vue-vendor': ['vue', 'vue-router']
+        }
+      }
+    }
   }
 })

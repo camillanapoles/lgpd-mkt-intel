@@ -56,7 +56,8 @@ const docsBySection = [
     docs: [
       'docs/INPI_CHECKLIST_REGISTRO_SOFTWARE_IA.md',
       'docs/co-founder-advisor-municipal-sales.md',
-      'docs/whitepaper-dispensa-licitacao-ict-lgpd.md'
+      'docs/whitepaper-dispensa-licitacao-ict-lgpd.md',
+      'docs/loi-kit/LOI-KIT-COMPLETO.md'
     ]
   },
   {

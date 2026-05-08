@@ -1,0 +1,476 @@
+{
+  "$schema": "Strategic Dashboard Unified Data v1.0",
+  "metadata": {
+    "version": "2.1.0",
+    "lastUpdated": "2026-05-08T20:18:00Z",
+    "project": "LGPD SaaS Municipal - Contabilizei da Privacy",
+    "framework": "VVV (Verificacao Verdade Valida) + FDC-U Priority Matrix",
+    "refreshInterval": "live",
+    "sources": [
+      "fdcu-continuidade.json",
+      "strategic-planning.json",
+      "fatos-vs-recomendacoes-neogov.md",
+      "analise-riscos-neogov.md",
+      "insights-reuniao-06-05.md",
+      "confidata.com.br (benchmark)"
+    ],
+    "vvv_framework": {
+      "verifiable": "Fonte existe e é citável (arquivo:linha)",
+      "true": "Cross-check com múltiplas fontes",
+      "validated": "Especialista/análise confirmou",
+      "scale": "1.0 = fato transcricao, 0.8-0.95 = fonte oficial, 0.5-0.7 = análise, 0.0-0.4 = gap"
+    }
+  },
+  "dashboard": {
+    "title": "LGPD SaaS Municipal - Planejamento Estratégico",
+    "subtitle": "Dashboard Interativo de Alinhamento e Decisão",
+    "lastMeeting": "2026-05-06",
+    "nextMeeting": "A definir",
+    "overallConfidence": 0.72,
+    "criticalGaps": 5,
+    "activeDecisions": 5
+  },
+  "kpi_5s": {
+    "headline_mrr": "R$ 280K",
+    "headline_customers": 275,
+    "headline_month": 30,
+    "critical_vvv_items": 3,
+    "urgent_actions": 5,
+    "labels": {
+      "mrr": "MRR Projetado (Mês 30 - Base Case)",
+      "customers": "Clientes Ativos",
+      "month": "Horizonte (meses)",
+      "vvv": "Itens VVV < 0.5",
+      "actions": "Ações Urgentes"
+    }
+  },
+  "swot_interactive": {
+    "filters": ["S", "W", "O", "T"],
+    "forcas": [
+      { "id": "F1", "texto": "Unico abaixo R$65K/ano com DPO", "vvv": 0.9, "fonte": "fdcu-continuidade.json:215" },
+      { "id": "F2", "texto": "DC Brasil compliance Art.26", "vvv": 0.95, "fonte": "fdcu-continuidade.json:216" },
+      { "id": "F3", "texto": "Modelo Contabilizei validado", "vvv": 0.8, "fonte": "fdcu-continuidade.json:217" },
+      { "id": "F4", "texto": "Templates municipais unicos", "vvv": 0.7, "fonte": "fdcu-continuidade.json:218" },
+      { "id": "F5", "texto": "Archbase Framework BR + IP", "vvv": 0.7, "fonte": "fdcu-continuidade.json:219" }
+    ],
+    "fracas": [
+      { "id": "W1", "texto": "Sem brand estabelecido", "vvv": 0.6, "fonte": "strategic-planning.json:162" },
+      { "id": "W2", "texto": "Sem ISO certificado", "vvv": 0.5, "fonte": "strategic-planning.json:163" },
+      { "id": "W3", "texto": "Depende AWS sa-east-1", "vvv": 0.4, "fonte": "strategic-planning.json:164" },
+      { "id": "W4", "texto": "Pool DPOs necessario", "vvv": 0.6, "fonte": "strategic-planning.json:165" }
+    ],
+    "oportunidades": [
+      { "id": "O1", "texto": "4.011 prefeituras sem LGPD (72%)", "vvv": 0.95, "fonte": "IBGE MUNIC 2024" },
+      { "id": "O2", "texto": "ANPD ativa + multas R$50M", "vvv": 0.9, "fonte": "ANPD.gov.br" },
+      { "id": "O3", "texto": "Lei 14.133 dispensa ate R$390K", "vvv": 0.85, "fonte": "Lei 14.133/2021" },
+      { "id": "O4", "texto": "ECA Digital urgência idade", "vvv": 0.9, "fonte": "Lei 15.211/2025" },
+      { "id": "O5", "texto": "TCEs fiscalizando LGPD", "vvv": 0.8, "fonte": "Transcrição L1145" }
+    ],
+    "ameacas": [
+      { "id": "T1", "texto": "Confidata pivot municipal", "vvv": 0.7, "fonte": "confidata.com.br/blog" },
+      { "id": "T2", "texto": "OneTrust entrada BR", "vvv": 0.5, "fonte": "benchmark" },
+      { "id": "T3", "texto": "Mudanca regulatoria", "vvv": 0.4, "fonte": "analise" },
+      { "id": "T4", "texto": "Sales cycle >12 meses", "vvv": 0.8, "fonte": "analise-riscos-neogov.md" }
+    ],
+    "top_actions": {
+      "forcas": ["Explorar DC Brasil em marketing", "Criar case studies municipios"],
+      "fracas": ["Contratar branding specialist", "Iniciar roadmap ISO 27001"],
+      "oportunidades": ["Priorizar ECA Digital apos MVP", "Contatar TCEs para parceria"],
+      "ameacas": ["Lancarpricingagressive antes Confidata", "Preparar resposta OneTrust"]
+    }
+  },
+  "scenarios": {
+    "active_scenario": "base",
+    "sliders": [
+      { "id": "lois", "label": "LOIs Assinadas", "min": 0, "max": 10, "value": 3, "impact": "high" },
+      { "id": "advisor", "label": "Advisor Municipal", "type": "boolean", "value": false, "impact": "high" },
+      { "id": "funding", "label": "Funding (R$ mil)", "min": 500, "max": 2000, "value": 960, "impact": "medium" },
+      { "id": "anpd", "label": "ANPD Fiscalização", "options": ["mantem", "aumenta_50", "foco_grandes"], "value": "aumenta_50", "impact": "medium" }
+    ],
+    "cases": {
+      "bear": { "mrr": "R$ 120K", "customers": 150, "month": 30, "churn": 0.05 },
+      "base": { "mrr": "R$ 280K", "customers": 275, "month": 30, "churn": 0.025 },
+      "bull": { "mrr": "R$ 550K", "customers": 500, "month": 30, "churn": 0.015 }
+    },
+    "projections": {
+      "phase_1": { "mrr": "R$ 25K", "customers": 5 },
+      "phase_2": { "mrr": "R$ 150K", "customers": 50 },
+      "phase_3": { "mrr": "R$ 300K", "customers": 150 },
+      "phase_4": { "mrr": "R$ 1M", "customers": 500 },
+      "break_even": { "customers": 350, "month": 42 }
+    }
+  },
+  "bmc_interactive": {
+    "blocks": [
+      {
+        "id": "kp", "label": "Key Partners", "items": [
+          "Associacoes municipais (CNM, FNP)",
+          "Consorcios (CIGA, CIMAMS, COPIRN, CONIAPE, CIMINAS)",
+          "DPOs fractionados",
+          "AWS sa-east-1 (DC Brasil)"
+        ],
+        "kpi": "5+ parcerias ativas", "vvv": 0.8
+      },
+      {
+        "id": "ka", "label": "Key Activities", "items": [
+          "Plataforma SaaS LGPD",
+          "DPO-as-a-Service",
+          "Conteudo EAD capacitacao",
+          "Consultoria implementacao"
+        ],
+        "kpi": "4 atividades core", "vvv": 0.9
+      },
+      {
+        "id": "kr", "label": "Key Resources", "items": [
+          "Plataforma web (Archbase BR)",
+          "Pool DPOs certificados",
+          "Templates LGPD/ROPA/RIPD",
+          "ISO 27001 roadmap"
+        ],
+        "kpi": "3 recursos criticos", "vvv": 0.7
+      },
+      {
+        "id": "vp", "label": "Value Propositions", "items": [
+          "Abaixo dispensa licitacao (R$390K+)",
+          "DC Brasil Art.26 - dados 100% Brasil",
+          "DPO incluido no preco",
+          "Setup 30 dias vs 6-12 meses consultoria"
+        ],
+        "kpi": "4 diferenciais validados", "vvv": 0.95
+      },
+      {
+        "id": "cr", "label": "Customer Relationships", "items": [
+          "Self-service onboarding",
+          "Suporte chat SLA 4h",
+          "DPO dedicado (planos Plus)",
+          "Treinamentos mensais"
+        ],
+        "kpi": "NPS target 50+", "vvv": 0.6
+      },
+      {
+        "id": "ch", "label": "Channels", "items": [
+          "Direta web (SEO+Ads)",
+          "Associacoes municipais",
+          "White label para consorcios",
+          "Marketplace gov.br"
+        ],
+        "kpi": "4 canais priorizados", "vvv": 0.7
+      },
+      {
+        "id": "cs", "label": "Customer Segments", "items": [
+          "Prefeituras 20-100K hab (SAM)",
+          "Consorcios intermunicipais",
+          "PMEs B2G (fornecedores municipio)",
+          "Orgaos publicos estaduais"
+        ],
+        "kpi": "4 segmentos foco", "vvv": 0.9
+      },
+      {
+        "id": "cs", "label": "Cost Structure", "items": [
+          "Dev plataforma SaaS",
+          "Salarios DPOs (20% faturamento)",
+          "AWS infra (DC Brasil)",
+          "Marketing vendas B2G"
+        ],
+        "kpi": "Target gross margin 80%+", "vvv": 0.6
+      },
+      {
+        "id": "rs", "label": "Revenue Streams", "items": [
+          "Subscription SaaS (mensal)",
+          "DPO service (recorrente)",
+          "Consultoria projetos (setup)",
+          "Templates vend avulsa"
+        ],
+        "kpi": "ARPU R$397 target", "vvv": 0.8
+      }
+    ],
+    "relationships": [
+      { "from": "kp", "to": "vp", "type": "enables" },
+      { "from": "ka", "to": "vp", "type": "creates" },
+      { "from": "vp", "to": "cs", "type": "targets" },
+      { "from": "ch", "to": "cs", "type": "reaches" }
+    ],
+    "gaps": [
+      "Pool DPOs ainda contratado",
+      "ISO 27001 nao iniciado",
+      "Marketplace gov.br nao negociado"
+    ]
+  },
+  "roadmap": {
+    "timeline": {
+      "fase_0": {
+        "nome": "Validacao",
+        "periodo": "Meses 1-2",
+        "objetivo": "50 entrevistas + 10 LOIs + MVP core",
+        "kpi": ["10 LOIs", "MVP data discovery"],
+        "responsible": "Wilton (LOIs), Camilla (MVP)",
+        "status": "in_progress"
+      },
+      "fase_1": {
+        "nome": "MVP + Primeiros Clientes",
+        "periodo": "Meses 3-5",
+        "objetivo": "5 prefeituras beta + validacao produto",
+        "kpi": ["5 clientes", "R$ 25K MRR"],
+        "responsible": "Todos",
+        "status": "pending"
+      },
+      "fase_2": {
+        "nome": "Product Market Fit",
+        "periodo": "Meses 6-9",
+        "objetivo": "Portal titular + 50 clientes + ANPD agendada",
+        "kpi": ["50 clientes", "R$ 150K MRR", "Certificacao INPI"],
+        "responsible": "Camilla (INPI), Wilton (clientes)",
+        "status": "pending"
+      },
+      "fase_3": {
+        "nome": "Scale DPO Service",
+        "periodo": "Meses 10-14",
+        "objetivo": "DPO service + 150 clientes + expansao regional",
+        "kpi": ["150 clientes", "R$ 300K MRR", "3 regioes"],
+        "responsible": "Simone (DPOs), Wilton (regioes)",
+        "status": "pending"
+      },
+      "fase_4": {
+        "nome": "ISO + Enterprise",
+        "periodo": "Meses 15-20",
+        "objetivo": "ISO 27001 + 500 clientes + consorcios exclusivos",
+        "kpi": ["500 clientes", "R$ 1M MRR", "ISO 27001"],
+        "responsible": "Todos",
+        "status": "pending"
+      },
+      "fase_5": {
+        "nome": "Lideranca Mercado",
+        "periodo": "Meses 21-30",
+        "objetivo": "ISO 27701 + nacionalizacao + saida/investimento",
+        "kpi": ["1000 clientes", "Break-even", "Series A"],
+        "responsible": "Wilton",
+        "status": "pending"
+      }
+    },
+    "milestones": [
+      { "data": "2026-05-13", "evento": "INPI protocolo", "responsible": "Gislene", "critical": true },
+      { "data": "2026-05-21", "evento": "Alpha test MVP", "responsible": "Camilla", "critical": true },
+      { "data": "2026-05-28", "evento": "Proposta pronta", "responsible": "Wilton", "critical": false },
+      { "data": "2026-06-02", "evento": "PoC piloto", "responsible": "Camilla", "critical": true },
+      { "data": "2026-06-03", "evento": "Abertura mercado", "responsible": "Wilton", "critical": true },
+      { "data": "2026-06-10", "evento": "Whitepaper Parecer", "responsible": "Gislene+Simone", "critical": false },
+      { "data": "2026-06-17", "evento": "Homologacao Consorcio", "responsible": "Wilton+Gislene", "critical": false },
+      { "data": "2026-06-24", "evento": "First Customer", "responsible": "Wilton", "critical": true }
+    ],
+    "criticalPath": ["INPI protocolo", "Alpha test", "PoC piloto", "First Customer"],
+    "sprints": [
+      { "sprint": 1, "periodo": "06-13/05", "foco": "Base juridica + infra", "marco": "INPI protocolo" },
+      { "sprint": 2, "periodo": "14-21/05", "foco": "Validacao produto", "marco": "Alpha test" },
+      { "sprint": 3, "periodo": "22-28/05", "foco": "Kit comercial", "marco": "Proposta pronta" },
+      { "sprint": 4, "periodo": "29/05-02/06", "foco": "Homologacao", "marco": "PoC piloto" }
+    ]
+  },
+  "competitive": {
+    "landscape": {
+      "confidata": {
+        "status": "THREAT REAL - PIVOT MUNICIPAL",
+        "pricing": { "starter": "R$497/mes", "profissional": "R$1.497/mes", "enterprise": "R$3.497/mes" },
+        "modulos": 17,
+        "hospedagem": "100% BR (SP-GRU)",
+        "gaps": [
+          "Preço alto para micro-municipios",
+          "Sem DPO-as-a-Service incluido",
+          "Data Discovery manual",
+          "Sem anonimizacao LAI/LGPD",
+          "Empresa privada (sem prerrogativas ICT)"
+        ],
+        "estrategia_ict": {
+          "fase_1": "Micro-municipios R$297-397/mes (40-20% abaixo Starter)",
+          "fase_2": "Consorcios R$197/mes por municipio (volume)",
+          "fase_3": "Diferenciacao tecnica (Data Discovery + Anonimizacao)",
+          "diferencial": "Prerrogativas ICT (Art.75 IV c/d - R$390K+ vs R$65K)"
+        }
+      },
+      "onetrust": {
+        "status": "POTENTIAL ENTRY",
+        "timing": "12-24 meses",
+        "impact": "Alto se entrar BR municipal"
+      },
+      "neogov": {
+        "status": "BENCHMARKING",
+        "pricing": "R$5.275/mes (licenca)",
+        "contrato_exemplo": "R$600k total",
+        "modelo": "Venda corpo a corpo",
+        "gaps": [
+          "Processo 100% manual",
+          "Sob encomenda (sem prateleira)",
+          "Custo operacional 60%",
+          "Regional (GO/MG apenas)"
+        ]
+      }
+    },
+    "differentiation": {
+      "ict_vs_neogov": {
+        "processo": "Self-service vs corpo-a-corpo",
+        "custo": "80%+ margem vs 40%",
+        "produto": "Pacotes modulares vs sob encomenda",
+        "escala": "Nacional vs regional",
+        "ip": "IA anonimizacao + marca d'agua vs processo",
+        "modelo": "B2G + B2B vs apenas B2G"
+      }
+    },
+    "whitespace": [
+      "Age Verification ECA Digital (Lei 15.211/2025)",
+      "DPO Hub para consorcios intermunicipais",
+      "LGPD-in-a-Box municipal (templates + policies)",
+      "Plataforma compartilhamento seguro dados públicos"
+    ]
+  },
+  "market": {
+    "opportunity": {
+      "tam": {
+        "valor": "R$ 60M",
+        "descricao": "Total municipios sem LGPD (4.011)",
+        "fonte": "IBGE MUNIC 2024",
+        "vvv": 0.95
+      },
+      "sam": {
+        "valor": "R$ 12M",
+        "descricao": "B2B SaaS municipal 20-100K hab (1.200 cidades)",
+        "fonte": "Estimativa",
+        "vvv": 0.8
+      },
+      "som": {
+        "valor": "R$ 2-4M",
+        "descricao": "3 anos target inicial",
+        "fonte": "Planejamento interno",
+        "vvv": 0.6
+      }
+    },
+    "calculations": {
+      "capture_rate_bear": 0.005,
+      "capture_rate_base": 0.015,
+      "capture_rate_bull": 0.035,
+      "arpu_target": 397,
+      "ltv_cac_ratio": 6.0,
+      "payback_months": 4.0
+    },
+    "break_even": {
+      "customers": 350,
+      "mrr": "R$ 139K",
+      "month": 42,
+      "funding_required": "R$ 960K"
+    }
+  },
+  "insights": {
+    "categorizados": {
+      "produto": [
+        { "texto": "LGPD Drive killer feature - 95% ignoram docs fisicos", "prioridade": "P0", "esforco": "alto", "fonte": "Transcricao L722" },
+        { "texto": "Tarja preta automatica + marca d'agua", "prioridade": "P0", "esforco": "medio", "fonte": "Transcricao L760-805" },
+        { "texto": "IA personalizacao por prefeitura", "prioridade": "P1", "esforco": "alto", "fonte": "Transcricao L1265" }
+      ],
+      "pricing": [
+        { "texto": "Ajustar pricing 8-15x (R$297-997 -> R$2.497-14.997)", "prioridade": "P0", "esforco": "baixo", "fonte": "fdc-continuidade:199" },
+        { "texto": "Modelo por servidores + populacao", "prioridade": "P1", "esforco": "baixo", "fonte": "Transcricao L1405" }
+      ],
+      "go_to_market": [
+        { "texto": "Associacoes municipais como canal", "prioridade": "P0", "esforco": "medio", "fonte": "Transcricao L1152" },
+        { "texto": "Marketplace B2G via consorcios", "prioridade": "P1", "esforco": "alto", "fonte": "Analise" }
+      ],
+      "legal": [
+        { "texto": "Validar parecer Art.75 IV com especialista", "prioridade": "P0", "esforco": "medio", "fonte": "strategic-planning:D5" },
+        { "texto": "Protocolar INPI Sprint 1", "prioridade": "P1", "esforco": "alto", "fonte": "strategic-planning:D3" }
+      ]
+    },
+    "gaps_filled": [
+      "Pricing real transcricao (R$600k contrato)",
+      "FNDE como funding source identificado",
+      "Modelo precificacao por servidores+pop",
+      "ECA Digital urgencia mapeada"
+    ],
+    "gaps_pending": [
+      "Custo desenvolvimento plataforma",
+      "Taxa conversao proposal->close real",
+      "Custo subcontratacao digitalizacao",
+      "Qualificacao OSCIP ativa?"
+    ]
+  },
+  "priorities": {
+    "fdcu": {
+      "top_critical": [
+        { "rank": 1, "name": "LOIs_Assinadas", "score": 9.35, "vvv": 0.0, "status": "CRITICO - BLOQUEIO" },
+        { "rank": 2, "name": "CoFounder_Advisor", "score": 9.0, "vvv": 0.3, "status": "ALTO RISCO" },
+        { "rank": 3, "name": "Parecer_Juridico", "score": 8.35, "vvv": 0.5, "status": "NEEDS_VALIDATION" },
+        { "rank": 4, "name": "Unit_Economics", "score": 6.7, "vvv": 0.6, "status": "CORRIGIDO" },
+        { "rank": 5, "name": "Consorcios_Map", "score": 6.55, "vvv": 0.8, "status": "PARCIAL_VALIDADO" }
+      ],
+      "quick_wins": [
+        { "name": "Dashboard_KPIs_5s", "impacto": 10, "esforco": 3, "score": 8.5 },
+        { "name": "Cenario_Compare", "impacto": 8, "esforco": 5, "score": 7.2 },
+        { "name": "Mobile_Optimized", "impacto": 8, "esforco": 5, "score": 7.1 }
+      ],
+      "roadmap_fase1": [
+        { "semana": 1, "acoes": ["LOI outreach", "Advisor candidates", "Dashboard MVP"] },
+        { "semana": 2, "acoes": ["Parecer juridico draft", "Consorcio mapping", "Pricing ajuste"] }
+      ]
+    }
+  },
+  "stakeholders": {
+    "internal": [
+      { "nome": "Wilton", "role": "Presidente", "focus": "Articulacao consorcios + TCEs + fechamento", "power": "Alto", "alignment": 0.9 },
+      { "nome": "Gislene", "role": "Juridica/Operacoes", "focus": "Parecer dispensa + INPI IP", "power": "Alto", "alignment": 0.85 },
+      { "nome": "Simone", "role": "Compliance", "focus": "Base juridica AI-DPO + templates", "power": "Medio", "alignment": 0.9 },
+      { "nome": "Camilla", "role": "TI/Produto", "focus": "MVP + infraestrutura", "power": "Alto", "alignment": 0.8 }
+    ],
+    "external": [
+      { "tipo": "Prefeituras", "interesse": "Compliance LGPD baixo custo", "power": "Alto", "alignment": 0.3 },
+      { "tipo": "Consorcios", "interesse": "Receita recorrente + servico aos municipios", "power": "Alto", "alignment": 0.5 },
+      { "tipo": "TCEs", "interesse": "Fiscalizacao compliance", "power": "Alto", "alignment": 0.7 },
+      { "tipo": "ANPD", "interesse": "Adocao LGPD pais", "power": "Alto", "alignment": 0.6 }
+    ],
+    "raci": {
+      "LOIs": { "R": "Wilton", "A": "Gislene", "C": "Simone", "I": "Camilla" },
+      "INPI": { "R": "Gislene", "A": "Wilton", "C": "Camilla", "I": "Simone" },
+      "Parecer": { "R": "Gislene", "A": "Simone", "C": "Wilton", "I": "Camilla" },
+      "MVP": { "R": "Camilla", "A": "Wilton", "C": "Simone", "I": "Gislene" }
+    },
+    "gaps": [
+      "Prefeituras alignment baixo (0.3) - pitch politico necessario",
+      "Consorcios precisam validacao precoce",
+      "TCEs nao mapeados individualmente"
+    ]
+  },
+  "validation": {
+    "framework": {
+      "verifiable": "Fonte existe e e citavel",
+      "true": "Cross-check multiplas fontes",
+      "validated": "Especialista confirmou"
+    },
+    "low_vvv_items": [
+      { "item": "LOIs_Assinadas", "vvv": 0.0, "acao": "Obter 3+ assinaturas", "priority": "CRITICA" },
+      { "item": "Custo_Desenvolvimento", "vvv": 0.4, "acao": "Camilla orçamento", "priority": "ALTA" },
+      { "item": "Advisor_Confirmado", "vvv": 0.3, "acao": "Contratar co-founder", "priority": "ALTA" },
+      { "item": "OSCIP_Status", "vvv": 0.0, "acao": "Verificar governo federal", "priority": "MEDIA" },
+      { "item": "Conversao_Real", "vvv": 0.0, "acao": "Simone historico", "priority": "MEDIA" }
+    ],
+    "confidence_badges": {
+      "swot": 0.82,
+      "market": 0.78,
+      "competitive": 0.88,
+      "financial": 0.65,
+      "legal": 0.55,
+      "overall": 0.72
+    }
+  },
+  "next_meeting": {
+    "prep_checklist": [
+      "3+ LOIs assinadas",
+      "Parecer juridico finalizado",
+      "Advisor identificado",
+      "INPI protocolado",
+      "Pricing ajustado validado",
+      "Dashboard MVP pronto para apresentacao"
+    ],
+    "agenda_items": [
+      "Revisar cenarios com sliders interativos",
+      "Priorizar acoes FDC-U",
+      "Validar BMC com equipe",
+      "Aprovar roadmap fase 1"
+    ]
+  }
+}

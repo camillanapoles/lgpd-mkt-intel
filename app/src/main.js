@@ -3,27 +3,27 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import './styles/main.css'
 
-// Pages
-import Dashboard from './pages/Dashboard.vue'
-import Scenarios from './pages/Scenarios.vue'
-import BMC from './pages/BMC.vue'
-import Roadmap from './pages/Roadmap.vue'
-import SWOT from './pages/SWOT.vue'
-import Wiki from './pages/Wiki.vue'
-
 const routes = [
-  { path: '/', component: Dashboard, name: 'dashboard' },
-  { path: '/cenarios', component: Scenarios, name: 'scenarios' },
-  { path: '/bmc', component: BMC, name: 'bmc' },
-  { path: '/roadmap', component: Roadmap, name: 'roadmap' },
-  { path: '/swot', component: SWOT, name: 'swot' },
-  { path: '/wiki', component: Wiki, name: 'wiki' }
+  { path: '/', component: () => import('./pages/Dashboard.vue'), name: 'dashboard' },
+  { path: '/cenarios', component: () => import('./pages/Scenarios.vue'), name: 'scenarios' },
+  { path: '/bmc', component: () => import('./pages/BMC.vue'), name: 'bmc' },
+  { path: '/roadmap', component: () => import('./pages/Roadmap.vue'), name: 'roadmap' },
+  { path: '/swot', component: () => import('./pages/SWOT.vue'), name: 'swot' },
+  { path: '/wiki', component: () => import('./pages/Wiki.vue'), name: 'wiki' }
 ]
 
 const router = createRouter({
-  history: createWebHistory('/LGPD/app/'),
-  routes
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+  scrollBehavior() { return { top: 0 } }
 })
+
+// Handle GitHub Pages 404.html SPA redirect
+const redirect = window.location.search
+if (redirect && redirect[1] === '/') {
+  const path = redirect.slice(2).replace(/~and~/g, '&')
+  window.history.replaceState(null, '', `${path}${window.location.hash}`)
+}
 
 const app = createApp(App)
 app.use(router)

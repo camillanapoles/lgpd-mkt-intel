@@ -1,0 +1,411 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-05-08",
+    "meeting": "Reunião Estratégia LGPD 06/05/2026",
+    "status": "VVV Validated",
+    "framework": "FDC-U Priority Matrix"
+  },
+  "stakeholder_map": {
+    "internal": {
+      "wilton": {
+        "name": "Wilton",
+        "role": "Presidente",
+        "responsibilities": [
+          "Articulação consórcios + TCEs",
+          "Fechamento grandes contratos",
+          "Abertura mercado (03/06)",
+          "Homologação Consórcio (17/06)"
+        ],
+        "interests": [
+          "Validação modelo B2G municipal",
+          "Parcerias consórcios sustentáveis",
+          "Credibilidade no mercado público"
+        ],
+        "power": "ALTO",
+        "influence": "ALTO",
+        "alignment_level": 0.9,
+        "vvv": 0.9,
+        "focus_areas": ["Business Development", "Parcerias Estratégicas", "Vendas B2G"]
+      },
+      "gislene": {
+        "name": "Gislene",
+        "role": "Jurídica/Operações",
+        "responsibilities": [
+          "Parecer dispensa licitação (Art.75 IV)",
+          "Registro INPI IP",
+          "Whitepaper Parecer (10/06)",
+          "Homologação Consórcio (17/06)"
+        ],
+        "interests": [
+          "Fundamentação legal sólida Art.75 IV",
+          "Proteção IP (INPI)",
+          "Mitigação riscos jurídicos"
+        ],
+        "power": "ALTO",
+        "influence": "ALTO",
+        "alignment_level": 0.85,
+        "vvv": 0.8,
+        "focus_areas": ["Legal Framework", "Propriedade Intelectual", "Contratos"]
+      },
+      "simone": {
+        "name": "Simone",
+        "role": "Compliance",
+        "responsibilities": [
+          "Base jurídica AI-DPO",
+          "Templates RIPD/políticas",
+          "Whitepaper Parecer (10/06)",
+          "Validação compliance LGPD"
+        ],
+        "interests": [
+          "Robustez compliance produto",
+          "Templates LGPD municipais",
+          "Alinhamento ANPD/TCEs"
+        ],
+        "power": "MEDIO",
+        "influence": "ALTO",
+        "alignment_level": 0.85,
+        "vvv": 0.8,
+        "focus_areas": ["Compliance LGPD", "Templates", "Regulação"]
+      },
+      "camilla": {
+        "name": "Camilla",
+        "role": "TI/Produto",
+        "responsibilities": [
+          "MVP Data Discovery + Anonimização + AI-DPO",
+          "Infraestrutura AWS sa-east-1",
+          "Ajuste modelos LLM",
+          "PoC piloto (24/06)"
+        ],
+        "interests": [
+          "MVP funcional validado",
+          "Infraestrutura escalável",
+          "Diferenciação técnica Confidata"
+        ],
+        "power": "MEDIO",
+        "influence": "MEDIO",
+        "alignment_level": 0.9,
+        "vvv": 0.85,
+        "focus_areas": ["Produto", "Infraestrutura", "IA/Automação"]
+      }
+    },
+    "external": {
+      "prefeituras": {
+        "name": "Prefeituras (20-100K hab)",
+        "segment": "SAM Prioritário",
+        "total_addressable": 1200,
+        "characteristics": {
+          "budget_medio_anual": "R$ 15-50K",
+          "sales_cycle": "12-18 meses",
+          "inadimplencia_risk": "40%"
+        },
+        "interests": [
+          "Cumprimento LGPD com baixo orçamento",
+          "Evitar multas ANPD/TCE",
+          "Simplicidade implementação"
+        ],
+        "power": "ALTO",
+        "influence": "BAIXO",
+        "alignment_level": 0.3,
+        "vvv": 0.0,
+        "status": "CRITICO - LOIs PENDENTES",
+        "gaps": [
+          "Sem LOI assinada = validacao ZERO",
+          "Desconhecimento prerrogativas ICT",
+          "Ceticismo sobre solucao SaaS"
+        ]
+      },
+      "consorcios": {
+        "name": "Consórcios Intermunicipais",
+        "segment": "Canal Parceiro",
+        "top_priorities": [
+          {"name": "CIGA", "focus": "Consórcio Interestadual GO", "status": "MAPEADO"},
+          {"name": "CIMAMS", "focus": "Mato Grosso do Sul", "status": "MAPEADO"},
+          {"name": "COPIRN", "focus": "Rio Grande do Norte", "status": "MAPEADO"},
+          {"name": "CONIAPE", "focus": "Pernambuco", "status": "MAPEADO"},
+          {"name": "CIMINAS", "focus": "Minas Gerais", "status": "MAPEADO", "reference": "R$31.9M"}
+        ],
+        "interests": [
+          "Receita recorrente white-label",
+          "Solucao validada para associados",
+          "Baixo risco operacional"
+        ],
+        "power": "ALTO",
+        "influence": "ALTO",
+        "alignment_level": 0.4,
+        "vvv": 0.4,
+        "status": "PARCIAL VALIDADO",
+        "gaps": [
+          "Sem homologacao formal (agenda 17/06)",
+          "Modelo economico nao negociado",
+          "Sem LOI consorcio assinada"
+        ]
+      },
+      "tces": {
+        "name": "Tribunais de Contas (Estaduais)",
+        "segment": "Regulador Fiscalizador",
+        "characteristics": {
+          "funcao": "Fiscalizar LGPD municipios",
+          "poder": "MULTAS + determinacoes",
+          "foco": "Accountability municipal"
+        },
+        "interests": [
+          "Municipios compliant",
+          "Transparencia dados",
+          "Relatorios validados"
+        ],
+        "power": "ALTO",
+        "influence": "ALTO",
+        "alignment_level": 0.5,
+        "vvv": 0.6,
+        "status": "ALINHAMENTO POTENCIAL",
+        "gaps": [
+          "Sem articulacao formal TCEs",
+          "Poder de veto em contratacoes",
+          "Credibilidade depende de certificacao"
+        ]
+      },
+      "anpd": {
+        "name": "ANPD - Autoridade Nacional Protecao Dados",
+        "segment": "Regulador Nacional",
+        "characteristics": {
+          "fiscalizacao_2027": "40+ acoes previstas",
+          "focos": ["dados biométricos", "criancas adolescentes", "poder publico", "IA"],
+          "multas": "R$ 50M+ aplicadas"
+        },
+        "interests": [
+          "Protecao dados titulares",
+          "Accountability agentes tratamento",
+          "Padrao relatorios RIPD"
+        ],
+        "power": "CRITICO",
+        "influence": "CRITICO",
+        "alignment_level": 0.7,
+        "vvv": 0.7,
+        "status": "ALINHAMENTO REGULATORIO NATURAL",
+        "opportunity": "ECA Digital (Lei 15.211/2025) - URGENCIA CRITICA"
+      },
+      "confidata": {
+        "name": "Confidata",
+        "segment": "Competidor Direto",
+        "characteristics": {
+          "status": "THREAT REAL - PIVOT MUNICIPAL ATIVO",
+          "pricing": {"starter": "R$497/mes", "profissional": "R$1.497/mes", "enterprise": "R$3.497/mes"},
+          "modulos": 17,
+          "hospedagem": "100% BR (SP-GRU)"
+        },
+        "threats": [
+          "Pivot municipal CONFIRMADO",
+          "Pode lancar plano micro-municipal",
+          "Pode desenvolver Data Discovery automatizado"
+        ],
+        "power": "ALTO",
+        "influence": "MEDIO",
+        "alignment_level": 0.0,
+        "vvv": 0.6,
+        "status": "COMPETIDOR",
+        "mitigation": [
+          "Preco agresivo micro-municipos (R$297-397)",
+          "DPO-as-a-Service incluido",
+          "Prerrogativas ICT (diferencial imbativel)"
+        ]
+      }
+    },
+    "raci": {
+      "loi_signatures": {
+        "R": "Wilton",
+        "A": "Gislene",
+        "C": ["Simone", "Camilla"],
+        "I": ["Prefeituras", "Consorcios"],
+        "deadline": "Antes Sprint 3 (22/05)",
+        "status": "CRITICAL BLOCKER",
+        "gaps": [
+          "Template pronto mas sem assinaturas",
+          "Prefeituras sem orçamento 2026",
+          "Sem advisor municipal experiente"
+        ]
+      },
+      "pricing_adjustment": {
+        "R": "Wilton",
+        "A": ["Gislene", "Simone"],
+        "C": ["Camilla"],
+        "I": ["Confidata", "Mercado"],
+        "deadline": "Sprint 3 (22-28/05)",
+        "status": "PENDING",
+        "gaps": [
+          "Precisa validar R$2.497-14.997 x porte",
+          "Testar elasticidade demanda",
+          "Comparativo Confidata pronto"
+        ]
+      },
+      "inpi_protocol": {
+        "R": "Gislene",
+        "A": "Wilton",
+        "C": ["Camilla"],
+        "I": ["Advogado IP"],
+        "deadline": "Sprint 1 (13/05)",
+        "status": "IN PROGRESS",
+        "gaps": [
+          "Checklist pronto mas protocolo pendente",
+          "6-12 meses prazo conclusao"
+        ]
+      },
+      "mvp_core": {
+        "R": "Camilla",
+        "A": ["Wilton", "Gislene"],
+        "C": ["Simone"],
+        "I": ["Prefeituras piloto"],
+        "deadline": "Sprint 4 (02/06)",
+        "status": "IN PROGRESS",
+        "gaps": [
+          "Data Discovery automatizado vs Confidata manual",
+          "Teste estresse LLM pendente",
+          "Infra DC Brasil validada"
+        ]
+      },
+      "whitepaper_parecer": {
+        "R": ["Gislene", "Simone"],
+        "A": "Wilton",
+        "C": ["Camilla"],
+        "I": ["TCEs", "Consorcios"],
+        "deadline": "10/06",
+        "status": "PARTIAL",
+        "gaps": [
+          "Fundamentacao Art.75 IV criada",
+          "Riscos identificados",
+          "Precisa revisao advogado especialista"
+        ]
+      },
+      "advisor_hiring": {
+        "R": "Wilton",
+        "A": ["Gislene"],
+        "C": ["Todos"],
+        "I": ["Rede municipal"],
+        "deadline": "Mes 2-4",
+        "status": "CRITICAL GAP",
+        "gaps": [
+          "Sem identificado",
+          "15-25% equity + salario + comissao",
+          "Sales cycle depende disso"
+        ]
+      },
+      "eca_digital_product": {
+        "R": ["Camilla", "Simone"],
+        "A": ["Wilton", "Gislene"],
+        "C": [],
+        "I": ["ANPD", "Prefeituras"],
+        "deadline": "Pos-MVP",
+        "status": "PLANNED",
+        "gaps": [
+          "Lei 15.211/2025 - urgencia CRITICA",
+          "Age verification R$25-60k ticket",
+          "Oportunidade timing unico"
+        ]
+      }
+    },
+    "gaps": [
+      {
+        "id": "G1",
+        "category": "CRITICAL",
+        "description": "3+ LOIs assinadas - GO/NO-GO depende disso",
+        "impact": "Sem validacao real = sem funding",
+        "mitigation": "Wilton + Advisor fechar Sprint 3",
+        "vvv": 0.0,
+        "deadline": "22/05/2026"
+      },
+      {
+        "id": "G2",
+        "category": "HIGH",
+        "description": "Advisor municipal com experiencia vendas B2G",
+        "impact": "Sales cycle >12 meses queima runway",
+        "mitigation": "15-25% equity + salary + commission",
+        "vvv": 0.3,
+        "deadline": "Mes 2-4"
+      },
+      {
+        "id": "G3",
+        "category": "HIGH",
+        "description": "Parecer juridico final Art.75 IV revisado",
+        "impact": "Risco legal se fundamentacao errada",
+        "mitigation": "Advogado especialista revisar whitepaper",
+        "vvv": 0.5,
+        "deadline": "10/06/2026"
+      },
+      {
+        "id": "G4",
+        "category": "MEDIUM",
+        "description": "Homologacao formal consorcios",
+        "impact": "Sem canal validado = vendas 1-a-1",
+        "mitigation": "Reuniao 17/06 Wilton+Gislene",
+        "vvv": 0.4,
+        "deadline": "17/06/2026"
+      },
+      {
+        "id": "G5",
+        "category": "MEDIUM",
+        "description": "Alinhamento TCEs estaduais",
+        "impact": "Poder veto em contratacoes municipais",
+        "mitigation": "Apresentar whitepaper + validacao ANPD",
+        "vvv": 0.6,
+        "deadline": "Pos-PoC"
+      },
+      {
+        "id": "G6",
+        "category": "LOW",
+        "description": "Certificacao ISO 27001/27701",
+        "impact": "Credibilidade enterprise, nao SAM inicial",
+        "mitigation": "Roadmap fase 4 (meses 15-20)",
+        "vvv": 0.5,
+        "deadline": "2027"
+      }
+    ],
+    "next_steps": [
+      {
+        "priority": "CRITICAL",
+        "action": "Assinar 3+ LOIs prefeituras/consorcios",
+        "responsible": "Wilton + Advisor",
+        "deadline": "22/05/2026",
+        "blocker": true
+      },
+      {
+        "priority": "CRITICAL",
+        "action": "Identificar/hire Advisor municipal",
+        "responsible": "Wilton",
+        "deadline": "Mes 2-4",
+        "blocker": true
+      },
+      {
+        "priority": "HIGH",
+        "action": "Protocolar INPI software",
+        "responsible": "Gislene",
+        "deadline": "13/05/2026",
+        "blocker": false
+      },
+      {
+        "priority": "HIGH",
+        "action": "Validar pricing ajustado R$2.497-14.997",
+        "responsible": ["Wilton", "Gislene", "Simone"],
+        "deadline": "28/05/2026",
+        "blocker": false
+      },
+      {
+        "priority": "MEDIUM",
+        "action": "Homologar consorcio piloto",
+        "responsible": ["Wilton", "Gislene"],
+        "deadline": "17/06/2026",
+        "blocker": false
+      }
+    ],
+    "dashboard_metrics": {
+      "overall_alignment_score": 0.58,
+      "internal_alignment": 0.88,
+      "external_alignment": 0.38,
+      "critical_gaps": 2,
+      "high_gaps": 2,
+      "medium_gaps": 2,
+      "loi_progress": "0/3 assinadas",
+      "advisor_status": "NÃO IDENTIFICADO",
+      "next_critical_date": "22/05/2026 (Sprint 3 - LOI deadline)"
+    }
+  }
+}

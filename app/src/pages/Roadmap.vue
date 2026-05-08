@@ -3,224 +3,276 @@
     <!-- Header -->
     <div class="mb-8">
       <h1 class="font-display text-3xl font-bold text-slate-900">Roadmap de Implementação</h1>
-      <p class="text-slate-600 mt-2">Cronograma faseado até Product-Market Fit</p>
+      <p class="text-slate-600 mt-2">Cronograma faseado com 6 fases ate Série A</p>
+      <div class="flex items-center gap-3 mt-3">
+        <span class="badge badge-info">Fase atual: {{ currentPhaseName }}</span>
+        <span class="text-sm text-slate-500">Total: R$ 2.31M | 36 meses</span>
+      </div>
     </div>
 
-    <!-- Timeline -->
-    <div class="relative">
-      <!-- Progress Bar -->
-      <div class="mb-8">
-        <div class="flex justify-between text-sm text-slate-600 mb-2">
-          <span>Progresso até PMF</span>
-          <span>Total: R$ 960K | 24 meses</span>
-        </div>
-        <div class="w-full bg-slate-200 rounded-full h-3">
-          <div class="bg-gradient-to-r from-primary-500 to-primary-700 h-3 rounded-full relative" style="width: 0%">
-            <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+    <!-- Current Sprints -->
+    <div class="mb-8">
+      <h2 class="font-display text-xl font-semibold text-slate-900 mb-4">Sprints Atuais</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div
+          v-for="sprint in roadmap.sprints"
+          :key="sprint.sprint"
+          class="card p-4"
+          :class="{ 'ring-2 ring-primary-400': isCurrentSprint(sprint) }"
+        >
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-bold text-primary-600">Sprint {{ sprint.sprint }}</span>
+            <span class="text-xs text-slate-500">{{ sprint.periodo }}</span>
+          </div>
+          <p class="text-sm text-slate-700 font-medium">{{ sprint.foco }}</p>
+          <div class="mt-2 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2z" />
+            </svg>
+            <span class="text-xs text-amber-700">{{ sprint.marco }}</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Phases -->
-      <div class="space-y-6">
+    <!-- Timeline Phases -->
+    <div class="mb-8">
+      <h2 class="font-display text-xl font-semibold text-slate-900 mb-4">Timeline por Fase</h2>
+      <div class="space-y-0">
         <div
-          v-for="(phase, index) in phases"
-          :key="phase.name"
-          class="relative pl-8 pb-8 border-l-2"
-          :class="getPhaseBorderColor(index)"
+          v-for="(phase, key, index) in roadmap.timeline"
+          :key="key"
+          class="relative pl-10 pb-8 border-l-2"
+          :class="phaseBorderColor(phase.status)"
         >
           <!-- Timeline Dot -->
-          <div class="absolute -left-3 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
-               :class="getPhaseDotClass(index)">
+          <div
+            class="absolute -left-3.5 top-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2"
+            :class="phaseDotClass(phase.status)"
+          >
             {{ index + 1 }}
           </div>
 
           <!-- Phase Card -->
-          <div class="card p-6">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+          <div class="card p-6" :class="{ 'ring-2 ring-blue-300': phase.status === 'in_progress' }">
+            <!-- Phase Header -->
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
               <div>
-                <div class="flex items-center gap-3">
-                  <h3 class="font-display text-xl font-semibold text-slate-900">{{ phase.name }}</h3>
-                  <span :class="`badge ${getPhaseBadgeClass(index)}`">{{ phase.months }}</span>
+                <div class="flex items-center gap-3 flex-wrap">
+                  <h3 class="font-display text-lg font-semibold text-slate-900">{{ phase.nome }}</h3>
+                  <span class="badge" :class="statusBadgeClass(phase.status)">{{ statusLabel(phase.status) }}</span>
+                  <span class="badge badge-info">{{ phase.periodo }}</span>
+                  <span
+                    v-if="isCriticalPath(phase.nome)"
+                    class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"
+                  >
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                    </svg>
+                    Caminho Critico
+                  </span>
                 </div>
-                <p class="text-slate-600 mt-1">{{ phase.description }}</p>
+                <p class="text-slate-600 mt-1 text-sm">{{ phase.objetivo }}</p>
               </div>
-              <div class="text-right">
-                <p class="text-sm text-slate-500">Investimento</p>
-                <p class="text-2xl font-bold text-primary-600">{{ formatCurrency(phase.investment) }}</p>
-                <p class="text-xs text-slate-500">Burn: {{ formatCurrency(phase.burn) }}/mês</p>
-              </div>
-            </div>
-
-            <!-- Milestone -->
-            <div class="p-4 bg-primary-50 rounded-lg mb-4">
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div class="flex items-center gap-2 text-sm text-slate-600 md:text-right flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
-                <span class="font-medium text-primary-900">Milestone:</span>
-                <span class="text-primary-700">{{ phase.milestone }}</span>
+                {{ phase.responsible }}
               </div>
             </div>
 
             <!-- KPIs -->
             <div>
-              <p class="text-sm font-medium text-slate-700 mb-2">KPIs da Fase:</p>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                <div v-for="kpi in phase.kpis" :key="kpi" class="flex items-center gap-2 text-sm text-slate-600">
-                  <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <p class="text-sm font-medium text-slate-700 mb-2">KPIs:</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                <div v-for="kpi in phase.kpi" :key="kpi" class="flex items-center gap-2 text-sm text-slate-600">
+                  <svg
+                    class="w-4 h-4 flex-shrink-0"
+                    :class="phase.status === 'completed' ? 'text-green-500' : phase.status === 'in_progress' ? 'text-blue-500' : 'text-slate-400'"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  >
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                   {{ kpi }}
                 </div>
               </div>
             </div>
-
-            <!-- Dependencies -->
-            <div v-if="phase.dependencies" class="mt-4 pt-4 border-t border-slate-200">
-              <p class="text-sm font-medium text-slate-700 mb-2">Dependências:</p>
-              <div class="flex flex-wrap gap-2">
-                <span v-for="dep in phase.dependencies" :key="dep" class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs">
-                  {{ dep }}
-                </span>
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milestones -->
+    <div class="mb-8">
+      <h2 class="font-display text-xl font-semibold text-slate-900 mb-4">Milestones</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div
+          v-for="ms in roadmap.milestones"
+          :key="ms.evento"
+          class="card p-4 flex items-start gap-4"
+          :class="{ 'border-red-300 bg-red-50/30': ms.critical }"
+        >
+          <!-- Date -->
+          <div class="flex-shrink-0 text-center min-w-[4.5rem]">
+            <p class="text-xs text-slate-500 uppercase tracking-wide">Data</p>
+            <p class="text-sm font-bold text-slate-900 mt-0.5">{{ formatDate(ms.data) }}</p>
+          </div>
+
+          <!-- Divider -->
+          <div class="flex-shrink-0 w-px bg-slate-200 self-stretch"></div>
+
+          <!-- Content -->
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <p class="font-medium text-slate-900">{{ ms.evento }}</p>
+              <span v-if="ms.critical" class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">
+                Critico
+              </span>
+              <span v-if="isCriticalPathMilestone(ms.evento)" class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-700">
+                Caminho Critico
+              </span>
+            </div>
+            <p class="text-sm text-slate-500 mt-0.5">
+              <span class="font-medium">Resp.:</span> {{ ms.responsible }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Critical Path -->
+    <div class="mb-8">
+      <h2 class="font-display text-xl font-semibold text-slate-900 mb-4">Caminho Critico</h2>
+      <div class="card p-6">
+        <div class="flex items-center gap-2 flex-wrap">
+          <template v-for="(step, idx) in roadmap.criticalPath" :key="step">
+            <div class="flex items-center gap-2 px-3 py-2 bg-red-50 border border-red-200 rounded-lg">
+              <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold">{{ idx + 1 }}</span>
+              <span class="text-sm font-medium text-red-900">{{ step }}</span>
+            </div>
+            <svg v-if="idx < roadmap.criticalPath.length - 1" class="w-5 h-5 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </template>
         </div>
       </div>
     </div>
 
     <!-- Summary Stats -->
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
       <div class="card p-4 text-center">
-        <p class="text-sm text-slate-500">Investimento Total</p>
-        <p class="text-2xl font-bold text-slate-900">R$ 960K</p>
+        <p class="text-sm text-slate-500">Fases</p>
+        <p class="text-2xl font-bold text-slate-900">6</p>
       </div>
       <div class="card p-4 text-center">
-        <p class="text-sm text-slate-500">Duração Total</p>
-        <p class="text-2xl font-bold text-slate-900">24 meses</p>
+        <p class="text-sm text-slate-500">Duracao Total</p>
+        <p class="text-2xl font-bold text-slate-900">36 meses</p>
       </div>
       <div class="card p-4 text-center">
-        <p class="text-sm text-slate-500">Break-even Estimado</p>
-        <p class="text-2xl font-bold text-slate-900">Mês 30-36</p>
+        <p class="text-sm text-slate-500">Milestones Criticos</p>
+        <p class="text-2xl font-bold text-red-600">{{ criticalMilestonesCount }}</p>
       </div>
       <div class="card p-4 text-center">
-        <p class="text-sm text-slate-500">Clientes no PMF</p>
-        <p class="text-2xl font-bold text-slate-900">50</p>
-      </div>
-    </div>
-
-    <!-- Risk Timeline -->
-    <div class="mt-8 card p-6">
-      <h3 class="font-display font-semibold text-slate-900 mb-4">Análise de Risco por Fase</h3>
-      <div class="space-y-4">
-        <div class="flex items-center gap-4">
-          <span class="w-24 text-sm font-medium text-slate-600">Validação</span>
-          <div class="flex-1 bg-slate-200 rounded-full h-4 overflow-hidden">
-            <div class="bg-green-500 h-4 rounded-full" style="width: 30%"></div>
-          </div>
-          <span class="text-sm text-slate-600">Baixo risco</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <span class="w-24 text-sm font-medium text-slate-600">MVP</span>
-          <div class="flex-1 bg-slate-200 rounded-full h-4 overflow-hidden">
-            <div class="bg-amber-500 h-4 rounded-full" style="width: 55%"></div>
-          </div>
-          <span class="text-sm text-slate-600">Médio risco</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <span class="w-24 text-sm font-medium text-slate-600">PMF</span>
-          <div class="flex-1 bg-slate-200 rounded-full h-4 overflow-hidden">
-            <div class="bg-red-500 h-4 rounded-full" style="width: 75%"></div>
-          </div>
-          <span class="text-sm text-slate-600">Alto risco (burn)</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <span class="w-24 text-sm font-medium text-slate-600">Scale</span>
-          <div class="flex-1 bg-slate-200 rounded-full h-4 overflow-hidden">
-            <div class="bg-green-500 h-4 rounded-full" style="width: 40%"></div>
-          </div>
-          <span class="text-sm text-slate-600">Risco mitigado</span>
-        </div>
+        <p class="text-sm text-slate-500">Sprint Atual</p>
+        <p class="text-2xl font-bold text-primary-600">{{ currentSprintLabel }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed } from 'vue'
 import strategicData from '../data/strategicData.js'
 
-const phases = ref([
-  {
-    name: 'Fase 0 - Validação',
-    months: 'Meses 1-3',
-    investment: strategicData.roadmap.phase0.investment,
-    burn: strategicData.roadmap.phase0.burn,
-    description: 'Validação de tese com prospects qualificados',
-    milestone: strategicData.roadmap.phase0.milestone,
-    kpis: strategicData.roadmap.phase0.kpis,
-    dependencies: ['Deck investidor pronto', 'Lista de prospects TCE-flagged']
-  },
-  {
-    name: 'Fase 1 - MVP',
-    months: 'Meses 4-6',
-    investment: strategicData.roadmap.phase1.investment,
-    burn: strategicData.roadmap.phase1.burn,
-    description: 'Desenvolvimento MVP e primeiros clientes',
-    milestone: strategicData.roadmap.phase1.milestone,
-    kpis: strategicData.roadmap.phase1.kpis,
-    dependencies: ['3 LOIs assinados', 'Time técnico completo']
-  },
-  {
-    name: 'Fase 2 - PMF',
-    months: 'Meses 7-15',
-    investment: strategicData.roadmap.phase2.investment,
-    burn: strategicData.roadmap.phase2.burn,
-    description: 'Escala go-to-market e otimização unit economics',
-    milestone: strategicData.roadmap.phase2.milestone,
-    kpis: strategicData.roadmap.phase2.kpis,
-    dependencies: ['Product-Market Fit', 'CAC provado < R$3K']
-  },
-  {
-    name: 'Fase 3 - Scale',
-    months: 'Meses 16-24',
-    investment: strategicData.roadmap.phase3.investment,
-    burn: strategicData.roadmap.phase3.burn,
-    description: 'Expansão agressiva e novos segmentos',
-    milestone: strategicData.roadmap.phase3.milestone,
-    kpis: strategicData.roadmap.phase3.kpis,
-    dependencies: ['Unit economics provados', 'Série A pronta']
+const roadmap = strategicData.roadmap
+
+const currentPhaseName = computed(() => {
+  const phases = Object.values(roadmap.timeline)
+  const current = phases.find(p => p.status === 'in_progress')
+  return current ? current.nome : '-'
+})
+
+const criticalMilestonesCount = computed(() =>
+  roadmap.milestones.filter(ms => ms.critical).length
+)
+
+function startOfDay(date) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate())
+}
+
+function parseSprintPeriod(periodo) {
+  if (!periodo || typeof periodo !== 'string') return null
+
+  const matches = periodo.match(/\d{4}-\d{2}-\d{2}/g)
+  if (!matches || matches.length < 2) return null
+
+  const [startStr, endStr] = matches
+  const start = new Date(`${startStr}T00:00:00`)
+  const end = new Date(`${endStr}T00:00:00`)
+
+  if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return null
+
+  return {
+    start: startOfDay(start),
+    end: startOfDay(end)
   }
-])
-
-const getPhaseBorderColor = (index) => {
-  const colors = ['border-blue-200', 'border-green-200', 'border-amber-200', 'border-purple-200']
-  return colors[index] || 'border-slate-200'
 }
 
-const getPhaseDotClass = (index) => {
-  const colors = ['bg-blue-500 text-white', 'bg-green-500 text-white', 'bg-amber-500 text-white', 'bg-purple-500 text-white']
-  return colors[index] || 'bg-slate-500 text-white'
+function isSprintActiveToday(sprint) {
+  const period = parseSprintPeriod(sprint?.periodo)
+  if (!period) return false
+
+  const today = startOfDay(new Date())
+  return today >= period.start && today <= period.end
 }
 
-const getPhaseBadgeClass = (index) => {
-  const classes = ['badge-info', 'badge-success', 'badge-warning', 'badge-primary']
-  return classes[index] || 'badge-info'
+const currentSprint = computed(() =>
+  roadmap.sprints.find(sprint => isSprintActiveToday(sprint)) ?? null
+)
+
+const currentSprintLabel = computed(() => {
+  return currentSprint.value ? `${currentSprint.value.sprint}` : '-'
+})
+
+function isCurrentSprint(sprint) {
+  return currentSprint.value?.sprint === sprint.sprint
 }
 
-const formatCurrency = (value) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0
-  }).format(value)
+function isCriticalPath(phaseNome) {
+  return roadmap.criticalPath.some(cp => cp.toLowerCase().includes(phaseNome.toLowerCase().split(' ')[0].toLowerCase()))
+}
+
+function isCriticalPathMilestone(evento) {
+  return roadmap.criticalPath.includes(evento)
+}
+
+function phaseBorderColor(status) {
+  if (status === 'in_progress') return 'border-blue-400'
+  if (status === 'completed') return 'border-green-400'
+  return 'border-slate-200'
+}
+
+function phaseDotClass(status) {
+  if (status === 'in_progress') return 'bg-blue-500 text-white border-blue-300 animate-pulse'
+  if (status === 'completed') return 'bg-green-500 text-white border-green-300'
+  return 'bg-slate-300 text-slate-600 border-slate-200'
+}
+
+function statusBadgeClass(status) {
+  if (status === 'in_progress') return 'bg-blue-100 text-blue-800'
+  if (status === 'completed') return 'bg-green-100 text-green-800'
+  return 'bg-slate-100 text-slate-600'
+}
+
+function statusLabel(status) {
+  if (status === 'in_progress') return 'Em andamento'
+  if (status === 'completed') return 'Concluido'
+  return 'Pendente'
+}
+
+function formatDate(dateStr) {
+  const [year, month, day] = dateStr.split('-')
+  return `${day}/${month}/${year}`
 }
 </script>
-
-<style scoped>
-.badge-primary {
-  @apply bg-purple-100 text-purple-800;
-}
-</style>

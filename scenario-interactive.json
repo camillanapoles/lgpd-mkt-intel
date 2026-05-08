@@ -1,0 +1,491 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-05-08",
+  "description": "Interactive scenario analysis framework for LGPD SaaS Municipal dashboard",
+  "scenarios": {
+    "interactive": {
+      "sliders": [
+        {
+          "id": "loi_count",
+          "name": "LOIs Assinadas",
+          "description": "Letters of Intent com prefeituras/consórcios",
+          "min": 0,
+          "max": 10,
+          "default": 3,
+          "step": 1,
+          "unit": "LOIs",
+          "impact": "go_no_go",
+          "category": "validation",
+          "tooltip": "GO/NO-GO depende de 3+ LOIs. 0-1 = cenário pessimista.",
+          "scenarios": {
+            "worst": 0,
+            "bear": 1,
+            "base": 3,
+            "bull": 5,
+            "best": 10
+          }
+        },
+        {
+          "id": "advisor_status",
+          "name": "Advisor Municipal",
+          "description": "Co-founder/Advisor com experiência vendas B2G",
+          "min": 0,
+          "max": 2,
+          "default": 1,
+          "step": 1,
+          "unit": "",
+          "impact": "sales_cycle_months",
+          "category": "team",
+          "options": [
+            {"value": 0, "label": "Sem advisor", "salesCycle": 18},
+            {"value": 1, "label": "Mes 4", "salesCycle": 12},
+            {"value": 2, "label": "Mes 2", "salesCycle": 6}
+          ],
+          "tooltip": "Sem advisor = sales cycle >12 meses. Contratar mês 2 = cycle 6-9 meses.",
+          "scenarios": {
+            "worst": 0,
+            "bear": 0,
+            "base": 1,
+            "bull": 1,
+            "best": 2
+          }
+        },
+        {
+          "id": "funding_brl",
+          "name": "Funding Disponível",
+          "description": "Capital total disponível para operação",
+          "min": 500,
+          "max": 2000,
+          "default": 960,
+          "step": 50,
+          "unit": "K R$",
+          "impact": "runway_months",
+          "category": "capital",
+          "tooltip": "Runway varia 12-24 meses dependendo do burn rate.",
+          "scenarios": {
+            "worst": 500,
+            "bear": 500,
+            "base": 960,
+            "bull": 1500,
+            "best": 2000
+          }
+        },
+        {
+          "id": "anpd_enforcement",
+          "name": "ANPD Fiscalização 2027",
+          "description": "Intensidade de fiscalização ANPD",
+          "min": 0,
+          "max": 2,
+          "default": 1,
+          "step": 1,
+          "unit": "",
+          "impact": "demand_multiplier",
+          "category": "market",
+          "options": [
+            {"value": 0, "label": "Foco grandes empresas", "multiplier": 0.5},
+            {"value": 1, "label": "Aumenta 50%", "multiplier": 1.5},
+            {"value": 2, "label": "Mantém ritmo 2027", "multiplier": 2.0}
+          ],
+          "tooltip": "Fiscalização ativa cria urgência municipal.",
+          "scenarios": {
+            "worst": 0,
+            "bear": 0,
+            "base": 1,
+            "bull": 2,
+            "best": 2
+          }
+        },
+        {
+          "id": "churn_rate",
+          "name": "Churn Rate Mensal",
+          "description": "Taxa de cancelamento de clientes",
+          "min": 1.0,
+          "max": 10.0,
+          "default": 2.5,
+          "step": 0.5,
+          "unit": "%",
+          "impact": "ltv",
+          "category": "retention",
+          "tooltip": "Churn municipal afeta LTV diretamente.",
+          "scenarios": {
+            "worst": 5.0,
+            "bear": 4.0,
+            "base": 2.5,
+            "bull": 2.0,
+            "best": 1.0
+          }
+        },
+        {
+          "id": "arpu_brl",
+          "name": "ARPU Médio",
+          "description": "Average Revenue Per User (mensal)",
+          "min": 297,
+          "max": 1497,
+          "default": 397,
+          "step": 50,
+          "unit": "R$",
+          "impact": "mrr",
+          "category": "pricing",
+          "tooltip": "Pricing ajustado 8-15x vs original (R$297-997).",
+          "scenarios": {
+            "worst": 297,
+            "bear": 347,
+            "base": 397,
+            "bull": 697,
+            "best": 1497
+          }
+        },
+        {
+          "id": "mom_growth",
+          "name": "Crescimento MoM",
+          "description": "Month-over-Month customer growth",
+          "min": 1,
+          "max": 15,
+          "default": 5,
+          "step": 1,
+          "unit": "%",
+          "impact": "customer_acquisition",
+          "category": "growth",
+          "tooltip": "B2B municipal realista: 3-7% MoM. Otimistas: 10-15%.",
+          "scenarios": {
+            "worst": 1,
+            "bear": 3,
+            "base": 5,
+            "bull": 8,
+            "best": 12
+          }
+        },
+        {
+          "id": "cac_brl",
+          "name": "CAC",
+          "description": "Customer Acquisition Cost",
+          "min": 500,
+          "max": 5000,
+          "default": 1800,
+          "step": 100,
+          "unit": "R$",
+          "impact": "payback",
+          "category": "efficiency",
+          "tooltip": "Advisor reduz CAC via network municipal.",
+          "scenarios": {
+            "worst": 3000,
+            "bear": 2500,
+            "base": 1800,
+            "bull": 1200,
+            "best": 800
+          }
+        },
+        {
+          "id": "gross_margin",
+          "name": "Margem Bruta",
+          "description": "Gross margin (after DPO costs)",
+          "min": 60,
+          "max": 90,
+          "default": 82,
+          "step": 2,
+          "unit": "%",
+          "impact": "profitability",
+          "category": "economics",
+          "tooltip": "DPOs custam ~20% do faturamento.",
+          "scenarios": {
+            "worst": 70,
+            "bear": 75,
+            "base": 82,
+            "bull": 85,
+            "best": 88
+          }
+        },
+        {
+          "id": "consortium_access",
+          "name": "Acesso Consórcios",
+          "description": "Canal de vendas via consórcios municipais",
+          "min": 0,
+          "max": 5,
+          "default": 1,
+          "step": 1,
+          "unit": "consórcios",
+          "impact": "deal_size",
+          "category": "channels",
+          "tooltip": "Cada consórcio = 50-500 municípios.",
+          "scenarios": {
+            "worst": 0,
+            "bear": 0,
+            "base": 1,
+            "bull": 2,
+            "best": 5
+          }
+        }
+      ],
+      "calculations": {
+        "ltv": {
+          "formula": "arpu * gross_margin / (churn_rate / 100)",
+          "description": "Lifetime Value considerando margem e churn",
+          "unit": "R$",
+          "dependencies": ["arpu_brl", "gross_margin", "churn_rate"]
+        },
+        "payback_months": {
+          "formula": "cac / (arpu * gross_margin / 100)",
+          "description": "Meses para recuperar CAC",
+          "unit": "meses",
+          "dependencies": ["cac_brl", "arpu_brl", "gross_margin"]
+        },
+        "ltv_cac_ratio": {
+          "formula": "ltv / cac",
+          "description": "Razão LTV/CAC (saudável > 3.0)",
+          "unit": "x",
+          "dependencies": ["ltv", "cac_brl"]
+        },
+        "runway_months": {
+          "formula": "funding_brl * 1000 / monthly_burn",
+          "description": "Meses de operação com funding atual",
+          "unit": "meses",
+          "dependencies": ["funding_brl"],
+          "monthly_burn": {
+            "fixed": 150000,
+            "variable_per_customer": 100
+          }
+        },
+        "monthly_burn": {
+          "formula": "fixed_burn + (customers * variable_burn_per_customer)",
+          "description": "Burn rate mensal total",
+          "unit": "R$",
+          "dependencies": ["customers"],
+          "fixed_burn": 150000,
+          "variable_burn_per_customer": 100
+        },
+        "sales_cycle_months": {
+          "formula": "advisor_status == 2 ? 6 : (advisor_status == 1 ? 12 : 18)",
+          "description": "Ciclo de vendas em meses",
+          "unit": "meses",
+          "dependencies": ["advisor_status"]
+        },
+        "demand_multiplier": {
+          "formula": "anpd_enforcement_options[anpd_enforcement].multiplier",
+          "description": "Multiplicador de demanda por fiscalização",
+          "unit": "x",
+          "dependencies": ["anpd_enforcement"]
+        },
+        "mrr": {
+          "formula": "customers * arpu_brl",
+          "description": "Monthly Recurring Revenue",
+          "unit": "R$",
+          "dependencies": ["customers", "arpu_brl"]
+        },
+        "arr": {
+          "formula": "mrr * 12",
+          "description": "Annual Recurring Revenue",
+          "unit": "R$",
+          "dependencies": ["mrr"]
+        }
+      },
+      "projections": {
+        "worst": {
+          "description": "Pior caso: sem LOIs, sem advisor, funding mínimo",
+          "sliders": {
+            "loi_count": 0,
+            "advisor_status": 0,
+            "funding_brl": 500,
+            "anpd_enforcement": 0,
+            "churn_rate": 5.0,
+            "arpu_brl": 297,
+            "mom_growth": 1,
+            "cac_brl": 3000,
+            "gross_margin": 70,
+            "consortium_access": 0
+          },
+          "results": {
+            "month_6": {"mrr": "R$ 15K", "customers": 50, "runway": 3},
+            "month_12": {"mrr": "R$ 25K", "customers": 85, "runway": 0},
+            "month_18": {"mrr": "R$ 0", "customers": 0, "runway": 0, "status": "shutdown"}
+          }
+        },
+        "bear": {
+          "description": "Caso pessimista: 1 LOI, advisor tardio, funding mínimo",
+          "sliders": {
+            "loi_count": 1,
+            "advisor_status": 0,
+            "funding_brl": 500,
+            "anpd_enforcement": 0,
+            "churn_rate": 4.0,
+            "arpu_brl": 347,
+            "mom_growth": 3,
+            "cac_brl": 2500,
+            "gross_margin": 75,
+            "consortium_access": 0
+          },
+          "results": {
+            "month_6": {"mrr": "R$ 25K", "customers": 72, "runway": 8},
+            "month_12": {"mrr": "R$ 55K", "customers": 158, "runway": 0},
+            "month_18": {"mrr": "R$ 120K", "customers": 150, "runway": 0, "status": "fundraising_critical"}
+          }
+        },
+        "base": {
+          "description": "Caso base: 3 LOIs, advisor mês 4, funding R$960K",
+          "sliders": {
+            "loi_count": 3,
+            "advisor_status": 1,
+            "funding_brl": 960,
+            "anpd_enforcement": 1,
+            "churn_rate": 2.5,
+            "arpu_brl": 397,
+            "mom_growth": 5,
+            "cac_brl": 1800,
+            "gross_margin": 82,
+            "consortium_access": 1
+          },
+          "results": {
+            "month_6": {"mrr": "R$ 50K", "customers": 126, "runway": 16},
+            "month_12": {"mrr": "R$ 150K", "customers": 378, "runway": 12},
+            "month_18": {"mrr": "R$ 280K", "customers": 275, "runway": 8},
+            "month_30": {"mrr": "R$ 280K", "customers": 275, "runway": 4}
+          }
+        },
+        "bull": {
+          "description": "Caso otimista: 5 LOIs, advisor mês 2, funding R$1.5M",
+          "sliders": {
+            "loi_count": 5,
+            "advisor_status": 1,
+            "funding_brl": 1500,
+            "anpd_enforcement": 2,
+            "churn_rate": 2.0,
+            "arpu_brl": 697,
+            "mom_growth": 8,
+            "cac_brl": 1200,
+            "gross_margin": 85,
+            "consortium_access": 2
+          },
+          "results": {
+            "month_6": {"mrr": "R$ 120K", "customers": 172, "runway": 24},
+            "month_12": {"mrr": "R$ 350K", "customers": 502, "runway": 18},
+            "month_18": {"mrr": "R$ 550K", "customers": 500, "runway": 14},
+            "month_30": {"mrr": "R$ 550K", "customers": 500, "runway": 10}
+          }
+        },
+        "best": {
+          "description": "Melhor caso: 10 LOIs, advisor mês 2, funding R$2M",
+          "sliders": {
+            "loi_count": 10,
+            "advisor_status": 2,
+            "funding_brl": 2000,
+            "anpd_enforcement": 2,
+            "churn_rate": 1.0,
+            "arpu_brl": 1497,
+            "mom_growth": 12,
+            "cac_brl": 800,
+            "gross_margin": 88,
+            "consortium_access": 5
+          },
+          "results": {
+            "month_6": {"mrr": "R$ 250K", "customers": 167, "runway": 36},
+            "month_12": {"mrr": "R$ 750K", "customers": 501, "runway": 30},
+            "month_18": {"mrr": "R$ 1.5M", "customers": 1001, "runway": 24},
+            "month_30": {"mrr": "R$ 1M", "customers": 1000, "runway": 18}
+          }
+        }
+      },
+      "sensitivity_analysis": {
+        "loi_count_impact": {
+          "description": "Impacto de LOIs no valuation",
+          "sensitivity": "ALTA",
+          "variations": {
+            "0_lois": {"valuation_impact": "-80%", "go_no_go": false},
+            "1_lois": {"valuation_impact": "-50%", "go_no_go": false},
+            "3_lois": {"valuation_impact": "BASELINE", "go_no_go": true},
+            "5_lois": {"valuation_impact": "+30%", "go_no_go": true},
+            "10_lois": {"valuation_impact": "+100%", "go_no_go": true}
+          }
+        },
+        "advisor_impact": {
+          "description": "Impacto do advisor no sales cycle",
+          "sensitivity": "CRÍTICA",
+          "variations": {
+            "sem_advisor": {"sales_cycle": "18 meses", "burn_risk": "ALTO"},
+            "mes_4": {"sales_cycle": "12 meses", "burn_risk": "MEDIO"},
+            "mes_2": {"sales_cycle": "6 meses", "burn_risk": "BAIXO"}
+          }
+        },
+        "funding_impact": {
+          "description": "Impacto do funding no runway",
+          "sensitivity": "ALTA",
+          "variations": {
+            "r$500k": {"runway": "12-14 meses", "risk": "CRÍTICO"},
+            "r$960k": {"runway": "18-24 meses", "risk": "MEDIO"},
+            "r$2m": {"runway": "30-36 meses", "risk": "BAIXO"}
+          }
+        },
+        "churn_impact": {
+          "description": "Impacto do churn no LTV",
+          "sensitivity": "MEDIA",
+          "variations": {
+            "5_churn": {"ltv": "R$ 4.2K", "ltv_cac": "2.3x", "saude": "INSUSTENTÁVEL"},
+            "2.5_churn": {"ltv": "R$ 10.8K", "ltv_cac": "6.0x", "saude": "SAUDÁVEL"},
+            "1_churn": {"ltv": "R$ 27.5K", "ltv_cac": "15.3x", "saude": "EXCELENTE"}
+          }
+        }
+      },
+      "thresholds": {
+        "go_no_go": {
+          "loi_count": 3,
+          "advisor_status": 1,
+          "funding_brl": 500
+        },
+        "healthy_unit_economics": {
+          "ltv_cac_ratio": 3.0,
+          "payback_months": 12,
+          "gross_margin": 75
+        },
+        "sustainable_growth": {
+          "mom_growth_min": 3,
+          "churn_rate_max": 4.0,
+          "cac_brl_max": 2500
+        }
+      },
+      "alerts": {
+        "critical": [
+          "LOIs < 3: Sem validação real de mercado",
+          "Sem advisor: Sales cycle >12 meses queima runway",
+          "Funding R$500K: Runway <14 meses (arriscado)",
+          "LTV/CAC < 3: Unit economics quebrados"
+        ],
+        "warning": [
+          "Churn >4%: LTV reduz drasticamente",
+          "CAC >R$2.5K: Payback >12 meses",
+          "Margem <75%: Sem espaço para escala"
+        ]
+      }
+    }
+  },
+  "integration": {
+    "target_file": "strategic-data.json",
+    "target_path": "scenario_analysis",
+    "merge_strategy": "replace",
+    "last_sync": "2026-05-08"
+  },
+  "ui_components": {
+    "dashboard": {
+      "kpi_cards": [
+        {"id": "mrr", "label": "MRR", "format": "currency", "primary": true},
+        {"id": "customers", "label": "Clientes", "format": "number"},
+        {"id": "runway", "label": "Runway", "format": "months", "critical_threshold": 6},
+        {"id": "ltv_cac", "label": "LTV:CAC", "format": "ratio", "healthy_min": 3.0}
+      ],
+      "scenario_toggle": {
+        "options": ["Worst", "Bear", "Base", "Bull", "Best"],
+        "default": "Base",
+        "animation": "slide"
+      },
+      "sensitivity_charts": [
+        {
+          "type": "tornado",
+          "title": "Análise de Sensibilidade",
+          "variables": ["loi_count", "advisor_status", "funding_brl", "churn_rate"]
+        },
+        {
+          "type": "waterfall",
+          "title": "Worst → Best Case",
+          "scenarios": ["worst", "bear", "base", "bull", "best"]
+        }
+      ]
+    }
+  }
+}

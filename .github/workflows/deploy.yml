@@ -1,4 +1,4 @@
-name: Deploy Strategic Presentation
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -11,17 +11,40 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: github-pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: app/package.json
+
+      - name: Install dependencies
+        run: cd app && npm install
+
+      - name: Build Vue app
+        run: cd app && npm run build
+
+      - name: Merge static and Vue build
+        run: |
+          mkdir -p deploy
+          cp -r *.html deploy/
+          cp -r *.json deploy/ 2>/dev/null || true
+          cp -r docs/ deploy/docs/ 2>/dev/null || true
+          cp -r data/ deploy/data/ 2>/dev/null || true
+          cp -r app/dist/* deploy/app/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -29,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: ./deploy
 
       - name: Deploy to GitHub Pages
         id: deployment
