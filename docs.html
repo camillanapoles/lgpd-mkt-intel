@@ -212,14 +212,14 @@
         'memo',
         'battle-card',
         'transcricao',
-        'plano'
+        'plano-negocios'
       ]
     };
 
     function isResearchDoc(path) {
       const lower = path.toLowerCase();
       const withoutExt = lower.endsWith('.md') ? lower.slice(0, -3) : lower;
-      const tokens = withoutExt.split(/[^a-z0-9áàâãéêíóôõúç]+/).filter(Boolean);
+      const tokens = withoutExt.split(/[^a-z0-9à-ÿ]+/).filter(Boolean);
       return docClassification.researchKeywords.some(keyword => {
         if (keyword.includes('-')) {
           return withoutExt.includes(keyword);
