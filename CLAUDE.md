@@ -1,35 +1,76 @@
-#vinicio
+# Vinicio Project Guidelines
 
-❯ ❯ COLOQUE MAIS E O EXPERT GITHUHB PAGES CRIANFO DEPLOY DO COM AGENTE EM PARALELO DEVE USAR
-SKILL /ux_ui_max_pro e criar a apresentacao interativa do plano estrategico utizando
-instrucoes pros demaid agentes de inputs E FONTO UNICO JSON INSTRUIDA ONDE OS AGENTES
-PESQUIDAFOS E PLANEJADORES BUSINESS DEVE COLOCAR INFKRMACOES ➞ GARABTA POSSIBILIDAFE DE AGIL
-INCREMENTKS ➞ SEM MUDANCAS RAFICAIS
+## Purpose
 
-└─ CRIAR UM PAG# PUBLICADA EM GITPAGES (ACHONQUE VUE) PARA SER POSSIVEL UTIKIZACAO
-ESTRATEGICA LOGICA DE ALINHAMENTO DE PLANEJAMENTO ESTRATEGIGICP DURANTE REUAO, CAPA. DE JA
-TER MELHOR CENARIOS E POSSIVEIS CENSRIOS POR ONTERACAO, INTERATIVO PRA TOMADAS DE DECISOES A
-CERCA do business
-└─ comtemplar anàlise cenario ➞ fixo
-└─ oportinkdades , barreiras , swot e planejamento estrategico ,
-└─ canvas model com base e relacionado ao plano estrategico
-└─ tàmbem com base no plano estrategico + canvas ➞ roadmap mercado
+This document defines the working guidelines for building and evolving an interactive strategic planning presentation. The goal is to create a GitHub Pages-published experience that supports business decision-making with structured analysis, clear visual presentation, and incremental improvements.
 
----
+## Expected Deliverable
 
-ORcQUESTRE 10 agebtes [a mendida wue terminarem a acao /fdc-u PROXIMOS] SEMORE 10 ATIVOS
-CONTINUAMENTE COM ESTRATEGIA DE GARANTIR FATIR E COMPOSICAO IMPECAVEL
-└─ AO FINAL VC DEVE GARANTIR ROBUSTES VALIDADE VERIFICADA ➞ METODOLOGICIA ➞ COMO U DE
-PONTUACAO E POSICAO ESTRATIGICO ➞ OBS CENARIO ATUAL EH A TRANSCRICSO ➞ INSIGHTS PROVAVELS
-ESTA NA TRANSCRICAO TAMBEM ➞ ENTAO 1. CAPTURAR O CENARIO ATUAL DA TRANSCRICAO ➞ SWOT NELE 2.
-capturar os insights da trancricao e cenarios ➞ QUERO UMA TRANSFORMACAO ESTRATEGICA ➞
-METODOLOGICA MERCADOKOGICA ETC ➞ Sempre SEMORE 10 AGENTES SPECIAKISTAS EM PARALELOS OS
-PARES TRABAKHANDO DE FORMA MACIMIXADA POREM GARÀNTISTA CONFIRME VVV SEMPRE SEMORE UMA UMA
-FONTE DE INFORMACAO [SE TIVER DIVERGENCIA ] ANALIDE QUAL O MAIS PRECIDA FAS INFIRMACOES
-pkugin ou skill /business-analysis para skill VALIDACAO + AGENTES UX + AGENTES REVISORES E VAKIDADOR
+Create an interactive page published on GitHub Pages (preferred stack can be Vue if that is the chosen implementation). The page should help users review and discuss strategic planning scenarios during meetings and decision processes.
 
-$1 MANDATO TODO AJUSTE DEVE TER RAZAO METODOLOGICA ESTRATÉGICA BASE NO MERCADO, BUSINESS, BENCHMARKIN , STATE HOLLDER JUSTIFICADA ➞ SENAO TIVER VVV=0
+The experience should cover:
 
-$2 INFIRMACOES DEVE TER VVV ➞ MAPEAVEL EM UNICO LOCAL
-$3 NAO CRIAR DOCS ANTES DE VERIFICAR EXISTENCA
-$4 VERIFICAR ATIVIDADE ESTADO ANTES DE INCIAR [COMPLETADA, ANDAMENTO, INCREMEBTAR , NOVA]
+- current scenario analysis,
+- opportunities and barriers,
+- SWOT analysis,
+- strategic planning synthesis,
+- business model canvas aligned with the strategic plan,
+- market roadmap derived from the strategic plan and canvas.
+
+## Working Approach
+
+Use a coordinated multi-agent workflow with parallel execution where possible. Keep work incremental and avoid radical changes when improving existing outputs.
+
+Maintain a single structured source of truth for shared inputs and outputs, preferably in a single JSON-based format that other agents can consume consistently.
+
+Recommended specialist roles include:
+
+- business analysis,
+- research,
+- planning,
+- UX/UI,
+- review,
+- validation.
+
+## Analysis Requirements
+
+When source material includes a transcript, use it as the starting point for the analysis:
+
+1. Capture the current scenario described in the transcript.
+2. Extract likely insights and strategic signals from the transcript.
+3. Produce a structured SWOT for the current scenario.
+4. Translate findings into strategic, methodological, and market-oriented recommendations.
+
+## Validation Rules
+
+Every adjustment must have a clear methodological and strategic justification grounded in:
+
+- market context,
+- business rationale,
+- benchmarking,
+- stakeholder relevance.
+
+If a change cannot be justified, it should not be approved.
+
+All important information must be:
+
+- verifiable,
+- traceable,
+- mapped to a single authoritative source.
+
+If sources diverge, analyze which source is more reliable before proceeding.
+
+## Contributor Rules
+
+Before creating new documentation, verify whether equivalent documentation already exists.
+
+Before starting any task, verify its current state:
+
+- completed,
+- in progress,
+- incremental update,
+- new.
+
+## Quality Standard
+
+Final outputs should be robust, reviewed, and validated for consistency, strategic coherence, and usability.
