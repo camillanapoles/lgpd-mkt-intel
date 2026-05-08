@@ -203,21 +203,31 @@
       'transcricao-reuniao-lgpd-06-05-26.md'
     ];
 
-    const researchKeywords = [
-      'pesquisa',
-      'inteligencia',
-      'insights',
-      'estrategia',
-      'memo',
-      'battle-card',
-      'transcricao',
-      'plano'
-    ];
+    const docClassification = {
+      researchKeywords: [
+        'pesquisa',
+        'inteligencia',
+        'insights',
+        'estrategia',
+        'memo',
+        'battle-card',
+        'transcricao',
+        'plano'
+      ]
+    };
 
-    const researchRootDocs = rootDocs.filter(path => {
-      const lower = path.toLowerCase();
-      return researchKeywords.some(keyword => lower.includes(keyword));
-    });
+    function isResearchDoc(path) {
+      const lower = path.toLowerCase().replace(/\.md$/, '');
+      const tokens = lower.split(/[^a-z0-9]+/).filter(Boolean);
+      return docClassification.researchKeywords.some(keyword => {
+        if (keyword.includes('-')) {
+          return lower.includes(keyword);
+        }
+        return tokens.includes(keyword);
+      });
+    }
+
+    const researchRootDocs = rootDocs.filter(isResearchDoc);
 
     const opsRootDocs = rootDocs.filter(path => !researchRootDocs.includes(path));
 
