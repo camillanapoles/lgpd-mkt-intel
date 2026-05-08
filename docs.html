@@ -256,7 +256,7 @@
         .replaceAll('&', '&amp;')
         .replaceAll('<', '&lt;')
         .replaceAll('>', '&gt;')
-        .replaceAll('\"', '&quot;')
+        .replaceAll('"', '&quot;')
         .replaceAll("'", '&#39;');
     }
 
@@ -268,7 +268,7 @@
           if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
             return label;
           }
-          return `<a href=\"${escapeHtml(parsedUrl.toString())}\" target=\"_blank\" rel=\"noopener noreferrer\">${label}</a>`;
+          return `<a href=\"${escapeHtml(parsedUrl.href)}\" target=\"_blank\" rel=\"noopener noreferrer\">${label}</a>`;
         } catch {
           return label;
         }
@@ -382,7 +382,7 @@
     }
 
     function markActiveLink() {
-      const currentPath = encodeURIComponent(decodeURIComponent(window.location.hash.slice(1)));
+      const currentPath = window.location.hash.slice(1);
       navEl.querySelectorAll('.doc-link').forEach(link => {
         link.classList.toggle('active', link.dataset.path === currentPath);
       });
@@ -402,7 +402,7 @@
 
       try {
         const response = await fetch(documentUrl(path));
-        if (!response.ok) throw new Error(`Falha ao carregar (${response.status})`);
+        if (!response.ok) throw new Error(`Falha ao carregar ${path} (${response.status})`);
         const markdown = await response.text();
         docContentEl.innerHTML = renderMarkdown(markdown);
       } catch (error) {
@@ -428,12 +428,14 @@
     });
 
     renderNav();
-    const currentHashPath = decodeURIComponent(window.location.hash.slice(1));
+    const currentHashEncoded = window.location.hash.slice(1);
+    const currentHashPath = decodeURIComponent(currentHashEncoded);
+    const currentHashIsValid = allDocs.some(doc => doc.path === currentHashPath);
     const firstDocPath = docsBySection.find(section => section.docs?.length)?.docs[0];
-    const initialPath = currentHashPath || firstDocPath;
+    const initialPath = currentHashIsValid ? currentHashPath : firstDocPath;
     if (initialPath) {
       loadDoc(initialPath);
-      if (currentHashPath !== initialPath) {
+      if (!currentHashIsValid || !currentHashEncoded) {
         window.location.hash = encodeURIComponent(initialPath);
       }
     } else {
