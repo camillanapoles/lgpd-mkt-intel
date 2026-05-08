@@ -21,8 +21,8 @@ const router = createRouter({
 // Handle GitHub Pages 404.html SPA redirect
 const redirect = window.location.search
 if (redirect && redirect[1] === '/') {
-  const path = redirect.slice(2).replace(/&/g, '&')
-  window.history.replaceState(null, '', path)
+  const path = redirect.slice(2).replace(/~and~/g, '&')
+  window.history.replaceState(null, '', `${path}${window.location.hash}`)
 }
 
 const app = createApp(App)
