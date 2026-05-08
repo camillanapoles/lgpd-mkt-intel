@@ -188,23 +188,47 @@
   </div>
 
   <script>
+    const rootDocs = [
+      'BUSINESS-PLAN.md',
+      'FLUXO-TESTE-UX.md',
+      'battle-card-confidata.md',
+      'divisao-funcoes-cronograma.md',
+      'draft-pesquisa-lgpd.md',
+      'estrategia-diferenciacao-confidata.md',
+      'insights-reuniao-06-05.md',
+      'inteligencia-mercado-govtech-lgpd.md',
+      'memo-confidata-analysis.md',
+      'plano-negocios-cit-ai-tech.md',
+      'to-plan.md',
+      'transcricao-reuniao-lgpd-06-05-26.md'
+    ];
+
+    const researchKeywords = [
+      'pesquisa',
+      'inteligencia',
+      'insights',
+      'estrategia',
+      'memo',
+      'battle-card',
+      'transcricao',
+      'plano'
+    ];
+
+    const researchRootDocs = rootDocs.filter(path => {
+      const lower = path.toLowerCase();
+      return researchKeywords.some(keyword => lower.includes(keyword));
+    });
+
+    const opsRootDocs = rootDocs.filter(path => !researchRootDocs.includes(path));
+
     const docsBySection = [
       {
-        title: 'Raiz do repositório',
-        docs: [
-          'BUSINESS-PLAN.md',
-          'FLUXO-TESTE-UX.md',
-          'battle-card-confidata.md',
-          'divisao-funcoes-cronograma.md',
-          'draft-pesquisa-lgpd.md',
-          'estrategia-diferenciacao-confidata.md',
-          'insights-reuniao-06-05.md',
-          'inteligencia-mercado-govtech-lgpd.md',
-          'memo-confidata-analysis.md',
-          'plano-negocios-cit-ai-tech.md',
-          'to-plan.md',
-          'transcricao-reuniao-lgpd-06-05-26.md'
-        ]
+        title: 'Pesquisa (arquivos .md na raiz)',
+        docs: researchRootDocs
+      },
+      {
+        title: 'Raiz do repositório (demais .md)',
+        docs: opsRootDocs
       },
       {
         title: 'Documentos em /docs',
@@ -227,7 +251,7 @@
         title: 'Documentação do app',
         docs: ['app/README.md']
       }
-    ];
+    ].filter(section => section.docs.length > 0);
 
     const allDocs = docsBySection.flatMap(section => section.docs.map(path => ({
       section: section.title,
