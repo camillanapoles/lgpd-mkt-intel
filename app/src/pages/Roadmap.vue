@@ -50,7 +50,7 @@
             class="absolute -left-3.5 top-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2"
             :class="phaseDotClass(phase.status)"
           >
-            {{ index }}
+            {{ index + 1 }}
           </div>
 
           <!-- Phase Card -->
