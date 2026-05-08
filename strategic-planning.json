@@ -164,7 +164,7 @@
       { "id": "W3", "texto": "Depende AWS sa-east-1", "vvv": 0.4 },
       { "id": "W4", "texto": "Pool DPOs necessario", "vvv": 0.6 }
     ],
-   oportunidades": [
+   "oportunidades": [
       { "id": "O1", "texto": "4.011 prefeituras sem LGPD (72%)", "vvv": 0.95 },
       { "id": "O2", "texto": "ANPD ativa + multas R$50M", "vvv": 0.9 },
       { "id": "O3", "texto": "Lei 14.133 dispensa ate R$390K", "vvv": 0.85 },
