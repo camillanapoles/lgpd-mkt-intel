@@ -197,13 +197,46 @@ const criticalMilestonesCount = computed(() =>
   roadmap.milestones.filter(ms => ms.critical).length
 )
 
+function startOfDay(date) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate())
+}
+
+function parseSprintPeriod(periodo) {
+  if (!periodo || typeof periodo !== 'string') return null
+
+  const matches = periodo.match(/\d{4}-\d{2}-\d{2}/g)
+  if (!matches || matches.length < 2) return null
+
+  const [startStr, endStr] = matches
+  const start = new Date(`${startStr}T00:00:00`)
+  const end = new Date(`${endStr}T00:00:00`)
+
+  if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return null
+
+  return {
+    start: startOfDay(start),
+    end: startOfDay(end)
+  }
+}
+
+function isSprintActiveToday(sprint) {
+  const period = parseSprintPeriod(sprint?.periodo)
+  if (!period) return false
+
+  const today = startOfDay(new Date())
+  return today >= period.start && today <= period.end
+}
+
+const currentSprint = computed(() =>
+  roadmap.sprints.find(sprint => isSprintActiveToday(sprint)) ?? null
+)
+
 const currentSprintLabel = computed(() => {
-  if (roadmap.sprints.length === 0) return '-'
-  return `${roadmap.sprints[0].sprint}`
+  return currentSprint.value ? `${currentSprint.value.sprint}` : '-'
 })
 
 function isCurrentSprint(sprint) {
-  return sprint.sprint === 1
+  return currentSprint.value?.sprint === sprint.sprint
 }
 
 function isCriticalPath(phaseNome) {
