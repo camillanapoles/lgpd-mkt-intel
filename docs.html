@@ -217,19 +217,26 @@
     };
 
     function isResearchDoc(path) {
-      const lower = path.toLowerCase().replace(/\.md$/, '');
-      const tokens = lower.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+      const lower = path.toLowerCase();
+      const withoutExt = lower.endsWith('.md') ? lower.slice(0, -3) : lower;
+      const tokens = withoutExt.split(/[^a-z0-9áàâãéêíóôõúç]+/).filter(Boolean);
       return docClassification.researchKeywords.some(keyword => {
         if (keyword.includes('-')) {
-          return lower.includes(keyword);
+          return withoutExt.includes(keyword);
         }
         return tokens.includes(keyword);
       });
     }
 
-    const researchRootDocs = rootDocs.filter(isResearchDoc);
-    const researchRootDocSet = new Set(researchRootDocs);
-    const opsRootDocs = rootDocs.filter(path => !researchRootDocSet.has(path));
+    const rootMarkdownDocs = rootDocs.filter(path => path.toLowerCase().endsWith('.md'));
+    const { researchRootDocs, opsRootDocs } = rootMarkdownDocs.reduce((acc, path) => {
+      if (isResearchDoc(path)) {
+        acc.researchRootDocs.push(path);
+      } else {
+        acc.opsRootDocs.push(path);
+      }
+      return acc;
+    }, { researchRootDocs: [], opsRootDocs: [] });
 
     const docsBySection = [
       {
