@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "version": "1.1.0",
+    "lastUpdated": "2026-05-08",
+    "project": "LGPD SaaS Municipal - Contabilizei da Privacy",
+    "validation": "VVV (Verificacao Verdade Valida) - FDC-U Framework",
+    "validated_by": "FDC-U Priority Matrix"
+  },
+  "fdcu_priorities": {
+    "goal": "O que validar ANTES/DEPOIS da reuniao de 06/05 para alinhar estratégia?",
+    "dimensions": [
+      {"name": "Impacto_Decisao", "weight": 0.35, "function": "+"},
+      {"name": "Risco_Se_Validar_Falso", "weight": 0.25, "function": "-"},
+      {"name": "Urgencia_Temporal", "weight": 0.20, "function": "-"},
+      {"name": "Esforco_Validacao", "weight": 0.10, "function": "-"},
+      {"name": "Custo_Erro", "weight": 0.10, "function": "-"}
+    ],
+    "top_critical": [
+      {
+        "rank": 1,
+        "name": "LOI_Assinadas",
+        "score": 9.35,
+        "vvv": 0.0,
+        "status": "CRITICO - BLOQUEIO",
+        "description": "3+ Letters of Intent assinadas com prefeituras/consorcios. Sem LOI = sem validacao real. GO/NO-GO depende disso."
+      },
+      {
+        "rank": 2,
+        "name": "CoFounder_Advisor",
+        "score": 9.0,
+        "vvv": 0.3,
+        "status": "ALTO RISCO",
+        "description": "Pessoa com experiencia vendas municipais. Sem isso, sales cycle >12 meses queima runway."
+      },
+      {
+        "rank": 3,
+        "name": "Parecer_Juridico_Dispensa",
+        "score": 8.35,
+        "vvv": 0.5,
+        "status": "NEEDS_VALIDATION",
+        "description": "Memoria juridica fundamentando Art.75 IV Lei 14.133. Alto risco se fundamentacao errada."
+      },
+      {
+        "rank": 4,
+        "name": "Unit_Economics_Validado",
+        "score": 6.7,
+        "vvv": 0.6,
+        "status": "ERROS_IDENTIFICADOS",
+        "description": "CAC, LTV, payback base REAL. Erros: LTV 13.2->10.8K, payback 3.3->4.0."
+      },
+      {
+        "rank": 5,
+        "name": "Consorcios_Prioridade",
+        "score": 6.55,
+        "vvv": 0.4,
+        "status": "PARCIAL_VALIDADO",
+        "description": "Top 5 consorcios mapeados. CIMINAS R$31.9M reference. Outros?"
+      }
+    ]
+  },
+  "team_structure": {
+    "validated": true,
+    "vvv_score": 0.9,
+    "roles": [
+      {"name": "Wilton", "role": "Presidente", "focus": "Articulacao consorcios + TCEs + fechamento grandes contratos"},
+      {"name": "Gislene", "role": "Juridica/Operacoes", "focus": "Parecer dispensa licitacao + registro INPI IP"},
+      {"name": "Simone", "role": "Compliance", "focus": "Base juridica AI-DPO + templates RIPD/politicas"},
+      {"name": "Camilla", "role": "TI/Produto", "focus": "MVP (Data Discovery + Anonimizacao + AI-DPO) + infraestrutura"}
+    ]
+  },
+  "cronograma_fixo": {
+    "validated": true,
+    "vvv_score": 0.8,
+    "sprints": [
+      {"sprint": 1, "periodo": "06-13/05", "foco": "Base juridica + infra", "marco": "INPI protocolo"},
+      {"sprint": 2, "periodo": "14-21/05", "foco": "Validacao produto", "marco": "Alpha test"},
+      {"sprint": 3, "periodo": "22-28/05", "foco": "Kit comercial", "marco": "Proposta pronta"},
+      {"sprint": 4, "periodo": "29/05-02/06", "foco": "Homologacao", "marco": "PoC piloto"}
+    ],
+    "marcos_junho": [
+      {"data": "03/06", "evento": "Abertura mercado", "responsavel": "Wilton"},
+      {"data": "10/06", "evento": "Whitepaper Parecer", "responsavel": "Gislene+Simone"},
+      {"data": "17/06", "evento": "Homologacao Consorcio", "responsavel": "Wilton+Gislene"},
+      {"data": "24/06", "evento": "PoC piloto", "responsavel": "Camilla"}
+    ]
+  },
+  "tese_valor": {
+    "validated": true,
+    "vvv_score": 0.85,
+    "posicionamento": {
+      "tipo": "ICT privado (Instituto Ciencia Tecnologia)",
+      "tagline": "Eficiencia Administrativa via Automação",
+      "diferenciacao": "NAO consultoria tradicional = tecnologia operativa"
+    },
+    "pilares_ia": [
+      {"id": 1, "name": "Data Discovery", "description": "Varredura automatizada SQL/NoSQL"},
+      {"id": 2, "name": "Anonimacao", "description": "Tarjamento LAI/LGPD automatico"},
+      {"id": 3, "name": "AI-DPO Copilot", "description": "Copiloto treinado lei brasileira"}
+    ]
+  },
+  "prerrogativas_ict": {
+    "validated": true,
+    "vvv_score": 0.7,
+    "legal_basis": "Lei 14.133/2021",
+    "mecanismos": [
+      {"artigo": "Art.75 IV c", "nome": "P&D", "valor": "Dispensa ate R$390K+ (2026)"},
+      {"artigo": "Art.75 IV d", "nome": "Licenciamento criacao protegida", "valor": "Software IA proprietario"},
+      {"artigo": "ETEC", "nome": "Encomenda Tecnologica", "valor": "Casos complexos"},
+      {"artigo": "CPSI", "nome": "Contrato Publico Solucao Inovadora", "valor": "Teste + contrato escala"}
+    ]
+  },
+  "mercado_alvo": {
+    "validated": true,
+    "vvv_score": 0.9,
+    "fonte": "IBGE MUNIC 2024",
+    "metricas": [
+      {"nome": "Total municipios", "valor": 5570, "fonte": "IBGE"},
+      {"nome": "Sem estrutura LGPD", "valor": 4011, "porcentagem": 72, "fonte": "IBGE MUNIC 2024"},
+      {"nome": "SAM prioritario", "valor": 1200, "descricao": "20-100K hab", "fonte": "Estimativa"},
+      {"nome": "Budget medio", "valor": "15-50K", "unidade": "R$/ano", "fonte": "Estimativa"}
+    ]
+  },
+  "riscos_identificados": {
+    "validated": true,
+    "vvv_score": 0.8,
+    "riscos": [
+      {"nome": "Sales cycle longo", "impacto": "burn runway", "probabilidade": "Alta"},
+      {"nome": "Inadimplencia municipal", "impacto": "fluxo caixa", "probabilidade": "40%"},
+      {"nome": "Turnover politico", "impacto": "contratos quebrados", "probabilidade": "Media"},
+      {"nome": "Competidor reacao", "impacto": "perda mercado", "probabilidade": "6-12 meses"},
+      {"nome": "Sem experiencia municipal", "impacto": "credibilidade", "probabilidade": "Alta"}
+    ]
+  },
+  "unit_economics": {
+    "validated": true,
+    "vvv_score": 0.6,
+    "correcoes_aplicadas": [
+      {"campo": "LTV", "valor_antigo": "13.2K", "valor_novo": "10.8K", "reducao": "18%"},
+      {"campo": "Payback", "valor_antigo": "3.3", "valor_novo": "4.0", "aumento": "21%"}
+    ],
+    "valores_corrigidos": {
+      "arpu": 397,
+      "ltv": 10800,
+      "cac": 1800,
+      "payback_months": 4.0,
+      "ltv_cac_ratio": 6.0,
+      "gross_margin": 0.82,
+      "churn_rate": 0.025
+    }
+  },
+  "roadmap_correcoes": {
+    "validated": true,
+    "vvv_score": 0.7,
+    "correcoes_aplicadas": [
+      {"campo": "Crescimento MoM", "valor_antigo": "21-25%", "valor_novo": "3-7%", "justificativa": "municipal B2B realista"},
+      {"campo": "Meta clientes mes 30", "valor_antigo": "2000", "valor_novo": "275", "justificativa": "baseado em crescimento 3-7% MoM"}
+    ]
+  },
+  "competitive_gap": {
+    "validated": true,
+    "vvv_score": 0.8,
+    "tese_unica": "Ninguem faz (municipal + R$100-500 + DPO + Lei14.133 + DC BR)",
+    "status": "Confirmado VVV",
+    "ameacas": [
+      {"nome": "Confidata", "status": "threat real", "acao": "monitorar pivot municipal"}
+    ]
+  },
+  "validation_log": [
+    {"date": "2026-05-08", "item": "Unit Economics", "action": "Corrigido LTV 13.2->10.8K", "vvv_before": 0.3, "vvv_after": 0.6},
+    {"date": "2026-05-08", "item": "Roadmap crescimento", "action": "Corrigido 21-25% -> 3-7% MoM", "vvv_before": 0.2, "vvv_after": 0.7},
+    {"date": "2026-05-08", "item": "Meta clientes", "action": "2000 -> 275 clientes mes 30", "vvv_before": 0.1, "vvv_after": 0.7}
+  ],
+  "gaps_a_preencher": {
+    "critical": [
+      {"item": "Transcricao reuniao COMPLETA", "status": "PENDENTE", "prioridade": "MAXIMA"},
+      {"item": "3+ LOIs assinadas", "status": "PENDENTE", "prioridade": "CRITICA"},
+      {"item": "Co-founder/advisor municipal", "status": "PENDENTE", "prioridade": "ALTA"},
+      {"item": "Parecer juridico final", "status": "PARCIAL", "prioridade": "ALTA"},
+      {"item": "INPI protocolado", "status": "PENDENTE", "prioridade": "MEDIA"}
+    ]
+  },
+  "swot": {
+    "strengths": [
+      "Unico abaixo R$65K/ano com DPO",
+      "DC Brasil compliance",
+      "Modelo Contabilizei validado",
+      "Templates municipais unicos"
+    ],
+    "weaknesses": [
+      "Sem brand ainda",
+      "Sem ISO certificado",
+      "Depende AWS sa-east-1",
+      "Pool DPOs needed"
+    ],
+    "opportunities": [
+      "4.011 prefeituras sem LGPD (72%)",
+      "ANPD ativa + multas R$50M",
+      "Lei 14.133 dispensa",
+      "TCEs fiscalizando"
+    ],
+    "threats": [
+      "Confidata pivot municipal",
+      "OneTrust entrada BR",
+      "Mudanca regulatoria",
+      "Recesso municipal"
+    ]
+  },
+  "business_model_canvas": {
+    "key_partners": ["Associacoes municipais", "DPOs fractionados", "AWS sa-east-1", "Certificadoras ISO"],
+    "key_activities": ["Plataforma SaaS", "DPO-as-a-Service", "Conteudo EAD", "Consultoria"],
+    "key_resources": ["Plataforma web", "Pool DPOs", "Templates LGPD", "ISO 27001"],
+    "value_propositions": ["Abaixo dispensa licitacao", "DC Brasil (Art. 26)", "DPO incluido", "Setup 30 dias"],
+    "customer_relationships": ["Self-service", "Suporte chat", "DPO dedicado (plus)", "Treinamentos"],
+    "channels": ["Direta web", "Associacoes", "White label", "Marketplace"],
+    "customer_segments": ["Prefeituras (4.011)", "PMEs B2B", "Orgaos publicos", "Empresas privadas"],
+    "cost_structure": ["Dev plataforma", "DPO salaries", "AWS infra", "Marketing"],
+    "revenue_streams": ["Subscription SaaS", "DPO service", "Consultoria", "Templates"]
+  },
+  "scenario_analysis": {
+    "bear": {"mrr": "R$ 120K", "customers": 150, "month": 30},
+    "base": {"mrr": "R$ 280K", "customers": 275, "month": 30},
+    "bull": {"mrr": "R$ 550K", "customers": 500, "month": 30}
+  },
+  "market_analysis": {
+    "tam": {"valor": "R$ 60M", "descricao": "Total municipios sem LGPD"},
+    "sam": {"valor": "R$ 12M", "descricao": "B2B SaaS municipal 20-100K hab"},
+    "som": {"valor": "R$ 2-4M", "descricao": "3 anos target inicial"}
+  }
+}

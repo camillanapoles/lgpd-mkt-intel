@@ -1,0 +1,162 @@
+{
+  "goal": "O que validar ANTES/DEPOIS da reuniao de 06/05 para alinhar estratégia?",
+  "dimensions": [
+    {"name": "Impacto_Decisao", "weight": 0.35, "function": "+"},
+    {"name": "Risco_Se_Validar_Falso", "weight": 0.25, "function": "-"},
+    {"name": "Urgencia_Temporal", "weight": 0.20, "function": "-"},
+    {"name": "Esforco_Validacao", "weight": 0.10, "function": "-"},
+    {"name": "Custo_Erro", "weight": 0.10, "function": "-"}
+  ],
+  "objects": [
+    {
+      "name": "LOI_Assinadas",
+      "description": "3+ Letters of Intent assinadas com prefeituras/consorcios",
+      "impacto_decisao": 9,
+      "risco_se_validar_falso": 2,
+      "urgencia_temporal": 2,
+      "esforco_validacao": 8,
+      "custo_erro": 9,
+      "notas": "CRITICO - Sem LOI = sem validacao real. GO/NO-GO depende disso."
+    },
+    {
+      "name": "Parecer_Juridico_Dispensa",
+      "description": "Memoria juridica fundamentando Art.75 IV Lei 14.133",
+      "impacto_decisao": 10,
+      "risco_se_validar_falso": 8,
+      "urgencia_temporal": 3,
+      "esforco_validacao": 4,
+      "custo_erro": 3,
+      "notas": "Alto risco se fundamentacao errada. Precisa advogado experiente."
+    },
+    {
+      "name": "INPI_Software_Protocolo",
+      "description": "Pedido registro IP algoritmos (tarjamento, data discovery)",
+      "impacto_decisao": 7,
+      "risco_se_validar_falso": 1,
+      "urgencia_temporal": 9,
+      "esforco_validacao": 3,
+      "custo_ivo": 2,
+      "notas": "Demora 6-12 meses mas urgente para contratacao direta."
+    },
+    {
+      "name": "Unit_Economics_Validado",
+      "description": "CAC, LTV, payback, churn base REAL (nao plan otimista)",
+      "impacto_decisao": 8,
+      "risco_se_validar_falso": 4,
+      "urgencia_temporal": 4,
+      "esforco_validacao": 3,
+      "custo_erro": 6,
+      "notas": "Erros em BUSINESS-PLAN.md (LTV 13.2->10.8K, payback 3.3->4.0)."
+    },
+    {
+      "name": "Roadmap_Realista",
+      "description": "Corrigir crescimento 21-25% MoM -> 3-7% municipal B2B",
+      "impacto_decisao": 7,
+      "risco_se_validar_falso": 3,
+      "urgencia_temporal": 6,
+      "esforco_validacao": 2,
+      "custo_erro": 4,
+      "notas": "Meta 2000 clientes impossivel 30 meses. Revisar para 275."
+    },
+    {
+      "name": "Gap_Competitivo_Confirmado",
+      "description": "Ninguem faz (municipal + R$100-500 + DPO + Lei14.133 + DC BR)",
+      "impacto_decisao": 6,
+      "risco_se_validar_falso": 5,
+      "urgencia_temporal": 5,
+      "esforco_validacao": 6,
+      "custo_erro": 5,
+      "notas": "Confirmado VVV. Confidata threat real."
+    },
+    {
+      "name": "Consorcios_Prioridade",
+      "description": "Top 5 consorcios mapeados por Wilton",
+      "impacto_decisao": 7,
+      "risco_se_validar_falso": 2,
+      "urgencia_temporal": 2,
+      "esforco_validacao": 7,
+      "custo_erro": 3,
+      "notas": "CIMINAS R$31.9M reference. Outros?"
+    },
+    {
+      "name": "MVP_Cores_Teste",
+      "description": "IA-Audit + Data Discovery + Anonimacao funcionam?",
+      "impacto_decisao": 5,
+      "risco_se_validar_falso": 9,
+      "urgencia_temporal": 7,
+      "esforco_validacao": 8,
+      "custo_erro": 7,
+      "notas": "RISCO ALTISSIMO - tecnologia nao testada. Promessa demais?"
+    },
+    {
+      "name": "CoFounder_Advisor",
+      "description": "Pessoa com experiencia vendas municipais",
+      "impacto_decisao": 9,
+      "risco_se_validar_falso": 1,
+      "urgencia_temporal": 4,
+      "esforco_validacao": 5,
+      "custo_erro": 8,
+      "notas": "CRITICO - sem isso, sales cycle >12 meses queima runway."
+    },
+    {
+      "name": "Funding_Runner_Validado",
+      "description": "Quanto funding necessario ATE PMF (R$960K?)",
+      "impacto_decisao": 8,
+      "risco_se_validar_falso": 3,
+      "urgencia_temporal": 5,
+      "esforco_validacao": 2,
+      "custo_erro": 7,
+      "notas": "Unit economics errados = funding calculado errado."
+    },
+    {
+      "name": "TCE_Enforcement_Real",
+      "description": "Multas REAIS aplicadas prefeituras?",
+      "impacto_decisao": 6,
+      "risco_se_validar_falso": 7,
+      "urgencia_temporal": 4,
+      "esforco_validacao": 4,
+      "custo_erro": 3,
+      "notas": "Citado mas precisa validacao - casos reais com valores."
+    },
+    {
+      "name": "ANPD_Agenda_2025_26",
+      "description": "16 temas prioritarios confirmados",
+      "impacto_decisao": 5,
+      "risco_se_validar_falso": 2,
+      "urgencia_temporal": 3,
+      "esforco_validacao": 2,
+      "custo_erro": 1,
+      "notas": "gov.br/anpd - checar se mudou apos reuniao."
+    },
+    {
+      "name": "Acordao_TCE_PR_1153",
+      "description": "LAI x LGPD harmonizacao VALIDAR",
+      "impacto_decisao": 7,
+      "risco_se_validar_falso": 4,
+      "urgencia_temporal": 4,
+      "esforco_validacao": 3,
+      "custo_erro": 2,
+      "notas": "Citado em Blog Zenite - verificar fonte oficial TCE-PR."
+    },
+    {
+      "name": "Tech_Stack_Definido",
+      "description": "React+Node/Python+PostgreSQL confirmado?",
+      "impacto_decisao": 4,
+      "risco_se_validar_falso": 1,
+      "urgencia_temporal": 6,
+      "esforco_validacao": 2,
+      "custo_erro": 3,
+      "notas": "Stack generico - sem IP defensavel."
+    },
+    {
+      "name": "Pricing_Municipal_Final",
+      "description": "R$297/R$597/R$997 por porte cidade",
+      "impacto_decisao": 6,
+      "risco_se_validar_falso": 5,
+      "urgencia_temporal": 5,
+      "esforco_validacao": 2,
+      "custo_erro": 4,
+      "notas": "Precisa validar orcamento municipal real."
+    }
+  ]
+}
