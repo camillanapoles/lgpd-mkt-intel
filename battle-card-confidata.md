@@ -1,1 +1,0 @@
-docs/battle-card-confidata.md
