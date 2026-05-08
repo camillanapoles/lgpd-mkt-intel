@@ -7,35 +7,124 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Base + Accessibility */
     [v-cloak] { display: none; }
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* Focus Visible - WCAG 2.4.7 */
+    *:focus-visible {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
+    button:focus-visible, [role="button"]:focus-visible {
+      outline: 3px solid #60a5fa;
+      outline-offset: 2px;
+    }
+
+    /* Skip Link - WCAG 2.4.1 */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #1e40af;
+      color: white;
+      padding: 8px 16px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Screen Reader Only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .not-sr-only {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+
+    /* Touch Targets - Min 44x44px */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Reduced Motion - WCAG 2.3.3 */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Decision States */
     .decision-pending { border-left: 4px solid #f59e0b; }
     .decision-approved { border-left: 4px solid #10b981; }
     .decision-rejected { border-left: 4px solid #ef4444; }
-    .swot-card { transition: all 0.2s; }
+
+    /* SWOT Cards */
+    .swot-card { transition: transform 0.15s ease-out, box-shadow 0.15s ease-out; }
     .swot-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+    /* VVV Indicators */
     .vvv-indicator { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
     .vvv-high { background: #dcfce7; }
     .vvv-med { background: #fef3c7; }
     .vvv-low { background: #fee2e2; }
-    .scenario-active { ring: 2px solid #3b82f6; }
+
+    /* Timeline */
+    .scenario-active { box-shadow: 0 0 0 2px #3b82f6; }
     .phase-current { background: linear-gradient(90deg, #3b82f6, #8b5cf6); }
     .timeline-line { position: relative; }
     .timeline-line::before { content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: #e5e7eb; }
     .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: #3b82f6; position: relative; z-index: 1; }
-    .fade-enter-active, .fade-leave-active { transition: opacity 0.2s; }
+
+    /* Transitions */
+    .fade-enter-active, .fade-leave-active { transition: opacity 0.15s ease-out; }
     .fade-enter-from, .fade-leave-to { opacity: 0; }
+
+    /* Print */
     @media print {
       .no-print { display: none !important; }
       .print-break { page-break-after: always; }
     }
+
+    /* Mobile Safe Areas */
+    @supports (padding: max(0px)) {
+      header { padding-top: max(1rem, env(safe-area-inset-top)); }
+      main { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+    }
   </style>
 </head>
 <body class="bg-slate-100">
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+
   <div id="app" v-cloak>
     <!-- Loading -->
-    <div v-if="loading" class="min-h-screen flex items-center justify-center">
+    <div v-if="loading" class="min-h-screen flex items-center justify-center" role="status" aria-live="polite">
       <div class="text-center">
-        <div class="animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent mx-auto mb-4"></div>
+        <div class="animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent mx-auto mb-4" aria-hidden="true"></div>
         <p class="text-slate-600">Carregando planejamento estratégico...</p>
       </div>
     </div>
@@ -43,20 +132,21 @@
     <!-- Main Dashboard -->
     <div v-else class="min-h-screen">
       <!-- Header - Meeting Mode -->
-      <header class="bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg sticky top-0 z-50 no-print">
+      <header class="bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg sticky top-0 z-50 no-print" role="banner">
         <div class="max-w-7xl mx-auto px-4 py-3">
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between flex-wrap gap-3">
             <div class="flex items-center gap-4">
               <h1 class="text-xl font-bold">Planning Meeting Dashboard</h1>
-              <span class="px-2 py-1 bg-blue-600 rounded text-xs">LGPD Strategy</span>
+              <span class="px-2 py-1 bg-blue-600 rounded text-sm">LGPD Strategy</span>
               <span class="text-slate-400 text-sm">{{ data.metadata?.lastUpdated }}</span>
             </div>
             <div class="flex items-center gap-3">
-              <button @click="exportPDF" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-sm">
-                📄 Export PDF
+              <button @click="exportPDF" class="touch-target px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded text-sm font-medium" aria-label="Exportar para PDF">
+                <span aria-hidden="true">📄</span> Export PDF
               </button>
-              <button @click="toggleEditMode" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded text-sm">
-                {{ editMode ? '🔒 Lock' : '✏️ Edit' }}
+              <button @click="toggleEditMode" class="touch-target px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-medium" :aria-label="editMode ? 'Bloquear edição' : 'Modo edição'">
+                <span aria-hidden="true">{{ editMode ? '🔒' : '✏️' }}</span>
+                <span class="sr-only">{{ editMode ? 'Bloquear' : 'Editar' }}</span>
               </button>
             </div>
           </div>
@@ -84,16 +174,22 @@
       </div>
 
       <!-- Main Content -->
-      <main class="max-w-7xl mx-auto px-4 py-6">
+      <main id="main-content" class="max-w-7xl mx-auto px-4 py-6" role="main" tabindex="-1">
         <!-- Tab Navigation -->
-        <div class="flex gap-2 mb-6 overflow-x-auto no-print">
+        <nav class="flex gap-2 mb-6 overflow-x-auto no-print" role="tablist" aria-label="Navegação do dashboard">
           <button v-for="tab in tabs" :key="tab.id"
                   @click="activeTab = tab.id"
-                  :class="['px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors',
-                           activeTab === tab.id ? 'bg-blue-600 text-white' : 'bg-white hover:bg-slate-50']">
-            {{ tab.icon }} {{ tab.name }}
+                  :class="['px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors touch-target',
+                           activeTab === tab.id ? 'bg-blue-600 text-white' : 'bg-white hover:bg-slate-50']"
+                  :aria-selected="activeTab === tab.id"
+                  :aria-controls="`panel-${tab.id}`"
+                  :id="`tab-${tab.id}`"
+                  role="tab">
+            <span aria-hidden="true">{{ tab.icon }}</span>
+            <span class="sr-only">{{ tab.name }}</span>
+            <span class="not-sr-only">{{ tab.name }}</span>
           </button>
-        </div>
+        </nav>
 
         <!-- Decisions Panel - CRITICAL for meetings -->
         <div v-if="activeTab === 'decisions'" class="space-y-4">
