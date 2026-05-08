@@ -243,5 +243,5 @@ const unitEconomicsLegend = [
   { label: 'CAC: R$ 2.5K', color: '#ef4444' },
   { label: 'ARPU: R$ 800', color: '#3b82f6' },
   { label: 'Payback: 14 meses', color: '#f59e0b' }
-])
+]
 </script>

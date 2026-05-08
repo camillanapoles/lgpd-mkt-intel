@@ -73,6 +73,7 @@ const navItems = [
   { name: 'scenarios', label: 'Cenários', path: '/cenarios' },
   { name: 'bmc', label: 'BMC', path: '/bmc' },
   { name: 'roadmap', label: 'Roadmap', path: '/roadmap' },
-  { name: 'swot', label: 'SWOT', path: '/swot' }
+  { name: 'swot', label: 'SWOT', path: '/swot' },
+  { name: 'wiki', label: 'Wiki', path: '/wiki' }
 ]
 </script>

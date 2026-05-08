@@ -8,7 +8,8 @@ const routes = [
   { path: '/cenarios', component: () => import('./pages/Scenarios.vue'), name: 'scenarios' },
   { path: '/bmc', component: () => import('./pages/BMC.vue'), name: 'bmc' },
   { path: '/roadmap', component: () => import('./pages/Roadmap.vue'), name: 'roadmap' },
-  { path: '/swot', component: () => import('./pages/SWOT.vue'), name: 'swot' }
+  { path: '/swot', component: () => import('./pages/SWOT.vue'), name: 'swot' },
+  { path: '/wiki', component: () => import('./pages/Wiki.vue'), name: 'wiki' }
 ]
 
 const router = createRouter({
