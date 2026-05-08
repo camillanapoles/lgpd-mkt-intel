@@ -1,13 +1,13 @@
 /* Design System Tokens (CSS custom properties) */
 @import '../../../design-system/tokens.css';
 
+/* Design System Components (uses tokens.css variables) */
+@import '../../../design-system/components.css';
+
 /* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Design System Components (uses tokens.css variables) */
-@import '../../../design-system/components.css';
 
 /* ============================================
    App-level overrides using Tailwind utilities
