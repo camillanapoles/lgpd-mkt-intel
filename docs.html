@@ -187,7 +187,6 @@
     </main>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     const docsBySection = [
       {
@@ -248,6 +247,96 @@
       return `${pageBase}${path}`;
     }
 
+    function escapeHtml(value) {
+      return value
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('\"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function formatInline(text) {
+      let safe = escapeHtml(text);
+      safe = safe.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href=\"$2\" target=\"_blank\" rel=\"noopener noreferrer\">$1</a>');
+      safe = safe.replace(/`([^`]+)`/g, '<code>$1</code>');
+      safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      safe = safe.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+      return safe;
+    }
+
+    function renderMarkdown(markdown) {
+      const lines = markdown.split('\n');
+      const html = [];
+      let inList = false;
+      let inCode = false;
+      let codeBuffer = [];
+
+      for (const line of lines) {
+        if (line.trim().startsWith('```')) {
+          if (inCode) {
+            html.push(`<pre><code>${escapeHtml(codeBuffer.join('\n'))}</code></pre>`);
+            codeBuffer = [];
+            inCode = false;
+          } else {
+            inCode = true;
+          }
+          continue;
+        }
+
+        if (inCode) {
+          codeBuffer.push(line);
+          continue;
+        }
+
+        const headingMatch = line.match(/^(#{1,6})\s+(.*)$/);
+        if (headingMatch) {
+          if (inList) {
+            html.push('</ul>');
+            inList = false;
+          }
+          const level = headingMatch[1].length;
+          html.push(`<h${level}>${formatInline(headingMatch[2])}</h${level}>`);
+          continue;
+        }
+
+        const listMatch = line.match(/^[-*]\s+(.*)$/);
+        if (listMatch) {
+          if (!inList) {
+            html.push('<ul>');
+            inList = true;
+          }
+          html.push(`<li>${formatInline(listMatch[1])}</li>`);
+          continue;
+        }
+
+        if (!line.trim()) {
+          if (inList) {
+            html.push('</ul>');
+            inList = false;
+          }
+          continue;
+        }
+
+        if (inList) {
+          html.push('</ul>');
+          inList = false;
+        }
+
+        html.push(`<p>${formatInline(line)}</p>`);
+      }
+
+      if (inList) {
+        html.push('</ul>');
+      }
+
+      if (inCode) {
+        html.push(`<pre><code>${escapeHtml(codeBuffer.join('\n'))}</code></pre>`);
+      }
+
+      return html.join('\n');
+    }
+
     function renderNav(query = '') {
       const lowerQuery = query.trim().toLowerCase();
       const grouped = docsBySection.map(section => ({
@@ -294,10 +383,10 @@
       docPathEl.textContent = path;
 
       try {
-        const response = await fetch(documentUrl(path), { cache: 'no-cache' });
+        const response = await fetch(documentUrl(path));
         if (!response.ok) throw new Error(`Falha ao carregar (${response.status})`);
         const markdown = await response.text();
-        docContentEl.innerHTML = marked.parse(markdown);
+        docContentEl.innerHTML = renderMarkdown(markdown);
       } catch (error) {
         const fallbackUrl = documentUrl(path);
         docContentEl.innerHTML = `
@@ -319,9 +408,10 @@
     });
 
     renderNav();
-    const initialPath = decodeURIComponent(window.location.hash.slice(1)) || docsBySection[0].docs[0];
+    const currentHashPath = decodeURIComponent(window.location.hash.slice(1));
+    const initialPath = currentHashPath || docsBySection[0].docs[0];
     loadDoc(initialPath);
-    if (decodeURIComponent(window.location.hash.slice(1)) !== initialPath) {
+    if (currentHashPath !== initialPath) {
       window.location.hash = encodeURIComponent(initialPath);
     }
   </script>
