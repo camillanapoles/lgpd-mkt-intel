@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LGPD • Biblioteca de Informações</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
+      --brand: #2563eb;
+      --brand-soft: #dbeafe;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 20px;
+      overflow-y: auto;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      margin: 6px 0 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .search {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin-top: 18px;
+    }
+
+    .section h2 {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .doc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    .doc-link {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.9rem;
+      line-height: 1.25;
+    }
+
+    .doc-link:hover {
+      background: #f1f5f9;
+      border-color: var(--border);
+    }
+
+    .doc-link.active {
+      background: var(--brand-soft);
+      border-color: #93c5fd;
+      color: #1e40af;
+      font-weight: 600;
+    }
+
+    .content {
+      padding: 24px clamp(16px, 4vw, 42px);
+      overflow-x: auto;
+    }
+
+    .content-header {
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+    }
+
+    .content-header h1 {
+      margin: 0;
+      font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+    }
+
+    .content-path {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: .9rem;
+      word-break: break-all;
+    }
+
+    .markdown {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: clamp(14px, 2.8vw, 28px);
+      line-height: 1.65;
+    }
+
+    .markdown h1, .markdown h2, .markdown h3 { margin-top: 1.3em; }
+    .markdown h1:first-child, .markdown h2:first-child, .markdown h3:first-child { margin-top: 0; }
+    .markdown pre {
+      overflow: auto;
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .markdown code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .markdown table { border-collapse: collapse; width: 100%; }
+    .markdown th, .markdown td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+
+    .notice {
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      color: var(--muted);
+      background: #fff;
+    }
+
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="title">LGPD • Biblioteca</h1>
+      <p class="subtitle">Página de docs estilo MKDocs para navegar os arquivos de informação.</p>
+      <input id="search" class="search" type="search" placeholder="Buscar documento..." aria-label="Buscar documento" />
+      <div id="nav"></div>
+    </aside>
+
+    <main class="content">
+      <header class="content-header">
+        <h1 id="doc-title">Selecione um documento</h1>
+        <div id="doc-path" class="content-path"></div>
+      </header>
+      <article id="doc-content" class="markdown">
+        <p class="notice">Escolha um arquivo na barra lateral para visualizar o conteúdo.</p>
+      </article>
+    </main>
+  </div>
+
+  <script>
+    const docsBySection = [
+      {
+        title: 'Raiz do repositório',
+        docs: [
+          'BUSINESS-PLAN.md',
+          'FLUXO-TESTE-UX.md',
+          'battle-card-confidata.md',
+          'divisao-funcoes-cronograma.md',
+          'draft-pesquisa-lgpd.md',
+          'estrategia-diferenciacao-confidata.md',
+          'insights-reuniao-06-05.md',
+          'inteligencia-mercado-govtech-lgpd.md',
+          'memo-confidata-analysis.md',
+          'plano-negocios-cit-ai-tech.md',
+          'to-plan.md',
+          'transcricao-reuniao-lgpd-06-05-26.md'
+        ]
+      },
+      {
+        title: 'Documentos em /docs',
+        docs: [
+          'docs/INPI_CHECKLIST_REGISTRO_SOFTWARE_IA.md',
+          'docs/co-founder-advisor-municipal-sales.md',
+          'docs/whitepaper-dispensa-licitacao-ict-lgpd.md',
+          'docs/loi-kit/LOI-KIT-COMPLETO.md'
+        ]
+      },
+      {
+        title: 'Templates em /docs/templates',
+        docs: [
+          'docs/templates/LOI-LGPD-Prefeituras-DOCX-PLACEHOLDER.md',
+          'docs/templates/LOI-LGPD-Prefeituras.md',
+          'docs/templates/README-LOI.md'
+        ]
+      },
+      {
+        title: 'Documentação do app',
+        docs: ['app/README.md']
+      }
+    ];
+
+    const allDocs = docsBySection.flatMap(section => section.docs.map(path => ({
+      section: section.title,
+      path,
+      name: path.split('/').pop()
+    })));
+
+    const navEl = document.getElementById('nav');
+    const searchEl = document.getElementById('search');
+    const docTitleEl = document.getElementById('doc-title');
+    const docPathEl = document.getElementById('doc-path');
+    const docContentEl = document.getElementById('doc-content');
+
+    const currentPathname = window.location.pathname;
+    const pageBase = currentPathname.endsWith('/')
+      ? currentPathname
+      : currentPathname.replace(/\/[^/]*$/, '/');
+
+    function documentUrl(path) {
+      const normalizedPath = path.replace(/^\/+/, '');
+      return `${pageBase}${normalizedPath}`;
+    }
+
+    function escapeHtml(value) {
+      return value
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function formatInline(text) {
+      let safe = escapeHtml(text);
+      safe = safe.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (_, label, url) => {
+        try {
+          const parsedUrl = new URL(url);
+          if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
+            return label;
+          }
+          return `<a href=\"${escapeHtml(parsedUrl.href)}\" target=\"_blank\" rel=\"noopener noreferrer\">${label}</a>`;
+        } catch {
+          return label;
+        }
+      });
+      safe = safe.replace(/`([^`]+)`/g, '<code>$1</code>');
+      safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      safe = safe.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+      return safe;
+    }
+
+    function renderMarkdown(markdown) {
+      const lines = markdown.split('\n');
+      const html = [];
+      let inList = false;
+      let inCode = false;
+      let codeBuffer = [];
+
+      for (const line of lines) {
+        if (line.trim().startsWith('```')) {
+          if (inCode) {
+            html.push(`<pre><code>${escapeHtml(codeBuffer.join('\n'))}</code></pre>`);
+            codeBuffer = [];
+            inCode = false;
+          } else {
+            inCode = true;
+          }
+          continue;
+        }
+
+        if (inCode) {
+          codeBuffer.push(line);
+          continue;
+        }
+
+        const headingMatch = line.match(/^(#{1,6})\s+(.*)$/);
+        if (headingMatch) {
+          if (inList) {
+            html.push('</ul>');
+            inList = false;
+          }
+          const level = headingMatch[1].length;
+          html.push(`<h${level}>${formatInline(headingMatch[2])}</h${level}>`);
+          continue;
+        }
+
+        const listMatch = line.match(/^[-*]\s+(.*)$/);
+        if (listMatch) {
+          if (!inList) {
+            html.push('<ul>');
+            inList = true;
+          }
+          html.push(`<li>${formatInline(listMatch[1])}</li>`);
+          continue;
+        }
+
+        if (!line.trim()) {
+          if (inList) {
+            html.push('</ul>');
+            inList = false;
+          }
+          continue;
+        }
+
+        if (inList) {
+          html.push('</ul>');
+          inList = false;
+        }
+
+        html.push(`<p>${formatInline(line)}</p>`);
+      }
+
+      if (inList) {
+        html.push('</ul>');
+      }
+
+      if (inCode) {
+        html.push(`<pre><code>${escapeHtml(codeBuffer.join('\n'))}</code></pre>`);
+      }
+
+      return html.join('\n');
+    }
+
+    function renderNav(query = '') {
+      const lowerQuery = query.trim().toLowerCase();
+      const grouped = docsBySection.map(section => ({
+        ...section,
+        docs: section.docs.filter(path => {
+          if (!lowerQuery) return true;
+          return path.toLowerCase().includes(lowerQuery) || path.split('/').pop().toLowerCase().includes(lowerQuery);
+        })
+      })).filter(section => section.docs.length > 0);
+
+      navEl.innerHTML = grouped.map(section => `
+        <section class="section">
+          <h2>${section.title}</h2>
+          <ul class="doc-list">
+            ${section.docs.map(path => {
+              const encodedPath = encodeURIComponent(path);
+              const docName = escapeHtml(path.split('/').pop());
+              return `
+              <li>
+                <a href="#${encodedPath}" class="doc-link" data-path="${encodedPath}">${docName}</a>
+              </li>
+            `;
+            }).join('')}
+          </ul>
+        </section>
+      `).join('');
+
+      markActiveLink();
+    }
+
+    function markActiveLink() {
+      const currentPath = window.location.hash.slice(1);
+      navEl.querySelectorAll('.doc-link').forEach(link => {
+        link.classList.toggle('active', link.dataset.path === currentPath);
+      });
+    }
+
+    async function loadDoc(path) {
+      if (!path || !allDocs.some(doc => doc.path === path)) {
+        docTitleEl.textContent = 'Selecione um documento';
+        docPathEl.textContent = '';
+        docContentEl.innerHTML = '<p class="notice">Escolha um arquivo na barra lateral para visualizar o conteúdo.</p>';
+        return;
+      }
+
+      const doc = allDocs.find(item => item.path === path);
+      docTitleEl.textContent = doc.name;
+      docPathEl.textContent = path;
+
+      try {
+        const response = await fetch(documentUrl(path));
+        if (!response.ok) throw new Error(`Falha ao carregar ${path} (${response.status})`);
+        const markdown = await response.text();
+        docContentEl.innerHTML = renderMarkdown(markdown);
+      } catch (error) {
+        const fallbackUrl = documentUrl(path);
+        const safePath = escapeHtml(path);
+        const safeError = escapeHtml(error.message);
+        docContentEl.innerHTML = `
+          <p class="notice">Não foi possível carregar <strong>${safePath}</strong>. ${safeError}.<br/>
+          Verifique se o deploy incluiu os arquivos Markdown.<br/>
+          <a href="${escapeHtml(fallbackUrl)}" target="_blank" rel="noopener noreferrer">Abrir arquivo bruto</a></p>
+        `;
+      }
+
+      markActiveLink();
+    }
+
+    window.addEventListener('hashchange', () => {
+      loadDoc(decodeURIComponent(window.location.hash.slice(1)));
+    });
+
+    searchEl.addEventListener('input', (event) => {
+      renderNav(event.target.value);
+    });
+
+    renderNav();
+    const currentHashEncoded = window.location.hash.slice(1);
+    const currentHashPath = decodeURIComponent(currentHashEncoded);
+    const currentHashIsValid = allDocs.some(doc => doc.path === currentHashPath);
+    const firstDocPath = docsBySection.find(section => section.docs?.length)?.docs[0];
+    const initialPath = currentHashIsValid ? currentHashPath : firstDocPath;
+    if (initialPath) {
+      loadDoc(initialPath);
+      if (!currentHashIsValid || !currentHashEncoded) {
+        window.location.hash = encodeURIComponent(initialPath);
+      }
+    } else {
+      docTitleEl.textContent = 'Nenhum documento configurado';
+      docPathEl.textContent = '';
+      docContentEl.innerHTML = '<p class="notice">Adicione documentos em <code>docsBySection</code> para visualização.</p>';
+    }
+  </script>
+</body>
+</html>
