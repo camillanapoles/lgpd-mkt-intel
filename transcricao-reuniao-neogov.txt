@@ -1,0 +1,1760 @@
+[00:00.000 --> 00:04.720]  vão ter alguns pontos técnicos e se tiver dúvida pode me perguntar
+[00:04.720 --> 00:08.240]  porque acredito que ela vai dar um norte pra tudo agora.
+[00:08.240 --> 00:13.160]  Então a NeoGov é uma empresa de inteligência e proteção de dados,
+[00:13.160 --> 00:16.360]  segurança da informação e complais na administração pública.
+[00:16.360 --> 00:20.800]  Nessa primeira página aí fala quem que é, os serviços que oferecem,
+[00:20.800 --> 00:22.560]  a atuação dela.
+[00:22.560 --> 00:29.600]  Na terceira página, acredito que a gente entra mais na questão
+[00:29.600 --> 00:31.000]  bem objetiva.
+[00:31.000 --> 00:38.720]  A NeoGov possui soluções completas e eficazes para a adequação e implementação da LGPD,
+[00:38.720 --> 00:42.680]  alinhadas à segurança da informação e mecanismos de complais
+[00:42.680 --> 00:44.480]  para administração pública.
+[00:44.480 --> 00:48.480]  Como eu disse pra vocês, específica pra administração pública.
+[00:48.480 --> 00:51.320]  Vocês vão entender aqui direito o porquê disso.
+[00:51.320 --> 00:57.000]  Então qual é a missão? Garantir a privacidade e proteção de dados pessoais.
+[00:58.000 --> 01:01.240]  Ai, o negócio ficou na minha frente, peraí.
+[01:05.240 --> 01:11.320]  Através de processos especializados em tecnologia e pessoas com respeito aos princípios
+[01:11.320 --> 01:16.960]  e métodos da segurança da informação e medidas de complais voltados ao setor público.
+[01:16.960 --> 01:19.720]  Por que que é atrelado a esse complais?
+[01:19.720 --> 01:22.960]  Porque não tem como a gente fazer a conformidade da LGPD
+[01:22.960 --> 01:26.840]  sem estar num conjunto de normas que também são atreladas.
+[01:27.680 --> 01:31.040]  A lei de acesso à informação, a lei de combate à corrupção,
+[01:31.040 --> 01:36.120]  com os três pilares, processos, pessoas e tecnologia.
+[01:36.120 --> 01:43.120]  A lei de proteção de dados, aí a Gislaine, ela é bem técnica nisso,
+[01:43.120 --> 01:46.440]  talvez a Camila aqui vai ter que aprofundar mais um pouco,
+[01:46.440 --> 01:51.240]  mas ela é uma lei que está em vigor desde setembro de 2020.
+[01:51.640 --> 01:57.600]  E se eu não me engano, a partir de 2022 que começou uma fiscalização mais profunda
+[01:57.600 --> 02:03.680]  da NPD, do Ministério Público e do Tribunal de Contas nas entidades públicas.
+[02:03.680 --> 02:09.520]  Ela é obrigatória, então não tem como uma prefeitura, uma câmara,
+[02:09.520 --> 02:13.680]  falar que não vou fazer, não vou me adequar, não estarei em conformidade.
+[02:13.680 --> 02:19.480]  Não existe isso, é obrigatório a entidade pública estar em conformidade com essa legislação.
+[02:19.720 --> 02:27.720]  E aí, ela aplica a qualquer operação de tratamento de dados de pessoa natural,
+[02:27.720 --> 02:32.200]  pessoa jurídica e direito público, ou seja, que é um órgão,
+[02:32.200 --> 02:36.320]  existe um órgão que mais contém dados e informações sensíveis
+[02:36.320 --> 02:38.320]  do que a própria administração pública,
+[02:38.320 --> 02:42.120]  tanto dados dos servidores quanto dados da população,
+[02:42.120 --> 02:49.120]  onde tramita ali guias de taxa, de alvará, cadastro, tudo isso.
+[02:49.760 --> 02:51.400]  Que que são esses tipos de dados?
+[02:51.400 --> 02:55.800]  São para vocês terem essa certeza do quanto isso é importante.
+[02:55.800 --> 03:01.520]  Dados pessoais, nome, apelido, endereço, telefone, e-mail,
+[03:01.520 --> 03:04.160]  cookies, endereço de IP, entre outros.
+[03:04.160 --> 03:08.640]  Dados pessoais sensíveis, origem racial ou étnica,
+[03:08.640 --> 03:14.640]  comunicação religiosa, opinião pública, dados de saúde, biometria, entre outros.
+[03:15.160 --> 03:18.160]  Obrigações e responsabilidade.
+[03:18.160 --> 03:23.160]  A autoridade nacional poderá solicitar aos agentes do poder público
+[03:23.160 --> 03:28.160]  a publicação de relatórios de impacto à proteção de dados pessoais
+[03:28.160 --> 03:31.160]  e sugerir a adoção de padrões e de boas práticas.
+[03:31.160 --> 03:33.160]  O que que acontece?
+[03:33.160 --> 03:36.160]  Hoje, pelo menos em Minas Gerais aqui,
+[03:36.160 --> 03:39.160]  eu tenho que ver como é que está essa atuação,
+[03:39.160 --> 03:42.160]  mas tanto a NPD quanto o Ministério Público,
+[03:42.680 --> 03:44.680]  podem chegar na prefeitura e solicitar esse relatório.
+[03:44.680 --> 03:49.680]  Esse relatório é uma ferramenta do próprio plano de conformidade.
+[03:49.680 --> 03:51.680]  Está aí no artigo 32.
+[03:56.680 --> 03:59.680]  Chegou lá, batam na porta do prefeito e da prefeitura,
+[03:59.680 --> 04:01.680]  eu preciso desse relatório de impacto.
+[04:01.680 --> 04:04.680]  Inclusive, existe prazo para que o gestor ou operador dos dados
+[04:04.680 --> 04:06.680]  apresente esse relatório.
+[04:06.680 --> 04:08.680]  O que que contém nesse relatório?
+[04:08.680 --> 04:10.680]  Como é feito o tratamento dos dados?
+[04:10.680 --> 04:12.680]  Quem são os responsáveis?
+[04:12.680 --> 04:14.680]  Quais são os riscos de mitigância?
+[04:14.680 --> 04:18.680]  Quais são as normas de segurança da informação?
+[04:19.680 --> 04:24.680]  E somente com o devido mapeamento de todo o fluxo de dados na entidade pública
+[04:24.680 --> 04:26.680]  e a realização da gestão de risco,
+[04:26.680 --> 04:29.680]  é possível confeccionar o relatório de impacto.
+[04:29.680 --> 04:33.680]  Ou seja, é um relatório, gente, que ele é complexo.
+[04:33.680 --> 04:35.680]  Não é assim, por exemplo,
+[04:36.680 --> 04:40.680]  o Ministério Público requisitou esse relatório,
+[04:40.680 --> 04:44.680]  de repente o prefeito vai mandar ao procurador ou alguém
+[04:46.680 --> 04:49.680]  do Deportamento de TI ir lá e produzir esse relatório.
+[04:49.680 --> 04:51.680]  Não é do dia pra noite.
+[04:51.680 --> 04:54.680]  Porque até ele ir de servidor em servidor,
+[04:54.680 --> 04:56.680]  responder aqueles questionários,
+[04:56.680 --> 04:59.680]  entender como é tratado, de onde entra o dado,
+[04:59.680 --> 05:01.680]  de onde está saindo,
+[05:01.680 --> 05:03.680]  ele não vai ter tempo pra isso.
+[05:03.680 --> 05:05.680]  É uma coisa de praticamente um ano
+[05:05.680 --> 05:07.680]  pra você ter um relatório complexo,
+[05:07.680 --> 05:10.680]  um relatório com todos os dados importante.
+[05:11.680 --> 05:13.680]  Então, o que a NeoGov faz?
+[05:13.680 --> 05:15.680]  Após ela realizar todo o mapeamento
+[05:15.680 --> 05:18.680]  e a análise dos riscos e vulnerabilidade,
+[05:18.680 --> 05:22.680]  ela fornece a automatização que aí entra o sistema.
+[05:24.680 --> 05:27.680]  Simone, a Camila pediu a palavra aí.
+[05:27.680 --> 05:29.680]  O que eu ia perguntar,
+[05:29.680 --> 05:32.680]  se você prefere que eu faça a pergunta no final ou durante.
+[05:32.680 --> 05:34.680]  Se você quiser fazer durante,
+[05:34.680 --> 05:37.680]  acho que pra não esfriar, pode ser durante.
+[05:37.680 --> 05:38.680]  Acho mais efetivo.
+[05:38.680 --> 05:39.680]  Pronto.
+[05:39.680 --> 05:43.680]  Tu falou ali uma palavrinha-chave que é processo, né?
+[05:44.680 --> 05:46.680]  O desenvolvedor não consegue.
+[05:46.680 --> 05:50.680]  Então, eu acho que você já deve ter um processo,
+[05:50.680 --> 05:56.680]  um caminho para um fluxo que é realizado, mapeado.
+[05:56.680 --> 05:57.680]  O plano de execução.
+[05:57.680 --> 05:58.680]  Vou apresentar pra vocês.
+[05:58.680 --> 06:00.680]  Está logo, logo aqui na cartilha.
+[06:02.680 --> 06:07.680]  E aí aparece aqui duas figuras, no artigo 44,
+[06:07.680 --> 06:10.680]  que tem a ver, que são responsáveis por esse tratamento de dados,
+[06:10.680 --> 06:13.680]  que é o controlador ou o operador.
+[06:13.680 --> 06:17.680]  Quem, em razão do exercício de atividade de tratamento de dados pessoais,
+[06:17.680 --> 06:21.680]  causar a outra em dano patrimonial, moral, individual ou coletivo,
+[06:21.680 --> 06:25.680]  avelulação à legislação de proteção de dados pessoais,
+[06:25.680 --> 06:26.680]  é obrigado a repará-lo.
+[06:26.680 --> 06:30.680]  Ou seja, aqui, quem é o controlador,
+[06:30.680 --> 06:32.680]  que na maioria das vezes é a própria prefeitura,
+[06:32.680 --> 06:34.680]  é um gestor ali.
+[06:37.680 --> 06:39.680]  O prefeito, ele responde também diretamente,
+[06:39.680 --> 06:43.680]  mas normalmente é nomeado um controlador ou um operador de dados.
+[06:43.680 --> 06:48.680]  Ele responde pelo CPF dele, pelo mal uso, por uma violação,
+[06:48.680 --> 06:55.680]  ou por um descuido, uma vulnerabilidade, um vazamento de dados.
+[06:56.680 --> 07:00.680]  Por exemplo, já aconteceu em uma cidade no interior de Minas,
+[07:00.680 --> 07:03.680]  só para vocês terem noção na prática,
+[07:03.680 --> 07:10.680]  que um servidor público ficou muito chuteado com um outro servidor público,
+[07:10.680 --> 07:13.680]  pegou o cadastro, se eu não me engano, lá da saúde,
+[07:13.680 --> 07:17.680]  que estava no sistema que ele tinha AIDS, e publicou na internet.
+[07:17.680 --> 07:20.680]  O que é isso? É um incidente, diz Lenny.
+[07:21.680 --> 07:25.680]  É um vazamento de um dado, de uma informação sensível.
+[07:25.680 --> 07:28.680]  O que isso gera de prejuízo para a administração pública?
+[07:28.680 --> 07:35.680]  Indenização, multa, suspensão do sistema,
+[07:35.680 --> 07:37.680]  porque a NPD, o Ministério Público,
+[07:37.680 --> 07:40.680]  pode pedir para suspender todo o sistema da prefeitura,
+[07:40.680 --> 07:42.680]  enquanto isso não é corrigido.
+[07:42.680 --> 07:49.680]  A falta de adequação a LGPD e a inexistência de métodos de segurança da informação
+[07:49.680 --> 07:55.680]  pode acarretar a responsabilização direta dos dirigentes dos órgãos públicos.
+[07:55.680 --> 07:57.680]  A culpa é presumida,
+[07:57.680 --> 08:01.680]  devendo os dirigentes comprovarem que adotaram todas as medidas preventivas
+[08:01.680 --> 08:03.680]  para que o dano não ocorresse.
+[08:03.680 --> 08:07.680]  Como que é feito esse tratamento de dados?
+[08:07.680 --> 08:10.680]  Ele só poderá ser realizado nas seguintes hipóteses.
+[08:10.680 --> 08:12.680]  Pela administração pública,
+[08:12.680 --> 08:16.680]  para o tratamento e o uso compartilhado de dados necessários
+[08:16.680 --> 08:19.680]  é a execução de políticas públicas
+[08:19.680 --> 08:22.680]  previstas em leis e regulamentos
+[08:22.680 --> 08:26.680]  ou respaldados em contratos, convênios ou instrumentos.
+[08:29.680 --> 08:32.680]  Artigo 23, ou seja, o tratamento desses dados,
+[08:32.680 --> 08:36.680]  por exemplo, a disponibilização quando a Câmara Municipal...
+[08:36.680 --> 08:39.680]  Agora eu estou trazendo um exemplo prático desse artigo.
+[08:39.680 --> 08:42.680]  Vamos supor que um vereador da Câmara Municipal
+[08:42.680 --> 08:46.680]  requisita uma informação de um contrato da Prefeitura
+[08:46.680 --> 08:49.680]  e ele precisa dessas informações.
+[08:49.680 --> 08:52.680]  Então ele está no direito dele, tem uma finalidade pública,
+[08:52.680 --> 08:56.680]  tem ali o princípio da fiscalização, da transparência.
+[08:56.680 --> 09:01.680]  A administração pública pode fazer o tratamento desse dado,
+[09:01.680 --> 09:03.680]  o compartilhamento desse dado,
+[09:03.680 --> 09:06.680]  sim, mas desde que tenha essa finalidade, entendeu?
+[09:06.680 --> 09:09.680]  O órgão fiscalizador, no caso a Câmara,
+[09:09.680 --> 09:12.680]  a Câmara solicitando para a Prefeitura.
+[09:12.680 --> 09:15.680]  Só que nesses casos, esse dado tem que ser informado,
+[09:15.680 --> 09:17.680]  mas já tratado.
+[09:17.680 --> 09:20.680]  Ou seja, o dado sensível ali vem com aquela tarja preta
+[09:20.680 --> 09:22.680]  que nós falamos.
+[09:22.680 --> 09:26.680]  O tratamento de dados pessoais pelas pessoas jurídicas de direito público
+[09:26.680 --> 09:30.680]  deverá ser realizado para o atendimento da sua finalidade pública
+[09:30.680 --> 09:33.680]  na persecução do interesse público,
+[09:33.680 --> 09:36.680]  com o objetivo de executar as competências legais
+[09:36.680 --> 09:40.680]  ou cumprir atribuições legais do serviço público.
+[09:40.680 --> 09:43.680]  Vocês conseguem entender o quanto isso é comum?
+[09:43.680 --> 09:47.680]  Essa transferência, esse manuseio de dados, de informação?
+[09:47.680 --> 09:49.680]  Eu estou pensando aqui,
+[09:49.680 --> 09:52.680]  quando tu falas tudo isso que eu podia fazer perguntas,
+[09:52.680 --> 09:54.680]  e é técnico,
+[09:54.680 --> 09:58.680]  por exemplo, quando a Polícia Federal faz esses...
+[09:58.680 --> 10:02.680]  Ela entra ou não entra na LGPD?
+[10:02.680 --> 10:07.680]  Porque a gente vê, ela faz questão de...
+[10:07.680 --> 10:10.680]  uma investigação que exige áudio.
+[10:10.680 --> 10:13.680]  Tem coisa mais perspetual do que áudio.
+[10:13.680 --> 10:17.680]  A Polícia Federal...
+[10:17.680 --> 10:23.680]  Camila, ela já é motivada por algum fato?
+[10:23.680 --> 10:28.680]  Camila, ela já é motivada por algum fato?
+[10:28.680 --> 10:33.680]  Ou algo que concorra a crime de violação federal?
+[10:33.680 --> 10:36.680]  Aí a Polícia Federal é motivada para isso.
+[10:36.680 --> 10:39.680]  Mas quem são os órgãos fiscalizadores
+[10:39.680 --> 10:41.680]  que estão em todo tempo fiscalizando, inclusive,
+[10:41.680 --> 10:43.680]  notificando os estados?
+[10:43.680 --> 10:46.680]  Isso já está muito evidente e latente
+[10:46.680 --> 10:49.680]  no Rio de Janeiro, Minas Gerais.
+[10:49.680 --> 10:52.680]  Aqui em Goiás é um pouquinho mais atrasado
+[10:52.680 --> 10:54.680]  nesse sentido do que Minas,
+[10:54.680 --> 10:56.680]  Rio de Janeiro, São Paulo, por exemplo.
+[10:56.680 --> 11:01.680]  Mas desde que haja indícios de crime, de violação,
+[11:01.680 --> 11:04.680]  a Polícia Federal atua em conjunto
+[11:04.680 --> 11:07.680]  com o Ministério Público, o Tribunal de Contas e a NPD,
+[11:07.680 --> 11:11.680]  que é a agência reguladora da Lei Geral de Proteção de Dados
+[11:11.680 --> 11:13.680]  para Administração Pública.
+[11:13.680 --> 11:16.680]  Então, nesses casos, pode haver a situação
+[11:16.680 --> 11:18.680]  que eu estou querendo entender
+[11:18.680 --> 11:23.680]  é se há casos que o dado pode sair sem anonimização?
+[11:24.680 --> 11:26.680]  Sim, com finalidade.
+[11:26.680 --> 11:30.680]  Desde que haja uma finalidade, uma atribuição dos princípios
+[11:30.680 --> 11:32.680]  da Administração Pública, sim.
+[11:32.680 --> 11:34.680]  Mas tudo isso aí vem assinado também.
+[11:34.680 --> 11:36.680]  Vocês vão ver que tem uma artiga aqui,
+[11:36.680 --> 11:38.680]  eu vou mostrar para vocês,
+[11:38.680 --> 11:41.680]  que quando, vamos supor que eu, Simone,
+[11:41.680 --> 11:44.680]  sou a GPO da Prefeitura de Goiânia.
+[11:44.680 --> 11:47.680]  E a Polícia Federal está com alguma investigação
+[11:47.680 --> 11:49.680]  aí de algum vazamento, algum crime,
+[11:49.680 --> 11:52.680]  alguma coisa que contenha a operação desse dado sensível.
+[11:52.680 --> 11:56.680]  Eles vão me requisitar via notificação, ofício.
+[11:56.680 --> 12:00.680]  Eu sou obrigada a fornecer essa informação,
+[12:00.680 --> 12:03.680]  mas aí vai com a minha assinatura de GPO,
+[12:03.680 --> 12:05.680]  que eu estou fornecendo.
+[12:05.680 --> 12:07.680]  Porque se acontecer alguma coisa também
+[12:07.680 --> 12:10.680]  com vazamento desse dado, eu sou responsável.
+[12:10.680 --> 12:13.680]  Eu sou a dirigente daquela informação.
+[12:13.680 --> 12:17.680]  Então, todo mundo que faz o tratamento de dados,
+[12:17.680 --> 12:19.680]  tanto quem vê e quem recebe,
+[12:19.680 --> 12:22.680]  são os responsáveis por aquela operação.
+[12:24.680 --> 12:27.680]  Uma das figuras que a lei estabelece
+[12:27.680 --> 12:30.680]  é o GPO, que é o encarregado de dados.
+[12:30.680 --> 12:33.680]  É uma pessoa indicada pelo controlador
+[12:33.680 --> 12:37.680]  para atuar como canal de comunicação entre o controlador,
+[12:37.680 --> 12:39.680]  os titulares dos dados
+[12:39.680 --> 12:42.680]  e a Autoridade Nacional de Proteção de Dados, que é a NPD.
+[12:42.680 --> 12:45.680]  Então, vamos lá. Quem é o controlador?
+[12:45.680 --> 12:48.680]  O controlador, nesse caso hipotético,
+[12:48.680 --> 12:50.680]  é a prefeitura de Goiás.
+[12:50.680 --> 12:52.680]  Quem é o GPO?
+[12:52.680 --> 12:55.680]  Pode ser o procurador,
+[12:55.680 --> 12:59.680]  pode ser alguém do departamento,
+[12:59.680 --> 13:03.680]  um servidor público do departamento de controladoria.
+[13:03.680 --> 13:07.680]  São departamentos que têm a ver com as normas
+[13:07.680 --> 13:10.680]  e com a legislação da LGPD.
+[13:10.680 --> 13:14.680]  O único departamento que eles não orientam
+[13:14.680 --> 13:16.680]  é o departamento de TI,
+[13:16.680 --> 13:19.680]  porque ele deve ser imparcial,
+[13:19.680 --> 13:21.680]  o departamento de TI.
+[13:21.680 --> 13:26.680]  Então, a gente não indica um GPO
+[13:26.680 --> 13:30.680]  ser nomeado do departamento de informação de TI da entidade.
+[13:30.680 --> 13:33.680]  Quem é o titular desse dado?
+[13:33.680 --> 13:35.680]  É a pessoa física
+[13:35.680 --> 13:38.680]  a quem se refere os dados pessoais,
+[13:38.680 --> 13:40.680]  que é um objeto de tratamento.
+[13:40.680 --> 13:42.680]  Por exemplo, no caso, eu sou uma servidora
+[13:42.680 --> 13:45.680]  e eu fui lá no guichê da prefeitura
+[13:45.680 --> 13:48.680]  e eu quero saber quais informações,
+[13:48.680 --> 13:51.680]  quais cadastros tem meu lá na Secretaria de Saúde.
+[13:51.680 --> 13:55.680]  Eu tenho o direito, eu como titular dos meus dados,
+[13:55.680 --> 13:59.680]  eu tenho esse direito de ir lá e requisitar para a prefeitura
+[13:59.680 --> 14:02.680]  quais são as informações que a prefeitura tem sobre mim,
+[14:02.680 --> 14:04.680]  sobre os meus dados.
+[14:04.680 --> 14:08.680]  A NPD, a Autoridade Nacional de Proteção de Dados,
+[14:08.680 --> 14:11.680]  é a autarquia de natureza especial que zela,
+[14:11.680 --> 14:14.680]  implementa e fiscaliza a LGPD.
+[14:14.680 --> 14:19.680]  É contaminante com o Conselho Nacional de Proteção de Dados Pessoais
+[14:19.680 --> 14:23.680]  e da Privacidade, que propõe diretrizes estratégicas,
+[14:23.680 --> 14:26.680]  fornece subsídios para elaboração da política,
+[14:26.680 --> 14:29.680]  Nacional de Proteção de Dados Pessoais
+[14:29.680 --> 14:32.680]  e privacidade para atuação na NPD.
+[14:32.680 --> 14:35.680]  Só lembrando vocês que já existe uma cartilha,
+[14:35.680 --> 14:39.680]  lá no site da NPD eles disponibilizam isso,
+[14:39.680 --> 14:43.680]  que é o Manual do Tratamento da Privacidade de Dados,
+[14:43.680 --> 14:46.680]  que é praticamente essa cartilha aqui também,
+[14:46.680 --> 14:50.680]  tem muitas normas que nós colocamos aqui nessa cartilha.
+[14:50.680 --> 14:55.680]  Aqui vem um tópico, que é a Convergência com a Lei de Acesso à Informação.
+[14:55.680 --> 14:58.680]  Por que a gente trata muito esse tópico?
+[14:58.680 --> 15:00.680]  Porque é como se fosse assim.
+[15:00.680 --> 15:04.680]  A Lei de Acesso à Informação, a Lei de Transparência,
+[15:04.680 --> 15:07.680]  pede para a gente informar,
+[15:07.680 --> 15:10.680]  para a gente colocar lá todos os contratos de listação,
+[15:10.680 --> 15:13.680]  todos os contratos da Prefeitura, da entidade pública,
+[15:13.680 --> 15:17.680]  tem que estar onde? No portal de transparência.
+[15:17.680 --> 15:19.680]  Mas como que funciona?
+[15:19.680 --> 15:22.680]  Você tem uma lei que fala para a gente expor,
+[15:22.680 --> 15:24.680]  ser transparente e mostrar,
+[15:24.680 --> 15:28.680]  e aí vem outra lei e fala assim, não, a gente tem que proteger.
+[15:28.680 --> 15:30.680]  Então, embora existam esses desafios,
+[15:30.680 --> 15:33.680]  é importante destacar que o gestor público
+[15:33.680 --> 15:36.680]  tem que reconciliar essas normas.
+[15:36.680 --> 15:38.680]  Elas têm que convergir.
+[15:38.680 --> 15:41.680]  O gestor público deve levar em consideração
+[15:41.680 --> 15:44.680]  os requisitos da LGPD e da LAI,
+[15:44.680 --> 15:47.680]  ao lidar com os dados pessoais e informações acessíveis,
+[15:47.680 --> 15:50.680]  garantindo acesso à informação pública
+[15:50.680 --> 15:53.680]  e a proteção da privacidade dos indivíduos.
+[15:53.680 --> 15:56.680]  Em tese, essa aplicação é o seguinte,
+[15:56.680 --> 15:59.680]  por exemplo, você pode ver que todos os contratos
+[15:59.680 --> 16:02.680]  da administração pública aqui em Goiânia,
+[16:02.680 --> 16:04.680]  eles não terminaram de implementar.
+[16:04.680 --> 16:07.680]  Mas o que que é o certo? O que que a lei estabelece?
+[16:07.680 --> 16:11.680]  Quando a gente colocar um dado, um contrato lá no portal,
+[16:11.680 --> 16:16.680]  ele tem que vir anonimizado alguns dígitos do CPF,
+[16:18.680 --> 16:21.680]  o endereço, onde eu falei para vocês,
+[16:21.680 --> 16:25.680]  onde há dado sensível, a entidade tem que tomar o cuidado
+[16:25.680 --> 16:28.680]  de garantir a proteção dessas informações.
+[16:28.680 --> 16:31.680]  Então, a Lei Geral de Proteção de Dados,
+[16:31.680 --> 16:34.680]  ela ingressou no ordenamento jurídico
+[16:34.680 --> 16:39.680]  para fortalecer a proteção de dados que já possuíam tutela.
+[16:39.680 --> 16:42.680]  Porém, diversos outros mecanismos e requisitos
+[16:42.680 --> 16:44.680]  foram criados com a lei,
+[16:44.680 --> 16:48.680]  como a aplicação estendida também aos entes privados,
+[16:48.680 --> 16:52.680]  determinação da muntenção do registro de tratamento de dados pessoais,
+[16:52.680 --> 16:54.680]  criação de uma entidade nacional
+[16:54.680 --> 16:57.680]  e fiscalização e aplicação das sanções,
+[16:57.680 --> 16:59.680]  onde foi criada a NPD.
+[16:59.680 --> 17:02.680]  Aí aqui estão as funções da NPD,
+[17:02.680 --> 17:04.680]  que tem como principais atribuições
+[17:04.680 --> 17:07.680]  fiscalizar, elaborar normas, estabelecer, receber,
+[17:07.680 --> 17:12.680]  purar reclamações, realizar auditorias, aplicar sanções.
+[17:13.680 --> 17:17.680]  E quais são os riscos da violação e responsabilidade?
+[17:17.680 --> 17:21.680]  Aqui eu vou entrar no ponto um pouco comercial.
+[17:21.680 --> 17:26.680]  O que o gestor e a entidade pública têm que entender?
+[17:26.680 --> 17:30.680]  Que se ela for participar de uma entidade, de uma auditoria,
+[17:30.680 --> 17:34.680]  ela tem que ter em mente, pelo menos, métodos,
+[17:34.680 --> 17:38.680]  ou um sistema, ou formulários,
+[17:38.680 --> 17:41.680]  uma metodologia, um processo de execução
+[17:41.680 --> 17:44.680]  que garanta para a fiscalização,
+[17:44.680 --> 17:49.680]  opa, peraí, a gente está cuidando dos dados pessoais da população,
+[17:49.680 --> 17:54.680]  dos dados que o nosso órgão tem a responsabilidade sobre eles.
+[17:54.680 --> 17:58.680]  Então isso aí já livra ele, já salvaguarda?
+[17:58.680 --> 18:00.680]  Já mitiga risco.
+[18:00.680 --> 18:04.680]  Já dá para ter um prazo para que se estiver faltando,
+[18:04.680 --> 18:10.680]  resolver um incidente, algum vazamento, algum problema,
+[18:10.680 --> 18:13.680]  pelo menos tem como resolver e não tem a sanção.
+[18:13.680 --> 18:15.680]  Entendi.
+[18:15.680 --> 18:16.680]  Entendeu?
+[18:16.680 --> 18:19.680]  Por exemplo aqui, o acesso à lei,
+[18:19.680 --> 18:22.680]  a lei de acesso à informação prevê expressamente
+[18:22.680 --> 18:26.680]  que a conduta ilícita de violar a informação pessoal pelo acesso,
+[18:26.680 --> 18:31.680]  divulgação indevida, pode ser penalizada via processo administrativo
+[18:31.680 --> 18:35.680]  com pena mínima de suspensão das atividades do cargo,
+[18:35.680 --> 18:39.680]  função pública, e possibilita ainda que o agente público responda
+[18:39.680 --> 18:42.680]  por improbidade administrativa.
+[18:42.680 --> 18:48.680]  E aí a ANPD tem manifestado o mesmo entendimento quanto a LGPD,
+[18:48.680 --> 18:52.680]  podendo usar agentes de tratamento que violarem seu dever de proteção,
+[18:52.680 --> 18:55.680]  especialmente os dirigentes do setor público,
+[18:55.680 --> 18:59.680]  serem processados por improbidade administrativa,
+[18:59.680 --> 19:02.680]  incorrendo inclusive na perda de suas funções públicas.
+[19:02.680 --> 19:09.680]  O que acontece muito hoje, doutora Gisleini, na administração pública?
+[19:09.680 --> 19:13.680]  Você bate na porta lá da prefeitura e aí você fala com o prefeito,
+[19:13.680 --> 19:16.680]  na maioria das vezes ele não sabe de nada,
+[19:16.680 --> 19:18.680]  ele vai mandar chamar o procurador,
+[19:18.680 --> 19:21.680]  ou o cara lá do TI ou o controlador e vai perguntar assim,
+[19:21.680 --> 19:24.680]  como é que está a LGPD aqui?
+[19:24.680 --> 19:26.680]  Aí eles vão falar assim, não, está tudo ok.
+[19:26.680 --> 19:27.680]  Por quê?
+[19:27.680 --> 19:31.680]  Com certeza eles colocam aquele aceite lá de política de Cux,
+[19:31.680 --> 19:35.680]  um formulário, aquela parte do artigo do preâmbulo da lei
+[19:35.680 --> 19:38.680]  que fala que os estudados têm que ser protegidos e tal.
+[19:38.680 --> 19:42.680]  Mas na prática mesmo, na hora do plano de conformidade,
+[19:42.680 --> 19:46.680]  da mitigação de riscos do sistema, eles não têm nada.
+[19:46.680 --> 19:50.680]  Eles só nomeiam uma pessoa, porque a lei obriga a nomear o GPO,
+[19:50.680 --> 19:54.680]  fala que existe, mas na prática mesmo,
+[19:54.680 --> 19:59.680]  gente, eles não estão em fiscalização, eles não estão em conformidade,
+[19:59.680 --> 20:04.680]  porque falta braços, é muita demanda, eles só estão fingindo que tem,
+[20:04.680 --> 20:08.680]  mas eu garanto para vocês que eu rodei um ano
+[20:08.680 --> 20:11.680]  e a gente entrava, via coisas absurdas.
+[20:11.680 --> 20:16.680]  Eu garanto também que as empresas não têm, não é só serviço público.
+[20:16.680 --> 20:23.680]  E as empresas sabem quando também que elas correm e resolvem,
+[20:23.680 --> 20:27.680]  ou plantam algum processo, alguma metodologia,
+[20:27.680 --> 20:30.680]  quando acontece algum vazamento, algum problema, algum incidente,
+[20:30.680 --> 20:33.680]  que aí gera uma multa, alguém vai lá, faz uma reclamação,
+[20:33.680 --> 20:36.680]  aí eles vão lá e tentam resolver o problema.
+[20:36.680 --> 20:40.680]  Só que aqui a gente pode vender uma solução de prevenção,
+[20:40.680 --> 20:43.680]  uma solução de um plano de conformidade,
+[20:43.680 --> 20:47.680]  porque a qualquer momento que a entidade ou a empresa
+[20:47.680 --> 20:53.680]  ela for auditada, ou ela for fiscalizada ou requisitada,
+[20:53.680 --> 20:56.680]  ela está em conformidade, ela está andando na frente.
+[20:56.680 --> 21:03.680]  Se eu te fazer uma pergunta rapidinho, é que eu tenho muita dúvida,
+[21:03.680 --> 21:06.680]  então acho que é comum.
+[21:06.680 --> 21:14.680]  Se a gente tiver, qualquer pessoa tiver um serviço que é contratado,
+[21:14.680 --> 21:21.680]  tipo um sistema, você contrata o sistema, o banco de dados fica no sistema.
+[21:22.680 --> 21:24.680]  A lei...
+[21:24.680 --> 21:29.680]  Esse compartilhamento de responsabilidade, quem se responsabiliza?
+[21:29.680 --> 21:35.680]  A empresa que usa ou a que tem o serviço?
+[21:35.680 --> 21:39.680]  Que a lei estabelece que essas informações precisam ficar
+[21:39.680 --> 21:43.680]  protegidas na nuvem, o arquivo na nuvem,
+[21:43.680 --> 21:48.680]  de propriedade da entidade pública,
+[21:48.680 --> 21:53.680]  atrelada ao servidor da entidade pública ou da empresa.
+[21:53.680 --> 21:57.680]  Por exemplo, nós empresa ou nós instituto,
+[21:57.680 --> 22:02.680]  a gente não fica, a gente trata, a gente tem acesso aos dados,
+[22:02.680 --> 22:05.680]  a gente faz esse tratamento, mas ele fica na nuvem,
+[22:05.680 --> 22:10.680]  no poder da entidade pública ou da empresa.
+[22:12.680 --> 22:14.680]  Entendeu?
+[22:14.680 --> 22:18.680]  E aí, uma coisa que é diferente para a empresa privada...
+[22:18.680 --> 22:21.680]  Fiz mais ou menos, viu, Simona, na verdade.
+[22:21.680 --> 22:25.680]  Eu vou chegar lá, tem um artigo que estabelece sobre isso,
+[22:25.680 --> 22:29.680]  que fala sobre isso, eu vou explicar, nós vamos chegar lá direitinho.
+[22:29.680 --> 22:35.680]  Por exemplo, para a empresa privada, existem as multas pecuniárias,
+[22:35.680 --> 22:38.680]  que é onde dói no bolso do dono, ele vai lá,
+[22:38.680 --> 22:41.680]  gerou uma multa, ele vai lá e corrige o problema.
+[22:41.680 --> 22:46.680]  Na administração pública, multa não é aplicado multas, mas sanções.
+[22:46.680 --> 22:48.680]  Quais são essas sanções?
+[22:48.680 --> 22:56.680]  Advertência, publicização das infrações, tem que ser publicado,
+[22:56.680 --> 23:01.680]  bloqueio dos dados pessoais até a sua regularização,
+[23:01.680 --> 23:04.680]  eliminação dos dados pessoais violados,
+[23:04.680 --> 23:09.680]  suspensão temporária do funcionamento de bancos de dados
+[23:09.680 --> 23:13.680]  e suspensão temporária do exercício da atividade de tratamento de dados.
+[23:13.680 --> 23:20.680]  O dirigente do órgão poderá ser responsabilizado por improvidade administrativa,
+[23:20.680 --> 23:23.680]  podendo ocorrer perda da função pública,
+[23:23.680 --> 23:27.680]  suspensão dos direitos políticos por até 14 anos.
+[23:27.680 --> 23:32.680]  Tanto que isso é grave para um prefeito ou um presidente de uma câmara.
+[23:32.680 --> 23:37.680]  Gera inelegibilidade, pagamento de multa ao herário público,
+[23:37.680 --> 23:39.680]  essa multa aqui é quando tem a indenização.
+[23:39.680 --> 23:43.680]  Proibição de contratar com o poder público.
+[23:43.680 --> 23:48.680]  E agora nós vamos para a parte aqui do compliance.
+[23:48.680 --> 23:53.680]  O serviço de compliance na administração pública é um conjunto de medidas adotadas
+[23:53.680 --> 23:58.680]  para garantir o cumprimento de leis, regulamentos e normas éticas do setor público.
+[23:58.680 --> 24:04.680]  O principal objetivo é a promoção da transparência e eficiência na gestão pública.
+[24:04.680 --> 24:09.680]  Por que a gente entra na parte do compliance que envolve essa implementação?
+[24:09.680 --> 24:15.680]  Eu lembro que o Wilton tinha feito, acho que essa pergunta na outra reunião que nós estávamos,
+[24:15.680 --> 24:22.680]  não é simplesmente colocar uma tecnologia e colocar para funcionar esse plano de execução.
+[24:22.680 --> 24:28.680]  Não tem como o plano de execução, a tecnologia e o sistema funcionar sem pessoas.
+[24:28.680 --> 24:34.680]  Porque nós como operadores do direito e o time jurídico do instituto,
+[24:34.680 --> 24:38.680]  ele tem que entrar sendo responsável também por esse serviço de compliance,
+[24:38.680 --> 24:40.680]  que é o conjunto de todas as normas.
+[24:40.680 --> 24:45.680]  Quando a gente coloca lá em adequação, não só a LGPD, mas a LAI,
+[24:45.680 --> 24:51.680]  a de combate à corrupção, a lei de acesso à informação, a transparência.
+[24:51.680 --> 24:57.680]  Os três pilares do programa de compliance é prevenir, detectar e remediar.
+[24:57.680 --> 25:01.680]  Além disso, também inclui a elaboração de políticas e treinamentos
+[25:01.680 --> 25:06.680]  para conscientizar os servidores públicos sobre o risco de condutas inadequadas
+[25:06.680 --> 25:10.680]  e sobre a importância da ética na administração pública.
+[25:10.680 --> 25:15.680]  Exemplo, código de conduta ética, código de boas práticas.
+[25:15.680 --> 25:18.680]  Está vendo o conjunto de normas que faz parte do compliance?
+[25:18.680 --> 25:23.680]  Que aí nós entramos com essa parte de assessoria jurídica, Gisleine,
+[25:23.680 --> 25:30.680]  que está citando também os servidores, o GPO, o operador desses dados.
+[25:36.680 --> 25:39.680]  Os nossos pilares legais do compliance.
+[25:39.680 --> 25:43.680]  A lei de acesso à informação, a lei de improbidade administrativa
+[25:43.680 --> 25:47.680]  e a lei de anticorrupção, que envolve a análise de riscos,
+[25:47.680 --> 25:50.680]  desenvolvimento de políticas, treinamento, monitoramento,
+[25:50.680 --> 25:52.680]  avaliação, investigação e reposta.
+[25:52.680 --> 25:57.680]  Essa parte aqui, ela é feita já pelo time de advogados.
+[26:00.680 --> 26:02.680]  Entendeu, Gisleine?
+[26:04.680 --> 26:09.680]  Agora eu vou entrar aqui na pergunta importante.
+[26:09.680 --> 26:12.680]  Agora eu acredito que vocês vão ter uma noção bem ampla
+[26:12.680 --> 26:15.680]  de como que isso é feito na prática.
+[26:15.680 --> 26:19.680]  Nós vamos entrar agora no processo de execução.
+[26:19.680 --> 26:21.680]  Na prática, como que funciona?
+[26:21.680 --> 26:25.680]  A primeira fase é uma reunião de alinhamento do projeto,
+[26:25.680 --> 26:30.680]  onde nós vamos colocar lá o prefeito, todos os secretários,
+[26:30.680 --> 26:35.680]  os gestores de departamento, o controlador interno, o procurador,
+[26:35.680 --> 26:39.680]  o secretário de administração, o secretário de educação.
+[26:39.680 --> 26:43.680]  Olha, o tanto de dados sensíveis é operado na Secretaria de Educação
+[26:44.680 --> 26:49.680]  de menor de idade, dos alunos da rede pública, das escolas.
+[26:51.680 --> 26:54.680]  Secretaria de Saúde, informação sobre doenças,
+[26:54.680 --> 26:59.680]  o aportador de doenças, qual religião é.
+[26:59.680 --> 27:04.680]  Então, olha o tanto de informação que é operada, que é tratada,
+[27:04.680 --> 27:08.680]  que é passada pela administração pública por essas secretarias.
+[27:08.680 --> 27:12.680]  Então, a gente faz uma reunião de alinhamento desse projeto,
+[27:12.680 --> 27:14.680]  dessa implantação da LGPD,
+[27:14.680 --> 27:19.680]  para apresentar o escopo e o fluxo de implementação
+[27:19.680 --> 27:23.680]  com representantes de cada setor da entidade pública.
+[27:23.680 --> 27:27.680]  Depois, é feito um diagnóstico jurídico,
+[27:27.680 --> 27:30.680]  através da nossa equipe, do instituto.
+[27:30.680 --> 27:36.680]  Nós vamos enviar lá um advogado, um junior, por exemplo,
+[27:36.680 --> 27:41.680]  mais um técnico em análise de sistema,
+[27:41.680 --> 27:43.680]  segurança da informação,
+[27:43.680 --> 27:46.680]  para colher as informações,
+[27:46.680 --> 27:50.680]  para a gente fazer o mapeamento de como que está aquele setor,
+[27:50.680 --> 27:52.680]  que é o levantamento de normas de impacto,
+[27:52.680 --> 27:57.680]  análise da maturidade e adequação, a definição de bases legais.
+[27:57.680 --> 28:02.680]  Ou seja, nós vamos entrar lá na Secretaria de Educação
+[28:02.680 --> 28:07.680]  e nós vamos fazer entrevista com a diretora da escola, por exemplo.
+[28:07.680 --> 28:10.680]  Fala, é, aqui quando vocês fazem matrícula,
+[28:10.680 --> 28:12.680]  onde que vocês guardam esses dados?
+[28:12.680 --> 28:17.680]  Os dados estão em documentos físicos ou digitais.
+[28:17.680 --> 28:21.680]  E esses documentos físicos, eles estão guardados onde tem um cadeado,
+[28:21.680 --> 28:26.680]  onde qualquer pessoa tem acesso a uma ficha de um aluno,
+[28:26.680 --> 28:28.680]  a um cadastro de matrícula,
+[28:28.680 --> 28:31.680]  ou um prontuário médico, por exemplo.
+[28:31.680 --> 28:33.680]  Então, esse diagnóstico jurídico,
+[28:33.680 --> 28:38.680]  ele é a parte do processo de execução que ele é mais demorado,
+[28:38.680 --> 28:42.680]  porque realmente a gente tem que enviar pessoas nossas técnicas
+[28:42.680 --> 28:44.680]  para fazer esse levantamento e essa análise
+[28:44.680 --> 28:48.680]  de como está o comportamento da maturidade da implementação da LGPD.
+[28:48.680 --> 28:53.680]  E é aí que a gente assusta e vê que ninguém está fazendo nada, não sabe nada,
+[28:53.680 --> 28:56.680]  o negócio está correndo frouxo, sem normas, sem regra,
+[28:56.680 --> 28:59.680]  sem sistema, sem planilha,
+[28:59.680 --> 29:02.680]  sem saber quem é responsável por aquele prontuário médico
+[29:02.680 --> 29:04.680]  na mão de quem ele passou.
+[29:04.680 --> 29:08.680]  Vamos imaginar que um médico faz o atendimento ali, uma consulta.
+[29:08.680 --> 29:12.680]  Beleza, ele preencheu lá as informações no prontuário.
+[29:12.680 --> 29:15.680]  Quem no sistema tem acesso a esse prontuário?
+[29:15.680 --> 29:20.680]  Quem acessou a informação daquela pessoa ou daquele paciente?
+[29:20.680 --> 29:26.680]  E no sistema, Camila, a gente tem que ter esse registro
+[29:26.680 --> 29:31.680]  de quem teve acesso ao prontuário.
+[29:32.680 --> 29:38.680]  Isso é uma forma de tratamento no meio digital da prefeitura, por exemplo.
+[29:38.680 --> 29:42.680]  Mas nós vamos chegar lá também nos possíveis problemas.
+[29:42.680 --> 29:44.680]  Depois desse diagnóstico jurídico,
+[29:44.680 --> 29:48.680]  é feito um diagnóstico da segurança da informação,
+[29:48.680 --> 29:52.680]  que é onde entra mais a Camila, a expertice da Camila,
+[29:52.680 --> 29:58.680]  que são os testes de vulnerabilidades ambientais e virtuais
+[29:58.680 --> 30:01.680]  na gestão de risco de acordo com as normas técnicas.
+[30:01.680 --> 30:06.680]  E aí entra aqui as ISOs também, que já vale para a questão da LGPD.
+[30:08.680 --> 30:14.680]  Contaminante a isso é feito um inventário e mapeamento desses dados,
+[30:14.680 --> 30:19.680]  que são entrevistas técnicas com cada um dos integrantes da entidade pública,
+[30:19.680 --> 30:23.680]  função de dados coletados e a necessidade.
+[30:23.680 --> 30:28.680]  Então a gente faz um levantamento desse inventário de dados pessoais,
+[30:28.680 --> 30:32.680]  estabelecimento do fluxo de dados e processos.
+[30:32.680 --> 30:35.680]  Depois, com essas entrevistas, com esse levantamento,
+[30:35.680 --> 30:40.680]  a gente elabora o relatório de mapeamento de dados e processos.
+[30:40.680 --> 30:50.680]  Por exemplo, a gente vai ter um relatório onde tem ali o problema, o risco e a pendência.
+[30:50.680 --> 30:53.680]  O que nós vamos orientar o órgão público a fazer?
+[30:53.680 --> 31:01.680]  Por exemplo, lá na Secretaria de Educação ou lá na Secretaria das Contratações de Listação.
+[31:01.680 --> 31:07.680]  Os contratos que são sigilosos, eles destroem esses dados físicos,
+[31:07.680 --> 31:11.680]  esses contratos passam naquela picotadeira de papel.
+[31:13.680 --> 31:15.680]  Como que está sendo descartado?
+[31:15.680 --> 31:19.680]  Até esses documentos, como que estão sendo descartados?
+[31:19.680 --> 31:23.680]  Então a gente vai apontar o problema, os riscos,
+[31:23.680 --> 31:29.680]  nós vamos apontar a solução, a secretaria tem que comprar uma picotadeira
+[31:29.680 --> 31:36.680]  e descartar os documentos físicos dessa forma, nesse modelo.
+[31:36.680 --> 31:39.680]  E a gente ainda vai estabelecer também um prazo.
+[31:40.680 --> 31:46.680]  Estão entendendo? A gente entra dentro da prefeitura, visualiza o problema também,
+[31:46.680 --> 31:49.680]  e nesse relatório a gente aponta ali o risco.
+[31:49.680 --> 31:53.680]  Aí nós vamos para a fase dois, que é a análise e gestão de risco,
+[31:53.680 --> 31:58.680]  que é a matriz de risco, planos de ações para mitigação desse risco,
+[31:58.680 --> 32:01.680]  que é o que a gente vai entregar para a entidade.
+[32:01.680 --> 32:05.680]  É como se fosse numa consultoria a gente entregando o plano de negócio,
+[32:05.680 --> 32:09.680]  o plano de risco, o planejamento estratégico para isso.
+[32:10.680 --> 32:15.680]  Juntamente com a avaliação de impacto, que é o relatório, que é o RIPT,
+[32:15.680 --> 32:17.680]  está na lei, na legislação.
+[32:17.680 --> 32:22.680]  Quando a NPD, auditorium ou Ministério Público pede o relatório, é esse RIPT,
+[32:22.680 --> 32:27.680]  então ele tem até o formato, ele tem o padrão, como ele tem que ser preenchido.
+[32:27.680 --> 32:32.680]  E a definição do encarregamento de dados e atribuição de responsabilidade,
+[32:32.680 --> 32:36.680]  que a gente ajuda e a gente certifica esse DPO também.
+[32:36.680 --> 32:41.680]  Fase três, que é o programa de conformidade, quando a gente já considera
+[32:41.680 --> 32:47.680]  que a entidade pública já está com a implementação desse plano de ações
+[32:47.680 --> 32:52.680]  com ações corretivas, que é o que a gente entrega para a entidade pública,
+[32:52.680 --> 32:56.680]  que são ações corretivas em sistemas informatizados,
+[32:56.680 --> 33:00.680]  que é a segurança da informação e boas práticas dos servidores.
+[33:00.680 --> 33:04.680]  O conjunto do compliance também, a gente faz a revisão dos contratos.
+[33:04.680 --> 33:09.680]  Na maioria das vezes, Gislaine, a gente pede o modelo desses contratos
+[33:09.680 --> 33:13.680]  e faz uma revisão, se tem a cláusula lá de transparência,
+[33:13.680 --> 33:17.680]  se tem a cláusula lá de LGPD, e a gente entrega também o treinamento
+[33:17.680 --> 33:21.680]  e capacitação do encarregado de dados e servidores,
+[33:21.680 --> 33:25.680]  através de cursos e palestras presenciais e remotas.
+[33:25.680 --> 33:32.680]  Aí, meus amigos, é nessas fases aqui que a gente precifica o nosso trabalho,
+[33:32.680 --> 33:34.680]  o que a gente está entregando.
+[33:34.680 --> 33:38.680]  Treinamento, palestra, o compliance dessas normas,
+[33:38.680 --> 33:42.680]  o plano que a gente fez e vai fazer através também
+[33:42.680 --> 33:46.680]  de um sistema de gestão de uma tecnologia.
+[33:46.680 --> 33:51.680]  E na fase 4, essa é a fase 4, é a que ela sempre,
+[33:51.680 --> 33:56.680]  depois do plano implementado, ela nunca acaba,
+[33:56.680 --> 34:00.680]  que é o que a gente vai amarrar à prefeitura,
+[34:00.680 --> 34:06.680]  a nossa recorrência, a necessidade de continuar contratando a gente.
+[34:06.680 --> 34:10.680]  Por quê? Precisa ser feito esse teste de conformidade,
+[34:10.680 --> 34:12.680]  fazer uma varredura contínua.
+[34:12.680 --> 34:16.680]  Não é somente, beleza, nós fomos lá e implementamos o plano,
+[34:16.680 --> 34:19.680]  as estratégias, as ações corretivas e tal,
+[34:19.680 --> 34:21.680]  mas isso tem que continuar sendo acompanhado,
+[34:21.680 --> 34:27.680]  porque entra servidor novo, sai servidor, entra informação nova.
+[34:27.680 --> 34:30.680]  Então eles sempre vão precisar da gente,
+[34:30.680 --> 34:36.680]  é onde a gente mantém o contrato fazendo aquela renovação do contrato.
+[34:36.680 --> 34:38.680]  Fidelização.
+[34:38.680 --> 34:39.680]  Oi?
+[34:39.680 --> 34:40.680]  Fidelização.
+[34:40.680 --> 34:44.680]  Fidelização, não existe a fidelização na administração pública,
+[34:44.680 --> 34:47.680]  mas a gente chama de renovação do contrato,
+[34:47.680 --> 34:50.680]  porque é um serviço contínuo, não tem como eles na órgão,
+[34:50.680 --> 34:53.680]  não, agora a gente não vai ficar mais adequado.
+[34:54.680 --> 34:57.680]  É necessário, é uma avaliação de maturidade de segurança,
+[34:57.680 --> 35:00.680]  impulsão de ações corretivas o tempo todo,
+[35:00.680 --> 35:04.680]  porque o tempo todo pode acontecer um caso, um incidente.
+[35:04.680 --> 35:08.680]  E o relatório de autoria, visitas técnicas mensais
+[35:08.680 --> 35:11.680]  para a realização de teste de conformidade,
+[35:11.680 --> 35:14.680]  então nós vamos fazer isso,
+[35:14.680 --> 35:17.680]  depois do plano implementado,
+[35:17.680 --> 35:19.680]  a gente vai de três em três meses,
+[35:19.680 --> 35:22.680]  de seis em seis meses fazendo essa visita técnica
+[35:22.680 --> 35:24.680]  e realizando esses testes.
+[35:25.680 --> 35:28.680]  E aí, agora eu vou mostrar para vocês o sistema,
+[35:28.680 --> 35:31.680]  ele foi nomeado aqui de LGPD Web,
+[35:31.680 --> 35:35.680]  mas a gente pode dar a mão para o nosso sistema, Camila,
+[35:35.680 --> 35:39.680]  que é o sistema onde todo o processo de implementação e adequação
+[35:39.680 --> 35:43.680]  é realizado com integração à plataforma,
+[35:43.680 --> 35:46.680]  garantindo continuidade no programa de conformidade
+[35:46.680 --> 35:49.680]  e eficiência e segurança da informação.
+[35:49.680 --> 35:52.680]  O que tem lá nessa plataforma, nesse sistema?
+[35:52.680 --> 35:55.680]  O mapeamento de dados, a gestão de risco,
+[35:55.680 --> 35:58.680]  a gestão de CUCs e a gestão de dados.
+[35:58.680 --> 36:01.680]  Tudo isso lá dentro do sistema.
+[36:01.680 --> 36:04.680]  O relatório tem que estar lá dentro do sistema.
+[36:04.680 --> 36:07.680]  A gente tem que mostrar, aqui eu vou...
+[36:10.680 --> 36:12.680]  Não tem aqui a carinha do sistema,
+[36:12.680 --> 36:15.680]  mas eu posso ver se eu consigo para você depois, Camila,
+[36:15.680 --> 36:18.680]  mas o sistema tem que mostrar aquela matriz de risco.
+[36:19.680 --> 36:23.680]  Quantos por cento já foi mapeado?
+[36:23.680 --> 36:27.680]  Quantos setores nós já entramos, já fizemos a entrevista,
+[36:27.680 --> 36:30.680]  já mapeamos aonde tem o dado sensível?
+[36:30.680 --> 36:32.680]  Quem opera esse dado?
+[36:32.680 --> 36:35.680]  Quem é o responsável lá no setor pela operação desse dado?
+[36:36.680 --> 36:38.680]  Então, é uma solução de proteção de dados
+[36:38.680 --> 36:41.680]  para o tratamento do acervo do documento físico.
+[36:42.680 --> 36:46.680]  Nessa plataforma, onde entra especificamente o software,
+[36:46.680 --> 36:48.680]  é o seguinte.
+[36:48.680 --> 36:52.680]  Nós vamos fazer o tratamento do documento físico.
+[36:52.680 --> 36:55.680]  Como é que é feito esse tratamento do documento físico?
+[36:55.680 --> 36:58.680]  A gente vai precisar, se ele não tiver digitalizado,
+[36:58.680 --> 37:00.680]  a gente vai precisar digitalizar.
+[37:01.680 --> 37:06.680]  Aí aqui entra aquela norma da arquivologia.
+[37:07.680 --> 37:12.680]  Esse documento está arquivado de uma forma correta,
+[37:12.680 --> 37:15.680]  documentos físicos sem a proteção do conteúdo.
+[37:15.680 --> 37:17.680]  Deixa eu te perguntar, quem digitaliza?
+[37:17.680 --> 37:19.680]  Porque esse é o trabalho mais difícil,
+[37:19.680 --> 37:22.680]  acho que mais oneroso para a migração.
+[37:23.680 --> 37:24.680]  Isso, depende.
+[37:24.680 --> 37:28.680]  Nós podemos trabalhar com dois tipos de serviço.
+[37:28.680 --> 37:34.680]  Quando a prefeitura já contrata uma outra empresa
+[37:34.680 --> 37:36.680]  e digitaliza esse documento,
+[37:36.680 --> 37:39.680]  e a gente faz só o tratamento dele no digital,
+[37:39.680 --> 37:42.680]  ou a gente pode pegar também para digitalizar,
+[37:42.680 --> 37:46.680]  que a gente ganha também na precificação dessa digitalização.
+[37:47.680 --> 37:51.680]  Eu acho interessante a gente pegar e subcontratar.
+[37:51.680 --> 37:52.680]  Isso é o que eu acho legal.
+[37:52.680 --> 37:54.680]  Eu, por exemplo, conheço três empresas
+[37:54.680 --> 37:58.680]  que trabalham exatamente com essa questão da digitalização.
+[37:58.680 --> 38:02.680]  A gente pega o contrato por um preço e compra por outro.
+[38:02.680 --> 38:04.680]  Acho que é aí a expertisa.
+[38:05.680 --> 38:08.680]  Porque os caras já estão anos-luz na nossa frente.
+[38:09.680 --> 38:11.680]  O que é a nossa solução?
+[38:12.680 --> 38:14.680]  Eu conheço duas grandes empresas
+[38:14.680 --> 38:17.680]  que fazem isso em mais de 16 estados no Brasil.
+[38:17.680 --> 38:20.680]  Os caras estão lá na frente de digitalização.
+[38:20.680 --> 38:22.680]  O que eu quero competir com esses caras?
+[38:22.680 --> 38:23.680]  Hora nenhuma.
+[38:23.680 --> 38:25.680]  Que já tem os equipamentos.
+[38:25.680 --> 38:26.680]  O que eu quero?
+[38:26.680 --> 38:30.680]  A gente usar o subterfúgio do Instituto, que é uma OSCIP,
+[38:30.680 --> 38:32.680]  para organizar o termo de contratação,
+[38:32.680 --> 38:34.680]  termo de parceria e fomento direto,
+[38:34.680 --> 38:36.680]  sem precisar de licitação.
+[38:36.680 --> 38:39.680]  Ok, ganhamos, a gente subcontrata.
+[38:42.680 --> 38:46.680]  Pode fazer também como produto da empresa de venda.
+[38:46.680 --> 38:50.680]  E é a empresa que contrata, que tem um parceiro.
+[38:50.680 --> 38:51.680]  Sim, exatamente.
+[38:51.680 --> 38:53.680]  A ideia é que é essa.
+[38:53.680 --> 38:55.680]  Eu não quero ser especialista em tudo.
+[38:55.680 --> 38:56.680]  Longe disso.
+[38:56.680 --> 38:57.680]  Muito pelo contrário.
+[38:57.680 --> 39:00.680]  Eu quero ter tecnologias, pessoas.
+[39:00.680 --> 39:04.680]  A gente ir lá, ganhar e subcontrata.
+[39:07.680 --> 39:09.680]  E o nosso processo de execução
+[39:09.680 --> 39:12.680]  da conformidade da LGPD funcionar.
+[39:12.680 --> 39:14.680]  Porque mesmo que a gente subcontrate
+[39:14.680 --> 39:17.680]  essa empresa que vai digitalizar,
+[39:17.680 --> 39:19.680]  que vai fazer anonimização,
+[39:19.680 --> 39:21.680]  que vai criar os controles de acesso,
+[39:21.680 --> 39:26.680]  a gente tem que garantir que está dentro do nosso processo de execução.
+[39:26.680 --> 39:30.680]  Inclusive, nós vamos exigir e acompanhar fiscalizando isso.
+[39:30.680 --> 39:32.680]  Arquivologia, por exemplo,
+[39:32.680 --> 39:34.680]  auxiliando na criação,
+[39:34.680 --> 39:37.680]  façando o plano de classificação documental.
+[39:37.680 --> 39:41.680]  Aí é nós que vamos fazer essa gestão
+[39:41.680 --> 39:44.680]  de orientação para a tabela de temporalidade.
+[39:44.680 --> 39:46.680]  Gente, a maioria das prefeituras
+[39:46.680 --> 39:49.680]  não estão organizadas na tabela de temporalidade.
+[39:49.680 --> 39:52.680]  Tem documento lá que já podia ser descartado,
+[39:52.680 --> 39:56.680]  que depois de digitalizado não precisa ter ele no físico.
+[39:56.680 --> 39:58.680]  Está ocupando espaço físico.
+[40:00.680 --> 40:01.680]  Entendeu?
+[40:02.680 --> 40:03.680]  E organizar.
+[40:03.680 --> 40:04.680]  Exato.
+[40:04.680 --> 40:06.680]  Só mais um detalhe técnico aqui,
+[40:06.680 --> 40:08.680]  e, Simone, justamente,
+[40:08.680 --> 40:11.680]  a Lei Nacional das OSCIP,
+[40:11.680 --> 40:13.680]  ela fala justamente isso.
+[40:13.680 --> 40:16.680]  O instituto que tem a qualificação de OSCIP,
+[40:16.680 --> 40:18.680]  a grande questão que você acabou de falar,
+[40:18.680 --> 40:23.680]  ele faz e somente faz a gestão dos recursos.
+[40:23.680 --> 40:26.680]  Então, por isso que o dinheiro vem para o instituto,
+[40:26.680 --> 40:29.680]  o instituto vai contratar a empresa da Simone,
+[40:29.680 --> 40:32.680]  a empresa da Ghislaine, a empresa da Camila,
+[40:32.680 --> 40:34.680]  a contratar a empresa do Paulo.
+[40:34.680 --> 40:36.680]  Então, é isso que o instituto faz.
+[40:36.680 --> 40:38.680]  Vocês emitem notas fiscais
+[40:38.680 --> 40:40.680]  e eu faço o pagamento para vocês.
+[40:40.680 --> 40:42.680]  Então, é exatamente isso.
+[40:42.680 --> 40:46.680]  Então, a gente coloca isso como um produto robusto do instituto
+[40:46.680 --> 40:48.680]  e depois, obviamente, a gente entrega,
+[40:48.680 --> 40:50.680]  fazer uma boa gestão da entrega.
+[40:50.680 --> 40:53.680]  Só que a gente não precisa ser especialista em tudo.
+[40:53.680 --> 40:54.680]  Sim.
+[40:55.680 --> 40:58.680]  Por exemplo, a gente pode contratar uma empresa,
+[40:58.680 --> 41:00.680]  até como a NeoGolf.
+[41:00.680 --> 41:02.680]  Só que, claro, quando a gente contrata uma empresa
+[41:02.680 --> 41:04.680]  que vai fazer tudo isso,
+[41:04.680 --> 41:07.680]  a precificação para nós, ela vai ficando minguada.
+[41:07.680 --> 41:09.680]  Sim, com certeza.
+[41:09.680 --> 41:11.680]  O que a gente puder fazer, por exemplo,
+[41:11.680 --> 41:13.680]  a parte, a Ghislaine e nós,
+[41:13.680 --> 41:16.680]  com a parte jurídica do compliance.
+[41:16.680 --> 41:17.680]  Sim.
+[41:17.680 --> 41:20.680]  O treinamento e capacitação desses servidores
+[41:20.680 --> 41:23.680]  para boas práticas de conduta,
+[41:23.680 --> 41:25.680]  da lei geral de proteção.
+[41:25.680 --> 41:27.680]  Uma ideia, gente.
+[41:27.680 --> 41:30.680]  O instituto, como instituto de ciência e tecnologia,
+[41:30.680 --> 41:32.680]  teve profissionais vinculados.
+[41:32.680 --> 41:34.680]  Então, quem encabeça isso,
+[41:34.680 --> 41:36.680]  ou quando a gente for vender o produto,
+[41:36.680 --> 41:38.680]  eu estou, ter a doutora Simone,
+[41:38.680 --> 41:42.680]  ter a Camila como engenheira de soft de IA, sabe?
+[41:42.680 --> 41:46.680]  Ou seja, telas vinculadas ao instituto.
+[41:46.680 --> 41:48.680]  Passa a ser um produto do instituto.
+[41:48.680 --> 41:49.680]  Exato.
+[41:49.680 --> 41:53.680]  Tem fases intermediárias que a gente vai subcontratar.
+[41:53.680 --> 41:55.680]  E no contrato que a gente vai ofertar.
+[41:55.680 --> 41:57.680]  Inclusive, isso tem que estar muito bem especificado
+[41:57.680 --> 41:59.680]  para nos resguardar.
+[41:59.680 --> 42:01.680]  A parte da subcontratação.
+[42:01.680 --> 42:03.680]  Óbvio que a doutora já deve ter isso tudo.
+[42:03.680 --> 42:06.680]  Ela já está inserida em vários municípios.
+[42:06.680 --> 42:10.680]  Mas a ideia realmente é aproveitar a confiabilidade
+[42:10.680 --> 42:12.680]  e a entrada do instituto, sabe?
+[42:12.680 --> 42:14.680]  Porque dá uma tranquilidade maior.
+[42:14.680 --> 42:16.680]  Eu estou lidando com o instituto
+[42:16.680 --> 42:19.680]  que está vinculado à administração pública.
+[42:19.680 --> 42:21.680]  Eu não estou lidando com a NeoGov,
+[42:21.680 --> 42:23.680]  que é uma empresa que só quer...
+[42:23.680 --> 42:24.680]  Isso.
+[42:24.680 --> 42:26.680]  A ideia, no segundo momento,
+[42:26.680 --> 42:29.680]  que a gente até tratou na outra reunião,
+[42:29.680 --> 42:33.680]  é transformar o instituto num certificador.
+[42:33.680 --> 42:36.680]  Então, às vezes, a própria contratação da NeoGov,
+[42:36.680 --> 42:40.680]  outras empresas, e a gente passa a ser certificador.
+[42:40.680 --> 42:41.680]  Isso.
+[42:41.680 --> 42:44.680]  Gislaine, olha que lindo isso aqui.
+[42:44.680 --> 42:46.680]  Isso não tem a ver o Wilton e a Camila
+[42:46.680 --> 42:47.680]  com a finalidade do instituto.
+[42:47.680 --> 42:48.680]  Olha isso aqui.
+[42:48.680 --> 42:52.680]  Você sabia que a maioria das implementações da LGPD
+[42:52.680 --> 42:55.680]  desconsideram os documentos físicos
+[42:55.680 --> 42:58.680]  por não possuírem ferramentas adequadas
+[42:58.680 --> 43:00.680]  de mapeamento desses dados?
+[43:00.680 --> 43:03.680]  Em contrapartida, a LGPD entende
+[43:03.680 --> 43:06.680]  ser este o principal alvo de tratamento.
+[43:06.680 --> 43:08.680]  Nossa solução, ponta a ponta,
+[43:08.680 --> 43:10.680]  coloca fim a este problema,
+[43:10.680 --> 43:12.680]  blindando a entidade pública
+[43:12.680 --> 43:14.680]  quanto a problemas de vazamento de dados,
+[43:14.680 --> 43:17.680]  além de criar uma gestão inteligente de documentos.
+[43:18.680 --> 43:21.680]  Que vai ser a nossa principal finalidade como instituto.
+[43:23.680 --> 43:25.680]  Maravilha, agora a gente tem que pegar isso
+[43:25.680 --> 43:28.680]  e desenvolver um produto em cima disso.
+[43:28.680 --> 43:30.680]  Isso, exatamente.
+[43:30.680 --> 43:32.680]  Um produto, ela já deve ter...
+[43:32.680 --> 43:35.680]  Esse próprio material dela serve de base, Wilton.
+[43:35.680 --> 43:36.680]  Total.
+[43:36.680 --> 43:38.680]  A gente cria...
+[43:38.680 --> 43:41.680]  Esse material aqui, gente, só informando para vocês,
+[43:41.680 --> 43:45.680]  ele foi extraído do manual da NPD.
+[43:45.680 --> 43:48.680]  Vocês vão entrar lá no sádio e ver que é público.
+[43:48.680 --> 43:50.680]  Já existe esse manual de normas.
+[43:50.680 --> 43:55.680]  O que é escasso são empresas ou institutos como nós
+[43:55.680 --> 43:59.680]  que vamos nos especializar nessa conformidade
+[43:59.680 --> 44:03.680]  em LGPD, no complexo para administração pública,
+[44:03.680 --> 44:06.680]  atrelado com processos,
+[44:06.680 --> 44:09.680]  que aí entra o nosso plano de execução,
+[44:09.680 --> 44:13.680]  tecnologia, que aí entra o nosso sistema,
+[44:13.680 --> 44:16.680]  esse sistema específico da entidade.
+[44:16.680 --> 44:19.680]  Então, aqui ó, como é que funciona o processo.
+[44:19.680 --> 44:22.680]  Análise do acervo documental físico,
+[44:22.680 --> 44:24.680]  estrutura, quantidade, documento,
+[44:24.680 --> 44:26.680]  tipo de documento, conservação.
+[44:26.680 --> 44:29.680]  Aqui, gente, a gente tá falando da transformação digital, tá?
+[44:29.680 --> 44:32.680]  Da parte do LGPD Drive,
+[44:32.680 --> 44:35.680]  a gente já entrou aqui na parte de documento físico
+[44:35.680 --> 44:39.680]  que precisa ser transformado em digital e tratado.
+[44:39.680 --> 44:41.680]  Que é onde a gente pode contratar,
+[44:41.680 --> 44:43.680]  no YouTube contratar uma empresa para fazer isso.
+[44:43.680 --> 44:47.680]  Mas não tem como fugir desse processo aqui.
+[44:47.680 --> 44:50.680]  Quer entrar lá, analisar a estrutura,
+[44:50.680 --> 44:52.680]  uma criação de um plano de classificação,
+[44:52.680 --> 44:56.680]  isso nós temos que entregar para a entidade pública.
+[44:56.680 --> 45:00.680]  Estabelecer normas de limpeza, de organização.
+[45:00.680 --> 45:02.680]  É como se fosse assim, gente, nós vamos entrar dentro
+[45:02.680 --> 45:06.680]  do almoxarifado deles também e organizar.
+[45:06.680 --> 45:09.680]  Vocês fazem o business process model.
+[45:09.680 --> 45:10.680]  Isso.
+[45:10.680 --> 45:12.680]  Exatamente isso.
+[45:12.680 --> 45:14.680]  Isso. Entendeu?
+[45:14.680 --> 45:16.680]  Então, aqui, por exemplo,
+[45:16.680 --> 45:19.680]  a entidade pública protegida,
+[45:19.680 --> 45:23.680]  depois que a gente fizer a digitalização, a transformação,
+[45:23.680 --> 45:26.680]  aí entra aqui a criação de um backup digital
+[45:26.680 --> 45:29.680]  de todo acervo documental digitalizado
+[45:29.680 --> 45:32.680]  armazenado físico e em nuvem.
+[45:34.680 --> 45:37.680]  Ou seja, depois, Camila, de todo esse acervo físico
+[45:37.680 --> 45:39.680]  ser digitalizado e tratado,
+[45:39.680 --> 45:43.680]  ele vai ser armazenado em nuvem.
+[45:44.680 --> 45:48.680]  E aí entra essa ferramentinha aqui que você já conhece,
+[45:48.680 --> 45:51.680]  que é a leitura do documento por OUCR,
+[45:51.680 --> 45:54.680]  que é a leitura dos documentos armazenados por todo o documento,
+[45:54.680 --> 45:56.680]  que é o filtro, né?
+[45:56.680 --> 45:58.680]  A gente pode fazer ali o filtro.
+[45:58.680 --> 46:03.680]  Ah, eu preciso pesquisar um documento assim, um contrato,
+[46:03.680 --> 46:07.680]  que a prefeitura contratou uma empresa de construção, não sei o quê.
+[46:07.680 --> 46:09.680]  Aí faz a leitura lá via filtro,
+[46:09.680 --> 46:12.680]  só que quando eu acesso essa informação,
+[46:12.680 --> 46:15.680]  ela vem anonimizada onde tem dados sensíveis.
+[46:15.680 --> 46:19.680]  Então, a submissão de todos os documentos digitalizados
+[46:19.680 --> 46:22.680]  é uma ferramenta de inteligência artificial
+[46:22.680 --> 46:26.680]  que permite identificar e classificar os dados pessoais.
+[46:27.680 --> 46:30.680]  Anonimização de dados, que é aquela tarja preta,
+[46:30.680 --> 46:33.680]  impossibilitando a leitura de pessoas não autorizadas
+[46:33.680 --> 46:36.680]  e acesso aos dados pessoais somente com senha.
+[46:36.680 --> 46:38.680]  A gente coloca essa trava também.
+[46:38.680 --> 46:41.680]  E aí entra a parte da tecnologia.
+[46:41.680 --> 46:45.680]  Porque aí, quando o acesso dos dados pessoais,
+[46:45.680 --> 46:47.680]  ele vai ser somente com senha.
+[46:47.680 --> 46:51.680]  E ainda que revelados por senha, cria uma marca d'água no fundo do documento
+[46:51.680 --> 46:54.680]  com identificação do servidor que imprimiu,
+[46:54.680 --> 46:57.680]  do servidor que abriu aquele documento sensível.
+[46:58.680 --> 47:02.680]  E isso já é a parte da segurança da informação, Camila.
+[47:04.680 --> 47:07.680]  Então, além de proteger todos os dados pessoais,
+[47:07.680 --> 47:10.680]  o LGPD Drive, que é a ferramenta que eles nomearam,
+[47:10.680 --> 47:13.680]  permite buscas inteligentes de qualquer palavra
+[47:13.680 --> 47:16.680]  contida nos documentos digitalizados.
+[47:17.680 --> 47:21.680]  Ou seja, uma contratação com várias soluções.
+[47:21.680 --> 47:26.680]  LGPD, implementação e adequação, segurança da informação,
+[47:26.680 --> 47:29.680]  a transformação digital, que a maioria das entidades públicas
+[47:29.680 --> 47:32.680]  ainda possuem muito documento físico.
+[47:34.680 --> 47:37.680]  E o software de gestão e governança de dados,
+[47:37.680 --> 47:41.680]  que é o sistema que a gente vai colocar lá na plataforma.
+[47:41.680 --> 47:46.680]  O LGPD Web, que a gente vai ter ali o relatório inventário de dados,
+[47:46.680 --> 47:49.680]  a gestão dos riscos, aquele mapa de riscos,
+[47:49.680 --> 47:52.680]  os direitos, os treinamentos,
+[47:52.680 --> 47:55.680]  os cursos que a gente vai colocar lá dentro da plataforma.
+[47:56.680 --> 47:59.680]  E o Drive, que é a proteção dos dados,
+[47:59.680 --> 48:04.680]  que é o conteúdo do documento criptografado e anonimização.
+[48:04.680 --> 48:06.680]  Conseguindo entender que a nossa plataforma
+[48:06.680 --> 48:11.680]  vai contemplar o nosso relatório, o nosso plano de execução,
+[48:13.680 --> 48:18.680]  o termômetro de como está sendo feita a maturidade dessa adequação
+[48:18.680 --> 48:22.680]  e, contaminante a isso, os arquivos protegidos.
+[48:23.680 --> 48:27.680]  Então, o maior diferencial, no caso da Anel Gov,
+[48:27.680 --> 48:30.680]  é a solução ponta a ponta criada para administração pública,
+[48:30.680 --> 48:33.680]  que vai muito além de uma revisão documental
+[48:33.680 --> 48:37.680]  que poderia ser feita por um escritório comum de advocacia.
+[48:37.680 --> 48:41.680]  Com a Anel Gov, o objeto multidisciplinário especializado
+[48:41.680 --> 48:45.680]  reduz o custo de contratação de quatro contratos em um,
+[48:45.680 --> 48:47.680]  alcançando a mais...
+[48:47.680 --> 48:49.680]  Um sítio high-tech.
+[48:49.680 --> 48:53.680]  Isso, vantajosidade para administração pública,
+[48:53.680 --> 48:56.680]  sem riscos de contratos que não se harmonizam,
+[48:56.680 --> 49:00.680]  acabam prejudicando o bom curso das atividades administrativas
+[49:00.680 --> 49:02.680]  por problemas em sua execução,
+[49:02.680 --> 49:06.680]  requerendo novas contratações e resultando em um desperdício de recursos públicos.
+[49:06.680 --> 49:09.680]  Que é a maioria das vezes onde acontece.
+[49:09.680 --> 49:12.680]  Contrato um escritório de advocacia que só vai fazer, às vezes,
+[49:12.680 --> 49:15.680]  alguns modelos de questionário,
+[49:16.680 --> 49:19.680]  colocar lá no site, pôr todo mundo para preencher,
+[49:19.680 --> 49:22.680]  clicar ali um cookie, uma política de cookies e pronto.
+[49:22.680 --> 49:28.680]  Mas na prática, simplesmente, isso não é uma entidade em conformidade.
+[49:28.680 --> 49:31.680]  Tem que ter tecnologia, tem que ter inteligência artificial,
+[49:31.680 --> 49:34.680]  tem que ter processos, tem que ter pessoas,
+[49:34.680 --> 49:37.680]  uma equipe multidisciplinar para acompanhar esse processo,
+[49:37.680 --> 49:39.680]  para fiscalizar.
+[49:41.680 --> 49:43.680]  Gente, é isso!
+[49:43.680 --> 49:45.680]  Ah, muito legal!
+[49:45.680 --> 49:47.680]  Eu adorei!
+[49:47.680 --> 49:49.680]  É bem amplo, muito interessante.
+[49:49.680 --> 49:52.680]  Agora vamos lá, eu para o comercial,
+[49:52.680 --> 49:55.680]  antes de fazer pergunta técnica, no comercial.
+[49:55.680 --> 49:59.680]  Bom, de onde vem o recurso para que...
+[49:59.680 --> 50:01.680]  Sempre tem que ter o caminho do dinheiro.
+[50:01.680 --> 50:06.680]  De onde vem o dinheiro para a prefeitura contratar em serviço.
+[50:06.680 --> 50:08.680]  Eu sei que é obrigatório, eu sei que é preciso fazer,
+[50:08.680 --> 50:12.680]  só que, por exemplo, o Programa Nacional de Resíduos Sólidos,
+[50:12.680 --> 50:17.680]  tem prefeito já indo para a cadeia e eles não fazem.
+[50:17.680 --> 50:20.680]  Simplesmente não tratam lixo, o Brasil está cheio de lixões,
+[50:20.680 --> 50:26.680]  menos de 1,5% das prefeituras no Brasil tem aterro sanitário para tratar o lixo.
+[50:26.680 --> 50:30.680]  Bom, então se o lixo que fede, que traz rato,
+[50:30.680 --> 50:33.680]  traz coiseiras inimagináveis na sociedade,
+[50:33.680 --> 50:35.680]  é essa dificuldade toda,
+[50:35.680 --> 50:41.680]  quando a gente vai falar de proteção de dados, nuvem, essa coiseira toda.
+[50:41.680 --> 50:44.680]  Bom, primeiro, de onde vem o recurso?
+[50:44.680 --> 50:50.680]  Segundo, como acessar esse tipo de recurso?
+[50:50.680 --> 50:52.680]  Porque a gente sabe que existe a demanda,
+[50:52.680 --> 50:55.680]  tem aí inesejibilidade até 14 anos,
+[50:55.680 --> 50:57.680]  está muito bem organizado.
+[50:57.680 --> 51:01.680]  Como vender isso e que tipo de município que compra?
+[51:01.680 --> 51:04.680]  Município pequeno compra ou só município médio
+[51:04.680 --> 51:07.680]  para melhorzinho que está com as pernas melhores?
+[51:07.680 --> 51:10.680]  Porque município você sabe, município é tudo falido.
+[51:11.680 --> 51:14.680]  Wilton funciona da seguinte maneira,
+[51:14.680 --> 51:18.680]  todos os municípios, independente de tamanho,
+[51:18.680 --> 51:23.680]  são obrigados a contratar, a implementar a LGPD.
+[51:23.680 --> 51:25.680]  Da onde vem esse recurso?
+[51:25.680 --> 51:29.680]  Primeiro, por ser uma legislação obrigatória,
+[51:29.680 --> 51:32.680]  ele pode sair de qualquer pasta,
+[51:32.680 --> 51:35.680]  de qualquer recurso próprio da prefeitura,
+[51:35.680 --> 51:39.680]  seja da Secretaria de Educação, onde tem muitos dados sensíveis,
+[51:39.680 --> 51:42.680]  seja da Secretaria de Saúde,
+[51:42.680 --> 51:45.680]  seja uma parte, ali eu vou tirar,
+[51:45.680 --> 51:49.680]  do orçamento da saúde, do orçamento da educação,
+[51:49.680 --> 51:51.680]  do orçamento da procuradoria,
+[51:51.680 --> 51:55.680]  e pagar com recurso próprio da prefeitura.
+[51:55.680 --> 51:57.680]  Só que aí vem o que você disse,
+[51:57.680 --> 52:01.680]  a maioria das prefeituras estão falidas, estão sem dinheiro,
+[52:01.680 --> 52:05.680]  por causa do mal uso, do dinheiro público.
+[52:06.680 --> 52:11.680]  Nem a questão do lixo, que é muito importante,
+[52:11.680 --> 52:14.680]  que é um escândalo isso,
+[52:14.680 --> 52:16.680]  o ser humano não tem que se adequar,
+[52:16.680 --> 52:21.680]  imagina a LGPD, vai só deixando de lado.
+[52:21.680 --> 52:24.680]  Isso pode ser feito também através de recursos públicos
+[52:24.680 --> 52:27.680]  de emendas positivas, não tem importância,
+[52:27.680 --> 52:29.680]  se algum deputado, algum senador,
+[52:29.680 --> 52:33.680]  quiser enviar esse recurso para a prefeitura executar
+[52:33.680 --> 52:36.680]  o plano de tecnologia, o plano de transparência,
+[52:36.680 --> 52:38.680]  esse plano de conformidade, também pode.
+[52:38.680 --> 52:41.680]  Porque a legislação é obrigatória,
+[52:41.680 --> 52:43.680]  então a prefeitura tem que cumprir.
+[52:43.680 --> 52:46.680]  E não existe restrição para falar,
+[52:46.680 --> 52:49.680]  o recurso público só pode,
+[52:49.680 --> 52:52.680]  para a adequação da LGPD pode ser só um recurso carimbado,
+[52:52.680 --> 52:55.680]  pode ser só o da pasta da educação, não.
+[52:55.680 --> 52:57.680]  A prefeitura tem que cumprir esse plano.
+[52:59.680 --> 53:01.680]  Eu entendo a pergunta do Wilton,
+[53:01.680 --> 53:04.680]  porque a gente está num instituto
+[53:04.680 --> 53:07.680]  no qual ele está acostumado muito a ter isso,
+[53:07.680 --> 53:09.680]  qualquer origem, é um projeto,
+[53:09.680 --> 53:12.680]  só que você está falando de um contrato, Wilton.
+[53:12.680 --> 53:16.680]  Aqui agora é o instituto como um prestador de serviço
+[53:16.680 --> 53:18.680]  e ofertando um produto,
+[53:18.680 --> 53:21.680]  dos muitos que a gente passará a ter,
+[53:21.680 --> 53:23.680]  então é uma contratação normal.
+[53:23.680 --> 53:27.680]  Neste primeiro momento é muito importante a gente ter os contatos,
+[53:27.680 --> 53:30.680]  até para que a gente tenha os atestados,
+[53:30.680 --> 53:32.680]  já tenha o banco de clientes.
+[53:32.680 --> 53:34.680]  Então você está no local estratégico,
+[53:34.680 --> 53:37.680]  Simone deve conhecer N municípios,
+[53:37.680 --> 53:41.680]  associações de municípios, você mesmo citou hoje, Wilton.
+[53:41.680 --> 53:43.680]  A MN está ali reunida.
+[53:43.680 --> 53:46.680]  Então é um evento que se a gente participasse hoje,
+[53:46.680 --> 53:50.680]  a gente já divulgaria para eles, distribuiria, faria contato.
+[53:50.680 --> 53:52.680]  Conscientização, né?
+[53:52.680 --> 53:55.680]  Isso, você pode ir em associações de municípios
+[53:55.680 --> 53:58.680]  do norte de Minas, do sul de Minas,
+[53:58.680 --> 54:01.680]  organiza um evento, faz uma palestra
+[54:01.680 --> 54:04.680]  e faz, trabalha os riscos.
+[54:04.680 --> 54:07.680]  E aí pela associação, como num evento só,
+[54:07.680 --> 54:09.680]  você já tem vários municípios,
+[54:09.680 --> 54:11.680]  você trabalha até com preços mais acessíveis,
+[54:11.680 --> 54:12.680]  e querendo ou não.
+[54:12.680 --> 54:14.680]  Isso aí tudo vocês vão adentrar,
+[54:14.680 --> 54:17.680]  provavelmente daqui a pouco a Simone vai passar.
+[54:17.680 --> 54:19.680]  Qual que é o custo disso?
+[54:19.680 --> 54:22.680]  Neste primeiro momento, trabalhar com um preço atrativo
+[54:22.680 --> 54:25.680]  para esses respectivos municípios,
+[54:25.680 --> 54:27.680]  para que eles fechem, porque a gente tem.
+[54:27.680 --> 54:31.680]  Já é cliente, está o município, está o município, está o município, está o município.
+[54:31.680 --> 54:32.680]  E referência.
+[54:32.680 --> 54:36.680]  Só para complementar, e até a pergunta do Hilton,
+[54:36.680 --> 54:40.680]  aí entra a parte política, doutor Hilton.
+[54:40.680 --> 54:41.680]  Exato.
+[54:41.680 --> 54:45.680]  Quem vai operar mais, acredito que seja eu e você,
+[54:45.680 --> 54:49.680]  que aí a gente entra naquela abinha de negócios, de business.
+[54:49.680 --> 54:50.680]  Exato.
+[54:50.680 --> 54:52.680]  O que eu, Simone, posso fazer?
+[54:52.680 --> 54:54.680]  Posso ir lá em Brasília,
+[54:55.680 --> 54:58.680]  sentar com o deputado tal, deputado,
+[54:58.680 --> 55:02.680]  a gente defende aqui, a gente representa um instituto
+[55:02.680 --> 55:06.680]  no qual ele defende a tecnologia, isso, aquilo,
+[55:06.680 --> 55:09.680]  tem essa finalidade, esse objetivo,
+[55:09.680 --> 55:11.680]  essa cidade tal, essa prefeitura.
+[55:11.680 --> 55:15.680]  E a gente fazer a intermediação também dos recursos públicos.
+[55:15.680 --> 55:18.680]  E aí a gente já pode chegar para o prefeito, já pronto.
+[55:18.680 --> 55:21.680]  Aí já é a nossa parte de um hobby.
+[55:21.680 --> 55:23.680]  Entende?
+[55:23.680 --> 55:25.680]  Simone, uma notícia muito boa para você.
+[55:25.680 --> 55:28.680]  Dá para a gente chegar no procurador do FNDE.
+[55:28.680 --> 55:31.680]  É onde tem o maior dinheiro do país, está lá.
+[55:31.680 --> 55:34.680]  O maior dinheiro do orçamento do país está direto no FNDE.
+[55:34.680 --> 55:36.680]  Então a gente está, a hora que a gente estiver com isso,
+[55:36.680 --> 55:40.680]  tudo extremamente pronto, documentado e organizado,
+[55:40.680 --> 55:44.680]  eu consigo chegar na fonte principal de recursos do país.
+[55:44.680 --> 55:48.680]  Aí a gente está falando de coisa de bilhões e mais bilhões.
+[55:48.680 --> 55:50.680]  O Orçamento da Saúde, se eu não me engano,
+[55:50.680 --> 55:56.680]  está na casa dos 200 e poucos bilhões de reais da saúde,
+[55:56.680 --> 55:58.680]  não, da educação.
+[55:58.680 --> 56:00.680]  Está na casa dos 200 e poucos bilhões.
+[56:00.680 --> 56:04.680]  A gente precisa fazer uma consulta em relação a isso,
+[56:04.680 --> 56:07.680]  porque dependendo, se o recurso vier de um fundo
+[56:07.680 --> 56:12.680]  e ele for enviado, destinado direto para o instituto,
+[56:12.680 --> 56:15.680]  o instituto pode executar isso em alguns municípios,
+[56:15.680 --> 56:18.680]  com esse fundo, com esse valor.
+[56:18.680 --> 56:21.680]  Ou então não, aí as emendas parlamentares
+[56:21.680 --> 56:24.680]  são enviadas do parlamentar para a prefeitura.
+[56:24.680 --> 56:26.680]  Emenda parlamentar para isso acho muito complexo,
+[56:26.680 --> 56:28.680]  porque isso aqui é trabalho de bastidor,
+[56:28.680 --> 56:29.680]  isso aqui não dá a volta.
+[56:29.680 --> 56:32.680]  Emenda parlamentar para esse tipo de serviço aqui,
+[56:32.680 --> 56:35.680]  eu diria que é 5%.
+[56:35.680 --> 56:37.680]  Eu vou te falar onde eles vão ter interesse,
+[56:37.680 --> 56:40.680]  que já aconteceu de a gente fazer esse,
+[56:40.680 --> 56:43.680]  eu já fiz esse modelo de negócio,
+[56:43.680 --> 56:45.680]  porque é onde eles recebem a comissão.
+[56:45.680 --> 56:48.680]  Então, o deputado, o prefeito de lá
+[56:48.680 --> 56:51.680]  e a empresa, no caso, repassa.
+[56:51.680 --> 56:55.680]  Então eles só têm interesse, quando a gente faz esse modelo,
+[56:55.680 --> 56:57.680]  por conta do que?
+[56:57.680 --> 56:59.680]  Mas que para nós, via instituto,
+[56:59.680 --> 57:01.680]  a nossa finalidade é muito mais além.
+[57:01.680 --> 57:05.680]  Ela é mais de fornecer ali uma execução,
+[57:05.680 --> 57:07.680]  uma finalidade, atender algo,
+[57:07.680 --> 57:09.680]  um princípio muito maior,
+[57:09.680 --> 57:12.680]  uma entrega muito maior do que isso, só por dinheiro.
+[57:12.680 --> 57:14.680]  Comissãozinha, né?
+[57:14.680 --> 57:15.680]  Exato.
+[57:15.680 --> 57:18.680]  Eu gostei muito, gostei bastante,
+[57:18.680 --> 57:19.680]  achei muito interessante.
+[57:19.680 --> 57:23.680]  É um produtasso, dá para a gente estar com ele aí,
+[57:23.680 --> 57:25.680]  você encabeçando isso,
+[57:25.680 --> 57:29.680]  a Gislênio Complace, a Camila, na tecnologia.
+[57:29.680 --> 57:33.680]  Exato, você e eu, a gente organizar essa parte comercial,
+[57:33.680 --> 57:38.680]  de vender isso, levar isso, instalar isso para as prefeituras,
+[57:38.680 --> 57:39.680]  eu acho interessante.
+[57:39.680 --> 57:44.680]  E aí a gente tem, no Brasil, 5.508 municípios para trabalhar.
+[57:44.680 --> 57:47.680]  O mercado é enorme.
+[57:47.680 --> 57:49.680]  O mercado é gigante.
+[57:49.680 --> 57:55.680]  Aqui uma pesquisa breve
+[57:55.680 --> 58:01.680]  sobre o assunto, sobre o mercado.
+[58:01.680 --> 58:06.680]  Eu imagino que não venha 10% dos municípios brasileiros com isso, pronto.
+[58:06.680 --> 58:10.680]  Simona, que tu estás apresentando,
+[58:10.680 --> 58:14.680]  tu pode abrir esse sitezinho?
+[58:14.680 --> 58:17.680]  Não entendi, Camila.
+[58:17.680 --> 58:22.680]  Abre esse site que a Camila mandou, Simona, por favor, no chat.
+[58:22.680 --> 58:25.680]  Entra no chat da nossa conversa aqui e abre esse site
+[58:25.680 --> 58:27.680]  para apresentar para todo mundo.
+[58:27.680 --> 58:29.680]  Abre, vocês estão conseguindo ver?
+[58:29.680 --> 58:31.680]  Ainda não.
+[58:31.680 --> 58:33.680]  Não atela só.
+[58:33.680 --> 58:38.680]  Com pesquisa básica de mercado, expandindo para a empresa também,
+[58:38.680 --> 58:43.680]  incluindo a prefeitura, mercado, concorrência,
+[58:43.680 --> 58:47.680]  eu iria te perguntar qual o valor que tu cobra,
+[58:47.680 --> 58:49.680]  porque eu estou dando uma sugestão,
+[58:49.680 --> 58:52.680]  mas, óbvio, tu tem muito mais noção.
+[58:54.680 --> 58:58.680]  Deixa eu tentar abrir uma proposta aqui para vocês.
+[58:58.680 --> 59:01.680]  Eu sugiro a gente também fazer um grupo de WhatsApp,
+[59:01.680 --> 59:05.680]  e aí eu consigo também colocar lá os arquivos.
+[59:05.680 --> 59:07.680]  Espera aí, só um minutinho.
+[59:07.680 --> 59:11.680]  Vou tentar enviar por e-mail para que eu consiga compartilhar aqui.
+[59:18.680 --> 59:23.680]  Acho que além disso, Simona, dessa tua apresentação,
+[59:23.680 --> 59:26.680]  o que você tiver de processo é muito relevante.
+[59:27.680 --> 59:34.680]  Você disse que já tem o BPMN, como fosse,
+[59:34.680 --> 59:37.680]  como funciona todo o fluxo.
+[59:37.680 --> 59:40.680]  Camila, tem uma pergunta técnica,
+[59:40.680 --> 59:44.680]  e eu acho que é até dúvida, obviamente, de Wilton.
+[59:44.680 --> 59:48.680]  Quando ele pergunta de recurso é porque, tendo um projeto,
+[59:48.680 --> 59:52.680]  você tem valores que você já utiliza na própria execução.
+[59:52.680 --> 59:55.680]  Mas como a gente vai trabalhar com um produto,
+[59:55.680 --> 59:58.680]  eu preciso entender o seguinte, qual é o custo disso?
+[59:58.680 --> 01:00:01.680]  A gente vai ter um software, vai ter um drive.
+[01:00:01.680 --> 01:00:07.680]  O que o Instituto, economicamente falando, vai precisar se preparar?
+[01:00:07.680 --> 01:00:09.680]  Porque quando a gente lida com um produto,
+[01:00:09.680 --> 01:00:13.680]  Wilton, e obviamente, Simona, já está isso muito claro,
+[01:00:13.680 --> 01:00:18.680]  a gente trabalha com, presta-se o serviço, posteriormente se recebe.
+[01:00:18.680 --> 01:00:21.680]  Não é igual um projeto, que você tem um cronograma financeiro,
+[01:00:21.680 --> 01:00:23.680]  já vai recebendo e executando.
+[01:00:23.680 --> 01:00:27.680]  Então, talvez, começar com situações menores,
+[01:00:27.680 --> 01:00:29.680]  municípios menores,
+[01:00:29.680 --> 01:00:33.680]  organizando para que a gente tenha uma estrutura de TI
+[01:00:33.680 --> 01:00:37.680]  para comportar grandes municípios, executar isso.
+[01:00:37.680 --> 01:00:39.680]  Porque a gente vai ter sistema.
+[01:00:39.680 --> 01:00:42.680]  Eu não entendo muito disso, Wilton já sabe também.
+[01:00:42.680 --> 01:00:47.680]  A gente vai ter que ter uma base para executar essa prestação de serviço.
+[01:00:47.680 --> 01:00:49.680]  Exatamente.
+[01:00:49.680 --> 01:00:51.680]  Deixa eu apresentar para vocês uma proposta.
+[01:00:51.680 --> 01:00:54.680]  Nossa, até Luiz Eduardo Magalhães foi eu que apresentei lá.
+[01:00:54.680 --> 01:00:59.680]  E aí, o presidente da Câmara estava sem recurso.
+[01:00:59.680 --> 01:01:06.680]  E aí, disse que iria ver lá a questão desse recurso para poder contratar.
+[01:01:06.680 --> 01:01:11.680]  Inclusive, ele mexeu comigo em dezembro e falou que março viria a Brasília,
+[01:01:11.680 --> 01:01:13.680]  que a gente conversaria e ele não veio.
+[01:01:13.680 --> 01:01:15.680]  Mas olha como que é a proposta.
+[01:01:15.680 --> 01:01:17.680]  Ela é precificada por itens.
+[01:01:18.680 --> 01:01:25.680]  Item 1, a solução informatizada de privacidade, gestão de risco e segurança da informação,
+[01:01:25.680 --> 01:01:27.680]  que aí é o software.
+[01:01:27.680 --> 01:01:31.680]  Aí, a gente cobra por licença de uso mensal,
+[01:01:31.680 --> 01:01:36.680]  porque a entidade, a prefeitura vai usar a nossa plataforma.
+[01:01:36.680 --> 01:01:41.680]  Então, valor unitário, 5.275.
+[01:01:41.680 --> 01:01:43.680]  Qual que é a quantidade? 12?
+[01:01:43.680 --> 01:01:49.680]  Porque nós dividimos em 12 meses um ano do plano de conformidade.
+[01:01:49.680 --> 01:01:59.680]  E a gente faz essa precificação de acordo com a quantidade de servidores públicos
+[01:01:59.680 --> 01:02:03.680]  e a quantidade da população daquela cidade.
+[01:02:03.680 --> 01:02:08.680]  Isso é bem relevante na precificação.
+[01:02:08.680 --> 01:02:11.680]  Inclusive, tem um estudo de composição de preço,
+[01:02:11.680 --> 01:02:14.680]  porque o Tribunal de Contas avalia isso também.
+[01:02:14.680 --> 01:02:20.680]  A gente não pode do nada sair precificando.
+[01:02:20.680 --> 01:02:27.680]  Então, item 2, a especificação, a solução informatizada para proteção de dados,
+[01:02:27.680 --> 01:02:31.680]  que aí é aquela transformação digital, que é o documento físico,
+[01:02:31.680 --> 01:02:36.680]  que subiu para o digital, a gente transformou ele para digital,
+[01:02:36.680 --> 01:02:40.680]  onde tem a busca inteligente, a rastreabilidade do uso.
+[01:02:40.680 --> 01:02:43.680]  Foi o que eu falei que aí o nosso sistema tem que ter.
+[01:02:43.680 --> 01:02:46.680]  Alguém foi lá, abriu um documento que tem dados sensíveis,
+[01:02:46.680 --> 01:02:52.680]  tem que ficar o registro, a matrícula desse servidor que teve acesso a esse documento.
+[01:02:52.680 --> 01:02:56.680]  Aí já é a parte da ferramenta também da nossa solução,
+[01:02:56.680 --> 01:03:02.680]  que também é a licença de uso mensal, mesmo valor e a precificação.
+[01:03:03.680 --> 01:03:11.680]  O item 3, que aqui entra mais, acredito que a questão da parte jurídica, do compliance,
+[01:03:11.680 --> 01:03:20.680]  que é quando os nossos colaboradores, estagiários de direitos, técnicos de tecnologia,
+[01:03:20.680 --> 01:03:25.680]  não sei qual que é o segmento dessas pessoas,
+[01:03:25.680 --> 01:03:31.680]  Os nossos colaboradores,
+[01:03:31.680 --> 01:03:34.680]  que vai fazer o inventário, as entrevistas.
+[01:03:34.680 --> 01:03:38.680]  Então aí está todo o serviço, inventário de mapeamento de dados,
+[01:03:38.680 --> 01:03:41.680]  gestão de risco da segurança da formação,
+[01:03:41.680 --> 01:03:44.680]  a implantação do programa de conformidade,
+[01:03:44.680 --> 01:03:47.680]  que é aquele plano de execução que eu apresentei para vocês,
+[01:03:47.680 --> 01:03:50.680]  ele tem a precificação dele também.
+[01:03:50.680 --> 01:03:52.680]  Aí aqui a gente tem mão de obra,
+[01:03:52.680 --> 01:03:56.680]  aí ficou um pouquinho mais claro, já viu que o item 3 a precificação já aumentou,
+[01:03:56.680 --> 01:04:00.680]  porque aqui nós vamos precisar de estagiários de direito,
+[01:04:00.680 --> 01:04:03.680]  de advogados júniores, às vezes sênior,
+[01:04:03.680 --> 01:04:08.680]  desenvolvedores do sistema, de tecnologia, de informação,
+[01:04:08.680 --> 01:04:12.680]  mais operadores, como que fala? É DENVI, Camila?
+[01:04:12.680 --> 01:04:14.680]  É os DENVI, né, que fala?
+[01:04:14.680 --> 01:04:18.680]  É DENVI, DENVI, bem DENVI.
+[01:04:18.680 --> 01:04:24.680]  Isso, aí a continuação aí do item 4,
+[01:04:24.680 --> 01:04:28.680]  serviço de proteção e perda ao serviço documental.
+[01:04:28.680 --> 01:04:30.680]  Aí aqui é quando a gente contrata também,
+[01:04:30.680 --> 01:04:34.680]  subcontrata a empresa para poder digitalizar.
+[01:04:34.680 --> 01:04:36.680]  Entra nessa parte aqui.
+[01:04:36.680 --> 01:04:41.680]  Esse tem um valor, porque tem o OCR,
+[01:04:41.680 --> 01:04:45.680]  a gente vai disponibilizar acesso, login.
+[01:04:46.680 --> 01:04:47.680]  Tá.
+[01:04:47.680 --> 01:04:51.680]  Qual a dificuldade que, vamos dizer, qual a taxa que tu tens,
+[01:04:51.680 --> 01:04:59.680]  tu tinha de, vamos dizer, fechar acordo?
+[01:05:01.680 --> 01:05:03.680]  Não entendi a pergunta.
+[01:05:03.680 --> 01:05:06.680]  Seria tipo, é mercadologicamente falando,
+[01:05:06.680 --> 01:05:10.680]  de quem você apresenta a proposta, a taxa de conversão.
+[01:05:12.680 --> 01:05:15.680]  Tipo o funil de vendas.
+[01:05:17.680 --> 01:05:18.680]  O que que tem?
+[01:05:18.680 --> 01:05:24.680]  Qual a taxa de conversão que na época vocês apresentavam
+[01:05:24.680 --> 01:05:28.680]  versus era convertido realmente em cliente?
+[01:05:31.680 --> 01:05:35.680]  De apresentação e fechamento de contrato, você fala?
+[01:05:35.680 --> 01:05:40.680]  Tipo, apresentei para 10 prefeituras, de 10.
+[01:05:40.680 --> 01:05:42.680]  Quantas fechavam de fato?
+[01:05:42.680 --> 01:05:46.680]  Eu vou te dar uma média aqui pela minha experiência, tá?
+[01:05:46.680 --> 01:05:49.680]  Não é um dado que eu não tenha essa métrica.
+[01:05:49.680 --> 01:05:52.680]  Depende de vários fatores.
+[01:05:52.680 --> 01:05:54.680]  Às vezes o prefeito se interessava,
+[01:05:54.680 --> 01:05:57.680]  falou, nossa, eu vou colocar minha prefeitura organizada.
+[01:05:57.680 --> 01:05:59.680]  Mas às vezes não tinha um recurso.
+[01:05:59.680 --> 01:06:02.680]  A maioria das vezes é a falta de um recurso, viu, Irá.
+[01:06:02.680 --> 01:06:03.680]  Imagina.
+[01:06:03.680 --> 01:06:07.680]  10, a gente conseguia fechar 3, 4.
+[01:06:07.680 --> 01:06:09.680]  Que já é um valor alto.
+[01:06:09.680 --> 01:06:11.680]  Que já é um valor considerado.
+[01:06:11.680 --> 01:06:16.680]  Porque, gente, como a gente percebeu aqui, é obrigatório.
+[01:06:16.680 --> 01:06:19.680]  Tem a responsabilização, tem as sanções.
+[01:06:19.680 --> 01:06:22.680]  E dependendo do Estado, isso já está sendo fiscalizado,
+[01:06:22.680 --> 01:06:24.680]  isso já está sendo cobrado.
+[01:06:24.680 --> 01:06:26.680]  Como o Wilton disse, já tem prefeitos assim,
+[01:06:26.680 --> 01:06:28.680]  não teve nenhum prefeito que foi preso,
+[01:06:28.680 --> 01:06:31.680]  mas já teve notificações do Ministério Público.
+[01:06:31.680 --> 01:06:34.680]  Intubiaro teve notificação do Ministério Público,
+[01:06:34.680 --> 01:06:38.680]  Pato de Minas, Patrocínio, São Simão.
+[01:06:38.680 --> 01:06:41.680]  São Simão, nós implementamos LGPD lá.
+[01:06:42.680 --> 01:06:44.680]  O que eu peço, Camille e Wilton?
+[01:06:44.680 --> 01:06:46.680]  A gente vai trabalhar nesse primeiro momento muito
+[01:06:46.680 --> 01:06:48.680]  em influência, conhecidos,
+[01:06:48.680 --> 01:06:50.680]  municípios próximos que a gente tem acesso.
+[01:06:50.680 --> 01:06:56.680]  Mas trabalhar a estruturação de um departamento comercial
+[01:06:56.680 --> 01:06:58.680]  futuramente para vender todos os produtos, tá?
+[01:06:58.680 --> 01:07:01.680]  No qual a gente vai disparar e vai fazer materiais,
+[01:07:01.680 --> 01:07:04.680]  inclusive material específico para prefeitos,
+[01:07:04.680 --> 01:07:06.680]  para gestores, colocando sobre o risco.
+[01:07:06.680 --> 01:07:09.680]  Organização de eventos junto a esses municípios,
+[01:07:09.680 --> 01:07:11.680]  Associação Mineira de Municípios,
+[01:07:11.680 --> 01:07:13.680]  Associação Goiânia de Municípios,
+[01:07:13.680 --> 01:07:16.680]  mandando esse material, conversando e fazendo um evento,
+[01:07:16.680 --> 01:07:18.680]  seja online ou presencial, tá?
+[01:07:18.680 --> 01:07:20.680]  Dependendo da situação presencial, é legal.
+[01:07:20.680 --> 01:07:23.680]  E a gente trabalha, por exemplo, próximo onde Simone está,
+[01:07:23.680 --> 01:07:26.680]  próximo onde eu estou, porque a gente nesse primeiro momento,
+[01:07:26.680 --> 01:07:28.680]  enquanto não temos caixa para a contratação,
+[01:07:28.680 --> 01:07:31.680]  dos estudados júnior, dos estagiários.
+[01:07:31.680 --> 01:07:33.680]  O que a gente tem.
+[01:07:33.680 --> 01:07:34.680]  Exato.
+[01:07:35.680 --> 01:07:39.680]  Eu acho que eu ainda vou um pouco o pé atrás.
+[01:07:39.680 --> 01:07:42.680]  Acho que a gente seria um planejamento estratégico.
+[01:07:43.680 --> 01:07:46.680]  Pegando os dados que a gente tem agora,
+[01:07:46.680 --> 01:07:49.680]  por isso que eu perguntei que está achando conversão, Simone.
+[01:07:49.680 --> 01:07:55.680]  E aí, na resposta, você já me falou algo que é uma barreira.
+[01:07:55.680 --> 01:07:58.680]  Um análise alto seria uma barreira.
+[01:07:58.680 --> 01:07:59.680]  Valor, concorda?
+[01:07:59.680 --> 01:08:01.680]  Sim, ponto fraco.
+[01:08:02.680 --> 01:08:05.680]  Eu entendo o fato do valor ser alto.
+[01:08:05.680 --> 01:08:08.680]  Poxa, estava muito operacional.
+[01:08:08.680 --> 01:08:12.680]  Se a gente tem uma cabeça muito indústria,
+[01:08:12.680 --> 01:08:16.680]  ou eu e Gisele já sabem,
+[01:08:16.680 --> 01:08:20.680]  a indústria ganha não é no preço unitário,
+[01:08:20.680 --> 01:08:25.680]  mas no preço da quantidade de produtos vendidos.
+[01:08:26.680 --> 01:08:29.680]  Por isso que eu peguei a Associação de Municípios,
+[01:08:29.680 --> 01:08:32.680]  porque a gente trabalha com um preço mais em conta
+[01:08:32.680 --> 01:08:35.680]  e tem uma garantia de que vários municípios vão fazer adesão.
+[01:08:35.680 --> 01:08:38.680]  Neste primeiro momento, eu sei que a gente está falando do Instituto,
+[01:08:38.680 --> 01:08:43.680]  mas enfim, o lucro, o valor para pagar os profissionais e para o Instituto,
+[01:08:43.680 --> 01:08:45.680]  ele vai ser menor, não adianta.
+[01:08:45.680 --> 01:08:50.680]  Depois, fazendo o nosso nome, nós vamos nos gabaritando e aí vai subindo.
+[01:08:50.680 --> 01:08:54.680]  A partir do momento que formos certificadores, vai estar lá no top.
+[01:08:54.680 --> 01:08:57.680]  E eles vão priorizar a nossa contratação.
+[01:08:57.680 --> 01:09:00.680]  Mas agora, até uma pergunta que eu tenho, doutora,
+[01:09:00.680 --> 01:09:03.680]  deve ter óbvio nessa informação aí,
+[01:09:03.680 --> 01:09:06.680]  os municípios que já se encontram regular,
+[01:09:06.680 --> 01:09:09.680]  essa agência que regula isso, ela já deve colocar.
+[01:09:09.680 --> 01:09:11.680]  Já, sim.
+[01:09:11.680 --> 01:09:15.680]  Houve uma notificação em massa da NPD
+[01:09:15.680 --> 01:09:18.680]  para vários municípios para se adequarem.
+[01:09:18.680 --> 01:09:21.680]  Inclusive, a NPD mandou no ano retrasado
+[01:09:21.680 --> 01:09:26.680]  um formulário para as entidades públicas preencherem.
+[01:09:26.680 --> 01:09:29.680]  Para ela avaliar o grau de maturidade, de adequação.
+[01:09:29.680 --> 01:09:35.680]  Estágio zero, nível de adequação, primeiro nível, segundo nível.
+[01:09:35.680 --> 01:09:40.680]  A gente não precisa ficar distrito só ao município, isso é em todos os âmbitos.
+[01:09:40.680 --> 01:09:42.680]  Você tem órgãos federais,
+[01:09:42.680 --> 01:09:46.680]  que a gente fala, órgão federal, nessa altura do campeonato deve estar todo regulado.
+[01:09:46.680 --> 01:09:48.680]  Não, senhora.
+[01:09:48.680 --> 01:09:50.680]  A gente acha que...
+[01:09:50.680 --> 01:09:53.680]  Em casa não faz milagres, são os piores.
+[01:09:53.680 --> 01:09:56.680]  Imagina o Ministério da Saúde, Wilton.
+[01:09:56.680 --> 01:10:00.680]  Será que eles estão em conformidade com a LGPD? Eu duvido.
+[01:10:00.680 --> 01:10:02.680]  Eu também duvido.
+[01:10:02.680 --> 01:10:06.680]  A gente vai apresentá-lo lá em cima também.
+[01:10:06.680 --> 01:10:09.680]  E não tem estrutura para isso.
+[01:10:09.680 --> 01:10:12.680]  O instituto pode ter, o instituto especializado para isso.
+[01:10:16.680 --> 01:10:21.680]  Eu acredito que a gente pode vender muito.
+[01:10:21.680 --> 01:10:22.680]  Isso é enorme.
+[01:10:22.680 --> 01:10:25.680]  E além de mais ser uma oportunidade,
+[01:10:25.680 --> 01:10:31.680]  ainda que empresas ou prefeituras ou empresas já estejam certificadas,
+[01:10:31.680 --> 01:10:35.680]  se a gente oferece um bom preço, uma boa qualidade de negócio,
+[01:10:35.680 --> 01:10:38.680]  sim, a gente converte.
+[01:10:38.680 --> 01:10:41.680]  Então eu acho que talvez,
+[01:10:41.680 --> 01:10:46.680]  se a gente conseguir transformar esse processo máximo
+[01:10:46.680 --> 01:10:53.680]  e a operação menos manual mais automata,
+[01:10:53.680 --> 01:10:58.680]  a gente consegue diminuir o custo que a gente tem.
+[01:10:58.680 --> 01:11:00.680]  O custo do serviço.
+[01:11:00.680 --> 01:11:05.680]  Logo, ofertar um melhor preço e barganhar um mercado maior.
+[01:11:05.680 --> 01:11:08.680]  Eu tenho uma pergunta, Camila.
+[01:11:08.680 --> 01:11:13.680]  Quanto tempo a gente precisa para desenvolver
+[01:11:13.680 --> 01:11:16.680]  LGPD Web, LGPD Drive?
+[01:11:16.680 --> 01:11:18.680]  A nossa plataforma.
+[01:11:18.680 --> 01:11:22.680]  A nossa plataforma para que a gente consiga já vender isso.
+[01:11:22.680 --> 01:11:24.680]  Por que eu estou perguntando?
+[01:11:24.680 --> 01:11:25.680]  Dá para a gente ir trabalhando.
+[01:11:25.680 --> 01:11:27.680]  Elaboração de material, abordagem,
+[01:11:27.680 --> 01:11:30.680]  enquanto Camila vai trabalhando o sistema.
+[01:11:30.680 --> 01:11:32.680]  A nossa plataforma.
+[01:11:32.680 --> 01:11:34.680]  O nosso plano de execução.
+[01:11:34.680 --> 01:11:35.680]  Eu já escrevi aqui.
+[01:11:35.680 --> 01:11:37.680]  Vou chamar de plano de negócio.
+[01:11:37.680 --> 01:11:39.680]  Plano de negócio.
+[01:11:39.680 --> 01:11:42.680]  Eu vou esboçar um plano de negócio,
+[01:11:42.680 --> 01:11:44.680]  mandar no nosso grupo.
+[01:11:44.680 --> 01:11:46.680]  Vocês vão aperfeiçoá-lo.
+[01:11:46.680 --> 01:11:49.680]  A gente estabelece prazos, metas.
+[01:11:49.680 --> 01:11:51.680]  O que tem que ser feito por quem.
+[01:11:51.680 --> 01:11:53.680]  E a gente começar a disparar isso.
+[01:11:53.680 --> 01:11:56.680]  Porque a captação não é rápida.
+[01:11:56.680 --> 01:11:58.680]  Lógico que a gente vai tentar um contato aqui e ali.
+[01:11:58.680 --> 01:12:00.680]  Simone já está inserida nesse mercado.
+[01:12:00.680 --> 01:12:04.680]  O Wilton tem um acesso, apesar dos políticos, óbvio.
+[01:12:04.680 --> 01:12:07.680]  Vocês dois estão estrategicamente.
+[01:12:07.680 --> 01:12:10.680]  É muito bom para que a gente faça isso.
+[01:12:10.680 --> 01:12:11.680]  Mas enfim, estou em Minas.
+[01:12:11.680 --> 01:12:13.680]  Eu vou explorar o mercado aqui.
+[01:12:13.680 --> 01:12:14.680]  Para a gente também, óbvio.
+[01:12:14.680 --> 01:12:17.680]  E depois disso a gente vai abrindo braços, vai contratando.
+[01:12:17.680 --> 01:12:20.680]  A gente já faz esse plano de negócio e já estabelece como meta.
+[01:12:20.680 --> 01:12:21.680]  Wilton querendo ou não.
+[01:12:21.680 --> 01:12:24.680]  Você que inclusive vem pleiteando.
+[01:12:24.680 --> 01:12:26.680]  Olha, eu preciso de valores rápidos para o instituto.
+[01:12:26.680 --> 01:12:28.680]  É um produto que a gente já vai vender.
+[01:12:28.680 --> 01:12:30.680]  Exatamente.
+[01:12:30.680 --> 01:12:32.680]  Eu gostei demais do produto.
+[01:12:32.680 --> 01:12:36.680]  A carinha do sistema aí eu coloquei para vocês.
+[01:12:36.680 --> 01:12:42.680]  Isso aqui é quando o gestor abrir o sistema Web, GPD Web, a plataforma.
+[01:12:42.680 --> 01:12:45.680]  Vai ver esse cenário aí.
+[01:12:45.680 --> 01:12:46.680]  Ele tem que ver a matriz de risco.
+[01:12:46.680 --> 01:12:49.680]  Aí já é a linguagem da Camila.
+[01:12:49.680 --> 01:12:53.680]  Ela vai converter todas as informações que nós vamos levantar.
+[01:12:53.680 --> 01:12:55.680]  Os nossos estagiários.
+[01:12:55.680 --> 01:12:58.680]  A análise do inventário de dados.
+[01:12:58.680 --> 01:13:01.680]  E converter isso para a matriz.
+[01:13:01.680 --> 01:13:02.680]  Pergunta técnica.
+[01:13:02.680 --> 01:13:04.680]  E eu pergunto mesmo porque eu não domino TI.
+[01:13:04.680 --> 01:13:11.680]  Nós vamos ter um sistema matriz.
+[01:13:11.680 --> 01:13:12.680]  Vou chamar assim.
+[01:13:12.680 --> 01:13:13.680]  Não sei se a tecnologia é correta.
+[01:13:13.680 --> 01:13:17.680]  Mas, por exemplo, a cada prefeitura, órgão que a gente atender.
+[01:13:17.680 --> 01:13:20.680]  Vai fazer uma adequação dele para aquela realidade.
+[01:13:20.680 --> 01:13:23.680]  Isso.
+[01:13:23.680 --> 01:13:25.680]  Não é a IA dele.
+[01:13:25.680 --> 01:13:31.680]  Quando eu falo, a IA não é a IA do Netflix.
+[01:13:31.680 --> 01:13:38.680]  Que é aquela IA que ela se conforma para o usuário.
+[01:13:38.680 --> 01:13:40.680]  Ou seja, para aquela prefeitura.
+[01:13:40.680 --> 01:13:45.680]  Então é uma IA que reconhece aquela prefeitura por padrões.
+[01:13:45.680 --> 01:13:51.680]  E ela faz sugestões baseadas naqueles dados da prefeitura.
+[01:13:51.680 --> 01:13:54.680]  Então é aquela IA que é a machine learning no caso.
+[01:13:54.680 --> 01:13:56.680]  Que é usada para dados.
+[01:13:56.680 --> 01:13:57.680]  Análise de dados.
+[01:13:58.680 --> 01:14:02.680]  Então a gente consegue ter algo automático.
+[01:14:02.680 --> 01:14:04.680]  Como você apresenta aí.
+[01:14:04.680 --> 01:14:06.680]  Que é o dashboard OBI.
+[01:14:06.680 --> 01:14:14.680]  Para ter realmente a acertividade da informação.
+[01:14:14.680 --> 01:14:19.680]  A inteligência artificial do machine learning no caso.
+[01:14:19.680 --> 01:14:21.680]  E tudo personalizado.
+[01:14:21.680 --> 01:14:25.680]  Por exemplo, a prefeitura de Goiânia vai entrar lá na plataforma.
+[01:14:25.680 --> 01:14:27.680]  Logo em acesso deles.
+[01:14:27.680 --> 01:14:29.680]  E vai estar o brasão lá da prefeitura de Goiânia.
+[01:14:29.680 --> 01:14:31.680]  Tudo personalizado.
+[01:14:31.680 --> 01:14:36.680]  E aí, na prática, quando nós vamos vender isso, Wilton.
+[01:14:36.680 --> 01:14:41.680]  Geralmente a gente já tem o primeiro contato.
+[01:14:41.680 --> 01:14:44.680]  Que ele é feito por nós.
+[01:14:44.680 --> 01:14:46.680]  Ou é por uma indicação, uma influência.
+[01:14:46.680 --> 01:14:50.680]  E aí normalmente a gente senta, faz apresentação comercial.
+[01:14:50.680 --> 01:14:52.680]  Eu como advogada jurídica também.
+[01:14:52.680 --> 01:14:54.680]  Falo da legislação.
+[01:14:54.680 --> 01:14:57.680]  Eu faço uma explanação, um escopo desse.
+[01:14:57.680 --> 01:14:58.680]  Como que funciona na prática.
+[01:14:58.680 --> 01:14:59.680]  Os riscos.
+[01:14:59.680 --> 01:15:00.680]  Quanto o caso.
+[01:15:00.680 --> 01:15:01.680]  O que que já aconteceu e tal.
+[01:15:01.680 --> 01:15:03.680]  Vencendo essa primeira etapa.
+[01:15:03.680 --> 01:15:05.680]  É normal que o prefeito.
+[01:15:05.680 --> 01:15:08.680]  Essa política que a gente teve o contato.
+[01:15:08.680 --> 01:15:09.680]  Ele vai falar assim.
+[01:15:09.680 --> 01:15:11.680]  Tem que passar para a parte técnica.
+[01:15:11.680 --> 01:15:14.680]  Que é o diretor lá do TI.
+[01:15:14.680 --> 01:15:16.680]  Nessa reunião.
+[01:15:16.680 --> 01:15:17.680]  Nessa segunda reunião.
+[01:15:17.680 --> 01:15:18.680]  Que a gente já evoluiu.
+[01:15:18.680 --> 01:15:22.680]  A gente já está evoluindo para uma aprovação e análise técnica.
+[01:15:22.680 --> 01:15:24.680]  Aí tem que entrar a Camila.
+[01:15:24.680 --> 01:15:28.680]  Porque aí surgem várias dúvidas técnicas.
+[01:15:28.680 --> 01:15:30.680]  Atreladas assim ó.
+[01:15:30.680 --> 01:15:32.680]  Específico de segurança da informação.
+[01:15:32.680 --> 01:15:33.680]  De web.
+[01:15:33.680 --> 01:15:34.680]  De wireless.
+[01:15:34.680 --> 01:15:35.680]  De wi-fi.
+[01:15:35.680 --> 01:15:36.680]  De servidor.
+[01:15:36.680 --> 01:15:38.680]  Que para mim já é grebo.
+[01:15:38.680 --> 01:15:40.680]  Então eu já fiz muita reunião.
+[01:15:40.680 --> 01:15:42.680]  Obrigada.
+[01:15:42.680 --> 01:15:44.680]  Vamos se juntar para a beta digital.
+[01:15:44.680 --> 01:15:48.680]  Obrigada.
+[01:15:48.680 --> 01:15:49.680]  Em que que eu penso?
+[01:15:49.680 --> 01:15:51.680]  Simone e Wilton e Camila.
+[01:15:51.680 --> 01:15:53.680]  É um processo de venda.
+[01:15:53.680 --> 01:15:55.680]  Wilton como bom vendedor sabe.
+[01:15:55.680 --> 01:15:57.680]  Você tem um prazo aí.
+[01:15:57.680 --> 01:15:59.680]  E um prazo de venda para administração.
+[01:15:59.680 --> 01:16:01.680]  Por isso que eu queria elaborar um plano de negócio.
+[01:16:01.680 --> 01:16:04.680]  E eu queria já disparar a captação.
+[01:16:04.680 --> 01:16:06.680]  E eu preciso saber da Camila.
+[01:16:06.680 --> 01:16:09.680]  Para a elaboração desse sistema mãe.
+[01:16:09.680 --> 01:16:11.680]  Dessa nossa matriz.
+[01:16:11.680 --> 01:16:13.680]  Ela estima em quanto tempo?
+[01:16:13.680 --> 01:16:15.680]  30 dias?
+[01:16:15.680 --> 01:16:16.680]  45 dias?
+[01:16:16.680 --> 01:16:18.680]  Porque nesse tempo aí a gente vai.
+[01:16:18.680 --> 01:16:19.680]  Faz um material.
+[01:16:19.680 --> 01:16:20.680]  Já vai divulgando.
+[01:16:20.680 --> 01:16:21.680]  Fazendo a primeira reunião.
+[01:16:21.680 --> 01:16:22.680]  Doutora Simone.
+[01:16:22.680 --> 01:16:23.680]  Wilton.
+[01:16:23.680 --> 01:16:24.680]  Eu.
+[01:16:24.680 --> 01:16:25.680]  Já envolvi até para a segunda reunião.
+[01:16:25.680 --> 01:16:26.680]  Camila.
+[01:16:26.680 --> 01:16:27.680]  Com você.
+[01:16:27.680 --> 01:16:28.680]  Exato.
+[01:16:28.680 --> 01:16:29.680]  E quanto custa Camila?
+[01:16:29.680 --> 01:16:31.680]  Quanto para desenvolver algo nesse sentido?
+[01:16:31.680 --> 01:16:32.680]  Aí você vai analisar tudo.
+[01:16:32.680 --> 01:16:33.680]  E ver quanto custa.
+[01:16:33.680 --> 01:16:34.680]  Exatamente.
+[01:16:34.680 --> 01:16:35.680]  Eu estou mais aqui.
+[01:16:35.680 --> 01:16:36.680]  Eu vou te defender Camila.
+[01:16:36.680 --> 01:16:37.680]  Quanto custa e quanto custa?
+[01:16:37.680 --> 01:16:38.680]  Olha está escutem a Simone viu.
+[01:16:38.680 --> 01:16:39.680]  Ela que sabe.
+[01:16:39.680 --> 01:16:40.680]  Gente então.
+[01:16:40.680 --> 01:16:41.680]  Olha a Clarinha.
+[01:16:41.680 --> 01:16:42.680]  Um plano.
+[01:16:42.680 --> 01:16:43.680]  Um plano de implementação.
+[01:16:44.680 --> 01:16:50.680]  Primeiro a gente tem que desenhar o nosso plano estratégico.
+[01:16:50.680 --> 01:16:53.680]  Porque senão eu vou ter perda.
+[01:16:53.680 --> 01:16:58.680]  A gente ter perda no processo de retrabalho.
+[01:16:58.680 --> 01:17:02.680]  Aí é custo.
+[01:17:02.680 --> 01:17:03.680]  Então a gente tem que sentar planejar.
+[01:17:03.680 --> 01:17:12.680]  Acho que a próxima reunião é definição estratégica do business.
+[01:17:12.680 --> 01:17:16.680]  Hoje, é óbvio que ele já tem.
+[01:17:17.680 --> 01:17:20.680]  Porém, eu vejo uma oportunidade imensurável
+[01:17:20.680 --> 01:17:25.680]  de a gente diminuir a personalização.
+[01:17:25.680 --> 01:17:28.680]  Personalização do nosso trabalho.
+[01:17:28.680 --> 01:17:31.680]  Ele ser auto-vendável.
+[01:17:32.680 --> 01:17:37.680]  Você falou aí da burocracia que há na hora de fechar.
+[01:17:37.680 --> 01:17:40.680]  A burocracia é porque o preço é muito elevado.
+[01:17:40.680 --> 01:17:45.680]  Quando o preço é elevado, o risco da compra aumenta.
+[01:17:45.680 --> 01:17:47.680]  Mas é justificável.
+[01:17:47.680 --> 01:17:49.680]  É total. Não estou dizendo que não é.
+[01:17:49.680 --> 01:17:52.680]  Mas se a gente tem algo que for...
+[01:17:52.680 --> 01:17:54.680]  Que para a gente diminui o custo.
+[01:17:54.680 --> 01:17:56.680]  Para você hoje, o custo...
+[01:17:57.680 --> 01:18:02.680]  Você, digamos, cobrava R$ 5.000 no mês.
+[01:18:02.680 --> 01:18:05.680]  Mas você tinha um custo ali de R$ 3.000.
+[01:18:05.680 --> 01:18:07.680]  O lucro era R$ 2.000, por exemplo.
+[01:18:07.680 --> 01:18:10.680]  Se a gente reduzi isso para R$ 1.000,
+[01:18:10.680 --> 01:18:13.680]  a gente poderia vender por menos, entendeu?
+[01:18:13.680 --> 01:18:15.680]  Simone, me tira uma dúvida.
+[01:18:15.680 --> 01:18:17.680]  Essa proposta que você apresentou...
+[01:18:17.680 --> 01:18:21.680]  Desculpa, Camila, só para a gente ter ideia de valor também.
+[01:18:21.680 --> 01:18:25.680]  Você falou que leva em consideração o número de acessos
+[01:18:25.680 --> 01:18:29.680]  e o número de a população do município.
+[01:18:29.680 --> 01:18:31.680]  Essa proposta que você apresentou,
+[01:18:31.680 --> 01:18:34.680]  não enxerguei errado, um milhão e pouco, era isso?
+[01:18:34.680 --> 01:18:36.680]  R$ 600.000.
+[01:18:36.680 --> 01:18:40.680]  R$ 600.000 era para quais parâmetros?
+[01:18:40.680 --> 01:18:42.680]  Quantos acessos e qual população?
+[01:18:42.680 --> 01:18:47.680]  Para a cidade da Bahia, São Luís...
+[01:18:49.680 --> 01:18:52.680]  E aí a gente pega os dados do IBGE, tá?
+[01:18:53.680 --> 01:18:55.680]  Quantidade da população.
+[01:18:55.680 --> 01:18:57.680]  A gente entra lá na hora de formalizar a proposta,
+[01:18:57.680 --> 01:18:59.680]  que é o nosso parâmetro.
+[01:18:59.680 --> 01:19:01.680]  Aqui é a de Luís Eduardo Magalhães.
+[01:19:01.680 --> 01:19:04.680]  Então, provavelmente, a gente colocou ali
+[01:19:04.680 --> 01:19:09.680]  a quantidade de servidores e a quantidade de população.
+[01:19:10.680 --> 01:19:12.680]  Luís Eduardo Magalhães.
+[01:19:12.680 --> 01:19:13.680]  Depois eu vou olhar a população.
+[01:19:13.680 --> 01:19:14.680]  Não, só para a gente ter ideia.
+[01:19:14.680 --> 01:19:16.680]  Tá? O que eu sugiro, gente?
+[01:19:16.680 --> 01:19:20.680]  A gente está aí com o mês de maio começando.
+[01:19:20.680 --> 01:19:24.680]  Não dá para a gente ficar conjecturando muito, sabe?
+[01:19:24.680 --> 01:19:27.680]  Então, assim, eu vou, com a minha experiência,
+[01:19:27.680 --> 01:19:29.680]  que não é de administração e nem técnica,
+[01:19:29.680 --> 01:19:32.680]  eu vou esboçar um plano de negócio.
+[01:19:32.680 --> 01:19:34.680]  Vou criar o nosso grupo.
+[01:19:34.680 --> 01:19:39.680]  A gente pode, com base nele, discutir, implementar.
+[01:19:39.680 --> 01:19:41.680]  Camila, não sei se você ia responder ainda,
+[01:19:41.680 --> 01:19:43.680]  que eu te interrompi, eu falo demais.
+[01:19:43.680 --> 01:19:45.680]  O prazo.
+[01:19:45.680 --> 01:19:49.680]  O prazo que você extremamente consegue.
+[01:19:49.680 --> 01:19:52.680]  O grupo já está criado e a proposta já está lá.
+[01:19:52.680 --> 01:19:54.680]  É, eu já vi que...
+[01:19:54.680 --> 01:19:56.680]  Adoro, adoro.
+[01:19:56.680 --> 01:19:58.680]  Sendo realista, tá?
+[01:19:58.680 --> 01:19:59.680]  Ele já tem nome.
+[01:19:59.680 --> 01:20:01.680]  L-G-P-D-C-T-I-T-E-C.
+[01:20:03.680 --> 01:20:08.680]  Então, eu vou ter que pesquisar, obviamente,
+[01:20:08.680 --> 01:20:10.680]  para montar um plano de negócio.
+[01:20:10.680 --> 01:20:12.680]  Então, vou ter que pesquisar o tempo que vai...
+[01:20:14.680 --> 01:20:18.680]  As etapas de implante e implementação do MVP até o final.
+[01:20:20.680 --> 01:20:25.680]  Aquela questão que até é do servidor, quanto é que o custo
+[01:20:25.680 --> 01:20:30.680]  e o business model, o processo da gente estratégica.
+[01:20:30.680 --> 01:20:32.680]  O que é que eu sugiro?
+[01:20:32.680 --> 01:20:36.680]  A gente precisa de uma reunião, acho que,
+[01:20:36.680 --> 01:20:40.680]  para validar o modelo estratégico, primeiro.
+[01:20:41.680 --> 01:20:48.680]  Não dá para a gente sair, assim,
+[01:20:49.680 --> 01:20:51.680]  a partir do estado atual,
+[01:20:51.680 --> 01:20:54.680]  que, assim, é da expertise de Simone,
+[01:20:54.680 --> 01:21:01.680]  mas a gente precisa de algo acertivo, não parâmetro.
+[01:21:01.680 --> 01:21:03.680]  Sabe?
+[01:21:03.680 --> 01:21:06.680]  O modelo de negócio validado que a gente possa
+[01:21:06.680 --> 01:21:08.680]  mesurar, metrificar.
+[01:21:10.680 --> 01:21:14.680]  Então, a partir de a gente ter o modelo do negócio,
+[01:21:15.680 --> 01:21:19.680]  a gente vai manter esse método,
+[01:21:19.680 --> 01:21:22.680]  que é bem advocativo,
+[01:21:23.680 --> 01:21:25.680]  bem corpo a corpo.
+[01:21:25.680 --> 01:21:31.680]  Ou o produto comercializado, vamos dizer,
+[01:21:32.680 --> 01:21:34.680]  vendão com a automata.
+[01:21:35.680 --> 01:21:40.680]  Que até, como se fosse um software mesmo.
+[01:21:40.680 --> 01:21:44.680]  Um software completo que ele já faz a toda parte,
+[01:21:44.680 --> 01:21:46.680]  essa implantação.
+[01:21:46.680 --> 01:21:48.680]  Seria mais em conta.
+[01:21:48.680 --> 01:21:50.680]  Acho que seria mais...
+[01:21:50.680 --> 01:21:54.680]  Não penso que, mas também estou dizendo no plano das hipóteses.
+[01:21:55.680 --> 01:21:58.680]  Acho que o importante agora é a gente verificar
+[01:21:58.680 --> 01:22:00.680]  qual o modelo de negócio adequado.
+[01:22:00.680 --> 01:22:02.680]  Para a gente e para o mercado.
+[01:22:02.680 --> 01:22:06.680]  Pensando que se a gente também não fizer, alguém vai e faz.
+[01:22:06.680 --> 01:22:10.680]  Eu penso também, Camila, que ela fraciona os produtos.
+[01:22:10.680 --> 01:22:14.680]  A gente pode ter partes ou software que a gente disponibilize,
+[01:22:14.680 --> 01:22:17.680]  que seja do instituto e ele adquira só o software,
+[01:22:17.680 --> 01:22:21.680]  ou a assessoria aponta aqui, aí entra.
+[01:22:21.680 --> 01:22:23.680]  Então, a gente vai ter produtos.
+[01:22:23.680 --> 01:22:25.680]  E a prefeitura pode até...
+[01:22:25.680 --> 01:22:27.680]  No primeiro momento eu quero esse item 1.
+[01:22:27.680 --> 01:22:31.680]  Ano que vem, ou no outro trimestre, o item 2.
+[01:22:31.680 --> 01:22:33.680]  Quero o completo.
+[01:22:33.680 --> 01:22:35.680]  Não, eu quero só o software,
+[01:22:35.680 --> 01:22:38.680]  porque aí os meus servidores vão alimentar o sistema,
+[01:22:38.680 --> 01:22:41.680]  vão fazer o inventário, o mapeamento de dados,
+[01:22:41.680 --> 01:22:45.680]  que eles não têm servidores para fazer isso.
+[01:22:45.680 --> 01:22:51.680]  Não, eu estou pensando exatamente em produtos em pacotes.
+[01:22:51.680 --> 01:22:53.680]  Prateleira, né?
+[01:22:53.680 --> 01:22:55.680]  Exato, você falou tudo, prateleira.
+[01:22:55.680 --> 01:22:57.680]  Você vai lá e fecha.
+[01:22:57.680 --> 01:23:01.680]  Eu quero pacotes até o final, que é certificação.
+[01:23:01.680 --> 01:23:04.680]  O que eu quero é realmente algo...
+[01:23:04.680 --> 01:23:06.680]  Primeiro, validar as informações,
+[01:23:06.680 --> 01:23:08.680]  qual o melhor modelo de negócio.
+[01:23:08.680 --> 01:23:11.680]  Pensando não no dia de hoje, mas no dia de amanhã.
+[01:23:11.680 --> 01:23:13.680]  Porque se a gente não implanta,
+[01:23:13.680 --> 01:23:16.680]  a gente vai gastar uma energia para ser comido depois.
+[01:23:16.680 --> 01:23:18.680]  Outra empresa vai comer a gente,
+[01:23:18.680 --> 01:23:20.680]  porque vai fornecer um preço mais acessível.
+[01:23:20.680 --> 01:23:25.680]  É fato, preço é relevante, concordo.
+[01:23:25.680 --> 01:23:28.680]  Uma das travas dificultadores também
+[01:23:28.680 --> 01:23:32.680]  da conversão de fechamento desse produto, Camila,
+[01:23:32.680 --> 01:23:34.680]  realmente é o preço?
+[01:23:36.680 --> 01:23:37.680]  O preço.
+[01:23:37.680 --> 01:23:40.680]  Ok, tem N's e N's gestores.
+[01:23:40.680 --> 01:23:43.680]  O Wilton já sabe, quando o prefeito...
+[01:23:43.680 --> 01:23:45.680]  Por exemplo, no Rio de Janeiro,
+[01:23:45.680 --> 01:23:48.680]  o prefeito queria que aumentasse o valor da proposta.
+[01:23:48.680 --> 01:23:50.680]  Por que será?
+[01:23:55.680 --> 01:23:59.680]  Mas a gente sabe que se a gente faz algo de qualidade
+[01:23:59.680 --> 01:24:03.680]  e com o preço mais acessível, mantendo a qualidade,
+[01:24:03.680 --> 01:24:06.680]  ou até otimizando, por manter padrões,
+[01:24:06.680 --> 01:24:10.680]  vai ser mais fácil.
+[01:24:10.680 --> 01:24:15.680]  Você consegue extrair isso bem melhor
+[01:24:15.680 --> 01:24:19.680]  de questão de custo de sistema, de software, de tecnologia.
+[01:24:19.680 --> 01:24:24.680]  Eu acho que você vai conseguir dar para a gente essa métrica.
+[01:24:24.680 --> 01:24:26.680]  Ela vem mais de você.
+[01:24:26.680 --> 01:24:30.680]  Porque custo de pessoas, que aí no caso, no início,
+[01:24:30.680 --> 01:24:34.680]  acredito que atende muito bem com o time que o Wilton já tem.
+[01:24:34.680 --> 01:24:37.680]  Com a Gislênia e eu também,
+[01:24:37.680 --> 01:24:40.680]  na parte jurídica e comercial,
+[01:24:40.680 --> 01:24:43.680]  para a gente economizar no começo.
+[01:24:43.680 --> 01:24:46.680]  Mas acho que vai ser mais acessível
+[01:24:46.680 --> 01:24:49.680]  de precificação do sistema, de tecnologia.
+[01:24:49.680 --> 01:24:52.680]  Simônia, é possível você disponibilizar essa proposta para a gente?
+[01:24:52.680 --> 01:24:55.680]  Claro, já está enviado para você e para o Wilton no WhatsApp.
+[01:24:55.680 --> 01:24:58.680]  Já está no nosso grupo.
+[01:24:58.680 --> 01:25:01.680]  Não, daqui a pouco eu olho. Qualquer ideia.
+[01:25:01.680 --> 01:25:05.680]  Gente, eu só peço para vocês a questão de sigilo,
+[01:25:05.680 --> 01:25:09.680]  porque é simples e é a questão de confiança.
+[01:25:09.680 --> 01:25:11.680]  Pode ficar tranquila, vai ficar sempre aqui.
+[01:25:11.680 --> 01:25:14.680]  Apesar que foi público aquele manual, aquela cartilha, é pública.
+[01:25:14.680 --> 01:25:16.680]  Está lá no site, ele pediu o manual
+[01:25:16.680 --> 01:25:21.680]  que eles publicaram em 2022 ou 2023, se não me engano.
+[01:25:21.680 --> 01:25:23.680]  Então, o que eu vou fazer, gente?
+[01:25:23.680 --> 01:25:25.680]  Eu vou pegar o material que você já mandou,
+[01:25:25.680 --> 01:25:27.680]  essa que você vai disponibilizar.
+[01:25:27.680 --> 01:25:30.680]  Vou fazer algo mais simples e uma pesquisa aqui.
+[01:25:30.680 --> 01:25:32.680]  Vou adorar um plano de negócio.
+[01:25:32.680 --> 01:25:34.680]  Vou deixar ele editável no drive.
+[01:25:34.680 --> 01:25:36.680]  No drive, por enquanto.
+[01:25:36.680 --> 01:25:38.680]  Tá, Camila, sem brigar.
+[01:25:38.680 --> 01:25:40.680]  Olha aí, meu LGPD.
+[01:25:40.680 --> 01:25:43.680]  Eu e o Wilton estamos no mesmo grupo, gente.
+[01:25:43.680 --> 01:25:47.680]  É comercial, nós não somos analítica e técnico.
+[01:25:47.680 --> 01:25:50.680]  Eu acho que me engano que eu uso o Discord na minha mesa.
+[01:25:50.680 --> 01:25:52.680]  Ai, meu Deus.
+[01:25:52.680 --> 01:25:54.680]  Meu Deus, o Discord não.
+[01:25:54.680 --> 01:25:57.680]  Ela discorda do Discord, mas qual que é a ideia, gente?
+[01:25:57.680 --> 01:26:00.680]  Eu vou colocar lá e cada um vai vir com a sua visão
+[01:26:00.680 --> 01:26:02.680]  e vai alterando o documento.
+[01:26:02.680 --> 01:26:05.680]  A minha ideia é colocá-lo lá até amanhã.
+[01:26:05.680 --> 01:26:07.680]  Amanhã é quarta-feira, né?
+[01:26:07.680 --> 01:26:10.680]  E a gente já marca uma reunião pra discussão
+[01:26:10.680 --> 01:26:15.680]  e eu vou colocar uma sugestão de cronograma.
+[01:26:15.680 --> 01:26:18.680]  Temos que lidar com métricas, né?
+[01:26:18.680 --> 01:26:22.680]  Com datas pra poder isso aqui ser efetivado, tá?
+[01:26:22.680 --> 01:26:23.680]  São sugestões.
+[01:26:23.680 --> 01:26:25.680]  Às vezes eu coloco alguma coisa.
+[01:26:26.680 --> 01:26:29.680]  Vamos falar aí, não, isso é fora da realidade.
+[01:26:29.680 --> 01:26:32.680]  Na verdade, o Wilton vai diminuir o prazo.
+[01:26:32.680 --> 01:26:34.680]  É, exatamente.
+[01:26:34.680 --> 01:26:38.680]  A grande questão é que todo projeto parece muito interessante.
+[01:26:38.680 --> 01:26:40.680]  Só que ele tem que saber se ele é aplicável.
+[01:26:40.680 --> 01:26:42.680]  Se existe a aplicabilidade dele, se ele é viável.
+[01:26:42.680 --> 01:26:45.680]  Aí agora passa muito pela Camila.
+[01:26:45.680 --> 01:26:47.680]  Ok, pra desenvolver isso.
+[01:26:47.680 --> 01:26:51.680]  Depois que você entender, ok, dá pra desenvolver.
+[01:26:51.680 --> 01:26:54.680]  Beleza, quanto tempo e quanto custa.
+[01:26:54.680 --> 01:26:56.680]  Então a gente precisa dessa informação.
+[01:26:56.680 --> 01:27:00.680]  Porque senão a gente vai atrás de outra coisa
+[01:27:00.680 --> 01:27:03.680]  que faz dinheiro rápido, traz dinheiro pra cá.
+[01:27:03.680 --> 01:27:05.680]  Opa, esse projeto ainda é legal?
+[01:27:05.680 --> 01:27:06.680]  Ainda é interessante?
+[01:27:06.680 --> 01:27:08.680]  Beleza, vamos investir dinheiro nele.
+[01:27:08.680 --> 01:27:09.680]  Então essa é a questão.
+[01:27:09.680 --> 01:27:12.680]  Toda empresa tem que ser autossustentável.
+[01:27:12.680 --> 01:27:14.680]  Esse é o princípio de tudo.
+[01:27:14.680 --> 01:27:16.680]  Eu gosto do...
+[01:27:17.680 --> 01:27:18.680]  Fechou o microfone.
+[01:27:20.680 --> 01:27:22.680]  Eu gosto da ideia, gosto do projeto.
+[01:27:22.680 --> 01:27:24.680]  Acho que ele é bem interessante.
+[01:27:24.680 --> 01:27:29.680]  Agora tem que saber se existe viabilidade econômica ou financeira.
+[01:27:29.680 --> 01:27:36.680]  É, porque naturalmente, na prefeitura, você veja, 600 mil.
+[01:27:36.680 --> 01:27:40.680]  Ele vê que não vai voltar em votos, né?
+[01:27:40.680 --> 01:27:42.680]  Porque pro prefeito, na verdade, é isso.
+[01:27:42.680 --> 01:27:45.680]  Quanto retorna disso em votos?
+[01:27:45.680 --> 01:27:48.680]  E nem é muito isso a cabeça deles.
+[01:27:48.680 --> 01:27:50.680]  É quanto retorno disso aqui pra eles.
+[01:27:50.680 --> 01:27:51.680]  Infelizmente, mas é isso.
+[01:27:52.680 --> 01:27:56.680]  Até isso a gente se livra quando a gente deixa ele em platileira.
+[01:27:56.680 --> 01:28:01.680]  Mas a gente vende também, Camila, como um serviço,
+[01:28:01.680 --> 01:28:03.680]  uma atuação política também.
+[01:28:03.680 --> 01:28:06.680]  Eu consigo colocar isso na cabeça do prefeito.
+[01:28:06.680 --> 01:28:09.680]  Fala assim, prefeito, o senhor vai utilizar isso como
+[01:28:09.680 --> 01:28:15.680]  cidade transparente, outdoor, comunicar, marketing,
+[01:28:15.680 --> 01:28:18.680]  os dados do cidadão protegido.
+[01:28:18.680 --> 01:28:21.680]  Dá pro prefeito fazer política com isso?
+[01:28:21.680 --> 01:28:24.680]  A atuação política, entregar pra sociedade,
+[01:28:24.680 --> 01:28:26.680]  vai depender do marketing dele?
+[01:28:26.680 --> 01:28:27.680]  Dá.
+[01:28:27.680 --> 01:28:30.680]  Mas mesmo assim, ele ainda, usando em recurso,
+[01:28:30.680 --> 01:28:33.680]  que o cidadão entende mais, porque o cidadão é legal.
+[01:28:33.680 --> 01:28:35.680]  É verdade.
+[01:28:35.680 --> 01:28:37.680]  O cidadão é legal.
+[01:28:37.680 --> 01:28:43.680]  Aí você pode botar isso, sei lá, numa clínica, sabe?
+[01:28:44.680 --> 01:28:47.680]  O serviço, o free de advocacia.
+[01:28:47.680 --> 01:28:50.680]  Pra um cidadão é muito mais, sabe?
+[01:28:50.680 --> 01:28:52.680]  Tá fazendo...
+[01:28:52.680 --> 01:28:54.680]  Ele não entende, o cidadão, porque, na verdade,
+[01:28:54.680 --> 01:28:56.680]  o cidadão é igual.
+[01:28:56.680 --> 01:29:01.680]  O show que o prefeito paga, essas coisas, né?
+[01:29:01.680 --> 01:29:09.680]  Na verdade, a LGBT é o seguinte, a LGBT é uma obrigação
+[01:29:09.680 --> 01:29:16.680]  de todo e qualquer negócio, não só prefeitura,
+[01:29:16.680 --> 01:29:18.680]  de qualquer coisa do sistema.
+[01:29:18.680 --> 01:29:20.680]  Então há uma regra.
+[01:29:20.680 --> 01:29:25.680]  De todo direito público e privado, ou seja, todo mundo.
+[01:29:25.680 --> 01:29:28.680]  A lógica é que, pra cumprir essa regra,
+[01:29:28.680 --> 01:29:30.680]  existem processos e métodos.
+[01:29:30.680 --> 01:29:35.680]  E você tem muito conhecimento, ninguém mais, tô vendo aqui.
+[01:29:35.680 --> 01:29:39.680]  Então, assim, isso é muito relevante quando a gente
+[01:29:39.680 --> 01:29:42.680]  transforma isso em um processo único, porque a gente
+[01:29:42.680 --> 01:29:45.680]  independe, se a gente cumprir um processo rigoroso,
+[01:29:45.680 --> 01:29:50.680]  independe da pessoa ser uma clínica notológica,
+[01:29:50.680 --> 01:29:57.680]  ou uma prefeitura, ou até, quem sabe, o gov.br.
+[01:29:59.680 --> 01:30:01.680]  Sabe?
+[01:30:01.680 --> 01:30:03.680]  Quem sabe?
+[01:30:03.680 --> 01:30:07.680]  A gente pode, talvez, se a gente tem um processo tão legal,
+[01:30:07.680 --> 01:30:09.680]  tão rígido, tão à prova de falha,
+[01:30:09.680 --> 01:30:11.680]  a gente vende até para o governo federal.
+[01:30:11.680 --> 01:30:13.680]  Sim, claro.
+[01:30:13.680 --> 01:30:18.680]  A burocracia no sistema de informação tecnológico dele.
+[01:30:19.680 --> 01:30:21.680]  Já que é nossa experiência.
+[01:30:22.680 --> 01:30:27.680]  Mas o que a gente precisa fazer agora é estudar isso.
+[01:30:27.680 --> 01:30:29.680]  Porque hoje o método não é isso.
+[01:30:29.680 --> 01:30:33.680]  O método é bem-venda corpo a corpo.
+[01:30:34.680 --> 01:30:36.680]  Hoje você vai lá...
+[01:30:36.680 --> 01:30:38.680]  Tem casos políticos, isso mesmo.
+[01:30:39.680 --> 01:30:44.680]  E aí tem aquela, justamente as travas por isso,
+[01:30:44.680 --> 01:30:46.680]  e os riscos também por isso.
+[01:30:48.680 --> 01:30:51.680]  Então a gente entender todo esse cenário,
+[01:30:51.680 --> 01:30:53.680]  fazer análise do cenário atual,
+[01:30:53.680 --> 01:30:57.680]  entender onde estão as oportunidades,
+[01:30:57.680 --> 01:31:01.680]  quais são as vantagens desse negócio, as forças,
+[01:31:01.680 --> 01:31:05.680]  mapear para a gente definir o planejamento estratégico.
+[01:31:05.680 --> 01:31:11.680]  Com isso acho que a próxima reunião deve ser bem definida.
+[01:31:12.680 --> 01:31:14.680]  Qual a nossa estratégia de negócio?
+[01:31:15.680 --> 01:31:19.680]  Nossa alma, alma do business,
+[01:31:19.680 --> 01:31:22.680]  alma que o negócio vai ter, sabe?
+[01:31:22.680 --> 01:31:26.680]  A gente criar o sistema a partir dele.
+[01:31:27.680 --> 01:31:28.680]  E não o investam.
+[01:31:28.680 --> 01:31:32.680]  Porque senão a gente vai ter retrabalho, vai ter erro, vai ter...
+[01:31:32.680 --> 01:31:36.680]  Não vai ter mapeado os riscos futuros.
+[01:31:38.680 --> 01:31:44.680]  Só para entender, a próxima reunião a gente monta um escopo desse plano de negócio,
+[01:31:44.680 --> 01:31:50.680]  do nosso produto, e depois você constrói a métrica sua, é isso?
+[01:31:50.680 --> 01:31:52.680]  É, aí eu posso ter um plano,
+[01:31:52.680 --> 01:31:57.680]  porque eu posso fazer desenhada a partir desse seu negócio,
+[01:31:57.680 --> 01:32:01.680]  um modelo de negócio no sistema, fazer o plano.
+[01:32:01.680 --> 01:32:03.680]  Ou a partir de outra forma.
+[01:32:04.680 --> 01:32:09.680]  Eu estou pesquisando aqui já, vou colocar um plano de negócio,
+[01:32:09.680 --> 01:32:12.680]  algumas pesquisas que eu já estou fazendo aqui.
+[01:32:12.680 --> 01:32:14.680]  Camila é, óbvio, muito melhor que eu.
+[01:32:14.680 --> 01:32:16.680]  A gente quer entender esse assunto
+[01:32:16.680 --> 01:32:20.680]  e deixa uma reunião agendada para que dois dias no máximo, tá?
+[01:32:20.680 --> 01:32:22.680]  Porque a gente precisa de agilidade.
+[01:32:22.680 --> 01:32:26.680]  Deslenha, talvez, seguindo só pra não fugir,
+[01:32:26.680 --> 01:32:28.680]  seguindo a ideia da Camila,
+[01:32:28.680 --> 01:32:30.680]  estou colocando aqui pra funcionar.
+[01:32:30.680 --> 01:32:32.680]  Às vezes a gente...
+[01:32:32.680 --> 01:32:35.680]  Ela está falando, acho que é isso que ela está querendo dizer,
+[01:32:35.680 --> 01:32:38.680]  a gente trazer uma única solução também.
+[01:32:38.680 --> 01:32:43.680]  Então talvez, não é, Camila, talvez a gente faria, não tipo...
+[01:32:44.680 --> 01:32:46.680]  Duas ferramentas, dois sistemas,
+[01:32:46.680 --> 01:32:50.680]  mas uma plataforma integrada com uma solução só.
+[01:32:51.680 --> 01:32:54.680]  Eu até coloquei lá naquele linkzinho.
+[01:32:54.680 --> 01:32:57.680]  Na verdade, eles têm uma diferenciação
+[01:32:57.680 --> 01:33:01.680]  para a prefeitura e para a corporação.
+[01:33:01.680 --> 01:33:04.680]  O modelo de preço foi algo que...
+[01:33:07.680 --> 01:33:10.680]  Eu via primeiro a priori,
+[01:33:10.680 --> 01:33:12.680]  então estou muito em reunião, com certeza.
+[01:33:14.680 --> 01:33:17.680]  Mas talvez, se a gente conseguir,
+[01:33:17.680 --> 01:33:20.680]  eu fui pensando na tecnologia.
+[01:33:20.680 --> 01:33:24.680]  Mas o que você apresentou hoje, ele é muito mais...
+[01:33:25.680 --> 01:33:29.680]  Tem outro valor, tem outros serviços, além do que eu dimensionei.
+[01:33:29.680 --> 01:33:33.680]  Então eles consideram o valor, óbvio.
+[01:33:35.680 --> 01:33:37.680]  E a gente desenha esse plano.
+[01:33:37.680 --> 01:33:40.680]  Então você vê ali que tem vários produtos também
+[01:33:41.680 --> 01:33:43.680]  naquele link.
+[01:33:45.680 --> 01:33:48.680]  Para business, para corporativo e para...
+[01:33:48.680 --> 01:33:51.680]  Porque são clientes diferentes, são...
+[01:33:52.680 --> 01:33:54.680]  Personas distintas.
+[01:33:54.680 --> 01:33:55.680]  Sim.
+[01:33:55.680 --> 01:33:56.680]  Sabe?
+[01:33:56.680 --> 01:33:58.680]  Aí lá embaixo, tu vai ver.
+[01:34:02.680 --> 01:34:03.680]  Então...
+[01:34:03.680 --> 01:34:05.680]  Isso é só um estudo do mercado, tá?
+[01:34:05.680 --> 01:34:06.680]  Sim.
+[01:34:11.680 --> 01:34:14.680]  E aí a gente tem uma direção norte.
+[01:34:15.680 --> 01:34:17.680]  E não ficar...
+[01:34:17.680 --> 01:34:19.680]  Eu acho que ainda não tem norte.
+[01:34:19.680 --> 01:34:23.680]  Quando a gente não tem norte, a gente vai para qualquer lugar.
+[01:34:24.680 --> 01:34:28.680]  Você viu que aí eles têm as empresas,
+[01:34:28.680 --> 01:34:32.680]  e aí eles com o LGPD Faça, o LGPD Tech, TOW...
+[01:34:33.680 --> 01:34:37.680]  E cada um, assim, os preços são tão preciados.
+[01:34:37.680 --> 01:34:39.680]  É, total.
+[01:34:39.680 --> 01:34:41.680]  E eu tô pensando já na...
+[01:34:41.680 --> 01:34:45.680]  O que é que eu tô... Veja que é um benchmark, né?
+[01:34:45.680 --> 01:34:48.680]  Na verdade, da nossa concorrência.
+[01:34:48.680 --> 01:34:51.680]  A gente precisa saber o cenário atual.
+[01:34:51.680 --> 01:34:53.680]  Porque se eu chego e dou...
+[01:34:54.680 --> 01:34:58.680]  Eu, de verdade, prefeita tecnológica, que eu sou...
+[01:34:58.680 --> 01:34:59.680]  Eu sou...
+[01:34:59.680 --> 01:35:00.680]  Poxa...
+[01:35:00.680 --> 01:35:02.680]  Você vai...
+[01:35:02.680 --> 01:35:03.680]  Eu...
+[01:35:03.680 --> 01:35:05.680]  Converso tecnológico, eu ia dizer.
+[01:35:05.680 --> 01:35:06.680]  Não, empresa de texto.
+[01:35:06.680 --> 01:35:08.680]  Vou botar aqui, vou informatizar.
+[01:35:08.680 --> 01:35:12.680]  Quer dizer que não foi identificado nenhum player que domina esse segmento, né?
+[01:35:12.680 --> 01:35:13.680]  Ainda não.
+[01:35:13.680 --> 01:35:18.680]  Por mais que essa empresa se titulariza, mas não existe.
+[01:35:18.680 --> 01:35:19.680]  Não, não.
+[01:35:19.680 --> 01:35:20.680]  É oportunidade.
+[01:35:20.680 --> 01:35:23.680]  Exatamente, é uma oportunidade de como...
+[01:35:23.680 --> 01:35:25.680]  Ainda mais como instituto.
+[01:35:25.680 --> 01:35:32.680]  Que é um mercado e ter uma plataforma acessível integral, dinâmica, autodidática.
+[01:35:32.680 --> 01:35:36.680]  Eu quero resolver os problemas que você comentou.
+[01:35:36.680 --> 01:35:38.680]  Que é justamente o que a gente tá comentando.
+[01:35:38.680 --> 01:35:42.680]  Como assim, como eu vou diminuir essas barreiras de entrada?
+[01:35:43.680 --> 01:35:45.680]  A gente tem que fixar nisso.
+[01:35:45.680 --> 01:35:50.680]  Se a gente já sabe como é essas barreiras de entrada, porque eu vou repetir.
+[01:35:51.680 --> 01:35:53.680]  Isso mesmo, Camila. Isso mesmo.
+[01:35:53.680 --> 01:35:59.240]  a gente pode andar na frente com muito mais facilidade e agilidade.
+[01:35:59.240 --> 01:36:08.840]  O que eu acho melhor é a gente ter menos erros, menos retravalhos, menos modificações.
+[01:36:08.840 --> 01:36:20.480]  Eu acho viável a gente ter a próxima reunião para definir o planejamento estratégico, o norte,
+[01:36:20.600 --> 01:36:31.040]  tudo definir também, você aí, aloco, posso propor, aloco maga, posso propor o nome,
+[01:36:31.040 --> 01:36:35.720]  a gente pode conversar via telefone, né, gente?
+[01:36:37.720 --> 01:36:42.200]  É que o WhatsApp, Maria, é maravilhosa.
+[01:36:42.200 --> 01:36:48.880]  Lá o WhatsApp a gente evita definições e conversas, lá é mais para compartilhamento de arquivos,
+[01:36:49.360 --> 01:36:53.040]  reunião, nossa comunicação mais rasa lá.
+[01:36:53.040 --> 01:37:00.840]  A gente aplica as melhores práticas do mercado, da tecnologia, a gente pode baratear muito o seu produto
+[01:37:00.840 --> 01:37:06.240]  e dar uma melhor qualidade, veja, é como a indústria e eu vou vender mais.
+[01:37:06.240 --> 01:37:18.320]  A gente ganha na quantidade de produtos e de vezes de fazer diferença, uma venda não faria diferença para a gente,
+[01:37:18.400 --> 01:37:27.680]  mas a gente vai querer vender para mil, sabe, mil clientes, mil corporações, dois mil,
+[01:37:27.680 --> 01:37:37.600]  tem até aqui embaixo um roadmap justamente de alavancagem, mas isso obviamente naquela estratégia
+[01:37:37.600 --> 01:37:50.000]  que eu tinha não validado antes dessa reunião, né, assim, eu conheci o produto como você está mencionando,
+[01:37:50.000 --> 01:37:55.200]  então assim, a gente vai, eu acho que esse é o modelo do futuro, tá?
+[01:37:55.200 --> 01:37:56.160]  Sim.
+[01:37:56.160 --> 01:38:00.640]  Acho mesmo, porque as coisas tendem a ser muito autômatas,
+[01:38:00.640 --> 01:38:04.960]  se a gente ficar no corpo a corpo a gente está ficando passado.
+[01:38:05.680 --> 01:38:11.280]  Não, não quero não, eu vou colocar alguma coisa já no drive, assim que estiver pronto aqui,
+[01:38:11.280 --> 01:38:19.120]  vejo uma agenda de vocês para quinta e sexta-feira e a gente já faz uma reunião com esse documento que ele vai estar editável,
+[01:38:19.120 --> 01:38:30.800]  eu coloco ele como vocês preencham como sugestões e vai incluindo pontos a discutir tudo que a gente já fecha um plano de trabalho, um plano de negócios.
+[01:38:31.440 --> 01:38:41.360]  Posso dar uma sugestão também? Posso adicionar um tipo formezinho para Simone responder, para vocês também?
+[01:38:41.360 --> 01:38:42.160]  Por favor.
+[01:38:42.160 --> 01:38:49.840]  Para ter algumas informações, sei lá, para, sabe, ter assertividade.
+[01:38:49.840 --> 01:38:53.120]  Claro, vocês soam, sim.
+[01:38:53.120 --> 01:38:56.400]  Perfeito, vamos fazer dessa forma, a gente divulga.
+[01:38:56.480 --> 01:39:00.880]  A gente vai decidir a nossa reunião na sexta, porque na quinta eu vou estar na estrada,
+[01:39:00.880 --> 01:39:07.120]  apresentação de dia das mães da escola do meu filho e aí eu volto para a minha cidade na quinta.
+[01:39:07.120 --> 01:39:14.640]  Então acredito na conversa, pode ser na sexta, por mim, tá?
+[01:39:14.640 --> 01:39:20.880]  Tá bom, para mim também, e eu preciso sair que eu já estou extremamente atrasado, mas foi muito boa a nossa reunião, tá bom?
+[01:39:20.880 --> 01:39:22.640]  Então a gente vai combinando pelo grupo, pessoal.
+[01:39:22.640 --> 01:39:24.640]  Então tá, Joana, obrigado, até mais.
+[01:39:24.640 --> 01:39:26.880]  Tchau, tchau.
