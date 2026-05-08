@@ -218,7 +218,7 @@
 
     function isResearchDoc(path) {
       const lower = path.toLowerCase().replace(/\.md$/, '');
-      const tokens = lower.split(/[^a-z0-9]+/).filter(Boolean);
+      const tokens = lower.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
       return docClassification.researchKeywords.some(keyword => {
         if (keyword.includes('-')) {
           return lower.includes(keyword);
@@ -228,8 +228,8 @@
     }
 
     const researchRootDocs = rootDocs.filter(isResearchDoc);
-
-    const opsRootDocs = rootDocs.filter(path => !researchRootDocs.includes(path));
+    const researchRootDocSet = new Set(researchRootDocs);
+    const opsRootDocs = rootDocs.filter(path => !researchRootDocSet.has(path));
 
     const docsBySection = [
       {
