@@ -232,12 +232,12 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="var in data.scenario_analysis.variables" :key="var.id" class="border-b hover:bg-slate-50">
-                  <td class="p-3 font-medium">{{ var.nome }}</td>
-                  <td class="p-3 text-center text-green-700">{{ var.cenario_otimista }}</td>
-                  <td class="p-3 text-center text-blue-700">{{ var.cenario_base }}</td>
-                  <td class="p-3 text-center text-red-700">{{ var.cenario_pessimista }}</td>
-                  <td class="p-3 text-xs text-slate-600">{{ var.impacto }}</td>
+                <tr v-for="variable in data.scenario_analysis.variables" :key="variable.id" class="border-b hover:bg-slate-50">
+                  <td class="p-3 font-medium">{{ variable.nome }}</td>
+                  <td class="p-3 text-center text-green-700">{{ variable.cenario_otimista }}</td>
+                  <td class="p-3 text-center text-blue-700">{{ variable.cenario_base }}</td>
+                  <td class="p-3 text-center text-red-700">{{ variable.cenario_pessimista }}</td>
+                  <td class="p-3 text-xs text-slate-600">{{ variable.impacto }}</td>
                 </tr>
               </tbody>
             </table>
