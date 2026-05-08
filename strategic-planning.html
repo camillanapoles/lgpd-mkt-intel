@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LGPD Strategic Planning Dashboard - Meeting Mode</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    [v-cloak] { display: none; }
+    .decision-pending { border-left: 4px solid #f59e0b; }
+    .decision-approved { border-left: 4px solid #10b981; }
+    .decision-rejected { border-left: 4px solid #ef4444; }
+    .swot-card { transition: all 0.2s; }
+    .swot-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .vvv-indicator { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+    .vvv-high { background: #dcfce7; }
+    .vvv-med { background: #fef3c7; }
+    .vvv-low { background: #fee2e2; }
+    .scenario-active { ring: 2px solid #3b82f6; }
+    .phase-current { background: linear-gradient(90deg, #3b82f6, #8b5cf6); }
+    .timeline-line { position: relative; }
+    .timeline-line::before { content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: #e5e7eb; }
+    .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: #3b82f6; position: relative; z-index: 1; }
+    .fade-enter-active, .fade-leave-active { transition: opacity 0.2s; }
+    .fade-enter-from, .fade-leave-to { opacity: 0; }
+    @media print {
+      .no-print { display: none !important; }
+      .print-break { page-break-after: always; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100">
+  <div id="app" v-cloak>
+    <!-- Loading -->
+    <div v-if="loading" class="min-h-screen flex items-center justify-center">
+      <div class="text-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent mx-auto mb-4"></div>
+        <p class="text-slate-600">Carregando planejamento estratégico...</p>
+      </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div v-else class="min-h-screen">
+      <!-- Header - Meeting Mode -->
+      <header class="bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <h1 class="text-xl font-bold">Planning Meeting Dashboard</h1>
+              <span class="px-2 py-1 bg-blue-600 rounded text-xs">LGPD Strategy</span>
+              <span class="text-slate-400 text-sm">{{ data.metadata?.lastUpdated }}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <button @click="exportPDF" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-sm">
+                📄 Export PDF
+              </button>
+              <button @click="toggleEditMode" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded text-sm">
+                {{ editMode ? '🔒 Lock' : '✏️ Edit' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Quick Stats Bar -->
+      <div class="bg-white shadow-sm border-b no-print">
+        <div class="max-w-7xl mx-auto px-4 py-2">
+          <div class="flex items-center justify-between text-sm">
+            <div class="flex gap-6">
+              <span>📊 VVV Médio: <strong class="text-blue-600">{{ averageVVV }}%</strong></span>
+              <span>✅ Decisões Pendentes: <strong class="text-amber-600">{{ pendingDecisions }}</strong></span>
+              <span>🎯 Oportunidades: <strong class="text-green-600">{{ opportunityCount }}</strong></span>
+            </div>
+            <div>
+              <select v-model="scenario" class="border rounded px-2 py-1 text-sm">
+                <option value="base">📍 Cenário Base</option>
+                <option value="optimista">🚀 Otimista</option>
+                <option value="pessimista">⚠️ Pessimista</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="max-w-7xl mx-auto px-4 py-6">
+        <!-- Tab Navigation -->
+        <div class="flex gap-2 mb-6 overflow-x-auto no-print">
+          <button v-for="tab in tabs" :key="tab.id"
+                  @click="activeTab = tab.id"
+                  :class="['px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors',
+                           activeTab === tab.id ? 'bg-blue-600 text-white' : 'bg-white hover:bg-slate-50']">
+            {{ tab.icon }} {{ tab.name }}
+          </button>
+        </div>
+
+        <!-- Decisions Panel - CRITICAL for meetings -->
+        <div v-if="activeTab === 'decisions'" class="space-y-4">
+          <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-lg font-bold text-slate-800">🎯 Decisões Estratégicas</h2>
+              <span class="text-sm text-slate-500">{{ pendingDecisions }} pendentes</span>
+            </div>
+            <div class="space-y-3">
+              <div v-for="decision in data.decisions" :key="decision.id"
+                   :class="['p-4 rounded-lg border cursor-pointer transition-all',
+                            getDecisionClass(decision.status)]">
+                <div class="flex items-start justify-between">
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span class="text-xs px-2 py-0.5 rounded"
+                            :class="getPriorityClass(decision.prioridade)">
+                        {{ decision.prioridade }}
+                      </span>
+                      <span class="text-xs text-slate-500">VVV: {{ (decision.vvv * 100).toFixed(0) }}%</span>
+                    </div>
+                    <h3 class="font-semibold text-slate-800">{{ decision.titulo }}</h3>
+                    <p class="text-sm text-slate-600 mt-1">{{ decision.descricao }}</p>
+                    <p class="text-sm text-blue-700 mt-1"><strong>Recomendação:</strong> {{ decision.recomendacao }}</p>
+                  </div>
+                  <div v-if="editMode" class="flex gap-2 ml-4">
+                    <button @click="updateDecision(decision.id, 'approved')"
+                            class="px-3 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600">
+                      ✓ Aprovar
+                    </button>
+                    <button @click="updateDecision(decision.id, 'rejected')"
+                            class="px-3 py-1 bg-red-500 text-white rounded text-sm hover:bg-red-600">
+                      ✗ Rejeitar
+                    </button>
+                  </div>
+                  <div v-else class="ml-4">
+                    <span :class="['px-2 py-1 rounded text-xs font-medium',
+                                     decision.status === 'approved' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700',
+                                     decision.status === 'pending' ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-600']">
+                      {{ getStatusLabel(decision.status) }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scenario Analysis -->
+        <div v-if="activeTab === 'scenario'" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Fixed -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-lg font-bold text-slate-800 mb-4">📊 Cenário Fixo</h2>
+            <div class="space-y-4">
+              <div class="p-3 bg-blue-50 rounded">
+                <h3 class="font-medium text-blue-900">Mercado</h3>
+                <div class="mt-2 text-sm text-blue-700">
+                  <p>{{ data.scenario_analysis.fixed.mercado.total_municipios }} municípios</p>
+                  <p>{{ data.scenario_analysis.fixed.mercado.sem_estrutura_lgpd }} sem LGPD ({{ data.scenario_analysis.fixed.mercado.porcentagem }}%)</p>
+                  <p>SAM: {{ data.scenario_analysis.fixed.mercado.sam_prioritario }} cidades prioritárias</p>
+                </div>
+              </div>
+              <div class="p-3 bg-purple-50 rounded">
+                <h3 class="font-medium text-purple-900">Regulatório</h3>
+                <div class="mt-2 text-sm text-purple-700">
+                  <p>{{ data.scenario_analysis.fixed.regulatorio.anpd_fiscalizacao_2027 }} ações ANPD 2027</p>
+                  <p>ECA Digital: urgência CRÍTICA</p>
+                </div>
+              </div>
+              <div class="p-3 bg-green-50 rounded">
+                <h3 class="font-medium text-green-900">Tecnologia</h3>
+                <div class="mt-2 text-sm text-green-700">
+                  <p>{{ data.scenario_analysis.fixed.tecnologia.stack_definido }}</p>
+                  <p>INPI: {{ data.scenario_analysis.fixed.tecnologia.inpi_estrategia }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Opportunities -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-lg font-bold text-slate-800 mb-4">🎯 Oportunidades</h2>
+            <div class="space-y-2">
+              <div v-for="opp in data.scenario_analysis.opportunities" :key="opp.id"
+                   class="p-3 border rounded hover:shadow-sm transition-shadow">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-medium text-slate-800">{{ opp.titulo }}</span>
+                  <span class="text-xs px-2 py-0.5 rounded" :class="getPriorityClass(opp.prioridade)">
+                    {{ opp.prioridade }}
+                  </span>
+                </div>
+                <p class="text-sm text-slate-600">{{ opp.descricao }}</p>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="text-sm font-semibold text-green-700">{{ opp.ticket }}</span>
+                  <span class="vvv-indicator" :class="getVVVClass(opp.vvv)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barriers -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-lg font-bold text-slate-800 mb-4">🚧 Barreiras</h2>
+            <div class="space-y-2">
+              <div v-for="bar in data.scenario_analysis.barriers" :key="bar.id"
+                   class="p-3 border rounded hover:shadow-sm transition-shadow">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-medium text-slate-800">{{ bar.titulo }}</span>
+                  <span class="text-xs px-2 py-0.5 rounded" :class="getImpactClass(bar.impacto)">
+                    {{ bar.impacto }}
+                  </span>
+                </div>
+                <p class="text-sm text-slate-600">{{ bar.descricao }}</p>
+                <p class="text-sm text-blue-700 mt-1"><strong>Mitigação:</strong> {{ bar.mitigacao }}</p>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="vvv-indicator" :class="getVVVClass(bar.vvv)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Variables - Scenario Toggles -->
+        <div v-if="activeTab === 'variables'" class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-bold text-slate-800 mb-4">🎛️ Variáveis de Cenário</h2>
+          <p class="text-sm text-slate-500 mb-4">Ajuste variáveis para simular impactos</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b bg-slate-50">
+                  <th class="text-left p-3">Variável</th>
+                  <th class="text-center p-3">Otimista</th>
+                  <th class="text-center p-3">Base</th>
+                  <th class="text-center p-3">Pessimista</th>
+                  <th class="text-left p-3">Impacto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="var in data.scenario_analysis.variables" :key="var.id" class="border-b hover:bg-slate-50">
+                  <td class="p-3 font-medium">{{ var.nome }}</td>
+                  <td class="p-3 text-center text-green-700">{{ var.cenario_otimista }}</td>
+                  <td class="p-3 text-center text-blue-700">{{ var.cenario_base }}</td>
+                  <td class="p-3 text-center text-red-700">{{ var.cenario_pessimista }}</td>
+                  <td class="p-3 text-xs text-slate-600">{{ var.impacto }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SWOT -->
+        <div v-if="activeTab === 'swot'" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div v-for="category in ['forcas', 'fracas', 'oportunidades', 'ameacas']" :key="category"
+               class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-lg font-bold text-slate-800 mb-4 capitalize">{{ category }}</h2>
+            <div class="space-y-2">
+              <div v-for="item in data.swot[category]" :key="item.id"
+                   class="swot-card p-3 border rounded flex items-start gap-3">
+                <span class="vvv-indicator flex-shrink-0 mt-1" :class="getVVVClass(item.vvv)"></span>
+                <span class="text-sm text-slate-700">{{ item.texto }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BMC -->
+        <div v-if="activeTab === 'bmc'" class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-bold text-slate-800 mb-4">📋 Business Model Canvas</h2>
+          <div class="grid grid-cols-3 gap-4">
+            <div v-for="(items, section) in data.business_model_canvas" :key="section"
+                 class="p-4 border rounded-lg">
+              <h3 class="font-semibold text-slate-800 text-sm capitalize mb-2">{{ section.replace(/_/g, ' ') }}</h3>
+              <ul class="space-y-1">
+                <li v-for="item in items" :key="item" class="text-sm text-slate-600 flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>{{ item }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roadmap -->
+        <div v-if="activeTab === 'roadmap'" class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-bold text-slate-800 mb-4">🗺️ Roadmap de Implementação</h2>
+          <div class="space-y-4">
+            <div v-for="(fase, key) in data.roadmap" :key="key"
+                 class="flex gap-4 p-4 border rounded-lg"
+                 :class="{'phase-current text-white': fase.status === 'in_progress'}">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold"
+                     :class="fase.status === 'completed' ? 'bg-green-500' : fase.status === 'in_progress' ? 'bg-white text-blue-600' : 'bg-slate-300'">
+                  {{ parseInt(key.split('_')[1]) + 1 }}
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold" :class="fase.status === 'in_progress' ? 'text-white' : 'text-slate-800'">
+                    {{ fase.nome }}
+                  </h3>
+                  <span class="text-sm px-2 py-0.5 rounded"
+                        :class="fase.status === 'completed' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'">
+                    {{ fase.duracao }}
+                  </span>
+                </div>
+                <p class="text-sm mt-1" :class="fase.status === 'in_progress' ? 'text-blue-100' : 'text-slate-600'">
+                  {{ fase.objetivo }}
+                </p>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span v-for="kpi in fase.kpi" :key="kpi"
+                        class="text-xs px-2 py-1 rounded"
+                        :class="fase.status === 'in_progress' ? 'bg-blue-400 text-blue-900' : 'bg-slate-200 text-slate-700'">
+                    {{ kpi }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next Meeting Prep -->
+        <div v-if="activeTab === 'next'" class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-lg font-bold text-slate-800 mb-4">📅 Checklist Próxima Reunião</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-medium text-slate-700 mb-3">Preparação Obrigatória</h3>
+              <ul class="space-y-2">
+                <li v-for="item in data.next_meeting.prep_checklist" :key="item"
+                    class="flex items-center gap-2 p-2 bg-slate-50 rounded">
+                  <input type="checkbox" class="w-4 h-4">
+                  <span class="text-sm text-slate-700">{{ item }}</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-medium text-slate-700 mb-3">Status Decisões</h3>
+              <div class="space-y-2 text-sm">
+                <div class="p-2 bg-red-50 rounded border border-red-200">
+                  <span class="font-medium text-red-700">{{ pendingDecisions }} decisões pendentes</span>
+                </div>
+                <div class="p-2 bg-green-50 rounded border border-green-200 mt-2">
+                  <span class="font-medium text-green-700">{{ approvedDecisions }} decisões aprovadas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-white border-t mt-8 py-4 no-print">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-500">
+          LGPD Strategic Planning Dashboard • VVV Validated • {{ data.metadata?.version }}
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          loading: true,
+          editMode: false,
+          activeTab: 'decisions',
+          scenario: 'base',
+          data: {},
+          tabs: [
+            { id: 'decisions', name: 'Decisões', icon: '🎯' },
+            { id: 'scenario', name: 'Cenários', icon: '📊' },
+            { id: 'variables', name: 'Variáveis', icon: '🎛️' },
+            { id: 'swot', name: 'SWOT', icon: '🔍' },
+            { id: 'bmc', name: 'BMC', icon: '📋' },
+            { id: 'roadmap', name: 'Roadmap', icon: '🗺️' },
+            { id: 'next', name: 'Checklist', icon: '📅' }
+          ]
+        };
+      },
+      computed: {
+        pendingDecisions() {
+          return this.data.decisions?.filter(d => d.status === 'pending').length || 0;
+        },
+        approvedDecisions() {
+          return this.data.decisions?.filter(d => d.status === 'approved').length || 0;
+        },
+        opportunityCount() {
+          return this.data.scenario_analysis?.opportunities?.length || 0;
+        },
+        averageVVV() {
+          const all = [
+            ...(this.data.decisions || []),
+            ...(this.data.scenario_analysis?.opportunities || []),
+            ...(this.data.scenario_analysis?.barriers || [])
+          ];
+          if (all.length === 0) return 0;
+          const sum = all.reduce((s, item) => s + (item.vvv || 0), 0);
+          return ((sum / all.length) * 100).toFixed(0);
+        }
+      },
+      methods: {
+        async loadData() {
+          try {
+            const response = await fetch('strategic-planning.json');
+            this.data = await response.json();
+          } catch (e) {
+            console.error('Failed to load:', e);
+          } finally {
+            this.loading = false;
+          }
+        },
+        toggleEditMode() {
+          this.editMode = !this.editMode;
+        },
+        updateDecision(id, status) {
+          const decision = this.data.decisions.find(d => d.id === id);
+          if (decision) {
+            decision.status = status;
+            // TODO: Persist to backend
+          }
+        },
+        getDecisionClass(status) {
+          switch (status) {
+            case 'approved': return 'decision-approved bg-green-50 border-green-200';
+            case 'rejected': return 'decision-rejected bg-red-50 border-red-200';
+            default: return 'decision-pending bg-amber-50 border-amber-200';
+          }
+        },
+        getPriorityClass(priority) {
+          switch (priority) {
+            case 'CRÍTICA': return 'bg-red-100 text-red-700';
+            case 'ALTA': return 'bg-orange-100 text-orange-700';
+            case 'MEDIA': return 'bg-blue-100 text-blue-700';
+            default: return 'bg-slate-100 text-slate-600';
+          }
+        },
+        getImpactClass(impacto) {
+          switch (impacto) {
+            case 'CRÍTICO': return 'bg-red-100 text-red-700';
+            case 'ALTO': return 'bg-orange-100 text-orange-700';
+            case 'MEDIO': return 'bg-yellow-100 text-yellow-700';
+            default: return 'bg-slate-100 text-slate-600';
+          }
+        },
+        getStatusLabel(status) {
+          switch (status) {
+            case 'approved': return '✓ Aprovado';
+            case 'rejected': return '✗ Rejeitado';
+            default: return '⏳ Pendente';
+          }
+        },
+        getVVVClass(vvv) {
+          if (vvv >= 0.7) return 'vvv-high';
+          if (vvv >= 0.4) return 'vvv-med';
+          return 'vvv-low';
+        },
+        exportPDF() {
+          window.print();
+        }
+      },
+      mounted() {
+        this.loadData();
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

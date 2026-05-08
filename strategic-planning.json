@@ -1,0 +1,343 @@
+{
+  "$schema": "Strategic Planning Dashboard v1.0",
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2026-05-08",
+    "meeting": "Reunião Estratégia LGPD 06/05/2026",
+    "status": "VVV Validated",
+    "refreshInterval": "auto"
+  },
+  "scenario_analysis": {
+    "fixed": {
+      "mercado": {
+        "total_municipios": 5570,
+        "sem_estrutura_lgpd": 4011,
+        "porcentagem": 72,
+        "sam_prioritario": 1200,
+        "fonte": "IBGE MUNIC 2024"
+      },
+      "regulatorio": {
+        "anpd_fiscalizacao_2027": "40+ acoes previstas",
+        "focos": ["dados biométricos", "criancas adolescentes", "poder publico", "IA"],
+        "eca_digital": "Lei 15.211/2025 - urgência CRÍTICA"
+      },
+      "tecnologia": {
+        "stack_definido": "Archbase BR + componentes LGPD proprietários",
+        "inpi_estrategia": "Patente metodo anonimacao + registro software",
+        "prazo_registro": "4-6 semanas"
+      }
+    },
+    "opportunities": [
+      {
+        "id": "O1",
+        "titulo": "LGPD-in-a-Box Municipal",
+        "descricao": "Templates + políticas + RIPD prontos",
+        "prioridade": "ALTA",
+        "ticket": "R$ 5-15k/ano",
+        "vvv": 0.9
+      },
+      {
+        "id": "O2",
+        "titulo": "DPO Hub Intermediário",
+        "descricao": "Centralizacao DPOs consorcio intermunicipal",
+        "prioridade": "ALTA",
+        "ticket": "R$ 2-5k/municipio/mês",
+        "vvv": 0.8
+      },
+      {
+        "id": "O3",
+        "titulo": "Age Verification ECA Digital",
+        "descricao": "Verificacao idade servicos municipais",
+        "prioridade": "CRÍTICA",
+        "ticket": "R$ 25-60k",
+        "vvv": 0.7
+      },
+      {
+        "id": "O4",
+        "titulo": "Plataforma Compartilhamento Seguro",
+        "descricao": "SaaS compartilhamento dados orgãos públicos",
+        "prioridade": "MEDIA",
+        "ticket": "R$ 20-50k/ano",
+        "vvv": 0.6
+      },
+      {
+        "id": "O5",
+        "titulo": "RIPD Generator Government",
+        "descricao": "Gerador automatizado relatorios impacto",
+        "prioridade": "MEDIA",
+        "ticket": "R$ 10-25k/ano",
+        "vvv": 0.7
+      }
+    ],
+    "barriers": [
+      {
+        "id": "B1",
+        "titulo": "Sales Cycle Municipal",
+        "descricao": "Ciclo vendas 12-18 meses governo",
+        "impacto": "ALTO",
+        "mitigacao": "Co-founder advisor + Lei 14.133 dispensa",
+        "vvv": 0.9
+      },
+      {
+        "id": "B2",
+        "titulo": "Inadimplencia",
+        "descricao": "40% probabilidade inadimplemento municipal",
+        "impacto": "ALTO",
+        "mitigacao": "Contrato anual + consorcio garantia",
+        "vvv": 0.8
+      },
+      {
+        "id": "B3",
+        "titulo": "Turnover Político",
+        "descricao": "Mudanca governo quebra contratos",
+        "impacto": "MEDIO",
+        "mitigacao": "Multiplos contratos curtos + portabilidade",
+        "vvv": 0.7
+      },
+      {
+        "id": "B4",
+        "titulo": "Confidata Threat",
+        "descricao": "Competidor pivot municipal",
+        "impacto": "ALTO",
+        "mitigacao": "DC Brasil + DPO incluido + setup rapido",
+        "vvv": 0.6
+      },
+      {
+        "id": "B5",
+        "titulo": "Pricing Ajuste Necessario",
+        "descricao": "Valores originais 80-95% abaixo mercado",
+        "impacto": "CRÍTICO",
+        "mitigacao": "Reajustar 8-15x para R$2.497-14.997",
+        "vvv": 0.9
+      }
+    ],
+    "variables": [
+      {
+        "id": "V1",
+        "nome": "LOIs Assinadas",
+        "cenario_otimista": "5+",
+        "cenario_base": "3+",
+        "cenario_pessimista": "0-1",
+        "impacto": "GO/NO-GO",
+        "vvv": 0.0
+      },
+      {
+        "id": "V2",
+        "nome": "Advisor Municipal",
+        "cenario_otimista": "Contratado mes 2",
+        "cenario_base": "Contratado mes 4",
+        "cenario_pessimista": "Sem advisor",
+        "impacto": "Sales cycle 6-18 meses",
+        "vvv": 0.3
+      },
+      {
+        "id": "V3",
+        "nome": "Funding Disponível",
+        "cenario_otimista": "R$ 2M",
+        "cenario_base": "R$ 960K",
+        "cenario_pessimista": "R$ 500K",
+        "impacto": "Runway 12-24 meses",
+        "vvv": 0.5
+      },
+      {
+        "id": "V4",
+        "nome": "ANPD Fiscalização",
+        "cenario_otimista": "Mantem ritmo 2027",
+        "cenario_base": "Aumentam 50%",
+        "cenario_pessimista": "Foco apenas grandes empresas",
+        "impacto": "Demanda municipal",
+        "vvv": 0.7
+      }
+    ]
+  },
+  "swot": {
+    "forcas": [
+      { "id": "F1", "texto": "Unico abaixo R$65K/ano com DPO", "vvv": 0.9 },
+      { "id": "F2", "texto": "DC Brasil compliance Art.26", "vvv": 0.95 },
+      { "id": "F3", "texto": "Modelo Contabilizei validado", "vvv": 0.8 },
+      { "id": "F4", "texto": "Templates municipais unicos", "vvv": 0.7 },
+      { "id": "F5", "texto": "Archbase Framework BR + IP", "vvv": 0.7 }
+    ],
+    "fracas": [
+      { "id": "W1", "texto": "Sem brand estabelecido", "vvv": 0.6 },
+      { "id": "W2", "texto": "Sem ISO certificado", "vvv": 0.5 },
+      { "id": "W3", "texto": "Depende AWS sa-east-1", "vvv": 0.4 },
+      { "id": "W4", "texto": "Pool DPOs necessario", "vvv": 0.6 }
+    ],
+   oportunidades": [
+      { "id": "O1", "texto": "4.011 prefeituras sem LGPD (72%)", "vvv": 0.95 },
+      { "id": "O2", "texto": "ANPD ativa + multas R$50M", "vvv": 0.9 },
+      { "id": "O3", "texto": "Lei 14.133 dispensa ate R$390K", "vvv": 0.85 },
+      { "id": "O4", "texto": "TCEs fiscalizando LGPD", "vvv": 0.8 },
+      { "id": "O5", "texto": "ECA Digital urgência verificacao idade", "vvv": 0.9 }
+    ],
+    "ameacas": [
+      { "id": "T1", "texto": "Confidata pivot municipal", "vvv": 0.7 },
+      { "id": "T2", "texto": "OneTrust entrada BR", "vvv": 0.5 },
+      { "id": "T3", "texto": "Mudanca regulatoria", "vvv": 0.4 },
+      { "id": "T4", "texto": "Recesso municipal", "vvv": 0.6 }
+    ]
+  },
+  "business_model_canvas": {
+    "key_partners": [
+      "Associacoes municipais (CNM, FNP)",
+      "Consorcios (CIGA, CIMAMS, COPIRN)",
+      "DPOs fractionados",
+      "AWS sa-east-1 (DC Brasil)"
+    ],
+    "key_activities": [
+      "Plataforma SaaS LGPD",
+      "DPO-as-a-Service",
+      "Conteudo EAD capacitacao",
+      "Consultoria implementacao"
+    ],
+    "key_resources": [
+      "Plataforma web (Archbase BR)",
+      "Pool DPOs certificados",
+      "Templates LGPD/ROPA/RIPD",
+      "ISO 27001 roadmap"
+    ],
+    "value_propositions": [
+      "Abaixo dispensa licitacao (R$390K+)",
+      "DC Brasil Art.26 - dados 100% Brasil",
+      "DPO incluido no preco",
+      "Setup 30 dias vs 6-12 meses consultoria"
+    ],
+    "customer_relationships": [
+      "Self-service onboarding",
+      "Suporte chat SLA 4h",
+      "DPO dedicado (planos Plus)",
+      "Treinamentos mensais"
+    ],
+    "channels": [
+      "Direta web (SEO+Ads)",
+      "Associacoes municipais",
+      "White label para consorcios",
+      "Marketplace gov.br"
+    ],
+    "customer_segments": [
+      "Prefeituras 20-100K hab (SAM)",
+      "Consorcios intermunicipais",
+      "PMEs B2G (fornecedores municipio)",
+      "Orgaos publicos estaduais"
+    ],
+    "cost_structure": [
+      "Dev plataforma SaaS",
+      "Salarios DPOs (20% faturamento)",
+      "AWS infra (DC Brasil)",
+      "Marketing vendas B2G"
+    ],
+    "revenue_streams": [
+      "Subscription SaaS (mensal)",
+      "DPO service (recorrente)",
+      "Consultoria projetos (setup)",
+      "Templates vend avulsa"
+    ]
+  },
+  "roadmap": {
+    "fase_0": {
+      "nome": "Validacao",
+      "duracao": "Meses 1-2",
+      "objetivo": "50 entrevistas + 10 LOIs + MVP core",
+      "kpi": ["10 LOIs", "MVP data discovery"],
+      "status": "in_progress"
+    },
+    "fase_1": {
+      "nome": "MVP + Primeiros Clientes",
+      "duracao": "Meses 3-5",
+      "objetivo": "5 prefeituras beta + validacao produto",
+      "kpi": ["5 clientes", "R$ 25K MRR"],
+      "status": "pending"
+    },
+    "fase_2": {
+      "nome": "Product Market Fit",
+      "duracao": "Meses 6-9",
+      "objetivo": "Portal titular + 50 clientes + ANPD agendada",
+      "kpi": ["50 clientes", "R$ 150K MRR", "Certificacao INPI"],
+      "status": "pending"
+    },
+    "fase_3": {
+      "nome": "Scale DPO Service",
+      "duracao": "Meses 10-14",
+      "objetivo": "DPO service + 150 clientes + expansao regional",
+      "kpi": ["150 clientes", "R$ 300K MRR", "3 regioes"],
+      "status": "pending"
+    },
+    "fase_4": {
+      "nome": "ISO + Enterprise",
+      "duracao": "Meses 15-20",
+      "objetivo": "ISO 27001 + 500 clientes + consorcios exclusivos",
+      "kpi": ["500 clientes", "R$ 1M MRR", "ISO 27001"],
+      "status": "pending"
+    },
+    "fase_5": {
+      "nome": "Lideranca Mercado",
+      "duracao": "Meses 21-30",
+      "objetivo": "ISO 27701 + nacionalizacao + saida/investimento",
+      "kpi": ["1000 clientes", "Break-even", "Series A"],
+      "status": "pending"
+    }
+  },
+  "decisions": [
+    {
+      "id": "D1",
+      "titulo": "Ajustar Pricing 8-15x",
+      "descricao": "Valores originais (R$297-997) 80-95% abaixo mercado",
+      "recomendacao": "R$2.497-14.997 por porte cidade",
+      "impacto": "Unit economics positivos",
+      "prioridade": "CRÍTICA",
+      "status": "pending",
+      "vvv": 0.9
+    },
+    {
+      "id": "D2",
+      "titulo": "Contratar Advisor Municipal",
+      "descricao": "Sem experiencia = sales cycle >12 meses",
+      "recomendacao": "15-25% equity + salario + comissao",
+      "impacto": "Reduce cycle para 6-9 meses",
+      "prioridade": "ALTA",
+      "status": "pending",
+      "vvv": 0.8
+    },
+    {
+      "id": "D3",
+      "titulo": "Protocolar INPI Sprint 1",
+      "descricao": "6-12 meses prazo, iniciar imediatamente",
+      "recomendacao": "Usar checklist pronto + advocado IP",
+      "impacto": "Protecao algoritmos anonimizacao",
+      "prioridade": "ALTA",
+      "status": "pending",
+      "vvv": 0.7
+    },
+    {
+      "id": "D4",
+      "titulo": "Focar Age Verification ECA",
+      "descricao": "Nova Lei 15.211/2025 - urgencia CRITICA",
+      "recomendacao": "Priorizar produto ECA Digital apos MVP core",
+      "impacto": "Oportunidade timing unico",
+      "prioridade": "MEDIA",
+      "status": "pending",
+      "vvv": 0.7
+    },
+    {
+      "id": "D5",
+      "titulo": "Validar Parecer Juridico Art.75 IV",
+      "descricao": "Fundamentacao dispensa + riscos ICT",
+      "recomendacao": "Advogado especialista revisar whitepaper",
+      "impacto": "Base legal contratacao direta",
+      "prioridade": "ALTA",
+      "status": "pending",
+      "vvv": 0.6
+    }
+  ],
+  "next_meeting": {
+    "data": "A definir",
+    "prep_checklist": [
+      "3+ LOIs assinadas",
+      "Parecer juridico finalizado",
+      "Advisor identificado",
+      "INPI protocolado",
+      "Pricing ajustado validado"
+    ]
+  }
+}
