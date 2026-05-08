@@ -158,17 +158,49 @@
   },
   "competitive_gap": {
     "validated": true,
-    "vvv_score": 0.8,
-    "tese_unica": "Ninguem faz (municipal + R$100-500 + DPO + Lei14.133 + DC BR)",
-    "status": "Confirmado VVV",
+    "vvv_score": 0.95,
+    "tese_unica": "Ninguem faz (municipal + R$100-500 + DPO + Lei14.133 + DC BR + ICT)",
+    "status": "Confirmado VVV - Confidata Analysis Complete",
     "ameacas": [
-      {"nome": "Confidata", "status": "threat real", "acao": "monitorar pivot municipal"}
+      {
+        "nome": "Confidata",
+        "status": "THREAT REAL - PIVOT MUNICIPAL EXECUTANDO",
+        "acao": "VER docs/battle-card-confidata.md e estrategia-diferenciacao-confidata.md",
+        "precificacao": {"starter": "R$497/mes", "profissional": "R$1.497/mes", "enterprise": "R$3.497/mes"},
+        "modulos": 17,
+        "hospedagem": "100% BR (SP-GRU)",
+        "pivote_municipal": "CONFIRMADO - blog posts especificos prefeituras",
+        "gaps_identificados": [
+          "Preço alto para micro-municipios (<R$300)",
+          "Sem DPO-as-a-Service incluido",
+          "Data Discovery manual (nao automatizado)",
+          "Sem anonimizacao LAI/LGPD",
+          "Empresa privada COMUM (sem prerrogativas ICT)"
+        ]
+      }
     ]
+  },
+  "confidata_analysis": {
+    "fontes": ["confidata.com.br", "confidata.com.br/precos", "confidata.com.br/blog"],
+    "data_analise": "2026-05-08",
+    "status": "COMPLETO",
+    "documentos_referencia": ["battle-card-confidata.md", "estrategia-diferenciacao-confidata.md"],
+    "estrategia_cit": {
+      "fase_1": "Micro-municipios R$297-397/mes (40-20% abaixo Starter)",
+      "fase_2": "Consorcios R$197/mes por municipio (volume)",
+      "fase_3": "Diferenciacao tecnica (Data Discovery + Anonimizacao)",
+      "diferencial_imbativel": "Prerrogativas ICT (Art.75 IV c/d - R$390K+ vs R$65K Confidata)"
+    }
   },
   "validation_log": [
     {"date": "2026-05-08", "item": "Unit Economics", "action": "Corrigido LTV 13.2->10.8K", "vvv_before": 0.3, "vvv_after": 0.6},
     {"date": "2026-05-08", "item": "Roadmap crescimento", "action": "Corrigido 21-25% -> 3-7% MoM", "vvv_before": 0.2, "vvv_after": 0.7},
-    {"date": "2026-05-08", "item": "Meta clientes", "action": "2000 -> 275 clientes mes 30", "vvv_before": 0.1, "vvv_after": 0.7}
+    {"date": "2026-05-08", "item": "Meta clientes", "action": "2000 -> 275 clientes mes 30", "vvv_before": 0.1, "vvv_after": 0.7},
+    {"date": "2026-05-08", "item": "Pricing Municipal", "action": "CRITICO: Pricing 80-95% abaixo mercado. Ajustar 8-15x", "vvv_before": 0.2, "vvv_after": 0.9},
+    {"date": "2026-05-08", "item": "Consorcios Mapeados", "action": "Top 5 identificados: CIGA, CIMAMS, COPIRN, CONIAPE, CIMINAS", "vvv_before": 0.4, "vvv_after": 0.8},
+    {"date": "2026-05-08", "item": "Whitepaper Juridico", "action": "Fundamentacao Art.75 IV criada. Riscos identificados", "vvv_before": 0.5, "vvv_after": 0.7},
+    {"date": "2026-05-08", "item": "Template LOI", "action": "Template pronto para 3+ assinaturas. GO/NO-GO depende disso", "vvv_before": 0.0, "vvv_after": 0.6},
+    {"date": "2026-05-08", "item": "Tech Stack IP", "action": "Archbase Framework BR + estrategia INPI definida", "vvv_before": 0.2, "vvv_after": 0.7}
   ],
   "gaps_a_preencher": {
     "critical": [
@@ -199,7 +231,9 @@
       "TCEs fiscalizando"
     ],
     "threats": [
-      "Confidata pivot municipal",
+      "Confidata pivot municipal CONFIRMADO - execucao ativa",
+      "Confidata pode lancar plano micro-municipal (<R$300)",
+      "Confidata pode desenvolver Data Discovery automatizado",
       "OneTrust entrada BR",
       "Mudanca regulatoria",
       "Recesso municipal"
