@@ -1,0 +1,102 @@
+{
+  "goal": "O que priorizar para continuidade da apresentação LGPD - deliverables pendentes",
+  "dimensions": [
+    {"name": "Impacto_Apresentacao", "weight": 0.35, "function": "+"},
+    {"name": "Risco_Se_Adair", "weight": 0.25, "function": "-"},
+    {"name": "Esforco_Entrega", "weight": 0.15, "function": "-"},
+    {"name": "Valor_Estrategico", "weight": 0.15, "function": "+"},
+    {"name": "Dependencia_Outros", "weight": 0.10, "function": "-"}
+  ],
+  "objects": [
+    {
+      "name": "Transcricao_Analise",
+      "description": "Extrair insights estratégicos da transcricao NeoGov (1760 linhas)",
+      "impacto_apresentacao": 9,
+      "risco_se_adair": 2,
+      "esforco_entrega": 7,
+      "valor_estrategico": 9,
+      "dependencia_outros": 1
+    },
+    {
+      "name": "Dashboard_KPIs_5s",
+      "description": "KPIs visiveis em 5 segundos conforme FLUXO-TESTE-UX.md",
+      "impacto_apresentacao": 10,
+      "risco_se_adair": 2,
+      "esforco_entrega": 3,
+      "valor_estrategico": 8,
+      "dependencia_outros": 1
+    },
+    {
+      "name": "Cenario_Compare",
+      "description": "Toggle Bull/Bear/Base funcional com comparacao visual",
+      "impacto_apresentacao": 8,
+      "risco_se_adair": 3,
+      "esforco_entrega": 5,
+      "valor_estrategico": 7,
+      "dependencia_outros": 2
+    },
+    {
+      "name": "BMC_Interactive",
+      "description": "Business Model Canvas interativo com expansao",
+      "impacto_apresentacao": 7,
+      "risco_se_adair": 3,
+      "esforco_entrega": 6,
+      "valor_estrategico": 7,
+      "dependencia_outros": 2
+    },
+    {
+      "name": "Roadmap_Timeline",
+      "description": "Timeline navegavel com fases e KPIs",
+      "impacto_apresentacao": 8,
+      "risco_se_adair": 2,
+      "esforco_entrega": 4,
+      "valor_estrategico": 8,
+      "dependencia_outros": 1
+    },
+    {
+      "name": "SWOT_Filtravel",
+      "description": "SWOT interativo com filtros S/W/O/T",
+      "impacto_apresentacao": 6,
+      "risco_se_adair": 3,
+      "esforco_entrega": 5,
+      "valor_estrategico": 6,
+      "dependencia_outros": 2
+    },
+    {
+      "name": "Charts_Visiveis",
+      "description": "Graficos municipais acessiveis com tooltip",
+      "impacto_apresentacao": 7,
+      "risco_se_adair": 4,
+      "esforco_entrega": 6,
+      "valor_estrategico": 5,
+      "dependencia_outros": 3
+    },
+    {
+      "name": "Mobile_Optimized",
+      "description": "Tela 375px sem horizontal scroll, touch targets 44px",
+      "impacto_apresentacao": 8,
+      "risco_se_adair": 3,
+      "esforco_entrega": 5,
+      "valor_estrategico": 7,
+      "dependencia_outros": 2
+    },
+    {
+      "name": "Pitch_Deck_VSL",
+      "description": "Pitch deck baseado em research pronto para VSL",
+      "impacto_apresentacao": 9,
+      "risco_se_adair": 4,
+      "esforco_entrega": 8,
+      "valor_estrategico": 9,
+      "dependencia_outros": 3
+    },
+    {
+      "name": "LOIs_Assinadas",
+      "description": "3+ LOIs assinadas com prefeituras (GO/NO-GO)",
+      "impacto_apresentacao": 10,
+      "risco_se_adair": 1,
+      "esforco_entrega": 9,
+      "valor_estrategico": 10,
+      "dependencia_outros": 8
+    }
+  ]
+}

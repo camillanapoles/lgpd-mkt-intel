@@ -1,0 +1,1760 @@
+vão ter alguns pontos técnicos e se tiver dúvida pode me perguntar
+porque acredito que ela vai dar um norte pra tudo agora.
+Então a NeoGov é uma empresa de inteligência e proteção de dados,
+segurança da informação e complais na administração pública.
+Nessa primeira página aí fala quem que é, os serviços que oferecem,
+a atuação dela.
+Na terceira página, acredito que a gente entra mais na questão
+bem objetiva.
+A NeoGov possui soluções completas e eficazes para a adequação e implementação da LGPD,
+alinhadas à segurança da informação e mecanismos de complais
+para administração pública.
+Como eu disse pra vocês, específica pra administração pública.
+Vocês vão entender aqui direito o porquê disso.
+Então qual é a missão? Garantir a privacidade e proteção de dados pessoais.
+Ai, o negócio ficou na minha frente, peraí.
+Através de processos especializados em tecnologia e pessoas com respeito aos princípios
+e métodos da segurança da informação e medidas de complais voltados ao setor público.
+Por que que é atrelado a esse complais?
+Porque não tem como a gente fazer a conformidade da LGPD
+sem estar num conjunto de normas que também são atreladas.
+A lei de acesso à informação, a lei de combate à corrupção,
+com os três pilares, processos, pessoas e tecnologia.
+A lei de proteção de dados, aí a Gislaine, ela é bem técnica nisso,
+talvez a Camila aqui vai ter que aprofundar mais um pouco,
+mas ela é uma lei que está em vigor desde setembro de 2020.
+E se eu não me engano, a partir de 2022 que começou uma fiscalização mais profunda
+da NPD, do Ministério Público e do Tribunal de Contas nas entidades públicas.
+Ela é obrigatória, então não tem como uma prefeitura, uma câmara,
+falar que não vou fazer, não vou me adequar, não estarei em conformidade.
+Não existe isso, é obrigatório a entidade pública estar em conformidade com essa legislação.
+E aí, ela aplica a qualquer operação de tratamento de dados de pessoa natural,
+pessoa jurídica e direito público, ou seja, que é um órgão,
+existe um órgão que mais contém dados e informações sensíveis
+do que a própria administração pública,
+tanto dados dos servidores quanto dados da população,
+onde tramita ali guias de taxa, de alvará, cadastro, tudo isso.
+Que que são esses tipos de dados?
+São para vocês terem essa certeza do quanto isso é importante.
+Dados pessoais, nome, apelido, endereço, telefone, e-mail,
+cookies, endereço de IP, entre outros.
+Dados pessoais sensíveis, origem racial ou étnica,
+comunicação religiosa, opinião pública, dados de saúde, biometria, entre outros.
+Obrigações e responsabilidade.
+A autoridade nacional poderá solicitar aos agentes do poder público
+a publicação de relatórios de impacto à proteção de dados pessoais
+e sugerir a adoção de padrões e de boas práticas.
+O que que acontece?
+Hoje, pelo menos em Minas Gerais aqui,
+eu tenho que ver como é que está essa atuação,
+mas tanto a NPD quanto o Ministério Público,
+podem chegar na prefeitura e solicitar esse relatório.
+Esse relatório é uma ferramenta do próprio plano de conformidade.
+Está aí no artigo 32.
+Chegou lá, batam na porta do prefeito e da prefeitura,
+eu preciso desse relatório de impacto.
+Inclusive, existe prazo para que o gestor ou operador dos dados
+apresente esse relatório.
+O que que contém nesse relatório?
+Como é feito o tratamento dos dados?
+Quem são os responsáveis?
+Quais são os riscos de mitigância?
+Quais são as normas de segurança da informação?
+E somente com o devido mapeamento de todo o fluxo de dados na entidade pública
+e a realização da gestão de risco,
+é possível confeccionar o relatório de impacto.
+Ou seja, é um relatório, gente, que ele é complexo.
+Não é assim, por exemplo,
+o Ministério Público requisitou esse relatório,
+de repente o prefeito vai mandar ao procurador ou alguém
+do Deportamento de TI ir lá e produzir esse relatório.
+Não é do dia pra noite.
+Porque até ele ir de servidor em servidor,
+responder aqueles questionários,
+entender como é tratado, de onde entra o dado,
+de onde está saindo,
+ele não vai ter tempo pra isso.
+É uma coisa de praticamente um ano
+pra você ter um relatório complexo,
+um relatório com todos os dados importante.
+Então, o que a NeoGov faz?
+Após ela realizar todo o mapeamento
+e a análise dos riscos e vulnerabilidade,
+ela fornece a automatização que aí entra o sistema.
+Simone, a Camila pediu a palavra aí.
+O que eu ia perguntar,
+se você prefere que eu faça a pergunta no final ou durante.
+Se você quiser fazer durante,
+acho que pra não esfriar, pode ser durante.
+Acho mais efetivo.
+Pronto.
+Tu falou ali uma palavrinha-chave que é processo, né?
+O desenvolvedor não consegue.
+Então, eu acho que você já deve ter um processo,
+um caminho para um fluxo que é realizado, mapeado.
+O plano de execução.
+Vou apresentar pra vocês.
+Está logo, logo aqui na cartilha.
+E aí aparece aqui duas figuras, no artigo 44,
+que tem a ver, que são responsáveis por esse tratamento de dados,
+que é o controlador ou o operador.
+Quem, em razão do exercício de atividade de tratamento de dados pessoais,
+causar a outra em dano patrimonial, moral, individual ou coletivo,
+avelulação à legislação de proteção de dados pessoais,
+é obrigado a repará-lo.
+Ou seja, aqui, quem é o controlador,
+que na maioria das vezes é a própria prefeitura,
+é um gestor ali.
+O prefeito, ele responde também diretamente,
+mas normalmente é nomeado um controlador ou um operador de dados.
+Ele responde pelo CPF dele, pelo mal uso, por uma violação,
+ou por um descuido, uma vulnerabilidade, um vazamento de dados.
+Por exemplo, já aconteceu em uma cidade no interior de Minas,
+só para vocês terem noção na prática,
+que um servidor público ficou muito chuteado com um outro servidor público,
+pegou o cadastro, se eu não me engano, lá da saúde,
+que estava no sistema que ele tinha AIDS, e publicou na internet.
+O que é isso? É um incidente, diz Lenny.
+É um vazamento de um dado, de uma informação sensível.
+O que isso gera de prejuízo para a administração pública?
+Indenização, multa, suspensão do sistema,
+porque a NPD, o Ministério Público,
+pode pedir para suspender todo o sistema da prefeitura,
+enquanto isso não é corrigido.
+A falta de adequação a LGPD e a inexistência de métodos de segurança da informação
+pode acarretar a responsabilização direta dos dirigentes dos órgãos públicos.
+A culpa é presumida,
+devendo os dirigentes comprovarem que adotaram todas as medidas preventivas
+para que o dano não ocorresse.
+Como que é feito esse tratamento de dados?
+Ele só poderá ser realizado nas seguintes hipóteses.
+Pela administração pública,
+para o tratamento e o uso compartilhado de dados necessários
+é a execução de políticas públicas
+previstas em leis e regulamentos
+ou respaldados em contratos, convênios ou instrumentos.
+Artigo 23, ou seja, o tratamento desses dados,
+por exemplo, a disponibilização quando a Câmara Municipal...
+Agora eu estou trazendo um exemplo prático desse artigo.
+Vamos supor que um vereador da Câmara Municipal
+requisita uma informação de um contrato da Prefeitura
+e ele precisa dessas informações.
+Então ele está no direito dele, tem uma finalidade pública,
+tem ali o princípio da fiscalização, da transparência.
+A administração pública pode fazer o tratamento desse dado,
+o compartilhamento desse dado,
+sim, mas desde que tenha essa finalidade, entendeu?
+O órgão fiscalizador, no caso a Câmara,
+a Câmara solicitando para a Prefeitura.
+Só que nesses casos, esse dado tem que ser informado,
+mas já tratado.
+Ou seja, o dado sensível ali vem com aquela tarja preta
+que nós falamos.
+O tratamento de dados pessoais pelas pessoas jurídicas de direito público
+deverá ser realizado para o atendimento da sua finalidade pública
+na persecução do interesse público,
+com o objetivo de executar as competências legais
+ou cumprir atribuições legais do serviço público.
+Vocês conseguem entender o quanto isso é comum?
+Essa transferência, esse manuseio de dados, de informação?
+Eu estou pensando aqui,
+quando tu falas tudo isso que eu podia fazer perguntas,
+e é técnico,
+por exemplo, quando a Polícia Federal faz esses...
+Ela entra ou não entra na LGPD?
+Porque a gente vê, ela faz questão de...
+uma investigação que exige áudio.
+Tem coisa mais perspetual do que áudio.
+A Polícia Federal...
+Camila, ela já é motivada por algum fato?
+Camila, ela já é motivada por algum fato?
+Ou algo que concorra a crime de violação federal?
+Aí a Polícia Federal é motivada para isso.
+Mas quem são os órgãos fiscalizadores
+que estão em todo tempo fiscalizando, inclusive,
+notificando os estados?
+Isso já está muito evidente e latente
+no Rio de Janeiro, Minas Gerais.
+Aqui em Goiás é um pouquinho mais atrasado
+nesse sentido do que Minas,
+Rio de Janeiro, São Paulo, por exemplo.
+Mas desde que haja indícios de crime, de violação,
+a Polícia Federal atua em conjunto
+com o Ministério Público, o Tribunal de Contas e a NPD,
+que é a agência reguladora da Lei Geral de Proteção de Dados
+para Administração Pública.
+Então, nesses casos, pode haver a situação
+que eu estou querendo entender
+é se há casos que o dado pode sair sem anonimização?
+Sim, com finalidade.
+Desde que haja uma finalidade, uma atribuição dos princípios
+da Administração Pública, sim.
+Mas tudo isso aí vem assinado também.
+Vocês vão ver que tem uma artiga aqui,
+eu vou mostrar para vocês,
+que quando, vamos supor que eu, Simone,
+sou a GPO da Prefeitura de Goiânia.
+E a Polícia Federal está com alguma investigação
+aí de algum vazamento, algum crime,
+alguma coisa que contenha a operação desse dado sensível.
+Eles vão me requisitar via notificação, ofício.
+Eu sou obrigada a fornecer essa informação,
+mas aí vai com a minha assinatura de GPO,
+que eu estou fornecendo.
+Porque se acontecer alguma coisa também
+com vazamento desse dado, eu sou responsável.
+Eu sou a dirigente daquela informação.
+Então, todo mundo que faz o tratamento de dados,
+tanto quem vê e quem recebe,
+são os responsáveis por aquela operação.
+Uma das figuras que a lei estabelece
+é o GPO, que é o encarregado de dados.
+É uma pessoa indicada pelo controlador
+para atuar como canal de comunicação entre o controlador,
+os titulares dos dados
+e a Autoridade Nacional de Proteção de Dados, que é a NPD.
+Então, vamos lá. Quem é o controlador?
+O controlador, nesse caso hipotético,
+é a prefeitura de Goiás.
+Quem é o GPO?
+Pode ser o procurador,
+pode ser alguém do departamento,
+um servidor público do departamento de controladoria.
+São departamentos que têm a ver com as normas
+e com a legislação da LGPD.
+O único departamento que eles não orientam
+é o departamento de TI,
+porque ele deve ser imparcial,
+o departamento de TI.
+Então, a gente não indica um GPO
+ser nomeado do departamento de informação de TI da entidade.
+Quem é o titular desse dado?
+É a pessoa física
+a quem se refere os dados pessoais,
+que é um objeto de tratamento.
+Por exemplo, no caso, eu sou uma servidora
+e eu fui lá no guichê da prefeitura
+e eu quero saber quais informações,
+quais cadastros tem meu lá na Secretaria de Saúde.
+Eu tenho o direito, eu como titular dos meus dados,
+eu tenho esse direito de ir lá e requisitar para a prefeitura
+quais são as informações que a prefeitura tem sobre mim,
+sobre os meus dados.
+A NPD, a Autoridade Nacional de Proteção de Dados,
+é a autarquia de natureza especial que zela,
+implementa e fiscaliza a LGPD.
+É contaminante com o Conselho Nacional de Proteção de Dados Pessoais
+e da Privacidade, que propõe diretrizes estratégicas,
+fornece subsídios para elaboração da política,
+Nacional de Proteção de Dados Pessoais
+e privacidade para atuação na NPD.
+Só lembrando vocês que já existe uma cartilha,
+lá no site da NPD eles disponibilizam isso,
+que é o Manual do Tratamento da Privacidade de Dados,
+que é praticamente essa cartilha aqui também,
+tem muitas normas que nós colocamos aqui nessa cartilha.
+Aqui vem um tópico, que é a Convergência com a Lei de Acesso à Informação.
+Por que a gente trata muito esse tópico?
+Porque é como se fosse assim.
+A Lei de Acesso à Informação, a Lei de Transparência,
+pede para a gente informar,
+para a gente colocar lá todos os contratos de listação,
+todos os contratos da Prefeitura, da entidade pública,
+tem que estar onde? No portal de transparência.
+Mas como que funciona?
+Você tem uma lei que fala para a gente expor,
+ser transparente e mostrar,
+e aí vem outra lei e fala assim, não, a gente tem que proteger.
+Então, embora existam esses desafios,
+é importante destacar que o gestor público
+tem que reconciliar essas normas.
+Elas têm que convergir.
+O gestor público deve levar em consideração
+os requisitos da LGPD e da LAI,
+ao lidar com os dados pessoais e informações acessíveis,
+garantindo acesso à informação pública
+e a proteção da privacidade dos indivíduos.
+Em tese, essa aplicação é o seguinte,
+por exemplo, você pode ver que todos os contratos
+da administração pública aqui em Goiânia,
+eles não terminaram de implementar.
+Mas o que que é o certo? O que que a lei estabelece?
+Quando a gente colocar um dado, um contrato lá no portal,
+ele tem que vir anonimizado alguns dígitos do CPF,
+o endereço, onde eu falei para vocês,
+onde há dado sensível, a entidade tem que tomar o cuidado
+de garantir a proteção dessas informações.
+Então, a Lei Geral de Proteção de Dados,
+ela ingressou no ordenamento jurídico
+para fortalecer a proteção de dados que já possuíam tutela.
+Porém, diversos outros mecanismos e requisitos
+foram criados com a lei,
+como a aplicação estendida também aos entes privados,
+determinação da muntenção do registro de tratamento de dados pessoais,
+criação de uma entidade nacional
+e fiscalização e aplicação das sanções,
+onde foi criada a NPD.
+Aí aqui estão as funções da NPD,
+que tem como principais atribuições
+fiscalizar, elaborar normas, estabelecer, receber,
+purar reclamações, realizar auditorias, aplicar sanções.
+E quais são os riscos da violação e responsabilidade?
+Aqui eu vou entrar no ponto um pouco comercial.
+O que o gestor e a entidade pública têm que entender?
+Que se ela for participar de uma entidade, de uma auditoria,
+ela tem que ter em mente, pelo menos, métodos,
+ou um sistema, ou formulários,
+uma metodologia, um processo de execução
+que garanta para a fiscalização,
+opa, peraí, a gente está cuidando dos dados pessoais da população,
+dos dados que o nosso órgão tem a responsabilidade sobre eles.
+Então isso aí já livra ele, já salvaguarda?
+Já mitiga risco.
+Já dá para ter um prazo para que se estiver faltando,
+resolver um incidente, algum vazamento, algum problema,
+pelo menos tem como resolver e não tem a sanção.
+Entendi.
+Entendeu?
+Por exemplo aqui, o acesso à lei,
+a lei de acesso à informação prevê expressamente
+que a conduta ilícita de violar a informação pessoal pelo acesso,
+divulgação indevida, pode ser penalizada via processo administrativo
+com pena mínima de suspensão das atividades do cargo,
+função pública, e possibilita ainda que o agente público responda
+por improbidade administrativa.
+E aí a ANPD tem manifestado o mesmo entendimento quanto a LGPD,
+podendo usar agentes de tratamento que violarem seu dever de proteção,
+especialmente os dirigentes do setor público,
+serem processados por improbidade administrativa,
+incorrendo inclusive na perda de suas funções públicas.
+O que acontece muito hoje, doutora Gisleini, na administração pública?
+Você bate na porta lá da prefeitura e aí você fala com o prefeito,
+na maioria das vezes ele não sabe de nada,
+ele vai mandar chamar o procurador,
+ou o cara lá do TI ou o controlador e vai perguntar assim,
+como é que está a LGPD aqui?
+Aí eles vão falar assim, não, está tudo ok.
+Por quê?
+Com certeza eles colocam aquele aceite lá de política de Cux,
+um formulário, aquela parte do artigo do preâmbulo da lei
+que fala que os estudados têm que ser protegidos e tal.
+Mas na prática mesmo, na hora do plano de conformidade,
+da mitigação de riscos do sistema, eles não têm nada.
+Eles só nomeiam uma pessoa, porque a lei obriga a nomear o GPO,
+fala que existe, mas na prática mesmo,
+gente, eles não estão em fiscalização, eles não estão em conformidade,
+porque falta braços, é muita demanda, eles só estão fingindo que tem,
+mas eu garanto para vocês que eu rodei um ano
+e a gente entrava, via coisas absurdas.
+Eu garanto também que as empresas não têm, não é só serviço público.
+E as empresas sabem quando também que elas correm e resolvem,
+ou plantam algum processo, alguma metodologia,
+quando acontece algum vazamento, algum problema, algum incidente,
+que aí gera uma multa, alguém vai lá, faz uma reclamação,
+aí eles vão lá e tentam resolver o problema.
+Só que aqui a gente pode vender uma solução de prevenção,
+uma solução de um plano de conformidade,
+porque a qualquer momento que a entidade ou a empresa
+ela for auditada, ou ela for fiscalizada ou requisitada,
+ela está em conformidade, ela está andando na frente.
+Se eu te fazer uma pergunta rapidinho, é que eu tenho muita dúvida,
+então acho que é comum.
+Se a gente tiver, qualquer pessoa tiver um serviço que é contratado,
+tipo um sistema, você contrata o sistema, o banco de dados fica no sistema.
+A lei...
+Esse compartilhamento de responsabilidade, quem se responsabiliza?
+A empresa que usa ou a que tem o serviço?
+Que a lei estabelece que essas informações precisam ficar
+protegidas na nuvem, o arquivo na nuvem,
+de propriedade da entidade pública,
+atrelada ao servidor da entidade pública ou da empresa.
+Por exemplo, nós empresa ou nós instituto,
+a gente não fica, a gente trata, a gente tem acesso aos dados,
+a gente faz esse tratamento, mas ele fica na nuvem,
+no poder da entidade pública ou da empresa.
+Entendeu?
+E aí, uma coisa que é diferente para a empresa privada...
+Fiz mais ou menos, viu, Simona, na verdade.
+Eu vou chegar lá, tem um artigo que estabelece sobre isso,
+que fala sobre isso, eu vou explicar, nós vamos chegar lá direitinho.
+Por exemplo, para a empresa privada, existem as multas pecuniárias,
+que é onde dói no bolso do dono, ele vai lá,
+gerou uma multa, ele vai lá e corrige o problema.
+Na administração pública, multa não é aplicado multas, mas sanções.
+Quais são essas sanções?
+Advertência, publicização das infrações, tem que ser publicado,
+bloqueio dos dados pessoais até a sua regularização,
+eliminação dos dados pessoais violados,
+suspensão temporária do funcionamento de bancos de dados
+e suspensão temporária do exercício da atividade de tratamento de dados.
+O dirigente do órgão poderá ser responsabilizado por improvidade administrativa,
+podendo ocorrer perda da função pública,
+suspensão dos direitos políticos por até 14 anos.
+Tanto que isso é grave para um prefeito ou um presidente de uma câmara.
+Gera inelegibilidade, pagamento de multa ao herário público,
+essa multa aqui é quando tem a indenização.
+Proibição de contratar com o poder público.
+E agora nós vamos para a parte aqui do compliance.
+O serviço de compliance na administração pública é um conjunto de medidas adotadas
+para garantir o cumprimento de leis, regulamentos e normas éticas do setor público.
+O principal objetivo é a promoção da transparência e eficiência na gestão pública.
+Por que a gente entra na parte do compliance que envolve essa implementação?
+Eu lembro que o Wilton tinha feito, acho que essa pergunta na outra reunião que nós estávamos,
+não é simplesmente colocar uma tecnologia e colocar para funcionar esse plano de execução.
+Não tem como o plano de execução, a tecnologia e o sistema funcionar sem pessoas.
+Porque nós como operadores do direito e o time jurídico do instituto,
+ele tem que entrar sendo responsável também por esse serviço de compliance,
+que é o conjunto de todas as normas.
+Quando a gente coloca lá em adequação, não só a LGPD, mas a LAI,
+a de combate à corrupção, a lei de acesso à informação, a transparência.
+Os três pilares do programa de compliance é prevenir, detectar e remediar.
+Além disso, também inclui a elaboração de políticas e treinamentos
+para conscientizar os servidores públicos sobre o risco de condutas inadequadas
+e sobre a importância da ética na administração pública.
+Exemplo, código de conduta ética, código de boas práticas.
+Está vendo o conjunto de normas que faz parte do compliance?
+Que aí nós entramos com essa parte de assessoria jurídica, Gisleine,
+que está citando também os servidores, o GPO, o operador desses dados.
+Os nossos pilares legais do compliance.
+A lei de acesso à informação, a lei de improbidade administrativa
+e a lei de anticorrupção, que envolve a análise de riscos,
+desenvolvimento de políticas, treinamento, monitoramento,
+avaliação, investigação e reposta.
+Essa parte aqui, ela é feita já pelo time de advogados.
+Entendeu, Gisleine?
+Agora eu vou entrar aqui na pergunta importante.
+Agora eu acredito que vocês vão ter uma noção bem ampla
+de como que isso é feito na prática.
+Nós vamos entrar agora no processo de execução.
+Na prática, como que funciona?
+A primeira fase é uma reunião de alinhamento do projeto,
+onde nós vamos colocar lá o prefeito, todos os secretários,
+os gestores de departamento, o controlador interno, o procurador,
+o secretário de administração, o secretário de educação.
+Olha, o tanto de dados sensíveis é operado na Secretaria de Educação
+de menor de idade, dos alunos da rede pública, das escolas.
+Secretaria de Saúde, informação sobre doenças,
+o aportador de doenças, qual religião é.
+Então, olha o tanto de informação que é operada, que é tratada,
+que é passada pela administração pública por essas secretarias.
+Então, a gente faz uma reunião de alinhamento desse projeto,
+dessa implantação da LGPD,
+para apresentar o escopo e o fluxo de implementação
+com representantes de cada setor da entidade pública.
+Depois, é feito um diagnóstico jurídico,
+através da nossa equipe, do instituto.
+Nós vamos enviar lá um advogado, um junior, por exemplo,
+mais um técnico em análise de sistema,
+segurança da informação,
+para colher as informações,
+para a gente fazer o mapeamento de como que está aquele setor,
+que é o levantamento de normas de impacto,
+análise da maturidade e adequação, a definição de bases legais.
+Ou seja, nós vamos entrar lá na Secretaria de Educação
+e nós vamos fazer entrevista com a diretora da escola, por exemplo.
+Fala, é, aqui quando vocês fazem matrícula,
+onde que vocês guardam esses dados?
+Os dados estão em documentos físicos ou digitais.
+E esses documentos físicos, eles estão guardados onde tem um cadeado,
+onde qualquer pessoa tem acesso a uma ficha de um aluno,
+a um cadastro de matrícula,
+ou um prontuário médico, por exemplo.
+Então, esse diagnóstico jurídico,
+ele é a parte do processo de execução que ele é mais demorado,
+porque realmente a gente tem que enviar pessoas nossas técnicas
+para fazer esse levantamento e essa análise
+de como está o comportamento da maturidade da implementação da LGPD.
+E é aí que a gente assusta e vê que ninguém está fazendo nada, não sabe nada,
+o negócio está correndo frouxo, sem normas, sem regra,
+sem sistema, sem planilha,
+sem saber quem é responsável por aquele prontuário médico
+na mão de quem ele passou.
+Vamos imaginar que um médico faz o atendimento ali, uma consulta.
+Beleza, ele preencheu lá as informações no prontuário.
+Quem no sistema tem acesso a esse prontuário?
+Quem acessou a informação daquela pessoa ou daquele paciente?
+E no sistema, Camila, a gente tem que ter esse registro
+de quem teve acesso ao prontuário.
+Isso é uma forma de tratamento no meio digital da prefeitura, por exemplo.
+Mas nós vamos chegar lá também nos possíveis problemas.
+Depois desse diagnóstico jurídico,
+é feito um diagnóstico da segurança da informação,
+que é onde entra mais a Camila, a expertice da Camila,
+que são os testes de vulnerabilidades ambientais e virtuais
+na gestão de risco de acordo com as normas técnicas.
+E aí entra aqui as ISOs também, que já vale para a questão da LGPD.
+Contaminante a isso é feito um inventário e mapeamento desses dados,
+que são entrevistas técnicas com cada um dos integrantes da entidade pública,
+função de dados coletados e a necessidade.
+Então a gente faz um levantamento desse inventário de dados pessoais,
+estabelecimento do fluxo de dados e processos.
+Depois, com essas entrevistas, com esse levantamento,
+a gente elabora o relatório de mapeamento de dados e processos.
+Por exemplo, a gente vai ter um relatório onde tem ali o problema, o risco e a pendência.
+O que nós vamos orientar o órgão público a fazer?
+Por exemplo, lá na Secretaria de Educação ou lá na Secretaria das Contratações de Listação.
+Os contratos que são sigilosos, eles destroem esses dados físicos,
+esses contratos passam naquela picotadeira de papel.
+Como que está sendo descartado?
+Até esses documentos, como que estão sendo descartados?
+Então a gente vai apontar o problema, os riscos,
+nós vamos apontar a solução, a secretaria tem que comprar uma picotadeira
+e descartar os documentos físicos dessa forma, nesse modelo.
+E a gente ainda vai estabelecer também um prazo.
+Estão entendendo? A gente entra dentro da prefeitura, visualiza o problema também,
+e nesse relatório a gente aponta ali o risco.
+Aí nós vamos para a fase dois, que é a análise e gestão de risco,
+que é a matriz de risco, planos de ações para mitigação desse risco,
+que é o que a gente vai entregar para a entidade.
+É como se fosse numa consultoria a gente entregando o plano de negócio,
+o plano de risco, o planejamento estratégico para isso.
+Juntamente com a avaliação de impacto, que é o relatório, que é o RIPT,
+está na lei, na legislação.
+Quando a NPD, auditorium ou Ministério Público pede o relatório, é esse RIPT,
+então ele tem até o formato, ele tem o padrão, como ele tem que ser preenchido.
+E a definição do encarregamento de dados e atribuição de responsabilidade,
+que a gente ajuda e a gente certifica esse DPO também.
+Fase três, que é o programa de conformidade, quando a gente já considera
+que a entidade pública já está com a implementação desse plano de ações
+com ações corretivas, que é o que a gente entrega para a entidade pública,
+que são ações corretivas em sistemas informatizados,
+que é a segurança da informação e boas práticas dos servidores.
+O conjunto do compliance também, a gente faz a revisão dos contratos.
+Na maioria das vezes, Gislaine, a gente pede o modelo desses contratos
+e faz uma revisão, se tem a cláusula lá de transparência,
+se tem a cláusula lá de LGPD, e a gente entrega também o treinamento
+e capacitação do encarregado de dados e servidores,
+através de cursos e palestras presenciais e remotas.
+Aí, meus amigos, é nessas fases aqui que a gente precifica o nosso trabalho,
+o que a gente está entregando.
+Treinamento, palestra, o compliance dessas normas,
+o plano que a gente fez e vai fazer através também
+de um sistema de gestão de uma tecnologia.
+E na fase 4, essa é a fase 4, é a que ela sempre,
+depois do plano implementado, ela nunca acaba,
+que é o que a gente vai amarrar à prefeitura,
+a nossa recorrência, a necessidade de continuar contratando a gente.
+Por quê? Precisa ser feito esse teste de conformidade,
+fazer uma varredura contínua.
+Não é somente, beleza, nós fomos lá e implementamos o plano,
+as estratégias, as ações corretivas e tal,
+mas isso tem que continuar sendo acompanhado,
+porque entra servidor novo, sai servidor, entra informação nova.
+Então eles sempre vão precisar da gente,
+é onde a gente mantém o contrato fazendo aquela renovação do contrato.
+Fidelização.
+Oi?
+Fidelização.
+Fidelização, não existe a fidelização na administração pública,
+mas a gente chama de renovação do contrato,
+porque é um serviço contínuo, não tem como eles na órgão,
+não, agora a gente não vai ficar mais adequado.
+É necessário, é uma avaliação de maturidade de segurança,
+impulsão de ações corretivas o tempo todo,
+porque o tempo todo pode acontecer um caso, um incidente.
+E o relatório de autoria, visitas técnicas mensais
+para a realização de teste de conformidade,
+então nós vamos fazer isso,
+depois do plano implementado,
+a gente vai de três em três meses,
+de seis em seis meses fazendo essa visita técnica
+e realizando esses testes.
+E aí, agora eu vou mostrar para vocês o sistema,
+ele foi nomeado aqui de LGPD Web,
+mas a gente pode dar a mão para o nosso sistema, Camila,
+que é o sistema onde todo o processo de implementação e adequação
+é realizado com integração à plataforma,
+garantindo continuidade no programa de conformidade
+e eficiência e segurança da informação.
+O que tem lá nessa plataforma, nesse sistema?
+O mapeamento de dados, a gestão de risco,
+a gestão de CUCs e a gestão de dados.
+Tudo isso lá dentro do sistema.
+O relatório tem que estar lá dentro do sistema.
+A gente tem que mostrar, aqui eu vou...
+Não tem aqui a carinha do sistema,
+mas eu posso ver se eu consigo para você depois, Camila,
+mas o sistema tem que mostrar aquela matriz de risco.
+Quantos por cento já foi mapeado?
+Quantos setores nós já entramos, já fizemos a entrevista,
+já mapeamos aonde tem o dado sensível?
+Quem opera esse dado?
+Quem é o responsável lá no setor pela operação desse dado?
+Então, é uma solução de proteção de dados
+para o tratamento do acervo do documento físico.
+Nessa plataforma, onde entra especificamente o software,
+é o seguinte.
+Nós vamos fazer o tratamento do documento físico.
+Como é que é feito esse tratamento do documento físico?
+A gente vai precisar, se ele não tiver digitalizado,
+a gente vai precisar digitalizar.
+Aí aqui entra aquela norma da arquivologia.
+Esse documento está arquivado de uma forma correta,
+documentos físicos sem a proteção do conteúdo.
+Deixa eu te perguntar, quem digitaliza?
+Porque esse é o trabalho mais difícil,
+acho que mais oneroso para a migração.
+Isso, depende.
+Nós podemos trabalhar com dois tipos de serviço.
+Quando a prefeitura já contrata uma outra empresa
+e digitaliza esse documento,
+e a gente faz só o tratamento dele no digital,
+ou a gente pode pegar também para digitalizar,
+que a gente ganha também na precificação dessa digitalização.
+Eu acho interessante a gente pegar e subcontratar.
+Isso é o que eu acho legal.
+Eu, por exemplo, conheço três empresas
+que trabalham exatamente com essa questão da digitalização.
+A gente pega o contrato por um preço e compra por outro.
+Acho que é aí a expertisa.
+Porque os caras já estão anos-luz na nossa frente.
+O que é a nossa solução?
+Eu conheço duas grandes empresas
+que fazem isso em mais de 16 estados no Brasil.
+Os caras estão lá na frente de digitalização.
+O que eu quero competir com esses caras?
+Hora nenhuma.
+Que já tem os equipamentos.
+O que eu quero?
+A gente usar o subterfúgio do Instituto, que é uma OSCIP,
+para organizar o termo de contratação,
+termo de parceria e fomento direto,
+sem precisar de licitação.
+Ok, ganhamos, a gente subcontrata.
+Pode fazer também como produto da empresa de venda.
+E é a empresa que contrata, que tem um parceiro.
+Sim, exatamente.
+A ideia é que é essa.
+Eu não quero ser especialista em tudo.
+Longe disso.
+Muito pelo contrário.
+Eu quero ter tecnologias, pessoas.
+A gente ir lá, ganhar e subcontrata.
+E o nosso processo de execução
+da conformidade da LGPD funcionar.
+Porque mesmo que a gente subcontrate
+essa empresa que vai digitalizar,
+que vai fazer anonimização,
+que vai criar os controles de acesso,
+a gente tem que garantir que está dentro do nosso processo de execução.
+Inclusive, nós vamos exigir e acompanhar fiscalizando isso.
+Arquivologia, por exemplo,
+auxiliando na criação,
+façando o plano de classificação documental.
+Aí é nós que vamos fazer essa gestão
+de orientação para a tabela de temporalidade.
+Gente, a maioria das prefeituras
+não estão organizadas na tabela de temporalidade.
+Tem documento lá que já podia ser descartado,
+que depois de digitalizado não precisa ter ele no físico.
+Está ocupando espaço físico.
+Entendeu?
+E organizar.
+Exato.
+Só mais um detalhe técnico aqui,
+e, Simone, justamente,
+a Lei Nacional das OSCIP,
+ela fala justamente isso.
+O instituto que tem a qualificação de OSCIP,
+a grande questão que você acabou de falar,
+ele faz e somente faz a gestão dos recursos.
+Então, por isso que o dinheiro vem para o instituto,
+o instituto vai contratar a empresa da Simone,
+a empresa da Ghislaine, a empresa da Camila,
+a contratar a empresa do Paulo.
+Então, é isso que o instituto faz.
+Vocês emitem notas fiscais
+e eu faço o pagamento para vocês.
+Então, é exatamente isso.
+Então, a gente coloca isso como um produto robusto do instituto
+e depois, obviamente, a gente entrega,
+fazer uma boa gestão da entrega.
+Só que a gente não precisa ser especialista em tudo.
+Sim.
+Por exemplo, a gente pode contratar uma empresa,
+até como a NeoGolf.
+Só que, claro, quando a gente contrata uma empresa
+que vai fazer tudo isso,
+a precificação para nós, ela vai ficando minguada.
+Sim, com certeza.
+O que a gente puder fazer, por exemplo,
+a parte, a Ghislaine e nós,
+com a parte jurídica do compliance.
+Sim.
+O treinamento e capacitação desses servidores
+para boas práticas de conduta,
+da lei geral de proteção.
+Uma ideia, gente.
+O instituto, como instituto de ciência e tecnologia,
+teve profissionais vinculados.
+Então, quem encabeça isso,
+ou quando a gente for vender o produto,
+eu estou, ter a doutora Simone,
+ter a Camila como engenheira de soft de IA, sabe?
+Ou seja, telas vinculadas ao instituto.
+Passa a ser um produto do instituto.
+Exato.
+Tem fases intermediárias que a gente vai subcontratar.
+E no contrato que a gente vai ofertar.
+Inclusive, isso tem que estar muito bem especificado
+para nos resguardar.
+A parte da subcontratação.
+Óbvio que a doutora já deve ter isso tudo.
+Ela já está inserida em vários municípios.
+Mas a ideia realmente é aproveitar a confiabilidade
+e a entrada do instituto, sabe?
+Porque dá uma tranquilidade maior.
+Eu estou lidando com o instituto
+que está vinculado à administração pública.
+Eu não estou lidando com a NeoGov,
+que é uma empresa que só quer...
+Isso.
+A ideia, no segundo momento,
+que a gente até tratou na outra reunião,
+é transformar o instituto num certificador.
+Então, às vezes, a própria contratação da NeoGov,
+outras empresas, e a gente passa a ser certificador.
+Isso.
+Gislaine, olha que lindo isso aqui.
+Isso não tem a ver o Wilton e a Camila
+com a finalidade do instituto.
+Olha isso aqui.
+Você sabia que a maioria das implementações da LGPD
+desconsideram os documentos físicos
+por não possuírem ferramentas adequadas
+de mapeamento desses dados?
+Em contrapartida, a LGPD entende
+ser este o principal alvo de tratamento.
+Nossa solução, ponta a ponta,
+coloca fim a este problema,
+blindando a entidade pública
+quanto a problemas de vazamento de dados,
+além de criar uma gestão inteligente de documentos.
+Que vai ser a nossa principal finalidade como instituto.
+Maravilha, agora a gente tem que pegar isso
+e desenvolver um produto em cima disso.
+Isso, exatamente.
+Um produto, ela já deve ter...
+Esse próprio material dela serve de base, Wilton.
+Total.
+A gente cria...
+Esse material aqui, gente, só informando para vocês,
+ele foi extraído do manual da NPD.
+Vocês vão entrar lá no sádio e ver que é público.
+Já existe esse manual de normas.
+O que é escasso são empresas ou institutos como nós
+que vamos nos especializar nessa conformidade
+em LGPD, no complexo para administração pública,
+atrelado com processos,
+que aí entra o nosso plano de execução,
+tecnologia, que aí entra o nosso sistema,
+esse sistema específico da entidade.
+Então, aqui ó, como é que funciona o processo.
+Análise do acervo documental físico,
+estrutura, quantidade, documento,
+tipo de documento, conservação.
+Aqui, gente, a gente tá falando da transformação digital, tá?
+Da parte do LGPD Drive,
+a gente já entrou aqui na parte de documento físico
+que precisa ser transformado em digital e tratado.
+Que é onde a gente pode contratar,
+no YouTube contratar uma empresa para fazer isso.
+Mas não tem como fugir desse processo aqui.
+Quer entrar lá, analisar a estrutura,
+uma criação de um plano de classificação,
+isso nós temos que entregar para a entidade pública.
+Estabelecer normas de limpeza, de organização.
+É como se fosse assim, gente, nós vamos entrar dentro
+do almoxarifado deles também e organizar.
+Vocês fazem o business process model.
+Isso.
+Exatamente isso.
+Isso. Entendeu?
+Então, aqui, por exemplo,
+a entidade pública protegida,
+depois que a gente fizer a digitalização, a transformação,
+aí entra aqui a criação de um backup digital
+de todo acervo documental digitalizado
+armazenado físico e em nuvem.
+Ou seja, depois, Camila, de todo esse acervo físico
+ser digitalizado e tratado,
+ele vai ser armazenado em nuvem.
+E aí entra essa ferramentinha aqui que você já conhece,
+que é a leitura do documento por OUCR,
+que é a leitura dos documentos armazenados por todo o documento,
+que é o filtro, né?
+A gente pode fazer ali o filtro.
+Ah, eu preciso pesquisar um documento assim, um contrato,
+que a prefeitura contratou uma empresa de construção, não sei o quê.
+Aí faz a leitura lá via filtro,
+só que quando eu acesso essa informação,
+ela vem anonimizada onde tem dados sensíveis.
+Então, a submissão de todos os documentos digitalizados
+é uma ferramenta de inteligência artificial
+que permite identificar e classificar os dados pessoais.
+Anonimização de dados, que é aquela tarja preta,
+impossibilitando a leitura de pessoas não autorizadas
+e acesso aos dados pessoais somente com senha.
+A gente coloca essa trava também.
+E aí entra a parte da tecnologia.
+Porque aí, quando o acesso dos dados pessoais,
+ele vai ser somente com senha.
+E ainda que revelados por senha, cria uma marca d'água no fundo do documento
+com identificação do servidor que imprimiu,
+do servidor que abriu aquele documento sensível.
+E isso já é a parte da segurança da informação, Camila.
+Então, além de proteger todos os dados pessoais,
+o LGPD Drive, que é a ferramenta que eles nomearam,
+permite buscas inteligentes de qualquer palavra
+contida nos documentos digitalizados.
+Ou seja, uma contratação com várias soluções.
+LGPD, implementação e adequação, segurança da informação,
+a transformação digital, que a maioria das entidades públicas
+ainda possuem muito documento físico.
+E o software de gestão e governança de dados,
+que é o sistema que a gente vai colocar lá na plataforma.
+O LGPD Web, que a gente vai ter ali o relatório inventário de dados,
+a gestão dos riscos, aquele mapa de riscos,
+os direitos, os treinamentos,
+os cursos que a gente vai colocar lá dentro da plataforma.
+E o Drive, que é a proteção dos dados,
+que é o conteúdo do documento criptografado e anonimização.
+Conseguindo entender que a nossa plataforma
+vai contemplar o nosso relatório, o nosso plano de execução,
+o termômetro de como está sendo feita a maturidade dessa adequação
+e, contaminante a isso, os arquivos protegidos.
+Então, o maior diferencial, no caso da Anel Gov,
+é a solução ponta a ponta criada para administração pública,
+que vai muito além de uma revisão documental
+que poderia ser feita por um escritório comum de advocacia.
+Com a Anel Gov, o objeto multidisciplinário especializado
+reduz o custo de contratação de quatro contratos em um,
+alcançando a mais...
+Um sítio high-tech.
+Isso, vantajosidade para administração pública,
+sem riscos de contratos que não se harmonizam,
+acabam prejudicando o bom curso das atividades administrativas
+por problemas em sua execução,
+requerendo novas contratações e resultando em um desperdício de recursos públicos.
+Que é a maioria das vezes onde acontece.
+Contrato um escritório de advocacia que só vai fazer, às vezes,
+alguns modelos de questionário,
+colocar lá no site, pôr todo mundo para preencher,
+clicar ali um cookie, uma política de cookies e pronto.
+Mas na prática, simplesmente, isso não é uma entidade em conformidade.
+Tem que ter tecnologia, tem que ter inteligência artificial,
+tem que ter processos, tem que ter pessoas,
+uma equipe multidisciplinar para acompanhar esse processo,
+para fiscalizar.
+Gente, é isso!
+Ah, muito legal!
+Eu adorei!
+É bem amplo, muito interessante.
+Agora vamos lá, eu para o comercial,
+antes de fazer pergunta técnica, no comercial.
+Bom, de onde vem o recurso para que...
+Sempre tem que ter o caminho do dinheiro.
+De onde vem o dinheiro para a prefeitura contratar em serviço.
+Eu sei que é obrigatório, eu sei que é preciso fazer,
+só que, por exemplo, o Programa Nacional de Resíduos Sólidos,
+tem prefeito já indo para a cadeia e eles não fazem.
+Simplesmente não tratam lixo, o Brasil está cheio de lixões,
+menos de 1,5% das prefeituras no Brasil tem aterro sanitário para tratar o lixo.
+Bom, então se o lixo que fede, que traz rato,
+traz coiseiras inimagináveis na sociedade,
+é essa dificuldade toda,
+quando a gente vai falar de proteção de dados, nuvem, essa coiseira toda.
+Bom, primeiro, de onde vem o recurso?
+Segundo, como acessar esse tipo de recurso?
+Porque a gente sabe que existe a demanda,
+tem aí inesejibilidade até 14 anos,
+está muito bem organizado.
+Como vender isso e que tipo de município que compra?
+Município pequeno compra ou só município médio
+para melhorzinho que está com as pernas melhores?
+Porque município você sabe, município é tudo falido.
+Wilton funciona da seguinte maneira,
+todos os municípios, independente de tamanho,
+são obrigados a contratar, a implementar a LGPD.
+Da onde vem esse recurso?
+Primeiro, por ser uma legislação obrigatória,
+ele pode sair de qualquer pasta,
+de qualquer recurso próprio da prefeitura,
+seja da Secretaria de Educação, onde tem muitos dados sensíveis,
+seja da Secretaria de Saúde,
+seja uma parte, ali eu vou tirar,
+do orçamento da saúde, do orçamento da educação,
+do orçamento da procuradoria,
+e pagar com recurso próprio da prefeitura.
+Só que aí vem o que você disse,
+a maioria das prefeituras estão falidas, estão sem dinheiro,
+por causa do mal uso, do dinheiro público.
+Nem a questão do lixo, que é muito importante,
+que é um escândalo isso,
+o ser humano não tem que se adequar,
+imagina a LGPD, vai só deixando de lado.
+Isso pode ser feito também através de recursos públicos
+de emendas positivas, não tem importância,
+se algum deputado, algum senador,
+quiser enviar esse recurso para a prefeitura executar
+o plano de tecnologia, o plano de transparência,
+esse plano de conformidade, também pode.
+Porque a legislação é obrigatória,
+então a prefeitura tem que cumprir.
+E não existe restrição para falar,
+o recurso público só pode,
+para a adequação da LGPD pode ser só um recurso carimbado,
+pode ser só o da pasta da educação, não.
+A prefeitura tem que cumprir esse plano.
+Eu entendo a pergunta do Wilton,
+porque a gente está num instituto
+no qual ele está acostumado muito a ter isso,
+qualquer origem, é um projeto,
+só que você está falando de um contrato, Wilton.
+Aqui agora é o instituto como um prestador de serviço
+e ofertando um produto,
+dos muitos que a gente passará a ter,
+então é uma contratação normal.
+Neste primeiro momento é muito importante a gente ter os contatos,
+até para que a gente tenha os atestados,
+já tenha o banco de clientes.
+Então você está no local estratégico,
+Simone deve conhecer N municípios,
+associações de municípios, você mesmo citou hoje, Wilton.
+A MN está ali reunida.
+Então é um evento que se a gente participasse hoje,
+a gente já divulgaria para eles, distribuiria, faria contato.
+Conscientização, né?
+Isso, você pode ir em associações de municípios
+do norte de Minas, do sul de Minas,
+organiza um evento, faz uma palestra
+e faz, trabalha os riscos.
+E aí pela associação, como num evento só,
+você já tem vários municípios,
+você trabalha até com preços mais acessíveis,
+e querendo ou não.
+Isso aí tudo vocês vão adentrar,
+provavelmente daqui a pouco a Simone vai passar.
+Qual que é o custo disso?
+Neste primeiro momento, trabalhar com um preço atrativo
+para esses respectivos municípios,
+para que eles fechem, porque a gente tem.
+Já é cliente, está o município, está o município, está o município, está o município.
+E referência.
+Só para complementar, e até a pergunta do Hilton,
+aí entra a parte política, doutor Hilton.
+Exato.
+Quem vai operar mais, acredito que seja eu e você,
+que aí a gente entra naquela abinha de negócios, de business.
+Exato.
+O que eu, Simone, posso fazer?
+Posso ir lá em Brasília,
+sentar com o deputado tal, deputado,
+a gente defende aqui, a gente representa um instituto
+no qual ele defende a tecnologia, isso, aquilo,
+tem essa finalidade, esse objetivo,
+essa cidade tal, essa prefeitura.
+E a gente fazer a intermediação também dos recursos públicos.
+E aí a gente já pode chegar para o prefeito, já pronto.
+Aí já é a nossa parte de um hobby.
+Entende?
+Simone, uma notícia muito boa para você.
+Dá para a gente chegar no procurador do FNDE.
+É onde tem o maior dinheiro do país, está lá.
+O maior dinheiro do orçamento do país está direto no FNDE.
+Então a gente está, a hora que a gente estiver com isso,
+tudo extremamente pronto, documentado e organizado,
+eu consigo chegar na fonte principal de recursos do país.
+Aí a gente está falando de coisa de bilhões e mais bilhões.
+O Orçamento da Saúde, se eu não me engano,
+está na casa dos 200 e poucos bilhões de reais da saúde,
+não, da educação.
+Está na casa dos 200 e poucos bilhões.
+A gente precisa fazer uma consulta em relação a isso,
+porque dependendo, se o recurso vier de um fundo
+e ele for enviado, destinado direto para o instituto,
+o instituto pode executar isso em alguns municípios,
+com esse fundo, com esse valor.
+Ou então não, aí as emendas parlamentares
+são enviadas do parlamentar para a prefeitura.
+Emenda parlamentar para isso acho muito complexo,
+porque isso aqui é trabalho de bastidor,
+isso aqui não dá a volta.
+Emenda parlamentar para esse tipo de serviço aqui,
+eu diria que é 5%.
+Eu vou te falar onde eles vão ter interesse,
+que já aconteceu de a gente fazer esse,
+eu já fiz esse modelo de negócio,
+porque é onde eles recebem a comissão.
+Então, o deputado, o prefeito de lá
+e a empresa, no caso, repassa.
+Então eles só têm interesse, quando a gente faz esse modelo,
+por conta do que?
+Mas que para nós, via instituto,
+a nossa finalidade é muito mais além.
+Ela é mais de fornecer ali uma execução,
+uma finalidade, atender algo,
+um princípio muito maior,
+uma entrega muito maior do que isso, só por dinheiro.
+Comissãozinha, né?
+Exato.
+Eu gostei muito, gostei bastante,
+achei muito interessante.
+É um produtasso, dá para a gente estar com ele aí,
+você encabeçando isso,
+a Gislênio Complace, a Camila, na tecnologia.
+Exato, você e eu, a gente organizar essa parte comercial,
+de vender isso, levar isso, instalar isso para as prefeituras,
+eu acho interessante.
+E aí a gente tem, no Brasil, 5.508 municípios para trabalhar.
+O mercado é enorme.
+O mercado é gigante.
+Aqui uma pesquisa breve
+sobre o assunto, sobre o mercado.
+Eu imagino que não venha 10% dos municípios brasileiros com isso, pronto.
+Simona, que tu estás apresentando,
+tu pode abrir esse sitezinho?
+Não entendi, Camila.
+Abre esse site que a Camila mandou, Simona, por favor, no chat.
+Entra no chat da nossa conversa aqui e abre esse site
+para apresentar para todo mundo.
+Abre, vocês estão conseguindo ver?
+Ainda não.
+Não atela só.
+Com pesquisa básica de mercado, expandindo para a empresa também,
+incluindo a prefeitura, mercado, concorrência,
+eu iria te perguntar qual o valor que tu cobra,
+porque eu estou dando uma sugestão,
+mas, óbvio, tu tem muito mais noção.
+Deixa eu tentar abrir uma proposta aqui para vocês.
+Eu sugiro a gente também fazer um grupo de WhatsApp,
+e aí eu consigo também colocar lá os arquivos.
+Espera aí, só um minutinho.
+Vou tentar enviar por e-mail para que eu consiga compartilhar aqui.
+Acho que além disso, Simona, dessa tua apresentação,
+o que você tiver de processo é muito relevante.
+Você disse que já tem o BPMN, como fosse,
+como funciona todo o fluxo.
+Camila, tem uma pergunta técnica,
+e eu acho que é até dúvida, obviamente, de Wilton.
+Quando ele pergunta de recurso é porque, tendo um projeto,
+você tem valores que você já utiliza na própria execução.
+Mas como a gente vai trabalhar com um produto,
+eu preciso entender o seguinte, qual é o custo disso?
+A gente vai ter um software, vai ter um drive.
+O que o Instituto, economicamente falando, vai precisar se preparar?
+Porque quando a gente lida com um produto,
+Wilton, e obviamente, Simona, já está isso muito claro,
+a gente trabalha com, presta-se o serviço, posteriormente se recebe.
+Não é igual um projeto, que você tem um cronograma financeiro,
+já vai recebendo e executando.
+Então, talvez, começar com situações menores,
+municípios menores,
+organizando para que a gente tenha uma estrutura de TI
+para comportar grandes municípios, executar isso.
+Porque a gente vai ter sistema.
+Eu não entendo muito disso, Wilton já sabe também.
+A gente vai ter que ter uma base para executar essa prestação de serviço.
+Exatamente.
+Deixa eu apresentar para vocês uma proposta.
+Nossa, até Luiz Eduardo Magalhães foi eu que apresentei lá.
+E aí, o presidente da Câmara estava sem recurso.
+E aí, disse que iria ver lá a questão desse recurso para poder contratar.
+Inclusive, ele mexeu comigo em dezembro e falou que março viria a Brasília,
+que a gente conversaria e ele não veio.
+Mas olha como que é a proposta.
+Ela é precificada por itens.
+Item 1, a solução informatizada de privacidade, gestão de risco e segurança da informação,
+que aí é o software.
+Aí, a gente cobra por licença de uso mensal,
+porque a entidade, a prefeitura vai usar a nossa plataforma.
+Então, valor unitário, 5.275.
+Qual que é a quantidade? 12?
+Porque nós dividimos em 12 meses um ano do plano de conformidade.
+E a gente faz essa precificação de acordo com a quantidade de servidores públicos
+e a quantidade da população daquela cidade.
+Isso é bem relevante na precificação.
+Inclusive, tem um estudo de composição de preço,
+porque o Tribunal de Contas avalia isso também.
+A gente não pode do nada sair precificando.
+Então, item 2, a especificação, a solução informatizada para proteção de dados,
+que aí é aquela transformação digital, que é o documento físico,
+que subiu para o digital, a gente transformou ele para digital,
+onde tem a busca inteligente, a rastreabilidade do uso.
+Foi o que eu falei que aí o nosso sistema tem que ter.
+Alguém foi lá, abriu um documento que tem dados sensíveis,
+tem que ficar o registro, a matrícula desse servidor que teve acesso a esse documento.
+Aí já é a parte da ferramenta também da nossa solução,
+que também é a licença de uso mensal, mesmo valor e a precificação.
+O item 3, que aqui entra mais, acredito que a questão da parte jurídica, do compliance,
+que é quando os nossos colaboradores, estagiários de direitos, técnicos de tecnologia,
+não sei qual que é o segmento dessas pessoas,
+Os nossos colaboradores,
+que vai fazer o inventário, as entrevistas.
+Então aí está todo o serviço, inventário de mapeamento de dados,
+gestão de risco da segurança da formação,
+a implantação do programa de conformidade,
+que é aquele plano de execução que eu apresentei para vocês,
+ele tem a precificação dele também.
+Aí aqui a gente tem mão de obra,
+aí ficou um pouquinho mais claro, já viu que o item 3 a precificação já aumentou,
+porque aqui nós vamos precisar de estagiários de direito,
+de advogados júniores, às vezes sênior,
+desenvolvedores do sistema, de tecnologia, de informação,
+mais operadores, como que fala? É DENVI, Camila?
+É os DENVI, né, que fala?
+É DENVI, DENVI, bem DENVI.
+Isso, aí a continuação aí do item 4,
+serviço de proteção e perda ao serviço documental.
+Aí aqui é quando a gente contrata também,
+subcontrata a empresa para poder digitalizar.
+Entra nessa parte aqui.
+Esse tem um valor, porque tem o OCR,
+a gente vai disponibilizar acesso, login.
+Tá.
+Qual a dificuldade que, vamos dizer, qual a taxa que tu tens,
+tu tinha de, vamos dizer, fechar acordo?
+Não entendi a pergunta.
+Seria tipo, é mercadologicamente falando,
+de quem você apresenta a proposta, a taxa de conversão.
+Tipo o funil de vendas.
+O que que tem?
+Qual a taxa de conversão que na época vocês apresentavam
+versus era convertido realmente em cliente?
+De apresentação e fechamento de contrato, você fala?
+Tipo, apresentei para 10 prefeituras, de 10.
+Quantas fechavam de fato?
+Eu vou te dar uma média aqui pela minha experiência, tá?
+Não é um dado que eu não tenha essa métrica.
+Depende de vários fatores.
+Às vezes o prefeito se interessava,
+falou, nossa, eu vou colocar minha prefeitura organizada.
+Mas às vezes não tinha um recurso.
+A maioria das vezes é a falta de um recurso, viu, Irá.
+Imagina.
+10, a gente conseguia fechar 3, 4.
+Que já é um valor alto.
+Que já é um valor considerado.
+Porque, gente, como a gente percebeu aqui, é obrigatório.
+Tem a responsabilização, tem as sanções.
+E dependendo do Estado, isso já está sendo fiscalizado,
+isso já está sendo cobrado.
+Como o Wilton disse, já tem prefeitos assim,
+não teve nenhum prefeito que foi preso,
+mas já teve notificações do Ministério Público.
+Intubiaro teve notificação do Ministério Público,
+Pato de Minas, Patrocínio, São Simão.
+São Simão, nós implementamos LGPD lá.
+O que eu peço, Camille e Wilton?
+A gente vai trabalhar nesse primeiro momento muito
+em influência, conhecidos,
+municípios próximos que a gente tem acesso.
+Mas trabalhar a estruturação de um departamento comercial
+futuramente para vender todos os produtos, tá?
+No qual a gente vai disparar e vai fazer materiais,
+inclusive material específico para prefeitos,
+para gestores, colocando sobre o risco.
+Organização de eventos junto a esses municípios,
+Associação Mineira de Municípios,
+Associação Goiânia de Municípios,
+mandando esse material, conversando e fazendo um evento,
+seja online ou presencial, tá?
+Dependendo da situação presencial, é legal.
+E a gente trabalha, por exemplo, próximo onde Simone está,
+próximo onde eu estou, porque a gente nesse primeiro momento,
+enquanto não temos caixa para a contratação,
+dos estudados júnior, dos estagiários.
+O que a gente tem.
+Exato.
+Eu acho que eu ainda vou um pouco o pé atrás.
+Acho que a gente seria um planejamento estratégico.
+Pegando os dados que a gente tem agora,
+por isso que eu perguntei que está achando conversão, Simone.
+E aí, na resposta, você já me falou algo que é uma barreira.
+Um análise alto seria uma barreira.
+Valor, concorda?
+Sim, ponto fraco.
+Eu entendo o fato do valor ser alto.
+Poxa, estava muito operacional.
+Se a gente tem uma cabeça muito indústria,
+ou eu e Gisele já sabem,
+a indústria ganha não é no preço unitário,
+mas no preço da quantidade de produtos vendidos.
+Por isso que eu peguei a Associação de Municípios,
+porque a gente trabalha com um preço mais em conta
+e tem uma garantia de que vários municípios vão fazer adesão.
+Neste primeiro momento, eu sei que a gente está falando do Instituto,
+mas enfim, o lucro, o valor para pagar os profissionais e para o Instituto,
+ele vai ser menor, não adianta.
+Depois, fazendo o nosso nome, nós vamos nos gabaritando e aí vai subindo.
+A partir do momento que formos certificadores, vai estar lá no top.
+E eles vão priorizar a nossa contratação.
+Mas agora, até uma pergunta que eu tenho, doutora,
+deve ter óbvio nessa informação aí,
+os municípios que já se encontram regular,
+essa agência que regula isso, ela já deve colocar.
+Já, sim.
+Houve uma notificação em massa da NPD
+para vários municípios para se adequarem.
+Inclusive, a NPD mandou no ano retrasado
+um formulário para as entidades públicas preencherem.
+Para ela avaliar o grau de maturidade, de adequação.
+Estágio zero, nível de adequação, primeiro nível, segundo nível.
+A gente não precisa ficar distrito só ao município, isso é em todos os âmbitos.
+Você tem órgãos federais,
+que a gente fala, órgão federal, nessa altura do campeonato deve estar todo regulado.
+Não, senhora.
+A gente acha que...
+Em casa não faz milagres, são os piores.
+Imagina o Ministério da Saúde, Wilton.
+Será que eles estão em conformidade com a LGPD? Eu duvido.
+Eu também duvido.
+A gente vai apresentá-lo lá em cima também.
+E não tem estrutura para isso.
+O instituto pode ter, o instituto especializado para isso.
+Eu acredito que a gente pode vender muito.
+Isso é enorme.
+E além de mais ser uma oportunidade,
+ainda que empresas ou prefeituras ou empresas já estejam certificadas,
+se a gente oferece um bom preço, uma boa qualidade de negócio,
+sim, a gente converte.
+Então eu acho que talvez,
+se a gente conseguir transformar esse processo máximo
+e a operação menos manual mais automata,
+a gente consegue diminuir o custo que a gente tem.
+O custo do serviço.
+Logo, ofertar um melhor preço e barganhar um mercado maior.
+Eu tenho uma pergunta, Camila.
+Quanto tempo a gente precisa para desenvolver
+LGPD Web, LGPD Drive?
+A nossa plataforma.
+A nossa plataforma para que a gente consiga já vender isso.
+Por que eu estou perguntando?
+Dá para a gente ir trabalhando.
+Elaboração de material, abordagem,
+enquanto Camila vai trabalhando o sistema.
+A nossa plataforma.
+O nosso plano de execução.
+Eu já escrevi aqui.
+Vou chamar de plano de negócio.
+Plano de negócio.
+Eu vou esboçar um plano de negócio,
+mandar no nosso grupo.
+Vocês vão aperfeiçoá-lo.
+A gente estabelece prazos, metas.
+O que tem que ser feito por quem.
+E a gente começar a disparar isso.
+Porque a captação não é rápida.
+Lógico que a gente vai tentar um contato aqui e ali.
+Simone já está inserida nesse mercado.
+O Wilton tem um acesso, apesar dos políticos, óbvio.
+Vocês dois estão estrategicamente.
+É muito bom para que a gente faça isso.
+Mas enfim, estou em Minas.
+Eu vou explorar o mercado aqui.
+Para a gente também, óbvio.
+E depois disso a gente vai abrindo braços, vai contratando.
+A gente já faz esse plano de negócio e já estabelece como meta.
+Wilton querendo ou não.
+Você que inclusive vem pleiteando.
+Olha, eu preciso de valores rápidos para o instituto.
+É um produto que a gente já vai vender.
+Exatamente.
+Eu gostei demais do produto.
+A carinha do sistema aí eu coloquei para vocês.
+Isso aqui é quando o gestor abrir o sistema Web, GPD Web, a plataforma.
+Vai ver esse cenário aí.
+Ele tem que ver a matriz de risco.
+Aí já é a linguagem da Camila.
+Ela vai converter todas as informações que nós vamos levantar.
+Os nossos estagiários.
+A análise do inventário de dados.
+E converter isso para a matriz.
+Pergunta técnica.
+E eu pergunto mesmo porque eu não domino TI.
+Nós vamos ter um sistema matriz.
+Vou chamar assim.
+Não sei se a tecnologia é correta.
+Mas, por exemplo, a cada prefeitura, órgão que a gente atender.
+Vai fazer uma adequação dele para aquela realidade.
+Isso.
+Não é a IA dele.
+Quando eu falo, a IA não é a IA do Netflix.
+Que é aquela IA que ela se conforma para o usuário.
+Ou seja, para aquela prefeitura.
+Então é uma IA que reconhece aquela prefeitura por padrões.
+E ela faz sugestões baseadas naqueles dados da prefeitura.
+Então é aquela IA que é a machine learning no caso.
+Que é usada para dados.
+Análise de dados.
+Então a gente consegue ter algo automático.
+Como você apresenta aí.
+Que é o dashboard OBI.
+Para ter realmente a acertividade da informação.
+A inteligência artificial do machine learning no caso.
+E tudo personalizado.
+Por exemplo, a prefeitura de Goiânia vai entrar lá na plataforma.
+Logo em acesso deles.
+E vai estar o brasão lá da prefeitura de Goiânia.
+Tudo personalizado.
+E aí, na prática, quando nós vamos vender isso, Wilton.
+Geralmente a gente já tem o primeiro contato.
+Que ele é feito por nós.
+Ou é por uma indicação, uma influência.
+E aí normalmente a gente senta, faz apresentação comercial.
+Eu como advogada jurídica também.
+Falo da legislação.
+Eu faço uma explanação, um escopo desse.
+Como que funciona na prática.
+Os riscos.
+Quanto o caso.
+O que que já aconteceu e tal.
+Vencendo essa primeira etapa.
+É normal que o prefeito.
+Essa política que a gente teve o contato.
+Ele vai falar assim.
+Tem que passar para a parte técnica.
+Que é o diretor lá do TI.
+Nessa reunião.
+Nessa segunda reunião.
+Que a gente já evoluiu.
+A gente já está evoluindo para uma aprovação e análise técnica.
+Aí tem que entrar a Camila.
+Porque aí surgem várias dúvidas técnicas.
+Atreladas assim ó.
+Específico de segurança da informação.
+De web.
+De wireless.
+De wi-fi.
+De servidor.
+Que para mim já é grebo.
+Então eu já fiz muita reunião.
+Obrigada.
+Vamos se juntar para a beta digital.
+Obrigada.
+Em que que eu penso?
+Simone e Wilton e Camila.
+É um processo de venda.
+Wilton como bom vendedor sabe.
+Você tem um prazo aí.
+E um prazo de venda para administração.
+Por isso que eu queria elaborar um plano de negócio.
+E eu queria já disparar a captação.
+E eu preciso saber da Camila.
+Para a elaboração desse sistema mãe.
+Dessa nossa matriz.
+Ela estima em quanto tempo?
+30 dias?
+45 dias?
+Porque nesse tempo aí a gente vai.
+Faz um material.
+Já vai divulgando.
+Fazendo a primeira reunião.
+Doutora Simone.
+Wilton.
+Eu.
+Já envolvi até para a segunda reunião.
+Camila.
+Com você.
+Exato.
+E quanto custa Camila?
+Quanto para desenvolver algo nesse sentido?
+Aí você vai analisar tudo.
+E ver quanto custa.
+Exatamente.
+Eu estou mais aqui.
+Eu vou te defender Camila.
+Quanto custa e quanto custa?
+Olha está escutem a Simone viu.
+Ela que sabe.
+Gente então.
+Olha a Clarinha.
+Um plano.
+Um plano de implementação.
+Primeiro a gente tem que desenhar o nosso plano estratégico.
+Porque senão eu vou ter perda.
+A gente ter perda no processo de retrabalho.
+Aí é custo.
+Então a gente tem que sentar planejar.
+Acho que a próxima reunião é definição estratégica do business.
+Hoje, é óbvio que ele já tem.
+Porém, eu vejo uma oportunidade imensurável
+de a gente diminuir a personalização.
+Personalização do nosso trabalho.
+Ele ser auto-vendável.
+Você falou aí da burocracia que há na hora de fechar.
+A burocracia é porque o preço é muito elevado.
+Quando o preço é elevado, o risco da compra aumenta.
+Mas é justificável.
+É total. Não estou dizendo que não é.
+Mas se a gente tem algo que for...
+Que para a gente diminui o custo.
+Para você hoje, o custo...
+Você, digamos, cobrava R$ 5.000 no mês.
+Mas você tinha um custo ali de R$ 3.000.
+O lucro era R$ 2.000, por exemplo.
+Se a gente reduzi isso para R$ 1.000,
+a gente poderia vender por menos, entendeu?
+Simone, me tira uma dúvida.
+Essa proposta que você apresentou...
+Desculpa, Camila, só para a gente ter ideia de valor também.
+Você falou que leva em consideração o número de acessos
+e o número de a população do município.
+Essa proposta que você apresentou,
+não enxerguei errado, um milhão e pouco, era isso?
+R$ 600.000.
+R$ 600.000 era para quais parâmetros?
+Quantos acessos e qual população?
+Para a cidade da Bahia, São Luís...
+E aí a gente pega os dados do IBGE, tá?
+Quantidade da população.
+A gente entra lá na hora de formalizar a proposta,
+que é o nosso parâmetro.
+Aqui é a de Luís Eduardo Magalhães.
+Então, provavelmente, a gente colocou ali
+a quantidade de servidores e a quantidade de população.
+Luís Eduardo Magalhães.
+Depois eu vou olhar a população.
+Não, só para a gente ter ideia.
+Tá? O que eu sugiro, gente?
+A gente está aí com o mês de maio começando.
+Não dá para a gente ficar conjecturando muito, sabe?
+Então, assim, eu vou, com a minha experiência,
+que não é de administração e nem técnica,
+eu vou esboçar um plano de negócio.
+Vou criar o nosso grupo.
+A gente pode, com base nele, discutir, implementar.
+Camila, não sei se você ia responder ainda,
+que eu te interrompi, eu falo demais.
+O prazo.
+O prazo que você extremamente consegue.
+O grupo já está criado e a proposta já está lá.
+É, eu já vi que...
+Adoro, adoro.
+Sendo realista, tá?
+Ele já tem nome.
+L-G-P-D-C-T-I-T-E-C.
+Então, eu vou ter que pesquisar, obviamente,
+para montar um plano de negócio.
+Então, vou ter que pesquisar o tempo que vai...
+As etapas de implante e implementação do MVP até o final.
+Aquela questão que até é do servidor, quanto é que o custo
+e o business model, o processo da gente estratégica.
+O que é que eu sugiro?
+A gente precisa de uma reunião, acho que,
+para validar o modelo estratégico, primeiro.
+Não dá para a gente sair, assim,
+a partir do estado atual,
+que, assim, é da expertise de Simone,
+mas a gente precisa de algo acertivo, não parâmetro.
+Sabe?
+O modelo de negócio validado que a gente possa
+mesurar, metrificar.
+Então, a partir de a gente ter o modelo do negócio,
+a gente vai manter esse método,
+que é bem advocativo,
+bem corpo a corpo.
+Ou o produto comercializado, vamos dizer,
+vendão com a automata.
+Que até, como se fosse um software mesmo.
+Um software completo que ele já faz a toda parte,
+essa implantação.
+Seria mais em conta.
+Acho que seria mais...
+Não penso que, mas também estou dizendo no plano das hipóteses.
+Acho que o importante agora é a gente verificar
+qual o modelo de negócio adequado.
+Para a gente e para o mercado.
+Pensando que se a gente também não fizer, alguém vai e faz.
+Eu penso também, Camila, que ela fraciona os produtos.
+A gente pode ter partes ou software que a gente disponibilize,
+que seja do instituto e ele adquira só o software,
+ou a assessoria aponta aqui, aí entra.
+Então, a gente vai ter produtos.
+E a prefeitura pode até...
+No primeiro momento eu quero esse item 1.
+Ano que vem, ou no outro trimestre, o item 2.
+Quero o completo.
+Não, eu quero só o software,
+porque aí os meus servidores vão alimentar o sistema,
+vão fazer o inventário, o mapeamento de dados,
+que eles não têm servidores para fazer isso.
+Não, eu estou pensando exatamente em produtos em pacotes.
+Prateleira, né?
+Exato, você falou tudo, prateleira.
+Você vai lá e fecha.
+Eu quero pacotes até o final, que é certificação.
+O que eu quero é realmente algo...
+Primeiro, validar as informações,
+qual o melhor modelo de negócio.
+Pensando não no dia de hoje, mas no dia de amanhã.
+Porque se a gente não implanta,
+a gente vai gastar uma energia para ser comido depois.
+Outra empresa vai comer a gente,
+porque vai fornecer um preço mais acessível.
+É fato, preço é relevante, concordo.
+Uma das travas dificultadores também
+da conversão de fechamento desse produto, Camila,
+realmente é o preço?
+O preço.
+Ok, tem N's e N's gestores.
+O Wilton já sabe, quando o prefeito...
+Por exemplo, no Rio de Janeiro,
+o prefeito queria que aumentasse o valor da proposta.
+Por que será?
+Mas a gente sabe que se a gente faz algo de qualidade
+e com o preço mais acessível, mantendo a qualidade,
+ou até otimizando, por manter padrões,
+vai ser mais fácil.
+Você consegue extrair isso bem melhor
+de questão de custo de sistema, de software, de tecnologia.
+Eu acho que você vai conseguir dar para a gente essa métrica.
+Ela vem mais de você.
+Porque custo de pessoas, que aí no caso, no início,
+acredito que atende muito bem com o time que o Wilton já tem.
+Com a Gislênia e eu também,
+na parte jurídica e comercial,
+para a gente economizar no começo.
+Mas acho que vai ser mais acessível
+de precificação do sistema, de tecnologia.
+Simônia, é possível você disponibilizar essa proposta para a gente?
+Claro, já está enviado para você e para o Wilton no WhatsApp.
+Já está no nosso grupo.
+Não, daqui a pouco eu olho. Qualquer ideia.
+Gente, eu só peço para vocês a questão de sigilo,
+porque é simples e é a questão de confiança.
+Pode ficar tranquila, vai ficar sempre aqui.
+Apesar que foi público aquele manual, aquela cartilha, é pública.
+Está lá no site, ele pediu o manual
+que eles publicaram em 2022 ou 2023, se não me engano.
+Então, o que eu vou fazer, gente?
+Eu vou pegar o material que você já mandou,
+essa que você vai disponibilizar.
+Vou fazer algo mais simples e uma pesquisa aqui.
+Vou adorar um plano de negócio.
+Vou deixar ele editável no drive.
+No drive, por enquanto.
+Tá, Camila, sem brigar.
+Olha aí, meu LGPD.
+Eu e o Wilton estamos no mesmo grupo, gente.
+É comercial, nós não somos analítica e técnico.
+Eu acho que me engano que eu uso o Discord na minha mesa.
+Ai, meu Deus.
+Meu Deus, o Discord não.
+Ela discorda do Discord, mas qual que é a ideia, gente?
+Eu vou colocar lá e cada um vai vir com a sua visão
+e vai alterando o documento.
+A minha ideia é colocá-lo lá até amanhã.
+Amanhã é quarta-feira, né?
+E a gente já marca uma reunião pra discussão
+e eu vou colocar uma sugestão de cronograma.
+Temos que lidar com métricas, né?
+Com datas pra poder isso aqui ser efetivado, tá?
+São sugestões.
+Às vezes eu coloco alguma coisa.
+Vamos falar aí, não, isso é fora da realidade.
+Na verdade, o Wilton vai diminuir o prazo.
+É, exatamente.
+A grande questão é que todo projeto parece muito interessante.
+Só que ele tem que saber se ele é aplicável.
+Se existe a aplicabilidade dele, se ele é viável.
+Aí agora passa muito pela Camila.
+Ok, pra desenvolver isso.
+Depois que você entender, ok, dá pra desenvolver.
+Beleza, quanto tempo e quanto custa.
+Então a gente precisa dessa informação.
+Porque senão a gente vai atrás de outra coisa
+que faz dinheiro rápido, traz dinheiro pra cá.
+Opa, esse projeto ainda é legal?
+Ainda é interessante?
+Beleza, vamos investir dinheiro nele.
+Então essa é a questão.
+Toda empresa tem que ser autossustentável.
+Esse é o princípio de tudo.
+Eu gosto do...
+Fechou o microfone.
+Eu gosto da ideia, gosto do projeto.
+Acho que ele é bem interessante.
+Agora tem que saber se existe viabilidade econômica ou financeira.
+É, porque naturalmente, na prefeitura, você veja, 600 mil.
+Ele vê que não vai voltar em votos, né?
+Porque pro prefeito, na verdade, é isso.
+Quanto retorna disso em votos?
+E nem é muito isso a cabeça deles.
+É quanto retorno disso aqui pra eles.
+Infelizmente, mas é isso.
+Até isso a gente se livra quando a gente deixa ele em platileira.
+Mas a gente vende também, Camila, como um serviço,
+uma atuação política também.
+Eu consigo colocar isso na cabeça do prefeito.
+Fala assim, prefeito, o senhor vai utilizar isso como
+cidade transparente, outdoor, comunicar, marketing,
+os dados do cidadão protegido.
+Dá pro prefeito fazer política com isso?
+A atuação política, entregar pra sociedade,
+vai depender do marketing dele?
+Dá.
+Mas mesmo assim, ele ainda, usando em recurso,
+que o cidadão entende mais, porque o cidadão é legal.
+É verdade.
+O cidadão é legal.
+Aí você pode botar isso, sei lá, numa clínica, sabe?
+O serviço, o free de advocacia.
+Pra um cidadão é muito mais, sabe?
+Tá fazendo...
+Ele não entende, o cidadão, porque, na verdade,
+o cidadão é igual.
+O show que o prefeito paga, essas coisas, né?
+Na verdade, a LGBT é o seguinte, a LGBT é uma obrigação
+de todo e qualquer negócio, não só prefeitura,
+de qualquer coisa do sistema.
+Então há uma regra.
+De todo direito público e privado, ou seja, todo mundo.
+A lógica é que, pra cumprir essa regra,
+existem processos e métodos.
+E você tem muito conhecimento, ninguém mais, tô vendo aqui.
+Então, assim, isso é muito relevante quando a gente
+transforma isso em um processo único, porque a gente
+independe, se a gente cumprir um processo rigoroso,
+independe da pessoa ser uma clínica notológica,
+ou uma prefeitura, ou até, quem sabe, o gov.br.
+Sabe?
+Quem sabe?
+A gente pode, talvez, se a gente tem um processo tão legal,
+tão rígido, tão à prova de falha,
+a gente vende até para o governo federal.
+Sim, claro.
+A burocracia no sistema de informação tecnológico dele.
+Já que é nossa experiência.
+Mas o que a gente precisa fazer agora é estudar isso.
+Porque hoje o método não é isso.
+O método é bem-venda corpo a corpo.
+Hoje você vai lá...
+Tem casos políticos, isso mesmo.
+E aí tem aquela, justamente as travas por isso,
+e os riscos também por isso.
+Então a gente entender todo esse cenário,
+fazer análise do cenário atual,
+entender onde estão as oportunidades,
+quais são as vantagens desse negócio, as forças,
+mapear para a gente definir o planejamento estratégico.
+Com isso acho que a próxima reunião deve ser bem definida.
+Qual a nossa estratégia de negócio?
+Nossa alma, alma do business,
+alma que o negócio vai ter, sabe?
+A gente criar o sistema a partir dele.
+E não o investam.
+Porque senão a gente vai ter retrabalho, vai ter erro, vai ter...
+Não vai ter mapeado os riscos futuros.
+Só para entender, a próxima reunião a gente monta um escopo desse plano de negócio,
+do nosso produto, e depois você constrói a métrica sua, é isso?
+É, aí eu posso ter um plano,
+porque eu posso fazer desenhada a partir desse seu negócio,
+um modelo de negócio no sistema, fazer o plano.
+Ou a partir de outra forma.
+Eu estou pesquisando aqui já, vou colocar um plano de negócio,
+algumas pesquisas que eu já estou fazendo aqui.
+Camila é, óbvio, muito melhor que eu.
+A gente quer entender esse assunto
+e deixa uma reunião agendada para que dois dias no máximo, tá?
+Porque a gente precisa de agilidade.
+Deslenha, talvez, seguindo só pra não fugir,
+seguindo a ideia da Camila,
+estou colocando aqui pra funcionar.
+Às vezes a gente...
+Ela está falando, acho que é isso que ela está querendo dizer,
+a gente trazer uma única solução também.
+Então talvez, não é, Camila, talvez a gente faria, não tipo...
+Duas ferramentas, dois sistemas,
+mas uma plataforma integrada com uma solução só.
+Eu até coloquei lá naquele linkzinho.
+Na verdade, eles têm uma diferenciação
+para a prefeitura e para a corporação.
+O modelo de preço foi algo que...
+Eu via primeiro a priori,
+então estou muito em reunião, com certeza.
+Mas talvez, se a gente conseguir,
+eu fui pensando na tecnologia.
+Mas o que você apresentou hoje, ele é muito mais...
+Tem outro valor, tem outros serviços, além do que eu dimensionei.
+Então eles consideram o valor, óbvio.
+E a gente desenha esse plano.
+Então você vê ali que tem vários produtos também
+naquele link.
+Para business, para corporativo e para...
+Porque são clientes diferentes, são...
+Personas distintas.
+Sim.
+Sabe?
+Aí lá embaixo, tu vai ver.
+Então...
+Isso é só um estudo do mercado, tá?
+Sim.
+E aí a gente tem uma direção norte.
+E não ficar...
+Eu acho que ainda não tem norte.
+Quando a gente não tem norte, a gente vai para qualquer lugar.
+Você viu que aí eles têm as empresas,
+e aí eles com o LGPD Faça, o LGPD Tech, TOW...
+E cada um, assim, os preços são tão preciados.
+É, total.
+E eu tô pensando já na...
+O que é que eu tô... Veja que é um benchmark, né?
+Na verdade, da nossa concorrência.
+A gente precisa saber o cenário atual.
+Porque se eu chego e dou...
+Eu, de verdade, prefeita tecnológica, que eu sou...
+Eu sou...
+Poxa...
+Você vai...
+Eu...
+Converso tecnológico, eu ia dizer.
+Não, empresa de texto.
+Vou botar aqui, vou informatizar.
+Quer dizer que não foi identificado nenhum player que domina esse segmento, né?
+Ainda não.
+Por mais que essa empresa se titulariza, mas não existe.
+Não, não.
+É oportunidade.
+Exatamente, é uma oportunidade de como...
+Ainda mais como instituto.
+Que é um mercado e ter uma plataforma acessível integral, dinâmica, autodidática.
+Eu quero resolver os problemas que você comentou.
+Que é justamente o que a gente tá comentando.
+Como assim, como eu vou diminuir essas barreiras de entrada?
+A gente tem que fixar nisso.
+Se a gente já sabe como é essas barreiras de entrada, porque eu vou repetir.
+Isso mesmo, Camila. Isso mesmo.
+a gente pode andar na frente com muito mais facilidade e agilidade.
+O que eu acho melhor é a gente ter menos erros, menos retravalhos, menos modificações.
+Eu acho viável a gente ter a próxima reunião para definir o planejamento estratégico, o norte,
+tudo definir também, você aí, aloco, posso propor, aloco maga, posso propor o nome,
+a gente pode conversar via telefone, né, gente?
+É que o WhatsApp, Maria, é maravilhosa.
+Lá o WhatsApp a gente evita definições e conversas, lá é mais para compartilhamento de arquivos,
+reunião, nossa comunicação mais rasa lá.
+A gente aplica as melhores práticas do mercado, da tecnologia, a gente pode baratear muito o seu produto
+e dar uma melhor qualidade, veja, é como a indústria e eu vou vender mais.
+A gente ganha na quantidade de produtos e de vezes de fazer diferença, uma venda não faria diferença para a gente,
+mas a gente vai querer vender para mil, sabe, mil clientes, mil corporações, dois mil,
+tem até aqui embaixo um roadmap justamente de alavancagem, mas isso obviamente naquela estratégia
+que eu tinha não validado antes dessa reunião, né, assim, eu conheci o produto como você está mencionando,
+então assim, a gente vai, eu acho que esse é o modelo do futuro, tá?
+Sim.
+Acho mesmo, porque as coisas tendem a ser muito autômatas,
+se a gente ficar no corpo a corpo a gente está ficando passado.
+Não, não quero não, eu vou colocar alguma coisa já no drive, assim que estiver pronto aqui,
+vejo uma agenda de vocês para quinta e sexta-feira e a gente já faz uma reunião com esse documento que ele vai estar editável,
+eu coloco ele como vocês preencham como sugestões e vai incluindo pontos a discutir tudo que a gente já fecha um plano de trabalho, um plano de negócios.
+Posso dar uma sugestão também? Posso adicionar um tipo formezinho para Simone responder, para vocês também?
+Por favor.
+Para ter algumas informações, sei lá, para, sabe, ter assertividade.
+Claro, vocês soam, sim.
+Perfeito, vamos fazer dessa forma, a gente divulga.
+A gente vai decidir a nossa reunião na sexta, porque na quinta eu vou estar na estrada,
+apresentação de dia das mães da escola do meu filho e aí eu volto para a minha cidade na quinta.
+Então acredito na conversa, pode ser na sexta, por mim, tá?
+Tá bom, para mim também, e eu preciso sair que eu já estou extremamente atrasado, mas foi muito boa a nossa reunião, tá bom?
+Então a gente vai combinando pelo grupo, pessoal.
+Então tá, Joana, obrigado, até mais.
+Tchau, tchau.

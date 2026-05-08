@@ -11,6 +11,9 @@
     [v-cloak] { display: none; }
     *, *::before, *::after { box-sizing: border-box; }
 
+    /* Prevent horizontal scroll globally */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+
     /* Focus Visible - WCAG 2.4.7 */
     *:focus-visible {
       outline: 2px solid #3b82f6;
@@ -99,6 +102,80 @@
     .timeline-line::before { content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: #e5e7eb; }
     .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: #3b82f6; position: relative; z-index: 1; }
 
+
+    /* BMC Interactive Cards */
+    .bmc-card {
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+      cursor: pointer;
+      min-height: 44px;
+      position: relative;
+    }
+    .bmc-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .bmc-card:active {
+      transform: translateY(-1px);
+      transition-duration: 0.05s;
+    }
+    .bmc-card.expanded {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      transform: translateY(-3px);
+    }
+    .bmc-detail {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out, opacity 0.15s ease-out;
+      opacity: 0;
+    }
+    .bmc-detail.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .bmc-detail-inner {
+      max-width: 28em; /* ~60-75 chars */
+    }
+
+    /* BMC Modal (mobile) */
+    .bmc-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 60;
+      animation: fadeIn 0.1s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .bmc-sheet {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-radius: 16px 16px 0 0;
+      z-index: 61;
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: slideUp 0.15s ease-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .bmc-sheet-content {
+      max-width: 30em; /* ~65 chars */
+      margin: 0 auto;
+    }
+    .bmc-sheet-handle {
+      width: 40px;
+      height: 4px;
+      background: #cbd5e1;
+      border-radius: 2px;
+      margin: 12px auto 0;
+    }
+
     /* Transitions */
     .fade-enter-active, .fade-leave-active { transition: opacity 0.15s ease-out; }
     .fade-enter-from, .fade-leave-to { opacity: 0; }
@@ -113,6 +190,158 @@
     @supports (padding: max(0px)) {
       header { padding-top: max(1rem, env(safe-area-inset-top)); }
       main { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+    }
+
+    /* ========================================
+       Mobile-first Responsive Breakpoints
+       ======================================== */
+
+    /* Base (mobile) -- applies at all sizes */
+    .mobile-stack { flex-direction: column; }
+    .mobile-full { width: 100%; }
+    .mobile-gap-2 { gap: 0.5rem; }
+    .mobile-text-sm { font-size: 0.875rem; }
+    .mobile-hidden { display: none; }
+
+    /* Small: up to 767px */
+    @media (max-width: 767px) {
+      /* Header: stack title + actions vertically */
+      header .flex.items-center.justify-between {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      header h1 { font-size: 1rem; }
+
+      /* Stats bar: wrap stats into column */
+      .stats-bar-inner {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.25rem;
+      }
+      .stats-bar-inner > div:first-child {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+      }
+      .stats-bar-inner > div:first-child span {
+        font-size: 0.75rem;
+      }
+
+      /* Decision cards: vertical layout on mobile */
+      .decision-card-inner {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .decision-card-inner > div:last-child {
+        margin-left: 0 !important;
+      }
+      .decision-actions {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+      }
+      .decision-actions button {
+        flex: 1;
+        min-height: 44px;
+      }
+
+      /* BMC: handled by Tailwind grid-cols-1 md:grid-cols-3 */
+
+      /* Ensure all interactive elements meet 44x44px */
+      button, [role="button"], select, .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+      }
+
+      /* Tab nav: ensure no vertical clip */
+      nav[role="tablist"] {
+        padding-bottom: 0.25rem;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    /* Extra-small: up to 374px */
+    @media (max-width: 374px) {
+      header h1 { font-size: 0.875rem; }
+      .stats-bar-inner > div:first-child span {
+        font-size: 0.6875rem;
+      }
+      .max-w-7xl { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+    }
+
+    /* Medium: 768px+ -- restore desktop layouts */
+    @media (min-width: 768px) {
+      header .flex.items-center.justify-between {
+        flex-direction: row;
+      }
+      .stats-bar-inner {
+        flex-direction: row;
+        align-items: center;
+      }
+      .decision-card-inner {
+        flex-direction: row;
+      }
+    }
+
+    /* Hero Section - 5 Second Rule KPIs */
+    .hero-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(59,130,246,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 80%, rgba(139,92,246,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59,130,246,0.4), transparent);
+    }
+    .hero-kpi-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      transition: transform 0.15s ease-out, background 0.15s ease-out;
+    }
+    .hero-kpi-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.1);
+    }
+    .hero-kpi-value {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+    }
+    .hero-cta-primary {
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      min-height: 48px;
+      min-width: 48px;
+      transition: background 0.15s ease-out, transform 0.1s ease-out;
+    }
+    .hero-cta-primary:hover { background: #1d4ed8; }
+    .hero-cta-primary:active { transform: scale(0.98); }
+    .hero-cta-secondary {
+      background: transparent;
+      color: #93c5fd;
+      border: 1px solid rgba(147,197,253,0.3);
+      min-height: 48px;
+      min-width: 48px;
+      transition: background 0.15s ease-out, border-color 0.15s ease-out;
+    }
+    .hero-cta-secondary:hover {
+      background: rgba(147,197,253,0.1);
+      border-color: rgba(147,197,253,0.6);
+    }
+    @media (max-width: 639px) {
+      .hero-kpi-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -138,7 +367,7 @@
             <div class="flex items-center gap-4">
               <h1 class="text-xl font-bold">Planning Meeting Dashboard</h1>
               <span class="px-2 py-1 bg-blue-600 rounded text-sm">LGPD Strategy</span>
-              <span class="text-slate-400 text-sm">{{ data.metadata?.lastUpdated }}</span>
+              <span class="text-slate-400 text-sm hidden sm:inline">{{ data.metadata?.lastUpdated }}</span>
             </div>
             <div class="flex items-center gap-3">
               <button @click="exportPDF" class="touch-target px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded text-sm font-medium" aria-label="Exportar para PDF">
@@ -153,10 +382,55 @@
         </div>
       </header>
 
+
+      <!-- Hero Section - 5 Second Rule: Value Prop + KPIs + CTAs -->
+      <section class="hero-section no-print" role="region" aria-label="Indicadores principais LGPD" style="padding: 2rem 0;">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+          <!-- Value Proposition -->
+          <div class="text-center mb-6">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" style="letter-spacing: -0.025em;">
+              Conformidade LGPD para Prefeituras
+            </h1>
+            <p class="mt-3 text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto" style="line-height: 1.6;">
+              Plataforma SaaS + DPO incluido. Dados 100% Brasil. Setup em 30 dias.
+            </p>
+          </div>
+
+          <!-- 3 KPI Cards -->
+          <div class="hero-kpi-grid grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto mb-6">
+            <div class="hero-kpi-card rounded-xl p-5 text-center" role="group" aria-label="Total de municipios brasileiros">
+              <p class="text-sm text-slate-400 font-medium uppercase tracking-wide mb-1">Municipios</p>
+              <p class="hero-kpi-value text-4xl sm:text-3xl md:text-4xl font-bold text-white">{{ data.scenario_analysis?.fixed?.mercado?.total_municipios?.toLocaleString("pt-BR") || "5.570" }}</p>
+              <p class="text-xs text-slate-400 mt-1">IBGE MUNIC 2024</p>
+            </div>
+            <div class="hero-kpi-card rounded-xl p-5 text-center" role="group" aria-label="Percentual sem estrutura LGPD">
+              <p class="text-sm text-slate-400 font-medium uppercase tracking-wide mb-1">Sem LGPD</p>
+              <p class="hero-kpi-value text-4xl sm:text-3xl md:text-4xl font-bold text-amber-400">{{ data.scenario_analysis?.fixed?.mercado?.porcentagem || "72" }}%</p>
+              <p class="text-xs text-slate-400 mt-1">{{ data.scenario_analysis?.fixed?.mercado?.sem_estrutura_lgpd?.toLocaleString("pt-BR") || "4.011" }} cidades</p>
+            </div>
+            <div class="hero-kpi-card rounded-xl p-5 text-center" role="group" aria-label="Tamanho total do mercado enderecavel">
+              <p class="text-sm text-slate-400 font-medium uppercase tracking-wide mb-1">TAM / Ano</p>
+              <p class="hero-kpi-value text-4xl sm:text-3xl md:text-4xl font-bold text-emerald-400">R$60<span class="text-2xl sm:text-xl md:text-2xl">Mi</span></p>
+              <p class="text-xs text-slate-400 mt-1">Mercado municipal LGPD</p>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button @click="activeTab = 'scenario'" class="hero-cta-primary touch-target px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto" aria-label="Ver pesquisa e cenarios de mercado">
+              Ver Pesquisa
+            </button>
+            <button @click="activeTab = 'roadmap'" class="hero-cta-secondary touch-target px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto" aria-label="Ver roadmap do MVP">
+              Roadmap MVP
+            </button>
+          </div>
+        </div>
+      </section>
+
       <!-- Quick Stats Bar -->
       <div class="bg-white shadow-sm border-b no-print">
         <div class="max-w-7xl mx-auto px-4 py-2">
-          <div class="flex items-center justify-between text-sm">
+          <div class="flex items-center justify-between text-sm stats-bar-inner">
             <div class="flex gap-6">
               <span>📊 VVV Médio: <strong class="text-blue-600">{{ averageVVV }}%</strong></span>
               <span>✅ Decisões Pendentes: <strong class="text-amber-600">{{ pendingDecisions }}</strong></span>
@@ -202,7 +476,7 @@
               <div v-for="decision in data.decisions" :key="decision.id"
                    :class="['p-4 rounded-lg border cursor-pointer transition-all',
                             getDecisionClass(decision.status)]">
-                <div class="flex items-start justify-between">
+                <div class="flex items-start justify-between decision-card-inner">
                   <div class="flex-1">
                     <div class="flex items-center gap-2 mb-1">
                       <span class="text-xs px-2 py-0.5 rounded"
@@ -215,7 +489,7 @@
                     <p class="text-sm text-slate-600 mt-1">{{ decision.descricao }}</p>
                     <p class="text-sm text-blue-700 mt-1"><strong>Recomendação:</strong> {{ decision.recomendacao }}</p>
                   </div>
-                  <div v-if="editMode" class="flex gap-2 ml-4">
+                  <div v-if="editMode" class="flex gap-2 ml-4 decision-actions">
                     <button @click="updateDecision(decision.id, 'approved')"
                             class="px-3 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600">
                       ✓ Aprovar
@@ -303,7 +577,7 @@
                   </span>
                 </div>
                 <p class="text-sm text-slate-600">{{ bar.descricao }}</p>
-                <p class="text-sm text-blue-700 mt-1"><strong>Mitigação:</strong> {{ bar.mitigacao }}</p>
+                <p class="text-sm text-blue-700 mt-1"><strong>Mitigacao:</strong> {{ bar.mitigacao }}</p>
                 <div class="flex items-center justify-between mt-2">
                   <span class="vvv-indicator" :class="getVVVClass(bar.vvv)"></span>
                 </div>
@@ -312,7 +586,6 @@
           </div>
         </div>
 
-        <!-- Variables - Scenario Toggles -->
         <div v-if="activeTab === 'variables'" class="bg-white rounded-lg shadow p-6">
           <h2 class="text-lg font-bold text-slate-800 mb-4">🎛️ Variáveis de Cenário</h2>
           <p class="text-sm text-slate-500 mb-4">Ajuste variáveis para simular impactos</p>
@@ -357,17 +630,95 @@
 
         <!-- BMC -->
         <div v-if="activeTab === 'bmc'" class="bg-white rounded-lg shadow p-6">
-          <h2 class="text-lg font-bold text-slate-800 mb-4">📋 Business Model Canvas</h2>
-          <div class="grid grid-cols-3 gap-4">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold text-slate-800">Business Model Canvas</h2>
+            <span class="text-xs text-slate-500">Clique para expandir</span>
+          </div>
+
+          <!-- Desktop: inline expansion -->
+          <div class="hidden md:grid md:grid-cols-3 gap-4">
             <div v-for="(items, section) in data.business_model_canvas" :key="section"
-                 class="p-4 border rounded-lg">
-              <h3 class="font-semibold text-slate-800 text-sm capitalize mb-2">{{ section.replace(/_/g, ' ') }}</h3>
-              <ul class="space-y-1">
+                 class="bmc-card p-4 border rounded-lg touch-target"
+                 :class="{ 'expanded': expandedBmc === section }"
+                 @click="expandedBmc = expandedBmc === section ? null : section"
+                 role="button"
+                 :aria-expanded="expandedBmc === section"
+                 tabindex="0"
+                 @keydown.enter="expandedBmc = expandedBmc === section ? null : section"
+                 @keydown.space.prevent="expandedBmc = expandedBmc === section ? null : section">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-slate-800 text-sm capitalize">{{ formatBmcTitle(section) }}</h3>
+                <svg class="w-4 h-4 text-slate-400 transition-transform duration-150"
+                     :class="{ 'rotate-180': expandedBmc === section }"
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <ul class="mt-2 space-y-1">
                 <li v-for="item in items" :key="item" class="text-sm text-slate-600 flex items-start">
-                  <span class="mr-2">•</span>
+                  <span class="mr-2 text-slate-300">•</span>
                   <span>{{ item }}</span>
                 </li>
               </ul>
+              <!-- Expanded detail -->
+              <div class="bmc-detail" :class="{ 'open': expandedBmc === section }">
+                <div class="bmc-detail-inner pt-3 mt-3 border-t border-slate-200">
+                  <p class="text-sm text-slate-500 leading-relaxed">{{ getBmcDescription(section) }}</p>
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <span v-for="tag in getBmcTags(section)" :key="tag"
+                          class="text-xs px-2 py-0.5 bg-blue-50 text-blue-700 rounded">
+                      {{ tag }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile: tap opens bottom sheet -->
+          <div class="md:hidden">
+            <div class="grid grid-cols-2 gap-3">
+              <div v-for="(items, section) in data.business_model_canvas" :key="section"
+                   class="bmc-card p-3 border rounded-lg touch-target"
+                   @click="openBmcSheet(section)"
+                   role="button"
+                   :aria-label="'Ver detalhes: ' + formatBmcTitle(section)"
+                   tabindex="0">
+                <h3 class="font-semibold text-slate-800 text-xs capitalize leading-tight">{{ formatBmcTitle(section) }}</h3>
+                <p class="text-xs text-slate-400 mt-1">{{ items.length }} itens</p>
+              </div>
+            </div>
+
+            <!-- Bottom sheet -->
+            <div v-if="sheetBmc" class="bmc-backdrop" @click="sheetBmc = null" role="presentation"></div>
+            <div v-if="sheetBmc" class="bmc-sheet" role="dialog" :aria-label="formatBmcTitle(sheetBmc)">
+              <div class="bmc-sheet-handle" aria-hidden="true"></div>
+              <div class="bmc-sheet-content p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="font-bold text-slate-800">{{ formatBmcTitle(sheetBmc) }}</h3>
+                  <button @click="sheetBmc = null"
+                          class="touch-target text-slate-400 hover:text-slate-600"
+                          aria-label="Fechar">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <p class="text-sm text-slate-500 mb-3 leading-relaxed">{{ getBmcDescription(sheetBmc) }}</p>
+                <ul class="space-y-2">
+                  <li v-for="item in (data.business_model_canvas[sheetBmc] || [])" :key="item"
+                      class="text-sm text-slate-700 flex items-start gap-2">
+                    <span class="text-blue-500 mt-0.5 flex-shrink-0">•</span>
+                    <span>{{ item }}</span>
+                  </li>
+                </ul>
+                <div class="mt-4 flex flex-wrap gap-1">
+                  <span v-for="tag in getBmcTags(sheetBmc)" :key="tag"
+                        class="text-xs px-2 py-0.5 bg-blue-50 text-blue-700 rounded">
+                    {{ tag }}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -377,7 +728,7 @@
           <h2 class="text-lg font-bold text-slate-800 mb-4">🗺️ Roadmap de Implementação</h2>
           <div class="space-y-4">
             <div v-for="(fase, key) in data.roadmap" :key="key"
-                 class="flex gap-4 p-4 border rounded-lg"
+                 class="flex gap-4 p-4 border rounded-lg flex-wrap"
                  :class="{'phase-current text-white': fase.status === 'in_progress'}">
               <div class="flex-shrink-0">
                 <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold"
@@ -457,6 +808,8 @@
           editMode: false,
           activeTab: 'decisions',
           scenario: 'base',
+          expandedBmc: null,
+          sheetBmc: null,
           data: {},
           tabs: [
             { id: 'decisions', name: 'Decisões', icon: '🎯' },
@@ -545,6 +898,51 @@
           if (vvv >= 0.7) return 'vvv-high';
           if (vvv >= 0.4) return 'vvv-med';
           return 'vvv-low';
+        },
+        formatBmcTitle(section) {
+          const titles = {
+            'key_partners': 'Key Partners',
+            'key_activities': 'Key Activities',
+            'key_resources': 'Key Resources',
+            'value_propositions': 'Value Propositions',
+            'customer_relationships': 'Customer Relationships',
+            'channels': 'Channels',
+            'customer_segments': 'Customer Segments',
+            'cost_structure': 'Cost Structure',
+            'revenue_streams': 'Revenue Streams'
+          };
+          return titles[section] || section.replace(/_/g, ' ');
+        },
+        getBmcDescription(section) {
+          const descriptions = {
+            'key_partners': 'Parceiros estrategicos para alcance do mercado municipal e compliance tecnico.',
+            'key_activities': 'Atividades core que geram valor e diferenciacao competitiva.',
+            'key_resources': 'Recursos essenciais para operacao e escala do modelo SaaS+DPO.',
+            'value_propositions': 'Propostas de valor que justificam a escolha sobre consultoria tradicional.',
+            'customer_relationships': 'Modelos de relacionamento por segmento e tier de servico.',
+            'channels': 'Canais de distribuicao e aquisicao focados em B2G municipal.',
+            'customer_segments': 'Segmentos priorizados com base em SAM e sales cycle.',
+            'cost_structure': 'Estrutura de custos com foco em gross margin >80%.',
+            'revenue_streams': 'Fontes de receita recorrente e setup fee.'
+          };
+          return descriptions[section] || '';
+        },
+        getBmcTags(section) {
+          const tags = {
+            'key_partners': ['B2G', 'consorcios', 'AWS'],
+            'key_activities': ['SaaS', 'DPO', 'EAD'],
+            'key_resources': ['IP', 'certificacao', 'platform'],
+            'value_propositions': ['Lei 14.133', 'DC Brasil', 'setup rapido'],
+            'customer_relationships': ['self-service', 'SLA 4h', 'onboarding'],
+            'channels': ['SEO', 'associacoes', 'white-label'],
+            'customer_segments': ['municipal', 'B2G', 'PMEs'],
+            'cost_structure': ['82% margin', 'DPO 20%', 'infra'],
+            'revenue_streams': ['recorrente', 'setup', 'SaaS']
+          };
+          return tags[section] || [];
+        },
+        openBmcSheet(section) {
+          this.sheetBmc = section;
         },
         exportPDF() {
           window.print();
