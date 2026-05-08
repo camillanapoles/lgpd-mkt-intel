@@ -1,0 +1,706 @@
+{
+  "metadata": {
+    "version": "3.0.0",
+    "lastUpdated": "2026-05-08",
+    "project": "LGPD SaaS Municipal - SWOT Dinâmico",
+    "framework": "VVV (Verificação Verdade Valida) + FDC-U Priority Matrix",
+    "interactive": true,
+    "filters": {
+      "categories": ["S", "W", "O", "T"],
+      "vvv_threshold": 0.0,
+      "impact_levels": ["CRÍTICA", "ALTA", "MEDIA", "BAIXA"],
+      "sources": ["transcricao-neogov", "analise-riscos", "strategic-planning", "confidata-analysis"]
+    }
+  },
+  "swot_matrix": {
+    "strengths": {
+      "id": "S",
+      "label": "Forças (Strengths)",
+      "color": "#10b981",
+      "items": [
+        {
+          "id": "S1",
+          "texto": "Único abaixo R$65K/ano com DPO incluído - preenchimento gap Confidata",
+          "vvv": 0.95,
+          "impacto": "CRÍTICA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.forcas[0]",
+          "categoria": "pricing",
+          "acao_principal": "Manter positioning agressivo vs Confidata (R$497 starter vs nosso R$297-397)",
+          "metrica": "ACV ganhado por pricing",
+          "owner": "Wilton"
+        },
+        {
+          "id": "S2",
+          "texto": "DC Brasil compliance Art.26 - dados 100% em território nacional",
+          "vvv": 0.95,
+          "impacto": "CRÍTICA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.forcas[1]",
+          "categoria": "compliance",
+          "acao_principal": "Comunicar em toda proposta - diferencial imbatível vs Confidata",
+          "metrica": "% propostas com destaque DC Brasil",
+          "owner": "Gislene"
+        },
+        {
+          "id": "S3",
+          "texto": "Prerrogativas ICT (Art.75 IV c/d) - dispensa até R$390K+ vs R$65K concorrente",
+          "vvv": 0.90,
+          "impacto": "CRÍTICA",
+          "fonte": "fdcu-continuidade.json",
+          "fonte_linha": "prerrogativas_ict",
+          "categoria": "legal",
+          "acao_principal": "Whitepaper jurídico pronto para procuradores",
+          "metrica": "% prefeituras que entendem dispensa",
+          "owner": "Gislene+Simone"
+        },
+        {
+          "id": "S4",
+          "texto": "Templates municipais únicos - física+digital integrado (gap de 95% do mercado)",
+          "vvv": 0.90,
+          "impacto": "ALTA",
+          "fonte": "fatos-vs-recomendacoes-neogov.md",
+          "fonte_linha": "L722-725",
+          "categoria": "produto",
+          "acao_principal": "Posicionar LGPD Drive como killer feature",
+          "metrica": "% demos com feature física destacada",
+          "owner": "Camilla"
+        },
+        {
+          "id": "S5",
+          "texto": "Archbase Framework BR + IP estratégia INPI - tecnologia defensável",
+          "vvv": 0.85,
+          "impacto": "ALTA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.forcas[4]",
+          "categoria": "tecnologia",
+          "acao_principal": "Protocolo INPI Sprint 1 (prazo 6-12 meses)",
+          "metrica": "Status protocolo INPI",
+          "owner": "Gislene"
+        },
+        {
+          "id": "S6",
+          "texto": "Modelo Contabilizei validado - SaaS B2G recorrente",
+          "vvv": 0.80,
+          "impacto": "ALTA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.forcas[2]",
+          "categoria": "business_model",
+          "acao_principal": "Replicar playbook go-to-market",
+          "metrica": "CAC payback (target: 4 meses)",
+          "owner": "Wilton"
+        },
+        {
+          "id": "S7",
+          "texto": "IA anonimização + marca d'água - rastreabilidade única",
+          "vvv": 0.75,
+          "impacto": "MEDIA",
+          "fonte": "fatos-vs-recomendacoes-neogov.md",
+          "fonte_linha": "L760-765, L800-805",
+          "categoria": "tecnologia",
+          "acao_principal": "Patente algoritmo tarjamento + data discovery",
+          "metrica": "Patentes protocoladas",
+          "owner": "Camilla"
+        }
+      ]
+    },
+    "weaknesses": {
+      "id": "W",
+      "label": "Fraquezas (Weaknesses)",
+      "color": "#f59e0b",
+      "items": [
+        {
+          "id": "W1",
+          "texto": "Sem brand estabelecido - startups desconhecida no mercado LGPD",
+          "vvv": 0.70,
+          "impacto": "ALTA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.fracas[0]",
+          "categoria": "marketing",
+          "acao_principal": "3 case studies (prefeituras beta) antes escala",
+          "metrica": "NPS clientes beta (target: >40)",
+          "owner": "Wilton"
+        },
+        {
+          "id": "W2",
+          "texto": "Sem ISO 27001/27701 - concorrentes já certificam",
+          "vvv": 0.65,
+          "impacto": "MEDIA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.fracas[1]",
+          "categoria": "compliance",
+          "acao_principal": "Roadmap ISO Fase 4-5 (não bloqueia MVP)",
+          "metrica": "Gap até ISO (meses)",
+          "owner": "Camilla"
+        },
+        {
+          "id": "W3",
+          "texto": "Pool DPOs necessário - modelo escalável requer 10+ DPOs certificados",
+          "vvv": 0.70,
+          "impacto": "MEDIA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.fracas[3]",
+          "categoria": "operacional",
+          "acao_principal": "Modelo fractional: 1 DPO sênior + 5 juniores por 50 municipios",
+          "metrica": "# DPOs contratados",
+          "owner": "Simone"
+        },
+        {
+          "id": "W4",
+          "texto": "Depende AWS sa-east-1 - vendor lock-in + latência",
+          "vvv": 0.50,
+          "impacto": "BAIXA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.fracas[2]",
+          "categoria": "infraestrutura",
+          "acao_principal": "Arquitetura cloud-agnostic (fase 2)",
+          "metrica": "% workloads portáveis",
+          "owner": "Camilla"
+        },
+        {
+          "id": "W5",
+          "texto": "LOIs NÃO assinadas - GO/NO-GO bloqueado (VVV 0.0)",
+          "vvv": 0.90,
+          "impacto": "CRÍTICA",
+          "fonte": "fdcu-continuidade.json",
+          "fonte_linha": "gaps_a_preencher.critical[1]",
+          "categoria": "comercial",
+          "acao_principal": "Wilton: 3+ LOIs Sprint 1-2 (prazo: 30 dias)",
+          "metrica": "# LOIs assinadas",
+          "owner": "Wilton"
+        },
+        {
+          "id": "W6",
+          "texto": "Sem co-founder/advisor municipal - sales cycle >12 meses sem isso",
+          "vvv": 0.85,
+          "impacto": "CRÍTICA",
+          "fonte": "fdcu-continuidade.json",
+          "fonte_linha": "gaps_a_preencher.critical[2]",
+          "categoria": "time",
+          "acao_principal": "Contratar advisor 15-25% equity + salary + comissão",
+          "metrica": "Status advisor contratado",
+          "owner": "Wilton"
+        },
+        {
+          "id": "W7",
+          "texto": "Custo desenvolvimento NÃO validado - viabilidade econômica incerta",
+          "vvv": 0.80,
+          "impacto": "ALTA",
+          "fonte": "analise-riscos-neogov.md",
+          "fonte_linha": "L34-38",
+          "categoria": "financeiro",
+          "acao_principal": "Camila: orçamento 80% confidence até 13/05",
+          "metrica": "Custo dev validado (R$)",
+          "owner": "Camilla"
+        },
+        {
+          "id": "W8",
+          "texto": "Processo 100% manual (corpo-a-corpo) - não escala sem automação",
+          "vvv": 0.75,
+          "impacto": "ALTA",
+          "fonte": "analise-riscos-neogov.md",
+          "fonte_linha": "L38",
+          "categoria": "operacional",
+          "acao_principal": "Camila: MVP 30-45 dias com auto-diagnóstico IA",
+          "metrica": "% leads auto-qualificados",
+          "owner": "Camilla"
+        }
+      ]
+    },
+    "opportunities": {
+      "id": "O",
+      "label": "Oportunidades (Opportunities)",
+      "color": "#3b82f6",
+      "items": [
+        {
+          "id": "O1",
+          "texto": "4.011 prefeituras sem LGPD (72% de 5.570) - TAM gigantesco",
+          "vvv": 0.95,
+          "impacto": "CRÍTICA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.oportunidades[0]",
+          "categoria": "mercado",
+          "acao_principal": "Foco SAM: 1.200 municípios 20-100K hab",
+          "metrica": "# prefeituras abordadas",
+          "owner": "Wilton"
+        },
+        {
+          "id": "O2",
+          "texto": "ANPD fiscalização ativa + multas R$50M+ - urgência criada",
+          "vvv": 0.90,
+          "impacto": "CRÍTICA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.oportunidades[1]",
+          "categoria": "regulatorio",
+          "acao_principal": "Mapa calor fiscalização por estado (priorizar MG/RJ/SP)",
+          "metrica": "# prefeituras com notificação ativa",
+          "owner": "Simone"
+        },
+        {
+          "id": "O3",
+          "texto": "Lei 14.133 dispensa até R$390K+ - edge competitivo único",
+          "vvv": 0.85,
+          "impacto": "CRÍTICA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.oportunidades[2]",
+          "categoria": "legal",
+          "acao_principal": "Whitehouse Art.75 IV para procuradores",
+          "metrica": "% prefeituras educadas dispensa",
+          "owner": "Gislene+Simone"
+        },
+        {
+          "id": "O4",
+          "texto": "TCEs fiscalizando LGPD - pressão adicional",
+          "vvv": 0.80,
+          "impacto": "ALTA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.oportunidades[3]",
+          "categoria": "regulatorio",
+          "acao_principal": "Parcerias com TCEs (webinars, materiais)",
+          "metrica": "# TCEs parceiros",
+          "owner": "Simone"
+        },
+        {
+          "id": "O5",
+          "texto": "ECA Digital (Lei 15.211/2025) - verificação idade URGÊNCIA CRÍTICA",
+          "vvv": 0.90,
+          "impacto": "CRÍTICA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.oportunidades[4]",
+          "categoria": "produto",
+          "acao_principal": "Priorizar Age Verification após MVP core",
+          "metrica": "MVP ECA lançado",
+          "owner": "Camilla"
+        },
+        {
+          "id": "O6",
+          "texto": "Consórcios municipais (CIMINAS R$31.9M reference) - scale via ARP",
+          "vvv": 0.85,
+          "impacto": "ALTA",
+          "fonte": "fdcu-continuidade.json",
+          "fonte_linha": "consorcios_prioridade",
+          "categoria": "comercial",
+          "acao_principal": "Top 5 consórcios: CIGA, CIMAMS, COPIRN, CONIAPE, CIMINAS",
+          "metrica": "# consórcios parceiros",
+          "owner": "Wilton"
+        },
+        {
+          "id": "O7",
+          "texto": "FNDE como fonte de funding - recursos não explorados",
+          "vvv": 0.60,
+          "impacto": "MEDIA",
+          "fonte": "fatos-vs-recomendacoes-neogov.md",
+          "fonte_linha": "L1550",
+          "categoria": "financeiro",
+          "acao_principal": "Validar mechanic funding via FNDE",
+          "metrica": "R$ funding disponível FNDE",
+          "owner": "Gislene"
+        },
+        {
+          "id": "O8",
+          "texto": "Associacoes municipais (CNM, FNP) - acesso escala nacional",
+          "vvv": 0.80,
+          "impacto": "ALTA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "business_model_canvas.key_partners[0]",
+          "categoria": "comercial",
+          "acao_principal": "Parceria white-label + revenue share",
+          "metrica": "# associações parceiras",
+          "owner": "Wilton"
+        },
+        {
+          "id": "O9",
+          "texto": "DPO Hub Intermediário - centralização DPOs consórcio",
+          "vvv": 0.80,
+          "impacto": "MEDIA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "scenario_analysis.opportunities[1]",
+          "categoria": "produto",
+          "acao_principal": "Modelo R$2-5k/município/mês via consórcio",
+          "metrica": "# DPOs no hub",
+          "owner": "Simone"
+        }
+      ]
+    },
+    "threats": {
+      "id": "T",
+      "label": "Ameaças (Threats)",
+      "color": "#ef4444",
+      "items": [
+        {
+          "id": "T1",
+          "texto": "Confidata pivot municipal CONFIRMADO - execução ativa com 17 módulos",
+          "vvv": 0.90,
+          "impacto": "CRÍTICA",
+          "fonte": "fdcu-continuidade.json",
+          "fonte_linha": "competitive_gap",
+          "categoria": "competicao",
+          "acao_principal": "Ver battle-card-confidata.md + estrategia-diferenciacao",
+          "metrica": "% clientes Confidata convertidos",
+          "owner": "Wilton"
+        },
+        {
+          "id": "T2",
+          "texto": "Prefeituras falidas (40%+ inadimplência) - fluxo caixa risco",
+          "vvv": 0.85,
+          "impacto": "CRÍTICA",
+          "fonte": "analise-riscos-neogov.md",
+          "fonte_linha": "L36",
+          "categoria": "financeiro",
+          "acao_principal": "Contrato anual + consórcio garantia + emendas parlamentares",
+          "metrica": "% inadimplência",
+          "owner": "Gislene"
+        },
+        {
+          "id": "T3",
+          "texto": "Sales cycle municipal 12-18 meses - burn runway",
+          "vvv": 0.90,
+          "impacto": "CRÍTICA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "scenario_analysis.barriers[0]",
+          "categoria": "comercial",
+          "acao_principal": "Co-founder advisor reduz para 6-9 meses",
+          "metrica": "Sales cycle médio (dias)",
+          "owner": "Wilton"
+        },
+        {
+          "id": "T4",
+          "texto": "Turnover político - mudança governo quebra contratos",
+          "vvv": 0.75,
+          "impacto": "MEDIA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "scenario_analysis.barriers[2]",
+          "categoria": "politico",
+          "acao_principal": "Múltiplos contratos curtos + portabilidade + valor entregue",
+          "metrica": "% contratos renovados pós-eleição",
+          "owner": "Gislene"
+        },
+        {
+          "id": "T5",
+          "texto": "Confidata pode lançar plano micro-municipal (<R$300) - war pricing",
+          "vvv": 0.75,
+          "impacto": "ALTA",
+          "fonte": "fdcu-continuidade.json",
+          "fonte_linha": "confidata_analysis.gaps_identificados[0]",
+          "categoria": "competicao",
+          "acao_principal": "Lock-in via DC Brasil + ICT prerrogativas (não copiável)",
+          "metrica": "% churn por pricing",
+          "owner": "Wilton"
+        },
+        {
+          "id": "T6",
+          "texto": "Mudança regulatoria ANPD - agenda 2025-26 incerta",
+          "vvv": 0.60,
+          "impacto": "MEDIA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.ameacas[2]",
+          "categoria": "regulatorio",
+          "acao_principal": "Lobby ativo via associações + adaptação ágil",
+          "metrica": "# dias alerta regulação",
+          "owner": "Gislene"
+        },
+        {
+          "id": "T7",
+          "texto": "OneTrust entrada BR - player global com deep pockets",
+          "vvv": 0.55,
+          "impacto": "MEDIA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.ameacas[1]",
+          "categoria": "competicao",
+          "acao_principal": "Foco municipal onde OneTrust não compete (preço + complexidade)",
+          "metrica": "% perdas para OneTrust",
+          "owner": "Wilton"
+        },
+        {
+          "id": "T8",
+          "texto": "Recesso municipal - cortes orçamentários primeiro ano",
+          "vvv": 0.65,
+          "impacto": "MEDIA",
+          "fonte": "strategic-planning.json",
+          "fonte_linha": "swot.ameacas[3]",
+          "categoria": "macroeconomico",
+          "acao_principal": "Modelo SaaS opex (mais resistível que capex projeto)",
+          "metrica": "% churn por recesso",
+          "owner": "Gislene"
+        },
+        {
+          "id": "T9",
+          "texto": "Subcontratação digitalização pode falhar - delivery risk",
+          "vvv": 0.60,
+          "impacto": "MEDIA",
+          "fonte": "analise-riscos-neogov.md",
+          "fonte_linha": "L46",
+          "categoria": "operacional",
+          "acao_principal": "3 fornecedores + SLAs rigorosos + backup",
+          "metrica": "% falhas fornecedores",
+          "owner": "Wilton"
+        },
+        {
+          "id": "T10",
+          "texto": "Tecnologia NÃO testada (IA-Audit + Data Discovery) - promise risk",
+          "vvv": 0.70,
+          "impacto": "ALTA",
+          "fonte": "fdcu-reuniao-priorities.json",
+          "fonte_linha": "objects[7]",
+          "categoria": "tecnologia",
+          "acao_principal": "MVP funcional 30-45 dias antes qualquer venda",
+          "metrica": "# bugs críticos MVP",
+          "owner": "Camilla"
+        }
+      ]
+    }
+  },
+  "top_actions_by_quadrant": {
+    "strengths": {
+      "top_3": [
+        {
+          "rank": 1,
+          "item_id": "S3",
+          "action": "Whitepaper Art.75 IV pronto + template minuta contratação direta",
+          "responsavel": "Gislene+Simone",
+          "prazo": "10/06/2026",
+          "impacto_esperado": "Desbloqueia 50+ propostas paradas por dúvida jurídica"
+        },
+        {
+          "rank": 2,
+          "item_id": "S2",
+          "action": "Comunicação DC Brasil em 100% propostas + destaque site",
+          "responsavel": "Gislene",
+          "prazo": "Imediato",
+          "impacto_esperado": "+30% conversão por sovereignty concern"
+        },
+        {
+          "rank": 3,
+          "item_id": "S4",
+          "action": "Demo LGPD Drive (físico integrado) em toda apresentação",
+          "responsavel": "Camilla",
+          "prazo": "15/05/2026",
+          "impacto_esperado": "Diferencial único vs 95% concorrentes só digitais"
+        }
+      ]
+    },
+    "weaknesses": {
+      "top_3": [
+        {
+          "rank": 1,
+          "item_id": "W5",
+          "action": "3+ LOIs assinadas (GO/NO-GO depende disso)",
+          "responsavel": "Wilton",
+          "prazo": "15/06/2026",
+          "impacto_esperado": "Validação real demanda + funding"
+        },
+        {
+          "rank": 2,
+          "item_id": "W6",
+          "action": "Contratar advisor municipal (15-25% equity + salary + comissão)",
+          "responsavel": "Wilton",
+          "prazo": "30/06/2026",
+          "impacto_esperado": "Sales cycle 18→6 meses"
+        },
+        {
+          "rank": 3,
+          "item_id": "W8",
+          "action": "MVP auto-diagnóstico IA (30-45 dias)",
+          "responsavel": "Camilla",
+          "prazo": "24/06/2026",
+          "impacto_esperado": "CAC 50% redução + escala"
+        }
+      ]
+    },
+    "opportunities": {
+      "top_3": [
+        {
+          "rank": 1,
+          "item_id": "O1",
+          "action": "Foco SAM: 1.200 municípios 20-100K hab (ticket R$15-50K/ano)",
+          "responsavel": "Wilton",
+          "prazo": "Continuo",
+          "impacto_esperado": "TAM R$60M, SAM R$12M endereçável"
+        },
+        {
+          "rank": 2,
+          "item_id": "O6",
+          "action": "Parceria Top 5 consórcios: CIGA, CIMAMS, COPIRN, CONIAPE, CIMINAS",
+          "responsavel": "Wilton",
+          "prazo": "30/06/2026",
+          "impacto_esperado": "Scale via ARP (ex: CIMINAS R$31.9M)"
+        },
+        {
+          "rank": 3,
+          "item_id": "O5",
+          "action": "Age Verification ECA Digital MVP (após MVP core)",
+          "responsavel": "Camilla",
+          "prazo": "15/12/2026",
+          "impacto_esperado": "Oportunidade timing único Lei 15.211/2025"
+        }
+      ]
+    },
+    "threats": {
+      "top_3": [
+        {
+          "rank": 1,
+          "item_id": "T1",
+          "action": "Executar estratégia diferenciação Confidata (battle card pronto)",
+          "responsavel": "Wilton",
+          "prazo": "Imediato",
+          "impacto_esperado": "+40% win rate vs Confidata"
+        },
+        {
+          "rank": 2,
+          "item_id": "T3",
+          "action": "Advisor municipal (6-9 meses sales cycle)",
+          "responsavel": "Wilton",
+          "prazo": "30/06/2026",
+          "impacto_esperado": "Redução 50% tempo fechar contrato"
+        },
+        {
+          "rank": 3,
+          "item_id": "T2",
+          "action": "Modelo contrato anual + consórcio garantia + emendas",
+          "responsavel": "Gislene",
+          "prazo": "15/05/2026",
+          "impacto_esperado": "Inadimplência <20%"
+        }
+      ]
+    }
+  },
+  "prioritization_matrix": {
+    "methodology": "Impacto × Urgência × VVV Score",
+    "quadrants": {
+      "do_first": {
+        "label": "FAZER AGORA (Alto Impacto, Alta Urgência)",
+        "items": ["W5", "W6", "T1", "T3", "O3", "S3"],
+        "description": "GO/NO-GO blockers - resolver em 30 dias"
+      },
+      "schedule": {
+        "label": "AGENDAR (Alto Impacto, Baixa Urgência)",
+        "items": ["W7", "W8", "O5", "S5", "S7", "T4"],
+        "description": "Planejar 60-90 dias"
+      },
+      "delegate": {
+        "label": "DELEGAR (Baixo Impacto, Baixa Urgência)",
+        "items": ["W4", "O7", "T6", "T7"],
+        "description": "Terceirizar ou fazer quando tempo permitir"
+      },
+      "eliminate": {
+        "label": "ELIMINAR/ACEITAR (Baixo Impacto, Alta Urgência)",
+        "items": ["T8", "T9"],
+        "description": "Monitorar mas não gastar recursos agora"
+      }
+    }
+  },
+  "dynamic_filters": {
+    "by_vvv": {
+      "critical": [
+        {"id": "S2", "vvv": 0.95, "category": "S"},
+        {"id": "S3", "vvv": 0.90, "category": "S"},
+        {"id": "W5", "vvv": 0.90, "category": "W"},
+        {"id": "W6", "vvv": 0.85, "category": "W"},
+        {"id": "O1", "vvv": 0.95, "category": "O"},
+        {"id": "O2", "vvv": 0.90, "category": "O"},
+        {"id": "T1", "vvv": 0.90, "category": "T"},
+        {"id": "T3", "vvv": 0.90, "category": "T"}
+      ],
+      "threshold": 0.85
+    },
+    "by_impacto": {
+      "critica": ["S2", "S3", "S4", "W5", "W6", "O1", "O2", "O3", "O5", "T1", "T2", "T3"],
+      "alta": ["S1", "S5", "S6", "W1", "W7", "W8", "O4", "O6", "O8", "T5", "T10"],
+      "media": ["S7", "W2", "W3", "O9", "T4", "T6", "T7", "T8", "T9"],
+      "baixa": ["W4"]
+    },
+    "by_categoria": {
+      "pricing": ["S1"],
+      "compliance": ["S2", "W2"],
+      "legal": ["S3", "O3"],
+      "produto": ["S4", "O5", "O9"],
+      "tecnologia": ["S5", "S7", "W4", "T10"],
+      "business_model": ["S6"],
+      "marketing": ["W1"],
+      "operacional": ["W3", "W8", "T9"],
+      "comercial": ["W5", "O6", "O8", "T3"],
+      "time": ["W6"],
+      "financeiro": ["W7", "O7", "T2"],
+      "mercado": ["O1"],
+      "regulatorio": ["O2", "O4", "T6"],
+      "competicao": ["T1", "T5", "T7"],
+      "politico": ["T4"],
+      "macroeconomico": ["T8"]
+    },
+    "by_owner": {
+      "Wilton": ["S1", "S6", "W1", "W5", "W6", "O1", "O6", "O8", "T1", "T3", "T5"],
+      "Gislene": ["S2", "S3", "S5", "O3", "O7", "T2", "T4", "T6", "T8"],
+      "Simone": ["S3", "W3", "O2", "O4", "O9", "T2"],
+      "Camilla": ["S4", "S7", "W8", "O5", "T10"],
+      "Todos": []
+    }
+  },
+  "strategic_insights": {
+    "core_differentiators": [
+      "DC Brasil (soberania) - imbatível",
+      "Prerrogativas ICT (R$390K+ vs R$65K) - legal moat",
+      "LGPD Drive (físico+digital) - gap 95% mercado",
+      "Pricing agressivo + DPO incluído - value proposition"
+    ],
+    "critical_gaps": [
+      "LOIs NÃO assinadas - GO/NO-GO bloqueado",
+      "Advisor municipal ausente - sales cycle >12 meses",
+      "Custo dev NÃO validado - viabilidade incerta",
+      "Tecnologia NÃO testada - promise vs delivery"
+    ],
+    "immediate_actions": [
+      "1. LOIs Sprint 1-2 (Wilton) - 30 dias",
+      "2. Whitepaper Art.75 IV (Gislene+Simone) - 15 dias",
+      "3. MVP auto-diagnóstico (Camilla) - 45 dias",
+      "4. Advisor contratado (Wilton) - 60 dias"
+    ]
+  },
+  "recommendations": {
+    "priority_0": [
+      {
+        "action": "Assinar 3+ LOIs em 30 dias",
+        "owner": "Wilton",
+        "deadline": "15/06/2026",
+        "metric": "# LOIs assinadas",
+        "target": 3
+      },
+      {
+        "action": "Whitepaper Art.75 IV + template minuta",
+        "owner": "Gislene+Simone",
+        "deadline": "20/05/2026",
+        "metric": "Whitepaper aprovado por advogado especialista",
+        "target": 1
+      },
+      {
+        "action": "MVP auto-diagnóstico IA funcional",
+        "owner": "Camilla",
+        "deadline": "24/06/2026",
+        "metric": "MVP testado com 5 prefeituras",
+        "target": 5
+      }
+    ],
+    "priority_1": [
+      {
+        "action": "Contratar advisor municipal",
+        "owner": "Wilton",
+        "deadline": "30/06/2026",
+        "metric": "Advisor contratado",
+        "target": 1
+      },
+      {
+        "action": "Parceria Top 5 consórcios",
+        "owner": "Wilton",
+        "deadline": "30/06/2026",
+        "metric": "# consórcios em negociação",
+        "target": 5
+      },
+      {
+        "action": "Protocolo INPI software",
+        "owner": "Gislene",
+        "deadline": "13/05/2026",
+        "metric": "Protocolo INPI #",
+        "target": 1
+      }
+    ]
+  }
+}

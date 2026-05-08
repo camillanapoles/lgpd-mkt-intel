@@ -1,0 +1,768 @@
+{
+  "$schema": "BMC Interactive Canvas v1.0",
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-05-08",
+    "framework": "Business Model Canvas",
+    "interaction": "click-to-expand",
+    "validation": "VVV (Verificacao Verdade Valida)"
+  },
+  "canvas": {
+    "layout": {
+      "type": "3x3_grid",
+      "style": "classic_bmc",
+      "expandable": true,
+      "relationships_visible": true
+    },
+    "blocks": [
+      {
+        "id": "kp",
+        "position": "top_left",
+        "title": "Key Partners",
+        "icon": "handshake",
+        "color": "#E74C3C",
+        "items": [
+          {
+            "id": "kp_1",
+            "text": "Associacoes municipais (CNM, FNP)",
+            "description": "Acesso direto a 5.570 municipios",
+            "type": "channel_partner",
+            "vvv": 0.85,
+            "status": "validated"
+          },
+          {
+            "id": "kp_2",
+            "text": "Consorcios (CIGA, CIMAMS, COPIRN, CONIAPE, CIMINAS)",
+            "description": "CIMINAS R$31.9M referencia - volume 140+ municipios",
+            "type": "channel_partner",
+            "vvv": 0.8,
+            "status": "validated"
+          },
+          {
+            "id": "kp_3",
+            "text": "DPOs fractionados",
+            "description": "Pool de DPOs certificados compartilhados",
+            "type": "service_partner",
+            "vvv": 0.6,
+            "status": "needs_validation"
+          },
+          {
+            "id": "kp_4",
+            "text": "AWS sa-east-1 (DC Brasil)",
+            "description": "Data center Brasil - compliance Art.26 LGPD",
+            "type": "infrastructure",
+            "vvv": 0.95,
+            "status": "validated"
+          },
+          {
+            "id": "kp_5",
+            "text": "Certificadoras ISO",
+            "description": "ISO 27001 roadmap fase 4",
+            "type": "compliance",
+            "vvv": 0.4,
+            "status": "planned"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "Parceiros Ativos",
+            "current": 2,
+            "target": 5,
+            "unit": "consorcios",
+            "deadline": "2026-08"
+          },
+          {
+            "name": "Pool DPOs",
+            "current": 0,
+            "target": 5,
+            "unit": "certificados",
+            "deadline": "2026-07"
+          }
+        ],
+        "vvv_score": 0.75,
+        "notes": [
+          "GAP: Consorcios prioridade mapeados, falta contato executivo",
+          "PROXIMO: Reuniao CIGA/CIMAMS semana 20-24/05",
+          "RISCO: Confidata pode pivotar para consorcios"
+        ]
+      },
+      {
+        "id": "ka",
+        "position": "top_center",
+        "title": "Key Activities",
+        "icon": "cogs",
+        "color": "#9B59B6",
+        "items": [
+          {
+            "id": "ka_1",
+            "text": "Plataforma SaaS LGPD",
+            "description": "Archbase BR + componentes proprietarios",
+            "type": "product",
+            "vvv": 0.7,
+            "status": "in_development"
+          },
+          {
+            "id": "ka_2",
+            "text": "DPO-as-a-Service",
+            "description": "Servico recorrente com DPO dedicado ou compartilhado",
+            "type": "service",
+            "vvv": 0.8,
+            "status": "validated"
+          },
+          {
+            "id": "ka_3",
+            "text": "Conteudo EAD capacitacao",
+            "description": "Treinamentos mensais + base de conhecimento",
+            "type": "content",
+            "vvv": 0.5,
+            "status": "planned"
+          },
+          {
+            "id": "ka_4",
+            "text": "Consultoria implementacao",
+            "description": "Setup inicial 30 dias vs 6-12 meses mercado",
+            "type": "service",
+            "vvv": 0.7,
+            "status": "validated"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "MVP Core",
+            "current": 0,
+            "target": 100,
+            "unit": "%",
+            "deadline": "2026-06"
+          },
+          {
+            "name": "Onboarding",
+            "current": 0,
+            "target": 30,
+            "unit": "dias",
+            "deadline": "ongoing"
+          }
+        ],
+        "vvv_score": 0.68,
+        "notes": [
+          "FOCO: Data Discovery + Anonimizacao + AI-DPO",
+          "ROADMAP: Sprint 1-4 (maio/junho) alpha test",
+          "GAP: Falta definir escopo MVP vs v1.0"
+        ]
+      },
+      {
+        "id": "kr",
+        "position": "top_right",
+        "title": "Key Resources",
+        "icon": "cube",
+        "color": "#3498DB",
+        "items": [
+          {
+            "id": "kr_1",
+            "text": "Plataforma web (Archbase BR)",
+            "description": "Framework proprietario com estrategia INPI",
+            "type": "technology",
+            "vvv": 0.7,
+            "status": "validated"
+          },
+          {
+            "id": "kr_2",
+            "text": "Pool DPOs certificados",
+            "description": "20% faturamento estimado",
+            "type": "human",
+            "vvv": 0.6,
+            "status": "needs_validation"
+          },
+          {
+            "id": "kr_3",
+            "text": "Templates LGPD/ROPA/RIPD",
+            "description": "Municipais unicos no mercado",
+            "type": "intellectual_property",
+            "vvv": 0.85,
+            "status": "validated"
+          },
+          {
+            "id": "kr_4",
+            "text": "ISO 27001 roadmap",
+            "description": "Fase 4 (meses 15-20)",
+            "type": "certification",
+            "vvv": 0.4,
+            "status": "planned"
+          },
+          {
+            "id": "kr_5",
+            "text": "Patente INPI (anonimacao)",
+            "description": "Protocolo Sprint 1 (6-13/05)",
+            "type": "intellectual_property",
+            "vvv": 0.7,
+            "status": "in_progress"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "INPI Protocolado",
+            "current": false,
+            "target": true,
+            "unit": "sim/nao",
+            "deadline": "2026-05-13"
+          },
+          {
+            "name": "Pool DPOs Ativo",
+            "current": 0,
+            "target": 3,
+            "unit": "DPOs",
+            "deadline": "2026-08"
+          }
+        ],
+        "vvv_score": 0.65,
+        "notes": [
+          "ACAO: Protocolar INPI semana 06-13/05",
+          "GAP: Estrategia hiring DPOs nao definida",
+          "OPORTUNIDADE: IP pode ser moeda de troca com consorcios"
+        ]
+      },
+      {
+        "id": "vp",
+        "position": "center_left",
+        "title": "Value Propositions",
+        "icon": "star",
+        "color": "#F1C40F",
+        "items": [
+          {
+            "id": "vp_1",
+            "text": "Abaixo dispensa licitacao (R$390K+)",
+            "description": "Lei 14.133 Art.75 IV c - prerrogativa ICT",
+            "type": "pricing",
+            "vvv": 0.9,
+            "status": "validated"
+          },
+          {
+            "id": "vp_2",
+            "text": "DC Brasil Art.26 - dados 100% Brasil",
+            "description": "AWS sa-east-1, compliance LGPD armazenamento",
+            "type": "compliance",
+            "vvv": 0.95,
+            "status": "validated"
+          },
+          {
+            "id": "vp_3",
+            "text": "DPO incluido no preco",
+            "description": "Unico abaixo R$65K/ano com DPO dedicado",
+            "type": "service",
+            "vvv": 0.9,
+            "status": "validated"
+          },
+          {
+            "id": "vp_4",
+            "text": "Setup 30 dias vs 6-12 meses",
+            "description": "Automatizacao vs consultoria tradicional",
+            "type": "speed",
+            "vvv": 0.85,
+            "status": "validated"
+          },
+          {
+            "id": "vp_5",
+            "text": "Age Verification ECA Digital",
+            "description": "Lei 15.211/2025 - urgencia CRITICA",
+            "type": "regulatory",
+            "vvv": 0.7,
+            "status": "planned"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "Diferencial Imbativel",
+            "current": 1,
+            "target": 1,
+            "unit": "ICT unico",
+            "deadline": "ongoing"
+          },
+          {
+            "name": "Confidenciais",
+            "current": 4,
+            "target": 6,
+            "unit": "VPs",
+            "deadline": "2026-07"
+          }
+        ],
+        "vvv_score": 0.86,
+        "notes": [
+          "TESSE: Ninguem faz (municipal + R$100-500 + DPO + Lei14.133 + DC BR + ICT)",
+          "GAP: Pricing 80-95% abaixo mercado - AJUSTAR 8-15x",
+          "RISCO: Confidata pivot municipal EXECUTANDO"
+        ]
+      },
+      {
+        "id": "cr",
+        "position": "center",
+        "title": "Customer Relationships",
+        "icon": "heart",
+        "color": "#E67E22",
+        "items": [
+          {
+            "id": "cr_1",
+            "text": "Self-service onboarding",
+            "description": " signup sem atricao",
+            "type": "automated",
+            "vvv": 0.6,
+            "status": "planned"
+          },
+          {
+            "id": "cr_2",
+            "text": "Suporte chat SLA 4h",
+            "description": "Nao 24/7 - municipal B2B",
+            "type": "support",
+            "vvv": 0.7,
+            "status": "validated"
+          },
+          {
+            "id": "cr_3",
+            "text": "DPO dedicado (planos Plus)",
+            "description": "DPO compartilhado Starter",
+            "type": "human",
+            "vvv": 0.8,
+            "status": "validated"
+          },
+          {
+            "id": "cr_4",
+            "text": "Treinamentos mensais",
+            "description": "EAD + webinars + materiais",
+            "type": "education",
+            "vvv": 0.5,
+            "status": "planned"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "SLA Chat",
+            "current": 0,
+            "target": 4,
+            "unit": "horas",
+            "deadline": "2026-06"
+          },
+          {
+            "name": "Churn",
+            "current": 0,
+            "target": 2.5,
+            "unit": "%/mes",
+            "deadline": "ongoing"
+          }
+        ],
+        "vvv_score": 0.65,
+        "notes": [
+          "GAP: Self-service NAO definido - onboarding manual fase 0-1",
+          "PROXIMO: Mapear jornada onboarding municipal",
+          "RISCO: Sem experiencia B2G = churn alto periodo inicial"
+        ]
+      },
+      {
+        "id": "ch",
+        "position": "center_right",
+        "title": "Channels",
+        "icon": "truck",
+        "color": "#16A085",
+        "items": [
+          {
+            "id": "ch_1",
+            "text": "Direta web (SEO+Ads)",
+            "description": "PLR baixo CAC, tracao inicial",
+            "type": "digital",
+            "vvv": 0.5,
+            "status": "planned"
+          },
+          {
+            "id": "ch_2",
+            "text": "Associacoes municipais",
+            "description": "CNM, FNP - alcance nacional",
+            "type": "partnership",
+            "vvv": 0.85,
+            "status": "validated"
+          },
+          {
+            "id": "ch_3",
+            "text": "White label para consorcios",
+            "description": "CIMINAS R$31.9M referencia",
+            "type": "partnership",
+            "vvv": 0.8,
+            "status": "validated"
+          },
+          {
+            "id": "ch_4",
+            "text": "Marketplace gov.br",
+            "description": "Futuro - validacao gov.br",
+            "type": "marketplace",
+            "vvv": 0.3,
+            "status": "planned"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "Consorcios Ativos",
+            "current": 0,
+            "target": 3,
+            "unit": "parcerias",
+            "deadline": "2026-09"
+          },
+          {
+            "name": "CAC",
+            "current": 0,
+            "target": 1800,
+            "unit": "R$",
+            "deadline": "2026-12"
+          }
+        ],
+        "vvv_score": 0.62,
+        "notes": [
+          "PRIORIDADE: Consorcios > web direta fase 0-1",
+          "GAP: Falta estrategia marketing B2G",
+          "OPORTUNIDADE: White label pode ser exclusivo por regiao"
+        ]
+      },
+      {
+        "id": "cs",
+        "position": "bottom_left",
+        "title": "Customer Segments",
+        "icon": "users",
+        "color": "#27AE60",
+        "items": [
+          {
+            "id": "cs_1",
+            "text": "Prefeituras 20-100K hab (SAM)",
+            "description": "1.200 municipios prioritarios - ticket R$15-50K/ano",
+            "type": "primary",
+            "vvv": 0.9,
+            "status": "validated"
+          },
+          {
+            "id": "cs_2",
+            "text": "Consorcios intermunicipais",
+            "description": "140+ municipios via consorcio",
+            "type": "primary",
+            "vvv": 0.8,
+            "status": "validated"
+          },
+          {
+            "id": "cs_3",
+            "text": "PMEs B2G (fornecedores municipio)",
+            "description": "Ecosistema B2G - software houses, etc",
+            "type": "secondary",
+            "vvv": 0.5,
+            "status": "planned"
+          },
+          {
+            "id": "cs_4",
+            "text": "Orgaos publicos estaduais",
+            "description": "Secretarias, autarquias",
+            "type": "secondary",
+            "vvv": 0.4,
+            "status": "planned"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "SAM Clientes",
+            "current": 0,
+            "target": 50,
+            "unit": "prefeituras",
+            "deadline": "2026-12"
+          },
+          {
+            "name": "Consorcios",
+            "current": 0,
+            "target": 3,
+            "unit": "parcerias",
+            "deadline": "2026-09"
+          }
+        ],
+        "vvv_score": 0.65,
+        "notes": [
+          "FOCO: Prefeituras 20-100K hab (1.200 SAM)",
+          "GAP: PMEs B2G NAO mapeadas",
+          "ESTRATEGIA: Micro-municipios via consorcio R$197/mes"
+        ]
+      },
+      {
+        "id": "cst",
+        "position": "bottom_center",
+        "title": "Cost Structure",
+        "icon": "calculator",
+        "color": "#C0392B",
+        "items": [
+          {
+            "id": "cst_1",
+            "text": "Dev plataforma SaaS",
+            "description": "Archbase BR + componentes LGPD",
+            "type": "fixed",
+            "vvv": 0.7,
+            "status": "validated"
+          },
+          {
+            "id": "cst_2",
+            "text": "Salarios DPOs (20% faturamento)",
+            "description": "Pool DPOs fractionados",
+            "type": "variable",
+            "vvv": 0.6,
+            "status": "needs_validation"
+          },
+          {
+            "id": "cst_3",
+            "text": "AWS infra (DC Brasil)",
+            "description": "sa-east-1 mais caro que us-east-1",
+            "type": "variable",
+            "vvv": 0.7,
+            "status": "validated"
+          },
+          {
+            "id": "cst_4",
+            "text": "Marketing vendas B2G",
+            "description": "Ads, eventos, material",
+            "type": "fixed",
+            "vvv": 0.5,
+            "status": "planned"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "Gross Margin",
+            "current": 82,
+            "target": 85,
+            "unit": "%",
+            "deadline": "2026-12"
+          },
+          {
+            "name": "Burn Rate",
+            "current": 0,
+            "target": 150,
+            "unit": "K/mes",
+            "deadline": "2026-08"
+          }
+        ],
+        "vvv_score": 0.63,
+        "notes": [
+          "GAP: DPO 20% faturamento ESTIMADO - validar real",
+          "RISCO: AWS BR premium 30-40% vs us-east-1",
+          "PROXIMO: Modelar custos fase 0-2"
+        ]
+      },
+      {
+        "id": "rs",
+        "position": "bottom_right",
+        "title": "Revenue Streams",
+        "icon": "dollar",
+        "color": "#1ABC9C",
+        "items": [
+          {
+            "id": "rs_1",
+            "text": "Subscription SaaS (mensal)",
+            "description": "R$2.497-14.997 por porte cidade (ajuste 8-15x)",
+            "type": "recurring",
+            "vvv": 0.9,
+            "status": "validated"
+          },
+          {
+            "id": "rs_2",
+            "text": "DPO service (recorrente)",
+            "description": "Incluido no preco - diferencial competitivo",
+            "type": "recurring",
+            "vvv": 0.8,
+            "status": "validated"
+          },
+          {
+            "id": "rs_3",
+            "text": "Consultoria projetos (setup)",
+            "description": "One-time setup R$5-15K",
+            "type": "one_time",
+            "vvv": 0.7,
+            "status": "validated"
+          },
+          {
+            "id": "rs_4",
+            "text": "Templates vend avulsa",
+            "description": "RIPD/ROPA/politicas individual",
+            "type": "transactional",
+            "vvv": 0.4,
+            "status": "planned"
+          }
+        ],
+        "kpis": [
+          {
+            "name": "MRR Mes 30",
+            "current": 0,
+            "target": 25,
+            "unit": "K",
+            "deadline": "2026-06"
+          },
+          {
+            "name": "ARPU",
+            "current": 0,
+            "target": 397,
+            "unit": "R$",
+            "deadline": "2026-12"
+          }
+        ],
+        "vvv_score": 0.7,
+        "notes": [
+          "CRITICO: Pricing 80-95% abaixo mercado - AJUSTAR 8-15x",
+          "GAP: Templates avulso estrategia NAO definida",
+          "PROXIMO: Validar pricing ajustado com 3-5 municipios"
+        ]
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "id": "rel_1",
+      "from": "kp",
+      "to": "ka",
+      "type": "enables",
+      "description": "Partners enable activities",
+      "strength": "strong"
+    },
+    {
+      "id": "rel_2",
+      "from": "kp",
+      "to": "cs",
+      "type": "channel_to",
+      "description": "Partners reach segments",
+      "strength": "strong"
+    },
+    {
+      "id": "rel_3",
+      "from": "ka",
+      "to": "vp",
+      "type": "creates",
+      "description": "Activities create value",
+      "strength": "critical"
+    },
+    {
+      "id": "rel_4",
+      "from": "kr",
+      "to": "ka",
+      "type": "required_for",
+      "description": "Resources required for activities",
+      "strength": "critical"
+    },
+    {
+      "id": "rel_5",
+      "from": "vp",
+      "to": "cs",
+      "type": "delivers_to",
+      "description": "Value delivered to segments",
+      "strength": "critical"
+    },
+    {
+      "id": "rel_6",
+      "from": "cr",
+      "to": "cs",
+      "type": "maintains",
+      "description": "Relationships maintain segments",
+      "strength": "medium"
+    },
+    {
+      "id": "rel_7",
+      "from": "ch",
+      "to": "cs",
+      "type": "reaches",
+      "description": "Channels reach segments",
+      "strength": "strong"
+    },
+    {
+      "id": "rel_8",
+      "from": "cst",
+      "to": "ka",
+      "type": "funds",
+      "description": "Costs fund activities",
+      "strength": "critical"
+    },
+    {
+      "id": "rel_9",
+      "from": "cs",
+      "to": "rs",
+      "type": "generates",
+      "description": "Segments generate revenue",
+      "strength": "critical"
+    },
+    {
+      "id": "rel_10",
+      "from": "vp",
+      "to": "rs",
+      "type": "justifies",
+      "description": "Value justifies pricing",
+      "strength": "strong"
+    },
+    {
+      "id": "rel_11",
+      "from": "kp",
+      "to": "ch",
+      "type": "amplifies",
+      "description": "Partners amplify channels",
+      "strength": "medium"
+    },
+    {
+      "id": "rel_12",
+      "from": "kr",
+      "to": "vp",
+      "type": "supports",
+      "description": "Resources support value props",
+      "strength": "strong"
+    }
+  ],
+  "validation_notes": [
+    {
+      "id": "vn_1",
+      "category": "critical_gaps",
+      "title": "Gaps Criticos Identificados",
+      "items": [
+        "Pricing 80-95% abaixo mercado - ajuste 8-15x necessario",
+        "Pool DPOs estrategia NAO definida (20% faturamento estimado)",
+        "Self-service onboarding NAO mapeado - onboarding manual fase 0-1",
+        "PMEs B2G segmento secundario NAO explorado",
+        "Templates avulso estrategia indefinida"
+      ]
+    },
+    {
+      "id": "vn_2",
+      "category": "next_steps",
+      "title": "Proximos Passos Prioritarios",
+      "items": [
+        "Validar pricing ajustado (8-15x) com 3-5 municipios",
+        "Definir estrategia hiring DPOs (fraction model)",
+        "Protocolar INPI Sprint 1 (semana 06-13/05)",
+        "Reuniao CIGA/CIMAMS (semana 20-24/05)",
+        "Mapear jornada onboarding municipal"
+      ]
+    },
+    {
+      "id": "vn_3",
+      "category": "competitive_threats",
+      "title": "Ameacas Competitivas",
+      "items": [
+        "Confidata pivot municipal CONFIRMADO - execucao ativa",
+        "Confidencia: Starter R$497, Profissional R$1.497, Enterprise R$3.497",
+        "Confidencia: 17 modulos, 100% BR (SP-GRU)",
+        "Risco: Confidata pode lancar plano micro-municipal (<R$300)",
+        "Risco: Confidencia pode desenvolver Data Discovery automatizado"
+      ]
+    },
+    {
+      "id": "vn_4",
+      "category": "validated_strengths",
+      "title": "Forcas Validadas VVV",
+      "items": [
+        "Unico abaixo R$65K/ano com DPO (VVV: 0.9)",
+        "DC Brasil compliance Art.26 (VVV: 0.95)",
+        "Modelo Contabilizei validado (VVV: 0.8)",
+        "Templates municipais unicos (VVV: 0.7)",
+        "Prerrogativas ICT Art.75 IV (VVV: 0.9)"
+      ]
+    }
+  ],
+  "interactive_features": {
+    "expandable_blocks": true,
+    "tooltip_items": true,
+    "filter_by_vvv": true,
+    "filter_by_status": true,
+    "highlight_relationships": true,
+    "export_pdf": true,
+    "share_link": false
+  }
+}

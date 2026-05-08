@@ -1,10 +1,339 @@
 {
   "metadata": {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "lastUpdated": "2026-05-08",
     "project": "LGPD SaaS Municipal - Contabilizei da Privacy",
     "validation": "VVV (Verificacao Verdade Valida) - FDC-U Framework",
     "validated_by": "FDC-U Priority Matrix"
+  },
+  "market_calculator": {
+    "metadata": {
+      "version": "1.0.0",
+      "created": "2026-05-08",
+      "description": "Market Opportunity Calculator with interactive projections"
+    },
+    "tam": {
+      "valor_total": "R$ 60M",
+      "descricao": "Total Addressable Market - 5.570 municipios sem estrutura LGPD",
+      "municipios_total": 5570,
+      "municipios_sem_lgpd": 4011,
+      "porcentagem_sem_lgpd": 72,
+      "arpu_medio_anual": 14964,
+      "fonte": "IBGE MUNIC 2024",
+      "calculo": "4011 municipios x R$14.964/ano (medio pricing ajustado)"
+    },
+    "sam": {
+      "valor_total": "R$ 12M",
+      "descricao": "Serviceable Addressable Market - 1.200 municipios 20-100K hab",
+      "municipios_sam": 1200,
+      "porte_descricao": "Municipios de 20.000 a 100.000 habitantes",
+      "arpu_medio_anual": 10000,
+      "fonte": "Estimativa baseada em densidade populacional IBGE",
+      "calculo": "1.200 municipios x R$10.000/ano"
+    },
+    "som": {
+      "valor_min": "R$ 2M",
+      "valor_max": "R$ 4M",
+      "descricao": "Serviceable Obtainable Market - 3 anos target realista",
+      "periodo_meses": 36,
+      "captura_necessaria_min": 13.4,
+      "captura_necessaria_max": 26.8,
+      "clientes_min": 161,
+      "clientes_max": 322,
+      "calculo_min": "161 clientes x R$12.450/ano (plano Starter ajustado)",
+      "calculo_max": "322 clientes x R$12.450/ano"
+    },
+    "pricing_tiers": {
+      "starter": {
+        "nome": "Starter",
+        "porte": "Micro-municipios (<20K hab)",
+        "preco_mensal": 297,
+        "preco_anual": 2970,
+        "preco_ajustado_mensal": 2497,
+        "preco_ajustado_anual": 24970,
+        "multiplicador": 8.4,
+        "target_municipios": 2000
+      },
+      "standard": {
+        "nome": "Standard",
+        "porte": "Pequenos (20-50K hab)",
+        "preco_mensal": 497,
+        "preco_anual": 4970,
+        "preco_ajustado_mensal": 4997,
+        "preco_ajustado_anual": 49970,
+        "multiplicador": 10.0,
+        "target_municipios": 800
+      },
+      "plus": {
+        "nome": "Plus",
+        "porte": "Medios (50-100K hab)",
+        "preco_mensal": 997,
+        "preco_anual": 9970,
+        "preco_ajustado_mensal": 9997,
+        "preco_ajustado_anual": 99970,
+        "multiplicador": 10.0,
+        "target_municipios": 400
+      },
+      "enterprise": {
+        "nome": "Enterprise",
+        "porte": "Grandes (>100K hab)",
+        "preco_mensal": 1497,
+        "preco_anual": 14970,
+        "preco_ajustado_mensal": 14997,
+        "preco_ajustado_anual": 149970,
+        "multiplicador": 10.0,
+        "target_municipios": 100
+      }
+    },
+    "projections": {
+      "fase_0_validacao": {
+        "periodo": "Meses 1-2",
+        "objetivo": "50 entrevistas + 10 LOIs",
+        "clientes_target": 0,
+        "mrr_target": 0,
+        "captura_sam": 0,
+        "cac_estimado": 0,
+        "investimento_marketing": 5000,
+        "foco": "Validacao problema-solucao"
+      },
+      "fase_1_mvp": {
+        "periodo": "Meses 3-5",
+        "objetivo": "5 prefeituras beta",
+        "clientes_target": 5,
+        "mrr_target": 12485,
+        "captura_sam": 0.42,
+        "cac_estimado": 3000,
+        "investimento_marketing": 15000,
+        "ticket_medio": 2497,
+        "arpu": 2497,
+        "foco": "Product-market fit inicial"
+      },
+      "fase_2_pmf": {
+        "periodo": "Meses 6-9",
+        "objetivo": "50 clientes + ANPD agendada",
+        "clientes_target": 50,
+        "mrr_target": 149850,
+        "captura_sam": 4.17,
+        "cac_estimado": 2500,
+        "investimento_marketing": 50000,
+        "ticket_medio": 2997,
+        "arpu": 2997,
+        "crescimento_mom": 40,
+        "foco": "Product-market fit + Portal titular"
+      },
+      "fase_3_scale": {
+        "periodo": "Meses 10-14",
+        "objetivo": "150 clientes + expansao regional",
+        "clientes_target": 150,
+        "mrr_target": 449550,
+        "captura_sam": 12.5,
+        "cac_estimado": 2000,
+        "investimento_marketing": 120000,
+        "ticket_medio": 2997,
+        "arpu": 2997,
+        "crescimento_mom": 24,
+        "foco": "Scale DPO service"
+      },
+      "fase_4_iso": {
+        "periodo": "Meses 15-20",
+        "objetivo": "500 clientes + consorcios",
+        "clientes_target": 500,
+        "mrr_target": 1498500,
+        "captura_sam": 41.7,
+        "cac_estimado": 1800,
+        "investimento_marketing": 300000,
+        "ticket_medio": 2997,
+        "arpu": 2997,
+        "crescimento_mom": 10,
+        "foco": "ISO 27001 + Enterprise"
+      },
+      "fase_5_lideranca": {
+        "periodo": "Meses 21-30",
+        "objetivo": "1000 clientes + Break-even",
+        "clientes_target": 1000,
+        "mrr_target": 3497000,
+        "captura_sam": 83.3,
+        "cac_estimado": 1500,
+        "investimento_marketing": 500000,
+        "ticket_medio": 3497,
+        "arpu": 3497,
+        "crescimento_mom": 7,
+        "foco": "Lideranca mercado + Series A"
+      }
+    },
+    "break_even": {
+      "analise": {
+        "descricao": "Break-even analysis com pricing ajustado 8-15x",
+        "unit_economics_corrigidos": {
+          "arpu": 397,
+          "arpu_ajustado": 3497,
+          "ltv": 10800,
+          "ltv_ajustado": 104940,
+          "cac": 1800,
+          "cac_estimado_ajustado": 2500,
+          "payback_months": 4.0,
+          "payback_months_ajustado": 0.71,
+          "ltv_cac_ratio": 6.0,
+          "ltv_cac_ratio_ajustado": 41.98,
+          "gross_margin": 0.82,
+          "churn_rate": 0.025
+        },
+        "custos_fixos_mensais": {
+          "infra_aws": 5000,
+          "salarios_dpos": 50000,
+          "dev_plataforma": 80000,
+          "operacoes": 20000,
+          "total": 155000
+        },
+        "custos_variaveis_por_cliente": {
+          "suporte_dpo": 200,
+          "infra_por_cliente": 50,
+          "transacao": 30,
+          "total": 280
+        },
+        "margem_por_cliente": {
+          "arpu_ajustado": 3497,
+          "custo_variavel": 280,
+          "margem_bruta": 3217,
+          "margem_percentual": 92
+        },
+        "ponto_equilibrio": {
+          "clientes_necessarios": 49,
+          "mrr_necessario": 171353,
+          "meses_para_break_even": 14,
+          "cenario": "base (Fase 3 inicio)"
+        }
+      },
+      "cenarios": {
+        "pessimista": {
+          "captura_sam": 5,
+          "clientes_mes_30": 60,
+          "mrr_mes_30": 179820,
+          "break_even_meses": 18,
+          "probabilidade": 0.3
+        },
+        "base": {
+          "captura_sam": 23,
+          "clientes_mes_30": 275,
+          "mrr_mes_30": 961675,
+          "break_even_meses": 12,
+          "probabilidade": 0.5
+        },
+        "otimista": {
+          "captura_sam": 42,
+          "clientes_mes_30": 500,
+          "mrr_mes_30": 1748500,
+          "break_even_meses": 9,
+          "probabilidade": 0.2
+        }
+      }
+    },
+    "capture_rate_calculator": {
+      "descricao": "Calculadora interativa de taxa de captura por fase",
+      "sam_total": 1200,
+      "sliders_config": {
+        "fase_1": {
+          "label": "Fase 1 (MVP)",
+          "min": 0.1,
+          "max": 2,
+          "default": 0.42,
+          "step": 0.1,
+          "clientes_result": 5,
+          "mrr_result": 12485
+        },
+        "fase_2": {
+          "label": "Fase 2 (PMF)",
+          "min": 1,
+          "max": 10,
+          "default": 4.17,
+          "step": 0.5,
+          "clientes_result": 50,
+          "mrr_result": 149850
+        },
+        "fase_3": {
+          "label": "Fase 3 (Scale)",
+          "min": 5,
+          "max": 25,
+          "default": 12.5,
+          "step": 1,
+          "clientes_result": 150,
+          "mrr_result": 449550
+        },
+        "fase_4": {
+          "label": "Fase 4 (ISO)",
+          "min": 20,
+          "max": 60,
+          "default": 41.7,
+          "step": 2,
+          "clientes_result": 500,
+          "mrr_result": 1498500
+        },
+        "fase_5": {
+          "label": "Fase 5 (Lideranca)",
+          "min": 50,
+          "max": 100,
+          "default": 83.3,
+          "step": 5,
+          "clientes_result": 1000,
+          "mrr_result": 3497000
+        }
+      },
+      "formula": "clientes = (captura_sam / 100) * 1200; mrr = clientes * arpu_medio"
+    },
+    "mrr_projections": {
+      "descricao": "Projecao MRR por fase com arredondamento",
+      "arpu_medio_ponderado": 3497,
+      "fases": [
+        {
+          "fase": 0,
+          "nome": "Validacao",
+          "mes": 2,
+          "clientes": 0,
+          "mrr": 0,
+          "acumulado": 0
+        },
+        {
+          "fase": 1,
+          "nome": "MVP",
+          "mes": 5,
+          "clientes": 5,
+          "mrr": 12485,
+          "acumulado": 12485
+        },
+        {
+          "fase": 2,
+          "nome": "PMF",
+          "mes": 9,
+          "clientes": 50,
+          "mrr": 149850,
+          "acumulado": 162335
+        },
+        {
+          "fase": 3,
+          "nome": "Scale",
+          "mes": 14,
+          "clientes": 150,
+          "mrr": 449550,
+          "acumulado": 611885
+        },
+        {
+          "fase": 4,
+          "nome": "ISO",
+          "mes": 20,
+          "clientes": 500,
+          "mrr": 1498500,
+          "acumulado": 2110385
+        },
+        {
+          "fase": 5,
+          "nome": "Lideranca",
+          "mes": 30,
+          "clientes": 1000,
+          "mrr": 3497000,
+          "acumulado": 5607385
+        }
+      ]
+    }
   },
   "fdcu_priorities": {
     "goal": "O que validar ANTES/DEPOIS da reuniao de 06/05 para alinhar estratégia?",
@@ -200,7 +529,8 @@
     {"date": "2026-05-08", "item": "Consorcios Mapeados", "action": "Top 5 identificados: CIGA, CIMAMS, COPIRN, CONIAPE, CIMINAS", "vvv_before": 0.4, "vvv_after": 0.8},
     {"date": "2026-05-08", "item": "Whitepaper Juridico", "action": "Fundamentacao Art.75 IV criada. Riscos identificados", "vvv_before": 0.5, "vvv_after": 0.7},
     {"date": "2026-05-08", "item": "Template LOI", "action": "Template pronto para 3+ assinaturas. GO/NO-GO depende disso", "vvv_before": 0.0, "vvv_after": 0.6},
-    {"date": "2026-05-08", "item": "Tech Stack IP", "action": "Archbase Framework BR + estrategia INPI definida", "vvv_before": 0.2, "vvv_after": 0.7}
+    {"date": "2026-05-08", "item": "Tech Stack IP", "action": "Archbase Framework BR + estrategia INPI definida", "vvv_before": 0.2, "vvv_after": 0.7},
+    {"date": "2026-05-08", "item": "Market Calculator", "action": "Calculadora oportunidade mercado criada com projections + break-even", "vvv_before": 0.0, "vvv_after": 0.9}
   ],
   "gaps_a_preencher": {
     "critical": [
@@ -212,32 +542,93 @@
     ]
   },
   "swot": {
+    "interactive": true,
+    "version": "3.0.0",
+    "lastUpdated": "2026-05-08",
+    "metadata": {
+      "total_items": 34,
+      "strengths_count": 7,
+      "weaknesses_count": 8,
+      "opportunities_count": 9,
+      "threats_count": 10,
+      "dynamic_filters": ["vvv_threshold", "impacto", "categoria", "owner"]
+    },
     "strengths": [
-      "Unico abaixo R$65K/ano com DPO",
-      "DC Brasil compliance",
-      "Modelo Contabilizei validado",
-      "Templates municipais unicos"
+      {"id": "S1", "texto": "Único abaixo R$65K/ano com DPO - preenchimento gap Confidata", "vvv": 0.95, "impacto": "CRÍTICA", "categoria": "pricing", "owner": "Wilton"},
+      {"id": "S2", "texto": "DC Brasil compliance Art.26 - dados 100% em território nacional", "vvv": 0.95, "impacto": "CRÍTICA", "categoria": "compliance", "owner": "Gislene"},
+      {"id": "S3", "texto": "Prerrogativas ICT (Art.75 IV c/d) - dispensa até R$390K+ vs R$65K", "vvv": 0.90, "impacto": "CRÍTICA", "categoria": "legal", "owner": "Gislene+Simone"},
+      {"id": "S4", "texto": "Templates municipais únicos - física+digital integrado (gap 95%)", "vvv": 0.90, "impacto": "ALTA", "categoria": "produto", "owner": "Camilla"},
+      {"id": "S5", "texto": "Archbase Framework BR + IP estratégia INPI - tecnologia defensável", "vvv": 0.85, "impacto": "ALTA", "categoria": "tecnologia", "owner": "Gislene"},
+      {"id": "S6", "texto": "Modelo Contabilizei validado - SaaS B2G recorrente", "vvv": 0.80, "impacto": "ALTA", "categoria": "business_model", "owner": "Wilton"},
+      {"id": "S7", "texto": "IA anonimização + marca d'água - rastreabilidade única", "vvv": 0.75, "impacto": "MEDIA", "categoria": "tecnologia", "owner": "Camilla"}
     ],
     "weaknesses": [
-      "Sem brand ainda",
-      "Sem ISO certificado",
-      "Depende AWS sa-east-1",
-      "Pool DPOs needed"
+      {"id": "W1", "texto": "Sem brand estabelecido - startup desconhecida no mercado LGPD", "vvv": 0.70, "impacto": "ALTA", "categoria": "marketing", "owner": "Wilton"},
+      {"id": "W2", "texto": "Sem ISO 27001/27701 - concorrentes já certificam", "vvv": 0.65, "impacto": "MEDIA", "categoria": "compliance", "owner": "Camilla"},
+      {"id": "W3", "texto": "Pool DPOs necessário - modelo escalável requer 10+ DPOs", "vvv": 0.70, "impacto": "MEDIA", "categoria": "operacional", "owner": "Simone"},
+      {"id": "W4", "texto": "Depende AWS sa-east-1 - vendor lock-in + latência", "vvv": 0.50, "impacto": "BAIXA", "categoria": "infraestrutura", "owner": "Camilla"},
+      {"id": "W5", "texto": "LOIs NÃO assinadas - GO/NO-GO bloqueado (VVV 0.0)", "vvv": 0.90, "impacto": "CRÍTICA", "categoria": "comercial", "owner": "Wilton"},
+      {"id": "W6", "texto": "Sem co-founder/advisor municipal - sales cycle >12 meses", "vvv": 0.85, "impacto": "CRÍTICA", "categoria": "time", "owner": "Wilton"},
+      {"id": "W7", "texto": "Custo desenvolvimento NÃO validado - viabilidade econômica incerta", "vvv": 0.80, "impacto": "ALTA", "categoria": "financeiro", "owner": "Camilla"},
+      {"id": "W8", "texto": "Processo 100% manual (corpo-a-corpo) - não escala sem automação", "vvv": 0.75, "impacto": "ALTA", "categoria": "operacional", "owner": "Camilla"}
     ],
     "opportunities": [
-      "4.011 prefeituras sem LGPD (72%)",
-      "ANPD ativa + multas R$50M",
-      "Lei 14.133 dispensa",
-      "TCEs fiscalizando"
+      {"id": "O1", "texto": "4.011 prefeituras sem LGPD (72% de 5.570) - TAM gigantesco", "vvv": 0.95, "impacto": "CRÍTICA", "categoria": "mercado", "owner": "Wilton"},
+      {"id": "O2", "texto": "ANPD fiscalização ativa + multas R$50M+ - urgência criada", "vvv": 0.90, "impacto": "CRÍTICA", "categoria": "regulatorio", "owner": "Simone"},
+      {"id": "O3", "texto": "Lei 14.133 dispensa até R$390K+ - edge competitivo único", "vvv": 0.85, "impacto": "CRÍTICA", "categoria": "legal", "owner": "Gislene+Simone"},
+      {"id": "O4", "texto": "TCEs fiscalizando LGPD - pressão adicional", "vvv": 0.80, "impacto": "ALTA", "categoria": "regulatorio", "owner": "Simone"},
+      {"id": "O5", "texto": "ECA Digital (Lei 15.211/2025) - verificação idade URGÊNCIA", "vvv": 0.90, "impacto": "CRÍTICA", "categoria": "produto", "owner": "Camilla"},
+      {"id": "O6", "texto": "Consórcios municipais (CIMINAS R$31.9M) - scale via ARP", "vvv": 0.85, "impacto": "ALTA", "categoria": "comercial", "owner": "Wilton"},
+      {"id": "O7", "texto": "FNDE como fonte de funding - recursos não explorados", "vvv": 0.60, "impacto": "MEDIA", "categoria": "financeiro", "owner": "Gislene"},
+      {"id": "O8", "texto": "Associacoes municipais (CNM, FNP) - acesso escala nacional", "vvv": 0.80, "impacto": "ALTA", "categoria": "comercial", "owner": "Wilton"},
+      {"id": "O9", "texto": "DPO Hub Intermediário - centralização DPOs consórcio", "vvv": 0.80, "impacto": "MEDIA", "categoria": "produto", "owner": "Simone"}
     ],
     "threats": [
-      "Confidata pivot municipal CONFIRMADO - execucao ativa",
-      "Confidata pode lancar plano micro-municipal (<R$300)",
-      "Confidata pode desenvolver Data Discovery automatizado",
-      "OneTrust entrada BR",
-      "Mudanca regulatoria",
-      "Recesso municipal"
-    ]
+      {"id": "T1", "texto": "Confidata pivot municipal CONFIRMADO - 17 módulos ativos", "vvv": 0.90, "impacto": "CRÍTICA", "categoria": "competicao", "owner": "Wilton"},
+      {"id": "T2", "texto": "Prefeituras falidas (40%+ inadimplência) - fluxo caixa risco", "vvv": 0.85, "impacto": "CRÍTICA", "categoria": "financeiro", "owner": "Gislene"},
+      {"id": "T3", "texto": "Sales cycle municipal 12-18 meses - burn runway", "vvv": 0.90, "impacto": "CRÍTICA", "categoria": "comercial", "owner": "Wilton"},
+      {"id": "T4", "texto": "Turnover político - mudança governo quebra contratos", "vvv": 0.75, "impacto": "MEDIA", "categoria": "politico", "owner": "Gislene"},
+      {"id": "T5", "texto": "Confidata pode lançar plano micro-municipal (<R$300)", "vvv": 0.75, "impacto": "ALTA", "categoria": "competicao", "owner": "Wilton"},
+      {"id": "T6", "texto": "Mudança regulatoria ANPD - agenda 2025-26 incerta", "vvv": 0.60, "impacto": "MEDIA", "categoria": "regulatorio", "owner": "Gislene"},
+      {"id": "T7", "texto": "OneTrust entrada BR - player global deep pockets", "vvv": 0.55, "impacto": "MEDIA", "categoria": "competicao", "owner": "Wilton"},
+      {"id": "T8", "texto": "Recesso municipal - cortes orçamentários primeiro ano", "vvv": 0.65, "impacto": "MEDIA", "categoria": "macroeconomico", "owner": "Gislene"},
+      {"id": "T9", "texto": "Subcontratação digitalização pode falhar - delivery risk", "vvv": 0.60, "impacto": "MEDIA", "categoria": "operacional", "owner": "Wilton"},
+      {"id": "T10", "texto": "Tecnologia NÃO testada (IA-Audit + Data Discovery)", "vvv": 0.70, "impacto": "ALTA", "categoria": "tecnologia", "owner": "Camilla"}
+    ],
+    "top_actions_by_quadrant": {
+      "strengths": [
+        {"rank": 1, "item_id": "S3", "action": "Whitepaper Art.75 IV pronto + template minuta", "responsavel": "Gislene+Simone", "prazo": "10/06/2026"},
+        {"rank": 2, "item_id": "S2", "action": "Comunicação DC Brasil em 100% propostas", "responsavel": "Gislene", "prazo": "Imediato"},
+        {"rank": 3, "item_id": "S4", "action": "Demo LGPD Drive em toda apresentação", "responsavel": "Camilla", "prazo": "15/05/2026"}
+      ],
+      "weaknesses": [
+        {"rank": 1, "item_id": "W5", "action": "3+ LOIs assinadas (GO/NO-GO depende disso)", "responsavel": "Wilton", "prazo": "15/06/2026"},
+        {"rank": 2, "item_id": "W6", "action": "Contratar advisor municipal (15-25% equity)", "responsavel": "Wilton", "prazo": "30/06/2026"},
+        {"rank": 3, "item_id": "W8", "action": "MVP auto-diagnóstico IA (30-45 dias)", "responsavel": "Camilla", "prazo": "24/06/2026"}
+      ],
+      "opportunities": [
+        {"rank": 1, "item_id": "O1", "action": "Foco SAM: 1.200 municípios 20-100K hab", "responsavel": "Wilton", "prazo": "Continuo"},
+        {"rank": 2, "item_id": "O6", "action": "Parceria Top 5 consórcios", "responsavel": "Wilton", "prazo": "30/06/2026"},
+        {"rank": 3, "item_id": "O5", "action": "Age Verification ECA Digital MVP", "responsavel": "Camilla", "prazo": "15/12/2026"}
+      ],
+      "threats": [
+        {"rank": 1, "item_id": "T1", "action": "Executar estratégia diferenciação Confidata", "responsavel": "Wilton", "prazo": "Imediato"},
+        {"rank": 2, "item_id": "T3", "action": "Advisor municipal (6-9 meses sales cycle)", "responsavel": "Wilton", "prazo": "30/06/2026"},
+        {"rank": 3, "item_id": "T2", "action": "Modelo contrato anual + consórcio garantia", "responsavel": "Gislene", "prazo": "15/05/2026"}
+      ]
+    },
+    "prioritization_matrix": {
+      "methodology": "Impacto × Urgência × VVV Score",
+      "do_first": ["W5", "W6", "T1", "T3", "O3", "S3"],
+      "schedule": ["W7", "W8", "O5", "S5", "S7", "T4"],
+      "delegate": ["W4", "O7", "T6", "T7"],
+      "eliminate": ["T8", "T9"]
+    },
+    "strategic_insights": {
+      "core_differentiators": ["DC Brasil (soberania)", "Prerrogativas ICT (R$390K+)", "LGPD Drive (físico+digital)", "Pricing agressivo + DPO"],
+      "critical_gaps": ["LOIs NÃO assinadas", "Advisor municipal ausente", "Custo dev NÃO validado", "Tecnologia NÃO testada"],
+      "immediate_actions": ["LOIs Sprint 1-2", "Whitepaper Art.75 IV", "MVP auto-diagnóstico", "Advisor contratado"]
+    }
   },
   "business_model_canvas": {
     "key_partners": ["Associacoes municipais", "DPOs fractionados", "AWS sa-east-1", "Certificadoras ISO"],
@@ -251,13 +642,348 @@
     "revenue_streams": ["Subscription SaaS", "DPO service", "Consultoria", "Templates"]
   },
   "scenario_analysis": {
-    "bear": {"mrr": "R$ 120K", "customers": 150, "month": 30},
-    "base": {"mrr": "R$ 280K", "customers": 275, "month": 30},
-    "bull": {"mrr": "R$ 550K", "customers": 500, "month": 30}
+    "interactive_ref": "scenario-interactive.json",
+    "bear": {"mrr": "R$ 120K", "customers": 150, "month": 30, "runway": 0, "ltv_cac": 2.3, "status": "fundraising_critical"},
+    "worst": {"mrr": "R$ 0", "customers": 0, "month": 18, "runway": 0, "ltv_cac": 1.4, "status": "shutdown"},
+    "base": {"mrr": "R$ 280K", "customers": 275, "month": 30, "runway": 4, "ltv_cac": 6.0, "status": "healthy"},
+    "bull": {"mrr": "R$ 550K", "customers": 500, "month": 30, "runway": 10, "ltv_cac": 8.3, "status": "scaling"},
+    "best": {"mrr": "R$ 1M", "customers": 1000, "month": 30, "runway": 18, "ltv_cac": 15.3, "status": "exceptional"},
+    "metadata": {
+      "scenarios_expanded": ["worst", "bear", "base", "bull", "best"],
+      "interactive_dashboard": true,
+      "sensitivity_analysis": true,
+      "go_no_go_thresholds": {"loi_count": 3, "advisor_status": 1, "funding_brl": 500}
+    }
   },
   "market_analysis": {
     "tam": {"valor": "R$ 60M", "descricao": "Total municipios sem LGPD"},
     "sam": {"valor": "R$ 12M", "descricao": "B2B SaaS municipal 20-100K hab"},
     "som": {"valor": "R$ 2-4M", "descricao": "3 anos target inicial"}
+  },
+  "roadmap_timeline": {
+    "metadata": {
+      "version": "2.0.0",
+      "lastUpdated": "2026-05-08",
+      "zoom_levels": ["month", "quarter", "year"],
+      "critical_path_color": "#ef4444",
+      "phase_color": "#3b82f6",
+      "milestone_color": "#10b981"
+    },
+    "phases": [
+      {
+        "id": "fase_0",
+        "nome": "Validacao",
+        "duracao": "Meses 1-2",
+        "periodo": {"inicio": "2026-05", "fim": "2026-06"},
+        "objetivo": "50 entrevistas + 10 LOIs + MVP core",
+        "kpi": ["10 LOIs", "MVP data discovery", "Base juridica validada"],
+        "responsible": ["Todos", "Wilton", "Gislene", "Simone", "Camilla"],
+        "status": "in_progress",
+        "priority": "CRITICA",
+        "dependencias": [],
+        "deliverables": [
+          {"item": "50 entrevistas municipais", "deadline": "2026-05-30"},
+          {"item": "10 LOIs assinadas", "deadline": "2026-06-15"},
+          {"item": "MVP Data Discovery funcional", "deadline": "2026-06-02"},
+          {"item": "INPI protocolo", "deadline": "2026-05-13"},
+          {"item": "Parecer juridico Art.75 IV", "deadline": "2026-06-10"}
+        ]
+      },
+      {
+        "id": "fase_1",
+        "nome": "MVP + Primeiros Clientes",
+        "duracao": "Meses 3-5",
+        "periodo": {"inicio": "2026-07", "fim": "2026-09"},
+        "objetivo": "5 prefeituras beta + validacao produto",
+        "kpi": ["5 clientes beta", "R$ 25K MRR", "NPS >40"],
+        "responsible": ["Wilton", "Camilla"],
+        "status": "pending",
+        "priority": "ALTA",
+        "dependencias": ["fase_0"],
+        "deliverables": [
+          {"item": "5 prefeituras beta ativas", "deadline": "2026-09-30"},
+          {"item": "AI-DPO Copilot funcional", "deadline": "2026-08-15"},
+          {"item": "Anonimizacao LAI/LGPD", "deadline": "2026-08-30"},
+          {"item": "Setup onboarding <30 dias", "deadline": "2026-09-15"}
+        ]
+      },
+      {
+        "id": "fase_2",
+        "nome": "Product Market Fit",
+        "duracao": "Meses 6-9",
+        "periodo": {"inicio": "2026-10", "fim": "2027-01"},
+        "objetivo": "Portal titular + 50 clientes + ANPD agendada",
+        "kpi": ["50 clientes", "R$ 150K MRR", "Certificacao INPI", "Churn <5%"],
+        "responsible": ["Camilla", "Wilton", "Gislene"],
+        "status": "pending",
+        "priority": "ALTA",
+        "dependencias": ["fase_1"],
+        "deliverables": [
+          {"item": "Portal do titular funcional", "deadline": "2026-11-30"},
+          {"item": "50 clientes ativos", "deadline": "2027-01-31"},
+          {"item": "Certificado INPI concedido", "deadline": "2026-12-31"},
+          {"item": "Auditoria ANPD agendada", "deadline": "2027-01-15"},
+          {"item": "Age Verification ECA MVP", "deadline": "2026-12-15"}
+        ]
+      },
+      {
+        "id": "fase_3",
+        "nome": "Scale DPO Service",
+        "duracao": "Meses 10-14",
+        "periodo": {"inicio": "2027-02", "fim": "2027-06"},
+        "objetivo": "DPO service + 150 clientes + expansao regional",
+        "kpi": ["150 clientes", "R$ 300K MRR", "3 regioes cobertas", "Pool 10 DPOs"],
+        "responsible": ["Simone", "Wilton", "Camilla"],
+        "status": "pending",
+        "priority": "MEDIA",
+        "dependencias": ["fase_2"],
+        "deliverables": [
+          {"item": "DPO-as-a-Service lancado", "deadline": "2027-03-31"},
+          {"item": "150 clientes ativos", "deadline": "2027-06-30"},
+          {"item": "Expansao regional (3 estados)", "deadline": "2027-05-31"},
+          {"item": "Pool 10 DPOs certificados", "deadline": "2027-04-30"}
+        ]
+      },
+      {
+        "id": "fase_4",
+        "nome": "ISO + Enterprise",
+        "duracao": "Meses 15-20",
+        "periodo": {"inicio": "2027-07", "fim": "2027-12"},
+        "objetivo": "ISO 27001 + 500 clientes + consorcios exclusivos",
+        "kpi": ["500 clientes", "R$ 1M MRR", "ISO 27001", "3 consorcios exclusivos"],
+        "responsible": ["Todos", "Gislene"],
+        "status": "pending",
+        "priority": "MEDIA",
+        "dependencias": ["fase_3"],
+        "deliverables": [
+          {"item": "ISO 27001 certificado", "deadline": "2027-10-31"},
+          {"item": "500 clientes ativos", "deadline": "2027-12-31"},
+          {"item": "3 consorcios exclusivos", "deadline": "2027-11-30"},
+          {"item": "Enterprise plan lancado", "deadline": "2027-09-30"}
+        ]
+      },
+      {
+        "id": "fase_5",
+        "nome": "Lideranca Mercado",
+        "duracao": "Meses 21-30",
+        "periodo": {"inicio": "2028-01", "fim": "2028-10"},
+        "objetivo": "ISO 27701 + nacionalizacao + saida/investimento",
+        "kpi": ["1000 clientes", "Break-even operacional", "Series A ou exit", "ISO 27701"],
+        "responsible": ["Todos"],
+        "status": "pending",
+        "priority": "BAIXA",
+        "dependencias": ["fase_4"],
+        "deliverables": [
+          {"item": "ISO 27701 certificado", "deadline": "2028-06-30"},
+          {"item": "1000 clientes ativos", "deadline": "2028-10-31"},
+          {"item": "Break-even alcançado", "deadline": "2028-08-31"},
+          {"item": "Series A levantada ou exit", "deadline": "2028-10-31"}
+        ]
+      }
+    ],
+    "milestones": [
+      {
+        "id": "M1",
+        "nome": "LOIs Assinadas",
+        "data": "2026-06-15",
+        "descricao": "3+ LOIs assinadas - GO/NO-GO decision point",
+        "impacto": "CRITICO",
+        "status": "pending",
+        "fase": "fase_0",
+        "responsible": "Wilton"
+      },
+      {
+        "id": "M2",
+        "nome": "INPI Protocolo",
+        "data": "2026-05-13",
+        "descricao": "Protocolo registro INPI software",
+        "impacto": "ALTO",
+        "status": "pending",
+        "fase": "fase_0",
+        "responsible": "Gislene"
+      },
+      {
+        "id": "M3",
+        "nome": "Parecer Juridico",
+        "data": "2026-06-10",
+        "descricao": "Whitepaper Art.75 IV fundamentacao",
+        "impacto": "ALTO",
+        "status": "pending",
+        "fase": "fase_0",
+        "responsible": "Gislene+Simone"
+      },
+      {
+        "id": "M4",
+        "nome": "First Customer",
+        "data": "2026-07-31",
+        "descricao": "Primeira prefeitura beta ativa",
+        "impacto": "CRITICO",
+        "status": "pending",
+        "fase": "fase_1",
+        "responsible": "Wilton"
+      },
+      {
+        "id": "M5",
+        "nome": "PoC Piloto",
+        "data": "2026-06-24",
+        "descricao": "PoC piloto funcionando",
+        "impacto": "ALTO",
+        "status": "pending",
+        "fase": "fase_0",
+        "responsible": "Camilla"
+      },
+      {
+        "id": "M6",
+        "nome": "INPI Certificado",
+        "data": "2026-12-31",
+        "descricao": "Certificado INPI concedido",
+        "impacto": "ALTO",
+        "status": "pending",
+        "fase": "fase_2",
+        "responsible": "Gislene"
+      },
+      {
+        "id": "M7",
+        "nome": "ANPD Audit",
+        "data": "2027-01-15",
+        "descricao": "Auditoria ANPD agendada",
+        "impacto": "ALTO",
+        "status": "pending",
+        "fase": "fase_2",
+        "responsible": "Simone"
+      },
+      {
+        "id": "M8",
+        "nome": "Break-even",
+        "data": "2028-08-31",
+        "descricao": "Break-even operacional atingido",
+        "impacto": "CRITICO",
+        "status": "pending",
+        "fase": "fase_5",
+        "responsible": "Todos"
+      },
+      {
+        "id": "M9",
+        "nome": "Series A / Exit",
+        "data": "2028-10-31",
+        "descricao": "Levantamento Series A ou exit",
+        "impacto": "CRITICO",
+        "status": "pending",
+        "fase": "fase_5",
+        "responsible": "Wilton"
+      }
+    ],
+    "critical_path": [
+      {
+        "sequencia": ["M1", "M4", "M6", "M8", "M9"],
+        "descricao": "Caminho critico: LOIs -> First Customer -> INPI -> Break-even -> Exit",
+        "justificativa": "Sem LOIs nao ha validacao. Sem first customer nao ha PMF. INPI protege IP. Break-even valida modelo. Exit cria retorno."
+      },
+      {
+        "sequencia": ["fase_0", "fase_1", "fase_2"],
+        "descricao": "Validacao -> PMF -> Scale (primeiros 14 meses)",
+        "justificativa": "Fases iniciais sao sequenciais e dependentes. Fases posteriores podem ser paralelas."
+      },
+      {
+        "blocked_by": ["M1", "M2", "M3"],
+        "blocks": ["fase_1"],
+        "descricao": "Milestones fase_0 bloqueiam inicio fase_1",
+        "justificativa": "GO/NO-GO depende de LOIs, IP protection (INPI) e base legal (Parecer)"
+      }
+    ],
+    "zoom_levels": {
+      "month": {
+        "descricao": "Visao detalhada mensal com deliverables semanais",
+        "granularidade": "semanal",
+        "focus": "Sprints atuais + marcos proximos"
+      },
+      "quarter": {
+        "descricao": "Visao trimestral com fases e KPIs",
+        "granularidade": "mensal",
+        "focus": "Fases completas + milestones trimestre"
+      },
+      "year": {
+        "descricao": "Visao anual com objetivos estrategicos",
+        "granularidade": "trimestral",
+        "focus": "Objetivos anuais + saida/investimento"
+      }
+    },
+    "gantt_data": {
+      "tasks": [
+        {"id": "T1", "name": "Validacao", "start": "2026-05", "end": "2026-06", "phase": "fase_0", "critical": true},
+        {"id": "T2", "name": "MVP Beta", "start": "2026-07", "end": "2026-09", "phase": "fase_1", "critical": true},
+        {"id": "T3", "name": "PMF", "start": "2026-10", "end": "2027-01", "phase": "fase_2", "critical": true},
+        {"id": "T4", "name": "Scale DPO", "start": "2027-02", "end": "2027-06", "phase": "fase_3", "critical": false},
+        {"id": "T5", "name": "ISO", "start": "2027-07", "end": "2027-12", "phase": "fase_4", "critical": false},
+        {"id": "T6", "name": "Lideranca", "start": "2028-01", "end": "2028-10", "phase": "fase_5", "critical": false}
+      ],
+      "dependencies": [
+        {"from": "T1", "to": "T2", "type": "finish_to_start"},
+        {"from": "T2", "to": "T3", "type": "finish_to_start"},
+        {"from": "T3", "to": "T4", "type": "finish_to_start"},
+        {"from": "T4", "to": "T5", "type": "finish_to_start"},
+        {"from": "T5", "to": "T6", "type": "finish_to_start"}
+      ]
+    }
+  },
+  "bmc_interactive": {
+    "file": "bmc-interactive.json",
+    "blocks_count": 9,
+    "relationships_count": 12,
+    "validation_notes_count": 4,
+    "last_updated": "2026-05-08",
+    "status": "completed",
+    "blocks_summary": [
+      {"id": "kp", "name": "Key Partners", "vvv": 0.75, "items": 5},
+      {"id": "ka", "name": "Key Activities", "vvv": 0.68, "items": 4},
+      {"id": "kr", "name": "Key Resources", "vvv": 0.65, "items": 5},
+      {"id": "vp", "name": "Value Propositions", "vvv": 0.86, "items": 5},
+      {"id": "cr", "name": "Customer Relationships", "vvv": 0.65, "items": 4},
+      {"id": "ch", "name": "Channels", "vvv": 0.62, "items": 4},
+      {"id": "cs", "name": "Customer Segments", "vvv": 0.65, "items": 4},
+      {"id": "cst", "name": "Cost Structure", "vvv": 0.63, "items": 4},
+      {"id": "rs", "name": "Revenue Streams", "vvv": 0.7, "items": 4}
+    ],
+    "relationships_summary": [
+      {"from": "kp", "to": "ka", "type": "enables"},
+      {"from": "kp", "to": "cs", "type": "channel_to"},
+      {"from": "ka", "to": "vp", "type": "creates"},
+      {"from": "kr", "to": "ka", "type": "required_for"},
+      {"from": "vp", "to": "cs", "type": "delivers_to"},
+      {"from": "cr", "to": "cs", "type": "maintains"},
+      {"from": "ch", "to": "cs", "type": "reaches"},
+      {"from": "cst", "to": "ka", "type": "funds"},
+      {"from": "cs", "to": "rs", "type": "generates"},
+      {"from": "vp", "to": "rs", "type": "justifies"},
+      {"from": "kp", "to": "ch", "type": "amplifies"},
+      {"from": "kr", "to": "vp", "type": "supports"}
+    ],
+    "validation_notes_summary": [
+      {"category": "critical_gaps", "items": 5},
+      {"category": "next_steps", "items": 5},
+      {"category": "competitive_threats", "items": 5},
+      {"category": "validated_strengths", "items": 5}
+    ],
+    "overall_vvv_score": 0.7
+  },
+  "stakeholder_map": {
+    "ref": "stakeholder-map.json",
+    "lastUpdated": "2026-05-08",
+    "summary": {
+      "internal_stakeholders": 4,
+      "external_stakeholders": 5,
+      "overall_alignment": 0.58,
+      "internal_alignment": 0.88,
+      "external_alignment": 0.38,
+      "critical_gaps": 2,
+      "next_critical_date": "22/05/2026"
+    },
+    "dashboard_metrics": {
+      "loi_progress": "0/3 assinadas",
+      "advisor_status": "NÃO IDENTIFICADO",
+      "consorcios_status": "5 MAPEADOS, 0 HOMOLOGADOS",
+      "tce_status": "SEM ARTICULACAO",
+      "anpd_status": "ALINHAMENTO NATURAL"
+    }
   }
 }
