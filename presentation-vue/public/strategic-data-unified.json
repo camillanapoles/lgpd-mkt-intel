@@ -1258,7 +1258,15 @@
               "adversarial": "Risco: equipe pode desalinhar com pressão de entrega. Sem advisor externo para equilibrar. VVV 0.85 correto."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Alinhamento alto = melhor, direto"
+            "funcao_rationale": "Alinhamento alto = melhor, direto",
+            "criterios_dinamicos": [
+              "alinhamento equipe",
+              "RACI definido",
+              "roles claros"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "raci_coverage",
@@ -1278,7 +1286,15 @@
               "adversarial": "RACI definido para 4 atividades. Mas processo 100% manual (transcrição L1631). RACI não resolve escalabilidade."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Mais cobertura RACI = melhor"
+            "funcao_rationale": "Mais cobertura RACI = melhor",
+            "criterios_dinamicos": [
+              "cobertura RACI",
+              "responsaveis mapeados",
+              "accountability"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "prefeitura_alignment_low",
@@ -1298,7 +1314,15 @@
               "adversarial": "VVV 0.8 confiável — múltiplas fontes confirmam. Mas pode mudar com fiscalização ANPD intensificando."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Menos alinhamento = pior. Scoring inverte"
+            "funcao_rationale": "Menos alinhamento = pior. Scoring inverte",
+            "criterios_dinamicos": [
+              "alinhamento prefeituras",
+              "comite LGPD",
+              "engajamento municipio"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "consorcio_early_validation",
@@ -1318,7 +1342,15 @@
               "adversarial": "Consórcios são canal promissor mas speculativo. Nenhum contactado. VVV 0.7 reflete incerteza."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Validação consórcio = positivo direto"
+            "funcao_rationale": "Validação consórcio = positivo direto",
+            "criterios_dinamicos": [
+              "validacao consorcios",
+              "interesse TCEs",
+              "contratos piloto"
+            ],
+            "certeza_agregada": 0.7,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "advisor_missing",
@@ -1338,7 +1370,15 @@
               "adversarial": "VVV 0.3 — gap real. Não é rumor, é fato: advisor não existe. Slider simula cenário onde é encontrado."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Ausência advisor = negativo. Menos gap = melhor"
+            "funcao_rationale": "Ausência advisor = negativo. Menos gap = melhor",
+            "criterios_dinamicos": [
+              "advisor confirmado",
+              "experiencia B2G",
+              "network prefeituras"
+            ],
+            "certeza_agregada": 0.3,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "tce_not_mapped",
@@ -1358,7 +1398,15 @@
               "adversarial": "TCEs mapeados genericamente. Mapeamento individual (qual TCE, qual estado, qual foco) é gap. VVV 0.6 honesto."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "TCEs não mapeados = negativo"
+            "funcao_rationale": "TCEs não mapeados = negativo",
+            "criterios_dinamicos": [
+              "TCEs mapeados",
+              "editais ativos",
+              "contato estabelecido"
+            ],
+            "certeza_agregada": 0.6,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1386,7 +1434,15 @@
               "adversarial": "ANPD é real mas capacidade fiscalizadora limitada. Meta ANPD: 200 fiscalizações/ano vs 5570 municípios. VVV 0.9 reflete existência mas capacidade limitada."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Enforcement ANPD = positivo"
+            "funcao_rationale": "Enforcement ANPD = positivo",
+            "criterios_dinamicos": [
+              "acoes ANPD",
+              "multas aplicadas",
+              "enforcing ativo"
+            ],
+            "certeza_agregada": 0.92,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "eca_digital_urgent",
@@ -1406,7 +1462,15 @@
               "adversarial": "Lei é real. Mas regulamentação específica pode demorar. VVV 1.0 para existência da lei, mas impacto real depende de regulamentação."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Urgência ECA = positivo direto"
+            "funcao_rationale": "Urgência ECA = positivo direto",
+            "criterios_dinamicos": [
+              "ECA Digital prazo",
+              "urgencia municipal",
+              "compliance obrigatorio"
+            ],
+            "certeza_agregada": 0.98,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "lei_14133_dispensa",
@@ -1426,7 +1490,15 @@
               "adversarial": "Requisito: registro INPI PRÉVIO. Se não registrar, edge desaparece. VVV 1.0 para lei, mas edge depende de ação (registro)."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Lei de dispensa = positivo direto"
+            "funcao_rationale": "Lei de dispensa = positivo direto",
+            "criterios_dinamicos": [
+              "Lei 14.133 Art.75",
+              "dispensa licitacao",
+              "limite R$390K"
+            ],
+            "certeza_agregada": 0.98,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "window_2026_2027",
@@ -1446,7 +1518,15 @@
               "adversarial": "Janela é analysis, não fato. Pode se fechar se concorrentes entrarem. VVV 0.8 honesto — fundamentado mas não garantido."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Janela de oportunidade = positivo"
+            "funcao_rationale": "Janela de oportunidade = positivo",
+            "criterios_dinamicos": [
+              "janela temporal",
+              "timing mercado",
+              "competicao baixa"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "election_2028_risk",
@@ -1466,7 +1546,15 @@
               "adversarial": "Risco: ciclo de 12+ meses significa qualquer deal iniciado em 2027 Q3+ pode travar. VVV reduzido para 0.78 (estimativa, não dado confirmado)."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Risco eleitoral = negativo"
+            "funcao_rationale": "Risco eleitoral = negativo",
+            "criterios_dinamicos": [
+              "ciclo eleitoral",
+              "impacto vendas B2G",
+              "congelamento processos"
+            ],
+            "certeza_agregada": 0.78,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "anpd_agenda_2025_26",
@@ -1486,7 +1574,15 @@
               "adversarial": "Risco: ANPD pode não enforcing ativamente contra municípios. Urgência percebida ≠ urgência real."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Agenda regulatória ativa = positivo"
+            "funcao_rationale": "Agenda regulatória ativa = positivo",
+            "criterios_dinamicos": [
+              "resolucoes ANPD",
+              "regulacao AI",
+              "governanca digital"
+            ],
+            "certeza_agregada": 0.89,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "cloud_market_growth",
@@ -1506,7 +1602,15 @@
               "adversarial": "Risco: mercado cresce mas competição também. OneTrust+concorrentes entram no mesmo mercado."
             },
             "funcao_fdc": "log",
-            "funcao_rationale": "Crescimento mercado = logarítmico (retornos decrescentes)"
+            "funcao_rationale": "Crescimento mercado = logarítmico (retornos decrescentes)",
+            "criterios_dinamicos": [
+              "crescimento cloud BR",
+              "SaaS CAGR",
+              "tendencia estrutural"
+            ],
+            "certeza_agregada": 0.94,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1534,7 +1638,15 @@
               "adversarial": "Edge depende de: (1) ICT ativa, (2) INPI registrado, (3) parecer jurídico. Se qualquer um falha, edge desaparece. VVV 0.9 reflete dependência."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "ICT qualification = positivo direto"
+            "funcao_rationale": "ICT qualification = positivo direto",
+            "criterios_dinamicos": [
+              "ICT registro INPI",
+              "Art.75 IV",
+              "dispensa P&D"
+            ],
+            "certeza_agregada": 0.95,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "dc_brasil_100pct",
@@ -1554,7 +1666,15 @@
               "adversarial": "Risco: AWS sa-east-1 conta como 'Brasil' mas CDN/edge podem não. Verificar jurisprudência ANPD."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "DC Brasil = barreira positiva"
+            "funcao_rationale": "DC Brasil = barreira positiva",
+            "criterios_dinamicos": [
+              "DC Brasil Art.26",
+              "dados territorio BR",
+              "barreira entrada"
+            ],
+            "certeza_agregada": 0.95,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "pricing_below_dispensa",
@@ -1574,7 +1694,15 @@
               "adversarial": "Risco: preço baixo demais pode desvalorizar percebida. Ajustar positioning como 'acessível' não 'barato'."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Preço abaixo dispensa = positivo"
+            "funcao_rationale": "Preço abaixo dispensa = positivo",
+            "criterios_dinamicos": [
+              "preco abaixo dispensa",
+              "modelo SaaS",
+              "sem licitacao"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "confidata_threat",
@@ -1594,7 +1722,15 @@
               "adversarial": "Pivot é speculation baseada em blog posts. Confidata pode não executar. VVV 0.7 reflete incerteza sobre execução."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Ameaça Confidata = negativo"
+            "funcao_rationale": "Ameaça Confidata = negativo",
+            "criterios_dinamicos": [
+              "movimento Confidata",
+              "pivot municipal",
+              "capacidade tecnica"
+            ],
+            "certeza_agregada": 0.7,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "onetrust_potential",
@@ -1614,7 +1750,15 @@
               "adversarial": "Risco real: OneTrust com $1B+ revenue pode adquirir local ou investir pesado em B2G. VVV=0.50 (estimativa)."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Entrada OneTrust = negativo"
+            "funcao_rationale": "Entrada OneTrust = negativo",
+            "criterios_dinamicos": [
+              "entrada OneTrust BR",
+              "investimento estrangeiro",
+              "capacidade B2G"
+            ],
+            "certeza_agregada": 0.5,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "buyer_power_high",
@@ -1634,7 +1778,15 @@
               "innovator": "Estratégia: lock-in via DPO + compliance contínuo (não venda única). Switching cost alto."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Poder comprador alto = negativo"
+            "funcao_rationale": "Poder comprador alto = negativo",
+            "criterios_dinamicos": [
+              "poder comprador",
+              "orcamento prefeituras",
+              "negociacao preco"
+            ],
+            "certeza_agregada": 0.84,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "rivalry_high",
@@ -1654,7 +1806,15 @@
               "adversarial": "Confidata pode pivotar para municipal. Outros podem copiar modelo ICT. Defender com velocidade + IP."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Rivalidade alta = negativo"
+            "funcao_rationale": "Rivalidade alta = negativo",
+            "criterios_dinamicos": [
+              "rivalidade setor",
+              "concorrentes ativos",
+              "diferenciacao"
+            ],
+            "certeza_agregada": 0.82,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "tam_4011_municipios",
@@ -1674,7 +1834,15 @@
               "adversarial": "Risco: nem todo município pode pagar. Filtrar por orçamento TI + tamanho + prioridade compliance."
             },
             "funcao_fdc": "log",
-            "funcao_rationale": "TAM grande = logarítmico (retornos decrescentes)"
+            "funcao_rationale": "TAM grande = logarítmico (retornos decrescentes)",
+            "criterios_dinamicos": [
+              "municipios sem LGPD",
+              "TAM enderecavel",
+              "taxa adocao"
+            ],
+            "certeza_agregada": 0.95,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "aws_dependency",
@@ -1694,7 +1862,15 @@
               "adversarial": "Risco: AWS outage = nosso outage. SLA 99.9% não é suficiente para compliance LGPD. VVV baixo — pesquisar."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Dependência AWS = negativo. Menos dependência = melhor"
+            "funcao_rationale": "Dependência AWS = negativo. Menos dependência = melhor",
+            "criterios_dinamicos": [
+              "dependencia AWS",
+              "SLA infraestrutura",
+              "plano contingencia"
+            ],
+            "certeza_agregada": 0.4,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "no_brand",
@@ -1714,7 +1890,15 @@
               "adversarial": "Sem brand, ciclo de vendas é mais longo. Brand building deve ser paralelo ao produto."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Sem brand = negativo"
+            "funcao_rationale": "Sem brand = negativo",
+            "criterios_dinamicos": [
+              "brand awareness",
+              "posicionamento",
+              "credibilidade mercado"
+            ],
+            "certeza_agregada": 0.6,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1742,7 +1926,15 @@
               "adversarial": "Risco: dependência de uma pessoa. Se Wilton sair, rede pode não seguir. Diversificar articulação."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Articulação Wilton = positivo"
+            "funcao_rationale": "Articulação Wilton = positivo",
+            "criterios_dinamicos": [
+              "rede Wilton",
+              "contato TCEs",
+              "capacidade articulacao"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "gislene_juridica",
@@ -1762,7 +1954,15 @@
               "adversarial": "Risco: gargalo de pessoa. Se Gislene não entregar INPI/parecer, todo roadmap trava."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Capacidade jurídica = positivo"
+            "funcao_rationale": "Capacidade jurídica = positivo",
+            "criterios_dinamicos": [
+              "parecer dispensa",
+              "registro INPI",
+              "base juridica"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "camilla_tech",
@@ -1782,7 +1982,15 @@
               "adversarial": "Risco: single point of failure em tech. Precisa de mais devs ou CTO co-founder."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Capacidade tech = positivo"
+            "funcao_rationale": "Capacidade tech = positivo",
+            "criterios_dinamicos": [
+              "capacidade MVP",
+              "infraestrutura",
+              "prototipo funcional"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "simone_compliance",
@@ -1802,7 +2010,15 @@
               "adversarial": "Risco: conhecimento em uma pessoa. Documentar e transformar em produto, não dependência."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Expertise compliance = positivo"
+            "funcao_rationale": "Expertise compliance = positivo",
+            "criterios_dinamicos": [
+              "expertise LGPD",
+              "base juridica AI",
+              "DPO framework"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "dpo_pool_gap",
@@ -1822,7 +2038,15 @@
               "adversarial": "Sem pool DPO, não pode entregar 'DPO como serviço'. VVV=0.60 — preciso de timeline de contratação."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Gap DPOs = negativo"
+            "funcao_rationale": "Gap DPOs = negativo",
+            "criterios_dinamicos": [
+              "pool DPOs",
+              "contratacao",
+              "escalabilidade servico"
+            ],
+            "certeza_agregada": 0.6,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "no_iso",
@@ -1842,7 +2066,15 @@
               "adversarial": "Risco: editais maiores podem exigir ISO. Timeline de 12-18 meses para certificação. Planejar agora."
             },
             "funcao_fdc": ">",
-            "funcao_rationale": "ISO: só conta se certificado (limiar). vvV<0.7 = 0"
+            "funcao_rationale": "ISO: só conta se certificado (limiar). vvV<0.7 = 0",
+            "criterios_dinamicos": [
+              "certificacao ISO",
+              "auditoria seguranca",
+              "credibilidade B2G"
+            ],
+            "certeza_agregada": 0.5,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "advisor_vvv03",
@@ -1862,7 +2094,15 @@
               "adversarial": "Gap real. VVV=0.30 honesto. Não inflar. Priorizar busca de advisor com VVV mensurável."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Advisor não confirmado = negativo"
+            "funcao_rationale": "Advisor não confirmado = negativo",
+            "criterios_dinamicos": [
+              "advisor confirmado",
+              "co-founder",
+              "experiencia segmento"
+            ],
+            "certeza_agregada": 0.3,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1890,7 +2130,15 @@
               "adversarial": "Risco: roadmap sem datas commit. Pode deriva. Precisa de milestones com prazos."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Roadmap definido = positivo"
+            "funcao_rationale": "Roadmap definido = positivo",
+            "criterios_dinamicos": [
+              "roadmap definido",
+              "fases claras",
+              "milestones"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "sprints_planned",
@@ -1910,7 +2158,15 @@
               "adversarial": "Risco: sprints sem velocity histórica. Estimativas são guesses, não dados."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Sprints planejados = positivo"
+            "funcao_rationale": "Sprints planejados = positivo",
+            "criterios_dinamicos": [
+              "sprints planejados",
+              "velocity",
+              "entregas definidas"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "critical_path_defined",
@@ -1930,7 +2186,15 @@
               "adversarial": "Risco: INPI pode levar 12+ meses. Iniciar imediatamente. Consultar Gislene."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Caminho crítico definido = positivo"
+            "funcao_rationale": "Caminho crítico definido = positivo",
+            "criterios_dinamicos": [
+              "caminho critico",
+              "INPI antes venda",
+              "dependencias"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "lois_zero",
@@ -1950,7 +2214,15 @@
               "adversarial": "LOIs são o indicador #1 de product-market fit. Zero = sem validação. NÃO INFLAR. VVV 0.0 é correto e útil."
             },
             "funcao_fdc": ">",
-            "funcao_rationale": "LOIs: só conta se > 0 (limiar). VVV=0 = 0"
+            "funcao_rationale": "LOIs: só conta se > 0 (limiar). VVV=0 = 0",
+            "criterios_dinamicos": [
+              "LOIs assinadas",
+              "pipeline B2G",
+              "interesse confirmado"
+            ],
+            "certeza_agregada": 0.0,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "custo_dev_unknown",
@@ -1970,7 +2242,15 @@
               "adversarial": "Gap crítico. Sem custo dev, não há Viabilidade Financeira honesta. VVV=0.40 = pesquisar urgente."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Custo desconhecido = negativo"
+            "funcao_rationale": "Custo desconhecido = negativo",
+            "criterios_dinamicos": [
+              "custo validado",
+              "breakdown componentes",
+              "orcamento"
+            ],
+            "certeza_agregada": 0.4,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "conversao_zero",
@@ -1990,7 +2270,15 @@
               "adversarial": "VVV=0.0 — zero dados reais. Qualquer estimativa é especulação. Precisamos de PoC para validar."
             },
             "funcao_fdc": ">",
-            "funcao_rationale": "Conversão: só conta se > 0 (limiar). VVV=0 = 0"
+            "funcao_rationale": "Conversão: só conta se > 0 (limiar). VVV=0 = 0",
+            "criterios_dinamicos": [
+              "taxa conversao real",
+              "pipeline ativo",
+              "fechamentos"
+            ],
+            "certeza_agregada": 0.0,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "financial_confidence_low",
@@ -2010,7 +2298,15 @@
               "adversarial": "Sem custo dev validado + sem conversão real, confidence financeiro não sobe. Gaps encadeados."
             },
             "funcao_fdc": "-",
-            "funcao_rationale": "Confidence baixo = negativo"
+            "funcao_rationale": "Confidence baixo = negativo",
+            "criterios_dinamicos": [
+              "confianca financeira",
+              "inputs validados",
+              "cenario base"
+            ],
+            "certeza_agregada": 0.65,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "model_contabilizei_validated",
@@ -2030,7 +2326,15 @@
               "adversarial": "Risco: LGPD ≠ contabilidade. Sales cycle diferente, buyer diferente, churn diferente. Validar com PoC."
             },
             "funcao_fdc": "+",
-            "funcao_rationale": "Modelo validado = positivo"
+            "funcao_rationale": "Modelo validado = positivo",
+            "criterios_dinamicos": [
+              "modelo validado",
+              "analogia SaaS",
+              "benchmarks"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       }
