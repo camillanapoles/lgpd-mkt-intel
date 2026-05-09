@@ -62,16 +62,49 @@
             v-for="rawItem in dim.items"
             :key="rawItem.id"
             :class="[
-              'flex items-center gap-2 p-2 rounded-lg text-caption',
+              'rounded-lg text-caption',
               resolveItem(rawItem, key).polaridade === 1 ? 'bg-green-950/20' : 'bg-red-950/20',
               scenarioOverrides[key + ':' + rawItem.id] ? 'ring-1 ring-accent-500/50' : '',
             ]"
           >
-            <span :class="resolveItem(rawItem, key).polaridade === 1 ? 'text-green-400' : 'text-red-400'">
-              {{ resolveItem(rawItem, key).polaridade === 1 ? '+' : '-' }}{{ (resolveItem(rawItem, key).vvv * resolveItem(rawItem, key).fator).toFixed(1) }}
-            </span>
-            <span class="text-slate-300 truncate flex-1">{{ resolveItem(rawItem, key).description }}</span>
-            <span class="text-slate-500 shrink-0">VVV:{{ resolveItem(rawItem, key).vvv.toFixed(1) }}</span>
+            <div class="flex items-center gap-2 p-2">
+              <span :class="resolveItem(rawItem, key).polaridade === 1 ? 'text-green-400' : 'text-red-400'">
+                {{ resolveItem(rawItem, key).polaridade === 1 ? '+' : '-' }}{{ (resolveItem(rawItem, key).vvv * resolveItem(rawItem, key).fator).toFixed(1) }}
+              </span>
+              <span class="text-slate-300 truncate flex-1">{{ resolveItem(rawItem, key).description }}</span>
+              <button
+                @click="toggleInfo(key, rawItem.id)"
+                class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+                :class="expandedItems.has(`${key}:${rawItem.id}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+                :title="expandedItems.has(`${key}:${rawItem.id}`) ? 'Fechar info' : 'Ver fonte e detalhes'"
+              >i</button>
+            </div>
+            <div
+              v-if="expandedItems.has(`${key}:${rawItem.id}`)"
+              class="px-2 pb-2 space-y-1 border-t border-slate-700/50 mt-0 pt-1.5"
+            >
+              <p class="text-slate-400">{{ resolveItem(rawItem, key).explicacao || rawItem.description }}</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-slate-500">Fonte:</span>
+                <span class="text-accent-400 text-xs">{{ resolveItem(rawItem, key).fonte || 'Nao mapeada' }}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500">Status:</span>
+                <span
+                  :class="[
+                    'px-1.5 py-0.5 rounded text-xs font-bold',
+                    resolveItem(rawItem, key).fonte_status === 'VALIDADO' ? 'bg-green-900/50 text-green-400' :
+                    resolveItem(rawItem, key).fonte_status === 'CONCLUÍDO' ? 'bg-blue-900/50 text-blue-400' :
+                    'bg-yellow-900/50 text-yellow-400'
+                  ]"
+                >{{ resolveItem(rawItem, key).fonte_status || 'PESQUISANDO' }}</span>
+                <span class="text-slate-500">VVV:{{ resolveItem(rawItem, key).vvv.toFixed(2) }}</span>
+                <span class="text-slate-500">Peso:{{ resolveItem(rawItem, key).fator }}</span>
+              </div>
+              <div v-if="resolveItem(rawItem, key).vvv_updated" class="text-xs text-slate-600">
+                Atualizado: {{ resolveItem(rawItem, key).vvv_updated }}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -190,7 +223,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, reactive } from 'vue'
 
 const props = defineProps({
   snti: { type: Object, required: true },
@@ -198,6 +231,11 @@ const props = defineProps({
 })
 
 const activeAudience = ref(props.snti.audiences?.[0]?.id || '')
+const expandedItems = reactive(new Set())
+const toggleInfo = (dimKey, itemId) => {
+  const key = `${dimKey}:${itemId}`
+  expandedItems.has(key) ? expandedItems.delete(key) : expandedItems.add(key)
+}
 
 const resolveItem = (item, dimKey) => {
   const key = `${dimKey}:${item.id}`
