@@ -35,6 +35,7 @@
           <p :class="['text-caption font-bold', dimScore(key) < 40 ? 'text-red-400' : 'text-yellow-400']">
             {{ dimScore(key) < 40 ? 'NAO ATACAR' : 'CAUTELA' }} - {{ dim.label.split(' - ')[0] }} {{ dimScore(key) < 40 ? 'CRITICO' : 'precisa atencao' }}
           </p>
+          <p v-if="dimAlertAction(key)" class="text-caption text-slate-300 mt-1">Acao: {{ dimAlertAction(key) }}</p>
         </div>
         <div class="flex items-center justify-between mb-2">
           <div class="flex items-center gap-3">
@@ -297,4 +298,12 @@ const scenarioLabel = (key) => {
 const overrideKeys = computed(() => Object.keys(props.scenarioOverrides || {}))
 const hasOverrides = computed(() => overrideKeys.value.length > 0)
 const overrideCount = computed(() => overrideKeys.value.length)
+
+const dimAlertAction = (dimKey) => {
+  const score = dimScore(dimKey)
+  if (score >= 60) return null
+  const alerts = props.snti.decision_rules?.alerts || []
+  const match = alerts.find(a => a.dimension === dimKey && score < a.threshold)
+  return match?.action || null
+}
 </script>

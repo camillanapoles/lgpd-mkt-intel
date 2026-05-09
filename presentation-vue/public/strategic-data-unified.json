@@ -884,6 +884,18 @@
         {"score_min": 60, "action": "PREPARAR", "description": "Posicao defensavel, resolver gaps criticos antes de atacar"},
         {"score_min": 40, "action": "CAUTELA", "description": "Posicao vulneravel, priorizar validacao antes de investimento"},
         {"score_min": 0, "action": "RECUAR", "description": "Posicao desfavoravel, pivotar estrategia ou esperar janela"}
+      ],
+      "alerts": [
+        {"dimension": "dao", "threshold": 40, "action": "PARAR - Sem alinhamento interno. Reuniao de alinhamento urgente com equipe + stakeholders"},
+        {"dimension": "dao", "threshold": 60, "action": "Onboardar advisor municipal + mapear TCEs individualmente"},
+        {"dimension": "ceu", "threshold": 40, "action": "PARAR - Janela regulatoria fechando. Reavaliar timing de entrada"},
+        {"dimension": "ceu", "threshold": 60, "action": "Monitorar agenda ANPD + preparar posicionamento ECA Digital"},
+        {"dimension": "terra", "threshold": 40, "action": "PARAR - Posicao competitiva fraca. Fortalecer ICT qualification como urgencia"},
+        {"dimension": "terra", "threshold": 60, "action": "Diferenciar vs Confidata + explorar art.75 IV como barreira"},
+        {"dimension": "comandante", "threshold": 40, "action": "PARAR - Time insuficiente. Contratar DPO pool + confirmar advisor antes de prosseguir"},
+        {"dimension": "comandante", "threshold": 60, "action": "Contratar DPO pool + certificar ISO 27001"},
+        {"dimension": "metodo", "threshold": 40, "action": "PARAR - Sem validacao de mercado. Assinar 3+ LOIs antes de investir"},
+        {"dimension": "metodo", "threshold": 60, "action": "Assinar LOIs + validar custo dev + definir taxa conversao real"}
       ]
     },
     "slider_overrides": {
@@ -894,23 +906,33 @@
           {"dim": "metodo", "item_id": "conversao_zero", "vvv_override": 0.7, "description_override": "Taxa conversao validada com LOIs reais"}
         ]
       },
-      "advisor": {
-        "condition": "true",
-        "applies_to": [
-          {"dim": "dao", "item_id": "advisor_missing", "vvv_override": 0.9, "polaridade_override": 1, "description_override": "Advisor onboardado - cobertura B2G"},
-          {"dim": "comandante", "item_id": "advisor_vvv03", "vvv_override": 0.9, "polaridade_override": 1, "description_override": "Advisor confirmado com experiencia municipal"}
-        ]
-      },
       "funding": {
         "condition": ">=960",
         "applies_to": [
-          {"dim": "metodo", "item_id": "custo_dev_unknown", "vvv_override": 0.8, "description_override": "Custo dev validado com funding secured"}
+          {"dim": "metodo", "item_id": "custo_dev_unknown", "vvv_override": 0.8, "description_override": "Custo dev validado com funding secured"},
+          {"dim": "terra", "item_id": "aws_dependency", "vvv_override": 0.7, "description_override": "Infra AWS com budget alocado"},
+          {"dim": "comandante", "item_id": "dpo_pool_gap", "vvv_override": 0.8, "description_override": "Budget disponivel para contratar DPOs"}
         ]
       },
       "anpd": {
         "condition": "aumenta_50",
         "applies_to": [
           {"dim": "ceu", "item_id": "anpd_enforcement", "vvv_override": 0.98, "fator_override": 5}
+        ]
+      },
+      "anpd_foco_grandes": {
+        "_note": "anpd slider value 'foco_grandes' reduces competitive threat",
+        "condition": "foco_grandes",
+        "applies_to": [
+          {"dim": "terra", "item_id": "confidata_threat", "vvv_override": 0.5, "description_override": "ANPD foca grandes - Confidata distraida com compliance proprio"}
+        ]
+      },
+      "advisor": {
+        "condition": "true",
+        "applies_to": [
+          {"dim": "dao", "item_id": "advisor_missing", "vvv_override": 0.9, "polaridade_override": 1, "description_override": "Advisor onboardado - cobertura B2G"},
+          {"dim": "comandante", "item_id": "advisor_vvv03", "vvv_override": 0.9, "polaridade_override": 1, "description_override": "Advisor confirmado com experiencia municipal"},
+          {"dim": "dao", "item_id": "tce_not_mapped", "vvv_override": 0.8, "description_override": "Advisor acelera mapeamento de TCEs"}
         ]
       }
     },
