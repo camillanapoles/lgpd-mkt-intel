@@ -209,7 +209,7 @@
   <div class="layout">
     <aside class="sidebar">
       <h1 class="title">LGPD • Biblioteca</h1>
-      <p class="subtitle">Navegação estrita de arquivos Markdown em <code>docs/**</code>.</p>
+      <p class="subtitle">Navegação restrita de arquivos Markdown em <code>docs/**</code>.</p>
       <input id="search" class="search" type="search" placeholder="Buscar documento..." aria-label="Buscar documento" />
       <div id="nav"></div>
     </aside>
@@ -246,7 +246,6 @@
 
     const docsBySection = Object.entries(
       docsPaths
-        .filter((path) => path.startsWith('docs/') && path.toLowerCase().endsWith('.md'))
         .sort((a, b) => a.localeCompare(b, 'pt-BR'))
         .reduce((acc, path) => {
           const folder = path.slice(0, path.lastIndexOf('/'));
@@ -313,13 +312,36 @@
       return safe;
     }
 
+    const MIN_TABLE_DIVIDER_DASHES = 3;
+
     function formatTableRow(line) {
       return line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => formatInline(cell.trim()));
     }
 
     function isTableDivider(line) {
       const parts = line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => cell.trim());
-      return parts.length > 1 && parts.every(cell => /^:?-{3,}:?$/.test(cell));
+      return parts.length > 1 && parts.every((cell) => {
+        const dashCount = cell.replaceAll(':', '').length;
+        return /^:?-+:?$/.test(cell) && dashCount >= MIN_TABLE_DIVIDER_DASHES;
+      });
+    }
+
+    function isTableStart(line, nextLine) {
+      return line.includes('|') && nextLine.includes('|') && isTableDivider(nextLine);
+    }
+
+    function isHorizontalRule(line) {
+      return /^\s*([-*_])\1\1+\s*$/.test(line.trim());
+    }
+
+    function isBlockStart(line, nextLine) {
+      return /^(#{1,6})\s+/.test(line)
+        || /^\s*[-*+]\s+/.test(line)
+        || /^\s*\d+\.\s+/.test(line)
+        || /^\s*>\s?/.test(line)
+        || isTableStart(line, nextLine)
+        || line.trim().startsWith('```')
+        || isHorizontalRule(line);
     }
 
     function renderMarkdown(markdown) {
@@ -366,11 +388,18 @@
             quoteLines.push(lines[index].replace(/^\s*>\s?/, ''));
             index += 1;
           }
-          html.push(`<blockquote>${quoteLines.map(part => formatInline(part)).join('<br/>')}</blockquote>`);
+          const quoteHtml = quoteLines
+            .join('\n')
+            .split(/\n\s*\n/)
+            .map(part => part.trim())
+            .filter(Boolean)
+            .map(part => `<p>${formatInline(part.replace(/\n+/g, ' '))}</p>`)
+            .join('');
+          html.push(`<blockquote>${quoteHtml}</blockquote>`);
           continue;
         }
 
-        if (/^\s*([-*_])\1\1+\s*$/.test(line.trim())) {
+        if (isHorizontalRule(line)) {
           if (listType) {
             html.push(listType === 'ol' ? '</ol>' : '</ul>');
             listType = null;
@@ -380,7 +409,7 @@
           continue;
         }
 
-        if (line.includes('|') && nextLine.includes('|') && isTableDivider(nextLine)) {
+        if (isTableStart(line, nextLine)) {
           if (listType) {
             html.push(listType === 'ol' ? '</ol>' : '</ul>');
             listType = null;
@@ -449,13 +478,7 @@
 
         const paragraphLines = [line.trim()];
         index += 1;
-        while (index < lines.length && lines[index].trim() &&
-          !/^(#{1,6})\s+/.test(lines[index]) &&
-          !/^\s*[-*+]\s+/.test(lines[index]) &&
-          !/^\s*\d+\.\s+/.test(lines[index]) &&
-          !/^\s*>\s?/.test(lines[index]) &&
-          !(lines[index].includes('|') && (lines[index + 1] ?? '').includes('|') && isTableDivider(lines[index + 1] ?? '')) &&
-          !lines[index].trim().startsWith('```')) {
+        while (index < lines.length && lines[index].trim() && !isBlockStart(lines[index], lines[index + 1] ?? '')) {
           paragraphLines.push(lines[index].trim());
           index += 1;
         }
