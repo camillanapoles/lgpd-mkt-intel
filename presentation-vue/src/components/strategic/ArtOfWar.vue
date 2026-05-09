@@ -69,7 +69,7 @@
           >
             <div class="flex items-center gap-2 p-2">
               <span :class="resolveItem(rawItem, key).polaridade === 1 ? 'text-green-400' : 'text-red-400'">
-                {{ resolveItem(rawItem, key).polaridade === 1 ? '+' : '-' }}{{ (resolveItem(rawItem, key).vvv * resolveItem(rawItem, key).fator).toFixed(1) }}
+                {{ resolveItem(rawItem, key).polaridade === 1 ? '+' : '-' }}{{ (resolveItem(rawItem, key).vvv_fdc * resolveItem(rawItem, key).fator).toFixed(1) }}
               </span>
               <span class="text-slate-300 truncate flex-1">{{ resolveItem(rawItem, key).description }}</span>
               <button
@@ -99,10 +99,17 @@
                   ]"
                 >{{ resolveItem(rawItem, key).fonte_status || 'PESQUISANDO' }}</span>
                 <span class="text-slate-500">VVV:{{ resolveItem(rawItem, key).vvv.toFixed(2) }}</span>
+                <span v-if="resolveItem(rawItem, key).vvv_decay < resolveItem(rawItem, key).vvv"
+                  :class="resolveItem(rawItem, key).vvv_decay < 0.5 ? 'text-yellow-400 font-bold' : 'text-slate-500'"
+                >Decay:{{ resolveItem(rawItem, key).vvv_decay.toFixed(2) }}</span>
                 <span class="text-slate-500">Peso:{{ resolveItem(rawItem, key).fator }}</span>
+                <span class="text-slate-500">FDC:{{ resolveItem(rawItem, key).funcao_fdc || '+' }}</span>
               </div>
               <div v-if="resolveItem(rawItem, key).vvv_updated" class="text-xs text-slate-600">
                 Atualizado: {{ resolveItem(rawItem, key).vvv_updated }}
+              </div>
+              <div v-if="resolveItem(rawItem, key).vvv_decay < 0.5" class="text-xs text-yellow-500 font-bold">
+                Revalidacao necessaria (decay < 0.50)
               </div>
             </div>
           </div>
@@ -237,17 +244,38 @@ const toggleInfo = (dimKey, itemId) => {
   expandedItems.has(key) ? expandedItems.delete(key) : expandedItems.add(key)
 }
 
+const LAMBDA = 0.30
+
+const computeDecay = (vvv, updated) => {
+  if (!updated) return vvv
+  const months = (Date.now() - new Date(updated).getTime()) / (30.44 * 24 * 60 * 60 * 1000)
+  return vvv * (1 / (1 + LAMBDA * months))
+}
+
+const applyFdcFunction = (decay, fn) => {
+  switch (fn) {
+    case '-': return decay
+    case '>': return decay >= 0.5 ? decay : 0
+    case 'log': return Math.log((decay * 10) + 1) / Math.log(11)
+    case '~': return decay
+    default: return decay
+  }
+}
+
 const resolveItem = (item, dimKey) => {
   const key = `${dimKey}:${item.id}`
   const override = props.scenarioOverrides[key]
-  if (!override) return item
-  return {
+  const base = override ? {
     ...item,
     vvv: override.vvv ?? item.vvv,
     fator: override.fator ?? item.fator,
     polaridade: override.polaridade ?? item.polaridade,
     description: override.description ?? item.description,
-  }
+  } : { ...item }
+  base.vvv_decay = computeDecay(base.vvv, base.vvv_updated)
+  const rawFdc = applyFdcFunction(base.vvv_decay, base.funcao_fdc || '+')
+  base.vvv_fdc = base.polaridade === 1 ? rawFdc : rawFdc
+  return base
 }
 
 const dimensions = computed(() => props.snti.dimensions || {})
@@ -256,8 +284,9 @@ const dimScore = (key) => {
   const dim = dimensions.value[key]
   if (!dim) return 0
   const items = (dim.items || []).map(i => resolveItem(i, key))
-  const totalPos = items.filter(i => i.polaridade === 1).reduce((s, i) => s + i.vvv * i.fator, 0)
-  const totalNeg = items.filter(i => i.polaridade === -1).reduce((s, i) => s + i.vvv * i.fator, 0)
+  const active = items.filter(i => i.vvv_decay >= 0.3)
+  const totalPos = active.filter(i => i.polaridade === 1).reduce((s, i) => s + i.vvv_fdc * i.fator, 0)
+  const totalNeg = active.filter(i => i.polaridade === -1).reduce((s, i) => s + i.vvv_fdc * i.fator, 0)
   const maxPos = items.filter(i => i.polaridade === 1).reduce((s, i) => s + i.fator, 0)
   if (maxPos === 0) return 0
   return ((totalPos - totalNeg) / maxPos) * 100
