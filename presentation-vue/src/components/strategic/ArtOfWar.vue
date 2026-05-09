@@ -13,15 +13,29 @@
       <p class="text-display font-bold" :class="scoreTextClass">{{ globalScore.toFixed(1) }}</p>
       <p class="text-h4 mt-1" :class="scoreTextClass">{{ actionLabel }}</p>
       <p class="text-body-sm text-slate-400 mt-2">{{ actionDescription }}</p>
+      <div v-if="hasOverrides" class="mt-3 p-2 rounded-lg bg-accent-950/30 border border-accent-900/40">
+        <p class="text-caption text-accent-400 font-bold">WHAT-IF ATIVO - Cenario Simulado</p>
+        <p class="text-caption text-slate-400">Override VVV aplicado em {{ overrideCount }} item(ns)</p>
+      </div>
     </div>
 
     <!-- 5 DIMENSOES -->
     <div class="grid gap-3 mb-6">
+      <!-- ALERTAS POR DIMENSAO -->
       <div
         v-for="(dim, key) in dimensions"
         :key="key"
-        class="bg-slate-800/50 border border-slate-700 rounded-card p-4"
+        :class="[
+          'bg-slate-800/50 border rounded-card p-4',
+          dimScore(key) < 40 ? 'border-red-500/60' : dimScore(key) < 60 ? 'border-yellow-500/40' : 'border-slate-700',
+        ]"
       >
+        <!-- DIMENSION ALERT -->
+        <div v-if="dimScore(key) < 60" class="mb-3 p-2 rounded-lg" :class="dimScore(key) < 40 ? 'bg-red-950/30 border border-red-900/50' : 'bg-yellow-950/20 border border-yellow-900/30'">
+          <p :class="['text-caption font-bold', dimScore(key) < 40 ? 'text-red-400' : 'text-yellow-400']">
+            {{ dimScore(key) < 40 ? 'NAO ATACAR' : 'CAUTELA' }} - {{ dim.label.split(' - ')[0] }} {{ dimScore(key) < 40 ? 'CRITICO' : 'precisa atencao' }}
+          </p>
+        </div>
         <div class="flex items-center justify-between mb-2">
           <div class="flex items-center gap-3">
             <span class="text-2xl">{{ dimIcon(key) }}</span>
@@ -44,18 +58,19 @@
         </div>
         <div class="grid grid-cols-2 gap-2">
           <div
-            v-for="item in dim.items"
-            :key="item.id"
+            v-for="rawItem in dim.items"
+            :key="rawItem.id"
             :class="[
               'flex items-center gap-2 p-2 rounded-lg text-caption',
-              item.polaridade === 1 ? 'bg-green-950/20' : 'bg-red-950/20',
+              resolveItem(rawItem, key).polaridade === 1 ? 'bg-green-950/20' : 'bg-red-950/20',
+              scenarioOverrides[key + ':' + rawItem.id] ? 'ring-1 ring-accent-500/50' : '',
             ]"
           >
-            <span :class="item.polaridade === 1 ? 'text-green-400' : 'text-red-400'">
-              {{ item.polaridade === 1 ? '+' : '-' }}{{ (item.vvv * item.fator).toFixed(1) }}
+            <span :class="resolveItem(rawItem, key).polaridade === 1 ? 'text-green-400' : 'text-red-400'">
+              {{ resolveItem(rawItem, key).polaridade === 1 ? '+' : '-' }}{{ (resolveItem(rawItem, key).vvv * resolveItem(rawItem, key).fator).toFixed(1) }}
             </span>
-            <span class="text-slate-300 truncate flex-1">{{ item.description }}</span>
-            <span class="text-slate-500 shrink-0">VVV:{{ item.vvv }}</span>
+            <span class="text-slate-300 truncate flex-1">{{ resolveItem(rawItem, key).description }}</span>
+            <span class="text-slate-500 shrink-0">VVV:{{ resolveItem(rawItem, key).vvv.toFixed(1) }}</span>
           </div>
         </div>
       </div>
@@ -178,16 +193,30 @@ import { ref, computed } from 'vue'
 
 const props = defineProps({
   snti: { type: Object, required: true },
+  scenarioOverrides: { type: Object, default: () => ({}) },
 })
 
 const activeAudience = ref(props.snti.audiences?.[0]?.id || '')
+
+const resolveItem = (item, dimKey) => {
+  const key = `${dimKey}:${item.id}`
+  const override = props.scenarioOverrides[key]
+  if (!override) return item
+  return {
+    ...item,
+    vvv: override.vvv ?? item.vvv,
+    fator: override.fator ?? item.fator,
+    polaridade: override.polaridade ?? item.polaridade,
+    description: override.description ?? item.description,
+  }
+}
 
 const dimensions = computed(() => props.snti.dimensions || {})
 
 const dimScore = (key) => {
   const dim = dimensions.value[key]
   if (!dim) return 0
-  const items = dim.items || []
+  const items = (dim.items || []).map(i => resolveItem(i, key))
   const totalPos = items.filter(i => i.polaridade === 1).reduce((s, i) => s + i.vvv * i.fator, 0)
   const totalNeg = items.filter(i => i.polaridade === -1).reduce((s, i) => s + i.vvv * i.fator, 0)
   const maxPos = items.filter(i => i.polaridade === 1).reduce((s, i) => s + i.fator, 0)
@@ -264,4 +293,8 @@ const scenarioLabel = (key) => {
   }
   return labels[key] || key.replace(/_/g, ' ')
 }
+
+const overrideKeys = computed(() => Object.keys(props.scenarioOverrides || {}))
+const hasOverrides = computed(() => overrideKeys.value.length > 0)
+const overrideCount = computed(() => overrideKeys.value.length)
 </script>
