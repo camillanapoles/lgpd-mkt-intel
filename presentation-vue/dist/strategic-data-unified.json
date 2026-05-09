@@ -435,9 +435,184 @@
       "TCEs nao mapeados individualmente"
     ]
   },
+  "pestle_analysis": {
+    "political": {
+      "anpd_independence": {
+        "fato": "MP 1.317/2025 transformou ANPD em agencia reguladora independente",
+        "impacto": "Alto - Remove interferência politica, aumenta autonomia fiscalização",
+        "vvv": 0.92,
+        "fonte": "ANPD transformation legislation 2025"
+      },
+      "municipal_elections": {
+        "fato": "Proximas eleições municipais: 2028 (janela de 2 anos a partir de 2026)",
+        "impacto": "Medio - 2026-2027 favoravel a investimentos, 2028 desaceleração",
+        "vvv": 0.78,
+        "fonte": "Brazilian electoral calendar"
+      },
+      "lei_14133": {
+        "fato": "Lei 14.133/2021 Art.75 IV - Dispensa até R$50K sem licitação complexa",
+        "impacto": "Critico - Simplifica procurement municipal SaaS LGPD",
+        "vvv": 0.98,
+        "fonte": "Lei 14.133/2021 oficial"
+      }
+    },
+    "economic": {
+      "municipal_budget": {
+        "fato": "Transferências obrigatorias + FNDE + Emendas parlamentares = capacidade SaaS",
+        "impacto": "Alto - Orçamento discricionário disponível para compliance",
+        "vvv": 0.82,
+        "fonte": "FNDE oficial + Transparencia.gov.br"
+      },
+      "fx_stability": {
+        "fato": "Soluções locais preço estavel BRL vs internacionais volatilidade FX",
+        "impacto": "Medio - Vantagem competitiva CIT AI Tech",
+        "vvv": 0.88,
+        "fonte": "FX market analysis"
+      },
+      "compliance_resilience": {
+        "fato": "Spending compliance contra-cíclico (não-discretionary legal requirement)",
+        "impacto": "Alto - Resiliente a recessão econômica",
+        "vvv": 0.81,
+        "fonte": "Historical compliance spending patterns"
+      }
+    },
+    "social": {
+      "breach_awareness": {
+        "fato": "Baixo a moderado em pequenos municipios, rapidamente aumentando",
+        "impacto": "Medio - Estratégia educacão-first cria demanda",
+        "vvv": 0.75,
+        "fonte": "Municipal digital literacy surveys"
+      },
+      "digital_literacy": {
+        "fato": "Alta variabilidade (urbano > rural), melhorando com E-Digital",
+        "impacto": "Alto - UX simplicidade critico para adoção",
+        "vvv": 0.79,
+        "fonte": "E-Digital 2022-2026 initiative"
+      },
+      "transparency_pressure": {
+        "fato": "LAI + LGPD = cultura proteção dados + transparência",
+        "impacto": "Alto - Marketing: Transparência + Compliance = Confiança pública",
+        "vvv": 0.86,
+        "fonte": "LAI LGPD synergy analysis"
+      }
+    },
+    "technological": {
+      "cloud_adoption": {
+        "fato": "Mercado cloud BR: $18.1B (2025) → $86.6B (2034), SaaS CAGR 12.1%",
+        "impacto": "Critico - Alinhamento com infraestrutura governo",
+        "vvv": 0.94,
+        "fonte": "Brazil cloud market IMARC 2025"
+      },
+      "ai_automation": {
+        "fato": "AI-driven compliance solutions rapidamente expanding",
+        "impacto": "Critico - Diferencial vs manual/process-heavy competitors",
+        "vvv": 0.91,
+        "fonte": "AI governance Brazil 2025"
+      },
+      "data_sovereignty": {
+        "fato": "Art.26 LGPD - preferência jurisdição brasileira",
+        "impacto": "Critico - Vantagem 100% dados Brasil vs internacionais",
+        "vvv": 0.97,
+        "fonte": "LGPD Art.26 + DC Brasil compliance"
+      }
+    },
+    "legal": {
+      "eca_digital": {
+        "fato": "Lei 15.211/2025 - ECA Digital efetivo Março 2026, verificação idade obrigatória",
+        "impacto": "Alto - Módulo age verification unico diferencial",
+        "vvv": 0.98,
+        "fonte": "Lei 15.211/2025 official"
+      },
+      "anpd_agenda_2025_26": {
+        "fato": "Agenda regulatória 2025-2026 ativa: AI, government data, child protection",
+        "impacto": "Alto - Requisitos evolving = subscription model recorrente",
+        "vvv": 0.89,
+        "fonte": "ANPD Regulatory Agenda 2025-2026"
+      },
+      "procurement_modernization": {
+        "fato": "Lei 14.133/2021 totalmente vigorosa desde Abril 2023",
+        "impacto": "Critico - Municipalidades <20K habitantes: 6 anos transição parcial",
+        "vvv": 0.95,
+        "fonte": "Lei 14.133/2021 + adaptation studies"
+      }
+    },
+    "environmental": {
+      "digital_sustainability": {
+        "fato": "Transformação digital reduz papel (sustentabilidade)",
+        "impacto": "Baixo - Messaging secundário, não driver primário",
+        "vvv": 0.62,
+        "fonte": "Municipal sustainability reports"
+      }
+    }
+  },
+  "porter_five_forces": {
+    "threat_new_entrants": {
+      "rating": 3,
+      "label": "MODERADO",
+      "justification": "Barreiras: conhecimento regulatório LGPD (Alto), experiencia vendas governo (Alto), capability técnica SaaS (Medio), capital (Medio). Qualificação ICT cria barreira para não-qualificados. Time-to-market: 12-18 meses.",
+      "vvv": 0.81,
+      "strategic_implication": "First-mover advantage crítico para relacionamentos municipais"
+    },
+    "bargaining_power_suppliers": {
+      "rating": 2,
+      "label": "BAIXO",
+      "justification": "Cloud infrastructure market altamente competitivo (AWS, Azure, Google Cloud). Switching costs baixos, multi-cloud comum. Sem dependência suppliers especializados.",
+      "vvv": 0.92,
+      "strategic_implication": "Supplier power não é constraint no business model"
+    },
+    "bargaining_power_buyers": {
+      "rating": 4,
+      "label": "MODERADO-ALTO",
+      "justification": "Municipios: price sensitivity alta, switching costs moderado. Limitadas alternativas especializadas. Procurement complexidade mitigada por Lei 14.133/2021 Art.75 IV. Consórcios podem aumentar poder de compra.",
+      "vvv": 0.84,
+      "strategic_implication": "Price-value positioning crítico - demonstrar ROI claro vs multas + custos manuais"
+    },
+    "threat_substitutes": {
+      "rating": 3,
+      "label": "MODERADO",
+      "justification": "Substitutos: manual compliance (viabilidade baixa, custo maior), general-purpose tools (fit pobre municipal), international solutions (FX, nuance regulatória, soberania), não-compliance (risco aumentando enforcement).",
+      "vvv": 0.79,
+      "strategic_implication": "Manual processes = falsa economia dado risco multas + custos trabalho"
+    },
+    "competitive_rivalry": {
+      "rating": 4,
+      "label": "MODERADO-ALTO",
+      "justification": "Confidata pivot municipal (ameaça primária). OneTrust/SecurePrivacy enterprise-focused, caros. Internacionais: language, nuance, FX challenges. Mercado crescendo rápido (72% não-compliantes). Diferenciação oportunidade significativa.",
+      "vvv": 0.82,
+      "strategic_implication": "Rivalry intensificando mas diferenciação oportunidade permanece via especialização municipal + AI automation"
+    }
+  },
+  "market_attractiveness_scorecard": {
+    "overall_score": 8.65,
+    "label": "ALTAMENTE ATRATIVO",
+    "factors": [
+      { "factor": "Regulatory Tailwinds", "score": 9, "weight": 0.20, "weighted": 1.8, "drivers": ["ANPD independente", "Lei 14.133/2021", "Lei 15.211/2025"] },
+      { "factor": "Market Size", "score": 10, "weight": 0.15, "weighted": 1.5, "drivers": ["4.011 municipios não-compliantes"] },
+      { "factor": "Competitive Positioning", "score": 8, "weight": 0.15, "weighted": 1.2, "drivers": ["ICT qualification", "AI-first", "local expertise"] },
+      { "factor": "Procurement Accessibility", "score": 10, "weight": 0.15, "weighted": 1.5, "drivers": ["Lei 14.133/2021 Art.75 IV - R$50K"] },
+      { "factor": "Technology Readiness", "score": 10, "weight": 0.10, "weighted": 1.0, "drivers": ["AI/Cloud capabilities"] },
+      { "factor": "Municipal Budget Availability", "score": 7, "weight": 0.10, "weighted": 0.7, "drivers": ["Transferências obrigatórias"] },
+      { "factor": "Buyer Power (inverted)", "score": 5, "weight": 0.05, "weighted": 0.25, "drivers": ["Non-discretionary compliance"] },
+      { "factor": "Threat Substitutes (inverted)", "score": 7, "weight": 0.05, "weighted": 0.35, "drivers": ["Manual = false economy"] },
+      { "factor": "Threat New Entrants (inverted)", "score": 7, "weight": 0.05, "weighted": 0.35, "drivers": ["Regulatory + sales expertise barriers"] }
+    ],
+    "critical_success_factors": [
+      "Municipal UX Excellence: produto usável por servidores não-técnicos",
+      "Speed to Value: implementação <90 dias para demonstrar ROI",
+      "Local Credibility: expertise regulatória BR + Português",
+      "AI-First Differentiation: automation capabilities que competitors manuais não podem match",
+      "Regulatory Agility: resposta rápida a mudanças ANPD"
+    ],
+    "entry_timeline": {
+      "window_opportunity": "2026-2027",
+      "catalyst": "ANPD enforcement expansion + Lei 15.211/2025 Março 2026",
+      "risk_deadline": "2028 municipal election cycle slowdown",
+      "recommendation": "EXPEDITED MARKET ENTRY - 3-5 pilot municipios Q3 2026"
+    }
+  },
   "validation": {
     "framework": {
-      "verifiable": "Fonte existe e e citavel",
+      "verifiable": "Fonte existe e e citável",
       "true": "Cross-check multiplas fontes",
       "validated": "Especialista confirmou"
     },
@@ -454,8 +629,20 @@
       "competitive": 0.88,
       "financial": 0.65,
       "legal": 0.55,
+      "pestle": 0.88,
+      "porter": 0.84,
       "overall": 0.72
-    }
+    },
+    "pestle_porter_sources": [
+      "ANPD transformation legislation MP 1.317/2025",
+      "Lei 14.133/2021 Art.75 IV official",
+      "Lei 15.211/2025 ECA Digital",
+      "Brazil cloud market IMARC 2025",
+      "AI Governance Brazil 2025 policies",
+      "FNDE + Transparencia.gov.br data",
+      "E-Digital 2022-2026 strategy",
+      "IBGE MUNIC 2024 municipal data"
+    ]
   },
   "next_meeting": {
     "prep_checklist": [
@@ -472,5 +659,249 @@
       "Validar BMC com equipe",
       "Aprovar roadmap fase 1"
     ]
+  },
+  "snti": {
+    "framework": "Sun Tzu + Teoria dos Jogos",
+    "version": "1.0.0",
+    "dimensions": {
+      "dao": {
+        "label": "DAO - Moral & Alinhamento",
+        "sun_tzu": "O povo deve estar em harmonia com seu governante",
+        "business": "Alinhamento equipe-stakeholders com a missao",
+        "weight": 0.20,
+        "items": [
+          {"id": "team_alignment", "source": "stakeholders.internal", "description": "Alinhamento medio da equipe", "vvv": 0.85, "fator": 4, "polaridade": 1},
+          {"id": "raci_coverage", "source": "stakeholders.raci", "description": "4 atividades com RACI definido", "vvv": 0.9, "fator": 3, "polaridade": 1},
+          {"id": "prefeitura_alignment_low", "source": "stakeholders.gaps", "description": "Prefeituras alinhamento 0.3", "vvv": 0.8, "fator": 4, "polaridade": -1},
+          {"id": "consorcio_early_validation", "source": "stakeholders.gaps", "description": "Consorcios sem validacao precoce", "vvv": 0.7, "fator": 3, "polaridade": -1},
+          {"id": "advisor_missing", "source": "validation.low_vvv_items", "description": "Co-founder/Advisor nao confirmado", "vvv": 0.3, "fator": 5, "polaridade": -1},
+          {"id": "tce_not_mapped", "source": "stakeholders.gaps", "description": "TCEs nao mapeados individualmente", "vvv": 0.6, "fator": 3, "polaridade": -1}
+        ]
+      },
+      "ceu": {
+        "label": "CEU - Timing & Janela",
+        "sun_tzu": "O ceu significa noite e dia, frio e calor, tempos e estacoes",
+        "business": "Janela regulatoria e ciclo politico-favoravel",
+        "weight": 0.20,
+        "items": [
+          {"id": "anpd_enforcement", "source": "pestle_analysis.political", "description": "ANPD agencia independente ativa", "vvv": 0.92, "fator": 5, "polaridade": 1},
+          {"id": "eca_digital_urgent", "source": "pestle_analysis.legal", "description": "ECA Digital Marco 2026 - age verification", "vvv": 0.98, "fator": 5, "polaridade": 1},
+          {"id": "lei_14133_dispensa", "source": "pestle_analysis.political", "description": "Dispensa licitacao ate R$50K", "vvv": 0.98, "fator": 5, "polaridade": 1},
+          {"id": "window_2026_2027", "source": "market_attractiveness_scorecard", "description": "Janela de oportunidade 2026-2027", "vvv": 0.85, "fator": 5, "polaridade": 1},
+          {"id": "election_2028_risk", "source": "pestle_analysis.political", "description": "Eleicoes municipais 2028 desaceleracao", "vvv": 0.78, "fator": 3, "polaridade": -1},
+          {"id": "anpd_agenda_2025_26", "source": "pestle_analysis.legal", "description": "Agenda regulatoria ativa AI+gov+child", "vvv": 0.89, "fator": 4, "polaridade": 1},
+          {"id": "cloud_market_growth", "source": "pestle_analysis.technological", "description": "Cloud BR $18.1B -> $86.6B, SaaS CAGR 12.1%", "vvv": 0.94, "fator": 4, "polaridade": 1}
+        ]
+      },
+      "terra": {
+        "label": "TERRA - Terreno & Posicao",
+        "sun_tzu": "A terra comprehende distancias, perigo e seguranca, campo aberto e estreito",
+        "business": "Posicao competitiva, acesso a mercado, terreno regulatorio",
+        "weight": 0.25,
+        "items": [
+          {"id": "ict_qualification", "source": "competitive.differentiation", "description": "Prerrogativas ICT Art.75 IV - barreira entrada", "vvv": 0.95, "fator": 5, "polaridade": 1},
+          {"id": "dc_brasil_100pct", "source": "swot_interactive.forcas", "description": "DC Brasil Art.26 - dados 100% Brasil", "vvv": 0.95, "fator": 5, "polaridade": 1},
+          {"id": "pricing_below_dispensa", "source": "swot_interactive.forcas", "description": "Unico abaixo R$65K/ano com DPO", "vvv": 0.9, "fator": 5, "polaridade": 1},
+          {"id": "confidata_threat", "source": "competitive.landscape", "description": "Confidata pivot municipal - THREAT REAL", "vvv": 0.7, "fator": 4, "polaridade": -1},
+          {"id": "onetrust_potential", "source": "competitive.landscape", "description": "OneTrust entrada BR 12-24 meses", "vvv": 0.5, "fator": 3, "polaridade": -1},
+          {"id": "buyer_power_high", "source": "porter_five_forces", "description": "Poder compradores moderado-alto", "vvv": 0.84, "fator": 3, "polaridade": -1},
+          {"id": "rivalry_high", "source": "porter_five_forces", "description": "Rivalidade competitiva moderado-alta", "vvv": 0.82, "fator": 3, "polaridade": -1},
+          {"id": "tam_4011_municipios", "source": "market.opportunity", "description": "4.011 municipios sem LGPD (72%)", "vvv": 0.95, "fator": 5, "polaridade": 1},
+          {"id": "aws_dependency", "source": "swot_interactive.fracas", "description": "Dependencia AWS sa-east-1", "vvv": 0.4, "fator": 2, "polaridade": -1},
+          {"id": "no_brand", "source": "swot_interactive.fracas", "description": "Sem brand estabelecido", "vvv": 0.6, "fator": 3, "polaridade": -1}
+        ]
+      },
+      "comandante": {
+        "label": "COMANDANTE - Lideranca & Capacidade",
+        "sun_tzu": "O comandante representa sabedoria, sinceridade, benevolencia, coragem e firmeza",
+        "business": "Capacidade do time, advisor, DPO pool, competencias",
+        "weight": 0.20,
+        "items": [
+          {"id": "wilton_articulacao", "source": "stakeholders.internal", "description": "Wilton - articulacao consorcios/TCEs", "vvv": 0.9, "fator": 4, "polaridade": 1},
+          {"id": "gislene_juridica", "source": "stakeholders.internal", "description": "Gislene - parecer dispensa + INPI", "vvv": 0.85, "fator": 4, "polaridade": 1},
+          {"id": "camilla_tech", "source": "stakeholders.internal", "description": "Camilla - MVP + infraestrutura", "vvv": 0.8, "fator": 4, "polaridade": 1},
+          {"id": "simone_compliance", "source": "stakeholders.internal", "description": "Simone - base juridica AI-DPO", "vvv": 0.9, "fator": 3, "polaridade": 1},
+          {"id": "dpo_pool_gap", "source": "bmc_interactive.gaps", "description": "Pool DPOs ainda nao contratado", "vvv": 0.6, "fator": 4, "polaridade": -1},
+          {"id": "no_iso", "source": "swot_interactive.fracas", "description": "Sem ISO 27001 certificado", "vvv": 0.5, "fator": 3, "polaridade": -1},
+          {"id": "advisor_vvv03", "source": "validation.low_vvv_items", "description": "Advisor/Co-founder VVV=0.3", "vvv": 0.3, "fator": 5, "polaridade": -1}
+        ]
+      },
+      "metodo": {
+        "label": "METODO - Disciplina & Execucao",
+        "sun_tzu": "O metodo regula a organizacao, hierarquia, logistica e gastos",
+        "business": "Execucao roadmap, sprint velocity, validacao financeira, processos",
+        "weight": 0.15,
+        "items": [
+          {"id": "roadmap_6_fases", "source": "roadmap.timeline", "description": "Roadmap 6 fases definido", "vvv": 0.85, "fator": 3, "polaridade": 1},
+          {"id": "sprints_planned", "source": "roadmap.sprints", "description": "4 sprints planejados Sprint 1-4", "vvv": 0.8, "fator": 3, "polaridade": 1},
+          {"id": "critical_path_defined", "source": "roadmap.criticalPath", "description": "Caminho critico: INPI->Alpha->PoC->First Customer", "vvv": 0.8, "fator": 4, "polaridade": 1},
+          {"id": "lois_zero", "source": "validation.low_vvv_items", "description": "LOIs assinadas VVV=0.0 BLOQUEIO", "vvv": 0.0, "fator": 5, "polaridade": -1},
+          {"id": "custo_dev_unknown", "source": "validation.low_vvv_items", "description": "Custo desenvolvimento VVV=0.4", "vvv": 0.4, "fator": 4, "polaridade": -1},
+          {"id": "conversao_zero", "source": "validation.low_vvv_items", "description": "Taxa conversao real desconhecida", "vvv": 0.0, "fator": 4, "polaridade": -1},
+          {"id": "financial_confidence_low", "source": "validation.confidence_badges", "description": "Confidence financeiro 0.65", "vvv": 0.65, "fator": 3, "polaridade": -1},
+          {"id": "model_contabilizei_validated", "source": "swot_interactive.forcas", "description": "Modelo Contabilizei validado", "vvv": 0.8, "fator": 4, "polaridade": 1}
+        ]
+      }
+    },
+    "audiences": [
+      {
+        "id": "b2g_prefeituras",
+        "label": "B2G - Prefeituras",
+        "icon": "🏛",
+        "sun_tzu_strategy": "Ataque o ponto onde nao estao preparados. Prefeituras <100K hab nao tem ninguem oferecendo LGPD acessivel.",
+        "persona": {
+          "titulo": "Secretario de Administracao / Prefeito",
+          "perfil": "Gestor publico sem conhecimento tecnico em LGPD. Oramento limitado. Precisa resolver rapido sem dor de cabeca.",
+          "lei_aplicavel": "LGPD Art.5, Art.41 (DPO obrigatorio), Lei 14.133/2021 Art.75 IV (dispensa ate R$50K)",
+          "risco_sem_servico": "Multa ANPD ate 2% faturamento (R$50M max), acao civil, dano reputacional, fiscalizacao TCE",
+          "valor_entregue": "Compliance completo R$297-397/mes com DPO incluido. Setup 30 dias. Sem licitacao complexa.",
+          "pain_point": "Nao sabe por onde comecar. Acha LGPD e caro e complexo. Medo de multa mas sem orcamento para consultoria.",
+          "canal_ideal": "Associacoes municipais (CNM, FNP) + consorcios + indicacao TCE"
+        },
+        "game_theory": {
+          "nos_entramos_primeiro": {"nos": "+40", "competidor": "+10", "resultado": "First-mover advantage critico"},
+          "competidor_entra_primeiro": {"nos": "+5", "competidor": "+30", "resultado": "Perdemos posicao em relacoes municipais"},
+          "ambos_entram": {"nos": "+15", "competidor": "+15", "resultado": "Commoditizacao precoce - vence quem tem ICT qualification"},
+          "ninguem_entra": {"nos": "0", "competidor": "0", "resultado": "Mercado permanece 72% nao-compliant"}
+        },
+        "sun_tzu_quotes": [
+          "Apareça onde nao sao esperados - ninguem oferece LGPD para micro-municipios",
+          "Ganhe sem lutar - ICT qualification = barreira de entrada natural",
+          "Conheca o terreno - cada prefeitura tem TCE, orcamento e politica diferentes"
+        ]
+      },
+      {
+        "id": "b2g_consorcios",
+        "label": "B2G - Consorcios Intermunicipais",
+        "icon": "🤝",
+        "sun_tzu_strategy": "Faca aliados dos consorcios - sao pontes para multiplas prefeituras. Um contrato = N clientes.",
+        "persona": {
+          "titulo": "Diretor Executivo do Consorcio",
+          "perfil": "Coordena 5-30 municipios. Quer oferecer servicos sem aumentar equipe. Focado em economia de escala.",
+          "lei_aplicavel": "LGPD Art.5 (todos os municipios devem compliance), Lei 14.133 (consorcio pode contratar centralizado)",
+          "risco_sem_servico": "Cada municipio do consorcio exposto individualmente. Consorcio perde credibilidade se membro for multado.",
+          "valor_entregue": "White-label SaaS R$197/mes por municipio. DPO hub centralizado para todos. Compliance unificado com marca do consorcio.",
+          "pain_point": "Nao tem equipe para atender LGPD de todos municipios membros. Precisa solucao escalavel.",
+          "canal_ideal": "Direto via Wilton (articulacao) + CNM eventos + white-label para consorcios"
+        },
+        "game_theory": {
+          "nos_entramos_primeiro": {"nos": "+60", "competidor": "+5", "resultado": "Lock-in via white-label. Consorcio = cliente recorrente multi-municipio"},
+          "competidor_entra_primeiro": {"nos": "+10", "competidor": "+40", "resultado": "Perdemos acesso a 5-30 municipios por consorcio"},
+          "ambos_entram": {"nos": "+20", "competidor": "+20", "resultado": "Consorcios dividem entre vendors - modelo hibrido"},
+          "ninguem_entra": {"nos": "0", "competidor": "0", "resultado": "Consorcios permanecem sem solucao"}
+        },
+        "sun_tzu_quotes": [
+          "O pior e atacar cidades - ataque via alianca (consorcios), nao venda individual",
+          "Conheca seu aliado - cada consorcio tem dinamica propria",
+          "Use o terreno - consorcios sao CANAL e CLIENTE simultaneamente"
+        ]
+      },
+      {
+        "id": "b2b_fornecedores_municipio",
+        "label": "B2B - Fornecedores de Municipio",
+        "icon": "🏢",
+        "sun_tzu_strategy": "Quem fornece ao municipio PRECISA de LGPD por obrigacao contratual. Capture-os quando o municipio virar cliente.",
+        "persona": {
+          "titulo": "Diretor de Compliance / DPO informal",
+          "perfil": "Empresa privada fornecedora de servicos ao municipio. Obrigacao contratual LGPD. Sem equipe dedicada privacy.",
+          "lei_aplicavel": "LGPD Art.3 (obrigatorio se processa dados no Brasil), clausulas contratuais municipais exigindo compliance",
+          "risco_sem_servico": "Perde contrato com municipio. Multa ANPD. Responsabilidade civil por vazamento de dados de cidadaos.",
+          "valor_entregue": "Compliance rapido R$497-997/mes. Templates especificos B2G. Integracao com requisitos do contrato municipal.",
+          "pain_point": "Municipio exige LGPD no contrato mas empresa nao sabe como cumprir. Consultoria cara e lenta.",
+          "canal_ideal": "Indicacao do municipio cliente + campanha 'seu municipio exige LGPD, nos ajudamos'"
+        },
+        "game_theory": {
+          "nos_entramos_primeiro": {"nos": "+30", "competidor": "+5", "resultado": "Cross-sell natural do municipio para fornecedores"},
+          "competidor_entra_primeiro": {"nos": "+10", "competidor": "+25", "resultado": "Competidor captura B2B enquanto nos focamos B2G"},
+          "ambos_entram": {"nos": "+15", "competidor": "+15", "resultado": "Segmentacao natural B2G vs B2B"},
+          "ninguem_entra": {"nos": "0", "competidor": "0", "resultado": "Fornecedores continuam nao-compliant"}
+        },
+        "sun_tzu_quotes": [
+          "Ataque onde nao estao preparados - fornecedores nao esperam obrigacao LGPD",
+          "Conheca o inimigo - fornecedor nao e inimigo, e cliente em potencial preso ao municipio",
+          "Transforme obstaculo em ponte - obrigacao contratual vira demanda natural"
+        ]
+      },
+      {
+        "id": "b2b_empresas_privadas",
+        "label": "B2B - Empresas Privadas",
+        "icon": "💼",
+        "sun_tzu_strategy": "Mercado massivo mas disperso. Use como receita complementar, nao foco. Posicione como 'LGPD acessivel para quem nao e enterprise'.",
+        "persona": {
+          "titulo": "DPO / Responsavel Privacy",
+          "perfil": "PME 50-500 funcionarios. Tem dados de clientes/funcionarios. Sabe que precisa LGPD mas sem budget enterprise.",
+          "lei_aplicavel": "LGPD Art.41 (DPO obrigatorio para todos), Art.5 (base legal para processamento)",
+          "risco_sem_servico": "Multa ate 2% faturamento. Vazamento = dano reputacional + acao civil. Concorrencia compliance como diferencial.",
+          "valor_entregue": "SaaS R$497-1.497/mes com DPO fracionado. Mesma plataforma enterprise a preco PME.",
+          "pain_point": "OneTrust/Confidata custa R$1.5-3.5K/mes. Consultoria demora 6-12 meses. Precisa resolver rapido.",
+          "canal_ideal": "SEO/Ads 'LGPD para empresas' + parcerias contabilidade + marketplace B2B"
+        },
+        "game_theory": {
+          "nos_entramos_primeiro": {"nos": "+20", "competidor": "+5", "resultado": "Market share PME antes de Confidata descer"},
+          "competidor_entra_primeiro": {"nos": "+5", "competidor": "+30", "resultado": "Confidata domina PME com 17 modulos"},
+          "ambos_entram": {"nos": "+10", "competidor": "+15", "resultado": "Commoditizacao - Confidata tem mais features"},
+          "ninguem_entra": {"nos": "0", "competidor": "0", "resultado": "PMEs continuam nao-compliant"}
+        },
+        "sun_tzu_quotes": [
+          "Nao lute em todas as frentes - B2B e secundario, B2G e o foco",
+          "Use o que o inimigo nao tem - ICT qualification nao existe no setor privado",
+          "Velocidade - se Confidata desce para PME, perdemos diferencial de preco"
+        ]
+      },
+      {
+        "id": "b2g_estaduais",
+        "label": "B2G - Orgaos Estaduais",
+        "icon": "🏛",
+        "sun_tzu_strategy": "Terreno diferente - procurement estadual e mais complexo. Abordar SOMENTE apos consolidar municipal. Nao ataque onde o terreno e desconhecido.",
+        "persona": {
+          "titulo": "Diretor de TI / Procurador Juridico",
+          "perfil": "Orgao estadual com milhares de servidores. Ja tem algum nivel de TI mas LGPD e novo. Processo licitatorio complexo.",
+          "lei_aplicavel": "LGPD Art.41 + Lei 14.133 (licitacao estadual - valores maiores, processo mais longo)",
+          "risco_sem_servico": "Multa ANPD proporcionalmente maior. Maior exposicao midiatica. Fiscalizacao TCE estadual.",
+          "valor_entregue": "Plataforma enterprise R$2-5K/mes. Data Discovery + anonimizacao LAI/LGPD. Suporte dedicado.",
+          "pain_point": "Volume de dados enorme. Processos manuais insustentaveis. Precisam automacao real.",
+          "canal_ideal": "Pregao eletronico + indicacao TCE + parceria com associcao de procuradores"
+        },
+        "game_theory": {
+          "nos_entramos_primeiro": {"nos": "+15", "competidor": "+5", "resultado": "Entrada prematura - sem maturidade para licitacao estadual"},
+          "competidor_entra_primeiro": {"nos": "+5", "competidor": "+30", "resultado": "NeoGov/Confidata lock-in estadual"},
+          "ambos_entram": {"nos": "+10", "competidor": "+15", "resultado": "Market share fragmentado"},
+          "ninguem_entra": {"nos": "0", "competidor": "0", "resultado": "Estaduais continuam com processos manuais"}
+        },
+        "sun_tzu_quotes": [
+          "Nao ataque terreno que nao conhece - estadual e phase 3+",
+          "Conheca quando recuar - Focus B2G municipal primeiro, estadual depois",
+          "O general que avanca sem pensar e derrotado"
+        ]
+      }
+    ],
+    "decision_rules": {
+      "attack_threshold": 75,
+      "caution_threshold": 60,
+      "retreat_threshold": 40,
+      "rules": [
+        {"score_min": 75, "action": "ATACAR", "description": "Posicao vantajosa, first-mover advantage, executar roadmap"},
+        {"score_min": 60, "action": "PREPARAR", "description": "Posicao defensavel, resolver gaps criticos antes de atacar"},
+        {"score_min": 40, "action": "CAUTELA", "description": "Posicao vulneravel, priorizar validacao antes de investimento"},
+        {"score_min": 0, "action": "RECUAR", "description": "Posicao desfavoravel, pivotar estrategia ou esperar janela"}
+      ]
+    },
+    "opportunity_matrix": {
+      "description": "Todos os cenarios possiveis de receita - nao omitir nenhum",
+      "segments": [
+        {"id": "prefeituras_20_100k", "label": "Prefeituras 20-100K hab", "tam": "R$12M/ano", "prioridade": "P0", "status": "foco_atual"},
+        {"id": "consorcios_intermunicipais", "label": "Consorcios (5-30 municipios)", "tam": "R$8M/ano", "prioridade": "P0", "status": "validacao"},
+        {"id": "prefeituras_100k_plus", "label": "Prefeituras >100K hab", "tam": "R$20M/ano", "prioridade": "P1", "status": "futuro"},
+        {"id": "fornecedores_municipio", "label": "B2B Fornecedores B2G", "tam": "R$10M/ano", "prioridade": "P1", "status": "cross_sell"},
+        {"id": "pme_privadas", "label": "PMEs privadas (50-500 func)", "tam": "R$15M/ano", "prioridade": "P2", "status": "futuro"},
+        {"id": "orgaos_estaduais", "label": "Orgaos publicos estaduais", "tam": "R$25M/ano", "prioridade": "P2", "status": "futuro"},
+        {"id": "eca_digital_age_verification", "label": "Age Verification ECA Digital", "tam": "R$5M/ano", "prioridade": "P0", "status": "killer_feature"},
+        {"id": "dpo_hub_fracionado", "label": "DPO Hub fracionado", "tam": "R$8M/ano", "prioridade": "P1", "status": "roadmap_fase3"},
+        {"id": "templates_lgpd_avulso", "label": "Templates LGPD/ROPA/RIPD avulso", "tam": "R$2M/ano", "prioridade": "P2", "status": "quick_win"},
+        {"id": "marketplace_gov_br", "label": "Marketplace gov.br", "tam": "R$30M/ano", "prioridade": "P1", "status": "nao_negociado"},
+        {"id": "white_label_consorcios", "label": "White-label para consorcios", "tam": "R$6M/ano", "prioridade": "P1", "status": "roadmap_fase2"},
+        {"id": "treinamento_ead_capacitacao", "label": "Conteudo EAD + certificacao", "tam": "R$3M/ano", "prioridade": "P2", "status": "roadmap_fase2"}
+      ]
+    }
   }
 }
