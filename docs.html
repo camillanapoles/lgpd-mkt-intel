@@ -135,8 +135,13 @@
       line-height: 1.65;
     }
 
-    .markdown h1, .markdown h2, .markdown h3 { margin-top: 1.3em; }
-    .markdown h1:first-child, .markdown h2:first-child, .markdown h3:first-child { margin-top: 0; }
+    .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 { margin-top: 1.3em; line-height: 1.3; }
+    .markdown h1:first-child, .markdown h2:first-child, .markdown h3:first-child, .markdown h4:first-child, .markdown h5:first-child, .markdown h6:first-child { margin-top: 0; }
+    .markdown p { margin: 0.7em 0; }
+    .markdown ul, .markdown ol { margin: 0.4em 0 0.9em 1.2em; padding: 0; }
+    .markdown li + li { margin-top: 0.2em; }
+    .markdown a { color: var(--brand); text-decoration: none; }
+    .markdown a:hover { text-decoration: underline; }
     .markdown pre {
       overflow: auto;
       background: #0f172a;
@@ -144,9 +149,42 @@
       border-radius: 10px;
       padding: 12px;
     }
-    .markdown code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-    .markdown table { border-collapse: collapse; width: 100%; }
+    .markdown code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 0.1rem 0.33rem;
+      font-size: 0.9em;
+    }
+    .markdown pre code {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+    }
+    .markdown table {
+      border-collapse: collapse;
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+      margin: 1rem 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
     .markdown th, .markdown td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    .markdown thead th {
+      background: #f8fafc;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .markdown tbody tr:nth-child(even) { background: #fcfdff; }
+    .markdown blockquote {
+      margin: 1rem 0;
+      padding: 0.6rem 0.9rem;
+      border-left: 4px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1e3a8a;
+      border-radius: 8px;
+    }
 
     .notice {
       border: 1px dashed var(--border);
@@ -171,7 +209,7 @@
   <div class="layout">
     <aside class="sidebar">
       <h1 class="title">LGPD • Biblioteca</h1>
-      <p class="subtitle">Página de docs estilo MKDocs para navegar os arquivos de informação.</p>
+      <p class="subtitle">Navegação estrita de arquivos Markdown em <code>docs/**</code>.</p>
       <input id="search" class="search" type="search" placeholder="Buscar documento..." aria-label="Buscar documento" />
       <div id="nav"></div>
     </aside>
@@ -188,87 +226,42 @@
   </div>
 
   <script>
-    const rootDocs = [
-      'BUSINESS-PLAN.md',
-      'FLUXO-TESTE-UX.md',
-      'battle-card-confidata.md',
-      'divisao-funcoes-cronograma.md',
-      'draft-pesquisa-lgpd.md',
-      'estrategia-diferenciacao-confidata.md',
-      'insights-reuniao-06-05.md',
-      'inteligencia-mercado-govtech-lgpd.md',
-      'memo-confidata-analysis.md',
-      'plano-negocios-cit-ai-tech.md',
-      'to-plan.md',
-      'transcricao-reuniao-lgpd-06-05-26.md'
+    const docsPaths = [
+      'docs/INPI_CHECKLIST_REGISTRO_SOFTWARE_IA.md',
+      'docs/analise-riscos-neogov.md',
+      'docs/cenario-comparison-neogov-vs-ict.md',
+      'docs/co-founder-advisor-municipal-sales.md',
+      'docs/estrategia-diferenciacao-confidata.md',
+      'docs/fatos-vs-recomendacoes-neogov.md',
+      'docs/insights-acionaveis-transcricao-neogov.md',
+      'docs/insights-reuniao-06-05.md',
+      'docs/inteligencia-mercado-govtech-lgpd.md',
+      'docs/loi-kit/LOI-KIT-COMPLETO.md',
+      'docs/plano-negocios-cit-ai-tech.md',
+      'docs/templates/LOI-LGPD-Prefeituras-DOCX-PLACEHOLDER.md',
+      'docs/templates/LOI-LGPD-Prefeituras.md',
+      'docs/templates/README-LOI.md',
+      'docs/whitepaper-dispensa-licitacao-ict-lgpd.md'
     ];
 
-    const docClassification = {
-      researchKeywords: [
-        'pesquisa',
-        'inteligencia',
-        'insights',
-        'estrategia',
-        'memo',
-        'battle-card',
-        'transcricao',
-        'plano-negocios'
-      ]
-    };
-
-    function isResearchDoc(path) {
-      const lower = path.toLowerCase();
-      const withoutExt = lower.endsWith('.md') ? lower.slice(0, -3) : lower;
-      const tokens = withoutExt.split(/[^a-z0-9à-ÿ]+/).filter(Boolean);
-      return docClassification.researchKeywords.some(keyword => {
-        if (keyword.includes('-')) {
-          return withoutExt.includes(keyword);
-        }
-        return tokens.includes(keyword);
-      });
-    }
-
-    const rootMarkdownDocs = rootDocs.filter(path => path.toLowerCase().endsWith('.md'));
-    const { researchRootDocs, opsRootDocs } = rootMarkdownDocs.reduce((acc, path) => {
-      if (isResearchDoc(path)) {
-        acc.researchRootDocs.push(path);
-      } else {
-        acc.opsRootDocs.push(path);
-      }
-      return acc;
-    }, { researchRootDocs: [], opsRootDocs: [] });
-
-    const docsBySection = [
-      {
-        title: 'Pesquisa (arquivos .md na raiz)',
-        docs: researchRootDocs
-      },
-      {
-        title: 'Raiz do repositório (demais .md)',
-        docs: opsRootDocs
-      },
-      {
-        title: 'Documentos em /docs',
-        docs: [
-          'docs/INPI_CHECKLIST_REGISTRO_SOFTWARE_IA.md',
-          'docs/co-founder-advisor-municipal-sales.md',
-          'docs/whitepaper-dispensa-licitacao-ict-lgpd.md',
-          'docs/loi-kit/LOI-KIT-COMPLETO.md'
-        ]
-      },
-      {
-        title: 'Templates em /docs/templates',
-        docs: [
-          'docs/templates/LOI-LGPD-Prefeituras-DOCX-PLACEHOLDER.md',
-          'docs/templates/LOI-LGPD-Prefeituras.md',
-          'docs/templates/README-LOI.md'
-        ]
-      },
-      {
-        title: 'Documentação do app',
-        docs: ['app/README.md']
-      }
-    ].filter(section => section.docs.length > 0);
+    const docsBySection = Object.entries(
+      docsPaths
+        .filter((path) => path.startsWith('docs/') && path.toLowerCase().endsWith('.md'))
+        .sort((a, b) => a.localeCompare(b, 'pt-BR'))
+        .reduce((acc, path) => {
+          const folder = path.slice(0, path.lastIndexOf('/'));
+          if (!acc[folder]) acc[folder] = [];
+          acc[folder].push(path);
+          return acc;
+        }, {})
+    ).sort(([a], [b]) => {
+      if (a === 'docs') return -1;
+      if (b === 'docs') return 1;
+      return a.localeCompare(b, 'pt-BR');
+    }).map(([folder, paths]) => ({
+      title: folder === 'docs' ? 'docs (raiz)' : folder,
+      docs: paths
+    }));
 
     const allDocs = docsBySection.flatMap(section => section.docs.map(path => ({
       section: section.title,
@@ -320,15 +313,32 @@
       return safe;
     }
 
+    function formatTableRow(line) {
+      return line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => formatInline(cell.trim()));
+    }
+
+    function isTableDivider(line) {
+      const parts = line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => cell.trim());
+      return parts.length > 1 && parts.every(cell => /^:?-{3,}:?$/.test(cell));
+    }
+
     function renderMarkdown(markdown) {
       const lines = markdown.split('\n');
       const html = [];
-      let inList = false;
+      let listType = null;
       let inCode = false;
       let codeBuffer = [];
+      let index = 0;
 
-      for (const line of lines) {
+      while (index < lines.length) {
+        const line = lines[index];
+        const nextLine = lines[index + 1] ?? '';
+
         if (line.trim().startsWith('```')) {
+          if (listType) {
+            html.push(listType === 'ol' ? '</ol>' : '</ul>');
+            listType = null;
+          }
           if (inCode) {
             html.push(`<pre><code>${escapeHtml(codeBuffer.join('\n'))}</code></pre>`);
             codeBuffer = [];
@@ -336,53 +346,124 @@
           } else {
             inCode = true;
           }
+          index += 1;
           continue;
         }
 
         if (inCode) {
           codeBuffer.push(line);
+          index += 1;
+          continue;
+        }
+
+        if (/^\s*>\s?/.test(line)) {
+          if (listType) {
+            html.push(listType === 'ol' ? '</ol>' : '</ul>');
+            listType = null;
+          }
+          const quoteLines = [];
+          while (index < lines.length && /^\s*>\s?/.test(lines[index])) {
+            quoteLines.push(lines[index].replace(/^\s*>\s?/, ''));
+            index += 1;
+          }
+          html.push(`<blockquote>${quoteLines.map(part => formatInline(part)).join('<br/>')}</blockquote>`);
+          continue;
+        }
+
+        if (/^\s*([-*_])\1\1+\s*$/.test(line.trim())) {
+          if (listType) {
+            html.push(listType === 'ol' ? '</ol>' : '</ul>');
+            listType = null;
+          }
+          html.push('<hr/>');
+          index += 1;
+          continue;
+        }
+
+        if (line.includes('|') && nextLine.includes('|') && isTableDivider(nextLine)) {
+          if (listType) {
+            html.push(listType === 'ol' ? '</ol>' : '</ul>');
+            listType = null;
+          }
+          const headerCells = formatTableRow(line);
+          const bodyRows = [];
+          index += 2;
+          while (index < lines.length && lines[index].includes('|') && lines[index].trim()) {
+            bodyRows.push(formatTableRow(lines[index]));
+            index += 1;
+          }
+          html.push('<table><thead><tr>');
+          headerCells.forEach(cell => html.push(`<th>${cell}</th>`));
+          html.push('</tr></thead><tbody>');
+          bodyRows.forEach((row) => {
+            html.push('<tr>');
+            row.forEach(cell => html.push(`<td>${cell}</td>`));
+            html.push('</tr>');
+          });
+          html.push('</tbody></table>');
           continue;
         }
 
         const headingMatch = line.match(/^(#{1,6})\s+(.*)$/);
         if (headingMatch) {
-          if (inList) {
-            html.push('</ul>');
-            inList = false;
+          if (listType) {
+            html.push(listType === 'ol' ? '</ol>' : '</ul>');
+            listType = null;
           }
           const level = headingMatch[1].length;
           html.push(`<h${level}>${formatInline(headingMatch[2])}</h${level}>`);
+          index += 1;
           continue;
         }
 
-        const listMatch = line.match(/^[-*]\s+(.*)$/);
-        if (listMatch) {
-          if (!inList) {
-            html.push('<ul>');
-            inList = true;
+        const unorderedMatch = line.match(/^\s*[-*+]\s+(.*)$/);
+        const orderedMatch = line.match(/^\s*\d+\.\s+(.*)$/);
+        if (unorderedMatch || orderedMatch) {
+          const nextType = orderedMatch ? 'ol' : 'ul';
+          if (!listType) {
+            html.push(nextType === 'ol' ? '<ol>' : '<ul>');
+            listType = nextType;
+          } else if (listType !== nextType) {
+            html.push(listType === 'ol' ? '</ol>' : '</ul>');
+            html.push(nextType === 'ol' ? '<ol>' : '<ul>');
+            listType = nextType;
           }
-          html.push(`<li>${formatInline(listMatch[1])}</li>`);
+          html.push(`<li>${formatInline((orderedMatch || unorderedMatch)[1])}</li>`);
+          index += 1;
           continue;
         }
 
         if (!line.trim()) {
-          if (inList) {
-            html.push('</ul>');
-            inList = false;
+          if (listType) {
+            html.push(listType === 'ol' ? '</ol>' : '</ul>');
+            listType = null;
           }
+          index += 1;
           continue;
         }
 
-        if (inList) {
-          html.push('</ul>');
-          inList = false;
+        if (listType) {
+          html.push(listType === 'ol' ? '</ol>' : '</ul>');
+          listType = null;
         }
 
-        html.push(`<p>${formatInline(line)}</p>`);
+        const paragraphLines = [line.trim()];
+        index += 1;
+        while (index < lines.length && lines[index].trim() &&
+          !/^(#{1,6})\s+/.test(lines[index]) &&
+          !/^\s*[-*+]\s+/.test(lines[index]) &&
+          !/^\s*\d+\.\s+/.test(lines[index]) &&
+          !/^\s*>\s?/.test(lines[index]) &&
+          !(lines[index].includes('|') && (lines[index + 1] ?? '').includes('|') && isTableDivider(lines[index + 1] ?? '')) &&
+          !lines[index].trim().startsWith('```')) {
+          paragraphLines.push(lines[index].trim());
+          index += 1;
+        }
+        html.push(`<p>${formatInline(paragraphLines.join(' '))}</p>`);
       }
 
-      if (inList) {
-        html.push('</ul>');
+      if (listType) {
+        html.push(listType === 'ol' ? '</ol>' : '</ul>');
       }
 
       if (inCode) {
@@ -402,9 +483,14 @@
         })
       })).filter(section => section.docs.length > 0);
 
+      if (!grouped.length) {
+        navEl.innerHTML = '<p class="notice">Nenhum documento encontrado para o filtro aplicado.</p>';
+        return;
+      }
+
       navEl.innerHTML = grouped.map(section => `
         <section class="section">
-          <h2>${section.title}</h2>
+          <h2>${section.title} (${section.docs.length})</h2>
           <ul class="doc-list">
             ${section.docs.map(path => {
               const encodedPath = encodeURIComponent(path);
