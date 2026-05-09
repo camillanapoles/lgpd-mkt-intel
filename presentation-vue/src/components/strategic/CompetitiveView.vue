@@ -16,18 +16,31 @@
         ]"
       >
         <div class="flex items-start justify-between mb-3">
-          <div>
-            <h3 class="text-h4 text-white capitalize">{{ key }}</h3>
-            <span
-              :class="[
-                'text-caption px-2 py-0.5 rounded',
-                statusClass(comp.status),
-              ]"
-            >
-              {{ comp.status }}
-            </span>
+          <div class="flex items-center gap-2">
+            <div>
+              <h3 class="text-h4 text-white capitalize">{{ key }}</h3>
+              <span
+                :class="[
+                  'text-caption px-2 py-0.5 rounded',
+                  statusClass(comp.status),
+                ]"
+              >
+                {{ comp.status }}
+              </span>
+            </div>
+            <button
+              @click.stop="toggleInfo(key)"
+              class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+              :class="expandedInfo.has(key) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+              title="Ver fonte e detalhes"
+            >i</button>
           </div>
           <span v-if="comp.timing" class="text-caption text-slate-400">Timeline: {{ comp.timing }}</span>
+        </div>
+
+        <div v-if="expandedInfo.has(key)" class="space-y-1 border-t border-slate-700/50 mb-3 pt-1.5">
+          <p class="text-caption text-slate-400">Status: {{ comp.status || 'Nao classificado' }} | Impacto: {{ comp.impact || 'Nao avaliado' }}</p>
+          <div v-if="comp.timing" class="text-caption text-slate-500">Timeline: {{ comp.timing }}</div>
         </div>
 
         <div v-if="comp.pricing" class="mb-3">
@@ -104,9 +117,17 @@
 </template>
 
 <script setup>
+import { reactive } from 'vue'
+
 const props = defineProps({
   competitive: { type: Object, default: () => ({}) },
 })
+
+const expandedInfo = reactive(new Set())
+
+const toggleInfo = (key) => {
+  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
+}
 
 const statusClass = (status) => {
   if (status?.includes('THREAT')) return 'bg-red-900/50 text-red-400'

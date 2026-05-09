@@ -48,6 +48,19 @@
               />
             </div>
             <span class="text-caption text-white font-mono">{{ (member.alignment * 100).toFixed(0) }}%</span>
+            <button
+              @click.stop="toggleInfo(`int-${member.nome}`)"
+              class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+              :class="expandedInfo.has(`int-${member.nome}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+              title="Ver fonte e detalhes"
+            >i</button>
+          </div>
+          <div v-if="expandedInfo.has(`int-${member.nome}`)" class="px-2 pb-1 space-y-1 border-t border-slate-700/50 mt-2 pt-1.5">
+            <p class="text-caption text-slate-400">Poder: {{ member.power }} | Role: {{ member.role }}</p>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-caption text-slate-500">Fonte:</span>
+              <span class="text-accent-400 text-xs">{{ member.fonte || 'Nao mapeada' }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +74,15 @@
           class="bg-slate-800/50 border border-slate-700 rounded-card p-4"
         >
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-h4 text-white">{{ group.tipo }}</h3>
+            <div class="flex items-center gap-2">
+              <h3 class="text-h4 text-white">{{ group.tipo }}</h3>
+              <button
+                @click.stop="toggleInfo(`ext-${group.tipo}`)"
+                class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+                :class="expandedInfo.has(`ext-${group.tipo}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+                title="Ver fonte e detalhes"
+              >i</button>
+            </div>
             <div class="flex items-center gap-3">
               <span :class="['text-caption px-2 py-0.5 rounded', powerClass(group.power)]">
                 Poder: {{ group.power }}
@@ -80,6 +101,15 @@
             </div>
           </div>
           <p class="text-body-sm text-slate-300">{{ group.interesse }}</p>
+          <div v-if="expandedInfo.has(`ext-${group.tipo}`)" class="space-y-1 border-t border-slate-700/50 mt-2 pt-1.5">
+            <p class="text-caption text-slate-400">Interesse: {{ group.interesse }}</p>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-caption text-slate-500">Poder:</span>
+              <span class="text-accent-400 text-xs">{{ group.power }}</span>
+              <span class="text-caption text-slate-500 ml-2">Alinhamento:</span>
+              <span class="text-accent-400 text-xs">{{ (group.alignment * 100).toFixed(0) }}%</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -142,13 +172,18 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, reactive } from 'vue'
 
 const props = defineProps({
   stakeholders: { type: Object, default: () => ({}) },
 })
 
 const activeView = ref('internal')
+const expandedInfo = reactive(new Set())
+
+const toggleInfo = (key) => {
+  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
+}
 
 const views = [
   { id: 'internal', label: 'Time' },

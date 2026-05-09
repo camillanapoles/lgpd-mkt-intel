@@ -56,6 +56,20 @@
           <span class="text-caption font-mono" :class="vvvTextClass(activeBlockData.vvv)">
             {{ activeBlockData.vvv.toFixed(2) }}
           </span>
+          <button
+            @click.stop="toggleInfo(activeBlock)"
+            class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+            :class="expandedInfo.has(activeBlock) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+            title="Ver fonte e detalhes"
+          >i</button>
+        </div>
+      </div>
+
+      <div v-if="expandedInfo.has(activeBlock)" class="space-y-1 border-t border-slate-700/50 mb-3 pt-1.5">
+        <p class="text-caption text-slate-400">VVV: {{ activeBlockData.vvv.toFixed(2) }} — {{ vvvExplanation(activeBlockData.vvv) }}</p>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-caption text-slate-500">Fonte:</span>
+          <span class="text-accent-400 text-xs">{{ activeBlockData.fonte || 'Nao mapeada' }}</span>
         </div>
       </div>
 
@@ -87,12 +101,24 @@
 </template>
 
 <script setup>
-import { ref, computed, h } from 'vue'
+import { ref, computed, reactive, h } from 'vue'
 
 const props = defineProps({ bmc: { type: Object, default: () => ({}) } })
 
 const activeBlock = ref(null)
 const showGaps = ref(false)
+const expandedInfo = reactive(new Set())
+
+const toggleInfo = (key) => {
+  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
+}
+
+const vvvExplanation = (vvv) => {
+  if (vvv >= 0.95) return 'Fato verificado (transcricao/fonte oficial)'
+  if (vvv >= 0.8) return 'Fonte oficial citada com confianca alta'
+  if (vvv >= 0.5) return 'Analise fundamentada, parcialmente verificada'
+  return 'Gap — nao verificado, necessita pesquisa'
+}
 
 const getBlock = (id) => {
   return props.bmc.blocks?.find((b) => b.id === id) || { id, label: id, items: [], vvv: 0 }
