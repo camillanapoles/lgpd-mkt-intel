@@ -886,6 +886,34 @@
         {"score_min": 0, "action": "RECUAR", "description": "Posicao desfavoravel, pivotar estrategia ou esperar janela"}
       ]
     },
+    "slider_overrides": {
+      "lois": {
+        "condition": ">=3",
+        "applies_to": [
+          {"dim": "metodo", "item_id": "lois_zero", "vvv_override": 0.9, "polaridade_override": 1, "description_override": "LOIs assinadas - validacao mercado real"},
+          {"dim": "metodo", "item_id": "conversao_zero", "vvv_override": 0.7, "description_override": "Taxa conversao validada com LOIs reais"}
+        ]
+      },
+      "advisor": {
+        "condition": "true",
+        "applies_to": [
+          {"dim": "dao", "item_id": "advisor_missing", "vvv_override": 0.9, "polaridade_override": 1, "description_override": "Advisor onboardado - cobertura B2G"},
+          {"dim": "comandante", "item_id": "advisor_vvv03", "vvv_override": 0.9, "polaridade_override": 1, "description_override": "Advisor confirmado com experiencia municipal"}
+        ]
+      },
+      "funding": {
+        "condition": ">=960",
+        "applies_to": [
+          {"dim": "metodo", "item_id": "custo_dev_unknown", "vvv_override": 0.8, "description_override": "Custo dev validado com funding secured"}
+        ]
+      },
+      "anpd": {
+        "condition": "aumenta_50",
+        "applies_to": [
+          {"dim": "ceu", "item_id": "anpd_enforcement", "vvv_override": 0.98, "fator_override": 5}
+        ]
+      }
+    },
     "opportunity_matrix": {
       "description": "Todos os cenarios possiveis de receita - nao omitir nenhum",
       "segments": [

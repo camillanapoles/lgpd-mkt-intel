@@ -48,6 +48,7 @@
         <ScenarioSimulator
           v-else-if="activeTab === 'scenarios'"
           :scenarios="data.scenarios"
+          @scenario-change="sliderState = $event"
         />
 
         <RoadmapViewer
@@ -81,6 +82,7 @@
         <ArtOfWar
           v-else-if="activeTab === 'snti'"
           :snti="data.snti"
+          :scenario-overrides="sntiOverrides"
         />
       </template>
     </main>
@@ -102,6 +104,7 @@ import ArtOfWar from './components/strategic/ArtOfWar.vue'
 
 const activeTab = ref('dashboard')
 const data = ref(null)
+const sliderState = ref({})
 
 const tabs = [
   { id: 'dashboard', label: 'Dashboard' },
@@ -123,12 +126,46 @@ const overallConfidenceClass = computed(() => {
   return 'text-red-400'
 })
 
+const computeOverrides = (snti, sliders) => {
+  const mapping = snti?.slider_overrides || {}
+  const overrides = {}
+  for (const [sliderId, config] of Object.entries(mapping)) {
+    const val = sliders[sliderId]
+    let active = false
+    if (config.condition === 'true') active = val === true
+    else if (config.condition.startsWith('>=')) active = Number(val) >= Number(config.condition.slice(2))
+    else active = val === config.condition
+
+    if (!active) continue
+    for (const rule of config.applies_to) {
+      overrides[`${rule.dim}:${rule.item_id}`] = {
+        vvv: rule.vvv_override,
+        fator: rule.fator_override,
+        polaridade: rule.polaridade_override,
+        description: rule.description_override,
+      }
+    }
+  }
+  return overrides
+}
+
+const sntiOverrides = computed(() => {
+  const snti = data.value?.snti
+  if (!snti) return {}
+  return computeOverrides(snti, sliderState.value)
+})
+
 const sntiGlobalScore = computed(() => {
   const snti = data.value?.snti
   if (!snti) return '?'
+  const overrides = sntiOverrides.value
   let score = 0
   for (const [key, dim] of Object.entries(snti.dimensions || {})) {
-    const items = dim.items || []
+    const items = (dim.items || []).map(item => {
+      const o = overrides[`${key}:${item.id}`]
+      if (!o) return item
+      return { ...item, vvv: o.vvv ?? item.vvv, fator: o.fator ?? item.fator, polaridade: o.polaridade ?? item.polaridade }
+    })
     const totalPos = items.filter(i => i.polaridade === 1).reduce((s, i) => s + i.vvv * i.fator, 0)
     const totalNeg = items.filter(i => i.polaridade === -1).reduce((s, i) => s + i.vvv * i.fator, 0)
     const maxPos = items.filter(i => i.polaridade === 1).reduce((s, i) => s + i.fator, 0)
@@ -151,5 +188,9 @@ onMounted(async () => {
   const base = import.meta.env.BASE_URL
   const response = await fetch(`${base}strategic-data-unified.json`)
   data.value = await response.json()
+  const sliders = data.value?.scenarios?.sliders || []
+  const initial = {}
+  sliders.forEach(s => { initial[s.id] = s.value })
+  sliderState.value = initial
 })
 </script>
