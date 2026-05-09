@@ -75,6 +75,7 @@
 
         <FdcuInteractive
           v-else-if="activeTab === 'fdcu'"
+          :initial-data="data.fdcu_editor"
           :priorities="data.priorities"
           :validation="data.validation"
         />
@@ -83,6 +84,11 @@
           v-else-if="activeTab === 'snti'"
           :snti="data.snti"
           :scenario-overrides="sntiOverrides"
+        />
+
+        <StatusPage
+          v-else-if="activeTab === 'status'"
+          :snti="data.snti"
         />
       </template>
     </main>
@@ -101,6 +107,7 @@ import CompetitiveView from './components/strategic/CompetitiveView.vue'
 import StakeholderMap from './components/strategic/StakeholderMap.vue'
 import FdcuInteractive from './components/strategic/FdcuInteractive.vue'
 import ArtOfWar from './components/strategic/ArtOfWar.vue'
+import StatusPage from './components/strategic/StatusPage.vue'
 
 const activeTab = ref('dashboard')
 const data = ref(null)
@@ -117,6 +124,7 @@ const tabs = [
   { id: 'stakeholders', label: 'Stakeholders' },
   { id: 'fdcu', label: 'FDC-U' },
   { id: 'snti', label: '⚔ Arte da Guerra' },
+  { id: 'status', label: 'Status Pesquisa' },
 ]
 
 const overallConfidenceClass = computed(() => {

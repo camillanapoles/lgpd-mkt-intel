@@ -9,10 +9,30 @@
 
     <!-- SCORE GLOBAL -->
     <div class="bg-slate-800/50 border-2 rounded-card p-6 mb-6 text-center" :class="scoreBorderClass">
-      <p class="text-caption text-slate-400 mb-1">PRONTIDAO ESTRATEGICA</p>
+      <div class="flex items-center justify-center gap-2 mb-1">
+        <p class="text-caption text-slate-400">PRONTIDAO ESTRATEGICA</p>
+        <span v-if="subEngineMode" class="text-caption text-accent-400 font-bold">({{ activeAud?.label || 'Publico' }})</span>
+        <span v-else class="text-caption text-slate-500">(Global)</span>
+      </div>
       <p class="text-display font-bold" :class="scoreTextClass">{{ globalScore.toFixed(1) }}</p>
       <p class="text-h4 mt-1" :class="scoreTextClass">{{ actionLabel }}</p>
       <p class="text-body-sm text-slate-400 mt-2">{{ actionDescription }}</p>
+      <!-- Sub-Engine toggle -->
+      <div class="flex items-center justify-center gap-2 mt-3">
+        <button
+          @click="subEngineMode = !subEngineMode"
+          :class="[
+            'px-3 py-1 rounded-lg text-caption transition-all border',
+            subEngineMode
+              ? 'bg-accent-600 text-white border-accent-500'
+              : 'bg-slate-800 text-slate-400 border-slate-700 hover:border-slate-500',
+          ]"
+          :title="subEngineMode ? 'Voltar ao score global' : 'Ativar sub-engine por publico-alvo'"
+        >
+          Sub-Engine por Publico
+        </button>
+        <span class="text-caption text-slate-500">{{ subEngineMode ? 'Pesos: ' + activeAud?.label : 'Pesos uniformes' }}</span>
+      </div>
       <div v-if="hasOverrides" class="mt-3 p-2 rounded-lg bg-accent-950/30 border border-accent-900/40">
         <p class="text-caption text-accent-400 font-bold">WHAT-IF ATIVO - Cenario Simulado</p>
         <p class="text-caption text-slate-400">Override VVV aplicado em {{ overrideCount }} item(ns)</p>
@@ -47,7 +67,7 @@
           </div>
           <div class="text-right">
             <p class="text-h3 font-bold" :class="dimScoreClass(key)">{{ dimScore(key).toFixed(1) }}</p>
-            <p class="text-caption text-slate-400">peso: {{ (dim.weight * 100).toFixed(0) }}%</p>
+            <p class="text-caption text-slate-400">peso: {{ (effectiveWeight(key) * 100).toFixed(0) }}%</p>
           </div>
         </div>
         <div class="h-3 bg-slate-700 rounded-full overflow-hidden mb-3">
@@ -239,6 +259,7 @@ const props = defineProps({
 
 const activeAudience = ref(props.snti.audiences?.[0]?.id || '')
 const expandedItems = reactive(new Set())
+const subEngineMode = ref(false)
 const toggleInfo = (dimKey, itemId) => {
   const key = `${dimKey}:${itemId}`
   expandedItems.has(key) ? expandedItems.delete(key) : expandedItems.add(key)
@@ -292,10 +313,17 @@ const dimScore = (key) => {
   return ((totalPos - totalNeg) / maxPos) * 100
 }
 
+const effectiveWeight = (key) => {
+  if (subEngineMode.value && activeAud.value?.custom_weights) {
+    return activeAud.value.custom_weights[key] || 0
+  }
+  return dimensions.value[key]?.weight || 0.2
+}
+
 const globalScore = computed(() => {
   let score = 0
   for (const key of Object.keys(dimensions.value)) {
-    score += dimScore(key) * (dimensions.value[key].weight || 0.2)
+    score += dimScore(key) * effectiveWeight(key)
   }
   return score
 })

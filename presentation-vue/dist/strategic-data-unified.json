@@ -1250,7 +1250,23 @@
             "fonte": "transcricao-reuniao-neogov.txt:L120-L160 (equipe Wilton/Gislene/Camilla/Simone definida)",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Equipe multidisciplinar definida com 4 roles: Wilton (Presidente/Articulação), Gislene (Jurídica), Camilla (Tecnologia), Simone (Compliance). VVV=0.85 baseado em swot_impl.forcas[3]"
+            "explicacao": "Equipe multidisciplinar definida com 4 roles: Wilton (Presidente/Articulação), Gislene (Jurídica), Camilla (Tecnologia), Simone (Compliance). VVV=0.85 baseado em swot_impl.forcas[3]",
+            "sqia_trace": {
+              "socratic": "Equipe tem 4 roles definidos. Qual o nível de alinhamento entre eles?",
+              "questioner": "Transcrição L120-L160 confirma 4 roles. Wilton (Presidente), Gislene (Jurídica), Camilla (Tech), Simone (Compliance). Alinhamento alto mas dependente de reunião única.",
+              "innovator": "Alinhamento 0.85 — forte mas não perfeito. Equipe definida recentemente, sem histórico de execução conjunta. Peso 4.",
+              "adversarial": "Risco: equipe pode desalinhar com pressão de entrega. Sem advisor externo para equilibrar. VVV 0.85 correto."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Alinhamento alto = melhor, direto",
+            "criterios_dinamicos": [
+              "alinhamento equipe",
+              "RACI definido",
+              "roles claros"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "raci_coverage",
@@ -1262,7 +1278,23 @@
             "fonte": "fdcu-continuidade.json:RACI + transcricao:L120-L160",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "4 atividades com RACI definido (Presidente, Jurídica, Tech, Compliance). Equipe formalizada na reunião estratégica."
+            "explicacao": "4 atividades com RACI definido (Presidente, Jurídica, Tech, Compliance). Equipe formalizada na reunião estratégica.",
+            "sqia_trace": {
+              "socratic": "Quantas atividades têm RACI definido?",
+              "questioner": "fdcu-continuidade.json mostra 4 atividades com RACI. Transcrição confirma responsabilidades por pessoa.",
+              "innovator": "RACI 4/4 das atividades críticas. VVV 0.9. Peso 3 — importante mas não bloqueante.",
+              "adversarial": "RACI definido para 4 atividades. Mas processo 100% manual (transcrição L1631). RACI não resolve escalabilidade."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Mais cobertura RACI = melhor",
+            "criterios_dinamicos": [
+              "cobertura RACI",
+              "responsaveis mapeados",
+              "accountability"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "prefeitura_alignment_low",
@@ -1274,7 +1306,23 @@
             "fonte": "transcricao-reuniao-neogov.txt:L889-L892 'Prefeituras falidas, sem dinheiro' + swot_impl.ameacas[0] VVV=0.9",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Prefeitura LEM proposta R$600K — preço é barreira. Maioria prefeituras falidas. Alinhamento médio 0.3 — não priorizam LGPD."
+            "explicacao": "Prefeitura LEM proposta R$600K — preço é barreira. Maioria prefeituras falidas. Alinhamento médio 0.3 — não priorizam LGPD.",
+            "sqia_trace": {
+              "socratic": "Prefeituras estão alinhadas com LGPD? Qual o nível de maturidade?",
+              "questioner": "Transcrição L889-L892: 'maioria das prefeituras falidas'. IBGE MUNIC 2024: 72% sem estrutura LGPD. Prefeito não prioriza.",
+              "innovator": "Alinhamento médio 0.3 — risco negativo. Prefeituras não priorizam LGPD até multa. Peso 4 — impacto em sales cycle.",
+              "adversarial": "VVV 0.8 confiável — múltiplas fontes confirmam. Mas pode mudar com fiscalização ANPD intensificando."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Menos alinhamento = pior. Scoring inverte",
+            "criterios_dinamicos": [
+              "alinhamento prefeituras",
+              "comite LGPD",
+              "engajamento municipio"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "consorcio_early_validation",
@@ -1286,7 +1334,23 @@
             "fonte": "transcricao-reuniao-neogov.txt:L923-L934 (Associações Municípios) + L604-L614 (consórcios CIMINAS/Granbel R$31.9M)",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "LGPD obrigatória desde set/2020. Fiscalização profunda desde 2022 via ANPD, MP e TC. ANPD transição fase educativa para sanção."
+            "explicacao": "LGPD obrigatória desde set/2020. Fiscalização profunda desde 2022 via ANPD, MP e TC. ANPD transição fase educativa para sanção.",
+            "sqia_trace": {
+              "socratic": "Consórcios municipais podem validar o produto cedo?",
+              "questioner": "Transcrição L923-L934: Associações de Municípios como canal. Consórcios CIMINAS/Granbel credenciados R$31.9M. Mas sem validação prática.",
+              "innovator": "Canal validado conceitualmente. Sem LOI assinada = sem validação real. Peso 3.",
+              "adversarial": "Consórcios são canal promissor mas speculativo. Nenhum contactado. VVV 0.7 reflete incerteza."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Validação consórcio = positivo direto",
+            "criterios_dinamicos": [
+              "validacao consorcios",
+              "interesse TCEs",
+              "contratos piloto"
+            ],
+            "certeza_agregada": 0.7,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "advisor_missing",
@@ -1295,10 +1359,26 @@
             "vvv": 0.3,
             "fator": 5,
             "polaridade": -1,
-            "fonte": "Co-founder/Advisor nao confirmado",
+            "fonte": "transcricao:L1228-L1247 VVV=0.95 \"Custo dev não respondido\" + cenario_atual.gaps \"Advisor/Co-founder não confirmado\"",
             "fonte_status": "PESQUISANDO",
-            "vvv_updated": "2026-05-08",
-            "explicacao": "Co-founder/Advisor nao confirmado — VVV 0.3 (peso 5, risco)"
+            "vvv_updated": "2026-05-09",
+            "explicacao": "Co-founder/Advisor com expertise em B2G não confirmado. VVV=0.3 — gap crítico. Necessário para credibilidade junto a prefeituras e consórcios. Peso 5 = bloqueio estratégico. Slider \"Advisor\" simula cenário onde é encontrado (VVV→0.8).",
+            "sqia_trace": {
+              "socratic": "O projeto tem advisor/co-founder com expertise B2G?",
+              "questioner": "Transcrição L1228-L1247: pergunta sobre desenvolvimento não respondida. Gap de advisor identificado. docs/co-founder-advisor-municipal-sales.md existe mas não preenchido.",
+              "innovator": "Sem advisor = gap crítico. Peso 5 (máximo). Necessário para credibilidade junto a prefeituras.",
+              "adversarial": "VVV 0.3 — gap real. Não é rumor, é fato: advisor não existe. Slider simula cenário onde é encontrado."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Ausência advisor = negativo. Menos gap = melhor",
+            "criterios_dinamicos": [
+              "advisor confirmado",
+              "experiencia B2G",
+              "network prefeituras"
+            ],
+            "certeza_agregada": 0.3,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "tce_not_mapped",
@@ -1310,7 +1390,23 @@
             "fonte": "TCEs nao mapeados individualmente",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-08",
-            "explicacao": "TCEs nao mapeados individualmente — VVV 0.6 (peso 3, risco)"
+            "explicacao": "TCEs nao mapeados individualmente — VVV 0.6 (peso 3, risco)",
+            "sqia_trace": {
+              "socratic": "Quais TCEs estão fiscalizando LGPD ativamente?",
+              "questioner": "SWOT transcricao oportunidades[3]: '9 tribunais revelando grau inexpressivo'. PESTLE confirma TCU/TCEs auditando.",
+              "innovator": "9 TCEs fiscalizando mas não mapeados individualmente. Qual priorizar? Peso 3.",
+              "adversarial": "TCEs mapeados genericamente. Mapeamento individual (qual TCE, qual estado, qual foco) é gap. VVV 0.6 honesto."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "TCEs não mapeados = negativo",
+            "criterios_dinamicos": [
+              "TCEs mapeados",
+              "editais ativos",
+              "contato estabelecido"
+            ],
+            "certeza_agregada": 0.6,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1330,7 +1426,23 @@
             "fonte": "ANPD agencia independente ativa",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-08",
-            "explicacao": "ANPD agencia independente ativa — VVV 0.9 (peso 5, positivo)"
+            "explicacao": "ANPD agencia independente ativa — VVV 0.9 (peso 5, positivo)",
+            "sqia_trace": {
+              "socratic": "ANPD está realmente fiscalizando? Quais ações concretas?",
+              "questioner": "Transcrição L51-L70: RIPT obrigatório ANPD/MP/TC. SWOT oportunidades[2]: agenda regulatória ativa. inteligencia-mercado-govtech-lgpd.md detalha ações.",
+              "innovator": "ANPD ativa com multas R$50M. Transição fase educativa para sanção. Peso 5.",
+              "adversarial": "ANPD é real mas capacidade fiscalizadora limitada. Meta ANPD: 200 fiscalizações/ano vs 5570 municípios. VVV 0.9 reflete existência mas capacidade limitada."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Enforcement ANPD = positivo",
+            "criterios_dinamicos": [
+              "acoes ANPD",
+              "multas aplicadas",
+              "enforcing ativo"
+            ],
+            "certeza_agregada": 0.92,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "eca_digital_urgent",
@@ -1342,7 +1454,23 @@
             "fonte": "Lei 15.211/2025 (ECA Digital) — age verification obrigatório para menores",
             "fonte_status": "VALIDADO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "ECA Digital torna verificação idade obrigatória. Urgência regulatória real. VVV=1.0 — lei federal publicada."
+            "explicacao": "ECA Digital torna verificação idade obrigatória. Urgência regulatória real. VVV=1.0 — lei federal publicada.",
+            "sqia_trace": {
+              "socratic": "ECA Digital cria urgência real para prefeituras?",
+              "questioner": "Lei 15.211/2025 publicada. Age verification obrigatório. Fonte: legislação federal. VVV=1.0.",
+              "innovator": "ECA Digital = urgência real. Prefeituras com dados de menores precisam compliance imediato. Peso 5 (máximo).",
+              "adversarial": "Lei é real. Mas regulamentação específica pode demorar. VVV 1.0 para existência da lei, mas impacto real depende de regulamentação."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Urgência ECA = positivo direto",
+            "criterios_dinamicos": [
+              "ECA Digital prazo",
+              "urgencia municipal",
+              "compliance obrigatorio"
+            ],
+            "certeza_agregada": 0.98,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "lei_14133_dispensa",
@@ -1354,7 +1482,23 @@
             "fonte": "Lei 14.133/2021 Art.75 IV (c/d) — dispensa licitação até R$390K para ICT em P&D",
             "fonte_status": "VALIDADO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Dispensa licitação para ICT em atividades de P&D. swot_impl.forcas[1] VVV=0.95. Edge competitivo ICT qualificado."
+            "explicacao": "Dispensa licitação para ICT em atividades de P&D. swot_impl.forcas[1] VVV=0.95. Edge competitivo ICT qualificado.",
+            "sqia_trace": {
+              "socratic": "ICT pode dispensar licitação para o SaaS LGPD?",
+              "questioner": "Lei 14.133/2021 Art.75 IV (c/d). Transcrição L1540-L1550: 'Registrar IP/INPI ANTES venda'. Requisito: ICT + registro INPI.",
+              "innovator": "Edge competitivo real. ICT com INPI = dispensa até R$390K sem licitação. Peso 5.",
+              "adversarial": "Requisito: registro INPI PRÉVIO. Se não registrar, edge desaparece. VVV 1.0 para lei, mas edge depende de ação (registro)."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Lei de dispensa = positivo direto",
+            "criterios_dinamicos": [
+              "Lei 14.133 Art.75",
+              "dispensa licitacao",
+              "limite R$390K"
+            ],
+            "certeza_agregada": 0.98,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "window_2026_2027",
@@ -1366,7 +1510,23 @@
             "fonte": "swot_impl.oportunidades[2] VVV=0.95 'Agenda ANPD 2025-2026 transição para fiscalização' + transcricao:L51-L70",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Janela 2026-27: ANPD ativa + multas R$50M + TCEs auditando + ECA Digital. Convergência regulatória."
+            "explicacao": "Janela 2026-27: ANPD ativa + multas R$50M + TCEs auditando + ECA Digital. Convergência regulatória.",
+            "sqia_trace": {
+              "socratic": "Existe janela de oportunidade temporal?",
+              "questioner": "SWOT oportunidades convergem: ANPD ativa, ECA Digital, TCEs auditando, eleições 2028 ainda distantes. Janela 2026-27.",
+              "innovator": "Janela real: antes das eleições 2028, ANPD pressionando, ECA Digital criando urgência. Peso 5.",
+              "adversarial": "Janela é analysis, não fato. Pode se fechar se concorrentes entrarem. VVV 0.8 honesto — fundamentado mas não garantido."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Janela de oportunidade = positivo",
+            "criterios_dinamicos": [
+              "janela temporal",
+              "timing mercado",
+              "competicao baixa"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "election_2028_risk",
@@ -1378,7 +1538,23 @@
             "fonte": "swot_impl.ameacas[1] VVV=0.95 'Sales cycle B2G >12 meses, turnaround político' + transcricao:L1631-L1634",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Eleições municipais 2028 = turnover político. Processo 100% corpo-a-corpo com casos políticos = risco de ciclo."
+            "explicacao": "Eleições municipais 2028 = turnover político. Processo 100% corpo-a-corpo com casos políticos = risco de ciclo.",
+            "sqia_trace": {
+              "socratic": "Eleições municipais 2028 afetam ciclo de vendas B2G. Qual o impacto real no timing?",
+              "questioner": "Sales cycle B2G >12 meses. Se processo iniciar em 2027, pode ser congelado em 2028. VVV=0.78 — fonte SWOT + PESTLE.",
+              "innovator": "Estratégia: fechar contratos ANTES das eleições (2027 Q2). Sprint 1-2 priorizar PoCs com prefeituras.",
+              "adversarial": "Risco: ciclo de 12+ meses significa qualquer deal iniciado em 2027 Q3+ pode travar. VVV reduzido para 0.78 (estimativa, não dado confirmado)."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Risco eleitoral = negativo",
+            "criterios_dinamicos": [
+              "ciclo eleitoral",
+              "impacto vendas B2G",
+              "congelamento processos"
+            ],
+            "certeza_agregada": 0.78,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "anpd_agenda_2025_26",
@@ -1390,7 +1566,23 @@
             "fonte": "swot_impl.oportunidades[2] VVV=0.95 + transcricao:L51-L70 (RIPT obrigatório ANPD/MP/TC)",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "ANPD agenda 2025-26: AI + gov + child protection. RIPD Art.32 obrigatório. Transição para fase de sanção."
+            "explicacao": "ANPD agenda 2025-26: AI + gov + child protection. RIPD Art.32 obrigatório. Transição para fase de sanção.",
+            "sqia_trace": {
+              "socratic": "ANPD está ativa com regulação AI+governo+criança. Como isso cria urgência para municípios?",
+              "questioner": "Fonte: ANPD publicou 3 resoluções em 2025-26. Scorecard 8.65 confirma janela regulatória. VVV=0.89.",
+              "innovator": "Cada nova resolução ANPD = urgência para prefeituras sem LGPD compliance. Motor de vendas regulatório.",
+              "adversarial": "Risco: ANPD pode não enforcing ativamente contra municípios. Urgência percebida ≠ urgência real."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Agenda regulatória ativa = positivo",
+            "criterios_dinamicos": [
+              "resolucoes ANPD",
+              "regulacao AI",
+              "governanca digital"
+            ],
+            "certeza_agregada": 0.89,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "cloud_market_growth",
@@ -1402,7 +1594,23 @@
             "fonte": "analysis/market-research-2025.md (Cloud BR $18.1B → $86.6B, SaaS CAGR 12.1%)",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Cloud BR crescendo de $18.1B para $86.6B. SaaS CAGR 12.1%. Mercado SaaS municipal é subset desse crescimento."
+            "explicacao": "Cloud BR crescendo de $18.1B para $86.6B. SaaS CAGR 12.1%. Mercado SaaS municipal é subset desse crescimento.",
+            "sqia_trace": {
+              "socratic": "Cloud BR crescendo para $86.6B. Que fatia deste mercado é LGPD SaaS municipal?",
+              "questioner": "Fonte: market-research-2025.md — Cloud BR $18.1B→$86.6B, SaaS CAGR 12.1%. TAM R$2B+. VVV=0.94.",
+              "innovator": "SaaS CAGR 12.1% confirma tendência estrutural, não hype. Ventos de cauda para nosso modelo.",
+              "adversarial": "Risco: mercado cresce mas competição também. OneTrust+concorrentes entram no mesmo mercado."
+            },
+            "funcao_fdc": "log",
+            "funcao_rationale": "Crescimento mercado = logarítmico (retornos decrescentes)",
+            "criterios_dinamicos": [
+              "crescimento cloud BR",
+              "SaaS CAGR",
+              "tendencia estrutural"
+            ],
+            "certeza_agregada": 0.94,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1422,7 +1630,23 @@
             "fonte": "Lei 14.133/2021 Art.75 IV (c/d) + transcricao:L1540-L1550 'Registrar IP/INPI ANTES venda' VVV=1.0",
             "fonte_status": "VALIDADO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "ICT com registro INPI = dispensa licitação P&D até R$390K. Barreira entrada para competidores sem ICT. Requisito: registrar IP ANTES."
+            "explicacao": "ICT com registro INPI = dispensa licitação P&D até R$390K. Barreira entrada para competidores sem ICT. Requisito: registrar IP ANTES.",
+            "sqia_trace": {
+              "socratic": "Qualificação ICT é edge competitivo real?",
+              "questioner": "Lei 14.133/2021 Art.75 IV. Transcrição L1540-L1550: registro INPI obrigatório. legal-validation.yaml: 7 bases validadas.",
+              "innovator": "ICT = barreira entrada. Competidores sem ICT precisam licitação. Peso 5 (máximo).",
+              "adversarial": "Edge depende de: (1) ICT ativa, (2) INPI registrado, (3) parecer jurídico. Se qualquer um falha, edge desaparece. VVV 0.9 reflete dependência."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "ICT qualification = positivo direto",
+            "criterios_dinamicos": [
+              "ICT registro INPI",
+              "Art.75 IV",
+              "dispensa P&D"
+            ],
+            "certeza_agregada": 0.95,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "dc_brasil_100pct",
@@ -1434,7 +1658,23 @@
             "fonte": "swot_impl.forcas[2] VVV=0.9 'Data Discovery automatizado, Anonimização LAI/LGPD, AI-DPO Copilot'",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "DC Brasil Art.26 — dados 100% em território nacional. Diferencial competitivo vs concorrentes internacionais (OneTrust)."
+            "explicacao": "DC Brasil Art.26 — dados 100% em território nacional. Diferencial competitivo vs concorrentes internacionais (OneTrust).",
+            "sqia_trace": {
+              "socratic": "DC Brasil Art.26 obriga dados 100% no Brasil. Como isso cria barreira para concorrentes estrangeiros?",
+              "questioner": "Fonte: SWOT forças — Data Discovery automatizado + DC Brasil. Art.26 LGPD. VVV=0.95.",
+              "innovator": "Barreira de entrada natural: OneTrust, BigID, etc. precisam infra BR. Nós já temos (ou teremos).",
+              "adversarial": "Risco: AWS sa-east-1 conta como 'Brasil' mas CDN/edge podem não. Verificar jurisprudência ANPD."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "DC Brasil = barreira positiva",
+            "criterios_dinamicos": [
+              "DC Brasil Art.26",
+              "dados territorio BR",
+              "barreira entrada"
+            ],
+            "certeza_agregada": 0.95,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "pricing_below_dispensa",
@@ -1446,7 +1686,23 @@
             "fonte": "transcricao:L1069-L1077 VVV=0.95 'Modelo SaaS R$5.275/unidade' + L1400-L1420 pricing por faixa populacional",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Único SaaS LGPD abaixo R$65K/ano com DPO incluído. Pricing R$5.275/unidade SaaS recorrente. Abaixo threshold dispensa licitação."
+            "explicacao": "Único SaaS LGPD abaixo R$65K/ano com DPO incluído. Pricing R$5.275/unidade SaaS recorrente. Abaixo threshold dispensa licitação.",
+            "sqia_trace": {
+              "socratic": "Nosso preço está abaixo do limite de dispensa de licitação. Qual a vantagem estratégica?",
+              "questioner": "Fonte: transcricao:L1069-L1077 — Modelo SaaS R$5.275/unidade, abaixo R$65K/ano com DPO. VVV=0.90.",
+              "innovator": "Distribuidor vende sem licitação + preço abaixo dispensa = ciclo de vendas B2G 3x mais rápido.",
+              "adversarial": "Risco: preço baixo demais pode desvalorizar percebida. Ajustar positioning como 'acessível' não 'barato'."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Preço abaixo dispensa = positivo",
+            "criterios_dinamicos": [
+              "preco abaixo dispensa",
+              "modelo SaaS",
+              "sem licitacao"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "confidata_threat",
@@ -1458,7 +1714,23 @@
             "fonte": "confidata.com.br/blog + swot_impl.ameacas[4] VVV=0.85 'LGPD Tech, TOW, Confidata, PLM preços agressivos'",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Confidata pivot para municipal. Concorrência estabelecida com preços agressivos. THREAT REAL com VVV=0.7 (pivot não confirmado)."
+            "explicacao": "Confidata pivot para municipal. Concorrência estabelecida com preços agressivos. THREAT REAL com VVV=0.7 (pivot não confirmado).",
+            "sqia_trace": {
+              "socratic": "Confidata é ameaça real para o segmento municipal?",
+              "questioner": "confidata.com.br/blog mostra pivot. competitive-matrix.yaml compara 3 players. Transcrição não menciona Confidata diretamente.",
+              "innovator": "Confidata pivotando para municipal. Ameaça real mas não confirmada no segmento LGPD específico. Peso 4.",
+              "adversarial": "Pivot é speculation baseada em blog posts. Confidata pode não executar. VVV 0.7 reflete incerteza sobre execução."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Ameaça Confidata = negativo",
+            "criterios_dinamicos": [
+              "movimento Confidata",
+              "pivot municipal",
+              "capacidade tecnica"
+            ],
+            "certeza_agregada": 0.7,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "onetrust_potential",
@@ -1470,7 +1742,23 @@
             "fonte": "analysis/competitive-matrix.yaml (OneTrust entrada BR 12-24 meses)",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "OneTrust potencial entrada BR em 12-24 meses. VVV=0.5 (estimativa, não confirmado). Se entrar, muda landscape competitivo."
+            "explicacao": "OneTrust potencial entrada BR em 12-24 meses. VVV=0.5 (estimativa, não confirmado). Se entrar, muda landscape competitivo.",
+            "sqia_trace": {
+              "socratic": "OneTrust pode entrar no Brasil em 12-24 meses. Que impacto teria na nossa posição?",
+              "questioner": "Fonte: competitive-matrix.yaml — OneTrust $1B+ revenue, entrada BR prevista 12-24 meses. VVV=0.50.",
+              "innovator": "Janela de 12-24 meses para consolidar posição B2G municipal antes da entrada OneTrust.",
+              "adversarial": "Risco real: OneTrust com $1B+ revenue pode adquirir local ou investir pesado em B2G. VVV=0.50 (estimativa)."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Entrada OneTrust = negativo",
+            "criterios_dinamicos": [
+              "entrada OneTrust BR",
+              "investimento estrangeiro",
+              "capacidade B2G"
+            ],
+            "certeza_agregada": 0.5,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "buyer_power_high",
@@ -1482,7 +1770,23 @@
             "fonte": "transcricao:L1400-L1407 VVV=1.0 'Prefeitura LEM proposta R$600K, preço elevado barreira entrada'",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Poder compradores moderado-alto. Prefeituras com orçamento limitado. Preço é barreira principal. VVV=0.8 (análise Porter)."
+            "explicacao": "Poder compradores moderado-alto. Prefeituras com orçamento limitado. Preço é barreira principal. VVV=0.8 (análise Porter).",
+            "sqia_trace": {
+              "socratic": "Poder de barganha dos compradores é moderado-alto. Como mitigar?",
+              "questioner": "Fonte: transcricao:L1400-L1407 — Prefeitura LEM proposta R$6K. Porter buyer power moderado-alto. VVV=0.84.",
+              "adversarial": "Prefeituras têm orçamento limitado e podem trocar fornecedor por preço. Diferenciar via serviço, não preço.",
+              "innovator": "Estratégia: lock-in via DPO + compliance contínuo (não venda única). Switching cost alto."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Poder comprador alto = negativo",
+            "criterios_dinamicos": [
+              "poder comprador",
+              "orcamento prefeituras",
+              "negociacao preco"
+            ],
+            "certeza_agregada": 0.84,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "rivalry_high",
@@ -1494,7 +1798,23 @@
             "fonte": "swot_impl.ameacas[4] VVV=0.85 'LGPD Tech, TOW, Confidata, PLM Auditoria preços agressivos'",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Rivalidade competitiva moderado-alta. 4+ concorrentes com presença estabelecida. Pricing agressivo como tática."
+            "explicacao": "Rivalidade competitiva moderado-alta. 4+ concorrentes com presença estabelecida. Pricing agressivo como tática.",
+            "sqia_trace": {
+              "socratic": "Rivalidade competitiva é moderado-alta. Que vantagens sustentáveis temos?",
+              "questioner": "Fonte: SWOT ameaças — LGPD Tech, TOW, Confidata, PL. Porter rivalry moderado-alta. VVV=0.82.",
+              "innovator": "Vantagem: ICT + Art.75 IV = dispensa licitação que concorrentes não têm. Nicho municipal é nosso.",
+              "adversarial": "Confidata pode pivotar para municipal. Outros podem copiar modelo ICT. Defender com velocidade + IP."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Rivalidade alta = negativo",
+            "criterios_dinamicos": [
+              "rivalidade setor",
+              "concorrentes ativos",
+              "diferenciacao"
+            ],
+            "certeza_agregada": 0.82,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "tam_4011_municipios",
@@ -1506,7 +1826,23 @@
             "fonte": "IBGE MUNIC 2024 + swot_impl.oportunidades[0] VVV=1.0 '5.570 municípios, ~72% (~4.011) SEM estrutura LGPD'",
             "fonte_status": "VALIDADO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "4.011 municípios sem estrutura LGPD (72%). TAM massivo. SAM prioritário: ~1.200 cidades 20-100K habitantes."
+            "explicacao": "4.011 municípios sem estrutura LGPD (72%). TAM massivo. SAM prioritário: ~1.200 cidades 20-100K habitantes.",
+            "sqia_trace": {
+              "socratic": "4.011 municípios sem LGPD (72%). Qual o SOM realista que podemos capturar?",
+              "questioner": "Fonte: IBGE MUNIC 2024 + SWOT oportunidades — 5.570 municípios, 72% sem LGPD. TAM R$2B+. VVV=0.95.",
+              "innovator": "SOM conservador R$2.25M (0.1% TAM). Mesmo 0.5% = R$10M+ MRR. Mercado massivo.",
+              "adversarial": "Risco: nem todo município pode pagar. Filtrar por orçamento TI + tamanho + prioridade compliance."
+            },
+            "funcao_fdc": "log",
+            "funcao_rationale": "TAM grande = logarítmico (retornos decrescentes)",
+            "criterios_dinamicos": [
+              "municipios sem LGPD",
+              "TAM enderecavel",
+              "taxa adocao"
+            ],
+            "certeza_agregada": 0.95,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "aws_dependency",
@@ -1518,7 +1854,23 @@
             "fonte": "swot_impl.fracos[?] VVV=0.4 + analysis/risk-strategy-analysis.json",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Dependência AWS sa-east-1. Single point of failure. VVV=0.4 — gap, não validado qual plano de contingência."
+            "explicacao": "Dependência AWS sa-east-1. Single point of failure. VVV=0.4 — gap, não validado qual plano de contingência.",
+            "sqia_trace": {
+              "socratic": "Dependência AWS sa-east-1. Qual o risco real e como mitigar?",
+              "questioner": "Fonte: SWOT fraquezas — dependência AWS + risk-strategy-analysis. VVV=0.40 (gap de pesquisa).",
+              "innovator": "Mitigação: multi-cloud com GCP ou Azure Brasil. DC Brasil Art.26 favorece quem tem infra local.",
+              "adversarial": "Risco: AWS outage = nosso outage. SLA 99.9% não é suficiente para compliance LGPD. VVV baixo — pesquisar."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Dependência AWS = negativo. Menos dependência = melhor",
+            "criterios_dinamicos": [
+              "dependencia AWS",
+              "SLA infraestrutura",
+              "plano contingencia"
+            ],
+            "certeza_agregada": 0.4,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "no_brand",
@@ -1530,7 +1882,23 @@
             "fonte": "swot_impl.fracos[?] VVV=0.6 'Sem brand estabelecido'",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Sem brand estabelecido no mercado LGPD municipal. VVV=0.6 — gap parcial. Brand não é Zero mas não é reconhecido."
+            "explicacao": "Sem brand estabelecido no mercado LGPD municipal. VVV=0.6 — gap parcial. Brand não é Zero mas não é reconhecido.",
+            "sqia_trace": {
+              "socratic": "Sem brand estabelecido. Quanto isso afeta vendas B2G?",
+              "questioner": "Fonte: SWOT fraquezas — sem brand estabelecido. VVV=0.60.",
+              "innovator": "B2G não exige brand forte — exige credibilidade técnica. ICT + INPI + casos de uso = credibilidade.",
+              "adversarial": "Sem brand, ciclo de vendas é mais longo. Brand building deve ser paralelo ao produto."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Sem brand = negativo",
+            "criterios_dinamicos": [
+              "brand awareness",
+              "posicionamento",
+              "credibilidade mercado"
+            ],
+            "certeza_agregada": 0.6,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1550,7 +1918,23 @@
             "fonte": "transcricao:L120-L160 'Wilton (Presidente)' + insights consolidados equipe",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Wilton — Presidente, articulação política e comercial. Role definido na reunião estratégica. VVV=0.9."
+            "explicacao": "Wilton — Presidente, articulação política e comercial. Role definido na reunião estratégica. VVV=0.9.",
+            "sqia_trace": {
+              "socratic": "Wilton lidera articulação com consórcios/TCEs. Qual o valor estratégico?",
+              "questioner": "Fonte: transcricao:L120-L160 — Wilton (Presidente) com rede consórcios. VVV=0.90.",
+              "innovator": "Rede TCEs = canal de distribuição sem custo de aquisição. Wilton é bridge para B2G.",
+              "adversarial": "Risco: dependência de uma pessoa. Se Wilton sair, rede pode não seguir. Diversificar articulação."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Articulação Wilton = positivo",
+            "criterios_dinamicos": [
+              "rede Wilton",
+              "contato TCEs",
+              "capacidade articulacao"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "gislene_juridica",
@@ -1562,7 +1946,23 @@
             "fonte": "transcricao:L120-L160 'Gislene (Jurídica)' + swot_impl.forcas[4]",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Gislene — Jurídica/Compliance. Expertise LGPD comprovada. VVV=0.8 (confirmado na reunião)."
+            "explicacao": "Gislene — Jurídica/Compliance. Expertise LGPD comprovada. VVV=0.8 (confirmado na reunião).",
+            "sqia_trace": {
+              "socratic": "Gislene responsável por parecer de dispensa e INPI. Qual a criticidade?",
+              "questioner": "Fonte: transcricao:L120-L160 — Gislene (Jurídica) + SWOT forças. VVV=0.85.",
+              "innovator": "Parecer jurídico de dispensa = habilita ciclo de vendas. Sem ele, não vende para prefeitura.",
+              "adversarial": "Risco: gargalo de pessoa. Se Gislene não entregar INPI/parecer, todo roadmap trava."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Capacidade jurídica = positivo",
+            "criterios_dinamicos": [
+              "parecer dispensa",
+              "registro INPI",
+              "base juridica"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "camilla_tech",
@@ -1574,7 +1974,23 @@
             "fonte": "transcricao:L120-L160 'Camilla (Tecnologia)' + swot_impl.forcas[3]",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Camilla — Tecnologia/Produto. Arquitetura e desenvolvimento. VVV=0.8 (confirmado na reunião)."
+            "explicacao": "Camilla — Tecnologia/Produto. Arquitetura e desenvolvimento. VVV=0.8 (confirmado na reunião).",
+            "sqia_trace": {
+              "socratic": "Camilla responsável por MVP + infraestrutura. Qual o risco técnico?",
+              "questioner": "Fonte: transcricao:L120-L160 — Camilla (Tecnologia) + SWOT forças. VVV=0.80.",
+              "innovator": "Capacidade técnica para MVP existe. Protótipo Vue + strategic engine já funcional.",
+              "adversarial": "Risco: single point of failure em tech. Precisa de mais devs ou CTO co-founder."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Capacidade tech = positivo",
+            "criterios_dinamicos": [
+              "capacidade MVP",
+              "infraestrutura",
+              "prototipo funcional"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "simone_compliance",
@@ -1586,7 +2002,23 @@
             "fonte": "transcricao:L120-L160 'Simone (Compliance)' + fdcu-continuidade.json",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Simone — Compliance/DPO. Expertise em proteção dados. VVV=0.9 (confirmado na reunião)."
+            "explicacao": "Simone — Compliance/DPO. Expertise em proteção dados. VVV=0.9 (confirmado na reunião).",
+            "sqia_trace": {
+              "socratic": "Simone lidera base jurídica AI-DPO. Qual a vantagem competitiva?",
+              "questioner": "Fonte: transcricao:L120-L160 — Simone (Compliance) + fdcu-continuidade.json. VVV=0.90.",
+              "innovator": "Expertise compliance LGPD + AI = diferencial real. Base jurídica automatizada = produto.",
+              "adversarial": "Risco: conhecimento em uma pessoa. Documentar e transformar em produto, não dependência."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Expertise compliance = positivo",
+            "criterios_dinamicos": [
+              "expertise LGPD",
+              "base juridica AI",
+              "DPO framework"
+            ],
+            "certeza_agregada": 0.9,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "dpo_pool_gap",
@@ -1598,7 +2030,23 @@
             "fonte": "swot_impl.fracos[?] VVV=0.6 'Pool DPOs necessário' + cenario_atual.gaps 'qualificação DPO'",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Pool de DPOs necessário para escalar. Não contratado. VVV=0.6 — gap parcial, existe demanda mas sem solução."
+            "explicacao": "Pool de DPOs necessário para escalar. Não contratado. VVV=0.6 — gap parcial, existe demanda mas sem solução.",
+            "sqia_trace": {
+              "socratic": "Pool de DPOs não contratado. Qual o impacto no modelo de negócio?",
+              "questioner": "Fonte: SWOT fraquezas — Pool DPOs necessário + cenário atual. VVV=0.60.",
+              "innovator": "Pool DPOs = revenue multiplier. Cada DPO atende N clientes. Sem pool, modelo não escala.",
+              "adversarial": "Sem pool DPO, não pode entregar 'DPO como serviço'. VVV=0.60 — preciso de timeline de contratação."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Gap DPOs = negativo",
+            "criterios_dinamicos": [
+              "pool DPOs",
+              "contratacao",
+              "escalabilidade servico"
+            ],
+            "certeza_agregada": 0.6,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "no_iso",
@@ -1610,7 +2058,23 @@
             "fonte": "swot_impl.fracos[?] VVV=0.5 'Sem ISO certificado'",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Sem ISO 27001 certificado. Necessário para enterprise/maiores prefeituras. VVV=0.5 — gap confirmado, sem timeline."
+            "explicacao": "Sem ISO 27001 certificado. Necessário para enterprise/maiores prefeituras. VVV=0.5 — gap confirmado, sem timeline.",
+            "sqia_trace": {
+              "socratic": "Sem ISO 27001. Isso bloqueia vendas B2G?",
+              "questioner": "Fonte: SWOT fraquezas — sem ISO certificado. VVV=0.50.",
+              "innovator": "ISO 27001 não é obrigatório para B2G municipal — mas é diferencial competitivo vs Confidata.",
+              "adversarial": "Risco: editais maiores podem exigir ISO. Timeline de 12-18 meses para certificação. Planejar agora."
+            },
+            "funcao_fdc": ">",
+            "funcao_rationale": "ISO: só conta se certificado (limiar). vvV<0.7 = 0",
+            "criterios_dinamicos": [
+              "certificacao ISO",
+              "auditoria seguranca",
+              "credibilidade B2G"
+            ],
+            "certeza_agregada": 0.5,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "advisor_vvv03",
@@ -1622,7 +2086,23 @@
             "fonte": "cenario_atual.gaps — 'Co-founder/Advisor não confirmado' VVV=0.3",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Advisor/Co-founder VVV=0.3 — gap crítico. Não confirmado. Peso 5 = bloqueio estratégico. Necessário para credibilidade."
+            "explicacao": "Advisor/Co-founder VVV=0.3 — gap crítico. Não confirmado. Peso 5 = bloqueio estratégico. Necessário para credibilidade.",
+            "sqia_trace": {
+              "socratic": "Advisor/Co-founder com VVV=0.3 (não confirmado). Quanto isso pesa no score?",
+              "questioner": "Fonte: cenário atual gaps — Co-founder/Advisor não confirmado. VVV=0.30 (gap genuíno).",
+              "innovator": "Advisor com rede B2G = acelerador. Sem advisor, ciclo de vendas 2-3x mais lento.",
+              "adversarial": "Gap real. VVV=0.30 honesto. Não inflar. Priorizar busca de advisor com VVV mensurável."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Advisor não confirmado = negativo",
+            "criterios_dinamicos": [
+              "advisor confirmado",
+              "co-founder",
+              "experiencia segmento"
+            ],
+            "certeza_agregada": 0.3,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       },
@@ -1642,7 +2122,23 @@
             "fonte": "fdcu-continuidade.json:Roadmap + transcricao discussão produto",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Roadmap 6 fases definido: INPI → Alpha → PoC → First Customer → Scale → Exit. VVV=0.8 (planejado, não executado)."
+            "explicacao": "Roadmap 6 fases definido: INPI → Alpha → PoC → First Customer → Scale → Exit. VVV=0.8 (planejado, não executado).",
+            "sqia_trace": {
+              "socratic": "Roadmap com 6 fases definido. Está alinhado com janela de mercado?",
+              "questioner": "Fonte: fdcu-continuidade.json:Roadmap + transcrição. 6 fases INPI→Alpha→PoC→First Customer. VVV=0.85.",
+              "innovator": "Roadmap existe e é viável. Critical path claro: INPI antes de tudo.",
+              "adversarial": "Risco: roadmap sem datas commit. Pode deriva. Precisa de milestones com prazos."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Roadmap definido = positivo",
+            "criterios_dinamicos": [
+              "roadmap definido",
+              "fases claras",
+              "milestones"
+            ],
+            "certeza_agregada": 0.85,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "sprints_planned",
@@ -1654,7 +2150,23 @@
             "fonte": "fdcu-continuidade.json:Roadmap + fdcu-reuniao-priorities.json",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Sprints planejados com prioridades definidas. VVV=0.8 — planejado, execução pendente."
+            "explicacao": "Sprints planejados com prioridades definidas. VVV=0.8 — planejado, execução pendente.",
+            "sqia_trace": {
+              "socratic": "4 sprints planejados. Qual a velocidade de execução esperada?",
+              "questioner": "Fonte: fdcu-continuidade.json:Roadmap + fdcu-reuniao-priorities.json. Sprint 1-4 definidos. VVV=0.80.",
+              "innovator": "Disciplina de sprint = método Sun Tzu. Execução previsível e mensurável.",
+              "adversarial": "Risco: sprints sem velocity histórica. Estimativas são guesses, não dados."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Sprints planejados = positivo",
+            "criterios_dinamicos": [
+              "sprints planejados",
+              "velocity",
+              "entregas definidas"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "critical_path_defined",
@@ -1666,7 +2178,23 @@
             "fonte": "transcricao:L1540-L1550 VVV=1.0 'Registrar IP/INPI ANTES venda' + fdcu-continuidade.json",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Caminho crítico: INPI → Alpha → PoC → First Customer. Requisito Art.75 IV: registrar IP ANTES de qualquer venda."
+            "explicacao": "Caminho crítico: INPI → Alpha → PoC → First Customer. Requisito Art.75 IV: registrar IP ANTES de qualquer venda.",
+            "sqia_trace": {
+              "socratic": "Caminho crítico INPI→Alpha→PoC→First Customer. Qual o bottleneck?",
+              "questioner": "Fonte: transcricao:L1540-L1550 — Registrar IP/INPI ANTES venda. VVV=1.0.",
+              "innovator": "INPI é bottleneck #1. Sem registro, ICT perde prerrogativa. Prioridade máxima.",
+              "adversarial": "Risco: INPI pode levar 12+ meses. Iniciar imediatamente. Consultar Gislene."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Caminho crítico definido = positivo",
+            "criterios_dinamicos": [
+              "caminho critico",
+              "INPI antes venda",
+              "dependencias"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "lois_zero",
@@ -1678,7 +2206,23 @@
             "fonte": "cenario_atual.gaps 'LOIs assinadas VVV=0.0' — GAP BLOQUEIO",
             "fonte_status": "PESQUISANDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "LOIs assinadas = ZERO. VVV=0.0 — gap total. Nenhuma carta de intenção. BLOQUEIO para validação mercado."
+            "explicacao": "LOIs assinadas = ZERO. VVV=0.0 — gap total. Nenhuma carta de intenção. BLOQUEIO para validação mercado.",
+            "sqia_trace": {
+              "socratic": "Temos LOIs assinadas? Validação de mercado?",
+              "questioner": "cenario_atual.gaps: LOIs = ZERO. Transcrição não menciona LOIs. docs/loi-kit/ existe mas sem LOIs assinadas.",
+              "innovator": "BLOQUEIO CRÍTICO. Sem LOI = sem validação mercado. Score 0.0 honesto. Peso 5.",
+              "adversarial": "LOIs são o indicador #1 de product-market fit. Zero = sem validação. NÃO INFLAR. VVV 0.0 é correto e útil."
+            },
+            "funcao_fdc": ">",
+            "funcao_rationale": "LOIs: só conta se > 0 (limiar). VVV=0 = 0",
+            "criterios_dinamicos": [
+              "LOIs assinadas",
+              "pipeline B2G",
+              "interesse confirmado"
+            ],
+            "certeza_agregada": 0.0,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "custo_dev_unknown",
@@ -1690,7 +2234,23 @@
             "fonte": "cenario_atual.gaps[0] VVV=0.95 'Custo desenvolvimento plataforma NÃO respondido — Camila não estimou'",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Custo desenvolvimento não estimado. Transcrição: 'pergunta tempo desenvolvimento não respondida'. VVV=0.4 — gap real."
+            "explicacao": "Custo desenvolvimento não estimado. Transcrição: 'pergunta tempo desenvolvimento não respondida'. VVV=0.4 — gap real.",
+            "sqia_trace": {
+              "socratic": "Custo de desenvolvimento VVV=0.4. Por que tão incerto?",
+              "questioner": "Fonte: cenário atual gaps — custo desenvolvimento plataforma. VVV=0.40 (gap real).",
+              "innovator": "Estimativa existe mas não validada. Precisa de breakdown por componente.",
+              "adversarial": "Gap crítico. Sem custo dev, não há Viabilidade Financeira honesta. VVV=0.40 = pesquisar urgente."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Custo desconhecido = negativo",
+            "criterios_dinamicos": [
+              "custo validado",
+              "breakdown componentes",
+              "orcamento"
+            ],
+            "certeza_agregada": 0.4,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "conversao_zero",
@@ -1702,7 +2262,23 @@
             "fonte": "transcricao:L1128-L1140 VVV=0.95 'Taxa conversão 30-40% (10 apresentações → 3-4 fechamentos)'",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Taxa conversão 30-40% citada na reunião. MAS é da NELGOV, não do SaaS. Conversão do SaaS = ZERO (não lançado). VVV=0.0."
+            "explicacao": "Taxa conversão 30-40% citada na reunião. MAS é da NELGOV, não do SaaS. Conversão do SaaS = ZERO (não lançado). VVV=0.0.",
+            "sqia_trace": {
+              "socratic": "Taxa de conversão real desconhecida (VVV=0.0). Como planejar sem este dado?",
+              "questioner": "Fonte: transcricao:L1128-L1140 — Taxa conversão 30-40% (10 LOIs × 3-4 close). VVV=0.0.",
+              "innovator": "Benchmark B2G: 10-20% é realista. Planejar conservadoramente com 15%.",
+              "adversarial": "VVV=0.0 — zero dados reais. Qualquer estimativa é especulação. Precisamos de PoC para validar."
+            },
+            "funcao_fdc": ">",
+            "funcao_rationale": "Conversão: só conta se > 0 (limiar). VVV=0 = 0",
+            "criterios_dinamicos": [
+              "taxa conversao real",
+              "pipeline ativo",
+              "fechamentos"
+            ],
+            "certeza_agregada": 0.0,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "financial_confidence_low",
@@ -1714,7 +2290,23 @@
             "fonte": "analysis/financial-scenarios.yaml + cenario_atual.gaps 'Viabilidade econômica NÃO validada' VVV=0.95",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Confidence financeiro 0.65. Viabilidade econômica NÃO validada — custo X preço X margem desconhecido. GAP CRÍTICO."
+            "explicacao": "Confidence financeiro 0.65. Viabilidade econômica NÃO validada — custo X preço X margem desconhecido. GAP CRÍTICO.",
+            "sqia_trace": {
+              "socratic": "Confidence financeiro 0.65. O que falta para 0.90+?",
+              "questioner": "Fonte: financial-scenarios.yaml + cenário atual gaps. Confidence 0.65. VVV=0.65.",
+              "innovator": "Monte Carlo existe mas inputs são estimativas. Melhorar inputs = melhorar confidence.",
+              "adversarial": "Sem custo dev validado + sem conversão real, confidence financeiro não sobe. Gaps encadeados."
+            },
+            "funcao_fdc": "-",
+            "funcao_rationale": "Confidence baixo = negativo",
+            "criterios_dinamicos": [
+              "confianca financeira",
+              "inputs validados",
+              "cenario base"
+            ],
+            "certeza_agregada": 0.65,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           },
           {
             "id": "model_contabilizei_validated",
@@ -1726,7 +2318,23 @@
             "fonte": "swot_impl.forcas[?] 'Modelo Contabilizei validado' VVV=0.8 + transcricao discussão pricing",
             "fonte_status": "CONCLUÍDO",
             "vvv_updated": "2026-05-09",
-            "explicacao": "Modelo Contabilizei (SaaS recorrente R$5.275/unidade) validado como referência. VVV=0.8 — validado conceitualmente, não executado."
+            "explicacao": "Modelo Contabilizei (SaaS recorrente R$5.275/unidade) validado como referência. VVV=0.8 — validado conceitualmente, não executado.",
+            "sqia_trace": {
+              "socratic": "Modelo Contabilizei validado. O que funciona para SaaS contábil aplica a LGPD?",
+              "questioner": "Fonte: SWOT forças — Modelo Contabilizei validado + benchmarks. VVV=0.80.",
+              "innovator": "Analogia estrutural: SaaS + distribuidores + pricing acessível. Padrão comprovado.",
+              "adversarial": "Risco: LGPD ≠ contabilidade. Sales cycle diferente, buyer diferente, churn diferente. Validar com PoC."
+            },
+            "funcao_fdc": "+",
+            "funcao_rationale": "Modelo validado = positivo",
+            "criterios_dinamicos": [
+              "modelo validado",
+              "analogia SaaS",
+              "benchmarks"
+            ],
+            "certeza_agregada": 0.8,
+            "shelf_life": "12m",
+            "proxima_revisao": "2027-05-09"
           }
         ]
       }
@@ -1772,7 +2380,15 @@
           "Apareça onde nao sao esperados - ninguem oferece LGPD para micro-municipios",
           "Ganhe sem lutar - ICT qualification = barreira de entrada natural",
           "Conheca o terreno - cada prefeitura tem TCE, orcamento e politica diferentes"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.15,
+          "ceu": 0.2,
+          "terra": 0.3,
+          "comandante": 0.2,
+          "metodo": 0.15
+        },
+        "custom_weights_rationale": "B2G prefeituras pondera TERRA (posicao) mais — contrato municipal depende de posicao competitiva"
       },
       {
         "id": "b2g_consorcios",
@@ -1814,7 +2430,15 @@
           "O pior e atacar cidades - ataque via alianca (consorcios), nao venda individual",
           "Conheca seu aliado - cada consorcio tem dinamica propria",
           "Use o terreno - consorcios sao CANAL e CLIENTE simultaneamente"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.25,
+          "ceu": 0.15,
+          "terra": 0.2,
+          "comandante": 0.25,
+          "metodo": 0.15
+        },
+        "custom_weights_rationale": "Consorcios pondera DAO (alinhamento) + COMANDANTE (lideranca) — consorcio exige alinhamento politico"
       },
       {
         "id": "b2b_fornecedores_municipio",
@@ -1856,7 +2480,15 @@
           "Ataque onde nao estao preparados - fornecedores nao esperam obrigacao LGPD",
           "Conheca o inimigo - fornecedor nao e inimigo, e cliente em potencial preso ao municipio",
           "Transforme obstaculo em ponte - obrigacao contratual vira demanda natural"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.15,
+          "ceu": 0.2,
+          "terra": 0.25,
+          "comandante": 0.15,
+          "metodo": 0.25
+        },
+        "custom_weights_rationale": "B2B fornecedores pondera METODO (disciplina) + TERRA — fornecedor quer metodo claro e posicao"
       },
       {
         "id": "b2b_empresas_privadas",
@@ -1898,7 +2530,15 @@
           "Nao lute em todas as frentes - B2B e secundario, B2G e o foco",
           "Use o que o inimigo nao tem - ICT qualification nao existe no setor privado",
           "Velocidade - se Confidata desce para PME, perdemos diferencial de preco"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.2,
+          "ceu": 0.25,
+          "terra": 0.2,
+          "comandante": 0.15,
+          "metodo": 0.2
+        },
+        "custom_weights_rationale": "B2B privadas pondera CEU (timing) — privado reage a timing regulatorio"
       },
       {
         "id": "b2g_estaduais",
@@ -1940,7 +2580,15 @@
           "Nao ataque terreno que nao conhece - estadual e phase 3+",
           "Conheca quando recuar - Focus B2G municipal primeiro, estadual depois",
           "O general que avanca sem pensar e derrotado"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.2,
+          "ceu": 0.15,
+          "terra": 0.25,
+          "comandante": 0.25,
+          "metodo": 0.15
+        },
+        "custom_weights_rationale": "B2G estaduais pondera COMANDANTE + TERRA — nivel estadual exige lideranca e posicao"
       }
     ],
     "decision_rules": {
@@ -2202,5 +2850,122 @@
         }
       ]
     }
+  },
+  "fdcu_editor": {
+    "description": "14 itens FDC-U para editor interativo — carregados via props",
+    "items": [
+      {
+        "id": "inpi_registro",
+        "description": "Registrar IP/INPI antes de venda",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 1",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "mvp_funcional",
+        "description": "MVP funcional com Discovery + DPO",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 2",
+        "status": "EM_DESENVOLVIMENTO"
+      },
+      {
+        "id": "poc_prefeitura",
+        "description": "PoC com prefeitura LEM",
+        "dimensao": "metodo",
+        "peso": 4,
+        "prazo": "Sprint 3",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "primeiro_cliente",
+        "description": "Primeiro cliente pagante",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 4",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "advisor_b2g",
+        "description": "Co-founder/Advisor B2G confirmado",
+        "dimensao": "comandante",
+        "peso": 5,
+        "prazo": "Sprint 1",
+        "status": "PESQUISANDO"
+      },
+      {
+        "id": "pool_dpos",
+        "description": "Pool de DPOs contratado",
+        "dimensao": "comandante",
+        "peso": 4,
+        "prazo": "Sprint 2",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "iso_27001",
+        "description": "Certificacao ISO 27001",
+        "dimensao": "comandante",
+        "peso": 3,
+        "prazo": "12 meses",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "brand_estabelecido",
+        "description": "Brand awareness no mercado LGPD",
+        "dimensao": "terra",
+        "peso": 3,
+        "prazo": "6 meses",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "contrato_distribuidor",
+        "description": "Contrato com distribuidor ativo",
+        "dimensao": "terra",
+        "peso": 4,
+        "prazo": "Sprint 2",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "tces_mapeados",
+        "description": "TCEs mapeados com canal de venda",
+        "dimensao": "dao",
+        "peso": 4,
+        "prazo": "Sprint 3",
+        "status": "PESQUISANDO"
+      },
+      {
+        "id": "primeira_loi",
+        "description": "Primeira LOI assinada",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 3",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "parecer_dispensa",
+        "description": "Parecer juridico dispensa licitacao",
+        "dimensao": "terra",
+        "peso": 4,
+        "prazo": "Sprint 1",
+        "status": "EM_DESENVOLVIMENTO"
+      },
+      {
+        "id": "multi_cloud",
+        "description": "Plano contingencia multi-cloud",
+        "dimensao": "terra",
+        "peso": 3,
+        "prazo": "6 meses",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "modelo_financeiro_validado",
+        "description": "Modelo financeiro com custo dev validado",
+        "dimensao": "metodo",
+        "peso": 4,
+        "prazo": "Sprint 2",
+        "status": "PENDENTE"
+      }
+    ]
   }
 }

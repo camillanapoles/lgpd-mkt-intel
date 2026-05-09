@@ -263,7 +263,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 const props = defineProps({
   initialData: {
@@ -272,190 +272,41 @@ const props = defineProps({
   }
 })
 
-// Dados iniciais dos itens FDC-U
-const initialItems = [
-  {
-    id: 'A001',
-    name: 'LOIs_Assinadas',
-    description: '3+ LOIs assinadas com prefeituras (GO/NO-GO)',
-    impacto: 10,
-    urgencia: 10,
-    vvv: 0.0,
-    esforco: 9,
-    risco: 1,
-    fonte: 'fdcu-continuidade.json:93-100',
-    delta: 0
-  },
-  {
-    id: 'A002',
-    name: 'Dashboard_KPIs_5s',
-    description: 'KPIs visíveis em 5 segundos conforme FLUXO-TESTE-UX.md',
-    impacto: 10,
-    urgencia: 8,
-    vvv: 0.9,
-    esforco: 3,
-    risco: 2,
-    fonte: 'fdcu-continuidade.json:21-28',
-    delta: 0
-  },
-  {
-    id: 'A003',
-    name: 'Parecer_Juridico',
-    description: 'Validar parecer Art.75 IV com especialista',
-    impacto: 9,
-    urgencia: 9,
-    vvv: 0.5,
-    esforco: 7,
-    risco: 3,
-    fonte: 'strategic-data-unified.json:398',
-    delta: 0
-  },
-  {
-    id: 'A004',
-    name: 'Transcricao_Analise',
-    description: 'Extrair insights estratégicos da transcrição NeoGov (1760 linhas)',
-    impacto: 9,
-    urgencia: 7,
-    vvv: 0.95,
-    esforco: 7,
-    risco: 2,
-    fonte: 'fdcu-continuidade.json:12-19',
-    delta: 0
-  },
-  {
-    id: 'A005',
-    name: 'Advisor_Municipal',
-    description: 'Contratar co-founder advisor com experiência municipal',
-    impacto: 9,
-    urgencia: 8,
-    vvv: 0.3,
-    esforco: 6,
-    risco: 2,
-    fonte: 'strategic-data-unified.json:397',
-    delta: 0
-  },
-  {
-    id: 'A006',
-    name: 'Cenario_Compare',
-    description: 'Toggle Bull/Bear/Base funcional com comparação visual',
-    impacto: 8,
-    urgencia: 6,
-    vvv: 0.8,
-    esforco: 5,
-    risco: 3,
-    fonte: 'fdcu-continuidade.json:30-37',
-    delta: 0
-  },
-  {
-    id: 'A007',
-    name: 'Roadmap_Timeline',
-    description: 'Timeline navegável com fases e KPIs',
-    impacto: 8,
-    urgencia: 7,
-    vvv: 0.8,
-    esforco: 4,
-    risco: 2,
-    fonte: 'strategic-data-unified.json:199-267',
-    delta: 0
-  },
-  {
-    id: 'A008',
-    name: 'Unit_Economics',
-    description: 'Calcular unit economics com dados reais (NeoGov benchmark)',
-    impacto: 7,
-    urgencia: 7,
-    vvv: 0.6,
-    esforco: 5,
-    risco: 4,
-    fonte: 'strategic-data-unified.json:399',
-    delta: 0
-  },
-  {
-    id: 'A009',
-    name: 'BMC_Interactive',
-    description: 'Business Model Canvas interativo com expansão',
-    impacto: 7,
-    urgencia: 5,
-    vvv: 0.8,
-    esforco: 6,
-    risco: 3,
-    fonte: 'strategic-data-unified.json:103-198',
-    delta: 0
-  },
-  {
-    id: 'A010',
-    name: 'Mobile_Optimized',
-    description: 'Tela 375px sem horizontal scroll, touch targets 44px',
-    impacto: 8,
-    urgencia: 6,
-    vvv: 0.8,
-    esforco: 5,
-    risco: 3,
-    fonte: 'fdcu-continuidade.json:75-82',
-    delta: 0
-  },
-  {
-    id: 'A011',
-    name: 'SWOT_Filtravel',
-    description: 'SWOT interativo com filtros S/W/O/T',
-    impacto: 6,
-    urgencia: 5,
-    vvv: 0.82,
-    esforco: 5,
-    risco: 3,
-    fonte: 'strategic-data-unified.json:47-81',
-    delta: 0
-  },
-  {
-    id: 'A014',
-    name: 'Pricing_Ajuste',
-    description: 'Ajustar pricing 8-15x (R$297-997 -> R$2.497-14.997)',
-    impacto: 9,
-    urgencia: 8,
-    vvv: 0.7,
-    esforco: 3,
-    risco: 2,
-    fonte: 'strategic-data-unified.json:368',
-    delta: 0
-  },
-  {
-    id: 'A015',
-    name: 'INPI_Protocolo',
-    description: 'Protocolar INPI para proteção de IP',
-    impacto: 6,
-    urgencia: 7,
-    vvv: 0.0,
-    esforco: 7,
-    risco: 2,
-    fonte: 'strategic-data-unified.json:251',
-    delta: 0
-  },
-  {
-    id: 'A016',
-    name: 'Pitch_Deck_VSL',
-    description: 'Criar pitch deck baseado em research pronto para VSL',
-    impacto: 9,
-    urgencia: 7,
-    vvv: 0.0,
-    esforco: 8,
-    risco: 4,
-    fonte: 'fdcu-continuidade.json:84-91',
-    delta: 0
-  }
-]
+// Map JSON items to component's internal format
+const mapJsonItem = (jsonItem) => ({
+  id: jsonItem.id,
+  name: jsonItem.name || jsonItem.id,
+  description: jsonItem.description || '',
+  dimensao: jsonItem.dimensao || '',
+  impacto: jsonItem.impacto ?? jsonItem.peso ?? 5,
+  urgencia: jsonItem.urgencia ?? 5,
+  vvv: jsonItem.vvv ?? 0.0,
+  esforco: jsonItem.esforco ?? 5,
+  risco: jsonItem.risco ?? 3,
+  fonte: jsonItem.fonte || 'strategic-data-unified.json',
+  prazo: jsonItem.prazo || '',
+  status: jsonItem.status || '',
+  delta: 0
+})
 
 const items = ref([])
 const originalScores = ref({})
 const sortBy = ref('score')
 const showOnlyCritical = ref(false)
 
-onMounted(() => {
-  items.value = JSON.parse(JSON.stringify(initialItems))
+const initFromData = (data) => {
+  const jsonItems = data?.items || []
+  items.value = jsonItems.map(mapJsonItem)
   items.value.forEach(item => {
     item.score = calculateScore(item)
     originalScores.value[item.id] = item.score
   })
-})
+}
+
+// Initialize from props, react to changes
+watch(() => props.initialData, (newData) => {
+  if (newData) initFromData(newData)
+}, { immediate: true })
 
 function calculateScore(item) {
   return (
@@ -474,11 +325,7 @@ function updateScore(item) {
 }
 
 function resetAll() {
-  items.value = JSON.parse(JSON.stringify(initialItems))
-  items.value.forEach(item => {
-    item.score = calculateScore(item)
-    item.delta = 0
-  })
+  initFromData(props.initialData)
 }
 
 const sortedItems = computed(() => {
