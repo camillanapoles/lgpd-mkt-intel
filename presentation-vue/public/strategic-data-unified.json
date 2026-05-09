@@ -2380,7 +2380,15 @@
           "Apareça onde nao sao esperados - ninguem oferece LGPD para micro-municipios",
           "Ganhe sem lutar - ICT qualification = barreira de entrada natural",
           "Conheca o terreno - cada prefeitura tem TCE, orcamento e politica diferentes"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.15,
+          "ceu": 0.2,
+          "terra": 0.3,
+          "comandante": 0.2,
+          "metodo": 0.15
+        },
+        "custom_weights_rationale": "B2G prefeituras pondera TERRA (posicao) mais — contrato municipal depende de posicao competitiva"
       },
       {
         "id": "b2g_consorcios",
@@ -2422,7 +2430,15 @@
           "O pior e atacar cidades - ataque via alianca (consorcios), nao venda individual",
           "Conheca seu aliado - cada consorcio tem dinamica propria",
           "Use o terreno - consorcios sao CANAL e CLIENTE simultaneamente"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.25,
+          "ceu": 0.15,
+          "terra": 0.2,
+          "comandante": 0.25,
+          "metodo": 0.15
+        },
+        "custom_weights_rationale": "Consorcios pondera DAO (alinhamento) + COMANDANTE (lideranca) — consorcio exige alinhamento politico"
       },
       {
         "id": "b2b_fornecedores_municipio",
@@ -2464,7 +2480,15 @@
           "Ataque onde nao estao preparados - fornecedores nao esperam obrigacao LGPD",
           "Conheca o inimigo - fornecedor nao e inimigo, e cliente em potencial preso ao municipio",
           "Transforme obstaculo em ponte - obrigacao contratual vira demanda natural"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.15,
+          "ceu": 0.2,
+          "terra": 0.25,
+          "comandante": 0.15,
+          "metodo": 0.25
+        },
+        "custom_weights_rationale": "B2B fornecedores pondera METODO (disciplina) + TERRA — fornecedor quer metodo claro e posicao"
       },
       {
         "id": "b2b_empresas_privadas",
@@ -2506,7 +2530,15 @@
           "Nao lute em todas as frentes - B2B e secundario, B2G e o foco",
           "Use o que o inimigo nao tem - ICT qualification nao existe no setor privado",
           "Velocidade - se Confidata desce para PME, perdemos diferencial de preco"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.2,
+          "ceu": 0.25,
+          "terra": 0.2,
+          "comandante": 0.15,
+          "metodo": 0.2
+        },
+        "custom_weights_rationale": "B2B privadas pondera CEU (timing) — privado reage a timing regulatorio"
       },
       {
         "id": "b2g_estaduais",
@@ -2548,7 +2580,15 @@
           "Nao ataque terreno que nao conhece - estadual e phase 3+",
           "Conheca quando recuar - Focus B2G municipal primeiro, estadual depois",
           "O general que avanca sem pensar e derrotado"
-        ]
+        ],
+        "custom_weights": {
+          "dao": 0.2,
+          "ceu": 0.15,
+          "terra": 0.25,
+          "comandante": 0.25,
+          "metodo": 0.15
+        },
+        "custom_weights_rationale": "B2G estaduais pondera COMANDANTE + TERRA — nivel estadual exige lideranca e posicao"
       }
     ],
     "decision_rules": {
@@ -2810,5 +2850,122 @@
         }
       ]
     }
+  },
+  "fdcu_editor": {
+    "description": "14 itens FDC-U para editor interativo — carregados via props",
+    "items": [
+      {
+        "id": "inpi_registro",
+        "description": "Registrar IP/INPI antes de venda",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 1",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "mvp_funcional",
+        "description": "MVP funcional com Discovery + DPO",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 2",
+        "status": "EM_DESENVOLVIMENTO"
+      },
+      {
+        "id": "poc_prefeitura",
+        "description": "PoC com prefeitura LEM",
+        "dimensao": "metodo",
+        "peso": 4,
+        "prazo": "Sprint 3",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "primeiro_cliente",
+        "description": "Primeiro cliente pagante",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 4",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "advisor_b2g",
+        "description": "Co-founder/Advisor B2G confirmado",
+        "dimensao": "comandante",
+        "peso": 5,
+        "prazo": "Sprint 1",
+        "status": "PESQUISANDO"
+      },
+      {
+        "id": "pool_dpos",
+        "description": "Pool de DPOs contratado",
+        "dimensao": "comandante",
+        "peso": 4,
+        "prazo": "Sprint 2",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "iso_27001",
+        "description": "Certificacao ISO 27001",
+        "dimensao": "comandante",
+        "peso": 3,
+        "prazo": "12 meses",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "brand_estabelecido",
+        "description": "Brand awareness no mercado LGPD",
+        "dimensao": "terra",
+        "peso": 3,
+        "prazo": "6 meses",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "contrato_distribuidor",
+        "description": "Contrato com distribuidor ativo",
+        "dimensao": "terra",
+        "peso": 4,
+        "prazo": "Sprint 2",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "tces_mapeados",
+        "description": "TCEs mapeados com canal de venda",
+        "dimensao": "dao",
+        "peso": 4,
+        "prazo": "Sprint 3",
+        "status": "PESQUISANDO"
+      },
+      {
+        "id": "primeira_loi",
+        "description": "Primeira LOI assinada",
+        "dimensao": "metodo",
+        "peso": 5,
+        "prazo": "Sprint 3",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "parecer_dispensa",
+        "description": "Parecer juridico dispensa licitacao",
+        "dimensao": "terra",
+        "peso": 4,
+        "prazo": "Sprint 1",
+        "status": "EM_DESENVOLVIMENTO"
+      },
+      {
+        "id": "multi_cloud",
+        "description": "Plano contingencia multi-cloud",
+        "dimensao": "terra",
+        "peso": 3,
+        "prazo": "6 meses",
+        "status": "PENDENTE"
+      },
+      {
+        "id": "modelo_financeiro_validado",
+        "description": "Modelo financeiro com custo dev validado",
+        "dimensao": "metodo",
+        "peso": 4,
+        "prazo": "Sprint 2",
+        "status": "PENDENTE"
+      }
+    ]
   }
 }
