@@ -16,12 +16,24 @@
       >
         <div class="flex items-center justify-between mb-2">
           <label class="text-body-sm text-white font-medium">{{ slider.label }}</label>
-          <span
-            class="text-caption px-2 py-0.5 rounded"
-            :class="slider.impact === 'high' ? 'bg-red-900/50 text-red-400' : 'bg-yellow-900/50 text-yellow-400'"
-          >
-            {{ slider.impact === 'high' ? 'Alto impacto' : 'Medio impacto' }}
-          </span>
+          <div class="flex items-center gap-1.5">
+            <span
+              class="text-caption px-2 py-0.5 rounded"
+              :class="slider.impact === 'high' ? 'bg-red-900/50 text-red-400' : 'bg-yellow-900/50 text-yellow-400'"
+            >
+              {{ slider.impact === 'high' ? 'Alto impacto' : 'Medio impacto' }}
+            </span>
+            <button
+              @click.stop="toggleInfo(`slider-${slider.id}`)"
+              class="w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+              :class="expandedInfo.has(`slider-${slider.id}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+              title="Ver detalhes"
+            >i</button>
+          </div>
+        </div>
+        <div v-if="expandedInfo.has(`slider-${slider.id}`)" class="mb-2 p-2 rounded bg-slate-900/30 border border-slate-700/50">
+          <p class="text-caption text-slate-400">{{ sliderExplanation(slider) }}</p>
+          <p class="text-caption text-slate-500 mt-1">Tipo: {{ slider.type || 'range' }} — Impacto: {{ slider.impact }}</p>
         </div>
 
         <template v-if="slider.type === 'boolean'">
@@ -89,13 +101,24 @@
         ]"
       >
         <div class="flex items-center justify-between mb-4">
-          <h3 class="text-h4 text-white uppercase">{{ scenarioLabel(name) }}</h3>
+          <div class="flex items-center gap-2">
+            <h3 class="text-h4 text-white uppercase">{{ scenarioLabel(name) }}</h3>
+            <button
+              @click.stop="toggleInfo(`case-${name}`)"
+              class="w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+              :class="expandedInfo.has(`case-${name}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+              title="Ver premissas do cenario"
+            >i</button>
+          </div>
           <span
             v-if="activeScenario === name"
             class="text-caption bg-accent-500 text-white px-2 py-0.5 rounded"
           >
             Ativo
           </span>
+        </div>
+        <div v-if="expandedInfo.has(`case-${name}`)" class="mb-3 p-2 rounded bg-slate-900/40 border border-slate-700/50">
+          <p class="text-caption text-slate-400">{{ caseExplanation(name) }}</p>
         </div>
 
         <div class="space-y-3">
@@ -134,6 +157,27 @@
 
 <script setup>
 import { ref, reactive, watch } from 'vue'
+
+const expandedInfo = reactive(new Set())
+const toggleInfo = (key) => {
+  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
+}
+const sliderExplanation = (slider) => {
+  if (slider.id?.includes('lois')) return 'LOIs assinadas — pipeline confirmado de clientes enterprise'
+  if (slider.id?.includes('advisor')) return 'Advisor estrategico — reduz risco execucao + abre rede'
+  if (slider.id?.includes('funding')) return 'Funding garantido — runway extendido para escalar'
+  if (slider.id?.includes('anpd')) return 'ANPD certificacao — barreira regulatoria superada'
+  if (slider.id?.includes('partner')) return 'Parcerias canal — multiplicador de aquisicao'
+  return slider.label || 'Variavel de cenario what-if'
+}
+const caseExplanation = (name) => {
+  const map = {
+    bear: 'Cenario pessimista — assume churn alto, conversao baixa, sem advisor',
+    base: 'Cenario realista — premissas centrais validadas pela transcricao',
+    bull: 'Cenario otimista — todas alavancas ativas (LOIs, advisor, funding)',
+  }
+  return map[name] || 'Cenario customizado'
+}
 
 const emit = defineEmits(['scenario-change'])
 

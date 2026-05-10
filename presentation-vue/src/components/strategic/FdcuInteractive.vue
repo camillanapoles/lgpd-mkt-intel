@@ -76,7 +76,15 @@
         <!-- Header do Item -->
         <div class="flex items-center justify-between mb-4">
           <div class="flex-1">
-            <h3 class="text-xl font-bold text-white">{{ item.name }}</h3>
+            <div class="flex items-center gap-2">
+              <h3 class="text-xl font-bold text-white">{{ item.name }}</h3>
+              <button
+                @click.stop="toggleInfo(`fdcu-${item.id}`)"
+                class="w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+                :class="expandedInfo.has(`fdcu-${item.id}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+                title="Ver detalhes FDC-U"
+              >i</button>
+            </div>
             <p class="text-slate-400 text-sm">{{ item.description }}</p>
           </div>
           <div class="text-right">
@@ -86,6 +94,12 @@
               {{ item.delta > 0 ? '+' : '' }}{{ item.delta.toFixed(2) }}
             </p>
           </div>
+        </div>
+        <div v-if="expandedInfo.has(`fdcu-${item.id}`)" class="mb-4 p-3 rounded bg-slate-900/50 border border-slate-700/50 space-y-1">
+          <p class="text-xs text-slate-400">Dimensao: {{ item.dimensao || 'N/A' }} — Status: {{ item.status || 'N/A' }}</p>
+          <p class="text-xs text-slate-400">Fonte: <span class="text-accent-400">{{ item.fonte }}</span></p>
+          <p class="text-xs text-slate-400">VVV: {{ item.vvv.toFixed(2) }} — {{ vvvExplanation(item.vvv) }}</p>
+          <p v-if="item.prazo" class="text-xs text-slate-500">Prazo: {{ item.prazo }}</p>
         </div>
 
         <!-- Controles Editáveis -->
@@ -263,7 +277,18 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, reactive } from 'vue'
+
+const expandedInfo = reactive(new Set())
+const toggleInfo = (key) => {
+  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
+}
+const vvvExplanation = (vvv) => {
+  if (vvv >= 0.95) return 'Fato verificado (transcricao/fonte oficial)'
+  if (vvv >= 0.8) return 'Fonte oficial citada com confianca alta'
+  if (vvv >= 0.5) return 'Analise fundamentada, parcialmente verificada'
+  return 'Gap — nao verificado, necessita pesquisa'
+}
 
 const props = defineProps({
   initialData: {

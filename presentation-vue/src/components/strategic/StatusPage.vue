@@ -69,10 +69,22 @@
                 <span class="text-caption font-bold shrink-0" :class="fdcClass(item.funcao_fdc)">
                   {{ item.funcao_fdc }}
                 </span>
+                <button
+                  @click.stop="toggleInfo(`status-${item.id}`)"
+                  class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+                  :class="expandedInfo.has(`status-${item.id}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+                  title="Ver detalhes"
+                >i</button>
               </div>
               <p v-if="item.fonte" class="text-caption text-slate-500 truncate" :title="item.fonte">
                 {{ item.fonte }}
               </p>
+              <div v-if="expandedInfo.has(`status-${item.id}`)" class="mt-2 pt-2 border-t border-slate-700/50 space-y-1">
+                <p class="text-caption text-slate-400">VVV: {{ (item.vvv || 0).toFixed(2) }} — {{ vvvExplanation(item.vvv || 0) }}</p>
+                <p class="text-caption text-slate-400">Status: {{ item.fonte_status || 'PESQUISANDO' }} — Funcao FDC-U: {{ item.funcao_fdc }}</p>
+                <p v-if="item.fonte" class="text-caption text-accent-400 break-all">Fonte: {{ item.fonte }}</p>
+                <p v-if="item.proxima_revisao" class="text-caption text-slate-500">Proxima revisao: {{ item.proxima_revisao }}</p>
+              </div>
             </div>
             <div class="flex items-center gap-3 shrink-0">
               <!-- VVV BAR -->
@@ -105,7 +117,18 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, reactive } from 'vue'
+
+const expandedInfo = reactive(new Set())
+const toggleInfo = (key) => {
+  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
+}
+const vvvExplanation = (vvv) => {
+  if (vvv >= 0.95) return 'Fato verificado (transcricao/fonte oficial)'
+  if (vvv >= 0.8) return 'Fonte oficial citada com confianca alta'
+  if (vvv >= 0.5) return 'Analise fundamentada, parcialmente verificada'
+  return 'Gap — nao verificado, necessita pesquisa'
+}
 
 const props = defineProps({
   snti: { type: Object, required: true }
