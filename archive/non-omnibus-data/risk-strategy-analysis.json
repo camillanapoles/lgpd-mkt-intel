@@ -1,0 +1,418 @@
+{
+  "$schema": "Risk & Strategy Analysis v1.0",
+  "metadados": {
+    "projeto": "CIT AI TECH - LGPD SaaS Municipal",
+    "data_analise": "2026-05-09T00:00:00Z",
+    "metodologia": "Risk Analysis + VVV Framework",
+    "transcricao": "/home/cnmfs/ICT/PROTOTYPE/LAYER/LGPD/reuniao-lgpd-06-05-26-audio.txt"
+  },
+  "risk_register": {
+    "resumo": {
+      "total_riscos": 8,
+      "critico": 2,
+      "alto": 3,
+      "medio": 2,
+      "baixo": 1
+    },
+    "riscos": [
+      {
+        "id": "R-001",
+        "descricao": "Viabilidade econômica NÃO validada - custo dev X preço X margem desconhecido",
+        "categoria": "Custo",
+        "probabilidade": 5,
+        "impacto": 5,
+        "score": 25,
+        "prioridade": "critico",
+        "vvv": 0.95,
+        "fonte": "L1391-L1397",
+        "justificativa": "Camila não respondeu pergunta direta sobre custo desenvolvimento - sem isso impossível precificar ou levantar funding",
+        "owner": "Camila",
+        "response_strategy": "Mitigate",
+        "acoes": [
+          "Entregar orçamento desenvolvimento com 80% confidence",
+          "Definir MVP core vs phase 2 features",
+          "Calcular unit economics (CAC, LTV, payback)"
+        ],
+        "contingencia": {
+          "trigger": "Orçamento não entregue em 7 dias",
+          "acoes": [
+            "Revisar escopo MVP",
+            "Considerar partnership com software house"
+          ]
+        }
+      },
+      {
+        "id": "R-002",
+        "descricao": "OSCIP/Instituto NÃO confirmada - se não existe, edge 'sem licitação' desaparece",
+        "categoria": "Organizacional",
+        "probabilidade": 4,
+        "impacto": 5,
+        "score": 20,
+        "prioridade": "critico",
+        "vvv": 0.85,
+        "fonte": "L656-L661",
+        "justificativa": "Discussão sobre Instituto qualificado OSCIP mas incerteza se JÁ existe ou é plano - base do modelo ICT",
+        "owner": "Gislene",
+        "response_strategy": "Resolve",
+        "acoes": [
+          "Validar qualificação OSCIP (existe ou em processo?)",
+          "Se não existe: priorizar protocolação",
+          "Se existe: obter documento comprobatório"
+        ],
+        "contingencia": {
+          "trigger": "OSCIP não ativa em 30 dias",
+          "acoes": [
+            "Pivot para licitação tradicional",
+            "Focar em consórcios (já têm credenciamento)"
+          ]
+        }
+      },
+      {
+        "id": "R-003",
+        "descricao": "Prefeituras falidas - risco inadimplência 40%",
+        "categoria": "External",
+        "probabilidade": 5,
+        "impacto": 4,
+        "score": 20,
+        "prioridade": "alto",
+        "vvv": 0.9,
+        "fonte": "L889-L892",
+        "justificativa": "Declaração explícita 'maioria das prefeituras estão falidas, sem dinheiro' - confirma risco receita",
+        "owner": "Wilton",
+        "response_strategy": "Mitigate",
+        "acoes": [
+          "Focar em recursos carimbados (FNDE, emendas)",
+          "Modelo preco por faixa populacional (acessível)",
+          "Contratar com recursos vinculados (obrigatório LGPD)"
+        ],
+        "contingencia": {
+          "trigger": "Inadimplência > 20% portfolio",
+          "acoes": [
+            "Revisar critérios crédito",
+            "Aumentar peso recursos carimbados"
+          ]
+        }
+      },
+      {
+        "id": "R-004",
+        "descricao": "Sales cycle B2G >12 meses - burocracia, processos licitatórios, turnaround político",
+        "categoria": "Schedule",
+        "probabilidade": 5,
+        "impacto": 4,
+        "score": 20,
+        "prioridade": "alto",
+        "vvv": 0.95,
+        "fonte": "insights-reuniao-06-05.md:L57",
+        "justificativa": "Realidade B2G brasileiro - reconhecido por todos participantes como bottleneck",
+        "owner": "Wilton",
+        "response_strategy": "Mitigate",
+        "acoes": [
+          "Canal OSCIP (sem licitação)",
+          "Venda lote via consórcios (10-20 municípios/vez)",
+          "Associacoes municipais (evento único, varios contratos)"
+        ],
+        "contingencia": {
+          "trigger": "Cycle médio > 9 meses",
+          "acoes": [
+            "Intensificar consórcios",
+            "Considerar white label para players estabelecidos"
+          ]
+        }
+      },
+      {
+        "id": "R-005",
+        "descricao": "Subcontratação digitalização NÃO mapeada - não se sabe fornecedores, spread real",
+        "categoria": "Supplier",
+        "probabilidade": 3,
+        "impacto": 4,
+        "score": 12,
+        "prioridade": "alto",
+        "vvv": 0.8,
+        "fonte": "L604-L614",
+        "justificativa": "Discussão sobre subcontratar (comprar X, vender Y) mas incerteza sobre quem são 3 fornecedores mencionados",
+        "owner": "Wilton",
+        "response_strategy": "Mitigate",
+        "acoes": [
+          "Levantar 3 quotes fornecedores digitalização",
+          "Validar spread real (compra X, venda Y)",
+          "Definir SLA e contrato modelo"
+        ],
+        "contingencia": {
+          "trigger": "Margem < 20% em digitalizacao",
+          "acoes": [
+            "Renegociar com fornecedores",
+            "Considerar operar OCR internamente"
+          ]
+        }
+      },
+      {
+        "id": "R-006",
+        "descricao": "Vazamento dados sensíveis durante implementação - risco operacional crítico",
+        "categoria": "Security",
+        "probabilidade": 3,
+        "impacto": 5,
+        "score": 15,
+        "prioridade": "alto",
+        "vvv": 0.85,
+        "fonte": "L112-L119",
+        "justificativa": "Caso AIDS mencionado - vazamento servidor público gera indenizacao, multa, suspensao sistema",
+        "owner": "Camila",
+        "response_strategy": "Mitigate",
+        "acoes": [
+          "Protocolo segurança rigido implementação",
+          "Criptografia dados em transit/at rest",
+          "Controle acesso por matricula + marca d'água"
+        ],
+        "contingencia": {
+          "trigger": "Incidente de segurança",
+          "acoes": [
+            "Plano resposta incidentes ativado",
+            "Notificacao ANPD/MP (legal requirement)",
+            "Comunicação controlada"
+          ]
+        }
+      },
+      {
+        "id": "R-007",
+        "descricao": "Prefeitos não priorizam LGPD - só se movem com processo/inelegibilidade",
+        "categoria": "External",
+        "probabilidade": 4,
+        "impacto": 3,
+        "score": 12,
+        "prioridade": "medio",
+        "vvv": 0.85,
+        "fonte": "L862",
+        "justificativa": "Comparação lixo (1,5% aterro sanitario) - prefeitos priorizam visibilidade votos vs compliance",
+        "owner": "Simone",
+        "response_strategy": "Mitigate",
+        "acoes": [
+          "Posicionar como marketing politico (cidade transparente)",
+          "Focar em risco inelegibilidade (casos concretos)",
+          "Usar recursos carimbados (prefeito obrigado cumprir)"
+        ],
+        "contingencia": {
+          "trigger": "Taxa conversao < 20%",
+          "acoes": [
+            "Intensificar campanha educacao risco",
+            "Focar em municipios com fiscalizacao ativa"
+          ]
+        }
+      },
+      {
+        "id": "R-008",
+        "descricao": "Concorrência estabelecida - LGPD Tech, TOW, Confidata com preços agressivos",
+        "categoria": "Market",
+        "probabilidade": 4,
+        "impacto": 3,
+        "score": 12,
+        "prioridade": "medio",
+        "vvv": 0.85,
+        "fonte": "inteligencia-mercado-govtech-lgpd.md:L40-L44",
+        "justificativa": "Players existentes com cases, brand e preços - necessidade diferencial claro (ICT/preço)",
+        "owner": "Todos",
+        "response_strategy": "Mitigate",
+        "acoes": [
+          "Diferencial ICT (sem licitação ate R$390K)",
+          "Pricing agressivo micro-municipios",
+          "Time-to-market acelerado (primeiro mover)"
+        ],
+        "contingencia": {
+          "trigger": "Perda proposta por preco",
+          "acoes": [
+            "Revisar pricing faixas populacionais",
+            "Oferecer starter tier com features core"
+          ]
+        }
+      }
+    ]
+  },
+  "sugestoes_estrategicas_validadas": {
+    "resumo": "8 sugestões estratégicas extraídas e validadas com VVV score",
+    "sugestoes": [
+      {
+        "id": "S-001",
+        "texto": "Criar produto modular 'prateleira' com 3 SKUs: Lite (software), Pro (software+compliance), Enterprise (full-service)",
+        "categoria": "Produto",
+        "prioridade": "P0",
+        "vvv": 0.9,
+        "fonte": "L1490-L1500",
+        "justificativa": "Reconhecimento que taxa conversão 30-40% precisa aumentar - reducao barreira entrada via modularizacao",
+        "acao_imediata": "Definir escopo de cada SKU com pricing"
+      },
+      {
+        "id": "S-002",
+        "texto": "Precificação por faixa populacional: 20-30K hab (R$15-20K/ano), 30-50K (R$20-30K), 50-100K (R$30-50K)",
+        "categoria": "Pricing",
+        "prioridade": "P0",
+        "vvv": 0.95,
+        "fonte": "L1400-L1420",
+        "justificativa": "Proposta R$600K (Luís Eduardo Magalhães) inviavel - necessidade faixas acessiveis validada",
+        "acao_imediata": "Criar tabela pricing por faixa + calculadora"
+      },
+      {
+        "id": "S-003",
+        "texto": "Foco Associações de Municípios (AMM, AMUNOR) vendas lote via consórcio - 10-20 municípios/vez",
+        "categoria": "Go-to-Market",
+        "prioridade": "P0",
+        "vvv": 0.9,
+        "fonte": "L923-L934",
+        "justificativa": "Scale vs venda 1-a-1 (12 meses) - evento único com varios municipios reduz CAC drasticamente",
+        "acao_imediata": "Mapear consórcios e associacoes prioritarias"
+      },
+      {
+        "id": "S-004",
+        "texto": "Canal OSCIP termo parceria fomento direto sem licitação - subterfúgio legal validado",
+        "categoria": "Legal/Go-to-Market",
+        "prioridade": "P0",
+        "vvv": 0.95,
+        "fonte": "L619-L624",
+        "justificativa": "Lei Nacional OSCIP permite fomento direto - acelera sales cycle B2G >12 meses",
+        "acao_imediata": "Validar OSCIP + criar template termo parceria"
+      },
+      {
+        "id": "S-005",
+        "texto": "Registrar IP/INPI software ANTES venda (requisito Art.75 IV d dispensa)",
+        "categoria": "Legal",
+        "prioridade": "P0",
+        "vvv": 1.0,
+        "fonte": "L1540-L1550",
+        "justificativa": "Sem IP registrado, contratacao por dispensa juridicamente fragel - risco blocking",
+        "acao_imediata": "Protocolar INPI Sprint 1 (meta 13/05)"
+      },
+      {
+        "id": "S-006",
+        "texto": "Whitepaper Parecer Jurídico Dispensa Art.75 IV para prefeitos/procuradores",
+        "categoria": "Legal",
+        "prioridade": "P0",
+        "vvv": 0.9,
+        "fonte": "L1540-L1550",
+        "justificativa": "Remove objeção jurídica - passo-a-passo + minuta desbloqueia recebimentos",
+        "acao_imediata": "Gislene draft whitepaper + validar com advogado"
+      },
+      {
+        "id": "S-007",
+        "texto": "Diagnóstico gratuito lead magnet qualificação automática - reduz CAC",
+        "categoria": "Produto",
+        "prioridade": "P0",
+        "vvv": 0.85,
+        "fonte": "L1400-L1410",
+        "justificativa": "Venda 100% consultiva nao escala - diagnostico auto qualifica leads antes contato humano",
+        "acao_imediata": "Especificar ferramenta diagnostico + MVP"
+      },
+      {
+        "id": "S-008",
+        "texto": "Demo adaptável por município com personalização automática (brasão, logo) <30 segundos via IA",
+        "categoria": "Produto",
+        "prioridade": "P1",
+        "vvv": 0.75,
+        "fonte": "L1380-L1390",
+        "justificativa": "Percepção valor -40% se genérico - personalizacao rapida aumenta conversão",
+        "acao_imediata": "Implementar IA personalizacao demo (tech debt baixo)"
+      }
+    ]
+  },
+  "cenarios_atuais": {
+    "resumo": "4 cenários identificados com probabilidades e impactos",
+    "cenarios": [
+      {
+        "id": "C-001",
+        "nome": "Green Light - Desenvolvimento MVP",
+        "probabilidade": 0.0,
+        "condicao": "(custo_dev <= R$150k) E (pricing >= R$5k/mês) E (OSCIP_ativa)",
+        "vvv_condicao": 0.9,
+        "vvv_itens": {
+          "custo_dev": 0.0,
+          "pricing": 0.8,
+          "oscip_ativa": 0.0
+        },
+        "acao": "Iniciar desenvolvimento MVP 45 dias"
+      },
+      {
+        "id": "C-002",
+        "nome": "Yellow Light - Revisar Escopo",
+        "probabilidade": 0.6,
+        "condicao": "custo_dev > R$150k OU pricing < R$5k/mês (mas viável com ajustes)",
+        "vvv_condicao": 0.7,
+        "acao": "Revisar MVP core, reduzir escopo ou ajustar pricing"
+      },
+      {
+        "id": "C-003",
+        "nome": "Orange Light - Pivot Canal",
+        "probabilidade": 0.3,
+        "condicao": "OSCIP não ativa mas custo_dev viável",
+        "vvv_condicao": 0.8,
+        "acao": "Pivot para consórcios (já têm credenciamento) ou licitação tradicional"
+      },
+      {
+        "id": "C-004",
+        "nome": "Red Light - Rethink Model",
+        "probabilidade": 0.1,
+        "condicao": "custo_dev inviável E OSCIP não ativa",
+        "vvv_condicao": 0.9,
+        "acao": "Rethink model - partnership com software house ou white label"
+      }
+    ]
+  },
+  "plano_acao_imediato": {
+    "sprint_1": {
+      "periodo": "13-20/05/2026",
+      "acoes_criticas": [
+        {
+          "acao": "Camila: orçamento desenvolvimento 80% confidence",
+          "owner": "Camila",
+          "vvv": 0.95,
+          "bloqueio": "R-001"
+        },
+        {
+          "acao": "Gislene: validar qualificação OSCIP",
+          "owner": "Gislene",
+          "vvv": 0.85,
+          "bloqueio": "R-002"
+        },
+        {
+          "acao": "Wilton: 3 quotes digitalização (spread real)",
+          "owner": "Wilton",
+          "vvv": 0.8,
+          "bloqueio": "R-005"
+        },
+        {
+          "acao": "Todos: definir MVP spec (must-have vs phase 2)",
+          "owner": "Todos",
+          "vvv": 0.85,
+          "bloqueio": "R-001"
+        }
+      ],
+      "quick_wins": [
+        {
+          "acao": "Wilton: pricing por faixa populacional",
+          "effort": "baixo",
+          "impacto": "alto"
+        },
+        {
+          "acao": "Gislene: whitepaper Art.75 IV draft",
+          "effort": "baixo",
+          "impacto": "alto"
+        },
+        {
+          "acao": "Camila: diagnostico gratuito spec",
+          "effort": "baixo",
+          "impacto": "alto"
+        }
+      ]
+    }
+  },
+  "trigger_go_no_go": {
+    "status": "BLOQUEADO",
+    "condicao": "(custo_dev <= R$150k) E (pricing >= R$5k/mês) E (OSCIP_ativa)",
+    "vvv_itens": {
+      "custo_dev": 0.0,
+      "pricing": 0.8,
+      "oscip_ativa": 0.0
+    },
+    "desbloquear": [
+      "R-001: Obter orçamento Camila",
+      "R-002: Confirmar OSCIP Gislene",
+      "R-005: Quotes Wilton"
+    ]
+  }
+}

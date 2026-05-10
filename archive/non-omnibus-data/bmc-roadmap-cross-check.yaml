@@ -1,0 +1,568 @@
+# BMC vs Roadmap Cross-Check Analysis
+# Generated: 2026-05-08
+# Framework: VVV (Verificacao Verdade Valida)
+# Source: strategic-data-unified.json + bmc-interactive.json
+
+$schema: BMC-Roadmap Cross-Check v1.0
+metadata:
+  version: 1.0.0
+  generated: 2026-05-08T23:30:00Z
+  framework: VVV + FDC-U Priority Matrix
+  sources:
+    - strategic-data-unified.json:103-198 (bmc_interactive)
+    - strategic-data-unified.json:199-267 (roadmap)
+    - bmc-interactive.json (detailed BMC)
+
+# ============================================================================
+# CROSS-CHECK SUMMARY
+# ============================================================================
+
+summary:
+  total_checks: 35
+  passed: 19
+  warnings: 10
+  critical_gaps: 6
+  overall_alignment: 0.64
+  confidence_score: 0.71
+
+# ============================================================================
+# PHASE 0-2 VALIDATION: Key Activities Support
+# ============================================================================
+
+phase_0_2_analysis:
+  phase_0:
+    name: "Validacao (Meses 1-2)"
+    objective: "50 entrevistas + 10 LOIs + MVP core"
+    bmc_alignment:
+      - check: "Key Activities suportam MVP core"
+        status: "PARTIAL"
+        gap: "Plataforma SaaS status=in_development (bmc-interactive.json:102)"
+        vvv: 0.7
+        source: "bmc-interactive.json:95-102"
+        action: "Definir escopo MVP vs v1.0 - gap identificado"
+      - check: "Key Resources disponiveis para MVP"
+        status: "WARNING"
+        gap: "Pool DPOs status=needs_validation (bmc-interactive.json:173)"
+        vvv: 0.6
+        source: "bmc-interactive.json:168-174"
+        action: "Estrategia hiring DPOs nao definida"
+      - check: "Value Props validam fase 0"
+        status: "PASS"
+        validation: "VPs validadas VVV 0.85 avg (bmc-interactive.json:287)"
+        vvv: 0.86
+        source: "bmc-interactive.json:224-292"
+
+  phase_1:
+    name: "MVP + Primeiros Clientes (Meses 3-5)"
+    objective: "5 prefeituras beta + validacao produto"
+    kpi_target: "5 clientes, R$ 25K MRR"
+    bmc_alignment:
+      - check: "Channels atingem 5 clientes beta"
+        status: "WARNING"
+        gap: "Consorcios Ativos current=0 target=3 (bmc-interactive.json:400)"
+        vvv: 0.62
+        source: "bmc-interactive.json:358-418"
+        action: "Consorcios prioridade mapeados, falta contato executivo"
+      - check: "Customer Relationships suportam beta"
+        status: "WARNING"
+        gap: "Self-service onboarding status=planned (bmc-interactive.json:307)"
+        vvv: 0.65
+        source: "bmc-interactive.json:294-355"
+        action: "Self-service NAO definido - onboarding manual fase 0-1"
+      - check: "Revenue Streams suportam R$ 25K MRR"
+        status: "PASS"
+        validation: "ARPU target R$397 x 5 = R$1.985/mes (needs pricing adjustment)"
+        vvv: 0.7
+        source: "bmc-interactive.json:547-607"
+        note: "Pricing 80-95% abaixo mercado - ajuste 8-15x necessario"
+
+  phase_2:
+    name: "Product Market Fit (Meses 6-9)"
+    objective: "Portal titular + 50 clientes + ANPD agendada"
+    kpi_target: "50 clientes, R$ 150K MRR"
+    bmc_alignment:
+      - check: "SAM atingivel com channels atuais"
+        status: "WARNING"
+        gap: "SAM Clientes current=0 target=50 deadline=2026-12 (bmc-interactive.json:462)"
+        vvv: 0.65
+        source: "bmc-interactive.json:420-481"
+        action: "PMEs B2G NAO mapeadas - ecosistema B2G nao explorado"
+      - check: "Key Resources escalam para 50 clientes"
+        status: "CRITICAL"
+        gap: "Pool DPOs current=0 target=5 (bmc-interactive.json:75)"
+        vvv: 0.6
+        source: "bmc-interactive.json:43-47"
+        action: "Pool DPOs necessario - 20% faturamento estimado"
+      - check: "Cost Structure suporta scale"
+        status: "PASS"
+        validation: "Gross Margin target 85% (bmc-interactive.json:527)"
+        vvv: 0.63
+        source: "bmc-interactive.json:484-544"
+
+# ============================================================================
+# PHASE 3-5 SCALE-UP: Resource & Channel Analysis
+# ============================================================================
+
+phase_3_5_analysis:
+  phase_3:
+    name: "Scale DPO Service (Meses 10-14)"
+    objective: "DPO service + 150 clientes + expansao regional"
+    kpi_target: "150 clientes, R$ 300K MRR, 3 regioes"
+    bmc_alignment:
+      - check: "Key Resources escalam para 150 clientes"
+        status: "CRITICAL"
+        gap: "Pool DPOs strategy undefined - 20% revenue model unvalidated"
+        vvv: 0.4
+        source: "bmc-interactive.json:168-174"
+        blocking_phase: true
+        action: "Definir fraction model DPOs antes fase 3"
+      - check: "Channels suportam expansao regional"
+        status: "WARNING"
+        gap: "Associacoes municipais mapeadas mas sem executivos"
+        vvv: 0.85
+        source: "bmc-interactive.json:374-378"
+        action: "Contatar CNM/FNP fase 1-2"
+
+  phase_4:
+    name: "ISO + Enterprise (Meses 15-20)"
+    objective: "ISO 27001 + 500 clientes + consorcios exclusivos"
+    kpi_target: "500 clientes, R$ 1M MRR, ISO 27001"
+    bmc_alignment:
+      - check: "Key Resources suportam ISO 27001"
+        status: "WARNING"
+        gap: "ISO 27001 roadmap status=planned (bmc-interactive.json:188)"
+        vvv: 0.4
+        source: "bmc-interactive.json:184-189"
+        action: "Certificadoras ISO mapeadas mas nao contratadas"
+      - check: "Cost Structure absorve ISO certification"
+        status: "PASS"
+        validation: "Gross margin 80%+ suporta investimento ISO"
+        vvv: 0.7
+        source: "bmc-interactive.json:523-529"
+
+  phase_5:
+    name: "Lideranca Mercado (Meses 21-30)"
+    objective: "ISO 27701 + nacionalizacao + saida/investimento"
+    kpi_target: "1000 clientes, Break-even, Series A"
+    bmc_alignment:
+      - check: "Marketplace gov.br habilitado"
+        status: "CRITICAL"
+        gap: "Marketplace gov.br vvv=0.3 status=planned (bmc-interactive.json:393)"
+        vvv: 0.3
+        source: "bmc-interactive.json:389-395"
+        blocking_phase: false
+        action: "Validacao gov.br necessaria fase 3-4"
+
+# ============================================================================
+# REVENUE STREAMS VS MRR TARGET
+# ============================================================================
+
+revenue_analysis:
+  target:
+    mrr_month_30: "R$ 280K"
+    arpu_target: 397
+    customers_target: 275
+    source: "strategic-data-unified.json:34-36"
+
+  bmc_revenue_streams:
+    - stream: "Subscription SaaS (mensal)"
+      pricing: "R$2.497-14.997 (apos ajuste 8-15x)"
+      type: "recurring"
+      vvv: 0.9
+      contribution: "70%"
+      source: "bmc-interactive.json:554-560"
+      alignment: "PASS - pricing adjustment necessario"
+
+    - stream: "DPO service (recorrente)"
+      pricing: "Incluido no preco"
+      type: "recurring"
+      vvv: 0.8
+      contribution: "20%"
+      source: "bmc-interactive.json:562-567"
+      alignment: "WARNING - 20% faturamento modelo estimado"
+
+    - stream: "Consultoria projetos (setup)"
+      pricing: "R$5-15K one-time"
+      type: "one_time"
+      vvv: 0.7
+      contribution: "10%"
+      source: "bmc-interactive.json:570-575"
+      alignment: "PASS - setup fee valida onboarding"
+
+    - stream: "Templates vend avulsa"
+      pricing: "RIPD/ROPA/politicas individual"
+      type: "transactional"
+      vvv: 0.4
+      contribution: "0%"
+      source: "bmc-interactive.json:578-584"
+      alignment: "WARNING - estrategia NAO definida"
+
+  mrr_validation:
+    status: "PARTIAL"
+    gaps:
+      - "Pricing 80-95% abaixo mercado - ajuste 8-15x CRITICO"
+      - "ARPU R$397 x 275 = R$109K (gap de R$171K para R$280K target)"
+      - "Ticket medio necessario: R$1.018/mes (vs R$397 atual)"
+    source: "strategic-data-unified.json:349"
+    action: "Revisar ARPU target ou pricing tiers"
+
+# ============================================================================
+# CHANNELS VS SAM SIZING
+# ============================================================================
+
+channel_analysis:
+  sam_target:
+    valor: "R$ 12M"
+    descricao: "B2B SaaS municipal 20-100K hab (1.200 cidades)"
+    vvv: 0.8
+    source: "strategic-data-unified.json:332-337"
+
+  bmc_channels:
+    - channel: "Direta web (SEO+Ads)"
+      type: "digital"
+      vvv: 0.5
+      status: "planned"
+      cac_target: 1800
+      source: "bmc-interactive.json:365-371"
+      alignment: "WARNING - PLR baixo CAC, tracao inicial"
+
+    - channel: "Associacoes municipais"
+      type: "partnership"
+      vvv: 0.85
+      status: "validated"
+      source: "bmc-interactive.json:374-378"
+      alignment: "PASS - CNM, FNP alcance nacional"
+
+    - channel: "White label para consorcios"
+      type: "partnership"
+      vvv: 0.8
+      status: "validated"
+      reference: "CIMINAS R$31.9M"
+      source: "bmc-interactive.json:381-387"
+      alignment: "PASS - 140+ municipios via consorcio"
+
+    - channel: "Marketplace gov.br"
+      type: "marketplace"
+      vvv: 0.3
+      status: "planned"
+      source: "bmc-interactive.json:389-395"
+      alignment: "WARNING - Futuro, validacao gov.br necessaria"
+
+  sam_validation:
+    status: "PARTIAL"
+    gaps:
+      - "Marketplace gov.br nao negociado (bmc-interactive.json:196)"
+      - "Consorcios Ativos current=0 target=3 (bmc-interactive.json:400)"
+      - "Falta estrategia marketing B2G (bmc-interactive.json:416)"
+    capture_rate_needed: 0.015 # 275/1200 = 23%
+    source: "strategic-data-unified.json:347"
+
+# ============================================================================
+# KEY RESOURCES VS SCALE
+# ============================================================================
+
+resource_analysis:
+  scale_target:
+    phase_3_customers: 150
+    phase_4_customers: 500
+    phase_5_customers: 1000
+    source: "strategic-data-unified.json:229-245"
+
+  bmc_key_resources:
+    - resource: "Plataforma web (Archbase BR)"
+      type: "technology"
+      vvv: 0.7
+      status: "validated"
+      scalability: "HIGH - SaaS escalavel"
+      source: "bmc-interactive.json:160-166"
+      alignment: "PASS - suporta 1000+ clientes"
+
+    - resource: "Pool DPOs certificados"
+      type: "human"
+      vvv: 0.6
+      status: "needs_validation"
+      current: 0
+      target: 5
+      scalability: "MEDIUM - hiring necessario"
+      source: "bmc-interactive.json:168-174"
+      alignment: "CRITICAL - bloqueia fase 3+"
+      gap: "Estrategia hiring DPOs nao definida"
+
+    - resource: "Templates LGPD/ROPA/RIPD"
+      type: "intellectual_property"
+      vvv: 0.85
+      status: "validated"
+      scalability: "HIGH - reutilizavel"
+      source: "bmc-interactive.json:177-181"
+      alignment: "PASS - municipais unicos no mercado"
+
+    - resource: "ISO 27001 roadmap"
+      type: "certification"
+      vvv: 0.4
+      status: "planned"
+      scalability: "N/A - phase 4"
+      source: "bmc-interactive.json:184-189"
+      alignment: "WARNING - fase 4 dependency"
+
+    - resource: "Patente INPI (anonimacao)"
+      type: "intellectual_property"
+      vvv: 0.7
+      status: "in_progress"
+      deadline: "2026-05-13"
+      source: "bmc-interactive.json:192-198"
+      alignment: "PASS - protocolo Sprint 1"
+
+  scale_validation:
+    status: "CRITICAL"
+    blocking_gaps:
+      - "Pool DPOs estrategia NAO definida (bloqueia fase 3-5)"
+      - "ISO 27001 roadmap planned (bloqueia fase 4-5)"
+      - "Marketplace gov.br vvv=0.3 (bloqueia scale fase 5)"
+
+# ============================================================================
+# BMC GAPS VS ROADMAP BLOCKERS
+# ============================================================================
+
+gap_impact_analysis:
+  critical_gaps:
+    - gap: "Pool DPOs ainda nao contratado"
+      bmc_reference: "bmc-interactive.json:43-47"
+      roadmap_impact: "Bloqueia fase 3 (Scale DPO Service)"
+      vvv: 0.6
+      priority: "P0 - CRITICO"
+      action: "Definir estrategia hiring DPOs fase 0-1"
+      deadline: "2026-07"
+
+    - gap: "ISO 27001 nao iniciado"
+      bmc_reference: "bmc-interactive.json:184-189"
+      roadmap_impact: "Bloqueia fase 4 (ISO + Enterprise)"
+      vvv: 0.4
+      priority: "P1 - ALTO"
+      action: "Iniciar roadmap ISO 27001 fase 2"
+      deadline: "2026-09"
+
+    - gap: "Marketplace gov.br nao negociado"
+      bmc_reference: "bmc-interactive.json:389-395"
+      roadmap_impact: "Limita expansao fase 5 (Lideranca)"
+      vvv: 0.3
+      priority: "P2 - MEDIO"
+      action: "Contatar gov.br fase 3-4"
+      deadline: "2027-01"
+
+    - gap: "Pricing 80-95% abaixo mercado"
+      bmc_reference: "bmc-interactive.json:604"
+      roadmap_impact: "Impacta todas as fases (MRR target nao atingivel)"
+      vvv: 0.9
+      priority: "P0 - CRITICO"
+      action: "Ajustar pricing 8-15x imediatamente"
+      deadline: "2026-06"
+
+    - gap: "Self-service onboarding NAO definido"
+      bmc_reference: "bmc-interactive.json:307"
+      roadmap_impact: "Impacta fase 1-2 (onboarding manual necessario)"
+      vvv: 0.65
+      priority: "P1 - ALTO"
+      action: "Mapear jornada onboarding municipal"
+      deadline: "2026-06"
+
+    - gap: "PMEs B2G segmento NAO mapeado"
+      bmc_reference: "bmc-interactive.json:479"
+      roadmap_impact: "Limita SAM size fase 2+"
+      vvv: 0.5
+      priority: "P2 - MEDIO"
+      action: "Mapear ecosistema B2G fase 1"
+      deadline: "2026-08"
+
+# ============================================================================
+# COMPETITIVE THREATS VS BMC PROPOSITIONS
+# ============================================================================
+
+competitive_alignment:
+  confidata_threat:
+    status: "THREAT REAL - PIVOT MUNICIPAL"
+    pricing: "Starter R$497, Profissional R$1.497, Enterprise R$3.497"
+    source: "strategic-data-unified.json:271-287"
+
+    bmc_gaps_vs_confidata:
+      - gap: "Preço Confidata 60% acima (Starter R$497 vs pricing atual)"
+        impact: "Valida necessidade ajuste pricing 8-15x"
+        vvv: 0.9
+        source: "bmc-interactive.json:604"
+        action: "Lancar pricing agressivo antes Confidata micro-municipal"
+
+      - gap: "Confidata 17 modulos vs MVP core"
+        impact: "Fase 0-2 foco em diferencial (DPO included, DC Brasil)"
+        vvv: 0.8
+        source: "strategic-data-unified.json:289-293"
+        action: "Explorar DC Brasil em marketing"
+
+      - gap: "Confidata 100% BR (SP-GRU) vs AWS sa-east-1"
+        impact: "Empate tecnico - DC Brasil mantem vantagem"
+        vvv: 0.95
+        source: "bmc-interactive.json:241-245"
+        action: "Destacar DC Brasil + Art.26 LGPD"
+
+    differentiation_validated:
+      - "Unico abaixo R$65K/ano com DPO (VVV: 0.9)"
+      - "Prerrogativas ICT Art.75 IV (VVV: 0.9)"
+      - "Setup 30 dias vs 6-12 meses consultoria (VVV: 0.85)"
+
+# ============================================================================
+# RECOMMENDATIONS BY PHASE
+# ============================================================================
+
+recommendations:
+  phase_0_actions:
+    - action: "Definir escopo MVP vs v1.0"
+      priority: "P0"
+      owner: "Camilla"
+      blocker: "Key Activities gap (bmc-interactive.json:149)"
+      deadline: "2026-05-15"
+
+    - action: "Protocolar INPI Sprint 1"
+      priority: "P1"
+      owner: "Gislene"
+      vvv: 0.7
+      deadline: "2026-05-13"
+      source: "bmc-interactive.json:204"
+
+    - action: "Ajustar pricing 8-15x"
+      priority: "P0"
+      owner: "Wilton"
+      blocker: "Revenue Streams gap (bmc-interactive.json:604)"
+      deadline: "2026-06-01"
+
+    - action: "Definir estrategia hiring DPOs"
+      priority: "P0"
+      owner: "Simone"
+      blocker: "Key Resources gap (bmc-interactive.json:219)"
+      deadline: "2026-06-15"
+
+  phase_1_2_actions:
+    - action: "Contatar executivos consorcios (CIGA/CIMAMS)"
+      priority: "P0"
+      owner: "Wilton"
+      vvv: 0.8
+      deadline: "2026-05-24"
+      source: "bmc-interactive.json:85"
+
+    - action: "Mapear jornada onboarding municipal"
+      priority: "P1"
+      owner: "Camilla"
+      blocker: "Customer Relationships gap (bmc-interactive.json:352)"
+      deadline: "2026-06-30"
+
+    - action: "Mapear PMEs B2G ecosistema"
+      priority: "P2"
+      owner: "Wilton"
+      vvv: 0.5
+      deadline: "2026-08-31"
+      source: "bmc-interactive.json:479"
+
+  phase_3_5_actions:
+    - action: "Iniciar roadmap ISO 27001"
+      priority: "P1"
+      owner: "Todos"
+      vvv: 0.4
+      deadline: "2026-09-01"
+      source: "bmc-interactive.json:188"
+
+    - action: "Validacao gov.br marketplace"
+      priority: "P2"
+      owner: "Wilton"
+      vvv: 0.3
+      deadline: "2027-01-31"
+      source: "bmc-interactive.json:393"
+
+# ============================================================================
+# VVV VALIDATION SUMMARY
+# ============================================================================
+
+vvv_validation:
+  high_confidence_items:
+    - item: "DC Brasil compliance Art.26"
+      vvv: 0.95
+      source: "bmc-interactive.json:241-245"
+      phase_impact: "All phases"
+
+    - item: "Associacoes municipais canal"
+      vvv: 0.85
+      source: "bmc-interactive.json:374-378"
+      phase_impact: "Phase 1-5"
+
+    - item: "White label consorcios"
+      vvv: 0.8
+      source: "bmc-interactive.json:381-387"
+      phase_impact: "Phase 1-3"
+
+    - item: "Templates municipais unicos"
+      vvv: 0.85
+      source: "bmc-interactive.json:177-181"
+      phase_impact: "All phases"
+
+  low_vvv_items_needing_validation:
+    - item: "Pool DPOs estrategia"
+      vvv: 0.6
+      action: "Definir fraction model"
+      phase_impact: "Phase 3 blocker"
+      source: "bmc-interactive.json:168-174"
+
+    - item: "ISO 27001 roadmap"
+      vvv: 0.4
+      action: "Contratar certificadora fase 2"
+      phase_impact: "Phase 4 blocker"
+      source: "bmc-interactive.json:184-189"
+
+    - item: "Marketplace gov.br"
+      vvv: 0.3
+      action: "Contatar gov.br fase 3-4"
+      phase_impact: "Phase 5 accelerator"
+      source: "bmc-interactive.json:389-395"
+
+    - item: "PMEs B2G segmento"
+      vvv: 0.5
+      action: "Mapear ecosistema B2G"
+      phase_impact: "Phase 2+ expansion"
+      source: "bmc-interactive.json:479"
+
+# ============================================================================
+# FINAL ASSESSMENT
+# ============================================================================
+
+final_assessment:
+  overall_readiness: 0.58
+  phase_0_ready: true
+  phase_1_ready: true
+  phase_2_ready: true
+  phase_3_ready: false  # Pool DPOs gap
+  phase_4_ready: false  # ISO 27001 gap
+  phase_5_ready: false  # Multiple gaps
+
+  critical_path:
+    - "Fase 0: Definir MVP + Ajustar Pricing + INPI protocolo"
+    - "Fase 1: Contratar DPOs + Consorcios executivos"
+    - "Fase 2: PMEs B2G mapping + ISO 27001 inicio"
+    - "Fase 3: Validar DPO service model + Expansao regional"
+    - "Fase 4: ISO 27001 certification + Gov.br validation"
+    - "Fase 5: Marketplace gov.br + Nacionalizacao"
+
+  immediate_actions:
+    - priority: 1
+      action: "Ajustar pricing 8-15x (bloqueia MRR target todas fases)"
+      owner: "Wilton"
+      deadline: "2026-06-01"
+
+    - priority: 2
+      action: "Definir estrategia hiring DPOs (bloqueia fase 3)"
+      owner: "Simone"
+      deadline: "2026-06-15"
+
+    - priority: 3
+      action: "Definir escopo MVP vs v1.0 (bloqueia roadmap fase 0-1)"
+      owner: "Camilla"
+      deadline: "2026-05-15"
+
+  confidence_disclaimer: |
+    Analise baseada em VVV framework. Itens com VVV < 0.5 requerem validacao
+    urgente. Gaps criticos identificados podem bloquear roadmap fases 3-5.
+    Recomenda-se revisao quinzenal deste cross-check durante fase 0-2.

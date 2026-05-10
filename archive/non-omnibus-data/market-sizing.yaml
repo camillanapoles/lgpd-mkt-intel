@@ -1,0 +1,102 @@
+# Market Sizing - LGPD Municipal Brazil
+# Generated: 2026-05-08
+# VVV = Validity, Verifiability, Value (0-1 scale)
+
+market_sizing:
+  tam:
+    total_municipios: 5570
+    sem_lgpd: 4010
+    percentual_sem_lgpd: 72.0
+    valor: "R$ 2.0B+"
+    fonte: "IBGE MUNIC 2024"
+    vvv: 0.95
+    notas: "72% dos municípios não possuem área ou pessoa responsável por LGPD (apenas 28% têm responsável designado)"
+
+  sam:
+    # Serviceable Addressable Market - Municípios 20-100K habitantes
+    cidades_ate_20k: 3935
+    cidades_acima_100k: 319
+    cidades_20_100k_estimado: 1316
+    percentual_total: 23.6
+    valor: "R$ 450M+"
+    vvv: 0.80
+    fonte: "IBGE Censo 2022 + Distribuição populacional estimada"
+    notas: "Cálculo baseado em: 5,570 total - 3,935 (até 20K) - 319 (acima 100K) = 1,316 municípios na faixa 20-100K"
+
+  som:
+    # Serviceable Obtainable Market - 3 anos target inicial
+    anos_alvo: 3
+    cidades_alvo_ano: 50
+    ticket_medio: "R$ 15.000"
+    valor_anual: "R$ 750K"
+    valor_total: "R$ 2.25M"
+    vvv: 0.65
+    fonte: "Estimativa baseada em valores de mercado de consultoria LGPD"
+    notas: "Ticket médio R$15K considera: diagnóstico inicial + plano de adequação + treinamento + 3 meses de acompanhamento"
+
+  analise_competitiva:
+   LGPD_consulting_costs:
+      range_baixo: "R$ 5.000"
+      range_medio: "R$ 10.000 - R$ 15.000"
+      range_alto: "R$ 20.000+"
+      fonte: "Pesquisa mercado consultoria LGPD 2024"
+      vvv: 0.70
+
+    data_breach_cost_brazil:
+      custo_medio: "R$ 7.19M"
+      fonte: "IBM Cost of Data Breach Report 2024 - Brasil"
+      vvv: 0.90
+
+    penalidades_anpd:
+      maxima: "R$ 50M"
+      percentual_receita: "2%"
+      fonte: "Lei LGPD Art. 52"
+      vvv: 1.0
+
+  referencias:
+    - fonte: "IBGE MUNIC 2024"
+      url: "https://www.ibge.gov.br/estatisticas/sociais/protecao-social/10586-pesquisa-de-informacoes-basicas-municipais.html"
+      vvv: 1.0
+
+    - fonte: "IBGE Censo 2022 - Panorama"
+      url: "https://censo2022.ibge.gov.br/panorama/"
+      vvv: 1.0
+
+    - fonte: "LGPD2U - MUNIC 2025 LGPD nos Municípios"
+      url: "https://lgpd2u.com.br/lgpd-nos-municipios-ibge-2025-dados-governanca-digital/"
+      vvv: 0.90
+
+    - fonte: "IstoÉ Dinheiro - 72% municípios sem LGPD"
+      url: "https://istoedinheiro.com.br/ibge-72-municipios-implementar-lgpd"
+      vvv: 0.95
+
+    - fonte: "SIDRA IBGE - Tabela 7436"
+      url: "https://sidra.ibge.gov.br/tabela/7436"
+      vvv: 1.0
+
+metodologia:
+  # VVV Scoring:
+  # - 1.0: Fonte oficial governamental (IBGE, ANPD, Lei)
+  # - 0.9-0.95: Fonte jornalística com base em dados oficiais
+  # - 0.8: Estimativa baseada em dados oficiais
+  # - 0.65-0.7: Estimativa de mercado (consultoria, private data)
+  #
+  # TAM Calculation:
+  # - 5,570 municípios × 72% sem LGPD = 4,010 municípios-alvo
+  # - Valor estimado: R$2B+ considerando ticket médio de R$500K/município para adequação completa
+  #
+  # SAM Calculation:
+  # - Faixa 20-100K habitantes: ~1,316 municípios
+  # - Ticket médio menor que grandes cidades, maior que pequenos
+  # - Valor: R$450M+ baseado em R$300K-500K/município nesta faixa
+  #
+  # SOM Calculation (3 anos):
+  # - 50 municípios/ano = meta realista considerando capacidade operacional
+  # - R$15K ticket médio (adequação básica + acompanhamento)
+  # - 150 municípios em 3 anos = R$2.25M receita total
+  #
+  # Assumptions:
+  # - Crescimento da demanda impulsionado por fiscalização ANPD
+  # - Municípios >20Khabitantes têm maior capacidade orçamentária
+  # - Preferência por soluções ágeis e que respeitem restrições do setor público
+  # - Diferenciais: conformidade com ANPD + simplicidade operacional

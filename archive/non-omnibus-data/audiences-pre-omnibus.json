@@ -1,0 +1,263 @@
+{
+  "archived_at": "2026-05-10T00:12:01.271511",
+  "reason": "R13-QUARANTINE: audiences nao seguiram pipeline OMNIBUS S->Q->I->A completo",
+  "f3_msp_validated": [
+    "b2g_consorcios",
+    "b2g_prefeituras_medio",
+    "b2g_micro_municipios",
+    "b2b_advocacia_whitlabel"
+  ],
+  "note": "F3-MSP Phase 1+2 completo (QUALITY_CoT=8.00). Phase 3+4+5 pendente para sub-engines.",
+  "audiences": [
+    {
+      "id": "b2g_prefeituras",
+      "label": "B2G - Prefeituras",
+      "icon": "🏛",
+      "sun_tzu_strategy": "Ataque o ponto onde nao estao preparados. Prefeituras <100K hab nao tem ninguem oferecendo LGPD acessivel.",
+      "persona": {
+        "titulo": "Secretario de Administracao / Prefeito",
+        "perfil": "Gestor publico sem conhecimento tecnico em LGPD. Oramento limitado. Precisa resolver rapido sem dor de cabeca.",
+        "lei_aplicavel": "LGPD Art.5, Art.41 (DPO obrigatorio), Lei 14.133/2021 Art.75 IV (dispensa ate R$50K)",
+        "risco_sem_servico": "Multa ANPD ate 2% faturamento (R$50M max), acao civil, dano reputacional, fiscalizacao TCE",
+        "valor_entregue": "Compliance completo R$297-397/mes com DPO incluido. Setup 30 dias. Sem licitacao complexa.",
+        "pain_point": "Nao sabe por onde comecar. Acha LGPD e caro e complexo. Medo de multa mas sem orcamento para consultoria.",
+        "canal_ideal": "Associacoes municipais (CNM, FNP) + consorcios + indicacao TCE"
+      },
+      "game_theory": {
+        "nos_entramos_primeiro": {
+          "nos": "+40",
+          "competidor": "+10",
+          "resultado": "First-mover advantage critico"
+        },
+        "competidor_entra_primeiro": {
+          "nos": "+5",
+          "competidor": "+30",
+          "resultado": "Perdemos posicao em relacoes municipais"
+        },
+        "ambos_entram": {
+          "nos": "+15",
+          "competidor": "+15",
+          "resultado": "Commoditizacao precoce - vence quem tem ICT qualification"
+        },
+        "ninguem_entra": {
+          "nos": "0",
+          "competidor": "0",
+          "resultado": "Mercado permanece 72% nao-compliant"
+        }
+      },
+      "sun_tzu_quotes": [
+        "Apareça onde nao sao esperados - ninguem oferece LGPD para micro-municipios",
+        "Ganhe sem lutar - ICT qualification = barreira de entrada natural",
+        "Conheca o terreno - cada prefeitura tem TCE, orcamento e politica diferentes"
+      ],
+      "custom_weights": {
+        "dao": 0.15,
+        "ceu": 0.2,
+        "terra": 0.3,
+        "comandante": 0.2,
+        "metodo": 0.15
+      },
+      "custom_weights_rationale": "B2G prefeituras pondera TERRA (posicao) mais — contrato municipal depende de posicao competitiva"
+    },
+    {
+      "id": "b2g_consorcios",
+      "label": "B2G - Consorcios Intermunicipais",
+      "icon": "🤝",
+      "sun_tzu_strategy": "Faca aliados dos consorcios - sao pontes para multiplas prefeituras. Um contrato = N clientes.",
+      "persona": {
+        "titulo": "Diretor Executivo do Consorcio",
+        "perfil": "Coordena 5-30 municipios. Quer oferecer servicos sem aumentar equipe. Focado em economia de escala.",
+        "lei_aplicavel": "LGPD Art.5 (todos os municipios devem compliance), Lei 14.133 (consorcio pode contratar centralizado)",
+        "risco_sem_servico": "Cada municipio do consorcio exposto individualmente. Consorcio perde credibilidade se membro for multado.",
+        "valor_entregue": "White-label SaaS R$197/mes por municipio. DPO hub centralizado para todos. Compliance unificado com marca do consorcio.",
+        "pain_point": "Nao tem equipe para atender LGPD de todos municipios membros. Precisa solucao escalavel.",
+        "canal_ideal": "Direto via Wilton (articulacao) + CNM eventos + white-label para consorcios"
+      },
+      "game_theory": {
+        "nos_entramos_primeiro": {
+          "nos": "+60",
+          "competidor": "+5",
+          "resultado": "Lock-in via white-label. Consorcio = cliente recorrente multi-municipio"
+        },
+        "competidor_entra_primeiro": {
+          "nos": "+10",
+          "competidor": "+40",
+          "resultado": "Perdemos acesso a 5-30 municipios por consorcio"
+        },
+        "ambos_entram": {
+          "nos": "+20",
+          "competidor": "+20",
+          "resultado": "Consorcios dividem entre vendors - modelo hibrido"
+        },
+        "ninguem_entra": {
+          "nos": "0",
+          "competidor": "0",
+          "resultado": "Consorcios permanecem sem solucao"
+        }
+      },
+      "sun_tzu_quotes": [
+        "O pior e atacar cidades - ataque via alianca (consorcios), nao venda individual",
+        "Conheca seu aliado - cada consorcio tem dinamica propria",
+        "Use o terreno - consorcios sao CANAL e CLIENTE simultaneamente"
+      ],
+      "custom_weights": {
+        "dao": 0.25,
+        "ceu": 0.15,
+        "terra": 0.2,
+        "comandante": 0.25,
+        "metodo": 0.15
+      },
+      "custom_weights_rationale": "Consorcios pondera DAO (alinhamento) + COMANDANTE (lideranca) — consorcio exige alinhamento politico"
+    },
+    {
+      "id": "b2b_fornecedores_municipio",
+      "label": "B2B - Fornecedores de Municipio",
+      "icon": "🏢",
+      "sun_tzu_strategy": "Quem fornece ao municipio PRECISA de LGPD por obrigacao contratual. Capture-os quando o municipio virar cliente.",
+      "persona": {
+        "titulo": "Diretor de Compliance / DPO informal",
+        "perfil": "Empresa privada fornecedora de servicos ao municipio. Obrigacao contratual LGPD. Sem equipe dedicada privacy.",
+        "lei_aplicavel": "LGPD Art.3 (obrigatorio se processa dados no Brasil), clausulas contratuais municipais exigindo compliance",
+        "risco_sem_servico": "Perde contrato com municipio. Multa ANPD. Responsabilidade civil por vazamento de dados de cidadaos.",
+        "valor_entregue": "Compliance rapido R$497-997/mes. Templates especificos B2G. Integracao com requisitos do contrato municipal.",
+        "pain_point": "Municipio exige LGPD no contrato mas empresa nao sabe como cumprir. Consultoria cara e lenta.",
+        "canal_ideal": "Indicacao do municipio cliente + campanha 'seu municipio exige LGPD, nos ajudamos'"
+      },
+      "game_theory": {
+        "nos_entramos_primeiro": {
+          "nos": "+30",
+          "competidor": "+5",
+          "resultado": "Cross-sell natural do municipio para fornecedores"
+        },
+        "competidor_entra_primeiro": {
+          "nos": "+10",
+          "competidor": "+25",
+          "resultado": "Competidor captura B2B enquanto nos focamos B2G"
+        },
+        "ambos_entram": {
+          "nos": "+15",
+          "competidor": "+15",
+          "resultado": "Segmentacao natural B2G vs B2B"
+        },
+        "ninguem_entra": {
+          "nos": "0",
+          "competidor": "0",
+          "resultado": "Fornecedores continuam nao-compliant"
+        }
+      },
+      "sun_tzu_quotes": [
+        "Ataque onde nao estao preparados - fornecedores nao esperam obrigacao LGPD",
+        "Conheca o inimigo - fornecedor nao e inimigo, e cliente em potencial preso ao municipio",
+        "Transforme obstaculo em ponte - obrigacao contratual vira demanda natural"
+      ],
+      "custom_weights": {
+        "dao": 0.15,
+        "ceu": 0.2,
+        "terra": 0.25,
+        "comandante": 0.15,
+        "metodo": 0.25
+      },
+      "custom_weights_rationale": "B2B fornecedores pondera METODO (disciplina) + TERRA — fornecedor quer metodo claro e posicao"
+    },
+    {
+      "id": "b2b_empresas_privadas",
+      "label": "B2B - Empresas Privadas",
+      "icon": "💼",
+      "sun_tzu_strategy": "Mercado massivo mas disperso. Use como receita complementar, nao foco. Posicione como 'LGPD acessivel para quem nao e enterprise'.",
+      "persona": {
+        "titulo": "DPO / Responsavel Privacy",
+        "perfil": "PME 50-500 funcionarios. Tem dados de clientes/funcionarios. Sabe que precisa LGPD mas sem budget enterprise.",
+        "lei_aplicavel": "LGPD Art.41 (DPO obrigatorio para todos), Art.5 (base legal para processamento)",
+        "risco_sem_servico": "Multa ate 2% faturamento. Vazamento = dano reputacional + acao civil. Concorrencia compliance como diferencial.",
+        "valor_entregue": "SaaS R$497-1.497/mes com DPO fracionado. Mesma plataforma enterprise a preco PME.",
+        "pain_point": "OneTrust/Confidata custa R$1.5-3.5K/mes. Consultoria demora 6-12 meses. Precisa resolver rapido.",
+        "canal_ideal": "SEO/Ads 'LGPD para empresas' + parcerias contabilidade + marketplace B2B"
+      },
+      "game_theory": {
+        "nos_entramos_primeiro": {
+          "nos": "+20",
+          "competidor": "+5",
+          "resultado": "Market share PME antes de Confidata descer"
+        },
+        "competidor_entra_primeiro": {
+          "nos": "+5",
+          "competidor": "+30",
+          "resultado": "Confidata domina PME com 17 modulos"
+        },
+        "ambos_entram": {
+          "nos": "+10",
+          "competidor": "+15",
+          "resultado": "Commoditizacao - Confidata tem mais features"
+        },
+        "ninguem_entra": {
+          "nos": "0",
+          "competidor": "0",
+          "resultado": "PMEs continuam nao-compliant"
+        }
+      },
+      "sun_tzu_quotes": [
+        "Nao lute em todas as frentes - B2B e secundario, B2G e o foco",
+        "Use o que o inimigo nao tem - ICT qualification nao existe no setor privado",
+        "Velocidade - se Confidata desce para PME, perdemos diferencial de preco"
+      ],
+      "custom_weights": {
+        "dao": 0.2,
+        "ceu": 0.25,
+        "terra": 0.2,
+        "comandante": 0.15,
+        "metodo": 0.2
+      },
+      "custom_weights_rationale": "B2B privadas pondera CEU (timing) — privado reage a timing regulatorio"
+    },
+    {
+      "id": "b2g_estaduais",
+      "label": "B2G - Orgaos Estaduais",
+      "icon": "🏛",
+      "sun_tzu_strategy": "Terreno diferente - procurement estadual e mais complexo. Abordar SOMENTE apos consolidar municipal. Nao ataque onde o terreno e desconhecido.",
+      "persona": {
+        "titulo": "Diretor de TI / Procurador Juridico",
+        "perfil": "Orgao estadual com milhares de servidores. Ja tem algum nivel de TI mas LGPD e novo. Processo licitatorio complexo.",
+        "lei_aplicavel": "LGPD Art.41 + Lei 14.133 (licitacao estadual - valores maiores, processo mais longo)",
+        "risco_sem_servico": "Multa ANPD proporcionalmente maior. Maior exposicao midiatica. Fiscalizacao TCE estadual.",
+        "valor_entregue": "Plataforma enterprise R$2-5K/mes. Data Discovery + anonimizacao LAI/LGPD. Suporte dedicado.",
+        "pain_point": "Volume de dados enorme. Processos manuais insustentaveis. Precisam automacao real.",
+        "canal_ideal": "Pregao eletronico + indicacao TCE + parceria com associcao de procuradores"
+      },
+      "game_theory": {
+        "nos_entramos_primeiro": {
+          "nos": "+15",
+          "competidor": "+5",
+          "resultado": "Entrada prematura - sem maturidade para licitacao estadual"
+        },
+        "competidor_entra_primeiro": {
+          "nos": "+5",
+          "competidor": "+30",
+          "resultado": "NeoGov/Confidata lock-in estadual"
+        },
+        "ambos_entram": {
+          "nos": "+10",
+          "competidor": "+15",
+          "resultado": "Market share fragmentado"
+        },
+        "ninguem_entra": {
+          "nos": "0",
+          "competidor": "0",
+          "resultado": "Estaduais continuam com processos manuais"
+        }
+      },
+      "sun_tzu_quotes": [
+        "Nao ataque terreno que nao conhece - estadual e phase 3+",
+        "Conheca quando recuar - Focus B2G municipal primeiro, estadual depois",
+        "O general que avanca sem pensar e derrotado"
+      ],
+      "custom_weights": {
+        "dao": 0.2,
+        "ceu": 0.15,
+        "terra": 0.25,
+        "comandante": 0.25,
+        "metodo": 0.15
+      },
+      "custom_weights_rationale": "B2G estaduais pondera COMANDANTE + TERRA — nivel estadual exige lideranca e posicao"
+    }
+  ]
+}

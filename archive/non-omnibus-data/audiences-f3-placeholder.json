@@ -1,0 +1,71 @@
+{
+  "archived_at": "2026-05-10T00:17:29.257975",
+  "reason": "R13: placeholder F3-MSP Phase 1+2 nao constitui dado validado. Pipeline Phase 3+4+5 nao executado. Audiences removidas do JSON ate pipeline completo.",
+  "note": "Restaurar apos PESTLE[A]+SWOT[I+A]+Market[I+A] completos E F3-MSP Phase 3+4+5 executados.",
+  "audiences_placeholder": [
+    {
+      "id": "b2g_consorcios",
+      "fdcu_score": 7.99,
+      "fdcu_rank": 1,
+      "vvv_provenance": "f3-msp-universe-mapping-completed",
+      "vvv": 0.8,
+      "vvv_source": "memory/wal/f3-msp-audiences-validated.md",
+      "pipeline_status": "PHASE-1-2-COMPLETE | PHASE-3-4-5-PENDING",
+      "custom_weights": {
+        "dao": 0.15,
+        "ceu": 0.25,
+        "terra": 0.25,
+        "comandante": 0.2,
+        "metodo": 0.15
+      }
+    },
+    {
+      "id": "b2g_prefeituras_medio",
+      "fdcu_score": 7.64,
+      "fdcu_rank": 2,
+      "vvv_provenance": "f3-msp-universe-mapping-completed",
+      "vvv": 0.8,
+      "vvv_source": "memory/wal/f3-msp-audiences-validated.md",
+      "pipeline_status": "PHASE-1-2-COMPLETE | PHASE-3-4-5-PENDING",
+      "custom_weights": {
+        "dao": 0.15,
+        "ceu": 0.2,
+        "terra": 0.3,
+        "comandante": 0.2,
+        "metodo": 0.15
+      }
+    },
+    {
+      "id": "b2g_micro_municipios",
+      "fdcu_score": 7.1,
+      "fdcu_rank": 3,
+      "vvv_provenance": "f3-msp-universe-mapping-completed",
+      "vvv": 0.75,
+      "vvv_source": "memory/wal/f3-msp-audiences-validated.md",
+      "pipeline_status": "PHASE-1-2-COMPLETE | PHASE-3-4-5-PENDING",
+      "custom_weights": {
+        "dao": 0.2,
+        "ceu": 0.2,
+        "terra": 0.25,
+        "comandante": 0.2,
+        "metodo": 0.15
+      }
+    },
+    {
+      "id": "b2b_advocacia_whitlabel",
+      "fdcu_score": 6.49,
+      "fdcu_rank": 4,
+      "vvv_provenance": "f3-msp-universe-mapping-completed",
+      "vvv": 0.72,
+      "vvv_source": "memory/wal/f3-msp-audiences-validated.md",
+      "pipeline_status": "PHASE-1-2-COMPLETE | PHASE-3-4-5-PENDING",
+      "custom_weights": {
+        "dao": 0.1,
+        "ceu": 0.15,
+        "terra": 0.3,
+        "comandante": 0.25,
+        "metodo": 0.2
+      }
+    }
+  ]
+}
