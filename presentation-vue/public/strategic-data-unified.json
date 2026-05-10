@@ -1266,7 +1266,10 @@
             ],
             "certeza_agregada": 0.85,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.425
           },
           {
             "id": "raci_coverage",
@@ -1294,7 +1297,10 @@
             ],
             "certeza_agregada": 0.9,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.45
           },
           {
             "id": "prefeitura_alignment_low",
@@ -1322,7 +1328,10 @@
             ],
             "certeza_agregada": 0.8,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.4
           },
           {
             "id": "consorcio_early_validation",
@@ -1350,7 +1359,10 @@
             ],
             "certeza_agregada": 0.7,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.35
           },
           {
             "id": "advisor_missing",
@@ -1379,7 +1391,10 @@
             ],
             "certeza_agregada": 0.3,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.15
           },
           {
             "id": "tce_not_mapped",
@@ -1407,7 +1422,10 @@
             ],
             "certeza_agregada": 0.85,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.425
           }
         ]
       },
@@ -1443,7 +1461,10 @@
             ],
             "certeza_agregada": 0.95,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.475
           },
           {
             "id": "eca_digital_urgent",
@@ -1471,7 +1492,10 @@
             ],
             "certeza_agregada": 0.98,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.49
           },
           {
             "id": "lei_14133_dispensa",
@@ -1499,7 +1523,10 @@
             ],
             "certeza_agregada": 0.98,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.49
           },
           {
             "id": "window_2026_2027",
@@ -1527,7 +1554,10 @@
             ],
             "certeza_agregada": 0.85,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.425
           },
           {
             "id": "election_2028_risk",
@@ -1555,7 +1585,10 @@
             ],
             "certeza_agregada": 0.78,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.39
           },
           {
             "id": "anpd_agenda_2025_26",
@@ -1583,7 +1616,10 @@
             ],
             "certeza_agregada": 0.89,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.445
           },
           {
             "id": "cloud_market_growth",
@@ -1611,7 +1647,10 @@
             ],
             "certeza_agregada": 0.94,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.47
           }
         ]
       },
@@ -1647,7 +1686,10 @@
             ],
             "certeza_agregada": 0.95,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.475
           },
           {
             "id": "dc_brasil_100pct",
@@ -1675,7 +1717,10 @@
             ],
             "certeza_agregada": 0.95,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.475
           },
           {
             "id": "pricing_below_dispensa",
@@ -1703,7 +1748,10 @@
             ],
             "certeza_agregada": 0.9,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.45
           },
           {
             "id": "confidata_threat",
@@ -1731,7 +1779,10 @@
             ],
             "certeza_agregada": 0.7,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.35
           },
           {
             "id": "onetrust_potential",
@@ -1759,7 +1810,10 @@
             ],
             "certeza_agregada": 0.5,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.25
           },
           {
             "id": "buyer_power_high",
@@ -1787,7 +1841,10 @@
             ],
             "certeza_agregada": 0.84,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.42
           },
           {
             "id": "rivalry_high",
@@ -1815,7 +1872,10 @@
             ],
             "certeza_agregada": 0.82,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.41
           },
           {
             "id": "tam_4011_municipios",
@@ -1843,7 +1903,10 @@
             ],
             "certeza_agregada": 0.95,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.475
           },
           {
             "id": "aws_dependency",
@@ -1872,7 +1935,10 @@
             ],
             "certeza_agregada": 0.7,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.35
           },
           {
             "id": "no_brand",
@@ -1901,7 +1967,10 @@
             ],
             "certeza_agregada": 0.7,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.35
           }
         ]
       },
@@ -1937,7 +2006,10 @@
             ],
             "certeza_agregada": 0.9,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.45
           },
           {
             "id": "gislene_juridica",
@@ -1965,7 +2037,10 @@
             ],
             "certeza_agregada": 0.85,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.425
           },
           {
             "id": "camilla_tech",
@@ -1993,7 +2068,10 @@
             ],
             "certeza_agregada": 0.8,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.4
           },
           {
             "id": "simone_compliance",
@@ -2021,7 +2099,10 @@
             ],
             "certeza_agregada": 0.9,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.45
           },
           {
             "id": "dpo_pool_gap",
@@ -2049,7 +2130,10 @@
             ],
             "certeza_agregada": 0.8,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.4
           },
           {
             "id": "no_iso",
@@ -2078,7 +2162,10 @@
             ],
             "certeza_agregada": 0.7,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.35
           },
           {
             "id": "advisor_vvv03",
@@ -2107,7 +2194,10 @@
             ],
             "certeza_agregada": 0.3,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.15
           }
         ]
       },
@@ -2143,7 +2233,10 @@
             ],
             "certeza_agregada": 0.85,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.425
           },
           {
             "id": "sprints_planned",
@@ -2171,7 +2264,10 @@
             ],
             "certeza_agregada": 0.8,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.4
           },
           {
             "id": "critical_path_defined",
@@ -2199,7 +2295,10 @@
             ],
             "certeza_agregada": 0.8,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.4
           },
           {
             "id": "lois_zero",
@@ -2228,7 +2327,10 @@
             ],
             "certeza_agregada": 0.0,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.0
           },
           {
             "id": "custo_dev_unknown",
@@ -2256,7 +2358,10 @@
             ],
             "certeza_agregada": 0.4,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.2
           },
           {
             "id": "conversao_zero",
@@ -2284,7 +2389,10 @@
             ],
             "certeza_agregada": 0.0,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.0
           },
           {
             "id": "financial_confidence_low",
@@ -2312,7 +2420,10 @@
             ],
             "certeza_agregada": 0.65,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.325
           },
           {
             "id": "model_contabilizei_validated",
@@ -2340,7 +2451,10 @@
             ],
             "certeza_agregada": 0.8,
             "shelf_life": "12m",
-            "proxima_revisao": "2027-05-09"
+            "proxima_revisao": "2027-05-09",
+            "vvv_provenance": "narrative-llm-single-turn",
+            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
+            "vvv_decay": 0.4
           }
         ]
       }

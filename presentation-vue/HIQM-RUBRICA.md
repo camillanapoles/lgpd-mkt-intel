@@ -71,6 +71,34 @@ Target ≥95% per cell; component pass ≥95% mean across the 5 dimensions. Scor
 
 Status legend: **GOLD** (≥95%) · **ITER-1** (90–94%, one focused refactor away) · **ITER-2** (80–89%, two focused refactors away) · **ITER-3** (<80%, structural work needed).
 
+### 3.1 Strict Re-Audit (Phase 0 codebase-analyst, 2026-05-09)
+
+A re-audit applying STRICT reading of D4 PASS criteria (per §4 below: "audience selector OR explicit global-view-only badge required") yielded different results. The matrix above used GENEROUS grading (D4 minimum 70% even when absent). Strict reading scores D4 absence as 0%.
+
+| Component             | D1 | D2 | D3 | D4 | D5 | Strict Mean | Status |
+|-----------------------|---:|---:|---:|---:|---:|------------:|--------|
+| ArtOfWar.vue          | 100% | 100% | 100% | 100% | 80% | **96%** | **GOLD** |
+| SwotAnalysis.vue      | 70% | 100% | 90% | 100% | 90% | 90% | ITER-1 |
+| FdcuInteractive.vue   | 100% | 90% | 80% | 30% | 85% | 77% | ITER-3 |
+| StatusPage.vue        | 90% | 100% | 85% | 0% | 95% | 74% | ITER-3 |
+| Dashboard5s.vue       | 90% | 100% | 70% | 0% | 95% | 71% | ITER-3 |
+| ScenarioSimulator.vue | 100% | 90% | 40% | 20% | 90% | 68% | ITER-3 |
+| MacroAnalysis.vue     | 60% | 100% | 70% | 0% | 90% | 64% | ITER-3 |
+| StakeholderMap.vue    | 50% | 90% | 60% | 0% | 90% | 58% | ITER-3 |
+| RoadmapViewer.vue     | 60% | 100% | 10% | 0% | 90% | 52% | ITER-3 |
+| CompetitiveView.vue   | 40% | 80% | 20% | 0% | 90% | 46% | ITER-3 |
+
+**Strict pass rate: 1/10 components (ArtOfWar.vue only).**
+
+Reconciliation: when D4 absence accepted with "global view only" implicit badge, scores rise per §3 above. Strict reading requires explicit badge OR audience selector — most components have neither.
+
+**Cross-cutting deficits identified:**
+- **D4 SubEngine**: 6/10 components score 0% (no audience awareness, no global-view badge)
+- **D3 Decay UI**: only ArtOfWar renders `vvv_decay`; computeDecay() not extracted to composable
+- **D1 Dynamism**: 6/10 components are pass-through prop iterators, not reactive engines
+
+Compliance with R5 (CLAUDE.md "score honesto, NUNCA inflar VVV"): the strict matrix above is the honest baseline. Generous matrix retained for historical context but should not be cited as "current state" in deploy decisions.
+
 ---
 
 ## 4. How to Measure Each Dimension (PASS criteria)
