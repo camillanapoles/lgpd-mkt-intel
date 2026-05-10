@@ -40,6 +40,12 @@
             >
               <div class="flex items-start justify-between mb-2">
                 <p class="text-body-sm text-white flex-1">{{ factor.fato }}</p>
+                <button
+                  @click.stop="toggleInfo(`pestle-${category}-${key}`)"
+                  class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors ml-2"
+                  :class="expandedInfo.has(`pestle-${category}-${key}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+                  title="Ver fonte e detalhes"
+                >i</button>
               </div>
               <div class="flex items-center gap-2 mb-2">
                 <span
@@ -62,6 +68,13 @@
                 </div>
               </div>
               <p class="text-caption text-slate-500 mt-1">Fonte: {{ factor.fonte }}</p>
+              <div v-if="expandedInfo.has(`pestle-${category}-${key}`)" class="space-y-1 border-t border-slate-700/50 mt-1 pt-1.5">
+                <p class="text-caption text-slate-400">VVV: {{ factor.vvv.toFixed(2) }} — {{ vvvExplanation(factor.vvv) }}</p>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-caption text-slate-500">Fonte:</span>
+                  <span class="text-accent-400 text-xs">{{ factor.fonte || 'Nao mapeada' }}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,8 +89,16 @@
           class="bg-slate-800/50 border border-slate-700 rounded-card p-5"
         >
           <div class="flex items-start justify-between mb-3">
-            <div>
-              <h3 class="text-h4 text-white">{{ porterTitle(key) }}</h3>
+            <div class="flex-1">
+              <div class="flex items-center gap-2">
+                <h3 class="text-h4 text-white">{{ porterTitle(key) }}</h3>
+                <button
+                  @click.stop="toggleInfo(`porter-${key}`)"
+                  class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
+                  :class="expandedInfo.has(`porter-${key}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
+                  title="Ver fonte e detalhes"
+                >i</button>
+              </div>
               <div class="flex items-center gap-2 mt-1">
                 <span class="text-caption text-slate-400">Rating:</span>
                 <div class="flex gap-0.5">
@@ -166,7 +187,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 const props = defineProps({
   pestle: { type: Object, default: () => ({}) },
@@ -175,6 +196,18 @@ const props = defineProps({
 })
 
 const activeView = ref('pestle')
+const expandedInfo = reactive(new Set())
+
+const toggleInfo = (key) => {
+  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
+}
+
+const vvvExplanation = (vvv) => {
+  if (vvv >= 0.95) return 'Fato verificado (transcricao/fonte oficial)'
+  if (vvv >= 0.8) return 'Fonte oficial citada com confianca alta'
+  if (vvv >= 0.5) return 'Analise fundamentada, parcialmente verificada'
+  return 'Gap — nao verificado, necessita pesquisa'
+}
 
 const views = [
   { id: 'pestle', label: 'PESTLE' },
