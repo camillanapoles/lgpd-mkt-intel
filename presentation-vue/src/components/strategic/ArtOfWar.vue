@@ -251,6 +251,7 @@
 
 <script setup>
 import { ref, computed, reactive } from 'vue'
+import { useVvvDecay } from '../../composables/useVvvDecay'
 
 const props = defineProps({
   snti: { type: Object, required: true },
@@ -265,13 +266,7 @@ const toggleInfo = (dimKey, itemId) => {
   expandedItems.has(key) ? expandedItems.delete(key) : expandedItems.add(key)
 }
 
-const LAMBDA = 0.30
-
-const computeDecay = (vvv, updated) => {
-  if (!updated) return vvv
-  const months = (Date.now() - new Date(updated).getTime()) / (30.44 * 24 * 60 * 60 * 1000)
-  return vvv * (1 / (1 + LAMBDA * months))
-}
+const { computeDecay } = useVvvDecay()
 
 const applyFdcFunction = (decay, fn) => {
   switch (fn) {

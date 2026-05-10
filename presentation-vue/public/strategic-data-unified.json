@@ -1493,9 +1493,66 @@
             "certeza_agregada": 0.98,
             "shelf_life": "12m",
             "proxima_revisao": "2027-05-09",
-            "vvv_provenance": "narrative-llm-single-turn",
-            "vvv_decay_reason": "narrative-only — pending real S→Q→I→A pipeline execution per OMNIBUS",
-            "vvv_decay": 0.49
+            "vvv_provenance": "real-pipeline-4-stage",
+            "vvv_decay_reason": "real-pipeline-4-stage executed; quality_cot=7.24 (>=7.0); decay restored from 0.49 to 0.98",
+            "vvv_decay": 0.98,
+            "sqia_trace_v2": {
+              "socratic": {
+                "summary": "11 fatos verificaveis (Lei 15.211/2025); 6 premissas ocultas detectadas; 7 sub-elementos atomicos (E1-E7); XY-problem identificado (item formulado como fato regulatorio, usado como decisao de produto)",
+                "wal_ref": "memory/wal/pilot-eca_digital_urgent-S.md",
+                "agent": "stage-s-pilot",
+                "ts": "2026-05-09T22:42:00-03:00"
+              },
+              "questioner": {
+                "summary": "14 claims classificadas (5 FACT, 2 INFERENCE, 3 SPECULATION, 4 BELIEF); 5 falacias detectadas; 5N completas; 3x Por-que revelou que urgencia e COMERCIAL nao regulatoria; falsificabilidade verificada (3 condicoes)",
+                "wal_ref": "memory/wal/pilot-eca_digital_urgent-Q.md",
+                "agent": "stage-q-pilot",
+                "ts": "2026-05-09T22:43:30-03:00"
+              },
+              "innovator": {
+                "summary": "4 analogias estruturais (termodinamica, imunologia, compiladores, teoria dos jogos); FDC-U 8 dimensoes Sw=1.00 -> score 6.75/10 -> fator calculado 3.4 vs 5.0 declarado (+47% inflacao); compressao fractal micro/meso/macro com reposicionamento \"Compliance Infantil 360\"",
+                "wal_ref": "memory/wal/pilot-eca_digital_urgent-I.md",
+                "agent": "stage-i-pilot",
+                "ts": "2026-05-09T22:45:00-03:00",
+                "fdcu_score": 6.75,
+                "fdcu_fator_calculado": 3.4,
+                "fdcu_fator_declarado": 5
+              },
+              "adversarial": {
+                "summary": "2 adversarios (sub e super estimacao) -> fator real em faixa 2.5-4.5 IC80%; 5 vieses checados, 4 mitigados, 1 (ancora) parcial; falsification statement operacional (eca_inquiry_rate < 1% por 60 dias); AFS=6.30 (moderadamente antifragil)",
+                "wal_ref": "memory/wal/pilot-eca_digital_urgent-A.md",
+                "agent": "stage-a-pilot",
+                "ts": "2026-05-09T22:47:00-03:00",
+                "afs_score": 6.3,
+                "falsification_criterion": "eca_inquiry_rate < 1% por 60 dias consecutivos -> falsifica; > 5% em algum mes -> confirma",
+                "fator_recomendado_faixa": [
+                  2.5,
+                  4.5
+                ]
+              },
+              "provenance": {
+                "method": "real-pipeline-4-stage",
+                "agents": [
+                  "stage-s-pilot",
+                  "stage-q-pilot",
+                  "stage-i-pilot",
+                  "stage-a-pilot"
+                ],
+                "wal_log": ".claude/wal/shuntzu-operations.log",
+                "ts_start": "2026-05-09T22:42:00-03:00",
+                "ts_end": "2026-05-09T22:50:07-03:00",
+                "afs_score": 6.3,
+                "quality_cot_score": 7.24,
+                "quality_cot_method": "geometric-mean of (Profundidade[S]=8.5, Rigidez[Q]=5.4, Originalidade[I]=8.0, Robustez[A]=7.5); vieses_nao_mitigados=1",
+                "quality_cot_threshold_met": true,
+                "wal_hashes": {
+                  "S": "sha256:ed179e54c51d",
+                  "Q": "sha256:ece056510d65",
+                  "I": "sha256:dc387f82f9ab",
+                  "A": "sha256:26436bca7029"
+                }
+              }
+            }
           },
           {
             "id": "lei_14133_dispensa",

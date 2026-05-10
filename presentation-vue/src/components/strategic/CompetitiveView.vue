@@ -4,6 +4,15 @@
       <h2 class="text-h2 text-white">Cenario Competitivo</h2>
     </div>
 
+    <div class="flex items-center gap-2 mb-4">
+      <span class="text-caption px-2 py-0.5 rounded bg-slate-700/60 text-slate-300 border border-slate-600">
+        Visao Global
+      </span>
+      <span class="text-caption text-slate-500 italic">
+        (este componente exibe dados consolidados — nao filtra por publico-alvo)
+      </span>
+    </div>
+
     <div class="space-y-4 mb-6">
       <div
         v-for="(comp, key) in competitive.landscape"
