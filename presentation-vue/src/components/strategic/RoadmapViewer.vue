@@ -1,238 +1,230 @@
 <template>
-  <div class="roadmap-viewer">
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="text-h2 text-white">Roadmap Estrategico</h2>
-      <div class="flex gap-2">
-        <button
-          v-for="view in views"
-          :key="view.id"
-          @click="activeView = view.id"
-          :class="[
-            'px-3 py-1.5 rounded-lg text-caption transition-all',
-            activeView === view.id ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600',
-          ]"
-        >
-          {{ view.label }}
-        </button>
+  <div class="space-y-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold text-white">Roadmap NeoGov</h2>
+      <div class="flex items-center gap-4 text-sm text-slate-400">
+        <span>Investimento total: <strong class="text-white">R$7.4M</strong></span>
+        <span>Breakeven: <strong class="text-yellow-400">M18-M24</strong></span>
       </div>
     </div>
 
-    <div class="flex items-center gap-2 mb-4">
-      <span class="text-caption px-2 py-0.5 rounded bg-slate-700/60 text-slate-300 border border-slate-600">
-        Visao Global
-      </span>
-      <span class="text-caption text-slate-500 italic">
-        (este componente exibe dados consolidados — nao filtra por publico-alvo)
-      </span>
-    </div>
-
-    <div v-if="activeView === 'timeline'">
-      <div class="relative">
-        <div
-          v-for="(fase, key, index) in roadmap.timeline"
-          :key="key"
-          class="relative pl-10 pb-8 last:pb-0"
-          :class="{ 'border-l-2 border-slate-700': index < phaseCount - 1 }"
-        >
+    <!-- Timeline horizontal bar -->
+    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 overflow-x-auto">
+      <h3 class="text-base font-bold text-white mb-4">Timeline M1–M36</h3>
+      <div class="relative" style="min-width: 700px;">
+        <!-- Month axis -->
+        <div class="flex mb-2">
           <div
-            :class="[
-              'absolute -left-3 top-0 w-6 h-6 rounded-full flex items-center justify-center border-2',
-              phaseDotClass(fase.status),
-            ]"
+            v-for="m in timelineMonths"
+            :key="m"
+            class="text-xs text-slate-500 text-center flex-1"
           >
-            <span class="text-caption">{{ phaseIcon(fase.status) }}</span>
+            {{ m % 6 === 0 ? `M${m}` : '' }}
           </div>
+        </div>
 
+        <!-- Wave bars -->
+        <div class="space-y-2">
           <div
-            :class="[
-              'rounded-card border p-5 transition-all',
-              activePhase === key ? 'border-accent-500 bg-accent-950/20' : 'border-slate-700 bg-slate-800/50 hover:border-slate-500',
-            ]"
-            @click="activePhase = key"
+            v-for="wave in waves"
+            :key="wave.id"
+            class="relative h-10 flex items-center"
           >
-            <div class="flex items-start justify-between mb-2">
-              <div>
-                <h3 class="text-h4 text-white">{{ fase.nome }}</h3>
-                <p class="text-body-sm text-slate-400">{{ fase.periodo }}</p>
-              </div>
-              <div class="flex items-center gap-1.5">
-                <span
-                  :class="[
-                    'text-caption px-2 py-0.5 rounded',
-                    statusBadgeClass(fase.status),
-                  ]"
-                >
-                  {{ statusLabel(fase.status) }}
-                </span>
-                <button
-                  @click.stop="toggleInfo(`phase-${key}`)"
-                  class="w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
-                  :class="expandedInfo.has(`phase-${key}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
-                  title="Ver detalhes"
-                >i</button>
-              </div>
+            <!-- Label before bar -->
+            <div class="w-32 shrink-0 pr-2 text-right">
+              <span class="text-xs font-medium text-slate-300 truncate block">{{ wave.name }}</span>
             </div>
-            <div v-if="expandedInfo.has(`phase-${key}`)" class="border-t border-slate-700/50 mt-2 pt-2 mb-2 space-y-1">
-              <p class="text-caption text-slate-400">Status: {{ statusLabel(fase.status) }} — {{ fase.periodo }}</p>
-              <p class="text-caption text-slate-400">Responsavel: {{ fase.responsible }}</p>
-              <p v-if="fase.kpi?.length" class="text-caption text-slate-500">KPIs: {{ fase.kpi.length }} indicadores</p>
-            </div>
-
-            <p class="text-body-sm text-slate-300 mb-3">{{ fase.objetivo }}</p>
-
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span
-                v-for="kpi in fase.kpi"
-                :key="kpi"
-                class="text-caption bg-slate-700/50 px-2 py-1 rounded text-slate-300"
+            <!-- Bar container -->
+            <div class="flex-1 relative h-8">
+              <div class="absolute inset-y-0 w-full bg-slate-900/40 rounded"></div>
+              <div
+                class="absolute inset-y-1 rounded flex items-center px-2 overflow-hidden"
+                :class="waveColor(wave.id)"
+                :style="waveStyle(wave)"
+                :title="`${wave.name}: M${wave.start_month}–M${wave.end_month}`"
               >
-                {{ kpi }}
-              </span>
+                <span class="text-xs text-white font-medium whitespace-nowrap overflow-hidden text-ellipsis">
+                  {{ wave.target_arr || wave.investment }}
+                </span>
+              </div>
+              <!-- Milestones dots -->
+              <div
+                v-for="ms in waveMilestones(wave)"
+                :key="ms"
+                class="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-white border border-slate-900"
+                :style="{ left: `${((ms - 1) / 36) * 100}%` }"
+                :title="`Milestone M${ms}`"
+              />
             </div>
-
-            <p class="text-caption text-slate-500">Responsavel: {{ fase.responsible }}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div v-else-if="activeView === 'milestones'">
-      <div class="space-y-3">
-        <div
-          v-for="ms in roadmap.milestones"
-          :key="ms.data"
-          :class="[
-            'flex items-center gap-4 p-4 rounded-card border transition-all',
-            ms.critical ? 'border-red-900/50 bg-red-950/20' : 'border-slate-700 bg-slate-800/50',
-          ]"
-        >
-          <div class="text-center shrink-0">
-            <p class="text-body-sm text-white font-bold">{{ formatDate(ms.data) }}</p>
-            <p class="text-caption text-slate-500">{{ getDay(ms.data) }}</p>
-          </div>
-          <div class="flex-1 min-w-0">
-            <p class="text-body-sm text-white">{{ ms.evento }}</p>
-            <p class="text-caption text-slate-500">{{ ms.responsible }}</p>
-            <div v-if="expandedInfo.has(`ms-${ms.data}`)" class="border-t border-slate-700/50 mt-1 pt-1">
-              <p class="text-caption text-slate-400">Data: {{ ms.data }} — {{ ms.critical ? 'Marco critico' : 'Marco regular' }}</p>
-              <p v-if="ms.responsible" class="text-caption text-slate-500">Responsavel: {{ ms.responsible }}</p>
+    <!-- Wave Detail Cards -->
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div
+        v-for="wave in waves"
+        :key="wave.id"
+        class="bg-slate-800/50 border rounded-xl p-4 transition-all cursor-pointer"
+        :class="[waveCardBorder(wave.id), activeWave === wave.id ? 'ring-1 ring-white/20' : '']"
+        @click="activeWave = activeWave === wave.id ? null : wave.id"
+      >
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-3 h-3 rounded-full shrink-0" :class="waveDot(wave.id)"></span>
+              <h4 class="text-sm font-bold text-white">{{ wave.name }}</h4>
             </div>
+            <p class="text-xs text-slate-400">M{{ wave.start_month }} → M{{ wave.end_month }}</p>
           </div>
-          <span
-            v-if="ms.critical"
-            class="text-caption bg-red-900/50 text-red-400 px-2 py-0.5 rounded shrink-0"
-          >
-            Critico
+          <div class="text-right">
+            <p class="text-xs text-slate-400">ARR alvo</p>
+            <p class="text-sm font-bold text-green-400">{{ wave.target_arr || '—' }}</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
+          <span>Investimento: <strong class="text-white">{{ wave.investment || '—' }}</strong></span>
+          <span class="flex gap-1 flex-wrap">
+            <span
+              v-for="cid in (wave.cluster_ids || [])"
+              :key="cid"
+              class="px-1.5 py-0.5 rounded bg-slate-700 text-slate-300"
+            >{{ cid }}</span>
           </span>
-          <button
-            @click.stop="toggleInfo(`ms-${ms.data}`)"
-            class="shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
-            :class="expandedInfo.has(`ms-${ms.data}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
-            title="Ver detalhes"
-          >i</button>
+        </div>
+
+        <!-- Milestones -->
+        <div v-if="wave.milestones?.length" class="border-t border-slate-700/50 pt-3">
+          <p class="text-xs text-slate-500 mb-2">Milestones</p>
+          <ul class="space-y-1">
+            <li
+              v-for="ms in wave.milestones"
+              :key="ms"
+              class="text-xs text-slate-300 flex items-start gap-1.5"
+            >
+              <span class="text-slate-500 mt-0.5 shrink-0">›</span>{{ ms }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Gate Criteria (collapsible) -->
+        <div v-if="activeWave === wave.id && gateFor(wave.id)?.length" class="mt-3 border-t border-slate-700/50 pt-3">
+          <p class="text-xs text-slate-400 font-bold mb-2">Gate Criteria</p>
+          <ul class="space-y-1">
+            <li
+              v-for="gate in gateFor(wave.id)"
+              :key="gate"
+              class="text-xs text-slate-300 flex items-start gap-1.5"
+            >
+              <span class="text-green-400 mt-0.5 shrink-0">✓</span>{{ gate }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div v-else-if="activeView === 'sprints'">
-      <div class="grid md:grid-cols-2 gap-4">
-        <div
-          v-for="sprint in roadmap.sprints"
-          :key="sprint.sprint"
-          class="bg-slate-800/50 border border-slate-700 rounded-card p-5"
+    <!-- Kill Criteria -->
+    <div v-if="roadmap?.kill_criteria?.length" class="bg-red-950/20 border border-red-700/50 rounded-xl p-5">
+      <h3 class="text-base font-bold text-red-400 mb-3">Kill Criteria (Stop Loss)</h3>
+      <ul class="space-y-2">
+        <li
+          v-for="kc in roadmap.kill_criteria"
+          :key="kc"
+          class="flex items-start gap-2 text-sm text-slate-300"
         >
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-2">
-              <h3 class="text-h4 text-white">Sprint {{ sprint.sprint }}</h3>
-              <button
-                @click.stop="toggleInfo(`sprint-${sprint.sprint}`)"
-                class="w-5 h-5 flex items-center justify-center rounded-full text-xs transition-colors"
-                :class="expandedInfo.has(`sprint-${sprint.sprint}`) ? 'bg-accent-600 text-white' : 'bg-slate-700 text-slate-400 hover:bg-slate-600'"
-                title="Ver detalhes"
-              >i</button>
-            </div>
-            <span class="text-caption text-slate-400">{{ sprint.periodo }}</span>
-          </div>
-          <p class="text-body-sm text-slate-300 mb-2">Foco: {{ sprint.foco }}</p>
-          <div class="pt-2 border-t border-slate-700">
-            <p class="text-caption text-slate-400">
-              Marco: <span class="text-accent-400">{{ sprint.marco }}</span>
-            </p>
-          </div>
-          <div v-if="expandedInfo.has(`sprint-${sprint.sprint}`)" class="mt-2 pt-2 border-t border-slate-700/50">
-            <p class="text-caption text-slate-400">Periodo: {{ sprint.periodo }}</p>
-            <p class="text-caption text-slate-500">Sprint orientado por OKRs e marco-fim definido</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div v-if="roadmap.criticalPath" class="mt-6 p-4 rounded-card bg-slate-800/30 border border-slate-700">
-      <h3 class="text-h4 text-white mb-2">Caminho Critico</h3>
-      <div class="flex flex-wrap gap-2">
-        <template v-for="(step, i) in roadmap.criticalPath" :key="step">
-          <span class="text-body-sm text-white bg-slate-700 px-3 py-1 rounded-lg">{{ step }}</span>
-          <span v-if="i < roadmap.criticalPath.length - 1" class="text-slate-500 flex items-center">&rarr;</span>
-        </template>
-      </div>
+          <span class="text-red-400 shrink-0 mt-0.5">✕</span>{{ kc }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, reactive } from 'vue'
-
-const expandedInfo = reactive(new Set())
-const toggleInfo = (key) => {
-  expandedInfo.has(key) ? expandedInfo.delete(key) : expandedInfo.add(key)
-}
+import { ref, computed } from 'vue'
 
 const props = defineProps({
   roadmap: { type: Object, required: true },
+  clusters: { type: Array, default: () => [] },
 })
 
-const activeView = ref('timeline')
-const activePhase = ref(null)
+const activeWave = ref(null)
+const timelineMonths = Array.from({ length: 36 }, (_, i) => i + 1)
 
-const views = [
-  { id: 'timeline', label: 'Fases' },
-  { id: 'milestones', label: 'Milestones' },
-  { id: 'sprints', label: 'Sprints' },
-]
+const waves = computed(() => props.roadmap?.waves || [])
 
-const phaseCount = computed(() => Object.keys(props.roadmap.timeline || {}).length)
-
-const phaseDotClass = (status) => ({
-  'bg-green-500 border-green-400': status === 'in_progress',
-  'bg-slate-600 border-slate-500': status === 'pending',
-  'bg-blue-500 border-blue-400': status === 'completed',
-})
-
-const phaseIcon = (status) => {
-  if (status === 'in_progress') return '▶'
-  if (status === 'completed') return '✓'
-  return '○'
+const waveStyle = (wave) => {
+  const total = 36
+  const start = ((wave.start_month - 1) / total) * 100
+  const width = ((wave.end_month - wave.start_month + 1) / total) * 100
+  return { left: `${start}%`, width: `${width}%` }
 }
 
-const statusBadgeClass = (status) => ({
-  'bg-green-900/50 text-green-400': status === 'in_progress',
-  'bg-slate-700 text-slate-400': status === 'pending',
-  'bg-blue-900/50 text-blue-400': status === 'completed',
-})
-
-const statusLabel = (status) => {
-  const labels = { in_progress: 'Em andamento', pending: 'Pendente', completed: 'Concluido' }
-  return labels[status] || status
+const waveMilestones = (wave) => {
+  // Extract month numbers from milestone strings like "M3: ..."
+  const ms = []
+  ;(wave.milestones || []).forEach(m => {
+    const match = m.match(/^M(\d+)/)
+    if (match) ms.push(parseInt(match[1]))
+  })
+  return ms
 }
 
-const formatDate = (dateStr) => {
-  const [y, m, d] = dateStr.split('-')
-  return `${d}/${m}`
+const waveColor = (id) => {
+  const map = {
+    wave1: 'bg-amber-500/70',
+    wave_1: 'bg-amber-500/70',
+    '1': 'bg-amber-500/70',
+    wave2a: 'bg-blue-500/70',
+    wave_2a: 'bg-blue-500/70',
+    '2a': 'bg-blue-500/70',
+    wave2b: 'bg-purple-500/70',
+    wave_2b: 'bg-purple-500/70',
+    '2b': 'bg-purple-500/70',
+    wave3: 'bg-green-500/70',
+    wave_3: 'bg-green-500/70',
+    '3': 'bg-green-500/70',
+    wave4: 'bg-orange-500/70',
+    wave_4: 'bg-orange-500/70',
+    '4': 'bg-orange-500/70',
+    wave5: 'bg-slate-500/70',
+    wave_5: 'bg-slate-500/70',
+    '5': 'bg-slate-500/70',
+  }
+  return map[id] || map[String(id).replace('wave', '')] || 'bg-slate-500/70'
 }
 
-const getDay = (dateStr) => {
-  const days = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
-  const date = new Date(dateStr + 'T12:00:00')
-  return days[date.getDay()]
+const waveDot = (id) => waveColor(id).replace('/70', '')
+
+const waveCardBorder = (id) => {
+  const map = {
+    wave1: 'border-amber-700/50', wave_1: 'border-amber-700/50', '1': 'border-amber-700/50',
+    wave2a: 'border-blue-700/50', wave_2a: 'border-blue-700/50', '2a': 'border-blue-700/50',
+    wave2b: 'border-purple-700/50', wave_2b: 'border-purple-700/50', '2b': 'border-purple-700/50',
+    wave3: 'border-green-700/50', wave_3: 'border-green-700/50', '3': 'border-green-700/50',
+    wave4: 'border-orange-700/50', wave_4: 'border-orange-700/50', '4': 'border-orange-700/50',
+    wave5: 'border-slate-600', wave_5: 'border-slate-600', '5': 'border-slate-600',
+  }
+  return map[id] || map[String(id).replace('wave', '')] || 'border-slate-700'
+}
+
+const gateFor = (waveId) => {
+  const gates = props.roadmap?.gate_criteria || {}
+  // Try multiple key patterns
+  for (const [key, val] of Object.entries(gates)) {
+    if (key.includes(String(waveId))) return val
+  }
+  // Try by position
+  const waveIndex = waves.value.findIndex(w => w.id === waveId)
+  if (waveIndex < waves.value.length - 1) {
+    const nextWave = waves.value[waveIndex + 1]
+    const gateKey = Object.keys(gates).find(k =>
+      k.includes(String(waveId)) || k.includes(String(nextWave?.id))
+    )
+    return gateKey ? gates[gateKey] : []
+  }
+  return []
 }
 </script>
