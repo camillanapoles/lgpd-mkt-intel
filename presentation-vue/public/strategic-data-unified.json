@@ -2,7 +2,7 @@
   "metadata": {
     "version": "2.0.0",
     "source": "NEOGOV-BUSINESS-PLAN-FINAL-v2.0.md",
-    "generated_at": "2026-05-14T20:05:51.354Z",
+    "generated_at": "2026-05-14T20:12:51.257Z",
     "vvv_global": 0.87,
     "notes": "v2.0 corrige 7 débitos do v1.0: Gov Estadual/Federal, produtos ICT, gate Saúde, PESTEL/SWOT, Épsilon/Zeta fora escopo",
     "adapter": "adapt-neogov-v2.mjs",
@@ -793,16 +793,34 @@
     },
     "swot": {
       "forces": [
-        "[DADO PENDENTE]"
+        "Knowledge jurídico LGPD profundo (2 advogadas especializadas)",
+        "Capacidade ICT: desenvolvimento IA + registro IP",
+        "Art. 75 IV: dispensa licitação — ciclo 2-8 semanas vs 12-18 meses",
+        "Metodologia 4 fases validada em campo (prefeituras)",
+        "Simone — Knowledge LGPD + Compliance",
+        "Gislene — Engenharia jurídica + Operações",
+        "Camila — Produto + TI/IA",
+        "Wilton — Comercial + Articulação política"
       ],
       "weaknesses": [
-        "[DADO PENDENTE]"
+        "Plataforma GAP4 — inexistente quando ETL piloto for lançado",
+        "INPI não registrado — Art. 75 IV 'd' bloqueado",
+        "Fratura interna — paralisia decisória Simone/Camila/Wilton",
+        "PoC ETL MV/Tasy falha tecnicamente",
+        "Concorrente SaaS Educação lançar antes da CIT"
       ],
       "opportunities": [
-        "[DADO PENDENTE]"
+        "76,7% dos órgãos públicos federais em grau inexpressivo ou inicial de adequação LGPD (Argumento de venda pronto para Gov. Federal + âncora expansão estadual)",
+        "ANPD Mapa Prioridades 2026-2027: eixo 'poder público' é prioridade explícita de fiscalização (Timing regulatório excepcional para expansão B2G estadual/federal)",
+        "42.491 escolas privadas de educação básica sem SaaS LGPD dedicado — oceano azul confirmado (Wave 2B crítica — janela fecha quando ECA Digital gerar concorrentes)",
+        "ECA Digital (Lei 15.211/2025) vigente março/2026 — obrigações dados de menores (Urgência regulatória imediata para Educação Privada)",
+        "Art. 75 IV Lei 14.133/2021 — dispensa licitação para ICT, limite R$65.492 (Ciclo de venda 2-8 semanas vs. 12-18 meses licitação normal)",
+        "Modelo fee-for-service atual: R$600k/contrato, 12 meses, equipe presencial — não escala (Justificativa core para transformação em produto ICT)"
       ],
       "threats": [
-        "[DADO PENDENTE]"
+        "Confidata (Saúde dedicado) — ALTA",
+        "Be Compliance (Saúde + geral) — ALTA",
+        "Safetyfyi (Saúde dedicado) — ALTA"
       ]
     }
   },

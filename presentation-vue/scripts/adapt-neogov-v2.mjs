@@ -113,7 +113,14 @@ const sun_tzu_factors = {
 
 const diagnostic = {
   sun_tzu: { dao: null, tian: null, di: null, jiang: null, fa: null, total: null, interpretation: PENDING },
-  swot: { forces: [PENDING], weaknesses: [PENDING], opportunities: [PENDING], threats: [PENDING] }
+  swot: {
+    forces: (v2.company?.core_differentials || []).concat(
+      (v2.team || []).map(t => `${t.name} — ${t.role}`)
+    ),
+    weaknesses: (v2.risks || []).filter(r => /CRÍTICO|ALTO/i.test(r.impact || '')).map(r => r.description),
+    opportunities: (v2.market_confirmed_facts || []).map(f => `${f.fact} (${f.impact})`),
+    threats: (v2.competitive?.tier1_healthcare || []).map(c => `${c.name} (${c.focus || ''}) — ${c.threat_level || ''}`)
+  }
 }
 
 const scenarios = {

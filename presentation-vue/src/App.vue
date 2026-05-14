@@ -126,8 +126,21 @@
       </div>
 
       <template v-else-if="data">
+        <PublicosProdutos
+          v-if="activeTab === 'publicos'"
+          :clusters="(data.clusters as any[])"
+          :products="(data.products as any[])"
+        />
+
+        <InsightsView
+          v-else-if="activeTab === 'insights'"
+          :market_facts="(data.market_confirmed_facts as any[])"
+          :action_plan="(data.action_plan as Record<string, any>)"
+          :vvv_gaps="(data.vvv_gaps as any[])"
+        />
+
         <Dashboard5s
-          v-if="activeTab === 'dashboard'"
+          v-else-if="activeTab === 'dashboard'"
           :clusters="data.clusters"
           :kpis="data.kpis"
           :risks="data.risks"
@@ -185,6 +198,8 @@ import SwotAnalysis from './components/strategic/SwotAnalysis.vue'
 import ScenarioSimulator from './components/strategic/ScenarioSimulator.vue'
 import StatusPage from './components/strategic/StatusPage.vue'
 import CompetitiveView from './components/strategic/CompetitiveView.vue'
+import PublicosProdutos from './components/strategic/PublicosProdutos.vue'
+import InsightsView from './components/strategic/InsightsView.vue'
 import { decryptPayload, type EncryptedPayload } from './utils/crypto'
 
 // ── Auth state ─────────────────────────────────────────────────────────────
@@ -198,7 +213,7 @@ const loginError = ref('')
 const passwordInput = ref<HTMLInputElement | null>(null)
 
 // ── App state ───────────────────────────────────────────────────────────────
-const activeTab = ref('dashboard')
+const activeTab = ref('publicos')
 const data = ref<Record<string, unknown> | null>(null)
 const loadError = ref<string | null>(null)
 const fdcuWeights = ref<Record<string, unknown>>({})
@@ -210,6 +225,8 @@ let encryptedPayload: EncryptedPayload | null = null
 const currentYear = new Date().getFullYear()
 
 const tabs = [
+  { id: 'publicos', label: 'Públicos & Produtos' },
+  { id: 'insights', label: 'Insights' },
   { id: 'dashboard', label: 'Dashboard' },
   { id: 'fdcu', label: 'FDC-U' },
   { id: 'roadmap', label: 'Roadmap' },
