@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://camillanapoles.github.io/lgpd-mkt-intel/sitemap.xml
