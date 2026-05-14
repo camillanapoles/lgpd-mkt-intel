@@ -1,0 +1,1440 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "source": "NEOGOV-BUSINESS-PLAN-FINAL-v2.0.md",
+    "generated_at": "2026-05-14T19:57:05.567Z",
+    "vvv_global": 0.87,
+    "notes": "v2.0 corrige 7 débitos do v1.0: Gov Estadual/Federal, produtos ICT, gate Saúde, PESTEL/SWOT, Épsilon/Zeta fora escopo",
+    "adapter": "adapt-neogov-v2.mjs",
+    "pending_marker": "[DADO PENDENTE]",
+    "pending_fields": [
+      "sun_tzu_factors.scores",
+      "diagnostic.swot.*",
+      "fdc_u.depth_alerts",
+      "fdc_u.sensitivity",
+      "fdc_u.dimensions (single dimension only — full multi-dim weights not in v2)"
+    ]
+  },
+  "company": {
+    "name": "CIT AI Tech",
+    "type": "ICT privado (Instituto de Ciência e Tecnologia)",
+    "legal_basis": "Lei 10.973/2004 (Marco Legal CT&I) + Lei 14.133/2021 Art. 75 IV",
+    "mission": "Transformar o serviço manual de compliance LGPD em produto automatizado via IA, contratável sem licitação pelo setor público",
+    "core_differentials": [
+      "Knowledge jurídico LGPD profundo (2 advogadas especializadas)",
+      "Capacidade ICT: desenvolvimento IA + registro IP",
+      "Art. 75 IV: dispensa licitação — ciclo 2-8 semanas vs 12-18 meses",
+      "Metodologia 4 fases validada em campo (prefeituras)"
+    ],
+    "critical_prerequisite": "INPI registro IP algoritmos — habilita Art. 75 IV 'd' (licenciamento criação protegida)",
+    "vvv": 0.95,
+    "source": "transcricao-reuniao-lgpd-06-05-26.md + Plano Negócios CIT AI Tech"
+  },
+  "team": [
+    {
+      "id": "simone",
+      "name": "Simone",
+      "role": "Knowledge LGPD + Compliance",
+      "expertise": "Advogada especialista LGPD B2G, ex-operadora NELGOV, domínio LAI + LGPD + anticorrupção",
+      "product_contribution": [
+        "Treina AI-DPO Copilot",
+        "Define regras Anonimização LAI/LGPD",
+        "Implantações clientes"
+      ],
+      "bias": "Confirmation bias — defende modelo consultivo existente",
+      "vvv": 1
+    },
+    {
+      "id": "gislene",
+      "name": "Gislene",
+      "role": "Engenharia jurídica + Operações",
+      "expertise": "Contratos públicos, Art. 75 IV, INPI, compliance contratação pública",
+      "product_contribution": [
+        "Habilitação ICT",
+        "Estruturação contratos",
+        "Registro INPI",
+        "Parecer Art. 75 IV"
+      ],
+      "vvv": 1
+    },
+    {
+      "id": "camila",
+      "name": "Camila",
+      "role": "Produto + TI/IA",
+      "expertise": "Engenheira TI, automação, plataforma, desenvolvimento IA",
+      "product_contribution": [
+        "Constrói todos os produtos IA",
+        "MVP plataforma",
+        "ETL/Middleware",
+        "Data Discovery"
+      ],
+      "vvv": 1
+    },
+    {
+      "id": "wilton",
+      "name": "Wilton",
+      "role": "Comercial + Articulação política",
+      "expertise": "Articulação institucional, FNDE, consórcios intermunicipais, capital político",
+      "product_contribution": [
+        "Abertura mercado B2G",
+        "Consórcios",
+        "Negociações de alto nível"
+      ],
+      "vvv": 1
+    }
+  ],
+  "products": [
+    {
+      "id": "P1",
+      "name": "Plataforma LGPD SaaS",
+      "short_description": "Dashboard multi-tenant de compliance LGPD centralizado",
+      "status": "exists_today",
+      "derived_from": "Metodologia 4 fases validada em campo → automatizada",
+      "solves": "Compliance básico LGPD centralizado, auditável, sem visita presencial",
+      "model": "assinatura_mensal",
+      "pricing_est": "R$800–10.000/mês por organização",
+      "segments": [
+        "all"
+      ],
+      "vvv": 0.9
+    },
+    {
+      "id": "P2",
+      "name": "Data Discovery Automatizado",
+      "short_description": "Agente IA varre SQL/NoSQL/arquivos e mapeia dados pessoais automaticamente",
+      "status": "new_ict",
+      "derived_from": "Knowledge jurídico Simone (classifica dado sensível) → treinamento agente IA Camila",
+      "solves": "Substitui centenas de horas de entrevistas manuais. Diagnóstico em dias, não meses",
+      "model": "projeto_setup_mais_assinatura",
+      "pricing_est": "R$5–80k (projeto) + assinatura monitoramento",
+      "segments": [
+        "setor_publico_municipal",
+        "setor_publico_estadual",
+        "setor_publico_federal",
+        "saude_privada",
+        "educacao_privada"
+      ],
+      "inpi_required": true,
+      "vvv": 0.85
+    },
+    {
+      "id": "P3",
+      "name": "Anonimização Inteligente LAI/LGPD",
+      "short_description": "IA tarja automaticamente dados pessoais em PDFs e Diários Oficiais antes da publicação LAI",
+      "status": "new_ict",
+      "derived_from": "Expertise interseção LAI × LGPD (Simone + Gislene) → algoritmo NLP Camila",
+      "solves": "Resolve conflito LAI × LGPD — publicar sem expor dados pessoais. Hoje feito à mão",
+      "model": "usage_based",
+      "pricing_est": "R$1–8k/mês por volume de documentos",
+      "segments": [
+        "setor_publico_municipal",
+        "setor_publico_estadual",
+        "setor_publico_federal"
+      ],
+      "exclusive_b2g": true,
+      "inpi_required": true,
+      "vvv": 0.85
+    },
+    {
+      "id": "P4",
+      "name": "AI-DPO Copilot",
+      "short_description": "Agente IA treinado em LGPD + LAI + ECA Digital — DPO-as-a-Service inteligente",
+      "status": "new_ict",
+      "derived_from": "Knowledge Simone → base de conhecimento do agente. 1 especialista treina, agente atende 10x mais",
+      "solves": "DPO-as-a-Service para prefeituras pequenas sem orçamento. Reduz carga DPO em organizações grandes",
+      "model": "assinatura_mensal",
+      "pricing_est": "R$1–15k/mês por organização",
+      "segments": [
+        "all"
+      ],
+      "inpi_required": true,
+      "vvv": 0.85
+    },
+    {
+      "id": "P5",
+      "name": "ETL/Middleware LGPD",
+      "short_description": "Conecta via API nos sistemas do cliente e monitora dados pessoais continuamente",
+      "status": "new_ict",
+      "derived_from": "Conhecimento sistemas municipais (operação existente) + Camila constrói conectores",
+      "solves": "Monitoramento contínuo automático. Switching cost alto após integração",
+      "model": "usage_based_mais_setup",
+      "pricing_est": "R$1–8k/mês + setup R$10–60k",
+      "segments": [
+        "educacao_privada",
+        "saude_privada",
+        "setor_publico_municipal"
+      ],
+      "systems_by_segment": {
+        "setor_publico_municipal": [
+          "e-Cidade",
+          "TCE",
+          "sistemas municipais"
+        ],
+        "saude_privada": [
+          "MV",
+          "Tasy",
+          "Soul MV"
+        ],
+        "educacao_privada": [
+          "Class",
+          "Phonexao",
+          "Opyun",
+          "Sponte",
+          "Wpensar"
+        ]
+      },
+      "gate_poc_m4": true,
+      "gate_description": "PoC MV ou Tasy obrigatório em M4 antes de escalar Saúde Privada",
+      "vvv": 0.7
+    }
+  ],
+  "clusters": [
+    {
+      "id": "educacao_privada",
+      "name": "Educação Privada",
+      "code": "Gamma",
+      "emoji": "🎓",
+      "description": "ECA Digital vigente mar/2026 + dado de menor + reação familiar",
+      "status": "priority_critical",
+      "wave": "2B",
+      "wave_start_month": 4,
+      "universe_size": 42491,
+      "universe_unit": "escolas privadas básicas",
+      "universe_source": "INEP Censo Escolar 2024",
+      "universe_vvv": 0.95,
+      "fdc_u_score": 9,
+      "fdc_u_rank": 1,
+      "fdc_u_vvv": null,
+      "fdc_u_note": null,
+      "decisor": "Diretor/Mantenedor único",
+      "sales_cycle_days": [
+        15,
+        45
+      ],
+      "lgpd_pain": "ECA Digital vigente mar/2026 + dado de menor + reação familiar",
+      "key_regulation": "Lei 15.211/2025 (ECA Digital) vigente março/2026",
+      "competition": "ZERO SaaS dedicado — oceano azul confirmado",
+      "products_core": [
+        "P1",
+        "P4",
+        "P5"
+      ],
+      "pricing": {
+        "base_monthly": [
+          800,
+          1500
+        ],
+        "etl_monthly": [
+          1000,
+          2000
+        ],
+        "setup": [
+          10000,
+          20000
+        ],
+        "total_year1": [
+          32000,
+          62000
+        ],
+        "currency": "BRL",
+        "vvv": 0.6
+      },
+      "margins": {
+        "gross_margin": [
+          0.7,
+          0.85
+        ]
+      },
+      "unit_economics": {
+        "cac_est": [
+          2000,
+          5000
+        ],
+        "ltv_est": [
+          90000,
+          120000
+        ],
+        "ltv_cac_ratio": 24,
+        "payback_months": 1.2,
+        "gross_margin": [
+          0.7,
+          0.85
+        ],
+        "vvv": 0.52
+      },
+      "channel": [
+        "FENEP",
+        "SINEPEs estaduais",
+        "ERP escolar (Sponte/Wpensar)",
+        "self-service"
+      ],
+      "main_objection": "Sou pequeno, ANPD não vai me fiscalizar",
+      "objection_counter": "ECA Digital + pai pode acionar ANPD individualmente",
+      "trigger": "ECA Digital vigência + reclamação de pais",
+      "gate": null,
+      "prerequisite": null,
+      "exclusive_b2g": false,
+      "systems_by_segment": null,
+      "gap_note": null
+    },
+    {
+      "id": "saude_privada",
+      "name": "Saúde Privada",
+      "code": "Beta",
+      "emoji": "🏥",
+      "description": "Dado sensível + sanção 2% faturamento + risco credenciamento operadoras",
+      "status": "conditional_poc",
+      "wave": "2A",
+      "wave_start_month": 3,
+      "universe_size": 40000,
+      "universe_unit": "estabelecimentos saúde privada",
+      "universe_source": "CNES/Datasus via Moody's 2024",
+      "universe_vvv": 0.85,
+      "fdc_u_score": 7.28,
+      "fdc_u_rank": 3,
+      "fdc_u_vvv": null,
+      "fdc_u_note": null,
+      "decisor": "Dir. Administrativo + Dir. Médico + DPO",
+      "sales_cycle_days": [
+        45,
+        90
+      ],
+      "lgpd_pain": "Dado sensível + sanção 2% faturamento + risco credenciamento operadoras",
+      "key_regulation": null,
+      "competition": "Confidata (R$497-R$3.497/mês), Be Compliance, Safetyfyi",
+      "products_core": [
+        "P5",
+        "P1",
+        "P4"
+      ],
+      "pricing": {
+        "base_monthly": [
+          2000,
+          5000
+        ],
+        "etl_monthly": [
+          3000,
+          8000
+        ],
+        "setup": [
+          30000,
+          60000
+        ],
+        "total_year1": [
+          114000,
+          264000
+        ],
+        "currency": "BRL",
+        "vvv": 0.6
+      },
+      "margins": {
+        "gross_margin": [
+          0.55,
+          0.75
+        ]
+      },
+      "unit_economics": {
+        "cac_est": [
+          80000,
+          150000
+        ],
+        "ltv_est": [
+          720000,
+          1008000
+        ],
+        "ltv_cac_ratio": 6.7,
+        "payback_months": 8.3,
+        "gross_margin": [
+          0.55,
+          0.75
+        ],
+        "vvv": 0.52
+      },
+      "channel": [
+        "ANAHP",
+        "parceria MV/Tasy oficial",
+        "Hospitalar/HIMSS Brasil"
+      ],
+      "main_objection": "MV/Tasy já cobre LGPD no HIS",
+      "objection_counter": "HIS cobre só o HIS; RH, ouvidoria, faturamento, parceiros ficam descobertos",
+      "trigger": "Auditoria operadora + notificação ANPD + acreditação ONA/Qmentum",
+      "gate": "PoC ETL MV/Tasy obrigatório M4 — se falhar, suspender Wave 2A",
+      "prerequisite": null,
+      "exclusive_b2g": false,
+      "systems_by_segment": null,
+      "gap_note": null
+    },
+    {
+      "id": "setor_publico_municipal",
+      "name": "Setor Público Municipal",
+      "code": "Alfa",
+      "emoji": "🏛️",
+      "description": "Responsabilização pessoal gestor + improbidade + dano reputacional (sem multa pecuniária Art. 52 §3°)",
+      "status": "active_today",
+      "wave": "1",
+      "wave_start_month": 1,
+      "universe_size": 5570,
+      "universe_unit": "prefeituras",
+      "universe_source": "IBGE 2024",
+      "universe_vvv": 0.95,
+      "fdc_u_score": 4.92,
+      "fdc_u_rank": 6,
+      "fdc_u_vvv": null,
+      "fdc_u_note": null,
+      "decisor": "Procurador Geral do Município (decisor real técnico-jurídico)",
+      "sales_cycle_days": [
+        14,
+        56
+      ],
+      "lgpd_pain": "Responsabilização pessoal gestor + improbidade + dano reputacional (sem multa pecuniária Art. 52 §3°)",
+      "key_regulation": "76,7% órgãos públicos federais em grau inexpressivo/inicial (TCU 2022) — similar em municípios",
+      "competition": "[DADO PENDENTE]",
+      "products_core": [
+        "P2",
+        "P3",
+        "P4",
+        "P1"
+      ],
+      "pricing": {
+        "by_population": {
+          "20k_30k": [
+            15000,
+            20000
+          ],
+          "30k_50k": [
+            20000,
+            30000
+          ],
+          "50k_100k": [
+            30000,
+            50000
+          ]
+        },
+        "unit": "anual",
+        "currency": "BRL",
+        "vvv": 0.75
+      },
+      "margins": {
+        "gross_margin": [
+          0.55,
+          0.7
+        ]
+      },
+      "unit_economics": {
+        "cac_est": [
+          30000,
+          80000
+        ],
+        "ltv_est": [
+          200000,
+          400000
+        ],
+        "ltv_cac_ratio": 4,
+        "payback_months": 9,
+        "gross_margin": [
+          0.55,
+          0.7
+        ],
+        "vvv": 0.52
+      },
+      "channel": [
+        "Consórcios intermunicipais (1:N)",
+        "Art. 75 IV direto",
+        "Associações de Municípios (CNM, AMM)"
+      ],
+      "main_objection": "e-Cidade já cobre LGPD no contrato",
+      "objection_counter": "ERP cobre só dado interno; inventário transversal (RH, saúde, ouvidoria) obrigatório",
+      "trigger": "Notificação TCE/MP + início de mandato + auditoria TCU",
+      "gate": null,
+      "prerequisite": null,
+      "exclusive_b2g": false,
+      "systems_by_segment": null,
+      "gap_note": null
+    },
+    {
+      "id": "setor_publico_estadual",
+      "name": "Setor Público Estadual",
+      "code": "Alfa-E",
+      "emoji": "🏢",
+      "description": "TCU auditoria expandida estados 2024 + ANPD eixo poder público 2026-2027",
+      "status": "declared_target",
+      "wave": "2C",
+      "wave_start_month": 6,
+      "universe_size": 27,
+      "universe_unit": "27 UFs × ~8-12 secretarias cada = ~250+ órgãos alvos",
+      "universe_source": "CF/88",
+      "universe_vvv": 0.95,
+      "fdc_u_score": 7.3,
+      "fdc_u_rank": 2,
+      "fdc_u_vvv": 0.7,
+      "fdc_u_note": "INFERÊNCIA — validar via PNCP antes de precificar",
+      "decisor": "CIO/Subsecretário TI Estadual + PGE",
+      "sales_cycle_days": [
+        90,
+        180
+      ],
+      "lgpd_pain": "TCU auditoria expandida estados 2024 + ANPD eixo poder público 2026-2027",
+      "key_regulation": "76,7% órgãos federais desconformes — tendência similar em estados",
+      "competition": "[DADO PENDENTE]",
+      "products_core": [
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "pricing": {
+        "note": "GAP A VALIDAR — pesquisar PNCP contratos LGPD estaduais 2023-2025"
+      },
+      "margins": null,
+      "unit_economics": null,
+      "channel": [
+        "ETEC (Encomenda Tecnológica)",
+        "Art. 75 IV direto",
+        "ABEP (rede empresas estaduais TI)"
+      ],
+      "main_objection": "Serpro/Dataprev — preferência empresa pública",
+      "objection_counter": "Posicionar como complemento especializado, não substituto",
+      "trigger": null,
+      "gate": null,
+      "prerequisite": "1 caso âncora municipal validado + INPI registrado + Whitepaper Art. 75 IV publicado",
+      "exclusive_b2g": false,
+      "systems_by_segment": null,
+      "gap_note": null
+    },
+    {
+      "id": "setor_publico_federal",
+      "name": "Setor Público Federal",
+      "code": "Alfa-F",
+      "emoji": "🇧🇷",
+      "description": "[DADO PENDENTE]",
+      "status": "declared_target",
+      "wave": "2C",
+      "wave_start_month": 9,
+      "universe_size": null,
+      "universe_unit": "~30 ministérios + ~200 autarquias/fundações/estatais",
+      "universe_source": "[DADO PENDENTE]",
+      "universe_vvv": null,
+      "fdc_u_score": 7,
+      "fdc_u_rank": 4,
+      "fdc_u_vvv": 0.65,
+      "fdc_u_note": "INFERÊNCIA — validar via PNCP antes de precificar",
+      "decisor": "[DADO PENDENTE]",
+      "sales_cycle_days": [
+        180,
+        360
+      ],
+      "lgpd_pain": "[DADO PENDENTE]",
+      "key_regulation": "76,7% dos órgãos públicos federais em grau INEXPRESSIVO ou INICIAL de adequação LGPD [FATO — TCU Acórdão 1.384/2022-TCU-Plenário]",
+      "competition": "Big4 competem mas sem produto ICT especializado. Serpro como possível parceiro",
+      "products_core": [
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "pricing": {
+        "note": "[DADO PENDENTE]"
+      },
+      "margins": null,
+      "unit_economics": null,
+      "channel": [
+        "ETEC",
+        "CPSI (Contrato Público Solução Inovadora)",
+        "RFI/RFP federal"
+      ],
+      "main_objection": "[DADO PENDENTE]",
+      "objection_counter": "[DADO PENDENTE]",
+      "trigger": null,
+      "gate": null,
+      "prerequisite": "1 estado âncora validado + track record B2G consolidado",
+      "exclusive_b2g": false,
+      "systems_by_segment": null,
+      "gap_note": null
+    },
+    {
+      "id": "entidades_associativas",
+      "name": "Entidades Associativas",
+      "code": "Delta",
+      "emoji": "🤝",
+      "description": "[DADO PENDENTE]",
+      "status": "wave_3",
+      "wave": "3",
+      "wave_start_month": 12,
+      "universe_size": 50000,
+      "universe_unit": "[DADO PENDENTE]",
+      "universe_source": "Estimativa — validar pesquisa primária",
+      "universe_vvv": 0.6,
+      "fdc_u_score": 6.92,
+      "fdc_u_rank": 5,
+      "fdc_u_vvv": null,
+      "fdc_u_note": null,
+      "decisor": "[DADO PENDENTE]",
+      "sales_cycle_days": null,
+      "lgpd_pain": "[DADO PENDENTE]",
+      "key_regulation": null,
+      "competition": "[DADO PENDENTE]",
+      "products_core": [
+        "P1",
+        "P4"
+      ],
+      "pricing": {
+        "note": "[DADO PENDENTE]"
+      },
+      "margins": null,
+      "unit_economics": null,
+      "channel": [
+        "[DADO PENDENTE]"
+      ],
+      "main_objection": "[DADO PENDENTE]",
+      "objection_counter": "[DADO PENDENTE]",
+      "trigger": null,
+      "gate": null,
+      "prerequisite": null,
+      "exclusive_b2g": false,
+      "systems_by_segment": null,
+      "gap_note": "Interesse real de federações não validado — pesquisa primária obrigatória antes de Wave 3"
+    }
+  ],
+  "kpis": [
+    {
+      "month": 6,
+      "arr": [
+        150000,
+        400000
+      ],
+      "active_clients": [
+        5,
+        15
+      ],
+      "mrr": [
+        12500,
+        33333
+      ]
+    },
+    {
+      "month": 12,
+      "arr": [
+        700000,
+        1500000
+      ],
+      "active_clients": [
+        20,
+        45
+      ],
+      "mrr": [
+        58333,
+        125000
+      ]
+    },
+    {
+      "month": 18,
+      "arr": [
+        1500000,
+        3000000
+      ],
+      "active_clients": [
+        50,
+        100
+      ],
+      "mrr": [
+        125000,
+        250000
+      ]
+    },
+    {
+      "month": 24,
+      "arr": [
+        2500000,
+        5000000
+      ],
+      "active_clients": [
+        100,
+        200
+      ],
+      "mrr": [
+        208333,
+        416667
+      ]
+    }
+  ],
+  "fdc_u": {
+    "dimensions": [
+      {
+        "id": "fdc_u_score",
+        "name": "FDC-U Score",
+        "weight": 1,
+        "function": "+",
+        "vvv": "[DADO PENDENTE]",
+        "source": "NEOGOV-BUSINESS-PLAN-FINAL-v2.0.md"
+      }
+    ],
+    "scores": {
+      "educacao_privada": {
+        "fdc_u_score": 9
+      },
+      "saude_privada": {
+        "fdc_u_score": 7.28
+      },
+      "setor_publico_municipal": {
+        "fdc_u_score": 4.92
+      },
+      "setor_publico_estadual": {
+        "fdc_u_score": 7.3
+      },
+      "setor_publico_federal": {
+        "fdc_u_score": 7
+      },
+      "entidades_associativas": {
+        "fdc_u_score": 6.92
+      }
+    },
+    "ranking_pure": [
+      {
+        "rank": 1,
+        "cluster_id": "educacao_privada",
+        "cluster_name": "Educação Privada",
+        "score": 9,
+        "badge": "PRIORITY CRITICAL"
+      },
+      {
+        "rank": 2,
+        "cluster_id": "setor_publico_estadual",
+        "cluster_name": "Setor Público Estadual",
+        "score": 7.3,
+        "badge": "ALVO DECLARADO"
+      },
+      {
+        "rank": 3,
+        "cluster_id": "saude_privada",
+        "cluster_name": "Saúde Privada",
+        "score": 7.28,
+        "badge": "CONDICIONAL — Gate PoC"
+      },
+      {
+        "rank": 4,
+        "cluster_id": "setor_publico_federal",
+        "cluster_name": "Setor Público Federal",
+        "score": 7,
+        "badge": "ALVO DECLARADO"
+      },
+      {
+        "rank": 5,
+        "cluster_id": "entidades_associativas",
+        "cluster_name": "Entidades Associativas",
+        "score": 6.92,
+        "badge": "WAVE 3"
+      },
+      {
+        "rank": 6,
+        "cluster_id": "setor_publico_municipal",
+        "cluster_name": "Setor Público Municipal",
+        "score": 4.92,
+        "badge": "ATIVO HOJE"
+      }
+    ],
+    "ranking_strategic_bsc03": {
+      "note": "BSC-03 derivado de v2 roadmap.waves. Spearhead=Educação Privada, Parallel=Educação Privada.",
+      "wave_order": [
+        "setor_publico_municipal",
+        "saude_privada",
+        "educacao_privada",
+        "setor_publico_estadual",
+        "setor_publico_federal",
+        "entidades_associativas"
+      ],
+      "spearhead": "educacao_privada",
+      "spearhead_name": "Educação Privada",
+      "parallel": "educacao_privada",
+      "parallel_name": "Educação Privada",
+      "rationale": "Educação Privada = FDC-U rank #1 (9). Educação Privada = paralela crítica (ECA Digital vigente mar/2026 + dado de menor + reação familiar)."
+    },
+    "depth_alerts": "[DADO PENDENTE]",
+    "sensitivity": "[DADO PENDENTE]"
+  },
+  "sun_tzu_factors": {
+    "dao": {
+      "name": "Dao — Propósito Moral",
+      "score": null,
+      "max": 10,
+      "description": "[DADO PENDENTE] — não coberto por NEOGOV-DATA-v2"
+    },
+    "tian": {
+      "name": "Tian — Timing/Céu",
+      "score": null,
+      "max": 10,
+      "description": "[DADO PENDENTE] — não coberto por NEOGOV-DATA-v2"
+    },
+    "di": {
+      "name": "Di — Terreno",
+      "score": null,
+      "max": 10,
+      "description": "[DADO PENDENTE] — não coberto por NEOGOV-DATA-v2"
+    },
+    "jiang": {
+      "name": "Jiang — Comando",
+      "score": null,
+      "max": 10,
+      "description": "[DADO PENDENTE] — não coberto por NEOGOV-DATA-v2"
+    },
+    "fa": {
+      "name": "Fa — Método/Disciplina",
+      "score": null,
+      "max": 10,
+      "description": "[DADO PENDENTE] — não coberto por NEOGOV-DATA-v2"
+    }
+  },
+  "diagnostic": {
+    "sun_tzu": {
+      "dao": null,
+      "tian": null,
+      "di": null,
+      "jiang": null,
+      "fa": null,
+      "total": null,
+      "interpretation": "[DADO PENDENTE]"
+    },
+    "swot": {
+      "forces": [
+        "[DADO PENDENTE]"
+      ],
+      "weaknesses": [
+        "[DADO PENDENTE]"
+      ],
+      "opportunities": [
+        "[DADO PENDENTE]"
+      ],
+      "threats": [
+        "[DADO PENDENTE]"
+      ]
+    }
+  },
+  "scenarios": {
+    "active_scenario": "realistic",
+    "pessimistic": {
+      "label": "Pessimista",
+      "arr_m12": 300000,
+      "active_clients_m12": 10,
+      "breakeven_month": 24
+    },
+    "realistic": {
+      "label": "Realista",
+      "arr_m12": 700000,
+      "active_clients_m12": 20,
+      "breakeven_month": 18
+    },
+    "optimistic": {
+      "label": "Otimista",
+      "arr_m12": 1500000,
+      "active_clients_m12": 45,
+      "breakeven_month": 15
+    },
+    "sliders": [
+      {
+        "id": "edu_clients_m12",
+        "label": "Escolas Educação Privada (M12)",
+        "min": 5,
+        "max": 50,
+        "value": 20,
+        "step": 1,
+        "cluster": "educacao_privada",
+        "unit": "escolas"
+      },
+      {
+        "id": "saude_clients_m12",
+        "label": "Hospitais Saúde Privada (M12)",
+        "min": 0,
+        "max": 15,
+        "value": 5,
+        "step": 1,
+        "cluster": "saude_privada",
+        "unit": "hospitais"
+      },
+      {
+        "id": "gov_mun_clients_m12",
+        "label": "Municípios B2G (M12)",
+        "min": 3,
+        "max": 30,
+        "value": 10,
+        "step": 1,
+        "cluster": "setor_publico_municipal",
+        "unit": "municípios"
+      },
+      {
+        "id": "avg_ticket_edu",
+        "label": "Ticket médio Educação (R$/ano)",
+        "min": 30000,
+        "max": 80000,
+        "value": 45000,
+        "step": 1000,
+        "cluster": "educacao_privada",
+        "unit": "BRL/ano"
+      },
+      {
+        "id": "avg_ticket_saude",
+        "label": "Ticket médio Saúde (R$/ano)",
+        "min": 100000,
+        "max": 300000,
+        "value": 180000,
+        "step": 5000,
+        "cluster": "saude_privada",
+        "unit": "BRL/ano"
+      },
+      {
+        "id": "avg_ticket_gov",
+        "label": "Ticket médio Município (R$/ano)",
+        "min": 15000,
+        "max": 50000,
+        "value": 25000,
+        "step": 1000,
+        "cluster": "setor_publico_municipal",
+        "unit": "BRL/ano"
+      },
+      {
+        "id": "churn_rate",
+        "label": "Churn anual (%)",
+        "min": 5,
+        "max": 30,
+        "value": 12,
+        "step": 1,
+        "cluster": "all",
+        "unit": "%"
+      },
+      {
+        "id": "cac_multiplier",
+        "label": "CAC multiplier (vs estimado)",
+        "min": 0.5,
+        "max": 2,
+        "value": 1,
+        "step": 0.1,
+        "cluster": "all",
+        "unit": "x"
+      }
+    ]
+  },
+  "vvv_gaps": [
+    {
+      "id": "GAP01",
+      "description": "Scores FDC-U Gov. Estadual (~7.30) e Federal (~7.00) são inferências",
+      "vvv_score": 0.65,
+      "classification": "ROBUSTO",
+      "action_required": "Pesquisar PNCP — contratos LGPD estaduais/federais 2023-2025",
+      "responsible": null,
+      "deadline": null
+    },
+    {
+      "id": "GAP02",
+      "description": "WTP (Willingness to Pay) 85% volátil em todos os segmentos",
+      "vvv_score": 0.52,
+      "classification": "ROBUSTO",
+      "action_required": "3-5 entrevistas primárias por segmento antes de tabela oficial de pricing",
+      "responsible": null,
+      "deadline": null
+    },
+    {
+      "id": "GAP03",
+      "description": "PoC ETL MV/Tasy — viabilidade técnica e econômica não confirmada",
+      "vvv_score": 0.7,
+      "classification": "CRÍTICO",
+      "action_required": "Camila: PoC em M4 — extrair 1 tabela MV com sucesso",
+      "responsible": "Camila",
+      "deadline": "M4"
+    },
+    {
+      "id": "GAP04",
+      "description": "Plataforma LGPD Web — estado real desconhecido (GAP4 histórico)",
+      "vvv_score": 0,
+      "classification": "CRÍTICO",
+      "action_required": "Camila levantar em M1 semana 1",
+      "responsible": "Camila",
+      "deadline": "5d"
+    },
+    {
+      "id": "GAP05",
+      "description": "Preços Be Compliance + Safetyfyi não públicos",
+      "vvv_score": 0.3,
+      "classification": "MÉDIO",
+      "action_required": "Mystery shopping ou contato direto",
+      "responsible": null,
+      "deadline": null
+    },
+    {
+      "id": "GAP06",
+      "description": "CIMINAS R$31,9M credenciamento LGPD 2025 — vencedor e escopo",
+      "vvv_score": 0.4,
+      "classification": "MÉDIO",
+      "action_required": "Buscar no PNCP ou contato direto CIMINAS",
+      "responsible": null,
+      "deadline": null
+    },
+    {
+      "id": "GAP07",
+      "description": "Texto ECA Digital — obrigações específicas para escolas",
+      "vvv_score": 0.6,
+      "classification": "ROBUSTO",
+      "action_required": "Simone mapear requisitos legais específicos para features Wave 2B",
+      "responsible": "Simone",
+      "deadline": null
+    }
+  ],
+  "action_plan": {
+    "days_30": [
+      "Protocolo INPI algoritmos — Gislene [CRÍTICO]",
+      "Nomear General/CEO com veto power — Wilton+Simone+Camila [CRÍTICO]",
+      "Levantar estado real plataforma + prazo MVP — Camila [CRÍTICO] (5d)",
+      "Whitepaper Parecer Art. 75 IV (draft) — Gislene+Simone",
+      "Mapear 5 consórcios intermunicipais prioritários — Wilton",
+      "CRM implantado + workspace único — General",
+      "Criar pricing draft por segmento — Gislene+Wilton"
+    ],
+    "days_60": [
+      "MVP plataforma + AI-DPO básico deployed (staging) — Camila",
+      "Pricing tabelado aprovado por todos — General",
+      "Selecionar 2-3 hospitais para Wave 2A PoC — Simone+General",
+      "Selecionar 3 escolas para Wave 2B piloto — Wilton",
+      "Whitepaper publicado + 3 reuniões consórcios — Gislene+Wilton"
+    ],
+    "days_90": [
+      "PoC ETL MV/Tasy — gate Wave 2A — Camila [CRÍTICO]",
+      "3 municípios com carta de intenção — Wilton+Simone",
+      "3 escolas em piloto Wave 2B — SDR",
+      "CRM com pipeline 50+ leads qualificados",
+      "1 estado identificado para Wave 2C — Wilton"
+    ]
+  },
+  "competitive": {
+    "healthcare": [
+      {
+        "name": "Confidata",
+        "focus": "Saúde dedicado",
+        "pricing": {
+          "starter": 497,
+          "professional": 1497,
+          "enterprise": 3497,
+          "currency": "BRL",
+          "period": "mensal"
+        },
+        "pricing_vvv": 0.95,
+        "pricing_source": "confidata.com.br (site público)",
+        "differentials": "17 agentes IA, portal paciente, RIPD automático, hosting 100% BR",
+        "threat_level": "ALTA"
+      },
+      {
+        "name": "Be Compliance",
+        "focus": "Saúde + geral",
+        "pricing": {
+          "note": "Não público"
+        },
+        "pricing_vvv": 0.3,
+        "pricing_source": "[DADO PENDENTE]",
+        "differentials": "IA Athena, DSAR, discovery, RIPD/ROPA automático",
+        "threat_level": "ALTA"
+      },
+      {
+        "name": "Safetyfyi",
+        "focus": "Saúde dedicado",
+        "pricing": {
+          "note": "Não público"
+        },
+        "pricing_vvv": 0.3,
+        "pricing_source": "[DADO PENDENTE]",
+        "differentials": "Dados sensíveis, clínicas e instituições saúde",
+        "threat_level": "ALTA"
+      }
+    ],
+    "education": [
+      {
+        "name": "ZERO competitors detectados",
+        "focus": "Educação Privada",
+        "pricing": {
+          "note": "Oceano azul confirmado — INEP 42.491 escolas privadas sem SaaS LGPD dedicado"
+        },
+        "threat_level": "OPORTUNIDADE"
+      }
+    ],
+    "generalist": [
+      {
+        "name": "LGPD Cloud",
+        "pricing": {
+          "entry": 199.9,
+          "currency": "BRL",
+          "period": "mensal"
+        },
+        "pricing_vvv": 0.95,
+        "positioning": "SaaS commodity, sem foco B2G, sem ICT"
+      },
+      {
+        "name": "PROTEGON",
+        "pricing": {
+          "model": "freemium"
+        },
+        "pricing_vvv": 0.8,
+        "positioning": "Multi-setorial, white-label"
+      },
+      {
+        "name": "OneTrust",
+        "pricing": {
+          "min_usd": 10000
+        },
+        "pricing_vvv": 0.85,
+        "positioning": "Enterprise global, sem foco B2G brasileiro"
+      }
+    ],
+    "education_note": "F03 confirmado VVV 0.95 — 42.491 escolas privadas básicas sem SaaS LGPD dedicado (INEP 2024). Janela fecha com ECA Digital vigência mar/2026.",
+    "positioning_gap": {
+      "description": "Gap entre Confidata topo e OneTrust entry",
+      "confidata_top_brl_month": 3497,
+      "ontrust_entry_brl_year": 55000,
+      "cit_target_positioning": "R$3.500–R$55.000/mês — oferta enterprise B2G nacional especializada"
+    }
+  },
+  "roadmap": {
+    "waves": [
+      {
+        "id": 1,
+        "name": "Motor de Caixa — Setor Público Municipal",
+        "start_month": 1,
+        "end_month": 12,
+        "cluster_ids": [
+          "setor_publico_municipal"
+        ],
+        "cluster_names": [
+          "Setor Público Municipal"
+        ],
+        "investment_est": [
+          250000,
+          350000
+        ],
+        "target_arr": [
+          300000,
+          600000
+        ],
+        "gate": null,
+        "urgency": null,
+        "prerequisite": null,
+        "key_action": "INPI M1 + General M1 + consórcios M3"
+      },
+      {
+        "id": "2A",
+        "name": "Saúde Privada — Condicional PoC ETL",
+        "start_month": 3,
+        "end_month": 12,
+        "cluster_ids": [
+          "saude_privada"
+        ],
+        "cluster_names": [
+          "Saúde Privada"
+        ],
+        "investment_est": [
+          600000,
+          800000
+        ],
+        "target_arr": [
+          300000,
+          900000
+        ],
+        "gate": "PoC ETL MV/Tasy M4 — obrigatório antes de escalar",
+        "urgency": null,
+        "prerequisite": null,
+        "key_action": null
+      },
+      {
+        "id": "2B",
+        "name": "Educação Privada — Oceano Azul PARALELA CRÍTICA",
+        "start_month": 4,
+        "end_month": 18,
+        "cluster_ids": [
+          "educacao_privada"
+        ],
+        "cluster_names": [
+          "Educação Privada"
+        ],
+        "investment_est": [
+          500000,
+          700000
+        ],
+        "target_arr": [
+          400000,
+          1200000
+        ],
+        "gate": null,
+        "urgency": "ECA Digital março/2026 — janela fecha",
+        "prerequisite": null,
+        "key_action": null
+      },
+      {
+        "id": "2C",
+        "name": "Gov. Estadual + Federal — Expansão B2G",
+        "start_month": 6,
+        "end_month": 24,
+        "cluster_ids": [
+          "setor_publico_estadual",
+          "setor_publico_federal"
+        ],
+        "cluster_names": [
+          "Setor Público Estadual",
+          "Setor Público Federal"
+        ],
+        "investment_est": [
+          300000,
+          500000
+        ],
+        "target_arr": [
+          300000,
+          800000
+        ],
+        "gate": null,
+        "urgency": null,
+        "prerequisite": "1 caso âncora municipal + INPI + Whitepaper Art. 75 IV",
+        "key_action": null
+      },
+      {
+        "id": 3,
+        "name": "Entidades Associativas",
+        "start_month": 12,
+        "end_month": 24,
+        "cluster_ids": [
+          "entidades_associativas"
+        ],
+        "cluster_names": [
+          "Entidades Associativas"
+        ],
+        "investment_est": [
+          300000,
+          500000
+        ],
+        "target_arr": [
+          200000,
+          600000
+        ],
+        "gate": null,
+        "urgency": null,
+        "prerequisite": "Pesquisa primária 3+ federações validadas",
+        "key_action": null
+      }
+    ],
+    "milestones": [
+      {
+        "id": "M-INPI",
+        "month": 1,
+        "desc": "INPI protocolo IP algoritmos",
+        "critical": true,
+        "responsible": "Gislene"
+      },
+      {
+        "id": "M-General",
+        "month": 1,
+        "desc": "CEO/General com veto power nomeado",
+        "critical": true
+      },
+      {
+        "id": "M-GAP4",
+        "month": 1,
+        "desc": "Estado real plataforma levantado",
+        "critical": true,
+        "responsible": "Camila"
+      },
+      {
+        "id": "M-MVP",
+        "month": 2,
+        "desc": "MVP plataforma + AI-DPO básico deployed",
+        "critical": true
+      },
+      {
+        "id": "M-Whitepaper",
+        "month": 3,
+        "desc": "Whitepaper Parecer Art. 75 IV publicado",
+        "responsible": "Gislene+Simone"
+      },
+      {
+        "id": "M-PoC-ETL",
+        "month": 4,
+        "desc": "PoC ETL MV/Tasy — gate Wave 2A",
+        "critical": true,
+        "responsible": "Camila"
+      },
+      {
+        "id": "M-Edu-Piloto",
+        "month": 5,
+        "desc": "3 escolas em piloto Wave 2B"
+      },
+      {
+        "id": "M-Gate6",
+        "month": 6,
+        "desc": "Gates 2A + 2B aprovados + consórcio proposta"
+      },
+      {
+        "id": "M-12",
+        "month": 12,
+        "desc": "15 municípios + 20 escolas + ARR >R$700k"
+      },
+      {
+        "id": "M-18",
+        "month": 18,
+        "desc": "Breakeven + 50 escolas + 1 estado ativo"
+      },
+      {
+        "id": "M-24",
+        "month": 24,
+        "desc": "ARR >R$2M + 3 estados + federação"
+      }
+    ],
+    "kpis_per_month": [
+      {
+        "month": 6,
+        "arr_range": [
+          150000,
+          400000
+        ],
+        "active_clients": [
+          5,
+          15
+        ]
+      },
+      {
+        "month": 12,
+        "arr_range": [
+          700000,
+          1500000
+        ],
+        "active_clients": [
+          20,
+          45
+        ]
+      },
+      {
+        "month": 18,
+        "arr_range": [
+          1500000,
+          3000000
+        ],
+        "active_clients": [
+          50,
+          100
+        ]
+      },
+      {
+        "month": 24,
+        "arr_range": [
+          2500000,
+          5000000
+        ],
+        "active_clients": [
+          100,
+          200
+        ]
+      }
+    ]
+  },
+  "risks": [
+    {
+      "id": "R1",
+      "description": "Plataforma GAP4 — inexistente quando ETL piloto for lançado",
+      "probability": "high",
+      "impact": "critical",
+      "mitigation": "Camila levanta M1; MVP Django/Flask 8 semanas",
+      "responsible": "Camila",
+      "deadline_days": 5
+    },
+    {
+      "id": "R2",
+      "description": "INPI não registrado — Art. 75 IV 'd' bloqueado",
+      "probability": "medium",
+      "impact": "critical",
+      "mitigation": "Gislene protocola sprint 1 M1",
+      "responsible": "Gislene",
+      "deadline_days": 7
+    },
+    {
+      "id": "R3",
+      "description": "Fratura interna — paralisia decisória Simone/Camila/Wilton",
+      "probability": "medium",
+      "impact": "critical",
+      "mitigation": "General com veto power M1",
+      "responsible": null,
+      "deadline_days": null
+    },
+    {
+      "id": "R4",
+      "description": "PoC ETL MV/Tasy falha tecnicamente",
+      "probability": "medium",
+      "impact": "high",
+      "mitigation": "Gate M4 explícito; fallback para Wave 2B + 2C",
+      "responsible": null,
+      "deadline_days": null
+    },
+    {
+      "id": "R5",
+      "description": "Concorrente SaaS Educação lançar antes da CIT",
+      "probability": "low",
+      "impact": "high",
+      "mitigation": "Wave 2B em paralelo imediato desde M4",
+      "responsible": null,
+      "deadline_days": null
+    },
+    {
+      "id": "R6",
+      "description": "Gov. Estadual ciclo >18 meses (licitação normal)",
+      "probability": "medium",
+      "impact": "medium",
+      "mitigation": "ETEC como fast-track; 1 caso âncora municipal primeiro",
+      "responsible": null,
+      "deadline_days": null
+    }
+  ],
+  "market_confirmed_facts": [
+    {
+      "id": "F01",
+      "fact": "76,7% dos órgãos públicos federais em grau inexpressivo ou inicial de adequação LGPD",
+      "source": "TCU Acórdão 1.384/2022-TCU-Plenário + nova auditoria 2024",
+      "url": "https://portal.tcu.gov.br/tecnologia-da-informacao/auditoria-sobre-lgpd/",
+      "vvv": 0.95,
+      "impact": "Argumento de venda pronto para Gov. Federal + âncora expansão estadual"
+    },
+    {
+      "id": "F02",
+      "fact": "ANPD Mapa Prioridades 2026-2027: eixo 'poder público' é prioridade explícita de fiscalização",
+      "source": "gov.br/anpd dez/2025",
+      "vvv": 0.95,
+      "impact": "Timing regulatório excepcional para expansão B2G estadual/federal"
+    },
+    {
+      "id": "F03",
+      "fact": "42.491 escolas privadas de educação básica sem SaaS LGPD dedicado — oceano azul confirmado",
+      "source": "INEP Censo Escolar 2024 + busca exaustiva VVV auditada",
+      "vvv": 0.95,
+      "impact": "Wave 2B crítica — janela fecha quando ECA Digital gerar concorrentes"
+    },
+    {
+      "id": "F04",
+      "fact": "ECA Digital (Lei 15.211/2025) vigente março/2026 — obrigações dados de menores",
+      "source": "Lei 15.211/2025",
+      "vvv": 0.95,
+      "impact": "Urgência regulatória imediata para Educação Privada"
+    },
+    {
+      "id": "F05",
+      "fact": "Art. 75 IV Lei 14.133/2021 — dispensa licitação para ICT, limite R$65.492",
+      "source": "Lei 14.133/2021 Art. 75 IV + Decreto 2025",
+      "vvv": 0.95,
+      "impact": "Ciclo de venda 2-8 semanas vs. 12-18 meses licitação normal"
+    },
+    {
+      "id": "F06",
+      "fact": "Modelo fee-for-service atual: R$600k/contrato, 12 meses, equipe presencial — não escala",
+      "source": "Transcrição reunião 06/05/2026",
+      "vvv": 1,
+      "impact": "Justificativa core para transformação em produto ICT"
+    }
+  ],
+  "integration_costs": {
+    "source": "NEOGOV-DATA-v2 derived — pricing.setup from clusters",
+    "by_cluster": {
+      "educacao_privada": [
+        10000,
+        20000
+      ],
+      "saude_privada": [
+        30000,
+        60000
+      ]
+    }
+  }
+}
