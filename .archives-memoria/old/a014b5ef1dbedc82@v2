@@ -1,0 +1,94 @@
+# Plano: Clarificação Cluster Beta + Integração BSC-02
+
+## Contexto
+
+Usuário questionou definição do cluster Beta (healthcare):
+- "B2C [qq coisa aqui] ➞ duvida publica"
+- Solicitou re-leitura de NEOGOV-ARTEFATO-02.6-CLUSTERS-PESQUISA-PARALELA.md
+
+## Problema
+
+Necessidade de esclarecer:
+1. Beta é B2C ou B2B?
+2. Beta é público ou privado?
+3. Qual composição exata do cluster?
+4. Como isso impacta BSC-02 (decisão estratégica)?
+
+## Análise do Artefato 02.6 (Clusters)
+
+### Definição Beta: "Saúde Privada Sensível"
+
+**É B2B + PRIVADO** — organizações privadas que operam dados de saúde como atividade-fim.
+
+**Composição (~35-40k estabelecimentos):**
+- Hospitais privados (~3.900)
+- SADT privadas (~27.900) — Serviços Diagnóstico/Terapia
+- Clínicas especializadas
+- Laboratórios
+- Operadoras de plano de saúde
+
+**Características B2B:**
+| Aspecto | Detalhe |
+|---------|---------|
+| Decisor | Diretor Administrativo + Diretor Médico + DPO |
+| Aquisição | Contratação direta com comitê |
+| Ciclo | 45-90 dias |
+| Capacidade | Média-alta |
+| Dor LGPD | Alta (sanção até 2% faturamento) |
+
+### Distinção Entre Clusters
+
+| Cluster | Setor | Tipo | Clientes |
+|---------|-------|------|----------|
+| **Alfa** | Público | Setor público | Municípios, prefeituras, órgãos municipais |
+| **Beta** | Saúde Privada | Privado (B2B) | Hospitais, clínicas, laboratórios, SADT |
+| **Gamma** | Educação | Privado (B2B) | Escolas privadas, faculdades |
+
+### Implicações Estratégicas
+
+**Beta NÃO é oceano azul:**
+- Competidores existentes: Confidata, Be Compliance, Safetyfyi
+- Mercado estabelecido com players
+- Diferenciação via ETL/middleware (integração MV/Tasy/Soul MV)
+
+**Gamma SIM é oceano azul:**
+- Zero competidores SaaS dedicados
+- ECA Digital + Lei 14.064/2020 = demanda latente
+- Universidade Federal (IFES) replicável para 80+ instituições
+
+## Resposta TEXT ONLY ao Usuário
+
+Beta = **B2B, Privado**, **NÃO B2C**.
+
+**Composição:**
+- Hospitais privados (~3.900)
+- SADT privadas (~27.900)
+- Clínicas especializadas
+- Laboratórios
+- Operadoras de plano de saúde
+
+**Decisão:** Diretor Administrativo + Diretor Médico + DPO (comitê)
+**Aquisição:** Contratação direta B2B
+**Ciclo:** 45-90 dias
+
+**Distinção:**
+- Alfa = Setor público (municípios)
+- Beta = Saúde privada (hospitais/clinicas)
+- Gamma = Educação privada (escolas)
+
+**Beta tem competidores** (Confidata, Be, Safetyfyi). Gamma = oceano azul.
+
+## Arquivos Críticos
+
+1. `/home/cnmfs/ICT/PROTOTYPE/ICT2/NEOGOV-ARTEFATO-02.6-CLUSTERS-PESQUISA-PARALELA.md` — Taxonomia oficial
+2. `/home/cnmfs/ICT/PROTOTYPE/ICT2/NEOGOV-BSC-02-DECISAO-ESTRATEGICA.md` — Documentação estratégica
+3. `/home/cnmfs/.claude/projects/-home-cnmfs-ICT-PROTOTYPE-ICT2/memory/pricing-product-clusters.md`
+4. `/home/cnmfs/.claude/projects/-home-cnmfs-ICT-PROTOTYPE-ICT2/memory/etl-middleware-model.md`
+
+## Verificação
+
+- [x] Beta claramente definido como B2B privado
+- [x] Composição (hospitais, clínicas, laboratórios) documentada
+- [x] Distinção Alfa/Beta/Gamma explícita
+- [x] BSC-02 alinhado com definição 02.6
+- [x] Memory atualizada
