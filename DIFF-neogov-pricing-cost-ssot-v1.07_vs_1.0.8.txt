@@ -1,0 +1,203 @@
+--- neogov-pricing-cost-ssot-v1.0.7.json	2026-05-17 14:54:50.543999226 -0300
++++ neogov-pricing-cost-ssot-v1.0.8.json	2026-05-17 14:54:51.387999225 -0300
+@@ -1,8 +1,8 @@
+ {
+   "$meta": {
+     "id": "NEOGOV-V21-PRICING-COST-SSOT",
+-    "filename": "neogov-pricing-cost-ssot-v1.0.7.json",
+-    "version": "1.0.7",
++    "filename": "neogov-pricing-cost-ssot-v1.0.8.json",
++    "version": "1.0.8",
+     "created_at": "2026-05-16T05:30:00Z",
+     "type": "SINGLE_SOURCE_OF_TRUTH",
+     "purpose": "Fonte unica de verdade · pricing + custo (3 camadas DDD + ABC) + modelo de cobranca + catalogo. Object-oriented · navegavel por path. Consumido por Cap 12 BMC · Cap 13 VPC · Cap 15 Financeiro · calculator Vue.js · DT TEST.",
+@@ -31,7 +31,8 @@
+     ],
+     "changelog_v1.0.6": "P1: _audit_flag gravado nos 3 CSC cartorio (rastreavel permanente · origem+debito vinculado). JSON auditado integro · price.validated 100% sync K/N · grupos OK.",
+     "audit_status": "AUDITADO_v1.0.6 · 19/19 price.validated OK · 16/16 CSC OK · 3 CSC cartorio FLAGGED D-015 (nao fabricacao · estimativa declarada)",
+-    "changelog_v1.0.7": "D001-NOVO-16 investigado: nº serventias 13.567 FATO (era estimado). Arrecadacao individual SIGILOSA (bloqueio fatual honesto RGO-9). Faixa-classe semestral = melhor FATO publico (ja em Apendice N). Preco cartorio mantido (base FATO faixa). Estimativa residual = posicao na faixa (D001-NOVO-7 piloto)."
++    "changelog_v1.0.7": "D001-NOVO-16 investigado: nº serventias 13.567 FATO (era estimado). Arrecadacao individual SIGILOSA (bloqueio fatual honesto RGO-9). Faixa-classe semestral = melhor FATO publico (ja em Apendice N). Preco cartorio mantido (base FATO faixa). Estimativa residual = posicao na faixa (D001-NOVO-7 piloto).",
++    "changelog_v1.0.8": "D17 RESOLVIDO: cartorio_classe3 provisório R$9.000 substituído por 3 sub-tiers III-A R$5.000(76%) / III-B R$15.000(55%) / III-C R$30.000+(38%) conforme Cap 15 §15.4. Faixas ancoradas em arrecadação FATO Prov.74/2018. CSCs análogos (D-015). Histórico do provisório preservado em business_segments.b2b_notarial.classe3_sub_estratificacao. Total tiers 19→21."
+   },
+   "catalog": {
+     "_doc": "Catalogo de produtos NeoGov · P1-P5 · cada produto tem nome tecnico e comercial",
+@@ -953,49 +954,76 @@
+         "status": "FATO-PARCIAL · faixa-classe e o teto factual publico · estimativa residual = posicao DENTRO da faixa (calibra piloto D001-NOVO-7 WTP)"
+       }
+     },
+-    "cartorio_classe3": {
+-      "technical_name": "Cartorio Classe III (grande)",
+-      "commercial_name": "NeoGov Cartorios · Serventia Classe III",
+-      "cluster_family": "omega_notarial",
+-      "business_segment": "b2b_notarial",
+-      "buyer": "Serventia grande · alta arrecadacao · cartorio registro imoveis/notas capital",
+-      "bundle": [
+-        "P1",
+-        "P3_B2G",
+-        "P3_B2C",
+-        "P4",
+-        "P5"
+-      ],
++    "cartorio_classe3_a": {
++      "commercial_name": "NeoGov Cartorios · Serventia Classe III-A",
++      "segment": "b2b_notarial",
+       "billing_model_ref": "subscription_premium_tier",
+-      "legal_driver": "CNJ Prov.134/2022 + Prov.74/2018 Classe III (arrecad. >R$500k/SEMESTRE · range R$1M-143M ABSURDO)",
++      "price": {
++        "validated": 5000,
++        "method": "Cap15 §15.4 · 3-4% faixa arrecad. R$1-3M/ano (FATO Prov.74/2018)"
++      },
+       "cost": {
+-        "csc_marginal": 5500,
+-        "cfa_proportional": 1177,
+-        "csc_total": 6677
++        "csc_total": 1217,
++        "csc_origin": "ANÁLOGO gamma_enterprise (perfil uso médio · D-015)"
++      },
++      "margin": {
++        "validated_pct": 76
+       },
++      "arrecadacao_faixa": "R$1-3M/ano (Classe III baixa · ~55% das serventias Classe III)",
++      "_audit_flag": {
++        "origin": "Cap 15 §15.4 sub-estratificação · resolve D17",
++        "D015": "ESTIMATIVA-ANÁLOGO · preço=3-4% faixa FATO · CSC análogo gamma_enterprise",
++        "lastro": "faixa arrecad. FATO CNJ Prov.74/2018 (Apêndice N) · posição na faixa = D001-NOVO-7 piloto",
++        "status": "sub-tier substitui cartorio_classe3 provisório · VVV 0.50 · D001-NOVO-17 calibra c/ dado real (sigiloso)",
++        "debito_vinculado": "D001-NOVO-17"
++      }
++    },
++    "cartorio_classe3_b": {
++      "commercial_name": "NeoGov Cartorios · Serventia Classe III-B",
++      "segment": "b2b_notarial",
++      "billing_model_ref": "subscription_premium_tier",
+       "price": {
+-        "current": null,
+-        "recommended": 18000,
+-        "validated": 9000,
+-        "recommendation_rationale": "analogo Alfa-M Enterprise · alta arrecadacao + dados sensiveis massivos + P3-B2C certidoes volume",
+-        "correction_note": "Apendice N: era R$18000 (FABRICADO denominador arrecad. inventado) -> R$9000 (FATO arrecad. CNJ real)"
++        "validated": 15000,
++        "method": "Cap15 §15.4 · 3-4% faixa arrecad. R$3-10M/ano (FATO)"
++      },
++      "cost": {
++        "csc_total": 6677,
++        "csc_origin": "ANÁLOGO cartorio_classe3 provisório antigo (D-015)"
+       },
+       "margin": {
+-        "validated_abs": 2323,
+-        "validated_pct": null
+-      },
+-      "fato_lastro": "PROVISORIO · range arrecad. absurdo · D001-NOVO-17 sub-estratificar III-A/B/C OBRIGATORIO",
+-      "vvv": 0.45,
+-      "flag": "SUB-ESTRATIFICAR-OBRIGATORIO",
++        "validated_pct": 55
++      },
++      "arrecadacao_faixa": "R$3-10M/ano (Classe III média · ~35% das serventias Classe III)",
+       "_audit_flag": {
+-        "field": "cost.csc_total",
+-        "value": 6677,
+-        "origin": "ESTIMATIVA-ANALOGO alfa_m_enterprise reduzido (Apendice M)",
+-        "canonical_doc": "NENHUM",
+-        "resolved_by": "D001-NOVO-16+17+18 (sub-estratificar)",
+-        "marker": "🟡 D-015",
+-        "D001_NOVO_16_resultado": "BLOQUEADO PARCIAL: arrecadacao individual por serventia e SIGILOSA (CNJ oficial). Classes I/II/III por faixa semestral (Prov.74/2018) ja sao o melhor FATO disponivel publico. preco mantem base 3-4% faixa-classe (Apendice N). Resolucao plena exige acesso restrito Justica Aberta (ICP-Brasil) = acao comercial pos-piloto, NAO web_search.",
+-        "status": "FATO-PARCIAL · faixa-classe e o teto factual publico · estimativa residual = posicao DENTRO da faixa (calibra piloto D001-NOVO-7 WTP)"
++        "origin": "Cap 15 §15.4 sub-estratificação · resolve D17",
++        "D015": "ESTIMATIVA-ANÁLOGO · preço=3-4% faixa FATO · CSC herdado tier antigo",
++        "lastro": "faixa arrecad. FATO CNJ Prov.74/2018 · D001-NOVO-17 calibra",
++        "status": "sub-tier · VVV 0.50 · arrecadação individual sigilosa (CNJ)",
++        "debito_vinculado": "D001-NOVO-17"
++      }
++    },
++    "cartorio_classe3_c": {
++      "commercial_name": "NeoGov Cartorios · Serventia Classe III-C (custom)",
++      "segment": "b2b_notarial",
++      "billing_model_ref": "enterprise_custom",
++      "price": {
++        "validated": 30000,
++        "method": "Cap15 §15.4 · piso custom · >R$10M/ano arrecad. (FATO · ex: 9º RI Rio R$143M)"
++      },
++      "cost": {
++        "csc_total": 18727,
++        "csc_origin": "ANÁLOGO alfa_m_enterprise (perfil uso alto · D-015)"
++      },
++      "margin": {
++        "validated_pct": 38
++      },
++      "arrecadacao_faixa": ">R$10M/ano (Classe III alta · ~10% · cauda longa até R$143M/sem)",
++      "_audit_flag": {
++        "origin": "Cap 15 §15.4 sub-estratificação · resolve D17 · corrige subprecificação grosseira (Apêndice N: 9º RI Rio pagava R$9k)",
++        "D015": "ESTIMATIVA-ANÁLOGO · R$30.000 é PISO · contrato custom real",
++        "lastro": "faixa FATO CNJ · cauda R$143M/sem documentada Apêndice N · D001-NOVO-17 calibra",
++        "status": "sub-tier · price=piso · VVV 0.45 · custom negociado (não tabelado)",
++        "debito_vinculado": "D001-NOVO-17"
+       }
+     }
+   },
+@@ -1097,11 +1125,63 @@
+       "tiers": [
+         "cartorio_classe1",
+         "cartorio_classe2",
+-        "cartorio_classe3"
++        "cartorio_classe3_a",
++        "cartorio_classe3_b",
++        "cartorio_classe3_c"
+       ],
+       "relevance": "ALTA · ~12.000+ serventias BR · Prov.213 (fev/2026) demanda compulsoria recente",
+       "serventias_total_fato": "13.567 (CNJ Justiça Aberta · FATO web_search 2026-05-16 · era estimado 12-15k)",
+-      "arrecadacao_total_fato": "R$23,4bi total 2021 (cartoriotop/ANOREG · FATO) · individual = SIGILOSA (CNJ)"
++      "arrecadacao_total_fato": "R$23,4bi total 2021 (cartoriotop/ANOREG · FATO) · individual = SIGILOSA (CNJ)",
++      "classe3_sub_estratificacao": {
++        "origem": "Cap 15 §15.4 · resolve D17 (range R$1M-143M absurdo p/ tier único)",
++        "antes": "cartorio_classe3 único R$9.000 provisório (subprecificava cauda longa)",
++        "depois": "3 sub-tiers III-A/B/C por faixa de arrecadação FATO",
++        "historico_provisorio": {
++          "technical_name": "Cartorio Classe III (grande)",
++          "commercial_name": "NeoGov Cartorios · Serventia Classe III",
++          "cluster_family": "omega_notarial",
++          "business_segment": "b2b_notarial",
++          "buyer": "Serventia grande · alta arrecadacao · cartorio registro imoveis/notas capital",
++          "bundle": [
++            "P1",
++            "P3_B2G",
++            "P3_B2C",
++            "P4",
++            "P5"
++          ],
++          "billing_model_ref": "subscription_premium_tier",
++          "legal_driver": "CNJ Prov.134/2022 + Prov.74/2018 Classe III (arrecad. >R$500k/SEMESTRE · range R$1M-143M ABSURDO)",
++          "cost": {
++            "csc_marginal": 5500,
++            "cfa_proportional": 1177,
++            "csc_total": 6677
++          },
++          "price": {
++            "current": null,
++            "recommended": 18000,
++            "validated": 9000,
++            "recommendation_rationale": "analogo Alfa-M Enterprise · alta arrecadacao + dados sensiveis massivos + P3-B2C certidoes volume",
++            "correction_note": "Apendice N: era R$18000 (FABRICADO denominador arrecad. inventado) -> R$9000 (FATO arrecad. CNJ real)"
++          },
++          "margin": {
++            "validated_abs": 2323,
++            "validated_pct": null
++          },
++          "fato_lastro": "PROVISORIO · range arrecad. absurdo · D001-NOVO-17 sub-estratificar III-A/B/C OBRIGATORIO",
++          "vvv": 0.45,
++          "flag": "SUB-ESTRATIFICAR-OBRIGATORIO",
++          "_audit_flag": {
++            "field": "cost.csc_total",
++            "value": 6677,
++            "origin": "ESTIMATIVA-ANALOGO alfa_m_enterprise reduzido (Apendice M)",
++            "canonical_doc": "NENHUM",
++            "resolved_by": "D001-NOVO-16+17+18 (sub-estratificar)",
++            "marker": "🟡 D-015",
++            "D001_NOVO_16_resultado": "BLOQUEADO PARCIAL: arrecadacao individual por serventia e SIGILOSA (CNJ oficial). Classes I/II/III por faixa semestral (Prov.74/2018) ja sao o melhor FATO disponivel publico. preco mantem base 3-4% faixa-classe (Apendice N). Resolucao plena exige acesso restrito Justica Aberta (ICP-Brasil) = acao comercial pos-piloto, NAO web_search.",
++            "status": "FATO-PARCIAL · faixa-classe e o teto factual publico · estimativa residual = posicao DENTRO da faixa (calibra piloto D001-NOVO-7 WTP)"
++          }
++        }
++      }
+     }
+   }
+ }
+\ No newline at end of file
