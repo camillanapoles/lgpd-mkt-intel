@@ -1,0 +1,1200 @@
+{							      (
+  "$meta": {						      (
+    "id": "NEOGOV-V21-PRICING-COST-SSOT",		      (
+    "filename": "neogov-pricing-cost-ssot-v1.0.7.json",	      |	    "filename": "neogov-pricing-cost-ssot-v1.0.8.json",
+    "version": "1.0.7",					      |	    "version": "1.0.8",
+    "created_at": "2026-05-16T05:30:00Z",		      (
+    "type": "SINGLE_SOURCE_OF_TRUTH",			      (
+    "purpose": "Fonte unica de verdade · pricing + custo (3 c (
+    "access_pattern": "Navegar por path: ssot.pricing_tiers[' (
+    "canonical_sources": {				      (
+      "cost_matrix": "APENDICE-I-PROPORTIONAL-COST-ALLOCATION (
+      "cost_layers_ddd": "APENDICE-H-ARCHITECTURAL-COST-OPTIM (
+      "abc_drivers": "APENDICE-I §3-4",			      (
+      "billing_models": "APENDICE-F-PRICING-MODEL-SCENARIOS-v (
+      "commercial_names": "APENDICE-J-NOMENCLATURA-COMERCIAL- (
+      "adversarial_validation": "APENDICE-G-PRICING-VALIDATIO (
+      "scenarios": "APENDICE-F §9 + APENDICE-I §7"	      (
+    },							      (
+    "vvv_global": 0.85,					      (
+    "decision_status": "price_VALIDATED_via_DT_TEST_Apendice_ (
+    "mandato": "TEXT-AS-OBJECT · D-015 lastro · VVV sem masca (
+    "dt_test_ref": "APENDICE-K-DT-TEST-PRICING-v1.0.1 §6",    (
+    "changelog_v1.0.3": "K2 business_segments (B2G/B2B-Saude/ (
+    "changelog_v1.0.4": "cartorio_* price.validated escrito ( (
+    "changelog_v1.0.5": "AUDITORIA HOSTIL Apendice N: cartori (
+    "sub_debitos_criticos": [				      (
+      "D001-NOVO-16 arrecad real CNJ Justica Aberta",	      (
+      "D001-NOVO-17 sub-estratificar Classe III",	      (
+      "D001-NOVO-18 liquido vs bruto",			      (
+      "D001-NOVO-19 re-search L1A SaaS"			      (
+    ],							      (
+    "changelog_v1.0.6": "P1: _audit_flag gravado nos 3 CSC ca (
+    "audit_status": "AUDITADO_v1.0.6 · 19/19 price.validated  (
+    "changelog_v1.0.7": "D001-NOVO-16 investigado: nº servent |	    "changelog_v1.0.7": "D001-NOVO-16 investigado: nº servent
+							      >	    "changelog_v1.0.8": "D17 RESOLVIDO: cartorio_classe3 prov
+  },							      (
+  "catalog": {						      (
+    "_doc": "Catalogo de produtos NeoGov · P1-P5 · cada produ (
+    "products": {					      (
+      "P1": {						      (
+        "id": "P1",					      (
+        "technical_name": "Plataforma NeoGov Core",	      (
+        "commercial_name": "Plataforma NeoGov Core",	      (
+        "description_human": "Motor central de conformidade L (
+        "default_billing_model": "subscription_monthly",      (
+        "consumes_drivers": [				      (
+          "compute_k8s",				      (
+          "storage_block",				      (
+          "auth0_mau",					      (
+          "cloudflare",					      (
+          "logs_lgpd"					      (
+        ]						      (
+      },						      (
+      "P2": {						      (
+        "id": "P2",					      (
+        "technical_name": "ETL Setup Hospitalar",	      (
+        "commercial_name": "NeoGov Integracao Saude (ETL)",   (
+        "description_human": "Conecta sistemas hospitalares ( (
+        "default_billing_model": "one_time_plus_maintenance", (
+        "consumes_drivers": [				      (
+          "compute_k8s",				      (
+          "storage_object",				      (
+          "backup",					      (
+          "human_eng_etl"				      (
+        ]						      (
+      },						      (
+      "P3_B2G": {					      (
+        "id": "P3_B2G",					      (
+        "technical_name": "LAI x LGPD Premium",		      (
+        "commercial_name": "NeoGov Transparencia Ativa (LAI x (
+        "description_human": "Equilibra Lei de Acesso a Infor (
+        "default_billing_model": "subscription_premium_tier", (
+        "consumes_drivers": [				      (
+          "gpu_tokens_ia",				      (
+          "qdrant_vector",				      (
+          "human_advogado"				      (
+        ]						      (
+      },						      (
+      "P3_B2C": {					      (
+        "id": "P3_B2C",					      (
+        "technical_name": "Anonimizacao sob Demanda",	      (
+        "commercial_name": "NeoGov Anonimizacao sob Demanda", (
+        "description_human": "Anonimiza dados em volume · cob (
+        "default_billing_model": "usage_based_tokens",	      (
+        "consumes_drivers": [				      (
+          "gpu_tokens_ia",				      (
+          "storage_object",				      (
+          "bandwidth"					      (
+        ]						      (
+      },						      (
+      "P4": {						      (
+        "id": "P4",					      (
+        "technical_name": "AI-DPO Copilot",		      (
+        "commercial_name": "NeoGov Copiloto Juridico (IA)",   (
+        "description_human": "Assistente de IA que responde d (
+        "default_billing_model": "per_seat",		      (
+        "consumes_drivers": [				      (
+          "gpu_tokens_ia",				      (
+          "qdrant_vector",				      (
+          "auth0_mau"					      (
+        ]						      (
+      },						      (
+      "P5": {						      (
+        "id": "P5",					      (
+        "technical_name": "Projeto + Retainer Consultivo",    (
+        "commercial_name": "NeoGov Consultoria Dedicada",     (
+        "description_human": "Consultoria humana premium (Sim (
+        "default_billing_model": "project_fee_plus_retainer", (
+        "consumes_drivers": [				      (
+          "human_simone",				      (
+          "human_gislenia",				      (
+          "human_advogado"				      (
+        ]						      (
+      }							      (
+    }							      (
+  },							      (
+  "billing_models": {					      (
+    "_doc": "Tipos de cobranca · cada tier referencia um dest (
+    "subscription_monthly": {				      (
+      "id": "subscription_monthly",			      (
+      "label_pt": "Assinatura mensal",			      (
+      "frequency": "monthly",				      (
+      "variation": "fixed_per_tier",			      (
+      "annual_discount_pct": 15,			      (
+      "lock_in_months": 12,				      (
+      "applies_to": [					      (
+        "P1"						      (
+      ]							      (
+    },							      (
+    "subscription_premium_tier": {			      (
+      "id": "subscription_premium_tier",		      (
+      "label_pt": "Assinatura premium por tier",	      (
+      "frequency": "monthly",				      (
+      "variation": "fixed_per_tier",			      (
+      "annual_discount_pct": 10,			      (
+      "lock_in_months": 12,				      (
+      "applies_to": [					      (
+        "P3_B2G"					      (
+      ]							      (
+    },							      (
+    "usage_based_tokens": {				      (
+      "id": "usage_based_tokens",			      (
+      "label_pt": "Por uso (R$/milhao de tokens) + minimo men (
+      "frequency": "monthly_metered",			      (
+      "variation": "variable_plus_minimum",		      (
+      "unit": "R$/M_tokens",				      (
+      "rate_brl_per_million_tokens": 25,		      (
+      "monthly_minimum_brl": 500,			      (
+      "lock_in_months": 0,				      (
+      "applies_to": [					      (
+        "P3_B2C"					      (
+      ]							      (
+    },							      (
+    "per_seat": {					      (
+      "id": "per_seat",					      (
+      "label_pt": "Por licenca (seat) de usuario",	      (
+      "frequency": "monthly",				      (
+      "variation": "linear_per_seat",			      (
+      "volume_discount": {				      (
+        "1_9": 1.0,					      (
+        "10_49": 0.8,					      (
+        "50_plus": 0.6					      (
+      },						      (
+      "lock_in_months": 0,				      (
+      "applies_to": [					      (
+        "P4"						      (
+      ]							      (
+    },							      (
+    "one_time_plus_maintenance": {			      (
+      "id": "one_time_plus_maintenance",		      (
+      "label_pt": "Setup unico (parcelado) + manutencao mensa (
+      "frequency": "setup_then_monthly",		      (
+      "variation": "lumpy_setup_plus_recurring",	      (
+      "setup_installments": 3,				      (
+      "lock_in_months": 12,				      (
+      "applies_to": [					      (
+        "P2"						      (
+      ]							      (
+    },							      (
+    "project_fee_plus_retainer": {			      (
+      "id": "project_fee_plus_retainer",		      (
+      "label_pt": "Fee de projeto (parcelado) + retainer mens (
+      "frequency": "project_then_monthly",		      (
+      "variation": "project_plus_retainer",		      (
+      "project_installments": 6,			      (
+      "retainer_lock_in_months": 6,			      (
+      "applies_to": [					      (
+        "P5"						      (
+      ]							      (
+    }							      (
+  },							      (
+  "cost_model": {					      (
+    "_doc": "Modelo de custo 3 camadas DDD (Apendice H) + ABC (
+    "layer_1a_platform_shared_customer_serving": {	      (
+      "_doc": "Shared Kernel · infra que SERVE clientes · rat (
+      "total_monthly_brl": 10988,			      (
+      "rateable": true,					      (
+      "allocation_method": "ABC_driver_weighted",	      (
+      "drivers": {					      (
+        "gpu_tokens_ia": {				      (
+          "cost_brl": 6310,				      (
+          "unit": "M_tokens/mes",			      (
+          "capacity_M_tokens": 870			      (
+        },						      (
+        "compute_k8s": {				      (
+          "cost_brl": 1560,				      (
+          "unit": "containers+req"			      (
+        },						      (
+        "storage_object": {				      (
+          "cost_brl": 870,				      (
+          "unit": "GB-mes",				      (
+          "capacity_TB": 5				      (
+        },						      (
+        "storage_block": {				      (
+          "cost_brl": 350,				      (
+          "unit": "GB-DB"				      (
+        },						      (
+        "qdrant_vector": {				      (
+          "cost_brl": 200,				      (
+          "unit": "vetores"				      (
+        },						      (
+        "bandwidth": {					      (
+          "cost_brl": 120,				      (
+          "unit": "GB-egress"				      (
+        },						      (
+        "auth0_mau": {					      (
+          "cost_brl": 188,				      (
+          "unit": "MAU"					      (
+        },						      (
+        "cloudflare": {					      (
+          "cost_brl": 320,				      (
+          "unit": "req/mes"				      (
+        },						      (
+        "kms": {					      (
+          "cost_brl": 180,				      (
+          "unit": "API-calls"				      (
+        },						      (
+        "backup": {					      (
+          "cost_brl": 250,				      (
+          "unit": "GB-backup"				      (
+        },						      (
+        "logs_lgpd": {					      (
+          "cost_brl": 510,				      (
+          "unit": "GB-log-5anos"			      (
+        },						      (
+        "postmark_email": {				      (
+          "cost_brl": 130,				      (
+          "unit": "emails"				      (
+        }						      (
+      }							      (
+    },							      (
+    "layer_1b_dev_operational_NOT_rateable": {		      (
+      "_doc": "Dev/operacional interno · NAO consumido por cl (
+      "total_monthly_brl": 4574,			      (
+      "rateable": false,				      (
+      "items": {					      (
+        "gpu_spheron_dev": {				      (
+          "cost_brl": 1908,				      (
+          "reason": "fine-tuning/batch interno"		      (
+        },						      (
+        "sentry": {					      (
+          "cost_brl": 140				      (
+        },						      (
+        "grafana_tempo": {				      (
+          "cost_brl": 306				      (
+        },						      (
+        "github_actions": {				      (
+          "cost_brl": 215				      (
+        },						      (
+        "status_page": {				      (
+          "cost_brl": 155				      (
+        },						      (
+        "hot_dr_partial": {				      (
+          "cost_brl": 1850				      (
+        }						      (
+      }							      (
+    },							      (
+    "layer_2_product_marginal": {			      (
+      "_doc": "Custo marginal por uso real · varia com volume (
+      "rateable": "per_consumption",			      (
+      "units": {					      (
+        "storage_extra_block_brl_per_gb": 0.35,		      (
+        "storage_extra_object_brl_per_gb": 0.17,	      (
+        "bandwidth_brl_per_gb": 0.12,			      (
+        "tokens_brl_per_million": 7.25,			      (
+        "logs_retention_brl_per_gb": 0.17		      (
+      }							      (
+    },							      (
+    "layer_3_service_human_premium": {			      (
+      "_doc": "Custo humano premium · escala com pessoas · NA (
+      "rateable": "per_hour_allocated",			      (
+      "hourly_rates_brl": {				      (
+        "simone_ceo_advogada": 250,			      (
+        "gislenia_compliance": 180,			      (
+        "advogado_pleno": 150,				      (
+        "eng_etl": 100,					      (
+        "csm_premium": 48				      (
+      }							      (
+    },							      (
+    "fixed_costs_company_monthly_brl": {		      (
+      "_doc": "Custos fixos NAO rateaveis a cliente (folha ·  (
+      "pro_labores_founders": 53000,			      (
+      "folha_clt": 37000,				      (
+      "encargos_simples_28pct": 10360,			      (
+      "layer_1b_dev_operational": 4574,			      (
+      "software_saas_operacional": 6400,		      (
+      "marketing_vendas_wave1": 17000,			      (
+      "compliance_wave1": 3917,				      (
+      "operacional_escritorio": 5500,			      (
+      "contingencia": 4500,				      (
+      "total_cf_monthly_brl": 142251			      (
+    }							      (
+  },							      (
+  "abc_driver_weights_by_tier": {			      (
+    "_doc": "Pesos de consumo 0-10 por tier x driver (Apendic (
+    "_legend": "peso composto ja normalizado · CFA = peso_com (
+    "alfa_m_pro": {					      (
+      "composite_weight": 8,				      (
+      "gpu_tokens_ia": 2,				      (
+      "note": "P1+P3-B2G basico"			      (
+    },							      (
+    "alfa_m_plus_pregao": {				      (
+      "composite_weight": 8,				      (
+      "gpu_tokens_ia": 2				      (
+    },							      (
+    "alfa_m_plus_dispensa": {				      (
+      "composite_weight": 15,				      (
+      "gpu_tokens_ia": 3				      (
+    },							      (
+    "alfa_m_enterprise": {				      (
+      "composite_weight": 30,				      (
+      "gpu_tokens_ia": 5				      (
+    },							      (
+    "alfa_fe": {					      (
+      "composite_weight": 44,				      (
+      "gpu_tokens_ia": 7				      (
+    },							      (
+    "beta_pequeno": {					      (
+      "composite_weight": 22,				      (
+      "gpu_tokens_ia": 4				      (
+    },							      (
+    "beta_medio": {					      (
+      "composite_weight": 37,				      (
+      "gpu_tokens_ia": 6				      (
+    },							      (
+    "beta_grande": {					      (
+      "composite_weight": 60,				      (
+      "gpu_tokens_ia": 9,				      (
+      "note": "superset · consome tudo"			      (
+    },							      (
+    "gamma_pequena": {					      (
+      "composite_weight": 4,				      (
+      "gpu_tokens_ia": 0,				      (
+      "note": "P1 Basic · NAO usa AI-DPO · peso GPU=0"	      (
+    },							      (
+    "gamma_media": {					      (
+      "composite_weight": 8,				      (
+      "gpu_tokens_ia": 1				      (
+    },							      (
+    "gamma_enterprise": {				      (
+      "composite_weight": 17,				      (
+      "gpu_tokens_ia": 2				      (
+    },							      (
+    "epsilon_dpo": {					      (
+      "composite_weight": 5,				      (
+      "gpu_tokens_ia": 1,				      (
+      "note": "P4 leve"					      (
+    },							      (
+    "epsilon_escritorio": {				      (
+      "composite_weight": 10,				      (
+      "gpu_tokens_ia": 1				      (
+    },							      (
+    "cartorio_classe1": {				      (
+      "composite_weight": 5,				      (
+      "gpu_tokens_ia": 1,				      (
+      "note": "P1 basic + P4 leve · analogo Epsilon"	      (
+    },							      (
+    "cartorio_classe2": {				      (
+      "composite_weight": 15,				      (
+      "gpu_tokens_ia": 3,				      (
+      "note": "P1+P3-B2G+P4 · analogo Alfa-M Plus-Disp"	      (
+    },							      (
+    "cartorio_classe3": {				      (
+      "composite_weight": 30,				      (
+      "gpu_tokens_ia": 5,				      (
+      "note": "bundle full · analogo Alfa-M Enterprise"	      (
+    }							      (
+  },							      (
+  "pricing_tiers": {					      (
+    "_doc": "16 tiers · fonte canonica. price.current = preco (
+    "alfa_m_pro": {					      (
+      "technical_name": "Alfa-M Pro",			      (
+      "commercial_name": "NeoGov Municipio · Essencial",      (
+      "cluster_family": "alfa_setor_publico",		      (
+      "buyer": "Cidades pequenas (<30k hab)",		      (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G_basico"					      (
+      ],						      (
+      "billing_model_ref": "subscription_monthly",	      (
+      "cost": {						      (
+        "csc_marginal": 850,				      (
+        "cfa_proportional": 314,			      (
+        "csc_total": 1164				      (
+      },						      (
+      "price": {					      (
+        "current": 5458,				      (
+        "recommended": 5458,				      (
+        "validated": 5458,				      (
+        "binding": "Art75_IV_ceiling_R65496_year"	      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 79,				      (
+        "current_abs": 4294,				      (
+        "validated_abs": 4294,				      (
+        "validated_pct": 78.7				      (
+      }							      (
+    },							      (
+    "alfa_m_plus_pregao": {				      (
+      "technical_name": "Alfa-M Plus-Pregao",		      (
+      "commercial_name": "NeoGov Municipio · Profissional (Li (
+      "cluster_family": "alfa_setor_publico",		      (
+      "buyer": "Cidades medias (30-100k hab) via pregao",     (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G"					      (
+      ],						      (
+      "billing_model_ref": "subscription_monthly",	      (
+      "cost": {						      (
+        "csc_marginal": 5000,				      (
+        "cfa_proportional": 314,			      (
+        "csc_total": 5314				      (
+      },						      (
+      "price": {					      (
+        "current": 12000,				      (
+        "recommended": 12000,				      (
+        "validated": 12000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 56,				      (
+        "current_abs": 6686,				      (
+        "validated_abs": 6686,				      (
+        "validated_pct": 55.7				      (
+      }							      (
+    },							      (
+    "alfa_m_plus_dispensa": {				      (
+      "technical_name": "Alfa-M Plus-Dispensa",		      (
+      "commercial_name": "NeoGov Municipio · Profissional (Di (
+      "cluster_family": "alfa_setor_publico",		      (
+      "buyer": "Cidades medias via dispensa Art.75 (cota Wilt (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G",					      (
+        "P5_leve"					      (
+      ],						      (
+      "billing_model_ref": "subscription_monthly",	      (
+      "cost": {						      (
+        "csc_marginal": 8900,				      (
+        "cfa_proportional": 589,			      (
+        "csc_total": 9489				      (
+      },						      (
+      "price": {					      (
+        "current": 25000,				      (
+        "recommended": 25000,				      (
+        "validated": 25000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 62,				      (
+        "current_abs": 15511,				      (
+        "validated_abs": 15511,				      (
+        "validated_pct": 62.0				      (
+      }							      (
+    },							      (
+    "alfa_m_enterprise": {				      (
+      "technical_name": "Alfa-M Enterprise",		      (
+      "commercial_name": "NeoGov Municipio · Avancado",	      (
+      "cluster_family": "alfa_setor_publico",		      (
+      "buyer": "Grandes cidades (>100k hab)",		      (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P5"						      (
+      ],						      (
+      "billing_model_ref": "subscription_premium_tier",	      (
+      "cost": {						      (
+        "csc_marginal": 17550,				      (
+        "cfa_proportional": 1177,			      (
+        "csc_total": 18727				      (
+      },						      (
+      "price": {					      (
+        "current": 38000,				      (
+        "recommended": 38000,				      (
+        "validated": 38000,				      (
+        "usage_overage": "R$25/M_tokens >5M"		      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 51,				      (
+        "current_abs": 19273,				      (
+        "validated_abs": 19273,				      (
+        "validated_pct": 50.7				      (
+      }							      (
+    },							      (
+    "alfa_fe": {					      (
+      "technical_name": "Alfa-F/E",			      (
+      "commercial_name": "NeoGov Estadual & Federal",	      (
+      "cluster_family": "alfa_setor_publico",		      (
+      "buyer": "Estados · ministerios · orgaos federais",     (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P5_premium"					      (
+      ],						      (
+      "billing_model_ref": "subscription_premium_tier",	      (
+      "cost": {						      (
+        "csc_marginal": 29250,				      (
+        "cfa_proportional": 1727,			      (
+        "csc_total": 30977				      (
+      },						      (
+      "price": {					      (
+        "current": 50000,				      (
+        "recommended": 50000,				      (
+        "validated": 50000,				      (
+        "setup_onetime": 25000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 38,				      (
+        "current_abs": 19023,				      (
+        "validated_abs": 19023,				      (
+        "validated_pct": 38.0				      (
+      }							      (
+    },							      (
+    "beta_pequeno_y1": {				      (
+      "technical_name": "Beta-Pequeno Y1",		      (
+      "commercial_name": "NeoGov Saude · Hospital Pequeno — I (
+      "cluster_family": "beta_saude",			      (
+      "buyer": "Hospitais <100 leitos · ano 1 c/ setup",      (
+      "bundle": [					      (
+        "P1",						      (
+        "P2",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P4",						      (
+        "P5"						      (
+      ],						      (
+      "billing_model_ref": "one_time_plus_maintenance",	      (
+      "cost": {						      (
+        "csc_marginal": 14800,				      (
+        "cfa_proportional": 863,			      (
+        "csc_total": 15663				      (
+      },						      (
+      "price": {					      (
+        "current": 12000,				      (
+        "recommended": 12000,				      (
+        "validated": 12000,				      (
+        "setup_onetime": 25000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": -31,				      (
+        "current_abs": -3663,				      (
+        "note": "investimento_estrategico_Y1",		      (
+        "validated_abs": -3663,				      (
+        "validated_pct": -30.5				      (
+      }							      (
+    },							      (
+    "beta_pequeno_y2": {				      (
+      "technical_name": "Beta-Pequeno Y2+",		      (
+      "commercial_name": "NeoGov Saude · Hospital Pequeno — R (
+      "cluster_family": "beta_saude",			      (
+      "buyer": "Hospitais <100 leitos · ano 2+",	      (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P4",						      (
+        "P5"						      (
+      ],						      (
+      "billing_model_ref": "subscription_premium_tier",	      (
+      "cost": {						      (
+        "csc_marginal": 9300,				      (
+        "cfa_proportional": 863,			      (
+        "csc_total": 10163				      (
+      },						      (
+      "price": {					      (
+        "current": 12000,				      (
+        "recommended": 12000,				      (
+        "validated": 12000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 15,				      (
+        "current_abs": 1837,				      (
+        "validated_abs": 1837,				      (
+        "validated_pct": 15.3				      (
+      }							      (
+    },							      (
+    "beta_medio_y1": {					      (
+      "technical_name": "Beta-Medio Y1",		      (
+      "commercial_name": "NeoGov Saude · Hospital Medio — Imp (
+      "cluster_family": "beta_saude",			      (
+      "buyer": "Hospitais 100-300 leitos · ano 1",	      (
+      "bundle": [					      (
+        "P1",						      (
+        "P2",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P4",						      (
+        "P5"						      (
+      ],						      (
+      "billing_model_ref": "one_time_plus_maintenance",	      (
+      "cost": {						      (
+        "csc_marginal": 26750,				      (
+        "cfa_proportional": 1452,			      (
+        "csc_total": 28202				      (
+      },						      (
+      "price": {					      (
+        "current": 28000,				      (
+        "recommended": 28000,				      (
+        "validated": 28000,				      (
+        "setup_onetime": 50000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": -1,				      (
+        "current_abs": -202,				      (
+        "note": "breakeven_marginal_Y1",		      (
+        "validated_abs": -202,				      (
+        "validated_pct": -0.7				      (
+      }							      (
+    },							      (
+    "beta_medio_y2": {					      (
+      "technical_name": "Beta-Medio Y2+",		      (
+      "commercial_name": "NeoGov Saude · Hospital Medio — Rec (
+      "cluster_family": "beta_saude",			      (
+      "buyer": "Hospitais 100-300 leitos · ano 2+",	      (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P4",						      (
+        "P5"						      (
+      ],						      (
+      "billing_model_ref": "subscription_premium_tier",	      (
+      "cost": {						      (
+        "csc_marginal": 18250,				      (
+        "cfa_proportional": 1452,			      (
+        "csc_total": 19702				      (
+      },						      (
+      "price": {					      (
+        "current": 28000,				      (
+        "recommended": 28000,				      (
+        "validated": 28000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 30,				      (
+        "current_abs": 8298,				      (
+        "validated_abs": 8298,				      (
+        "validated_pct": 29.6				      (
+      }							      (
+    },							      (
+    "beta_grande_y1": {					      (
+      "technical_name": "Beta-Grande Y1",		      (
+      "commercial_name": "NeoGov Saude · Hospital Grande — Im (
+      "cluster_family": "beta_saude",			      (
+      "buyer": "Hospitais >300 leitos · ano 1",		      (
+      "bundle": [					      (
+        "P1",						      (
+        "P2",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P4",						      (
+        "P5"						      (
+      ],						      (
+      "billing_model_ref": "one_time_plus_maintenance",	      (
+      "cost": {						      (
+        "csc_marginal": 50000,				      (
+        "cfa_proportional": 2354,			      (
+        "csc_total": 52354				      (
+      },						      (
+      "price": {					      (
+        "current": 65000,				      (
+        "recommended": 65000,				      (
+        "validated": 65000,				      (
+        "setup_onetime": 100000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 19,				      (
+        "current_abs": 12646,				      (
+        "validated_abs": 12646,				      (
+        "validated_pct": 19.5				      (
+      }							      (
+    },							      (
+    "beta_grande_y2": {					      (
+      "technical_name": "Beta-Grande Y2+",		      (
+      "commercial_name": "NeoGov Saude · Hospital Grande — Re (
+      "cluster_family": "beta_saude",			      (
+      "buyer": "Hospitais >300 leitos · ano 2+",	      (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G",					      (
+        "P3_B2C",					      (
+        "P4",						      (
+        "P5"						      (
+      ],						      (
+      "billing_model_ref": "subscription_premium_tier",	      (
+      "cost": {						      (
+        "csc_marginal": 36500,				      (
+        "cfa_proportional": 2354,			      (
+        "csc_total": 38854				      (
+      },						      (
+      "price": {					      (
+        "current": 65000,				      (
+        "recommended": 65000,				      (
+        "validated": 65000				      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 40,				      (
+        "current_abs": 26146,				      (
+        "validated_abs": 26146,				      (
+        "validated_pct": 40.2				      (
+      }							      (
+    },							      (
+    "gamma_pequena": {					      (
+      "technical_name": "Gamma Pequena",		      (
+      "commercial_name": "NeoGov Educacao · Escola Pequena",  (
+      "cluster_family": "gamma_educacao",		      (
+      "buyer": "Escolas 50-200 alunos",			      (
+      "bundle": [					      (
+        "P1_basic"					      (
+      ],						      (
+      "billing_model_ref": "subscription_monthly",	      (
+      "cost": {						      (
+        "csc_marginal": 30,				      (
+        "cfa_proportional": 157,			      (
+        "csc_total": 187				      (
+      },						      (
+      "price": {					      (
+        "current": 800,					      (
+        "recommended": 597,				      (
+        "validated": 597,				      (
+        "recommendation_rationale": "volume_play_destroi_Conf (
+      },						      (
+      "margin": {					      (
+        "current_pct": 77,				      (
+        "current_abs": 613,				      (
+        "recommended_pct": 69,				      (
+        "recommended_abs": 410,				      (
+        "validated_abs": 410,				      (
+        "validated_pct": 68.7				      (
+      }							      (
+    },							      (
+    "gamma_media": {					      (
+      "technical_name": "Gamma Media",			      (
+      "commercial_name": "NeoGov Educacao · Escola Media",    (
+      "cluster_family": "gamma_educacao",		      (
+      "buyer": "Escolas 200-800 alunos",		      (
+      "bundle": [					      (
+        "P1",						      (
+        "P4"						      (
+      ],						      (
+      "billing_model_ref": "subscription_monthly",	      (
+      "cost": {						      (
+        "csc_marginal": 50,				      (
+        "cfa_proportional": 314,			      (
+        "csc_total": 364				      (
+      },						      (
+      "price": {					      (
+        "current": 2500,				      (
+        "recommended": 1797,				      (
+        "validated": 1797,				      (
+        "recommendation_rationale": "pricing_psicologico_atra (
+      },						      (
+      "margin": {					      (
+        "current_pct": 85,				      (
+        "current_abs": 2136,				      (
+        "recommended_pct": 80,				      (
+        "recommended_abs": 1433,			      (
+        "validated_abs": 1433,				      (
+        "validated_pct": 79.7				      (
+      }							      (
+    },							      (
+    "gamma_enterprise": {				      (
+      "technical_name": "Gamma Enterprise",		      (
+      "commercial_name": "NeoGov Educacao · Rede & Escola Gra (
+      "cluster_family": "gamma_educacao",		      (
+      "buyer": "Escolas/redes 800-1500 alunos",		      (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G_basico",				      (
+        "P4"						      (
+      ],						      (
+      "billing_model_ref": "subscription_monthly",	      (
+      "cost": {						      (
+        "csc_marginal": 550,				      (
+        "cfa_proportional": 667,			      (
+        "csc_total": 1217				      (
+      },						      (
+      "price": {					      (
+        "current": 5000,				      (
+        "recommended": 4500,				      (
+        "validated": 5000,				      (
+        "recommendation_rationale": "manter_competitividade"  (
+      },						      (
+      "margin": {					      (
+        "current_pct": 76,				      (
+        "current_abs": 3783,				      (
+        "recommended_pct": 73,				      (
+        "recommended_abs": 3283,			      (
+        "validated_abs": 3783,				      (
+        "validated_pct": 75.7				      (
+      }							      (
+    },							      (
+    "epsilon_dpo": {					      (
+      "technical_name": "Epsilon DPO 1 seat",		      (
+      "commercial_name": "NeoGov Profissional · DPO Individua (
+      "cluster_family": "epsilon_profissional",		      (
+      "buyer": "Advogado/DPO autonomo (1 licenca)",	      (
+      "bundle": [					      (
+        "P4"						      (
+      ],						      (
+      "billing_model_ref": "per_seat",			      (
+      "cost": {						      (
+        "csc_marginal": 30,				      (
+        "cfa_proportional": 196,			      (
+        "csc_total": 226				      (
+      },						      (
+      "price": {					      (
+        "current": 1500,				      (
+        "recommended": 997,				      (
+        "validated": 997,				      (
+        "recommendation_rationale": "vol_play_vence_iComp_R12 (
+      },						      (
+      "margin": {					      (
+        "current_pct": 85,				      (
+        "current_abs": 1274,				      (
+        "recommended_pct": 77,				      (
+        "recommended_abs": 771,				      (
+        "validated_abs": 771,				      (
+        "validated_pct": 77.3				      (
+      }							      (
+    },							      (
+    "epsilon_escritorio": {				      (
+      "technical_name": "Epsilon Escritorio (3 seats)",	      (
+      "commercial_name": "NeoGov Profissional · Escritorio DP (
+      "cluster_family": "epsilon_profissional",		      (
+      "buyer": "Escritorio boutique (3+ licencas)",	      (
+      "bundle": [					      (
+        "P4",						      (
+        "P3_B2C_light"					      (
+      ],						      (
+      "billing_model_ref": "per_seat",			      (
+      "cost": {						      (
+        "csc_marginal": 100,				      (
+        "cfa_proportional": 392,			      (
+        "csc_total": 492				      (
+      },						      (
+      "price": {					      (
+        "current": 3600,				      (
+        "recommended": 2391,				      (
+        "validated": 2391,				      (
+        "recommendation_rationale": "3_seats_x_R797_vol_disco (
+        "per_seat_current": 1200,			      (
+        "per_seat_recommended": 797			      (
+      },						      (
+      "margin": {					      (
+        "current_pct": 86,				      (
+        "current_abs": 3108,				      (
+        "recommended_pct": 79,				      (
+        "recommended_abs": 1899,			      (
+        "validated_abs": 1899,				      (
+        "validated_pct": 79.4				      (
+      }							      (
+    },							      (
+    "cartorio_classe1": {				      (
+      "technical_name": "Cartorio Classe I (pequeno)",	      (
+      "commercial_name": "NeoGov Cartorios · Serventia Classe (
+      "cluster_family": "omega_notarial",		      (
+      "business_segment": "b2b_notarial",		      (
+      "buyer": "Serventia pequena · baixa arrecadacao · 1-3 f (
+      "bundle": [					      (
+        "P1_basic",					      (
+        "P4"						      (
+      ],						      (
+      "billing_model_ref": "subscription_monthly",	      (
+      "legal_driver": "CNJ Prov.134/2022 art.6 + Prov.74/2018 (
+      "cost": {						      (
+        "csc_marginal": 60,				      (
+        "cfa_proportional": 196,			      (
+        "csc_total": 256				      (
+      },						      (
+      "price": {					      (
+        "current": null,				      (
+        "recommended": 897,				      (
+        "validated": 597,				      (
+        "recommendation_rationale": "analogo Epsilon DPO (P4) (
+        "correction_note": "Apendice N: era R$897 (FABRICADO  (
+      },						      (
+      "margin": {					      (
+        "validated_abs": 341,				      (
+        "validated_pct": 57				      (
+      },						      (
+      "fato_lastro": "arrecadacao Classe I <=R$200k/ano · pre (
+      "vvv": 0.55,					      (
+      "_audit_flag": {					      (
+        "field": "cost.csc_total",			      (
+        "value": 256,					      (
+        "origin": "ESTIMATIVA-ANALOGO epsilon_dpo R$226 +ajus (
+        "canonical_doc": "NENHUM (nao no Apendice I)",	      (
+        "resolved_by": "D001-NOVO-16 + D001-NOVO-18",	      (
+        "marker": "🟡 D-015",				      (
+        "D001_NOVO_16_resultado": "BLOQUEADO PARCIAL: arrecad (
+        "status": "FATO-PARCIAL · faixa-classe e o teto factu (
+      }							      (
+    },							      (
+    "cartorio_classe2": {				      (
+      "technical_name": "Cartorio Classe II (medio)",	      (
+      "commercial_name": "NeoGov Cartorios · Serventia Classe (
+      "cluster_family": "omega_notarial",		      (
+      "business_segment": "b2b_notarial",		      (
+      "buyer": "Serventia media · arrecadacao moderada · 4-10 (
+      "bundle": [					      (
+        "P1",						      (
+        "P3_B2G",					      (
+        "P4",						      (
+        "P5_leve"					      (
+      ],						      (
+      "billing_model_ref": "subscription_premium_tier",	      (
+      "legal_driver": "CNJ Prov.134/2022 + Prov.74/2018 Class (
+      "cost": {						      (
+        "csc_marginal": 1200,				      (
+        "cfa_proportional": 589,			      (
+        "csc_total": 1789				      (
+      },						      (
+      "price": {					      (
+        "current": null,				      (
+        "recommended": 4500,				      (
+        "validated": 2900,				      (
+        "recommendation_rationale": "analogo Gamma Enterprise (
+        "correction_note": "Apendice N: era R$4500 (FABRICADO (
+      },						      (
+      "margin": {					      (
+        "validated_abs": 1111,				      (
+        "validated_pct": 38				      (
+      },						      (
+      "fato_lastro": "preco R$34.800/ano = 3.5% de R$1M arrec (
+      "vvv": 0.55,					      (
+      "_audit_flag": {					      (
+        "field": "cost.csc_total",			      (
+        "value": 1789,					      (
+        "origin": "ESTIMATIVA-ANALOGO alfa_m_plus_dispensa pa (
+        "canonical_doc": "NENHUM",			      (
+        "resolved_by": "D001-NOVO-16 + D001-NOVO-18",	      (
+        "marker": "🟡 D-015",				      (
+        "D001_NOVO_16_resultado": "BLOQUEADO PARCIAL: arrecad (
+        "status": "FATO-PARCIAL · faixa-classe e o teto factu (
+      }							      (
+    },							      (
+    "cartorio_classe3": {				      |	    "cartorio_classe3_a": {
+      "technical_name": "Cartorio Classe III (grande)",	      |	      "commercial_name": "NeoGov Cartorios · Serventia Classe
+      "commercial_name": "NeoGov Cartorios · Serventia Classe |	      "segment": "b2b_notarial",
+      "cluster_family": "omega_notarial",		      <
+      "business_segment": "b2b_notarial",		      <
+      "buyer": "Serventia grande · alta arrecadacao · cartori <
+      "bundle": [					      <
+        "P1",						      <
+        "P3_B2G",					      <
+        "P3_B2C",					      <
+        "P4",						      <
+        "P5"						      <
+      ],						      <
+      "billing_model_ref": "subscription_premium_tier",	      (
+      "legal_driver": "CNJ Prov.134/2022 + Prov.74/2018 Class |	      "price": {
+							      >	        "validated": 5000,
+							      >	        "method": "Cap15 §15.4 · 3-4% faixa arrecad. R$1-3M/a
+							      >	      },
+      "cost": {						      (
+        "csc_marginal": 5500,				      |	        "csc_total": 1217,
+        "cfa_proportional": 1177,			      |	        "csc_origin": "ANÁLOGO gamma_enterprise (perfil uso m
+        "csc_total": 6677				      |	      },
+							      >	      "margin": {
+							      >	        "validated_pct": 76
+      },						      (
+							      >	      "arrecadacao_faixa": "R$1-3M/ano (Classe III baixa · ~5
+							      >	      "_audit_flag": {
+							      >	        "origin": "Cap 15 §15.4 sub-estratificação · resolve 
+							      >	        "D015": "ESTIMATIVA-ANÁLOGO · preço=3-4% faixa FATO ·
+							      >	        "lastro": "faixa arrecad. FATO CNJ Prov.74/2018 (Apên
+							      >	        "status": "sub-tier substitui cartorio_classe3 provis
+							      >	        "debito_vinculado": "D001-NOVO-17"
+							      >	      }
+							      >	    },
+							      >	    "cartorio_classe3_b": {
+							      >	      "commercial_name": "NeoGov Cartorios · Serventia Classe
+							      >	      "segment": "b2b_notarial",
+							      >	      "billing_model_ref": "subscription_premium_tier",
+      "price": {					      (
+        "current": null,				      |	        "validated": 15000,
+        "recommended": 18000,				      |	        "method": "Cap15 §15.4 · 3-4% faixa arrecad. R$3-10M/
+        "validated": 9000,				      |	      },
+        "recommendation_rationale": "analogo Alfa-M Enterpris |	      "cost": {
+        "correction_note": "Apendice N: era R$18000 (FABRICAD |	        "csc_total": 6677,
+							      >	        "csc_origin": "ANÁLOGO cartorio_classe3 provisório an
+      },						      (
+      "margin": {					      (
+        "validated_abs": 2323,				      |	        "validated_pct": 55
+        "validated_pct": null				      |	      },
+      },						      |	      "arrecadacao_faixa": "R$3-10M/ano (Classe III média · ~
+      "fato_lastro": "PROVISORIO · range arrecad. absurdo · D <
+      "vvv": 0.45,					      <
+      "flag": "SUB-ESTRATIFICAR-OBRIGATORIO",		      <
+      "_audit_flag": {					      (
+        "field": "cost.csc_total",			      |	        "origin": "Cap 15 §15.4 sub-estratificação · resolve 
+        "value": 6677,					      |	        "D015": "ESTIMATIVA-ANÁLOGO · preço=3-4% faixa FATO ·
+        "origin": "ESTIMATIVA-ANALOGO alfa_m_enterprise reduz |	        "lastro": "faixa arrecad. FATO CNJ Prov.74/2018 · D00
+        "canonical_doc": "NENHUM",			      |	        "status": "sub-tier · VVV 0.50 · arrecadação individu
+        "resolved_by": "D001-NOVO-16+17+18 (sub-estratificar) |	        "debito_vinculado": "D001-NOVO-17"
+        "marker": "🟡 D-015",				      |	      }
+        "D001_NOVO_16_resultado": "BLOQUEADO PARCIAL: arrecad |	    },
+        "status": "FATO-PARCIAL · faixa-classe e o teto factu |	    "cartorio_classe3_c": {
+							      >	      "commercial_name": "NeoGov Cartorios · Serventia Classe
+							      >	      "segment": "b2b_notarial",
+							      >	      "billing_model_ref": "enterprise_custom",
+							      >	      "price": {
+							      >	        "validated": 30000,
+							      >	        "method": "Cap15 §15.4 · piso custom · >R$10M/ano arr
+							      >	      },
+							      >	      "cost": {
+							      >	        "csc_total": 18727,
+							      >	        "csc_origin": "ANÁLOGO alfa_m_enterprise (perfil uso 
+							      >	      },
+							      >	      "margin": {
+							      >	        "validated_pct": 38
+							      >	      },
+							      >	      "arrecadacao_faixa": ">R$10M/ano (Classe III alta · ~10
+							      >	      "_audit_flag": {
+							      >	        "origin": "Cap 15 §15.4 sub-estratificação · resolve 
+							      >	        "D015": "ESTIMATIVA-ANÁLOGO · R$30.000 é PISO · contr
+							      >	        "lastro": "faixa FATO CNJ · cauda R$143M/sem document
+							      >	        "status": "sub-tier · price=piso · VVV 0.45 · custom 
+							      >	        "debito_vinculado": "D001-NOVO-17"
+      }							      (
+    }							      (
+  },							      (
+  "scenarios": {					      (
+    "_doc": "3 cenarios reais Wave 1+ (Apendice F §9 + Apendi (
+    "A_conservador_p25": {				      (
+      "probability": 0.25,				      (
+      "wave1_clients_m12": 12,				      (
+      "wave1_revenue_monthly": 65000,			      (
+      "arr_m36": 4500000,				      (
+      "global_success": "M60_marginal"			      (
+    },							      (
+    "B_normal_p50": {					      (
+      "probability": 0.5,				      (
+      "wave1_clients_m12": 25,				      (
+      "wave1_revenue_monthly": 200000,			      (
+      "arr_m36": 14000000,				      (
+      "global_success": "M36_achieved"			      (
+    },							      (
+    "C_otimista_p75": {					      (
+      "probability": 0.25,				      (
+      "wave1_clients_m12": 50,				      (
+      "wave1_revenue_monthly": 440000,			      (
+      "arr_m36": 28000000,				      (
+      "global_success": "M24_anticipated"		      (
+    },							      (
+    "expected_arr_m36_weighted": 14125000		      (
+  },							      (
+  "global_success_definition": {			      (
+    "_doc": "Ponto de sucesso global · 4 condicoes simultanea (
+    "conditions": {					      (
+      "arr_min_brl": 12000000,				      (
+      "margin_op_min_pct": 25,				      (
+      "ltv_cac_min": 3.0,				      (
+      "vvv_global_min": 0.92				      (
+    },							      (
+    "formula": "S(t) = (ARR>=12M) AND (M_op>=25%) AND (LTV/CA (
+    "realistic_target": "M48-60 (nao M36 · pos-adversarial)"  (
+  },							      (
+  "mix_wave1_p75": {					      (
+    "_doc": "Mix de referencia Wave 1 P75 (Apendice I §4.1 ·  (
+    "alfa_m_pro": 3,					      (
+    "alfa_m_plus_pregao": 2,				      (
+    "alfa_m_plus_dispensa": 3,				      (
+    "alfa_m_enterprise": 1,				      (
+    "gamma_pequena": 10,				      (
+    "gamma_media": 8,					      (
+    "gamma_enterprise": 3,				      (
+    "epsilon_escritorio": 1,				      (
+    "total_clients": 31,				      (
+    "total_abc_weight": 280,				      (
+    "cfa_brl_per_weight_unit": 39.24			      (
+  },							      (
+  "business_segments": {				      (
+    "_doc": "Agrupamento client-facing por tipo de negocio ·  (
+    "b2g_setor_publico": {				      (
+      "label": "B2G · Setor Público",			      (
+      "description_human": "Municipios, estados, orgaos feder (
+      "tiers": [					      (
+        "alfa_m_pro",					      (
+        "alfa_m_plus_pregao",				      (
+        "alfa_m_plus_dispensa",				      (
+        "alfa_m_enterprise",				      (
+        "alfa_fe"					      (
+      ]							      (
+    },							      (
+    "b2b_saude": {					      (
+      "label": "B2B · Saúde",				      (
+      "description_human": "Hospitais 3 portes · dados sensiv (
+      "tiers": [					      (
+        "beta_pequeno_y1",				      (
+        "beta_pequeno_y2",				      (
+        "beta_medio_y1",				      (
+        "beta_medio_y2",				      (
+        "beta_grande_y1",				      (
+        "beta_grande_y2"				      (
+      ]							      (
+    },							      (
+    "b2b_educacao": {					      (
+      "label": "B2B · Educação",			      (
+      "description_human": "Escolas 3 portes · ECA Digital +  (
+      "tiers": [					      (
+        "gamma_pequena",				      (
+        "gamma_media",					      (
+        "gamma_enterprise"				      (
+      ]							      (
+    },							      (
+    "b2b_profissional": {				      (
+      "label": "B2B · Profissional (DPO)",		      (
+      "description_human": "Advogados/escritorios DPO · per s (
+      "tiers": [					      (
+        "epsilon_dpo",					      (
+        "epsilon_escritorio"				      (
+      ]							      (
+    },							      (
+    "b2b_notarial": {					      (
+      "label": "B2B · Notarial (Cartórios)",		      (
+      "description_human": "Serventias extrajudiciais · CNJ P (
+      "tiers": [					      (
+        "cartorio_classe1",				      (
+        "cartorio_classe2",				      (
+        "cartorio_classe3"				      |	        "cartorio_classe3_a",
+							      >	        "cartorio_classe3_b",
+							      >	        "cartorio_classe3_c"
+      ],						      (
+      "relevance": "ALTA · ~12.000+ serventias BR · Prov.213  (
+      "serventias_total_fato": "13.567 (CNJ Justiça Aberta ·  (
+      "arrecadacao_total_fato": "R$23,4bi total 2021 (cartori |	      "arrecadacao_total_fato": "R$23,4bi total 2021 (cartori
+							      >	      "classe3_sub_estratificacao": {
+							      >	        "origem": "Cap 15 §15.4 · resolve D17 (range R$1M-143
+							      >	        "antes": "cartorio_classe3 único R$9.000 provisório (
+							      >	        "depois": "3 sub-tiers III-A/B/C por faixa de arrecad
+							      >	        "historico_provisorio": {
+							      >	          "technical_name": "Cartorio Classe III (grande)",
+							      >	          "commercial_name": "NeoGov Cartorios · Serventia Cl
+							      >	          "cluster_family": "omega_notarial",
+							      >	          "business_segment": "b2b_notarial",
+							      >	          "buyer": "Serventia grande · alta arrecadacao · car
+							      >	          "bundle": [
+							      >	            "P1",
+							      >	            "P3_B2G",
+							      >	            "P3_B2C",
+							      >	            "P4",
+							      >	            "P5"
+							      >	          ],
+							      >	          "billing_model_ref": "subscription_premium_tier",
+							      >	          "legal_driver": "CNJ Prov.134/2022 + Prov.74/2018 C
+							      >	          "cost": {
+							      >	            "csc_marginal": 5500,
+							      >	            "cfa_proportional": 1177,
+							      >	            "csc_total": 6677
+							      >	          },
+							      >	          "price": {
+							      >	            "current": null,
+							      >	            "recommended": 18000,
+							      >	            "validated": 9000,
+							      >	            "recommendation_rationale": "analogo Alfa-M Enter
+							      >	            "correction_note": "Apendice N: era R$18000 (FABR
+							      >	          },
+							      >	          "margin": {
+							      >	            "validated_abs": 2323,
+							      >	            "validated_pct": null
+							      >	          },
+							      >	          "fato_lastro": "PROVISORIO · range arrecad. absurdo
+							      >	          "vvv": 0.45,
+							      >	          "flag": "SUB-ESTRATIFICAR-OBRIGATORIO",
+							      >	          "_audit_flag": {
+							      >	            "field": "cost.csc_total",
+							      >	            "value": 6677,
+							      >	            "origin": "ESTIMATIVA-ANALOGO alfa_m_enterprise r
+							      >	            "canonical_doc": "NENHUM",
+							      >	            "resolved_by": "D001-NOVO-16+17+18 (sub-estratifi
+							      >	            "marker": "🟡 D-015",
+							      >	            "D001_NOVO_16_resultado": "BLOQUEADO PARCIAL: arr
+							      >	            "status": "FATO-PARCIAL · faixa-classe e o teto f
+							      >	          }
+							      >	        }
+							      >	      }
+    }							      (
+  }							      (
+}							      (
