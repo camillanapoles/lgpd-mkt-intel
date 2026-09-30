@@ -1,0 +1,14 @@
+.claude/
+/node_modules/
+/dist/
+/package-lock.json
+app/node_modules/
+app/dist/
+app/.vite/
+app/package-lock.json
+*.log
+.DS_Store
+.env.local
+.env.*.local
+skills/ENGINE-MODULES/
+skills/SHUN_TZU-ART_OF_WAR/
