@@ -1,0 +1,1022 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generated_at": "2026-05-11T00:00:00Z",
+    "sources": ["BSC-01", "BSC-02", "BSC-03", "FDC-U", "VVV"],
+    "vvv_global": 0.52
+  },
+  "company": {
+    "name": "NeoGov",
+    "description": "Plataforma de middleware LGPD com ETL contínuo para dados pessoais sensíveis",
+    "core_product": "ETL/Middleware de Dados LGPD",
+    "value_proposition": "Infraestrutura crítica de compliance que processa dados pessoais continuamente via API/ETL, criando switching cost alto e monitoramento em tempo real",
+    "positioning": "Infraestrutura crítica de compliance, não ferramenta SaaS de checklist"
+  },
+  "diagnostic": {
+    "sun_tzu": {
+      "dao": 7,
+      "tian": 9,
+      "di": 8,
+      "jiang": 5,
+      "fa": 3,
+      "total": 6.4,
+      "interpretation": "Timing e terreno excepcionais, mas comando e metodo criticos"
+    },
+    "swot": {
+      "forces": [
+        "Dominio juridico LGPD (Simone)",
+        "Capital politico (Wilton/FNDE)",
+        "Metodologia 4 fases validada",
+        "Acesso a Associacoes Municipais",
+        "Multi-disciplinar (juri+tech)",
+        "Status Instituto (autoridade)",
+        "Cases reais em setor publico"
+      ],
+      "weaknesses": [
+        "Modelo fee-for-service nao escala",
+        "Plataforma status desconhecido",
+        "Sem unit economics medidos",
+        "Sem CRM/pipeline",
+        "Sem ICP definido por cluster",
+        "Comunicacao interna fragmentada",
+        "Fratura lideranca nao resolvida"
+      ],
+      "opportunities": [
+        "5.570 municipios obrigados",
+        "~70k+ privados regulamentados sem player dominante",
+        "ANPD prioridade saude+criancas 2025-2027",
+        "ECA Digital (Lei 15.211/2025) vigente mar/2026 cria urgencia real",
+        "Blue ocean confirmado em educacao privada - zero SaaS dedicado",
+        "Canal sindical via federacao (unico)"
+      ],
+      "threats": [
+        "Confidata/Be Compliance/Safetyfyi ja atuam healthcare",
+        "Big4 productizar LGPD",
+        "Saturacao se demorar >12 meses",
+        "Mudanca politica reduz orcamentos",
+        "Concorrente levantar R$20M+",
+        "Conflitos internos paralisarem"
+      ]
+    }
+  },
+  "clusters": [
+    {
+      "id": "alfa",
+      "name": "Administração Pública",
+      "emoji": "A",
+      "description": "Entes públicos com decisor político, aquisição via licitação, ciclo longo, dor reputacional",
+      "universe_size": 12500,
+      "universe_unit": "entes",
+      "wave": 1,
+      "fdc_u_score": 4.92,
+      "fdc_u_rank": 4,
+      "behavior": {
+        "decisor": "Político eleito + corpo técnico",
+        "acquisition": "Licitação (Lei 14.133/21)",
+        "sales_cycle_days": [180, 540],
+        "financial_capacity": "Variável - depende do porte do ente",
+        "lgpd_pain": "Reputacional + responsabilização pessoal (sem multa pecuniária)"
+      },
+      "product_layers": {
+        "platform": {
+          "enabled": true,
+          "pricing": "Incluso no contrato"
+        },
+        "etl_middleware": {
+          "enabled": true,
+          "is_core": false,
+          "pricing": "R$2-5k/mês + setup R$20-40k"
+        },
+        "consulting": {
+          "enabled": true,
+          "pricing": "R$400-600k/contrato anual"
+        },
+        "channel": {
+          "enabled": true,
+          "pricing": "Revenue share 15-20% via Assoc. Municipios"
+        }
+      },
+      "pricing": {
+        "subscription_base": [5000, 10000],
+        "setup_fee": [50000, 100000],
+        "etl_monthly": [2000, 5000],
+        "total_year1": [170000, 340000],
+        "currency": "BRL"
+      },
+      "margins": {
+        "gross": {
+          "pessimistic": 0.40,
+          "realistic": 0.48,
+          "optimistic": 0.55
+        },
+        "net": 0.30
+      },
+      "unit_economics": {
+        "cac": [150000, 300000],
+        "ltv": [540000, 900000],
+        "ltv_cac_ratio": 3.0,
+        "payback_months": 13.3
+      },
+      "competition": ["LGPD Faça", "LGPD Tech", "TOW", "Big4"],
+      "etl_systems": ["e-Cidade", "TCE", "sistemas municipais"],
+      "targets": {
+        "m12_clients": 8,
+        "m12_arr": 500000
+      }
+    },
+    {
+      "id": "beta",
+      "name": "Saúde Privada",
+      "emoji": "B",
+      "description": "Organizações privadas de saúde com dados sensíveis, decisor técnico-administrativo",
+      "universe_size": 40000,
+      "universe_unit": "estabelecimentos",
+      "wave": 2,
+      "fdc_u_score": 7.28,
+      "fdc_u_rank": 2,
+      "behavior": {
+        "decisor": "Diretor Administrativo + Diretor Médico + DPO",
+        "acquisition": "Contratação direta com comitê executivo",
+        "sales_cycle_days": [45, 90],
+        "financial_capacity": "Média a alta",
+        "lgpd_pain": "Alta - dado sensível + sanção até 2% faturamento + risco credenciamento"
+      },
+      "product_layers": {
+        "platform": {
+          "enabled": true,
+          "pricing": "R$2-5k/mês"
+        },
+        "etl_middleware": {
+          "enabled": true,
+          "is_core": true,
+          "pricing": "R$3-8k/mês (usage) + setup R$30-60k"
+        },
+        "consulting": {
+          "enabled": true,
+          "pricing": "R$150-300k projeto"
+        },
+        "channel": {
+          "enabled": true,
+          "pricing": "Revenue share 15% via ANAHP/FBHC"
+        }
+      },
+      "pricing": {
+        "subscription_base": [2000, 5000],
+        "setup_fee": [30000, 60000],
+        "etl_monthly": [3000, 8000],
+        "total_year1": [114000, 264000],
+        "currency": "BRL"
+      },
+      "margins": {
+        "gross": {
+          "pessimistic": 0.55,
+          "realistic": 0.65,
+          "optimistic": 0.75
+        },
+        "net": 0.55
+      },
+      "unit_economics": {
+        "cac": [80000, 150000],
+        "ltv": [720000, 1008000],
+        "ltv_cac_ratio": 6.7,
+        "payback_months": 8.3
+      },
+      "competition": ["Confidata", "Be Compliance", "Safetyfyi", "OneTrust"],
+      "etl_systems": ["MV", "Tasy", "Soul MV"],
+      "targets": {
+        "m12_clients": 15,
+        "m12_arr": 800000
+      }
+    },
+    {
+      "id": "gamma",
+      "name": "Educação Privada",
+      "emoji": "G",
+      "description": "Escolas privadas com dados de menores - oceano azul confirmado",
+      "universe_size": 42491,
+      "universe_unit": "escolas",
+      "wave": 2,
+      "fdc_u_score": 9.00,
+      "fdc_u_rank": 1,
+      "behavior": {
+        "decisor": "Diretor/Mantenedor único",
+        "acquisition": "Direta, SaaS self-service",
+        "sales_cycle_days": [15, 45],
+        "financial_capacity": "Média-baixa a média",
+        "lgpd_pain": "Alta - dado de menor + ECA Digital mar/2026 + reação familiar"
+      },
+      "product_layers": {
+        "platform": {
+          "enabled": true,
+          "pricing": "R$500-2k/mês por escola"
+        },
+        "etl_middleware": {
+          "enabled": true,
+          "is_core": true,
+          "pricing": "R$1-3k/mês + setup R$10-25k"
+        },
+        "consulting": {
+          "enabled": true,
+          "pricing": "R$5-15k setup + R$1.5-3k/mês DPO"
+        },
+        "channel": {
+          "enabled": true,
+          "pricing": "R$200-500/escola/mês para federacao"
+        }
+      },
+      "pricing": {
+        "subscription_base": [800, 1500],
+        "setup_fee": [10000, 20000],
+        "etl_monthly": [1000, 2000],
+        "total_year1": [32000, 62000],
+        "currency": "BRL"
+      },
+      "margins": {
+        "gross": {
+          "pessimistic": 0.70,
+          "realistic": 0.78,
+          "optimistic": 0.85
+        },
+        "net": 0.70
+      },
+      "unit_economics": {
+        "cac": [2000, 5000],
+        "ltv": [90000, 120000],
+        "ltv_cac_ratio": 24.0,
+        "payback_months": 1.2
+      },
+      "competition": [],
+      "etl_systems": ["Class", "Phonexao", "Opyun", "sistemas escolares"],
+      "targets": {
+        "m12_clients": 50,
+        "m12_arr": 1200000
+      }
+    },
+    {
+      "id": "delta",
+      "name": "Associativos",
+      "emoji": "D",
+      "description": "Entidades associativas com canal one-to-many via federação",
+      "universe_size": 50000,
+      "universe_unit": "entidades",
+      "wave": 3,
+      "fdc_u_score": 6.92,
+      "fdc_u_rank": 3,
+      "behavior": {
+        "decisor": "Presidência eleita + diretoria executiva",
+        "acquisition": "Convênio guarda-chuva federação",
+        "sales_cycle_days": [60, 90],
+        "financial_capacity": "Baixa a média individualmente, escalável via canal",
+        "lgpd_pain": "Média a alta - base de filiados é dado sensível"
+      },
+      "product_layers": {
+        "platform": {
+          "enabled": true,
+          "pricing": "Incluso na assinatura federacao"
+        },
+        "etl_middleware": {
+          "enabled": true,
+          "is_core": false,
+          "pricing": "Opcional - revenue share"
+        },
+        "consulting": {
+          "enabled": true,
+          "pricing": "R$50-100k por convenio"
+        },
+        "channel": {
+          "enabled": true,
+          "is_core": true,
+          "pricing": "R$30-80/membro/mês"
+        }
+      },
+      "pricing": {
+        "subscription_base": [30, 80],
+        "setup_fee": [50000, 100000],
+        "etl_monthly": [0, 0],
+        "total_year1": [360, 960],
+        "currency": "BRL",
+        "per_member": true
+      },
+      "margins": {
+        "gross": {
+          "pessimistic": 0.60,
+          "realistic": 0.68,
+          "optimistic": 0.75
+        },
+        "net": 0.40
+      },
+      "unit_economics": {
+        "cac": [50000, 100000],
+        "ltv": [72000, 108000],
+        "ltv_cac_ratio": 1.4,
+        "payback_months": 25
+      },
+      "competition": [],
+      "etl_systems": ["sistemas federativos"],
+      "targets": {
+        "m12_clients": 3,
+        "m12_arr": 400000
+      }
+    },
+    {
+      "id": "epsilon",
+      "name": "Profissionais Liberais",
+      "emoji": "E",
+      "description": "Pequenos prestadores - SaaS self-service commodity",
+      "universe_size": 500000,
+      "universe_unit": "prestadores",
+      "wave": 4,
+      "fdc_u_score": 4.32,
+      "fdc_u_rank": 6,
+      "behavior": {
+        "decisor": "Proprietário único",
+        "acquisition": "SaaS self-service",
+        "sales_cycle_days": [7, 30],
+        "financial_capacity": "Baixa - sensível a preço",
+        "lgpd_pain": "Variável - emergente, subestimada"
+      },
+      "product_layers": {
+        "platform": {
+          "enabled": true,
+          "is_core": true,
+          "pricing": "R$199-499/mês"
+        },
+        "etl_middleware": {
+          "enabled": false,
+          "is_core": false,
+          "pricing": "N/A"
+        },
+        "consulting": {
+          "enabled": true,
+          "pricing": "Chatbot + templates inclusos"
+        },
+        "channel": {
+          "enabled": true,
+          "pricing": "R$99-199/mês via conselhos"
+        }
+      },
+      "pricing": {
+        "subscription_base": [199, 499],
+        "setup_fee": [0, 500],
+        "etl_monthly": [0, 0],
+        "total_year1": [2400, 6000],
+        "currency": "BRL"
+      },
+      "margins": {
+        "gross": {
+          "pessimistic": 0.50,
+          "realistic": 0.55,
+          "optimistic": 0.60
+        },
+        "net": 0.35
+      },
+      "unit_economics": {
+        "cac": [300, 800],
+        "ltv": [4000, 8000],
+        "ltv_cac_ratio": 7.0,
+        "payback_months": 1.4
+      },
+      "competition": ["LGPD Cloud", "PROTEGON"],
+      "etl_systems": [],
+      "targets": {
+        "m12_clients": 500,
+        "m12_arr": 200000
+      }
+    },
+    {
+      "id": "zeta",
+      "name": "B2B Geral",
+      "emoji": "Z",
+      "description": "Empresas médias e grandes não-reguladas - território Big4",
+      "universe_size": 61200,
+      "universe_unit": "empresas",
+      "wave": 5,
+      "fdc_u_score": 4.46,
+      "fdc_u_rank": 5,
+      "behavior": {
+        "decisor": "CFO + Diretor Jurídico + Diretor TI",
+        "acquisition": "RFP corporativo",
+        "sales_cycle_days": [60, 180],
+        "financial_capacity": "Média a alta",
+        "lgpd_pain": "Variável - compete com outras prioridades"
+      },
+      "product_layers": {
+        "platform": {
+          "enabled": true,
+          "pricing": "R$3-10k/mês"
+        },
+        "etl_middleware": {
+          "enabled": true,
+          "is_core": false,
+          "pricing": "Setup + mensal (depende ERP)"
+        },
+        "consulting": {
+          "enabled": true,
+          "pricing": "R$200-500k"
+        },
+        "channel": {
+          "enabled": true,
+          "pricing": "Revenue share"
+        }
+      },
+      "pricing": {
+        "subscription_base": [3000, 10000],
+        "setup_fee": [30000, 80000],
+        "etl_monthly": [2000, 5000],
+        "total_year1": [126000, 260000],
+        "currency": "BRL"
+      },
+      "margins": {
+        "gross": {
+          "pessimistic": 0.45,
+          "realistic": 0.50,
+          "optimistic": 0.60
+        },
+        "net": 0.20
+      },
+      "unit_economics": {
+        "cac": [100000, 200000],
+        "ltv": [540000, 900000],
+        "ltv_cac_ratio": 4.5,
+        "payback_months": 10
+      },
+      "competition": ["Big4 (KPMG, Deloitte, EY, PwC)"],
+      "etl_systems": ["ERP genéricos"],
+      "targets": {
+        "m12_clients": 10,
+        "m12_arr": 300000
+      }
+    }
+  ],
+  "fdc_u": {
+    "dimensions": [
+      {
+        "id": "timing",
+        "name": "Timing/Urgência",
+        "weight": 0.12,
+        "function": "+"
+      },
+      {
+        "id": "margin",
+        "name": "Margem Bruta",
+        "weight": 0.10,
+        "function": "+"
+      },
+      {
+        "id": "moat",
+        "name": "Moat/Defensabilidade",
+        "weight": 0.12,
+        "function": "+"
+      },
+      {
+        "id": "lgpd_pain",
+        "name": "Dor LGPD",
+        "weight": 0.10,
+        "function": "+"
+      },
+      {
+        "id": "sales_cycle",
+        "name": "Ciclo de Venda",
+        "weight": 0.08,
+        "function": "-"
+      },
+      {
+        "id": "scale_tam",
+        "name": "Escala/TAM",
+        "weight": 0.08,
+        "function": "+"
+      },
+      {
+        "id": "competition",
+        "name": "Competição",
+        "weight": 0.10,
+        "function": "-"
+      },
+      {
+        "id": "etl_fit",
+        "name": "Fit com ETL/Middleware",
+        "weight": 0.12,
+        "function": "+"
+      },
+      {
+        "id": "methodology_fit",
+        "name": "Fit Metodologia Atual",
+        "weight": 0.08,
+        "function": "+"
+      },
+      {
+        "id": "disruption",
+        "name": "Potencial Disrupção",
+        "weight": 0.10,
+        "function": "+"
+      }
+    ],
+    "scores": {
+      "alfa": {
+        "timing": 5,
+        "margin": 4,
+        "moat": 6,
+        "lgpd_pain": 5,
+        "sales_cycle": 3,
+        "scale_tam": 4,
+        "competition": 4,
+        "etl_fit": 6,
+        "methodology_fit": 9,
+        "disruption": 3,
+        "total": 4.92
+      },
+      "beta": {
+        "timing": 8,
+        "margin": 6,
+        "moat": 8,
+        "lgpd_pain": 9,
+        "sales_cycle": 6,
+        "scale_tam": 7,
+        "competition": 4,
+        "etl_fit": 9,
+        "methodology_fit": 8,
+        "disruption": 7,
+        "total": 7.28
+      },
+      "gamma": {
+        "timing": 10,
+        "margin": 9,
+        "moat": 9,
+        "lgpd_pain": 9,
+        "sales_cycle": 8,
+        "scale_tam": 9,
+        "competition": 10,
+        "etl_fit": 9,
+        "methodology_fit": 6,
+        "disruption": 10,
+        "total": 9.00
+      },
+      "delta": {
+        "timing": 6,
+        "margin": 7,
+        "moat": 7,
+        "lgpd_pain": 7,
+        "sales_cycle": 6,
+        "scale_tam": 8,
+        "competition": 8,
+        "etl_fit": 7,
+        "methodology_fit": 5,
+        "disruption": 8,
+        "total": 6.92
+      },
+      "epsilon": {
+        "timing": 4,
+        "margin": 6,
+        "moat": 3,
+        "lgpd_pain": 4,
+        "sales_cycle": 8,
+        "scale_tam": 10,
+        "competition": 3,
+        "etl_fit": 0,
+        "methodology_fit": 3,
+        "disruption": 5,
+        "total": 4.32
+      },
+      "zeta": {
+        "timing": 5,
+        "margin": 5,
+        "moat": 4,
+        "lgpd_pain": 5,
+        "sales_cycle": 4,
+        "scale_tam": 7,
+        "competition": 2,
+        "etl_fit": 5,
+        "methodology_fit": 5,
+        "disruption": 3,
+        "total": 4.46
+      }
+    },
+    "ranking": [
+      {
+        "rank": 1,
+        "cluster_id": "gamma",
+        "score": 9.00
+      },
+      {
+        "rank": 2,
+        "cluster_id": "beta",
+        "score": 7.28
+      },
+      {
+        "rank": 3,
+        "cluster_id": "delta",
+        "score": 6.92
+      },
+      {
+        "rank": 4,
+        "cluster_id": "alfa",
+        "score": 4.92
+      },
+      {
+        "rank": 5,
+        "cluster_id": "zeta",
+        "score": 4.46
+      },
+      {
+        "rank": 6,
+        "cluster_id": "epsilon",
+        "score": 4.32
+      }
+    ]
+  },
+  "roadmap": {
+    "waves": [
+      {
+        "id": 1,
+        "name": "Alfa Motor de Caixa",
+        "start_month": 1,
+        "end_month": 12,
+        "cluster_ids": ["alfa"],
+        "investment": [250000, 350000],
+        "target_arr": [400000, 800000],
+        "milestones": [
+          {
+            "month": 1,
+            "description": "General definido + plataforma baseline"
+          },
+          {
+            "month": 2,
+            "description": "MVP plataforma funcional"
+          },
+          {
+            "month": 3,
+            "description": "CRM + metricas + pilotos selecionados"
+          },
+          {
+            "month": 12,
+            "description": "8 clientes Alfa ativos"
+          }
+        ]
+      },
+      {
+        "id": "2a",
+        "name": "Beta Spearhead",
+        "start_month": 3,
+        "end_month": 12,
+        "cluster_ids": ["beta"],
+        "investment": [700000, 900000],
+        "target_arr": [500000, 1500000],
+        "milestones": [
+          {
+            "month": 3,
+            "description": "3-5 hospitais piloto selecionados"
+          },
+          {
+            "month": 4,
+            "description": "Primeiro dado extraído MV (ETL)"
+          },
+          {
+            "month": 5,
+            "description": "Piloto Beta #1 go-live"
+          },
+          {
+            "month": 6,
+            "description": "3 pilotos Beta validados"
+          },
+          {
+            "month": 12,
+            "description": "10-15 clientes Beta + ARR >R$500k"
+          }
+        ]
+      },
+      {
+        "id": "2b",
+        "name": "Gamma Oceano Azul",
+        "start_month": 4,
+        "end_month": 18,
+        "cluster_ids": ["gamma"],
+        "investment": [500000, 700000],
+        "target_arr": [600000, 2400000],
+        "milestones": [
+          {
+            "month": 4,
+            "description": "Pesquisa sistemas escolares + requisitos ECA Digital"
+          },
+          {
+            "month": 5,
+            "description": "PoC integração sistema escolar #1"
+          },
+          {
+            "month": 6,
+            "description": "3 pilotos Gamma validados"
+          },
+          {
+            "month": 9,
+            "description": "Primeiros clientes Gamma pagando"
+          },
+          {
+            "month": 12,
+            "description": "20 escolas Gamma + ARR >R$200k"
+          },
+          {
+            "month": 18,
+            "description": "50-100 escolas Gamma + ARR >R$600k"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Delta Associativos",
+        "start_month": 12,
+        "end_month": 24,
+        "cluster_ids": ["delta"],
+        "investment": [400000, 600000],
+        "target_arr": [400000, 1200000],
+        "milestones": [
+          {
+            "month": 12,
+            "description": "5 federações no pipeline"
+          },
+          {
+            "month": 15,
+            "description": "Convênio assinado + piloto 10 membros"
+          },
+          {
+            "month": 18,
+            "description": "1 federação ativa"
+          },
+          {
+            "month": 24,
+            "description": "3-5 federações + 500-1.000 membros"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Epsilon Self-Service",
+        "start_month": 18,
+        "end_month": 30,
+        "cluster_ids": ["epsilon"],
+        "investment": [350000, 450000],
+        "target_arr": [200000, 500000],
+        "milestones": [
+          {
+            "month": 18,
+            "description": "Landing page específica + funil automatizado"
+          },
+          {
+            "month": 21,
+            "description": "10 assinaturas/mês"
+          },
+          {
+            "month": 30,
+            "description": "500 assinantes"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Zeta B2B Reativo",
+        "start_month": 24,
+        "end_month": 36,
+        "cluster_ids": ["zeta"],
+        "investment": [200000, 300000],
+        "target_arr": [300000, 800000],
+        "milestones": [
+          {
+            "month": 24,
+            "description": "Posicionamento vs Big4 + deck mid-market"
+          },
+          {
+            "month": 30,
+            "description": "1 contrato fechado"
+          },
+          {
+            "month": 36,
+            "description": "10 empresas Zeta"
+          }
+        ]
+      }
+    ],
+    "total_investment_36m": [2800000, 5400000],
+    "breakeven_month": [18, 24]
+  },
+  "kpis": [
+    {
+      "month": 6,
+      "arr": [300000, 600000],
+      "active_clients": [8, 15],
+      "mrr": [30000, 70000]
+    },
+    {
+      "month": 12,
+      "arr": [700000, 1500000],
+      "active_clients": [25, 45],
+      "mrr": [60000, 130000]
+    },
+    {
+      "month": 18,
+      "arr": [1500000, 3000000],
+      "active_clients": [60, 120],
+      "mrr": [130000, 260000]
+    },
+    {
+      "month": 24,
+      "arr": [2400000, 4800000],
+      "active_clients": [150, 300],
+      "mrr": [200000, 400000]
+    },
+    {
+      "month": 36,
+      "arr": [4000000, 8000000],
+      "active_clients": [500, 1000],
+      "mrr": [350000, 700000]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "description": "Plataforma não funcional quando ETL piloto for lançado",
+      "probability": "ALTA",
+      "impact": "CRITICAL",
+      "mitigation": "Camila levanta em 5 dias; MVP Django/Flask em 8 semanas",
+      "depth_alert": true
+    },
+    {
+      "id": "R2",
+      "description": "Integração ETL MV/Tasy mais complexa que estimado",
+      "probability": "MEDIA",
+      "impact": "MEDIUM",
+      "mitigation": "PoC MV 4 semanas; partner healthcare; MVP 1 sistema",
+      "depth_alert": false
+    },
+    {
+      "id": "R3",
+      "description": "Pricing Gamma muito alto para escolas (recovering pós-pandemia)",
+      "probability": "MEDIA",
+      "impact": "HIGH",
+      "mitigation": "Tier entry R$500-800/mês + pricing progressivo",
+      "depth_alert": false
+    },
+    {
+      "id": "R4",
+      "description": "Confidata lançar módulo educação antes de NeoGov",
+      "probability": "BAIXA",
+      "impact": "HIGH",
+      "mitigation": "Velocidade Wave 2B paralelo com Beta",
+      "depth_alert": false
+    },
+    {
+      "id": "R5",
+      "description": "Cliente não ver valor em ETL (preferem SaaS básico)",
+      "probability": "MEDIA",
+      "impact": "MEDIUM",
+      "mitigation": "Freemium ETL limitado; upsell com dados reais",
+      "depth_alert": false
+    },
+    {
+      "id": "R6",
+      "description": "Conflitos internos paralisarem decisões",
+      "probability": "MEDIA",
+      "impact": "CRITICAL",
+      "mitigation": "General com veto power; comite execução semanal",
+      "depth_alert": true
+    }
+  ],
+  "vvv_gaps": [
+    {
+      "id": "GAP1",
+      "description": "Pricing competidores healthcare (Confidata, Be Compliance, Safetyfyi)",
+      "vvv_score": 0.85,
+      "classification": "ROBUSTO",
+      "action_required": "Mystery shopping obrigatório - Confidata tem preços públicos (R$497-3.497/mês), globais não"
+    },
+    {
+      "id": "GAP2",
+      "description": "Custo técnico real de integração ETL com sistemas healthcare (MV, Tasy, Soul MV)",
+      "vvv_score": 0.75,
+      "classification": "MODERADO",
+      "action_required": "APIs bem documentadas (FACT-T1); custos são inferência - R$50-150k projeto típico"
+    },
+    {
+      "id": "GAP3",
+      "description": "Benchmark margens SaaS compliance/privacy",
+      "vvv_score": 0.90,
+      "classification": "EXCELENTE",
+      "action_required": "Estimativas originais 70-85% (SaaS) e 40-55% (consultoria) VALIDADAS por mercado Brasil"
+    },
+    {
+      "id": "GAP4",
+      "description": "Estado real da plataforma LGPD Web + Drive",
+      "vvv_score": 0.00,
+      "classification": "CRITICAL",
+      "action_required": "Camila deve levantar em 5 dias - CRITICAL para Waves 2+"
+    },
+    {
+      "id": "GAP5",
+      "description": "WTP (Willingness To Pay) Gamma - escolas privadas",
+      "vvv_score": 0.50,
+      "classification": "SPECULATION",
+      "action_required": "Pesquisa primária com 10-20 escolas para validar pricing"
+    },
+    {
+      "id": "GAP6",
+      "description": "Validação modelo federacao sindical (Delta)",
+      "vvv_score": 0.50,
+      "classification": "SPECULATION",
+      "action_required": "Contato federacionais para validar interesse em convênio"
+    }
+  ],
+  "action_plan": {
+    "days_30": [
+      "Definir General/CEO interino",
+      "Camila levanta estado real plataforma",
+      "Simone levanta pipeline atual",
+      "Criar workspace único",
+      "Implantar CRM",
+      "Contratar dev contractor",
+      "Criar pricing draft",
+      "Instituir comite execução semanal"
+    ],
+    "days_60": [
+      "MVP multi-tenant deployed",
+      "Pricing tabelado aprovado",
+      "Selecionar pilotos Beta",
+      "Mapear sistemas pilotos",
+      "Criar deck vendas Beta",
+      "Pesquisa sistemas escolares Gamma",
+      "Mapear requisitos ECA Digital"
+    ],
+    "days_90": [
+      "PoC MV funcionando",
+      "3 pilotos Beta carta intenção",
+      "Pilotos Gamma identificados",
+      "CRM pipeline 50+ leads",
+      "Integração sistema escolar #1 (PoC)",
+      "Primeiro contato federacoes"
+    ]
+  },
+  "team": [
+    {
+      "role": "CEO/General",
+      "fte": 1,
+      "cost_monthly": [30000, 40000],
+      "start_month": 1
+    },
+    {
+      "role": "Tech Lead",
+      "fte": 1,
+      "cost_monthly": [20000, 25000],
+      "start_month": 1
+    },
+    {
+      "role": "Jurídico LGPD",
+      "fte": 1,
+      "cost_monthly": [18000, 22000],
+      "start_month": 1
+    },
+    {
+      "role": "Comercial B2G",
+      "fte": 1,
+      "cost_monthly": [12000, 18000],
+      "start_month": 1
+    },
+    {
+      "role": "Integrador Sistemas (MV/Tasy)",
+      "fte": 1,
+      "cost_monthly": [15000, 20000],
+      "start_month": 4
+    },
+    {
+      "role": "Sales Healthcare",
+      "fte": 1,
+      "cost_monthly": [12000, 18000],
+      "start_month": 6
+    },
+    {
+      "role": "Dev Backend (ETL)",
+      "fte": 1,
+      "cost_monthly": [18000, 22000],
+      "start_month": 3
+    },
+    {
+      "role": "SDR Educacao",
+      "fte": 1,
+      "cost_monthly": [4000, 6000],
+      "start_month": 6
+    },
+    {
+      "role": "Customer Success",
+      "fte": 1,
+      "cost_monthly": [7000, 10000],
+      "start_month": 9
+    },
+    {
+      "role": "BD Federacoes",
+      "fte": 1,
+      "cost_monthly": [10000, 15000],
+      "start_month": 12
+    },
+    {
+      "role": "Marketing",
+      "fte": 1,
+      "cost_monthly": [8000, 12000],
+      "start_month": 18
+    }
+  ]
+}
