@@ -1,0 +1,21 @@
+{
+  "name": "LGPD Strategy - Painel Estrategico Interativo",
+  "short_name": "LGPD Strategy",
+  "description": "Painel estrategico interativo para planejamento LGPD com SWOT, BMC, roadmap e simulacao de cenarios.",
+  "start_url": "/lgpd-mkt-intel/",
+  "scope": "/lgpd-mkt-intel/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "orientation": "any",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/lgpd-mkt-intel/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"]
+}

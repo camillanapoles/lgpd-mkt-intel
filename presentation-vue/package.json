@@ -1,0 +1,37 @@
+{
+  "name": "lgpd-strategic-presentation",
+  "version": "1.0.0",
+  "description": "Apresentação interativa para planejamento estratégico LGPD",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "pinia": "^2.1.7",
+    "chart.js": "^4.4.2",
+    "vue-chartjs": "^5.3.1",
+    "gsap": "^3.12.5",
+    "@vueuse/core": "^10.9.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6",
+    "typescript": "^5.4.2",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "gh-pages": "^6.1.1",
+    "@types/node": "^20.11.28"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
