@@ -10,3 +10,5 @@ app/package-lock.json
 .DS_Store
 .env.local
 .env.*.local
+skills/ENGINE-MODULES/
+skills/SHUN_TZU-ART_OF_WAR/
